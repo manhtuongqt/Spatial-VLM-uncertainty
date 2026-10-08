@@ -1,5 +1,9 @@
 # Phạm vi GitHub và Google Drive đã chốt — 08/10/2026
 
+**Cập nhật đóng gói:** xem [UPLOAD_DRIVE.md](UPLOAD_DRIVE.md) và
+`pack_drive_payloads.py` cho tám nhóm archive thực tế. Phần ví dụ sáu nhóm
+bên dưới là phương án ban đầu, được thay bằng hướng dẫn mới này.
+
 Repository đích do người dùng tạo:
 `https://github.com/manhtuongqt/Spatial-VLM-uncertainty`.
 Repository đã chuyển sang private theo lựa chọn của người dùng.
@@ -50,7 +54,8 @@ Thông tin chi tiết/hashes manifests nằm ở `SCOPED_DATASET_MANIFEST.json`.
 `DATA_REQUIRED_PATHS.txt` liệt kê relative paths cần đóng gói từ project root.
 Ngoài data, giữ **model/artifacts runtime riêng**:
 
-- `RoboRefer/models/`, checkpoint SAM2 nếu còn dùng segmentation.
+- `RoboRefer/models/`. SAM2 không được pipeline hiện tại sử dụng; checkpoint
+  SAM2 không thuộc gói Drive cần thiết.
 - Baseline V2, selected Adapter, P1 anchor pilot, live44 và Tasks60 release r3;
   neural weights + config + freeze lock + calibrator + profile phải đi cùng nhau.
 - Kết quả IID của bundle hiện tại và derived task caches/occlusion supplement

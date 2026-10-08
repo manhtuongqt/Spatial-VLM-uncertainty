@@ -25,7 +25,8 @@ locks/calibrator/source bằng search–replace toàn cây.** Chưa kiểm chứ
 án relocation trên laptop, nên giữ bản gốc và hashes để đối chiếu.
 
 Giải nén các archive Drive từ root project, giữ các prefixes `old/`, `new/`,
-`RoboRefer/`, `sam2/`. Danh sách cần có nằm ở
+`RoboRefer/`. SAM2 không được pipeline hiện tại sử dụng và không cần checkpoint.
+Danh sách cần có nằm ở
 `migration/DATA_REQUIRED_PATHS.txt`; dataset là 1.600 train + 400 dev +
 1.000 calibration + 1.000 Test-IID. Không đổi family/split hoặc capture lại IID.
 
@@ -51,8 +52,9 @@ Torch2.13.0+cu130 từ user site. Xem exports tại `migration/`.
 - `conda_explicit.txt` là package lock platform của lab.
 - `pip_conda_clean.txt` và `pip_user_python310.txt` phân biệt Conda với user site.
   Đừng cài hai version Torch đè lên một env duy nhất rồi coi như tương đương.
-- Source RoboRefer/SAM2 đã nằm trong repo; cài dependencies/editable packages
-  từ chính snapshot này, giữ source bytes của bundle.
+- Source RoboRefer đã nằm trong repo; cài dependencies/editable packages
+  từ chính snapshot này, giữ source bytes của bundle. Source SAM2 được giữ
+  như thành phần lịch sử, không cần cài cho pipeline hiện tại.
 - Script hiện tìm `.conda-roborefer/bin/python3.10`/`bin/python` trong project.
   Nếu đặt env nơi khác, cần cấu hình/alias đúng và kiểm tra source/hash guards.
 

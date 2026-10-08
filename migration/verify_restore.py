@@ -50,6 +50,10 @@ def main():
         if not raw.is_relative_to(lab):
             failures.append(f'Unmapped critical path: {name}'); continue
         p = root / raw.relative_to(lab)
+        # SAM2 is retained in the historical inventory, but is not used by
+        # the selected inference pipeline or required in the Drive payload.
+        if raw.relative_to(lab).as_posix().startswith('sam2/checkpoints/'):
+            continue
         if not p.is_file():
             failures.append(f'Missing critical file: {p.relative_to(root)}')
         elif args.hash_critical:

@@ -14584,8 +14584,8 @@
   {
     "source": "plan/MIGRATION_BACKUP_20261008/GITHUB_DRIVE_GUIDE.md",
     "destination": "migration/GITHUB_DRIVE_GUIDE.md",
-    "sha256": "1e05a890d0532c1800d3d3274ba4bbcba47154356ee8356086b9c4db0d4ca7af",
-    "size_bytes": 5868
+    "sha256": "c6932fde23a9ab1580b2c8c499c525051a8cedc38a39077321c9d9018063be71",
+    "size_bytes": 6188
   },
   {
     "source": "plan/MIGRATION_BACKUP_20261008/SCOPED_DATASET_MANIFEST.json",
@@ -14596,20 +14596,20 @@
   {
     "source": "plan/MIGRATION_BACKUP_20261008/DATA_REQUIRED_PATHS.txt",
     "destination": "migration/DATA_REQUIRED_PATHS.txt",
-    "sha256": "a3e2f606601064919c327c7b4f3816499d9565614ec784703c17eed3c5fef677",
-    "size_bytes": 916
+    "sha256": "0cf06adbd728d12600ca685a82222a8a47e6db17083d1050005c1f5c2cef45df",
+    "size_bytes": 898
   },
   {
     "source": "plan/MIGRATION_BACKUP_20261008/LAPTOP_REPRODUCTION.md",
     "destination": "migration/LAPTOP_REPRODUCTION.md",
-    "sha256": "745933fb8ed3f47417bb0b9de0694c39d7e769aaa050ef75a3a5d69fe3fa9d55",
-    "size_bytes": 7416
+    "sha256": "247d73b6929f2add6152ee9923ca85f340f6be812f6d30290e01a2d0339fed29",
+    "size_bytes": 7592
   },
   {
     "source": "plan/MIGRATION_BACKUP_20261008/verify_restore.py",
     "destination": "migration/verify_restore.py",
-    "sha256": "c855de2d1b8dcf6c2dfb705a2108444aa2dbdc1187032b39bc3ca0285c270add",
-    "size_bytes": 3565
+    "sha256": "0c6270afc4ffe8992ef6f6770f1f6f9ca97f69488cae73658647d42481ea2bd7",
+    "size_bytes": 3813
   },
   {
     "source": "new/outputs/active_experimental_profile.json",
@@ -17184,5 +17184,11 @@
     "destination": "robot_assets/system_description/realsense2_description/urdf/test_r430_camera.urdf.xacro",
     "sha256": "b1ba8cfe0f09bb7f2845e998e143ac561513dcdc5049b097e3935b77cecf4080",
     "size_bytes": 437
+  },
+  {
+    "source": "plan/MIGRATION_BACKUP_20261008/UPLOAD_DRIVE.md",
+    "destination": "migration/UPLOAD_DRIVE.md",
+    "sha256": "0a1be44e279fada19f9583b41bd826b5b718b7adad322b9d4e7465fe136b28d9",
+    "size_bytes": 3841
   }
 ]

@@ -8,7 +8,6 @@ new/test_iid/dataset/
 new/test_iid/feature_cache/
 new/test_iid/protocol/test_iid_eval_manifest.json
 RoboRefer/models/
-sam2/checkpoints/
 new/outputs/active_experimental_profile.json
 new/outputs/pcrau_target_v2_full_seed_24082026/
 new/outputs/pcrau_answerability_language_dev_20261003/
