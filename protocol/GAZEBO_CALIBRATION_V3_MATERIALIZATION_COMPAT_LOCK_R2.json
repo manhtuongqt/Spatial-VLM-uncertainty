@@ -1,0 +1,21 @@
+{
+  "data_design_changed": false,
+  "locked_at_utc": "2026-09-15T07:33:46.766602+00:00",
+  "protocol_id": "gazebo_calibration_v3",
+  "qc_or_gate_changed": false,
+  "robot_access": false,
+  "schema_version": 1,
+  "scientific_method_changed": false,
+  "scope": "accept immutable v3 status and reuse frozen PASS RGB QC reports",
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V3_IMPLEMENTATION_LOCK_R6.json": "06c537bce7678196fdc16f7d74752f3148dc4007fa1352a2dbd42726da069c80",
+    "protocol/GAZEBO_CALIBRATION_V3_MATERIALIZATION_INPUT_LOCK.json": "672243d483e4b839b41655f1803cf29ef3990afd78472d2f1d8451b231b7082e",
+    "protocol/gazebo_calibration_v3_materialization_compat_r1.py": "bc541a0b87e8c7ba688bfd157f4cc20d215ccbdf0dc0269a4e18a623acdf0dda",
+    "protocol/gazebo_calibration_v3_materialization_compat_r2.py": "38b2d0eea4bf6abf30d14480be321d8f1ec057d9831a7fda4f892e011c3493a7",
+    "protocol/gazebo_calibration_v3_materialization_compat_r2_audit.json": "703253ba64203bc838adbde3cfc672e7ed0ced117d7fbdefba8371af125d08ee",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v3/GAZEBO_CALIBRATION_V3_CROSS_SPLIT_RGB_QC.json": "cbdde10ed156a2efd94f7472ff346307f322ff6f2ac17a66bcea17fdaaa5e23f",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v3/GAZEBO_CALIBRATION_V3_RGB_DUPLICATE_QC.json": "164b19bc800328b2c8763eeac44bda0ce591ce326baaa53dd3639ef931e32890"
+  },
+  "status": "LOCKED_AFTER_RGB_QC_BEFORE_GEOMETRY_QC_COMPATIBILITY_R2",
+  "test_iid_ood_access": false
+}

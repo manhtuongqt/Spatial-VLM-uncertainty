@@ -1,0 +1,110 @@
+{
+  "calibration": {
+    "conformal_alpha": 0.1,
+    "l2": 0.001,
+    "minimum_accepted_families": 60,
+    "risk_target": 0.05
+  },
+  "experiment": {
+    "language_augmentation": true,
+    "train_language_prefixes": [
+      "",
+      "Please ",
+      "In this scene, ",
+      "Can you "
+    ]
+  },
+  "experiment_id": "answerability_detail_development_only",
+  "locked_counts": {
+    "calibration_families": 200,
+    "calibration_samples": 1000,
+    "dev_families": 80,
+    "dev_samples": 400,
+    "train_families": 320,
+    "train_samples": 1600,
+    "variants_per_family": 5
+  },
+  "loss": {
+    "anchor_heatmap": 0.6,
+    "answerability": 0.7,
+    "counterfactual_ranking": 0.2,
+    "interior_heatmap": 0.4,
+    "ranking_margin": 0.25,
+    "relation_edge": 0.4,
+    "source": 0.5,
+    "spatial_weak_label_weight": 0.5,
+    "target_heatmap": 1.0
+  },
+  "model": {
+    "answerability_classes": [
+      "FOUND",
+      "AMBIGUOUS",
+      "ABSENT",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "answerability_evidence_adapter": {
+      "dropout": 0.3,
+      "hidden_dim": 64,
+      "include_detail": true
+    },
+    "attention_heads": 4,
+    "dropout": 0.1,
+    "export_answerability_detail": true,
+    "export_answerability_evidence": true,
+    "feature_dim": 1152,
+    "fusion_layers": 2,
+    "grid_height": 24,
+    "grid_width": 32,
+    "hidden_dim": 128,
+    "max_anchors": 3,
+    "max_relations": 3,
+    "max_tokens": 72,
+    "relation_classes": [
+      "direct",
+      "left_of",
+      "right_of",
+      "front_of",
+      "behind",
+      "nearer_than",
+      "farther_than",
+      "between_in_depth",
+      "nearer_than_both"
+    ],
+    "source_classes": [
+      "semantic",
+      "relation",
+      "spatial",
+      "depth",
+      "occlusion"
+    ],
+    "text_layers": 2,
+    "vocab_size": 8192
+  },
+  "optimization": {
+    "amp": true,
+    "amp_dtype": "bfloat16",
+    "early_stopping_patience": 6,
+    "epochs": 20,
+    "families_per_batch": 4,
+    "gradient_clip_norm": 5.0,
+    "learning_rate": 0.0002,
+    "num_workers": 0,
+    "selection_metric": "dev_total_loss",
+    "warmup_steps": 200,
+    "weight_decay": 0.0001
+  },
+  "paths": {
+    "calibration_dataset_root": "old/datasets/roborefer_dataset_v2_1_calibration_200_20260824",
+    "calibration_feature_index": "old/results/pcra_u_feature_cache/pcra_u_calibration_v1/indexes/index_full.json",
+    "calibration_feature_root": "old/results/pcra_u_feature_cache/pcra_u_calibration_v1",
+    "calibration_manifest": "old/protocol/pcra_u_calibration_eval_manifest.json",
+    "dev_roborefer_points": "old/results/pcra_u_runs/pcra_u_development_failure_audit_20260824/predictions/roborefer_baselines_dev.jsonl",
+    "development_dataset_root": "old/roborefer_dataset_v2_1_1_development_400_20260824",
+    "development_feature_index": "old/results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json",
+    "development_feature_root": "old/results/pcra_u_feature_cache/pcra_u_development_v1",
+    "development_manifest": "old/protocol/pcra_u_development_train_manifest.json",
+    "output_root": "new/outputs"
+  },
+  "schema_version": 1,
+  "seed": 24082026
+}

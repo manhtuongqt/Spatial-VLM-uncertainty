@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="susgrip_2f_gazebo" params="prefix parent *origin">
+
+        <!-- Keep the simplified Gazebo model dynamically consistent with the
+             detailed SusGrip model in susgrip_2f_description.  The previous
+             1.2 kg aggregate mass was roughly four times the detailed model
+             and could saturate a UR3 elbow during an otherwise valid vertical
+             approach. -->
+        <xacro:property name="gripper_mass" value="0.26" />
+        <xacro:property name="finger_mass" value="0.02" />
+        <!-- Values suitable for ros2_control position commands in Gazebo Fortress. -->
+        <xacro:property name="joint_damping" value="0.1" />
+        <xacro:property name="joint_friction" value="0.0" />
+        <xacro:property name="joint_effort" value="100.0" />
+        <!-- gz_ros2_control implements position commands through a generated
+             velocity command; keep this physics limit above that command. -->
+        <xacro:property name="joint_velocity" value="10.0" />
+        <xacro:property name="joint_limit_upper" value="0.065" />
+
+        <material name="${prefix}color_base">
+            <color rgba="0.423529 0.494118 0.882353 1.0" />
+        </material>
+        <material name="${prefix}color_finger">
+            <color rgba="0.572549 0.72549 0.890196 1.0" />
+        </material>
+
+        <!-- Base connection joint -->
+        <joint name="${prefix}susgrip_base_joint" type="fixed">
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${prefix}gripper_body" />
+        </joint>
+
+        <!-- Gripper Body -->
+        <link name="${prefix}gripper_body">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/2F_MainBody.STL" />
+                </geometry>
+                <material name="${prefix}color_base" />
+            </visual>
+            <collision>
+                <!-- A convex lower-body approximation avoids the concave STL
+                     overlapping the finger sliders after fixed-joint lumping. -->
+                <origin xyz="0 0 0.05" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.18 0.078 0.10" />
+                </geometry>
+            </collision>
+            <inertial>
+                <mass value="${gripper_mass}" />
+                <origin xyz="0.0 0.002 0.0615" rpy="0 0 0" />
+                <!-- Inertia scaled with the corrected body mass. -->
+                <inertia
+                    ixx="0.001639" ixy="-0.0000013" ixz="0.0000047"
+                    iyy="0.001901" iyz="0.0000517"
+                    izz="0.000493" />
+            </inertial>
+        </link>
+
+        <!-- Gazebo tag for body -->
+        <gazebo reference="${prefix}gripper_body">
+            <self_collide>false</self_collide>
+            <mu1>2.0</mu1>
+            <mu2>2.0</mu2>
+            <material>Gazebo/SkyBlue</material>
+        </gazebo>
+
+        <!-- Left Finger -->
+        <link name="${prefix}finger_left">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/FingerTip.STL" />
+                </geometry>
+                <material name="${prefix}color_finger" />
+            </visual>
+            <collision>
+                <origin xyz="0 0 0.0275" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.026 0.022 0.055" />
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="${finger_mass}" />
+                <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+            </inertial>
+        </link>
+
+        <gazebo reference="${prefix}finger_left">
+            <self_collide>false</self_collide>
+            <mu1>2.0</mu1>
+            <mu2>2.0</mu2>
+            <kp>1000000.0</kp>
+            <kd>100.0</kd>
+            <minDepth>0.002</minDepth>
+            <maxVel>0.0</maxVel>
+            <material>Gazebo/Blue</material>
+        </gazebo>
+
+        <!-- Right Finger -->
+        <link name="${prefix}finger_right">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/FingerTip.STL" />
+                </geometry>
+                <material name="${prefix}color_finger" />
+            </visual>
+            <collision>
+                <origin xyz="0 0 0.0275" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.026 0.022 0.055" />
+                </geometry>
+            </collision>
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="${finger_mass}" />
+                <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+            </inertial>
+        </link>
+
+        <gazebo reference="${prefix}finger_right">
+            <self_collide>false</self_collide>
+            <mu1>2.0</mu1>
+            <mu2>2.0</mu2>
+            <kp>1000000.0</kp>
+            <kd>100.0</kd>
+            <minDepth>0.002</minDepth>
+            <maxVel>0.0</maxVel>
+            <material>Gazebo/Blue</material>
+        </gazebo>
+
+        <!-- Prismatic joint for left finger (ACTIVE JOINT) -->
+        <joint name="${prefix}gripper_joint" type="prismatic">
+            <parent link="${prefix}gripper_body" />
+            <child link="${prefix}finger_left" />
+            <origin xyz="0.0135 0.0 0.112" rpy="0 0 3.14159265" />
+            <axis xyz="-1 0 0" />
+            <limit lower="0.0" upper="${joint_limit_upper}" effort="${joint_effort}" velocity="${joint_velocity}" />
+            <dynamics damping="${joint_damping}" friction="${joint_friction}" />
+        </joint>
+
+        <!-- Prismatic joint for right finger. Gazebo receives its mirrored
+             command through the ros2_control mimic configuration below. -->
+        <joint name="${prefix}gripper_joint_mimic" type="prismatic">
+            <parent link="${prefix}gripper_body" />
+            <child link="${prefix}finger_right" />
+            <origin xyz="-0.0135 0.0 0.112" rpy="0 0 0" />
+            <axis xyz="-1 0 0" />
+            <limit lower="0.0" upper="${joint_limit_upper}" effort="${joint_effort}" velocity="${joint_velocity}" />
+            <!-- MoveIt / robot_state_publisher can derive this passive joint.
+                 Gazebo instead uses gz_ros2_control's mimic adapter to avoid
+                 a duplicate DART constraint. -->
+            <xacro:unless value="$(arg sim_ignition)">
+                <mimic joint="${prefix}gripper_joint" multiplier="1.0" offset="0" />
+            </xacro:unless>
+            <dynamics damping="${joint_damping}" friction="${joint_friction}" />
+        </joint>
+
+
+        <!-- moveit to ros2 control of robot -->
+        <!-- <xacro:if value="${'$(arg use_gripper)' == 'susgrip_gazebo'}">
+            <joint name="${prefix}gripper_joint">
+                <command_interface name="position" />
+                <command_interface name="velocity" />
+                <command_interface name="effort" />
+                <state_interface name="position">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity" />
+                <state_interface name="effort" />
+            </joint>
+            <joint name="${prefix}gripper_joint_mimic">
+                <state_interface name="position" />
+                <state_interface name="velocity" />
+                <state_interface name="effort" />
+            </joint>
+        </xacro:if> -->
+    </xacro:macro>
+
+</robot>

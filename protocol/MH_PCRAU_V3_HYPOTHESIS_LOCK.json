@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "lock_id": "mh_pcrau_v3_hypothesis_lock",
+  "method_id": "MH-PCRA-U-v3",
+  "namespace": "mh_pcrau_v3",
+  "locked_at_local": "2026-09-23T16:37:47+07:00",
+  "locked_at_utc": "2026-09-23T09:37:47+00:00",
+  "status": "FROZEN_BEFORE_V3_CODE_RUN",
+  "purpose": "Replace spatial-risk v2 as the proposed method and freeze the MH-PCRA-U-v3 identity, hypotheses, claim boundary, data-access boundary, stage dependencies, and seal states before hidden-state feasibility work.",
+  "source_of_truth": {
+    "active_plan": "plan/plan_spatial_vlm_multihead_pcra_u_v3_exact.md",
+    "active_plan_sha256": "324691121161ccb11f09b9197a9d3c56a23542541eeda48f9710445803305401",
+    "source_snapshot": "ketqua1/00_quan_tri_khoa/ngay_01/SOURCE_SNAPSHOT.json",
+    "source_snapshot_sha256": "3ae29668767e1e88b78512dbc9584a7d35a2d79175cefa7986bd450dd6698fc1"
+  },
+  "frozen_dependencies": {
+    "architecture_identity": {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/MH_PCRAU_V3_ARCHITECTURE_IDENTITY.json",
+      "sha256": "8fd053dd494625d0d69f6465e531adca59f0c2b09cc3d47789e0c91a59c5fbd5"
+    },
+    "baseline_historical_registry": {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/BASELINE_HISTORICAL_REGISTRY.json",
+      "sha256": "65df078becf691e133fad63a8bc63109ff8241d11c086ac1eb530171360634ef"
+    },
+    "data_access_boundary": {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/DATA_ACCESS_BOUNDARY.json",
+      "sha256": "1fedd3b54e2f425ad3655ee69bbe2f2c458796ef03dfd6ba31e1c00c91df0df2"
+    },
+    "environment_lock": {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/ENVIRONMENT_LOCK.json",
+      "sha256": "2265f118b3d617d57c1030c8d929c951716fbc9fa88d58da45a3303927de302d"
+    }
+  },
+  "replacement_decision": {
+    "new_proposed_method": "RoboRefer Multi-Head P-CRA-U v3",
+    "replaced_proposed_method": "spatial-risk v2 post-processing method",
+    "spatial_risk_v2_new_role": "historical comparator only",
+    "not_an_amendment": true,
+    "artifact_namespace_required": "mh_pcrau_v3",
+    "prohibition": "No old P-CRA-U checkpoint, calibrator, config, result, or claim may acquire v3 identity by renaming."
+  },
+  "research_questions": {
+    "RQ1": "Does h_spatial with multi-task supervision improve relation recognition and target selection versus frozen B0/B1?",
+    "RQ2": "Does the coordinate head reduce point error and improve Hit@0.08 on tabletop scenes?",
+    "RQ3": "Do Gaussian spatial uncertainty plus confidence and answerability yield better calibrated probabilities and regions than locked baselines?",
+    "RQ4": "After Calibration and Test authorization, does an uncertainty-aware policy reduce unsafe execution without unacceptable loss of successful-task coverage?"
+  },
+  "hypotheses": {
+    "H1_grounding": {
+      "statement": "The S1 multi-head head-only method improves relation macro-F1 and/or point grounding over frozen B0 while satisfying a locked answerability non-inferiority condition.",
+      "primary_endpoint_family": [
+        "relation macro-F1",
+        "FOUND Hit@0.08",
+        "answerability macro-F1 non-inferiority"
+      ],
+      "comparators": [
+        "B0 frozen RoboRefer-2B-SFT",
+        "B1 historical tabletop LoRA as secondary ablation"
+      ],
+      "numerical_margins": "PENDING_POWER_PLAN_DAY_03",
+      "current_state": "NOT_TESTED"
+    },
+    "H2_calibration": {
+      "statement": "Separately calibrated confidence, answerability, and Gaussian variance improve probability and interval calibration over their frozen raw outputs and locked uncertainty baselines.",
+      "primary_endpoint_family": [
+        "binary/categorical NLL",
+        "binary/categorical Brier score",
+        "ECE-10",
+        "absolute 95 percent ellipse coverage error",
+        "ellipse sharpness reported alongside coverage"
+      ],
+      "comparators": [
+        "raw M1 or authorized M2 outputs",
+        "B0 raw confidence when reproducible",
+        "entropy",
+        "stochastic self-consistency",
+        "spatial-risk v2 historical comparator"
+      ],
+      "candidate_calibrators": {
+        "binary": "positive-slope affine-logit",
+        "categorical": "temperature scaling",
+        "gaussian": "scalar variance scaling"
+      },
+      "separate_fit_required": true,
+      "numerical_margins": "PENDING_POWER_PLAN_DAY_03",
+      "current_state": "NOT_TESTED"
+    },
+    "H3_selective_policy": {
+      "statement": "On independently authorized Test and robot scenario families, the frozen v3 policy reduces unsafe action rate at explicitly reported coverage versus B0 and spatial-risk v2.",
+      "primary_endpoint_family": [
+        "unsafe execution rate",
+        "successful-task coverage",
+        "wrong-target rate"
+      ],
+      "secondary_endpoints": [
+        "abstention rate",
+        "reobserve rate",
+        "ask-user rate",
+        "success after reobserve",
+        "observations and time per task"
+      ],
+      "comparators": [
+        "B0",
+        "spatial-risk v2 historical comparator"
+      ],
+      "numerical_margins": "PENDING_POWER_PLAN_DAY_03",
+      "current_state": "NOT_TESTED"
+    }
+  },
+  "hypothesis_reporting_rule": "H1, H2, and H3 must each terminate as PASS, NEGATIVE, or NOT_TESTED; failure of one may not be hidden by another.",
+  "power_and_margin_reservation": {
+    "required_before": "G1 freeze and any S1 training",
+    "scheduled": "DAY_03",
+    "allowed_change_mechanism": "append-only pre-training power-and-margin lock bound to this lock SHA-256",
+    "forbidden": "selecting margins or sample size after observing v3 training, Calibration, Test, or robot outcomes"
+  },
+  "method_identity_summary": {
+    "backbone": "frozen RoboRefer-2B-SFT for S1",
+    "h_spatial": "last non-padding prompt token final-layer hidden state before answer generation, shape Bx1536",
+    "shared_trunk": "LayerNorm(1536)-Linear(1536,512)-GELU-Dropout(0.10)",
+    "heads": [
+      "relation 4-class",
+      "reasoning-depth 3-class",
+      "coordinate (u,v)",
+      "Gaussian diagonal log-variance (u,v)",
+      "source uncertainty 5-class",
+      "answerability 4-class",
+      "confidence binary"
+    ],
+    "S1a": "train trunk and non-confidence heads with masked multi-task losses",
+    "S1b": "train confidence only from family-disjoint out-of-fold correctness",
+    "S2": "conditional LoRA after G3 and resource authorization",
+    "full_fine_tune": "out of core scope",
+    "primary_spatial_claim": "2D normalized point and 2D Gaussian ellipse, not direct XYZ or 3D covariance"
+  },
+  "data_and_split_rules": {
+    "current_boundary": "ketqua1/00_quan_tri_khoa/ngay_01/DATA_ACCESS_BOUNDARY.json",
+    "family_disjoint_required": true,
+    "oracle_separation_required": true,
+    "bootstrap_unit": "parent family",
+    "new_calibration_and_test_exclusions": [
+      "family",
+      "scene",
+      "seed",
+      "layout",
+      "signature",
+      "exact/near-duplicate RGB"
+    ],
+    "historical_calibration_r5_reuse": false
+  },
+  "gate_dependency": {
+    "G0": "hidden-state and resource feasibility",
+    "G1": "schema, disjointness, labels, leakage, and power/margin lock",
+    "G2": "head/loss/overfit sanity",
+    "G3": "development eligibility and proposed-method freeze",
+    "G4": "new calibration QC and calibration decision",
+    "G5": "single frozen IID/OOD Test",
+    "G6": "authorized robot policy evaluation",
+    "order_mandatory": true
+  },
+  "authorization_after_this_lock": {
+    "allowed": [
+      "implement h_spatial adapter",
+      "read development-only samples for G0",
+      "run prompt-token, padding, determinism, and leakage tests",
+      "run one-batch multimodal forward for latency and peak VRAM"
+    ],
+    "not_authorized": [
+      "S1a/S1b/S2 training",
+      "new data capture",
+      "Calibration-v3 materialization, inference, or fit",
+      "Test-IID/OOD access",
+      "robot policy scientific execution"
+    ]
+  },
+  "seal_state": {
+    "calibration_v3": "SEALED_UNTIL_G3_AND_NEW_CONTRACT",
+    "test_iid": "SEALED_UNTIL_G4_PASS_AND_SEPARATE_AUTHORIZATION",
+    "test_ood": "SEALED_UNTIL_G4_PASS_AND_SEPARATE_AUTHORIZATION",
+    "robot_policy": "SEALED_UNTIL_G5_AUTHORIZATION"
+  },
+  "scientific_state_at_lock": {
+    "v3_training_runs": 0,
+    "v3_inference_runs": 0,
+    "v3_calibrator_fits": 0,
+    "v3_test_runs": 0,
+    "v3_robot_policy_runs": 0,
+    "H1": "NOT_TESTED",
+    "H2": "NOT_TESTED",
+    "H3": "NOT_TESTED"
+  },
+  "deviation_policy": "Any change to the architecture identity, hypothesis family, baseline roles, data-access boundary, OOF confidence rule, calibration families, gate order, or seal state requires a timestamped replacement or append-only pre-authorized lock before the affected data or run is accessed.",
+  "assertions": [
+    "This lock is governance, not evidence that any v3 hypothesis is true.",
+    "No v3 architecture component has been implemented or run by this lock.",
+    "Spatial-risk v2 remains historical and unchanged.",
+    "Pilot R5 and rejected Calibration R5 are not confirmatory v3 evidence.",
+    "Test-IID, Test-OOD, and robot policy remain sealed."
+  ]
+}

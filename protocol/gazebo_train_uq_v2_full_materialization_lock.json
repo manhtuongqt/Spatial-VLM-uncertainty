@@ -1,0 +1,69 @@
+{
+  "capture_compatibility_lock_sha256": "f54dbdd9e442d544ce3a0ccbaa239005021b6679888dd3539cf3c11b9bd64a57",
+  "capture_input_manifest_sha256": "6f862df5d22638cf076fd267abb79dea774c9ecf3bc9b1b1655bc8804c079062",
+  "capture_manifest_sha256": "c86c896650e259add3cdaa503408581cafd4bbb0ae5861e613a9aa7706483b22",
+  "capture_status": "COMPLETE",
+  "dev_v2_access": "forbidden_for_training_or_selection",
+  "full_pipeline_source_sha256": "957a7575b844bdec1750a6ec965c0b8f8da9bf38d2e10127f9d70b2569caecdf",
+  "inference_contract": {
+    "backbone": "B0",
+    "greedy_decoding": true,
+    "max_new_tokens": 40,
+    "seed_rule": "sha256(protocol_id:sample_id:model_id:draw)[0:4]",
+    "self_consistency_is_calibrated_probability": false,
+    "stochastic_draws": 3,
+    "temperature": 0.7,
+    "top_k": 50,
+    "top_p": 0.9
+  },
+  "locked_at_utc": "2026-09-14T05:40:38.480256+00:00",
+  "locked_at_utc_final": "2026-09-14T05:40:38.481010+00:00",
+  "model_input_allowlist": [
+    "image",
+    "depth",
+    "instruction"
+  ],
+  "no_sam2": true,
+  "primary_contract_lock_sha256": "da338a5b25308f84e5a98a478b72ef489a02655107d7bddaab76535b62338102",
+  "protocol_id": "gazebo_train_uq_v2_full",
+  "risk_feature_schema": [
+    "b0_action_one_hot",
+    "b0_exact_contract",
+    "b0_self_consistency",
+    "stochastic_point_dispersion",
+    "predicted_x",
+    "predicted_y",
+    "distance_to_image_boundary",
+    "local_depth_valid_fraction",
+    "local_depth_median",
+    "local_depth_mad",
+    "instruction_relation_one_hot"
+  ],
+  "schema_version": 1,
+  "selection_rule": {
+    "aurc": "not_worse_than_b0",
+    "exact_contract": "not_lower_than_b0",
+    "found_hit_delta_min": -0.125,
+    "invalid_is_abstain": false,
+    "nonfound_abstain_recall": "strictly_higher_than_b0",
+    "nonfound_false_accept": "strictly_lower_than_b0",
+    "selection_split": "val_uq_only",
+    "tie_break": [
+      "lower_false_accept",
+      "higher_found_hit",
+      "simpler_method"
+    ]
+  },
+  "source_artifact_sha256": {
+    "protocol/gazebo_train_uq_v2_full_capture_compatibility_lock.json": "f54dbdd9e442d544ce3a0ccbaa239005021b6679888dd3539cf3c11b9bd64a57",
+    "protocol/gazebo_train_uq_v2_full_contract_lock.json": "da338a5b25308f84e5a98a478b72ef489a02655107d7bddaab76535b62338102",
+    "protocol/materialize_gazebo_train_uq_v1.py": "b1a52392c25123e121496755198708788f89a6a6f06de9e893a837cd2cc739ed",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_full/capture_attempt_01/capture_manifest.json": "c86c896650e259add3cdaa503408581cafd4bbb0ae5861e613a9aa7706483b22",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_full/capture_attempt_01/input_manifest.jsonl": "6f862df5d22638cf076fd267abb79dea774c9ecf3bc9b1b1655bc8804c079062",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_full_annotations.yaml": "2476f3fd7ef4df6b62b25a5b7f9242ff2d5d0585d6c565bc12e573e7454f8175",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_full_gate.yaml": "eb85bb26fdae0026e0fa8bb815567e5a077fdd3eb908e531ad3746ea0f3ced3e",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_full_scenes.yaml": "9e79403544bd9d6c705305cf35735800a0ae310b76bdb850f04319901db341e8"
+  },
+  "status": "LOCKED_BEFORE_GEOMETRY_QC_AND_MATERIALIZATION",
+  "wrapper_source_sha256": "8ef43136cd6388185b3815eada1189a81c94219348da717241cdedaede82f761"
+}

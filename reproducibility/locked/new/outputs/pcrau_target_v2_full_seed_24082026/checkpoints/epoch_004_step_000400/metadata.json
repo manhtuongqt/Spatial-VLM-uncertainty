@@ -1,0 +1,109 @@
+{
+  "best_metric": 2.3271196126937865,
+  "config_sha256": "e4f21ccc255c2f097fd8b062e21e954719357cb6e00645758bc1cdf36a290b0c",
+  "epoch": 4,
+  "global_step": 400,
+  "metrics": {
+    "dev": {
+      "answerability": {
+        "accuracy": 0.6925,
+        "confusion_matrix": [
+          [
+            113,
+            1,
+            0,
+            54
+          ],
+          [
+            0,
+            42,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            53
+          ],
+          [
+            10,
+            5,
+            0,
+            122
+          ]
+        ],
+        "macro_f1": 0.5941580756013746,
+        "per_class": [
+          {
+            "f1": 0.7766323024054983,
+            "precision": 0.9186991869918699,
+            "recall": 0.6726190476190477
+          },
+          {
+            "f1": 0.9333333333333333,
+            "precision": 0.875,
+            "recall": 1.0
+          },
+          {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          {
+            "f1": 0.6666666666666666,
+            "precision": 0.5327510917030568,
+            "recall": 0.8905109489051095
+          }
+        ]
+      },
+      "grounding_accuracy": 0.7970149253731343,
+      "grounding_evaluated": 335,
+      "loss": {
+        "anchor": 0.8261151194572449,
+        "answerability": 0.6914912618696689,
+        "interior": 0.4960244134068489,
+        "ranking": 0.173883056640625,
+        "relation_edge": 0.5290457423776388,
+        "source": 0.8195313006639481,
+        "target": 0.49283663332462313,
+        "target_bce": 0.15675499923527242,
+        "target_dice": 0.33608163297176363,
+        "total": 2.3271196126937865
+      },
+      "relation_edge_accuracy": 0.7807692307692308,
+      "relation_edges_evaluated": 260,
+      "samples": 400,
+      "source": {
+        "macro_f1": 0.5496427288331803,
+        "micro_f1": 0.4966313763233879,
+        "per_class_f1": [
+          0.4307692307692308,
+          0.5853658536585366,
+          0.8936170212765957,
+          0.4,
+          0.43846153846153846
+        ]
+      }
+    },
+    "epoch": 4,
+    "global_step": 400,
+    "improved": true,
+    "learning_rate": 0.0001900968867902419,
+    "selected_metric": 2.3271196126937865,
+    "train": {
+      "anchor": 0.8452421352267265,
+      "answerability": 0.8115244872868062,
+      "interior": 0.5333351027220488,
+      "ranking": 0.155810546875,
+      "relation_edge": 0.4631556712090969,
+      "source": 0.8603631511330605,
+      "target": 0.5597754202783107,
+      "target_bce": 0.16975585455074907,
+      "target_dice": 0.39001956656575204,
+      "total": 2.494922859966755
+    }
+  },
+  "model_sha256": "2daba55d686f9600dddf984d82b601875f8acdb5e5f4b9bc555eab0255419bee",
+  "schema_version": 1
+}

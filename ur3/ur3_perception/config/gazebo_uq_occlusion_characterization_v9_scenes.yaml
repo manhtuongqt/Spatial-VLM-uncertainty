@@ -1,0 +1,329 @@
+schema_version: 1
+protocol_id: gazebo_uq_occlusion_characterization_v9
+expected_scene_count: 14
+capture_mode: engineering_geometry_only_no_manipulation
+random_seed: 14092035
+view_joint_pose:
+- 1.3815
+- -1.8273
+- 1.3428
+- -1.2863
+- -1.5708
+- -1.9601
+camera_frame: camera_color_optical_frame
+base_frame: base_link
+coordinate_suffix: ENGINEERING ONLY; MODEL INFERENCE FORBIDDEN.
+objects:
+  red_cube:
+    z: 0.03
+    storage_pose:
+    - -0.65
+    - 1.4
+    - 0.0
+  blue_cube:
+    z: 0.025
+    storage_pose:
+    - -0.45
+    - 1.4
+    - 0.0
+  green_cube:
+    z: 0.025
+    storage_pose:
+    - -0.25
+    - 1.4
+    - 0.0
+  yellow_cube:
+    z: 0.025
+    storage_pose:
+    - -0.05
+    - 1.4
+    - 0.0
+  orange_cube:
+    z: 0.025
+    storage_pose:
+    - 0.15
+    - 1.4
+    - 0.0
+  purple_cube:
+    z: 0.025
+    storage_pose:
+    - 0.35
+    - 1.4
+    - 0.0
+  pink_cube:
+    z: 0.025
+    storage_pose:
+    - 0.55
+    - 1.4
+    - 0.0
+  ycb_cracker_box:
+    z: 0.10671
+    storage_pose:
+    - -0.02
+    - 0.85
+    - 0.0
+  ycb_sugar_box:
+    z: 0.088107
+    storage_pose:
+    - 0.2
+    - 0.85
+    - 0.0
+  ycb_tomato_soup_can:
+    z: 0.050948
+    storage_pose:
+    - -0.55
+    - 1.1
+    - 0.0
+  ycb_mustard_bottle:
+    z: 0.095695
+    storage_pose:
+    - -0.38
+    - 1.1
+    - 0.0
+  ycb_banana:
+    z: 0.018376
+    storage_pose:
+    - -0.3
+    - 0.85
+    - 0.25
+  ycb_apple:
+    z: 0.03771
+    storage_pose:
+    - -0.21
+    - 1.1
+    - 0.0
+  ycb_orange:
+    z: 0.03701
+    storage_pose:
+    - -0.04
+    - 1.1
+    - 0.0
+  ycb_power_drill:
+    z: 0.028689
+    storage_pose:
+    - -0.62
+    - 0.85
+    - -0.25
+  mango:
+    z: 0.03
+    storage_pose:
+    - 0.38
+    - 0.85
+    - 0.35
+  uq_neutral_occluder:
+    z: 0.06
+    storage_pose:
+    - -0.6
+    - 1.2
+    - 0.0
+scenes:
+- scene_id: uq_occ_char_v9_000
+  scene_family_id: engineering_occlusion_characterization_v9/family_000
+  layout_id: neutral_screen_mango_v9_000
+  layout_signature_sha256: b7e396387d3feefa3117a143948ef274c528933a717542e9a2bb902305edaa40
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.0
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.25205
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_001
+  scene_family_id: engineering_occlusion_characterization_v9/family_001
+  layout_id: neutral_screen_mango_v9_001
+  layout_signature_sha256: 065d40bf1e5b773f2f31a750391c2adae73d01909bfbc1ff9ba2a4de803d89d1
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.0
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.25185
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_002
+  scene_family_id: engineering_occlusion_characterization_v9/family_002
+  layout_id: neutral_screen_mango_v9_002
+  layout_signature_sha256: b8808cc4637625f0490c422cb1fec33bd2d76434afedad637a192edf3eaaefc8
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.0
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.25165
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_003
+  scene_family_id: engineering_occlusion_characterization_v9/family_003
+  layout_id: neutral_screen_mango_v9_003
+  layout_signature_sha256: fe7f8bd5ff47e488017e3b8a56973694ed022c7a13de98fbf9c2b758de9ac138
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.0
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.25145
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_004
+  scene_family_id: engineering_occlusion_characterization_v9/family_004
+  layout_id: neutral_screen_mango_v9_004
+  layout_signature_sha256: 18eb0f34184131d5cd380ffc52347f53d5976c88f805fbd1ac3f65422a3d481c
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.0
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.25125
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_005
+  scene_family_id: engineering_occlusion_characterization_v9/family_005
+  layout_id: neutral_screen_mango_v9_005
+  layout_signature_sha256: decafd0eb2d05bd4914b4d86038c8af2042cf18bf0cee3f4b4d6cdfdcf7b2b60
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.0
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.25105
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_006
+  scene_family_id: engineering_occlusion_characterization_v9/family_006
+  layout_id: neutral_screen_mango_v9_006
+  layout_signature_sha256: 46c4966c118ee210cce2695c5002f2b1b6748c930f228bb873d91d523b3f42d1
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.0
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.25085
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_007
+  scene_family_id: engineering_occlusion_characterization_v9/family_007
+  layout_id: neutral_screen_mango_v9_007
+  layout_signature_sha256: ca3eea426aa3baacda9cf96331211b87a18ee93f784e06a25e18cae0653e9ea5
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.252
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_008
+  scene_family_id: engineering_occlusion_characterization_v9/family_008
+  layout_id: neutral_screen_mango_v9_008
+  layout_signature_sha256: db896ebdf340ce862629c6487607fb3c7c47167ec0d5de71fc5068894f56fcb6
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2518
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_009
+  scene_family_id: engineering_occlusion_characterization_v9/family_009
+  layout_id: neutral_screen_mango_v9_009
+  layout_signature_sha256: 9b327f78946c5be2568da7c66335264973d792e3e6d75423f824f8efcf8caf36
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2516
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_010
+  scene_family_id: engineering_occlusion_characterization_v9/family_010
+  layout_id: neutral_screen_mango_v9_010
+  layout_signature_sha256: 782604bf31b750977cb02b42ab8db6196a8c39a391b4b1b0f22c7cf450033a84
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2514
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_011
+  scene_family_id: engineering_occlusion_characterization_v9/family_011
+  layout_id: neutral_screen_mango_v9_011
+  layout_signature_sha256: f9f9f9a6a9467130a4ba71654581b57cc11db942aa652f69d3d7bede6a049d2c
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2512
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_012
+  scene_family_id: engineering_occlusion_characterization_v9/family_012
+  layout_id: neutral_screen_mango_v9_012
+  layout_signature_sha256: e095c7bf705df52682982d3cb749017aa9401ec156a6d286938edbc411ddc6c8
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.251
+    - 1.5707963267948966
+- scene_id: uq_occ_char_v9_013
+  scene_family_id: engineering_occlusion_characterization_v9/family_013
+  layout_id: neutral_screen_mango_v9_013
+  layout_signature_sha256: f58a48253289844b2881a6012d6c6a30784f2fad513ee9d425635d0f8eae8320
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2508
+    - 1.5707963267948966

@@ -1,0 +1,59 @@
+{
+  "authorization_sha256": "7efbe121ac8c9063e91b060b55aaccdc0681b1bd763c3dcba7b78ad75b7e31a8",
+  "calibration_families_captured": 0,
+  "calibrator_fit_call_count": 0,
+  "checks": {
+    "calibration_128_design_valid": true,
+    "calibration_authorization_valid": true,
+    "calibration_capture_absent": true,
+    "dataset_inference_and_fit_absent": true,
+    "r5_pilot_32_of_32_qc_pass": true,
+    "test_iid_ood_and_robot_sealed": true
+  },
+  "design_checks": {
+    "capture_order_0_to_127": true,
+    "family_count_128": true,
+    "four_state_by_four_relation_by_eight": true,
+    "scene_order_matches_manifest": true,
+    "unique_family_scene_seed_layout_signature": true
+  },
+  "locked_at_utc": "2026-09-23T07:48:03.183568+00:00",
+  "model_inference_run": false,
+  "pilot_r5_decision_sha256": "6f115bc6a9c15b8c20659d979ae40fa45dee8ce16957404f5cdaae01490b403d",
+  "policies": {
+    "all_or_nothing_128_qc": true,
+    "capture_attempts_authorized": 1,
+    "capture_requires_live_preflight_pass": true,
+    "live_preflight_attempts_authorized": 1,
+    "no_materialization_inference_or_fit_before_128_qc_pass": true,
+    "partial_row_reuse_forbidden": true,
+    "robot_policy_sealed": true,
+    "row_retry_repair_filter_or_cross_attempt_merge_forbidden": true,
+    "test_iid_ood_sealed": true
+  },
+  "protocol_id": "gazebo_calibration_v6",
+  "robot_access": false,
+  "schema_version": 1,
+  "scientific_decision": null,
+  "scientific_hypothesis": "NOT_TESTED",
+  "scope": "Calibration-v6 128 live preflight, one capture attempt, all-or-nothing QC",
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V6_IMPLEMENTATION_AMENDMENT_R3_LOCK.json": "f3416bd6843e1b72250e8d39f740843e476cce76359e1555f8fa3fe756b737cd",
+    "protocol/GAZEBO_CALIBRATION_V6_PILOT_R5_DATA_DESIGN_AMENDMENT_LOCK.json": "5ed3e9d8dd083a4c58fe9ba7e8319e156849ffc14f80063d36dc0bf02fedf26f",
+    "protocol/GAZEBO_CALIBRATION_V6_PILOT_R5_IMPLEMENTATION_LOCK.json": "4c68ed3902f6711f150aab7150b69e2f3d550bcebc35c05f7684f742aaeda693",
+    "protocol/gazebo_calibration_v6_family_manifest.jsonl": "ac7bdaff26c03cce9d6cec215915696fc32355b95706505521d75b8a473141c4",
+    "protocol/gazebo_calibration_v6_r5_calibration.py": "9a800403353f6673d44c852e339fba60d6ac73c710bb3ad5d5f16b31ae1cb08d",
+    "protocol/gazebo_calibration_v6_r5_calibration_qc.py": "d2e61e9ab0a7df6fa4f7b675df8ba2c4109af682f1feae2c2b2c77da1186d876",
+    "protocol/gazebo_calibration_v6_r5_capture_compatibility_lock.json": "7efbe121ac8c9063e91b060b55aaccdc0681b1bd763c3dcba7b78ad75b7e31a8",
+    "protocol/gazebo_calibration_v6_split_manifest.json": "92fa41e10b405a55a235a95abb6ecbc60697d31df4fe4c293c5f3b47e78b1c2f",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/R3_FIXED_CAMERA_TF_PREFLIGHT.json": "0ace1bdc936110912c9d7226e2d7b5ed1238d934f620659543360ceeb67ea739",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot_r5/PILOT_R5_DECISION.json": "6f115bc6a9c15b8c20659d979ae40fa45dee8ce16957404f5cdaae01490b403d",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_annotations.yaml": "92673bb103bc2e267328b729c8f7b5e97f6c92de864d3236dabd97463a561332",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_gate.yaml": "cd6fadb48324922e011d6e4562e64283827a464842dd1ea667dbea2a894cfec6",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_scenes.yaml": "54c3fa4c3dc226f04ce0a1da1097ac8ab150d755c798b3e0817b4a132aeeee28",
+    "ur3/ur3_perception/scripts/roborefer_pilot_capture_r4.py": "3eef06ea614cd22ce751e90ee7e70bdb06c180abf1eaa2e81573a9c9d6d4bb82",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place_uq_occlusion_v2.sdf": "6ee5cd6ede77d3fc8247557746ca25f0c03d0e08e0156d0360059d8e691c1193"
+  },
+  "status": "CALIBRATION_V6_R5_EXECUTION_FROZEN_BEFORE_LIVE_PREFLIGHT_AND_SINGLE_CAPTURE",
+  "test_iid_ood_access": false
+}

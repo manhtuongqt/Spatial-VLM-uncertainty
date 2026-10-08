@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "registry_id": "roborefer_geometry_reason_codes_v1",
+  "status": "LOCKED_FOR_WP1",
+  "codes": [
+    {
+      "code": "NO_VALID_DEPTH",
+      "stage": "DEPTH_COMPONENT",
+      "meaning_vi": "Seed nam trong anh nhung vung lan can khong co metric depth hop le.",
+      "distinguished_from": "NO_SEED_SUPPORT",
+      "recommended_action": "REOBSERVE"
+    },
+    {
+      "code": "NO_SEED_SUPPORT",
+      "stage": "DEPTH_COMPONENT",
+      "meaning_vi": "Khong co connected component depth hop le nao ho tro seed RoboRefer, hoac seed nam ngoai anh.",
+      "distinguished_from": "NO_VALID_DEPTH",
+      "recommended_action": "REPROMPT_OR_REOBSERVE"
+    },
+    {
+      "code": "AREA_TOO_SMALL",
+      "stage": "DEPTH_COMPONENT",
+      "meaning_vi": "Component co seed nho hon nguong dien tich toi thieu.",
+      "recommended_action": "REOBSERVE"
+    },
+    {
+      "code": "AREA_TOO_LARGE",
+      "stage": "DEPTH_COMPONENT",
+      "meaning_vi": "Component co seed qua lon nhung van nam gon trong ROI.",
+      "recommended_action": "REOBSERVE"
+    },
+    {
+      "code": "PLANE_MERGE",
+      "stage": "DEPTH_COMPONENT",
+      "meaning_vi": "Component qua lon va tiep tuc den bien ROI; day la heuristic hinh hoc, khong phai semantic ground truth.",
+      "recommended_action": "CHANGE_VIEW"
+    },
+    {
+      "code": "BORDER_TRUNCATED",
+      "stage": "DEPTH_COMPONENT",
+      "meaning_vi": "Component cham bien anh khi che do fail-closed duoc bat.",
+      "recommended_action": "CHANGE_VIEW"
+    },
+    {
+      "code": "UNSTABLE_3D",
+      "stage": "TEMPORAL_3D",
+      "meaning_vi": "Cua so 3D da du mau nhung position standard deviation vuot nguong.",
+      "recommended_action": "REOBSERVE"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "aborted_r1_source_sha256": "bc541a0b87e8c7ba688bfd157f4cc20d215ccbdf0dc0269a4e18a623acdf0dda",
+  "all_checks_pass": true,
+  "checks": {
+    "cross_split_rgb_qc_pass_no_exact_or_perceptual_overlap": true,
+    "dataset_absent": true,
+    "geometry_qc_absent": true,
+    "immutable_input_lock_and_embedded_hashes_valid": true,
+    "r6_implementation_valid": true,
+    "rgb_qc_artifacts_reused_without_recompute": true,
+    "robot_unauthorized": true,
+    "scientific_method_and_all_gates_unchanged": true,
+    "test_iid_ood_sealed": true,
+    "within_split_rgb_qc_pass_128_unique": true
+  },
+  "created_at_utc": "2026-09-15T07:33:46.766416+00:00",
+  "cross_split_rgb_qc_sha256": "cbdde10ed156a2efd94f7472ff346307f322ff6f2ac17a66bcea17fdaaa5e23f",
+  "materialization_input_lock_sha256": "672243d483e4b839b41655f1803cf29ef3990afd78472d2f1d8451b231b7082e",
+  "observed_infrastructure_failure": {
+    "exception": "ValueError: invalid materialization lock",
+    "inherited_consumer_expected_status": "LOCKED_BEFORE_GEOMETRY_QC_AND_MATERIALIZATION",
+    "producer_status": "LOCKED_BEFORE_QC_AND_MATERIALIZATION",
+    "stage": "after_rgb_qc_before_geometry_qc"
+  },
+  "protocol_id": "gazebo_calibration_v3",
+  "r6_implementation_lock_sha256": "06c537bce7678196fdc16f7d74752f3148dc4007fa1352a2dbd42726da069c80",
+  "robot_access": false,
+  "schema_version": 1,
+  "scope": "pre-geometry lock-status compatibility and immutable RGB-QC reuse only",
+  "status": "PASS",
+  "test_iid_ood_access": false,
+  "within_split_rgb_qc_sha256": "164b19bc800328b2c8763eeac44bda0ce591ce326baaa53dd3639ef931e32890"
+}

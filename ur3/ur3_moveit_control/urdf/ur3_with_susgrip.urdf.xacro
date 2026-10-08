@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
+    <xacro:arg name="name" default="ur"/>
+    <xacro:arg name="sim_ignition" default="false"/>
+    <xacro:arg name="grasp_object_model" default="red_cube"/>
+    <xacro:arg name="grasp_object_color" default="red"/>
+    <xacro:arg name="grasp_object_link" default="cube_link"/>
+    <xacro:arg name="multi_object_grasp" default="false"/>
+    <xacro:arg name="camera_update_rate" default="60"/>
+    <!-- Keep synthetic noise disabled until it is fitted from the tabletop
+         depth experiment. Override this arg for controlled robustness tests. -->
+    <xacro:arg name="camera_depth_noise_stddev" default="0.0"/>
+
+    <!-- Include the default UR robot xacro -->
+    <xacro:include filename="$(find ur_description)/urdf/ur.urdf.xacro"/>
+
+    <!-- Include the SusGrip 2F gripper xacro -->
+    <!-- The prefix and parent are needed to attach it correctly -->
+    <xacro:include filename="$(find susgrip_2f_gazebo)/urdf/susgrip_2f_gazebo.urdf.xacro"/>
+    <xacro:include filename="$(find ur3_moveit_control)/urdf/d435i_wrist_camera.xacro"/>
+
+    <!-- Attach the gripper to the tool0 link of the UR robot -->
+    <!-- Thêm khoảng cách 1.5 cm (0.015 m) dọc theo trục Z -->
+    <xacro:susgrip_2f_gazebo prefix="" parent="tool0">
+        <origin xyz="0 0 0.015" rpy="0 0 0" />
+    </xacro:susgrip_2f_gazebo>
+
+    <!-- Tool center point at the middle of the finger contact region. -->
+    <link name="gripper_tcp"/>
+    <joint name="gripper_tcp_joint" type="fixed">
+        <parent link="gripper_body"/>
+        <child link="gripper_tcp"/>
+        <origin xyz="0 0 0.14" rpy="0 0 0"/>
+    </joint>
+
+    <!-- 1. Intel RealSense D435i eye-in-hand camera. The mount transform is
+         kept unchanged so the established top-down view and industrial
+         pick/place poses remain stable. -->
+    <xacro:d435i_wrist_camera
+        parent="tool0"
+        sim_enabled="$(arg sim_ignition)"
+        mount_xyz="0.001623 -0.106306 0.013148"
+        mount_rpy="0.163640 -1.535191 1.364251"
+        update_rate="$(arg camera_update_rate)"
+        depth_noise_stddev="$(arg camera_depth_noise_stddev)"/>
+
+    <!-- 2. Spacer Cylinder between tool0 and Gripper -->
+    <!-- Bán kính 5cm (0.05m), Độ dày 1.5cm (0.015m) -->
+    <link name="spacer_cylinder">
+        <visual>
+            <geometry>
+                <cylinder radius="0.05" length="0.015"/>
+            </geometry>
+            <material name="gray">
+                <color rgba="0.5 0.5 0.5 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.015"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="spacer_joint" type="fixed">
+        <parent link="tool0"/>
+        <child link="spacer_cylinder"/>
+        <!-- Đặt tâm của hình trụ vào giữa khoảng trống (0.015 / 2 = 0.0075) -->
+        <origin xyz="0 0 0.0075" rpy="0 0 0"/>
+    </joint>
+
+    <!-- 3. Gazebo ROS 2 Control for Gripper (Only if sim_ignition:=true) -->
+    <xacro:if value="$(arg sim_ignition)">
+        <ros2_control name="SusGripGazeboSystem" type="system">
+            <hardware>
+                <plugin>ign_ros2_control/IgnitionSystem</plugin>
+            </hardware>
+            <joint name="gripper_joint">
+                <command_interface name="position">
+                    <param name="min">0.0</param>
+                    <param name="max">0.065</param>
+                </command_interface>
+                <state_interface name="position">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+            <!-- Register the passive finger as well so gz_ros2_control can
+                 propagate the URDF mimic relation in Gazebo Fortress. -->
+            <joint name="gripper_joint_mimic">
+                <param name="mimic">gripper_joint</param>
+                <param name="multiplier">1.0</param>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+                <state_interface name="effort"/>
+            </joint>
+        </ros2_control>
+
+        <xacro:macro name="detachable_cube" params="color">
+          <gazebo>
+            <plugin filename="ignition-gazebo-detachable-joint-system"
+                    name="ignition::gazebo::systems::DetachableJoint">
+                <!-- Fixed-joint reduction merges gripper_body into this link. -->
+                <parent_link>wrist_3_link</parent_link>
+                <child_model>${color}_cube</child_model>
+                <child_link>cube_link</child_link>
+                <attach_topic>/ur3_sim/attach_${color}_cube</attach_topic>
+                <detach_topic>/ur3_sim/detach_${color}_cube</detach_topic>
+                <output_topic>/ur3_sim/${color}_cube_attached</output_topic>
+            </plugin>
+          </gazebo>
+        </xacro:macro>
+
+        <!-- Benchmark mode keeps the original one-object physics contract. -->
+        <xacro:unless value="$(arg multi_object_grasp)">
+          <gazebo>
+            <plugin filename="ignition-gazebo-detachable-joint-system"
+                    name="ignition::gazebo::systems::DetachableJoint">
+              <parent_link>wrist_3_link</parent_link>
+              <child_model>$(arg grasp_object_model)</child_model>
+              <child_link>$(arg grasp_object_link)</child_link>
+              <attach_topic>/ur3_sim/attach_$(arg grasp_object_model)</attach_topic>
+              <detach_topic>/ur3_sim/detach_$(arg grasp_object_model)</detach_topic>
+              <output_topic>/ur3_sim/$(arg grasp_object_model)_attached</output_topic>
+            </plugin>
+          </gazebo>
+        </xacro:unless>
+
+        <!-- Interactive mode can switch target without recreating the world. -->
+        <xacro:if value="$(arg multi_object_grasp)">
+          <xacro:detachable_cube color="red"/>
+          <xacro:detachable_cube color="green"/>
+          <xacro:detachable_cube color="blue"/>
+          <xacro:detachable_cube color="yellow"/>
+          <xacro:detachable_cube color="orange"/>
+          <xacro:detachable_cube color="purple"/>
+          <xacro:detachable_cube color="pink"/>
+        </xacro:if>
+    </xacro:if>
+
+</robot>

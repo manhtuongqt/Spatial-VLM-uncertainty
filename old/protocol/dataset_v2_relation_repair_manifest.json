@@ -1,0 +1,1631 @@
+{
+  "all_families_permanently_excluded_from_official_dataset": true,
+  "capture_count": 30,
+  "condition_counts": {
+    "clean": 30
+  },
+  "families": [
+    {
+      "anchor_ids": [
+        "ycb_orange_01"
+      ],
+      "anchor_models": [
+        "ycb_orange"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000001__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000001",
+      "instruction": "Locate the mustard bottle that is front of the orange.",
+      "layout_fingerprint_sha256": "163b2add60aef66ec8627a3b2ae8dc530741d070817d3746cd9ff5ce936117ae",
+      "layout_seed": 7443733477888187739,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.06781322140384122,
+            0.09224719802277814,
+            0.5861853394007022
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          255.42873024633116
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5610738175621246
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.004316573155819375,
+        "target_camera_center_xyz": [
+          0.10241841316552916,
+          -0.0877643959986894,
+          0.575940509500176
+        ],
+        "target_predicted_centroid_x_px": 433.32202858903986,
+        "target_predicted_median_depth_m": 0.5217572444063052
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "front_of",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mustard_bottle_01",
+      "target_model": "ycb_mustard_bottle",
+      "target_shape_group": "tall"
+    },
+    {
+      "anchor_ids": [
+        "cube_purple_01"
+      ],
+      "anchor_models": [
+        "purple_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000002__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000002",
+      "instruction": "Locate the tomato soup can that is front of the purple cube.",
+      "layout_fingerprint_sha256": "7ee0d4348f009b5b83ebc43ff440f0cbaba4c33848c8cced55dc286fb1ca74c7",
+      "layout_seed": 5265708372376571130,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.02561081925553582,
+            -0.0406691820310381,
+            0.6274963452134945
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          350.2804648935229
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.6042906292511787
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.08631022117201284,
+        "target_camera_center_xyz": [
+          -0.07293205196378866,
+          0.0070746247775475,
+          0.5265777689042932
+        ],
+        "target_predicted_centroid_x_px": 241.6001734175886,
+        "target_predicted_median_depth_m": 0.48298040807916587
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "front_of",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "cube_green_01"
+      ],
+      "anchor_models": [
+        "green_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000003__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000003",
+      "instruction": "Locate the apple that is front of the green cube.",
+      "layout_fingerprint_sha256": "23fdfd788afe1b566eff337c97d6d216653d41886f57050d117551b3123ea967",
+      "layout_seed": 2822193900477961086,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.033699494523835166,
+            0.06619218056154783,
+            0.6213068440018911
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          292.6699852134233
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5977980981027706
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.12847792739182254,
+        "target_camera_center_xyz": [
+          -0.15991118356786788,
+          -0.006792608686731538,
+          0.4640239574660805
+        ],
+        "target_predicted_centroid_x_px": 116.67679032243439,
+        "target_predicted_median_depth_m": 0.4343201707109481
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "front_of",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_apple_01",
+      "target_model": "ycb_apple",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "cube_blue_01"
+      ],
+      "anchor_models": [
+        "blue_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000004__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000004",
+      "instruction": "Locate the lemon that is front of the blue cube.",
+      "layout_fingerprint_sha256": "8669316254e1b7c295f863006e79e6d4090cc640bd8941d18fb6d931606dc103",
+      "layout_seed": 5783885848279453329,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.03778701598977641,
+            -0.1242781997148723,
+            0.6027978353589836
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          363.53653695964096
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5791329775990829
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.12226843871483209,
+        "target_camera_center_xyz": [
+          -0.17921336888076467,
+          -0.056373731152103215,
+          0.4413368015574963
+        ],
+        "target_predicted_centroid_x_px": 79.43245440130914,
+        "target_predicted_median_depth_m": 0.4218645388842508
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "front_of",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_lemon_01",
+      "target_model": "ycb_lemon",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_orange_01"
+      ],
+      "anchor_models": [
+        "ycb_orange"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000005__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000005",
+      "instruction": "Locate the mustard bottle that is behind the orange.",
+      "layout_fingerprint_sha256": "dca787396c1dcde2e92a5443edb5aa42887eeb53571f785b00722a68fff223ab",
+      "layout_seed": 7238503933206920899,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.03290792784158758,
+            -0.12564815167685883,
+            0.5245561577932376
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          287.5212560798102
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.49944463595466004
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.022301246288221416,
+        "target_camera_center_xyz": [
+          0.12744858433399434,
+          -0.05597537252173665,
+          0.6109291473367521
+        ],
+        "target_predicted_centroid_x_px": 451.9810006405306,
+        "target_predicted_median_depth_m": 0.5567458822428815
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "behind",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mustard_bottle_01",
+      "target_model": "ycb_mustard_bottle",
+      "target_shape_group": "tall"
+    },
+    {
+      "anchor_ids": [
+        "ycb_apple_01"
+      ],
+      "anchor_models": [
+        "ycb_apple"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000006__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000006",
+      "instruction": "Locate the tomato soup can that is behind the apple.",
+      "layout_fingerprint_sha256": "08f3b04fba9ddf7562527bb6ec5694007a06204690927ad5e01b198cf10db5b2",
+      "layout_seed": 8067912219662389476,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.09784723138469559,
+            0.025953797736558815,
+            0.5313780126280795
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          213.94060935373795
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5016742258729471
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.02212650865229207,
+        "target_camera_center_xyz": [
+          0.0674274299764932,
+          -0.10054485297191268,
+          0.6023980953503665
+        ],
+        "target_predicted_centroid_x_px": 393.38340876916163,
+        "target_predicted_median_depth_m": 0.5588007345252392
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "behind",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "cube_yellow_01"
+      ],
+      "anchor_models": [
+        "yellow_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000007__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000007",
+      "instruction": "Locate the orange that is behind the yellow cube.",
+      "layout_fingerprint_sha256": "e2dbde8ce51b6ea6c45500e729742d90095aec3c89e5806fff4aa402258131ca",
+      "layout_seed": 5278959200660043981,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.12717843212409857,
+            -0.05923939793563701,
+            0.48781068312139747
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          167.5304934815208
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.46461702219848744
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.06035815777908263,
+        "target_camera_center_xyz": [
+          0.013985265546097303,
+          -0.07801262512161067,
+          0.5850867018161476
+        ],
+        "target_predicted_centroid_x_px": 340.03077658557805,
+        "target_predicted_median_depth_m": 0.5599751799775701
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "behind",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_orange_01",
+      "target_model": "ycb_orange",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_lemon_01"
+      ],
+      "anchor_models": [
+        "ycb_lemon"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000008__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000008",
+      "instruction": "Locate the green cube that is behind the lemon.",
+      "layout_fingerprint_sha256": "9da03ab353515e55d0325eeeb4383d8b9f8ccfd23a7023d181e3eef63d9472de",
+      "layout_seed": 8549117969973025909,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.10410872639073612,
+            -0.12474182864418694,
+            0.47736699739040767
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          193.36362766654955
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.45789473471716213
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.12464066764525542,
+        "target_camera_center_xyz": [
+          0.050267950290777796,
+          -0.05903255978901974,
+          0.6410441482615379
+        ],
+        "target_predicted_centroid_x_px": 373.0700120037376,
+        "target_predicted_median_depth_m": 0.6175354023624176
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "behind",
+      "split": "repair_pilot_only",
+      "target_id": "cube_green_01",
+      "target_model": "green_cube",
+      "target_shape_group": "box"
+    },
+    {
+      "anchor_ids": [
+        "ycb_apple_01"
+      ],
+      "anchor_models": [
+        "ycb_apple"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000009__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000009",
+      "instruction": "Locate the tomato soup can that is nearer than the apple.",
+      "layout_fingerprint_sha256": "d1c3111f210c9a75c51a863fdb204019dee32c3c0b6d653a03d520df4c051357",
+      "layout_seed": 7020199150879552980,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.056751733932846604,
+            -0.0049045412090684415,
+            0.6518114888473692
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          378.313813532113
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.6221077020922368
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.13950023999188868,
+        "target_camera_center_xyz": [
+          -0.05354380963580613,
+          -0.1166651947520246,
+          0.4912048229254754
+        ],
+        "target_predicted_centroid_x_px": 259.47770431599815,
+        "target_predicted_median_depth_m": 0.4476074621003481
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "cube_purple_01"
+      ],
+      "anchor_models": [
+        "purple_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000010__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000010",
+      "instruction": "Locate the mustard bottle that is nearer than the purple cube.",
+      "layout_fingerprint_sha256": "08264f750f93efd1261a8dacdc72aec91dad4c5c1057966300e66ed8462a2d2a",
+      "layout_seed": 1677116063571396992,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.12657747519817755,
+            0.030931848069824963,
+            0.5262999222096888
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          179.77833099310303
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.503094206247373
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.04797758125543691,
+        "target_camera_center_xyz": [
+          -0.02105214099927344,
+          -0.07607692829606404,
+          0.47429989008580675
+        ],
+        "target_predicted_centroid_x_px": 298.64230100150667,
+        "target_predicted_median_depth_m": 0.4201166249919361
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mustard_bottle_01",
+      "target_model": "ycb_mustard_bottle",
+      "target_shape_group": "tall"
+    },
+    {
+      "anchor_ids": [
+        "cube_blue_01"
+      ],
+      "anchor_models": [
+        "blue_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000011__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000011",
+      "instruction": "Locate the orange that is nearer than the blue cube.",
+      "layout_fingerprint_sha256": "a6f5900b32a7bfc4eed84d9cf42448182580e0505739bdd085edcba6ef4ccffb",
+      "layout_seed": 732089609355807747,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.003286196417808418,
+            -0.030951597783449025,
+            0.6066485869031747
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          322.2605452344946
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.582983729143274
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.0750109241018653,
+        "target_camera_center_xyz": [
+          -0.13081894568646418,
+          0.01216183666099896,
+          0.49808432687998627
+        ],
+        "target_predicted_centroid_x_px": 166.35985349432733,
+        "target_predicted_median_depth_m": 0.4729728050414087
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_orange_01",
+      "target_model": "ycb_orange",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "cube_yellow_01"
+      ],
+      "anchor_models": [
+        "yellow_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000012__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000012",
+      "instruction": "Locate the mug that is nearer than the yellow cube.",
+      "layout_fingerprint_sha256": "de9e83090b874473fcf7460f023ab1fe624afa05de6e3273093123da5b6669fe",
+      "layout_seed": 6233317009728271102,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.020966422690164688,
+            -0.0031474135270862236,
+            0.6392881606326493
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          345.42103606865896
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.6160944997097393
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.004668557352967367,
+        "target_camera_center_xyz": [
+          0.02843773993146692,
+          -0.12310739352947445,
+          0.5727936190709058
+        ],
+        "target_predicted_centroid_x_px": 355.6340770306301,
+        "target_predicted_median_depth_m": 0.5764259423567719
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mug_01",
+      "target_model": "ycb_mug",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "ycb_apple_01"
+      ],
+      "anchor_models": [
+        "ycb_apple"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000013__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000013",
+      "instruction": "Locate the tomato soup can that is farther than the apple.",
+      "layout_fingerprint_sha256": "8c889af05b3027a8a3787cb9997676beba3d8ccde29d50422014c6983c2a6cc4",
+      "layout_seed": 173203781987662215,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.03965917109865702,
+            -0.03593436407176778,
+            0.5555368940826239
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          282.27616365418044
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5258331073274914
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.022905514639390973,
+        "target_camera_center_xyz": [
+          0.03228329193702212,
+          0.03070677869950897,
+          0.6273359827920097
+        ],
+        "target_predicted_centroid_x_px": 356.73319567254026,
+        "target_predicted_median_depth_m": 0.5837386219668824
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "farther_than",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "cube_green_01"
+      ],
+      "anchor_models": [
+        "green_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000014__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000014",
+      "instruction": "Locate the mustard bottle that is farther than the green cube.",
+      "layout_fingerprint_sha256": "5e96e8798d4f04fb6ddd328b3de28be3355fd80d9a6e8a1ea453b54416e554a9",
+      "layout_seed": 6326339571200553790,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.07068197888592298,
+            -0.12509249935527744,
+            0.508839998396061
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          241.35404014869167
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.4853312524969406
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.021216564611749228,
+        "target_camera_center_xyz": [
+          0.11922558254135932,
+          -0.07521369694709129,
+          0.5957310822025605
+        ],
+        "target_predicted_centroid_x_px": 446.8407487163671,
+        "target_predicted_median_depth_m": 0.5415478171086898
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "farther_than",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mustard_bottle_01",
+      "target_model": "ycb_mustard_bottle",
+      "target_shape_group": "tall"
+    },
+    {
+      "anchor_ids": [
+        "cube_yellow_01"
+      ],
+      "anchor_models": [
+        "yellow_cube"
+      ],
+      "anchor_shape_groups": [
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000015__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000015",
+      "instruction": "Locate the orange that is farther than the yellow cube.",
+      "layout_fingerprint_sha256": "53a4439a45dff1ba119bba17c1b99aa9f481e1526740ee09b1684c6c131d5397",
+      "layout_seed": 6421456428393189548,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.17723811340942958,
+            0.00013662575980552538,
+            0.4696092106609252
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          96.79864512042565
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.44641554973801517
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.12114455368671781,
+        "target_camera_center_xyz": [
+          0.07037443883094058,
+          -0.09245632105621088,
+          0.6276716252633106
+        ],
+        "target_predicted_centroid_x_px": 393.4974467150799,
+        "target_predicted_median_depth_m": 0.602560103424733
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "farther_than",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_orange_01",
+      "target_model": "ycb_orange",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_lemon_01"
+      ],
+      "anchor_models": [
+        "ycb_lemon"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000016__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000016",
+      "instruction": "Locate the purple cube that is farther than the lemon.",
+      "layout_fingerprint_sha256": "c928c4c9dc53437138509ae952684df2027fe8c9f145710c97d6bee15f8c3664",
+      "layout_seed": 2382347701387779896,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.15453213892272605,
+            -0.06727189981668018,
+            0.45804895879457536
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          121.0696853693704
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.4385766961213298
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.16487979450912613,
+        "target_camera_center_xyz": [
+          0.06855352816317117,
+          -0.04754686113711046,
+          0.6616622065927718
+        ],
+        "target_predicted_centroid_x_px": 388.33860752608587,
+        "target_predicted_median_depth_m": 0.638456490630456
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "farther_than",
+      "split": "repair_pilot_only",
+      "target_id": "cube_purple_01",
+      "target_model": "purple_cube",
+      "target_shape_group": "box"
+    },
+    {
+      "anchor_ids": [
+        "cube_purple_01",
+        "ycb_orange_01"
+      ],
+      "anchor_models": [
+        "purple_cube",
+        "ycb_orange"
+      ],
+      "anchor_shape_groups": [
+        "box",
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000017__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000017",
+      "instruction": "Locate the tomato soup can between the purple cube and orange in camera depth.",
+      "layout_fingerprint_sha256": "3e53a5a21f63a922947e1ccd53d2cfad5b8169ba2745d33816eefe0290cd0a7e",
+      "layout_seed": 1368423581441196826,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.04366101225431618,
+            0.07658721679759983,
+            0.6170867733678284
+          ],
+          [
+            -0.14709002374276703,
+            -0.11315696389381183,
+            0.43127045035430295
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          282.6613076764516,
+          118.83215951919092
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5938810574055126,
+          0.4061589285157254
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.07,
+        "signed_screening_margin": 0.01901563838045006,
+        "target_camera_center_xyz": [
+          -0.055780042061214036,
+          0.0008788462108516581,
+          0.5387719277213028
+        ],
+        "target_predicted_centroid_x_px": 262.79492850769816,
+        "target_predicted_median_depth_m": 0.49517456689617545
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "between_in_depth",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "cube_blue_01",
+        "ycb_apple_01"
+      ],
+      "anchor_models": [
+        "blue_cube",
+        "ycb_apple"
+      ],
+      "anchor_shape_groups": [
+        "box",
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000018__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000018",
+      "instruction": "Locate the tomato soup can between the blue cube and apple in camera depth.",
+      "layout_fingerprint_sha256": "16235beaf7d9624ce7563657212c61e2be8439c58ccc3df413384a1cdcf98246",
+      "layout_seed": 126164258409797903,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.02310677489775742,
+            -0.004552232248383553,
+            0.6405438460183034
+          ],
+          [
+            -0.13948934446823813,
+            -0.07532801938956328,
+            0.4527893149447089
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          347.40726780033566,
+          138.83004610499734
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.6168789882584027,
+          0.42308552818957645
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.07,
+        "signed_screening_margin": 0.017262149979517305,
+        "target_camera_center_xyz": [
+          0.020789358485055365,
+          -0.12002205783574596,
+          0.5539450389942211
+        ],
+        "target_predicted_centroid_x_px": 348.2896980013353,
+        "target_predicted_median_depth_m": 0.5103476781690938
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "between_in_depth",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "cube_yellow_01",
+        "ycb_lemon_01"
+      ],
+      "anchor_models": [
+        "yellow_cube",
+        "ycb_lemon"
+      ],
+      "anchor_shape_groups": [
+        "box",
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000019__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000019",
+      "instruction": "Locate the apple between the yellow cube and lemon in camera depth.",
+      "layout_fingerprint_sha256": "5cb6e8c10e094cc09934483c48ce283c4182c0d0cf8a1dbd82661d746c7cdd1e",
+      "layout_seed": 5741639651111920798,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.16608572033732336,
+            -0.10844886805667969,
+            0.4335096532204898
+          ],
+          [
+            -0.014902264231628715,
+            0.09628716548890223,
+            0.6474312747433267
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          93.34235939522813,
+          311.5931720134383
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.41031599229757976,
+          0.6279590120700812
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.07,
+        "signed_screening_margin": 0.029136980727952844,
+        "target_camera_center_xyz": [
+          -0.04183313025584223,
+          -0.02438071115082463,
+          0.5585258180972608
+        ],
+        "target_predicted_centroid_x_px": 280.1486460775789,
+        "target_predicted_median_depth_m": 0.5288220313421284
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "between_in_depth",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_apple_01",
+      "target_model": "ycb_apple",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "cube_purple_01",
+        "cube_green_01"
+      ],
+      "anchor_models": [
+        "purple_cube",
+        "green_cube"
+      ],
+      "anchor_shape_groups": [
+        "box",
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000020__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000020",
+      "instruction": "Locate the orange between the purple cube and green cube in camera depth.",
+      "layout_fingerprint_sha256": "6753570c10f8112baec2ad7825d973f94a0b6f1a600623e78c7c4dcee1266b6e",
+      "layout_seed": 7125089323478055038,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.040785219941956385,
+            -0.0619467815589001,
+            0.6316328485846867
+          ],
+          [
+            -0.1656220405310057,
+            -0.04867376377674382,
+            0.45908077862317803
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          364.67902288747723,
+          106.88829067247025
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.6084271326223709,
+          0.43557203272405765
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.07,
+        "signed_screening_margin": 0.005203547574882783,
+        "target_camera_center_xyz": [
+          -0.006499780733928706,
+          -0.152864861022536,
+          0.535887102137518
+        ],
+        "target_predicted_centroid_x_px": 318.1924992715679,
+        "target_predicted_median_depth_m": 0.5107755802989404
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "between_in_depth",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_orange_01",
+      "target_model": "ycb_orange",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_mustard_bottle_01",
+        "cube_blue_01"
+      ],
+      "anchor_models": [
+        "ycb_mustard_bottle",
+        "blue_cube"
+      ],
+      "anchor_shape_groups": [
+        "tall",
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000021__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000021",
+      "instruction": "Locate the mug between the mustard bottle and blue cube in camera depth.",
+      "layout_fingerprint_sha256": "06cf601dfee20b627ce3fc259ecf9ec14795abbbf5da83be0ec53d942a6efdff",
+      "layout_seed": 4218016936597560906,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.08771610753277923,
+            0.041291677229550544,
+            0.4661883042980402
+          ],
+          [
+            0.005055863628597779,
+            -0.006893771579866981,
+            0.6239788698362485
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          211.50579365464944,
+          330.4545200345608
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.41200503920416953,
+          0.6003140120763478
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.07,
+        "signed_screening_margin": 0.003909820748047854,
+        "target_camera_center_xyz": [
+          -0.03472304477441607,
+          -0.11244560773240109,
+          0.5227718680424339
+        ],
+        "target_predicted_centroid_x_px": 285.2871035384944,
+        "target_predicted_median_depth_m": 0.5264041913283
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "between_in_depth",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mug_01",
+      "target_model": "ycb_mug",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "ycb_tomato_soup_can_01",
+        "cube_pink_01"
+      ],
+      "anchor_models": [
+        "ycb_tomato_soup_can",
+        "pink_cube"
+      ],
+      "anchor_shape_groups": [
+        "low",
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000022__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000022",
+      "instruction": "Locate the lemon between the tomato soup can and pink cube in camera depth.",
+      "layout_fingerprint_sha256": "ffb1277f9df415dca6b857804629137b75e15376b763755b052e1669412e1748",
+      "layout_seed": 6650596723742944913,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.17425873644245116,
+            0.024159225347695684,
+            0.44632127503046337
+          ],
+          [
+            -0.017662424620388195,
+            0.09153686680732145,
+            0.6458202492736043
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          88.9091406883202,
+          308.96804959783276
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.40272391420533604,
+          0.6220076122720769
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.07,
+        "signed_screening_margin": 0.005833214260361486,
+        "target_camera_center_xyz": [
+          -0.09424102430364634,
+          0.06467729210163625,
+          0.565646660684961
+        ],
+        "target_predicted_centroid_x_px": 224.56586791119105,
+        "target_predicted_median_depth_m": 0.5461743980117154
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "between_in_depth",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_lemon_01",
+      "target_model": "ycb_lemon",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_orange_01",
+        "cube_purple_01"
+      ],
+      "anchor_models": [
+        "ycb_orange",
+        "purple_cube"
+      ],
+      "anchor_shape_groups": [
+        "round",
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000023__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000023",
+      "instruction": "Locate the tomato soup can nearer to the camera than both the orange and purple cube.",
+      "layout_fingerprint_sha256": "a551e91536d36ca67404d8edc9b5d5f6efd853076bffcfda55b93973faeb20c2",
+      "layout_seed": 1610113124889619615,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.14229576763991297,
+            0.04870295203427066,
+            0.503566421564145
+          ],
+          [
+            -0.039758027918563504,
+            0.017531001172999022,
+            0.5955870483841099
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          154.2795591368294,
+          285.0850813936191
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.47845489972556743,
+          0.5723813324217941
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.02171821737242577,
+        "target_camera_center_xyz": [
+          -0.09826593465737343,
+          -0.0864416183616164,
+          0.465334043178269
+        ],
+        "target_predicted_centroid_x_px": 197.55565394487564,
+        "target_predicted_median_depth_m": 0.42173668235314166
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than_both",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "ycb_apple_01",
+        "cube_green_01"
+      ],
+      "anchor_models": [
+        "ycb_apple",
+        "green_cube"
+      ],
+      "anchor_shape_groups": [
+        "round",
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000024__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000024",
+      "instruction": "Locate the mustard bottle nearer to the camera than both the apple and green cube.",
+      "layout_fingerprint_sha256": "efe3907715473f30ea48facfad96ea5e5c78097a71b3f7825fca683d37c9cd93",
+      "layout_seed": 6001958925585453916,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.09657578717817847,
+            0.07964604160137032,
+            0.5550848282807842
+          ],
+          [
+            0.0795308310843828,
+            -0.060243453980900655,
+            0.6657897859966081
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          220.0952582437127,
+          397.94216570392473
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5253810415256518,
+          0.6422810400974877
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.10315264661529441,
+        "target_camera_center_xyz": [
+          -0.08949081210516857,
+          -0.0139096977371896,
+          0.44141166000422805
+        ],
+        "target_predicted_centroid_x_px": 202.66803024669886,
+        "target_predicted_median_depth_m": 0.3872283949103574
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than_both",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mustard_bottle_01",
+      "target_model": "ycb_mustard_bottle",
+      "target_shape_group": "tall"
+    },
+    {
+      "anchor_ids": [
+        "ycb_tomato_soup_can_01",
+        "cube_yellow_01"
+      ],
+      "anchor_models": [
+        "ycb_tomato_soup_can",
+        "yellow_cube"
+      ],
+      "anchor_shape_groups": [
+        "low",
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000025__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000025",
+      "instruction": "Locate the apple nearer to the camera than both the tomato soup can and yellow cube.",
+      "layout_fingerprint_sha256": "7f65271183073d47b590316b0b5a1109e7d365306e1973915267aac38d20f800",
+      "layout_seed": 1523876082479987004,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.014271817677639353,
+            0.044782675322121074,
+            0.6177183282820407
+          ],
+          [
+            0.09373230014580403,
+            -0.08985195620029751,
+            0.6655784998837919
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          339.54663385802206,
+          410.89713166638546
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5741209674569133,
+          0.6423848389608819
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.072814325227505,
+        "target_camera_center_xyz": [
+          -0.14572692131223142,
+          0.04009630079154558,
+          0.49601042898454073
+        ],
+        "target_predicted_centroid_x_px": 147.47802939196296,
+        "target_predicted_median_depth_m": 0.4663066422294083
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than_both",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_apple_01",
+      "target_model": "ycb_apple",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_mustard_bottle_01",
+        "cube_blue_01"
+      ],
+      "anchor_models": [
+        "ycb_mustard_bottle",
+        "blue_cube"
+      ],
+      "anchor_shape_groups": [
+        "tall",
+        "box"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000026__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000026",
+      "instruction": "Locate the lemon nearer to the camera than both the mustard bottle and blue cube.",
+      "layout_fingerprint_sha256": "7e29616a5fedb4b659d2b2e95ec0f646ad1ef1a84d37c90cc53ee83eb1db4a37",
+      "layout_seed": 4993275134703455191,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.002804214196645921,
+            0.06137207620916879,
+            0.5479278572445327
+          ],
+          [
+            0.072272702552173,
+            -0.06465535085135286,
+            0.6576677826591046
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          322.4418338212971,
+          392.1474500314655
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.4937445921506621,
+          0.634002924899204
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 0.008985301010008911,
+        "target_camera_center_xyz": [
+          -0.14720696465145103,
+          -0.05572922757281672,
+          0.4692315538138987
+        ],
+        "target_predicted_centroid_x_px": 135.40419363888898,
+        "target_predicted_median_depth_m": 0.44975929114065316
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "nearer_than_both",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_lemon_01",
+      "target_model": "ycb_lemon",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_orange_01"
+      ],
+      "anchor_models": [
+        "ycb_orange"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000027__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000027",
+      "instruction": "Locate the mustard bottle that is left of the orange.",
+      "layout_fingerprint_sha256": "73b631ed33b9a470f608b0d609f1cecc46a2b45be2433beb9c3493fec5cf95de",
+      "layout_seed": 5322626006322044677,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.03427003920169827,
+            0.12239199905160547,
+            0.6278288198110407
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          292.4607000022489
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.6027172979724631
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 60.494577190982,
+        "target_camera_center_xyz": [
+          -0.08388662870349989,
+          -0.046763749582487926,
+          0.43241374337053384
+        ],
+        "target_predicted_centroid_x_px": 207.96612281126693,
+        "target_predicted_median_depth_m": 0.3782304782766632
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "left_of",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_mustard_bottle_01",
+      "target_model": "ycb_mustard_bottle",
+      "target_shape_group": "tall"
+    },
+    {
+      "anchor_ids": [
+        "ycb_apple_01"
+      ],
+      "anchor_models": [
+        "ycb_apple"
+      ],
+      "anchor_shape_groups": [
+        "round"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000028__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000028",
+      "instruction": "Locate the tomato soup can that is left of the apple.",
+      "layout_fingerprint_sha256": "371e56070c47721485cd3ba1f440b467491290fd0fff722eb5f26591d718400c",
+      "layout_seed": 2076185514362373362,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            0.01598520077817045,
+            -0.13980081498866853,
+            0.5598236175820339
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          342.84972348833963
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.5301198308269015
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 13.34364181457147,
+        "target_camera_center_xyz": [
+          -0.019476801928565324,
+          0.046036708517781966,
+          0.5891194072286184
+        ],
+        "target_predicted_centroid_x_px": 305.50608167376816,
+        "target_predicted_median_depth_m": 0.5455220464034911
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "left_of",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_tomato_soup_can_01",
+      "target_model": "ycb_tomato_soup_can",
+      "target_shape_group": "low"
+    },
+    {
+      "anchor_ids": [
+        "ycb_mustard_bottle_01"
+      ],
+      "anchor_models": [
+        "ycb_mustard_bottle"
+      ],
+      "anchor_shape_groups": [
+        "tall"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000029__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000029",
+      "instruction": "Locate the orange that is right of the mustard bottle.",
+      "layout_fingerprint_sha256": "faac028fe7e84a4e804d5fba809fa5aeba9d8b908c588b760cacaca1f4d1dfa2",
+      "layout_seed": 4709920993650272280,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.09620076480592421,
+            -0.052391638210219735,
+            0.4194160696692588
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          186.52772937768728
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.36523280457538815
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 71.12180442078866,
+        "target_camera_center_xyz": [
+          -0.039208336566377816,
+          -0.07277990776158803,
+          0.5413810502213046
+        ],
+        "target_predicted_centroid_x_px": 281.64953379847594,
+        "target_predicted_median_depth_m": 0.516269528382727
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "right_of",
+      "split": "repair_pilot_only",
+      "target_id": "ycb_orange_01",
+      "target_model": "ycb_orange",
+      "target_shape_group": "round"
+    },
+    {
+      "anchor_ids": [
+        "ycb_tomato_soup_can_01"
+      ],
+      "anchor_models": [
+        "ycb_tomato_soup_can"
+      ],
+      "anchor_shape_groups": [
+        "low"
+      ],
+      "answerability_state": "FOUND",
+      "capture_id": "v21repair_family_000030__clean_capture",
+      "exclusion_reason": "REPAIR_PILOT_INSPECTED_ENGINEERING_DATA",
+      "family_id": "v21repair_family_000030",
+      "instruction": "Locate the purple cube that is right of the tomato soup can.",
+      "layout_fingerprint_sha256": "4f2dd2b29cb04e1a852958cf14f0093efe30d138b001757b7a23edaf9984fb6c",
+      "layout_seed": 1970038644709287923,
+      "official_dataset_eligible": false,
+      "predictor_evidence": {
+        "anchor_camera_center_xyz": [
+          [
+            -0.12703365600325292,
+            -0.034727498176986824,
+            0.46228236641040543
+          ]
+        ],
+        "anchor_predicted_centroid_x_px": [
+          158.99444589303562
+        ],
+        "anchor_predicted_median_depth_m": [
+          0.4186850055852781
+        ],
+        "passed": true,
+        "screening_depth_margin_m": 0.035,
+        "signed_screening_margin": 187.57027520261153,
+        "target_camera_center_xyz": [
+          0.04724553776910689,
+          -0.06474983498694818,
+          0.6360281227572168
+        ],
+        "target_predicted_centroid_x_px": 370.56472109564714,
+        "target_predicted_median_depth_m": 0.612822406794901
+      },
+      "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+      "relation": "right_of",
+      "split": "repair_pilot_only",
+      "target_id": "cube_purple_01",
+      "target_model": "purple_cube",
+      "target_shape_group": "box"
+    }
+  ],
+  "family_count": 30,
+  "generator_version": "dataset_v2_relation_repair_generator_v1.1.0",
+  "geometry_version": "dataset_v2_relation_geometry_v2_1.1.0",
+  "participating_shape_group_counts": {
+    "box": 23,
+    "low": 13,
+    "round": 25,
+    "tall": 9
+  },
+  "protocol_id": "roborefer_dataset_v2_1_relation_repair",
+  "protocol_role": "REPAIR_PILOT_ENGINEERING_ONLY_NOT_OFFICIAL_DATA",
+  "relation_counts": {
+    "behind": 4,
+    "between_in_depth": 6,
+    "farther_than": 4,
+    "front_of": 4,
+    "left_of": 2,
+    "nearer_than": 4,
+    "nearer_than_both": 4,
+    "right_of": 2
+  },
+  "schema_version": 1
+}

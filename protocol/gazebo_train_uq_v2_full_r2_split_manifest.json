@@ -1,0 +1,16 @@
+{
+  "family_disjoint": true,
+  "pilot_families_excluded": true,
+  "predecessor_families_excluded": true,
+  "protocol_id": "gazebo_train_uq_v2_full_r2",
+  "schema_version": 1,
+  "status": "PREREGISTERED",
+  "train_uq": {
+    "cell_quota": 16,
+    "families": 256
+  },
+  "val_uq": {
+    "cell_quota": 4,
+    "families": 64
+  }
+}

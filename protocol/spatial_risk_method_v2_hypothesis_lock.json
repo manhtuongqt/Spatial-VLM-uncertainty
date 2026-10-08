@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "lock_id": "spatial_risk_method_v2_hypothesis_lock",
+  "created_at": "2026-09-15T12:25:23+07:00",
+  "status": "PREREGISTERED_BEFORE_V2_FIT_OR_NEW_DATA_ACCESS",
+  "purpose": "Freeze the spatial-risk v2 hypothesis, estimator, feature set, selection rule, scientific gates, and data-access boundary before any v2 fitting or new data capture.",
+  "scientific_scope": {
+    "pipeline": "RGB-D + language -> frozen B0 grounding -> relation-aware spatial-risk estimation -> calibrated uncertainty -> ACT/REOBSERVE/ABSTAIN",
+    "hypothesis": "With the grounding backbone held fixed, a shallow nonlinear risk estimator using only pre-existing, oracle-free B0 consistency and RGB-D geometry features, followed after estimator freeze by monotone affine-logit calibration on a new family-disjoint calibration split, will reduce unsafe target acceptance while preserving the locked grounding and output-contract gates.",
+    "claim_boundary": "This lock preregisters a testable revision; it is not evidence that the hypothesis is true and does not authorize a Test-IID, Test-OOD, or robot claim."
+  },
+  "historical_evidence_and_nonindependence": {
+    "calibration_v2_was_already_observed": true,
+    "observed_result": "NEGATIVE: temperature scaling improved Brier from 0.139282 to 0.137580 but worsened ECE-10 from 0.049936 to 0.051019; the probability-calibration gate failed.",
+    "consequence": "The v2 design is post hoc with respect to Calibration-v2. Calibration-v2 is permanently historical/read-only for v2 and cannot be reused for fitting, feature selection, hyperparameter selection, threshold selection, calibration, early stopping, or success evaluation.",
+    "no_retroactive_claim": "No v2 result may be described as preregistered with respect to Calibration-v2."
+  },
+  "frozen_dependencies": {
+    "grounding_backbone": {
+      "id": "B0",
+      "role": "The sole grounding backbone and comparator for v2.",
+      "must_remain_frozen": true,
+      "grounding_lock_sha256": "6e1da7e9759eacfaadf7be07467f4996e95575fd2a6225af25d87e4f74418b09",
+      "no_changes_allowed": [
+        "weights",
+        "prompt or decoding policy",
+        "semantic parser",
+        "grounding threshold",
+        "RGB-D preprocessing",
+        "self-consistency sampling procedure"
+      ]
+    },
+    "v1_method_lock_sha256": "a4c3777bb043d4fe72701355a8bf6cd7a3dd44c135cd97e610273406d415ec45",
+    "v1_selected_estimator_sha256": "167c05da20530f5e22a6b743043422952a258688e71721ba229086c55dc76f4b",
+    "calibration_v2_final_lock_sha256": "dca4a2f4dbeb437895ad95f1c0aff00358ab65b68ddfe7ac761aab6a07e3056f",
+    "calibration_v2_metrics_sha256": "48fedfe0b2637127331dab6945d2d6aad21d6f9c96c56683202625b59b67bf5d"
+  },
+  "unsafe_definition": {
+    "source": "results/spatial_vlm_refspatial_v1/wp4_grounding_lock/hypothesis_lock.json",
+    "immutable": true,
+    "non_found_unsafe": [
+      "AMBIGUOUS",
+      "ABSENT",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "found_unsafe": "B0 returns FOUND and the semantic point is missing, invalid, out of bounds, or has normalized Euclidean target error greater than 0.08.",
+    "safe": "B0 returns FOUND with exactly one finite in-bounds semantic point whose normalized Euclidean target error is at most 0.08.",
+    "risk_target": "P(unsafe | RGB, depth_view, instruction, frozen B0 prediction)",
+    "label_prohibition": "Ground-truth target coordinates, unsafe labels, evaluator output, and future split metadata may be used as training labels or evaluation data only in their authorized split role; none may enter inference features."
+  },
+  "method_v2": {
+    "estimator_name": "shallow_hist_gradient_boosting_v2",
+    "estimator": "sklearn.ensemble.HistGradientBoostingClassifier",
+    "objective": "binary log loss for unsafe=1",
+    "preprocessing": "No fitted scaler, imputer, or learned feature transform. Cast the locked feature vector to finite float64; a non-finite feature is an invalid pipeline output and may not be silently imputed.",
+    "hyperparameters": {
+      "learning_rate": 0.03,
+      "max_iter": 100,
+      "max_leaf_nodes": 3,
+      "max_depth": null,
+      "min_samples_leaf": 16,
+      "l2_regularization": 1.0,
+      "max_bins": 255,
+      "early_stopping": false,
+      "random_state": 15092026
+    },
+    "fit_rule": "Fit exactly once on Train-UQ labels using the parameters above. Use no class reweighting, resampling, early stopping, or hyperparameter sweep.",
+    "raw_risk": "predict_proba(X)[:, 1] for unsafe=1",
+    "difference_from_logistic_l2_v1": {
+      "model_change": "Replace StandardScaler + L2 LogisticRegression(C=0.1) with a fixed-capacity shallow histogram gradient-boosted tree model so that a small number of nonlinearities and feature interactions can be represented without an architecture search.",
+      "feature_change": "Remove action_ABSTAIN and exact_contract because they were constant/non-informative under frozen B0, and remove predicted_x and predicted_y to prevent absolute image-position shortcuts. Retain relation identity plus oracle-free consistency and local RGB-D geometry signals.",
+      "calibrator_change_after_estimator_freeze": "Replace one-parameter temperature scaling sigmoid(logit(p)/T) with positive-slope affine-logit scaling sigmoid(exp(log_a)*logit(p)+b), allowing slope and base-rate correction while preserving ranking.",
+      "unchanged": "B0, unsafe labels, feature extraction semantics for retained features, evaluation metrics, scientific eligibility gates, threshold grid, and test/robot sealing remain unchanged."
+    }
+  },
+  "locked_features_in_order": [
+    "action_POINT",
+    "action_INVALID",
+    "self_consistency",
+    "point_dispersion",
+    "boundary_distance",
+    "local_depth_valid_fraction",
+    "local_depth_median",
+    "local_depth_mad",
+    "relation_leftmost",
+    "relation_rightmost",
+    "relation_second_from_left",
+    "relation_second_from_right"
+  ],
+  "feature_contract": {
+    "count": 12,
+    "source_semantics": "For every retained feature, reuse the exact extraction and normalization semantics locked for spatial-risk v1; only the four explicitly removed columns change.",
+    "oracle_free_at_inference": true,
+    "new_features_allowed": false,
+    "removed_v1_features": [
+      "action_ABSTAIN",
+      "exact_contract",
+      "predicted_x",
+      "predicted_y"
+    ],
+    "forbidden_features": [
+      "ground-truth target coordinates",
+      "unsafe or correctness label",
+      "family, split, layout, or capture identifiers",
+      "Calibration-v2 outcomes",
+      "future Calibration-v3 outcomes",
+      "Test-IID or Test-OOD data or metadata"
+    ]
+  },
+  "development_data_and_selection": {
+    "train_split": {
+      "name": "Train-UQ",
+      "role": "The only split allowed to fit the v2 estimator.",
+      "dataset_manifest_sha256": "87b2c73222b142a40b058ad63d94e34f5668dc60e78330153fcaf6cec4ab6271"
+    },
+    "validation_split": {
+      "name": "Val-UQ",
+      "role": "The only split allowed for the v2 development eligibility decision and operating-threshold selection.",
+      "independence_status": "Development data already observed in earlier work; it is not confirmatory evidence."
+    },
+    "new_development_data": {
+      "allowed_in_this_lock": false,
+      "rule": "If new development data become necessary, this lock must first receive an append-only, timestamped amendment that freezes its namespace, family exclusions, sample count, and purpose before capture. Such data remain development-only and cannot serve as Calibration-v3 or Test."
+    },
+    "candidate_count": 1,
+    "hyperparameter_or_feature_search": false,
+    "eligibility_evaluation": "Evaluate the single frozen estimator on Val-UQ against frozen B0 using the unchanged gates below.",
+    "threshold_grid": {
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "step": 0.01,
+      "decision": "ABSTAIN iff raw risk >= threshold; otherwise preserve the B0 action and point."
+    },
+    "method_selection_rule": "The lock authorizes exactly one estimator candidate. It is eligible only if all development gates pass on Val-UQ; its selection objective remains lowest Val-UQ AURC, with the pre-existing tie-break order of lower non-FOUND false-accept rate, higher FOUND Hit@0.08, then simpler method. With one candidate, no cross-method tie can occur.",
+    "threshold_selection_rule": "Among thresholds satisfying every operating-point gate, choose lexicographically: lowest non-FOUND false-accept rate, highest FOUND Hit@0.08, highest corrected safe-task rate, highest coverage, then lowest threshold. No threshold satisfies all gates => development failure.",
+    "after_selection": "Persist one estimator artifact, its exact code/environment hashes, feature order, raw Val-UQ predictions, selected threshold, metrics, bootstrap summary, and decision; then freeze them before any Calibration-v3 materialization or access."
+  },
+  "metrics_and_gates": {
+    "immutable_relative_to_existing_lock": true,
+    "metric_definitions": {
+      "ece_10": "Ten equal-width probability bins on [0,1], with the final bin including 1.0; omit empty bins; ECE is the sample-weighted absolute confidence-accuracy gap.",
+      "brier": "Mean squared error between predicted unsafe probability and binary unsafe label.",
+      "aurc": "Area under the risk-coverage curve; lower is better.",
+      "false_accept_rate_nonfound": "count(action == POINT on non-FOUND) / count(non-FOUND).",
+      "nonfound_abstain_recall": "count(exact ABSTAIN on non-FOUND) / count(non-FOUND).",
+      "found_hit_0_08": "FOUND prediction has one finite in-bounds point with normalized Euclidean target error at most 0.08.",
+      "invalid_is_not_abstain": true
+    },
+    "development_eligibility_gates": [
+      "FOUND Hit@0.08 delta versus B0 must be at least -0.125.",
+      "Non-FOUND abstain recall must be strictly higher than B0.",
+      "Non-FOUND false-accept rate must be strictly lower than B0.",
+      "Exact output-contract rate must not be lower than B0.",
+      "AURC must be no worse than the locked comparator.",
+      "INVALID outputs may not be counted as ABSTAIN."
+    ],
+    "uncertainty_reporting": {
+      "bootstrap_replicates": 10000,
+      "seed": 13092026,
+      "resampling_unit": "parent family",
+      "paired": true
+    }
+  },
+  "fresh_calibration_after_method_freeze": {
+    "required": true,
+    "provisional_namespace": "Gazebo_calibration_v3",
+    "materialization_condition": "May be captured/materialized only after the v2 estimator, raw-risk implementation, and Val-UQ threshold have passed the development gates and received a separate immutable freeze artifact.",
+    "family_disjointness": "Every parent family, scene/layout seed, and capture identifier must be disjoint from Train-UQ, Val-UQ, Dev-v2, Calibration-v2, Test-IID, and Test-OOD. Disjointness must be machine-audited and locked before labels or model outputs are inspected.",
+    "minimum_design": "Before capture, create a separate calibration-v3 contract fixing sample count and the cross of relation class with unsafe state; do not infer these choices after observing outcomes.",
+    "calibrator": {
+      "formula": "clip p_raw to [1e-6, 1-1e-6], z=logit(p_raw), p_cal=sigmoid(exp(log_a)*z+b)",
+      "fit_data": "Calibration-v3 only",
+      "objective": "binary negative log likelihood",
+      "optimizer": "scipy.optimize.minimize with method=L-BFGS-B",
+      "initial_parameters": {
+        "log_a": 0.0,
+        "b": 0.0
+      },
+      "bounds": {
+        "log_a": [
+          -5.0,
+          5.0
+        ],
+        "b": [
+          -10.0,
+          10.0
+        ]
+      },
+      "optimizer_options": {
+        "maxiter": 1000,
+        "ftol": 1e-12,
+        "gtol": 1e-08
+      },
+      "ranking_requirement": "Positive slope is mandatory; AUROC and AURC before versus after calibration must be identical within absolute tolerance 1e-12."
+    },
+    "probability_success_gate": "On Calibration-v3, ECE-10 must strictly decrease and Brier must strictly decrease relative to the same frozen v2 raw probabilities.",
+    "operating_point_gate": "Using calibrated risk and the unchanged 0.00-to-1.00 step-0.01 threshold grid, at least one threshold must satisfy: exact-contract rate not lower than B0, FOUND Hit@0.08 delta at least -0.125, non-FOUND abstain recall strictly higher than B0, non-FOUND false-accept rate strictly lower than B0, and INVALID not counted as ABSTAIN. Together with the ranking-invariance requirement and the Val-UQ AURC eligibility gate, this preserves the existing scientific gates without redefining them.",
+    "success_decision": "CALIBRATION_V3_PASS_ELIGIBLE_FOR_SEPARATE_LOCKED_TEST_AUTHORIZATION",
+    "failure_decision": "CALIBRATION_V3_NEGATIVE_NO_TEST_OR_ROBOT",
+    "important": "A calibration pass permits creation/review of a separate Test access lock only; it does not itself open Test-IID/OOD or authorize robot ACT."
+  },
+  "data_access_boundary": {
+    "allowed_now": [
+      "Fit the single locked v2 estimator on Train-UQ.",
+      "Evaluate eligibility and select one threshold on Val-UQ.",
+      "Read historical v1 and Calibration-v2 artifacts solely for provenance and comparison reporting."
+    ],
+    "forbidden_now": [
+      "Any fitting, tuning, feature choice, threshold choice, calibration, early stopping, or retry based on Calibration-v2.",
+      "Capture, materialize, label, preview, or evaluate Calibration-v3 before the v2 estimator freeze and a separate pre-capture Calibration-v3 contract.",
+      "Create, preview, unseal, or run Test-IID or Test-OOD.",
+      "Use robot outcomes for development or execute robot ACT, REOBSERVE, or ABSTAIN evaluation.",
+      "Change B0 or the unsafe, ECE-10, Brier, AURC, output-contract, or scientific gate definitions."
+    ],
+    "calibration_v2": {
+      "state": "CLOSED_HISTORICAL_NEGATIVE",
+      "dataset_manifest_sha256": "a8d777f1333b08d40bf9ca887bf57b289bec745197cf53875254ac0a8c5fbae9"
+    },
+    "test_iid": "SEALED_AND_UNAUTHORIZED",
+    "test_ood": "SEALED_AND_UNAUTHORIZED",
+    "gazebo_robot": "CLOSED",
+    "real_ur3": "CLOSED_OPTIONAL_FUTURE_ONLY"
+  },
+  "decision_states": {
+    "development_success": "SPATIAL_RISK_V2_METHOD_FROZEN_AWAITING_NEW_CALIBRATION_CONTRACT",
+    "development_failure": "SPATIAL_RISK_V2_NEGATIVE_DO_NOT_CAPTURE_CALIBRATION_V3",
+    "calibration_success": "CALIBRATION_V3_PASS_ELIGIBLE_FOR_SEPARATE_LOCKED_TEST_AUTHORIZATION",
+    "calibration_failure": "CALIBRATION_V3_NEGATIVE_NO_TEST_OR_ROBOT"
+  },
+  "deviation_policy": "Any change to B0, features, estimator family, hyperparameters, fitting rule, selection rule, metric/gate definitions, calibrator, or data boundary invalidates this method identity. A timestamped replacement hypothesis lock must be created before using data under the revised method; no outcome-contingent amendment is allowed.",
+  "assertions": [
+    "This file is a preregistration artifact, not a positive result.",
+    "Only one v2 estimator candidate is authorized by this lock.",
+    "Calibration-v2 can never be relabeled as v2 calibration evidence.",
+    "A pipeline run is not scientific-gate success.",
+    "Test-IID, Test-OOD, Gazebo robot integration, and real UR3 remain closed."
+  ]
+}

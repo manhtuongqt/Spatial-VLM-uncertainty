@@ -1,0 +1,28 @@
+{
+  "arm": "C1",
+  "baseline_checkpoint_sha256": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045",
+  "completed_epochs": 15,
+  "completed_optimizer_steps": 240,
+  "conditioning": "phrase",
+  "dev": {
+    "anchor_cell_hits": 48,
+    "anchor_hit_rate": 0.7868852459016393,
+    "anchor_hits": 48,
+    "confident_wrong_anchor_ge_0p9": 6,
+    "empty_max_sigmoid_max": 0.7065955179610504,
+    "empty_mean_sigmoid_max": 0.29084889731474856,
+    "found_anchor_hits": 13,
+    "found_both_hits": 12,
+    "found_target_hits": 14,
+    "swap_both_hits": 8,
+    "swap_same_peak": 1,
+    "wrong_anchor_inside_target": 1
+  },
+  "epoch": 11,
+  "epoch_zero_based": 10,
+  "mlp_sha256": "40e3e26a7e524ca0187f92204d7268ad69f824c9e015370ea2b6dd1160aa36c9",
+  "optimizer_steps": 176,
+  "protocol_sha256": "0c4efd907413523bf273044c9520662750bbbca0b2cb72218fe712b02531a412",
+  "residual_state_sha256": "771f17e25c60f780bf080d7e40a55dc32d3ee650ffe09d21ace03b77156d1eaf",
+  "selected_from": "C1/checkpoints/epoch_011"
+}

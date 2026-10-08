@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-18T08:13:15.643236+00:00",
+  "command": "./protocol/run_wp0_checks.sh",
+  "environment": {
+    "python": "/usr/bin/python3",
+    "python_no_user_site": true,
+    "pytest_plugin_autoload": false
+  },
+  "build": {
+    "passed": true,
+    "summary": "Summary: 9 packages finished [5.79s]"
+  },
+  "interface_import": {
+    "passed": true,
+    "type": "ObjectObservation"
+  },
+  "pytest": {
+    "passed": true,
+    "passed_count": 72,
+    "warning_count": 5,
+    "duration_s": 1.13
+  },
+  "pilot_lock": {
+    "before_sha256": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c",
+    "after_sha256": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c",
+    "unchanged": true
+  },
+  "elapsed_s": 8
+}

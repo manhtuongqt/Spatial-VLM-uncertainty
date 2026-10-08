@@ -1,0 +1,764 @@
+\chapter{Cơ sở lý thuyết và các nghiên cứu liên quan}
+\label{sec:related}
+
+% Preamble cần amsmath, amssymb. Các khóa cite nằm trong latex/references.bib.
+
+Chương này trình bày nền tảng cho định vị thị giác--ngôn ngữ có đánh giá độ tin cậy. Nội dung đi từ biểu diễn đa phương thức và quan hệ không gian đến phân bố vị trí, khả năng trả lời, hiệu chuẩn rủi ro và quyết định chọn lọc. Các công thức mô tả khái niệm và quy ước đánh giá; kiến trúc cụ thể và thiết lập thực nghiệm của P-CRA-U được trình bày ở Chương 3 và Chương 4.
+
+\section{Mô hình thị giác--ngôn ngữ}
+\label{sec:theory-vlm}
+
+\subsection{Biểu diễn hình ảnh và ngôn ngữ}
+
+Mô hình thị giác--ngôn ngữ xử lý thông tin hình ảnh và văn bản để tạo biểu diễn hoặc dự đoán liên quan đến hai phương thức. Đầu ra có thể là mức tương đồng ảnh--văn bản, câu trả lời, tọa độ hoặc vùng ảnh. Vì vậy, tên gọi VLM không xác định duy nhất kiến trúc, cũng không bảo đảm khả năng định vị hoặc hiểu quan hệ hình học.
+
+Gọi $I$ là ảnh và $q$ là câu lệnh. Hai nhánh mã hóa có thể được mô tả:
+\begin{equation}
+    R=f_{\mathrm{vision}}(I),\qquad L=f_{\mathrm{text}}(q).
+    \label{eq:theory-image-text}
+\end{equation}
+$R$ có thể là vector toàn ảnh hoặc lưới đặc trưng; $L$ có thể là vector câu hoặc chuỗi đặc trưng token. Với grounding, việc giữ tương ứng giữa feature và vị trí ảnh giúp mô hình xác định đối tượng ở đâu, thay vì chỉ biết ảnh và câu có liên quan.
+
+CLIP học biểu diễn ảnh--văn bản bằng mục tiêu tương phản trên các cặp ảnh và mô tả \cite{radford2021clip}. LLaVA kết nối bộ mã hóa thị giác với mô hình ngôn ngữ và sử dụng huấn luyện theo chỉ dẫn thị giác \cite{liu2023llava}. Đây là hai cách liên kết phương thức; hệ thống của khóa luận không phải một bản hiện thực lại CLIP hoặc LLaVA.
+
+\subsection{Projector và biểu diễn đa phương thức}
+
+Feature thị giác thường khác số chiều và định dạng với biểu diễn của mô hình ngôn ngữ. Projector thực hiện ánh xạ:
+\begin{equation}
+    V=g_{\mathrm{proj}}(R).
+    \label{eq:theory-projector}
+\end{equation}
+Projector có thể là phép chiếu tuyến tính hoặc mạng nhỏ. Nó hỗ trợ căn chỉnh biểu diễn nhưng không tự bảo đảm thông tin hình học được giữ nguyên sau ánh xạ.
+
+Với RGB-D, nhánh depth có thể tạo $D=f_{\mathrm{depth}}(Z_{\mathrm{rel}})$. Việc đưa depth vào hệ thống chưa chứng minh mô hình sử dụng hiệu quả nguồn đó. Nếu nhiệm vụ có thể giải phần lớn từ màu sắc hoặc bố cục, mô hình vẫn có thể ưu tiên RGB. Tác dụng của depth cần được đo bằng giao thức phù hợp.
+
+Trong đồ án, sidecar P-CRA-U khai thác feature RGB và depth trước projector của RoboRefer để giữ cấu trúc lưới. Các phép chiếu của sidecar thuộc đường dự đoán bổ trợ, còn trọng số và đường sinh đầu ra của backbone được cố định.
+
+\subsection{Attention và điều kiện theo câu lệnh}
+
+Attention tổng hợp thông tin theo mức tương quan giữa truy vấn và feature. Scaled dot-product attention của Transformer có dạng \cite{vaswani2017attention}:
+\begin{equation}
+    \operatorname{Attention}(Q_a,K_a,V_a)=
+    \operatorname{softmax}\left(\frac{Q_aK_a^{\mathsf T}}{\sqrt{d_k}}\right)V_a.
+    \label{eq:theory-attention}
+\end{equation}
+$Q_a,K_a,V_a$ là query, key và value, được phân biệt với đồ thị truy vấn ở Mục~\ref{sec:theory-query-graph}. Trong cross-attention, query và key/value có thể đến từ hai nhóm biểu diễn khác nhau.
+
+Sidecar sử dụng các slot đích, quan hệ và vật mốc để truy vấn feature văn bản. Đầu ra là biểu diễn có điều kiện theo câu lệnh. Attention tạo liên kết học được; một trọng số attention chưa phải lời giải thích đã kiểm chứng về vật thể hoặc quan hệ.
+
+\section{Visual grounding và biểu thức tham chiếu}
+\label{sec:theory-grounding}
+
+\subsection{Định nghĩa và dạng đầu ra}
+
+Biểu thức tham chiếu là mô tả dùng để chỉ đối tượng hoặc nhóm đối tượng trong một ngữ cảnh. Referring Expression Comprehension (REC) yêu cầu định vị đối tượng được mô tả. Referring Expression Segmentation (RES) sử dụng mask làm đầu ra. Grounding điểm sử dụng một tọa độ đại diện.
+\begin{equation}
+    \widehat{Y}=f(I,q).
+    \label{eq:theory-grounding}
+\end{equation}
+$\widehat{Y}$ có thể là điểm, hộp bao hoặc vùng ảnh. Với RGB-D, đầu vào có thêm depth. Dạng đầu ra quyết định phép đo: một điểm nằm trong vật thể không đồng nghĩa mask hoặc hộp bao dự đoán có chất lượng cao.
+
+MAttNet tổ chức bằng chứng theo chủ thể, vị trí và quan hệ \cite{yu2018mattnet}. Cách phân chia này làm cơ sở tham chiếu cho việc phân biệt vai trò đích và ngữ cảnh trong đồ án, chứ không có nghĩa đồ án sử dụng MAttNet làm backbone.
+
+\subsection{Detection, grounding và spatial grounding}
+
+Detection gán lớp và vị trí cho các đối tượng trong ảnh. Grounding lựa chọn đối tượng theo câu lệnh cụ thể. Spatial grounding bổ sung ràng buộc về hướng, khoảng cách hoặc thứ tự với vật mốc. Khi có nhiều quả táo, detection đúng lớp vẫn có thể dẫn đến chọn nhầm quả táo được câu lệnh đề cập.
+
+Với “quả táo đỏ bên trái cốc”, màu sắc xác định nhóm ứng viên, còn cốc và quan hệ bên trái giúp phân biệt ứng viên. Chất lượng grounding do đó phụ thuộc cả feature đích và bằng chứng về ngữ cảnh.
+
+\subsection{Nhiều đích và không có đích}
+
+Giả thiết câu lệnh luôn có một đích hiện hữu không phù hợp với mọi tình huống. GRES mở rộng referring segmentation sang biểu thức có một, nhiều hoặc không có đích \cite{liu2023gres}. Hướng này liên quan đến việc xem xét các trường hợp ngoài lựa chọn một vật duy nhất.
+
+Tuy nhiên, nhiều vật được đề cập hợp lệ không luôn là mơ hồ. “Tất cả các quả táo” có thể yêu cầu nhiều đích rõ ràng. Trong nhiệm vụ chọn một vật của đồ án, \texttt{AMBIGUOUS} biểu thị lựa chọn chưa duy nhất theo quy tắc dữ liệu, khác với nhiệm vụ chủ đích trả về tập nhiều vật.
+
+\subsection{Đánh giá điểm trong vùng đích}
+
+Gọi $M_i$ là tập pixel của mask đích chuẩn và $\widehat{p}_i$ là điểm dự đoán. Với tập $\mathcal{I}_{\mathrm{target}}$ chứa các mẫu có đích hợp lệ:
+\begin{equation}
+    \operatorname{Acc}_{\mathrm{ground}}=
+    \frac{1}{|\mathcal{I}_{\mathrm{target}}|}
+    \sum_{i\in\mathcal{I}_{\mathrm{target}}}
+    \mathbf{1}\{\widehat{p}_i\in M_i\}.
+    \label{eq:theory-point-hit}
+\end{equation}
+Mẫu không có đích không được tự động đưa vào mẫu số này; chúng được đánh giá qua answerability và sự kiện lỗi của chính sách.
+
+Khoảng cách tới vùng đích là:
+\begin{equation}
+    d(\widehat{p}_i,M_i)=\min_{p\in M_i}\|\widehat{p}_i-p\|_2.
+    \label{eq:theory-target-distance}
+\end{equation}
+Khoảng cách bằng không khi điểm trong mask. Trung vị có thể bằng không dù một nhóm lỗi lớn vẫn tồn tại, nên cần báo thêm trung bình và phân vị cao. Kiểm tra điểm trong interior dùng mask đã thu hẹp theo quy ước; đây chưa phải kiểm chứng một tư thế gắp an toàn.
+
+\section{Suy luận quan hệ không gian}
+\label{sec:theory-spatial-relations}
+
+\subsection{Đích, vật mốc và hệ quy chiếu}
+
+Một quan hệ được xét giữa đích $t$, vật mốc $a_k$ và hệ quy chiếu $F$:
+\begin{equation}
+    \rho(t,a_k;F).
+    \label{eq:theory-relation}
+\end{equation}
+$F$ có thể là ảnh camera, hệ robot, hệ thế giới hoặc hướng nội tại của vật. Cùng hai vật có thể thỏa “bên trái” ở một góc nhìn nhưng không thỏa ở góc khác. Các công thức sau minh họa những quy ước thường dùng; nhãn trong đồ án vẫn tuân theo protocol đã khóa.
+
+\subsection{Quan hệ hướng trên ảnh}
+
+Với tọa độ đại diện $(u_t,v_t)$ và $(u_a,v_a)$, quan hệ bên trái có thể mô tả:
+\begin{equation}
+    \operatorname{left\_of}(t,a)\Longleftrightarrow u_t<u_a-\delta_u.
+    \label{eq:theory-left}
+\end{equation}
+$\delta_u\geq0$ là biên dung sai nếu protocol có dùng. Cần nêu tọa độ đại diện là tâm mask, hộp bao hay vị trí khác; chúng có thể khác nhau với vật dài hoặc bị che.
+
+Quan hệ ảnh không đồng nhất với quan hệ trong hệ robot. Tọa độ $v$ tăng xuống ảnh không có nghĩa vật thấp hơn trong hệ thế giới. Để diễn giải ba chiều, cần depth và phép biến đổi camera.
+
+\subsection{Khoảng cách và quan hệ theo camera}
+
+Với depth theo trục quang học $z_t,z_a$, gần camera hơn có thể biểu diễn:
+\begin{equation}
+    \operatorname{nearer\_than}(t,a)\Longleftrightarrow z_t<z_a-\delta_z.
+    \label{eq:theory-nearer}
+\end{equation}
+Xa hơn dùng chiều ngược lại. Độ sâu đại diện có thể lấy bằng thống kê bền vững trên vùng hợp lệ; một pixel nhiễu không nên quyết định quan hệ.
+
+Khoảng cách Euclid giữa hai vật là đại lượng khác:
+\begin{equation}
+    d_{\mathrm{3D}}(t,a)=\|P_t-P_a\|_2.
+    \label{eq:theory-distance-3d}
+\end{equation}
+Depth nhỏ hơn chưa chắc đồng nghĩa gần vật mốc hơn. Depth theo trục $Z$ cũng khác khoảng cách theo tia từ tâm camera. Các từ “phía trước” và “phía sau” có thể mô tả thứ tự depth hoặc hướng nội tại của vật, nên cần gắn với hệ quy chiếu cụ thể.
+
+\subsection{Nhiều vật mốc và quan hệ kết hợp}
+
+Nằm giữa theo depth có thể được mô tả:
+\begin{equation}
+    \min(z_{a_1},z_{a_2})<z_t<\max(z_{a_1},z_{a_2}).
+    \label{eq:theory-between-depth}
+\end{equation}
+Điều kiện này nói về thứ tự depth, không yêu cầu đích nằm trên đoạn thẳng nối hai vật mốc trong 3D. Gần camera hơn cả hai vật mốc tương ứng $z_t<\min(z_{a_1},z_{a_2})$.
+
+Câu chứa nhiều điều kiện có thể biểu diễn bằng phép hội:
+\begin{equation}
+    \operatorname{left\_of}(t,a_1)\land
+    \operatorname{nearer\_than}(t,a_2).
+    \label{eq:theory-composed}
+\end{equation}
+Các điều kiện phải cùng thỏa trên một ứng viên. Giải riêng mà không giữ định danh ứng viên có thể tạo lựa chọn không nhất quán. Năng lực kết hợp cần được kiểm tra trên dữ liệu đủ phức tạp; số slot của kiến trúc chưa phải bằng chứng năng lực đó.
+
+\section{Biểu diễn quan hệ tập trung vào truy vấn}
+\label{sec:theory-query-graph}
+
+\subsection{Đồ thị toàn cảnh và đồ thị theo câu lệnh}
+
+Scene graph toàn cảnh mô tả nhiều vật và quan hệ trong ảnh. Với một yêu cầu chọn vật, chỉ một phần liên quan trực tiếp. Query-centric relation graph giới hạn vào đích, vật mốc, ràng buộc và hệ quy chiếu cần cho truy vấn:
+\begin{equation}
+    Q_q=(V_q,E_q,F_q),\qquad V_q=\{t,a_1,\ldots,a_K\}.
+    \label{eq:theory-query-graph}
+\end{equation}
+$E_q$ chứa các ràng buộc. Với quan hệ đồng thời cần hai vật mốc, một cạnh nhị phân có thể chưa đủ; phải giữ thông tin cả hai vật hoặc ràng buộc nhiều đối số.
+
+Biểu diễn theo truy vấn giới hạn phạm vi cần xử lý. Tuy nhiên, điều này không tự bảo đảm chi phí thấp hơn hoặc accuracy cao hơn mọi scene graph; các kết luận đó cần phép đo hoặc ablation.
+
+\subsection{Slot học được}
+
+Một biểu diễn liên tục có dạng:
+\begin{equation}
+    \mathcal{Q}=\{q_t,q_{\rho_1},\ldots,q_{\rho_L},
+                         q_{a_1},\ldots,q_{a_K}\}.
+    \label{eq:theory-query-slots}
+\end{equation}
+Các vector đảm nhiệm vai trò đích, quan hệ hoặc vật mốc; chúng được cập nhật theo câu lệnh và kết hợp feature thị giác.
+
+V2 dùng slot học được. Mã quan hệ và số slot vật mốc hoạt động được suy từ mẫu ngôn ngữ trong prompt. Hệ thống chưa xuất đồ thị ký hiệu với tên danh từ và định danh đầy đủ từng vật. Node thị giác được tổng hợp từ phân bố dự đoán và feature lưới; score cạnh phản ánh mục tiêu giám sát, chưa phải chứng minh quan hệ hình học chắc chắn đúng.
+
+\subsection{Giám sát và suy luận}
+
+Mask chuẩn có thể dùng huấn luyện và hậu kiểm. Dùng mask chuẩn để xác định vật mốc ngay khi suy luận sẽ đưa đáp án vào đường triển khai. Vì vậy, predicted evidence và oracle evidence phải được phân biệt.
+
+Đầu vào suy luận sidecar chỉ gồm feature và thông tin suy từ câu lệnh. Mask, trạng thái và nhãn nguồn chỉ tham gia loss hoặc evaluation. Trong demo Gazebo, semantic label cũng chỉ dùng hậu kiểm sau khi prediction đã được khóa.
+
+\section{Nhận thức RGB-D và hình học camera}
+\label{sec:theory-rgbd}
+
+\subsection{Relative depth và metric depth}
+
+Relative depth $Z_{\mathrm{rel}}$ là biểu diễn phục vụ đầu vào mô hình, có thể được chuẩn hóa hoặc mã hóa thành ảnh. Giá trị pixel không mặc định mang đơn vị mét; quan hệ với depth vật lý phụ thuộc phép biến đổi.
+
+Metric depth $Z_{\mathrm{metric}}$ có đơn vị vật lý để suy ra vị trí 3D. Trong đồ án, relative depth phục vụ trích xuất feature RoboRefer; metric depth phục vụ kiểm tra hình học và là dữ liệu cần khi chuyển điểm ảnh sang hệ robot.
+
+Chuẩn hóa theo ảnh có thể giữ thứ tự gần--xa nếu phép biến đổi đơn điệu phù hợp, nhưng làm mất thang đo tuyệt đối. Vì vậy, giá trị relative depth không được dùng trực tiếp như khoảng cách gắp. Nếu mã hóa đảo chiều thang giá trị, ý nghĩa vùng sáng và tối cũng phải theo quy tắc đó.
+
+\subsection{Registration và đồng bộ}
+
+RGB--depth registration tạo tương ứng pixel giữa hai nguồn. Khi tâm quang học hoặc độ phân giải khác nhau, cùng chỉ số trước registration có thể chỉ hai vùng khác nhau.
+
+Đồng bộ thời gian cần thiết khi cảnh chuyển động. Điểm từ RGB tại $t_1$ không nên ghép với depth tại $t_2$ nếu cảnh đã thay đổi. Overlay phải gắn với frame dùng suy luận để tránh hiển thị điểm cũ như dự đoán của frame mới.
+
+Ở biên vật, depth có thể thiếu hoặc trộn với nền. Kiểm tra giá trị hợp lệ và thống kê quanh điểm hỗ trợ phát hiện bất nhất. Những kiểm tra đó cần đánh giá riêng, nhất là khi vùng ứng viên được suy từ chính mô hình grounding.
+
+\subsection{Chiếu ngược và biến đổi hệ tọa độ}
+
+Trên ảnh đã xử lý méo, với camera lỗ kim và depth $z$ theo trục quang học:
+\begin{equation}
+    X=\frac{(u-c_x)z}{f_x},\quad
+    Y=\frac{(v-c_y)z}{f_y},\quad Z=z.
+    \label{eq:theory-backprojection}
+\end{equation}
+$f_x,f_y$ là tiêu cự pixel và $(c_x,c_y)$ là tâm ảnh. Mô hình chiếu và nội tại được mô tả trong tài liệu OpenCV \cite{opencvCameraModel}.
+
+Nội tại phải đúng kích thước ảnh; resize và crop cần biến đổi tiêu cự, tâm ảnh tương ứng. Nếu cảm biến trả khoảng cách theo tia thay vì depth trục $Z$, cần chuyển đại lượng đúng trước chiếu ngược.
+
+Với tọa độ thuần nhất:
+\begin{equation}
+    \widetilde{P}_{\mathrm{base}}=
+    {}^{\mathrm{base}}T_{\mathrm{camera}}
+    \widetilde{P}_{\mathrm{camera}}.
+    \label{eq:theory-camera-base}
+\end{equation}
+Ký hiệu xác định rõ hệ đích và hệ nguồn. ROS quy định optical frame có $z$ hướng ra trước, $x$ sang phải và $y$ xuống dưới \cite{foote2010rep103}. Optical frame khác frame cơ khí camera và frame base robot.
+
+\subsection{Giới hạn hình học của một điểm}
+
+Điểm 3D từ pixel và depth là vị trí bề mặt quan sát, chưa chứa hướng tiếp cận, độ mở gripper hay tư thế gắp. Sai số pixel, depth, nội tại và ngoại tại đều ảnh hưởng vị trí robot.
+
+Với vector đo $\xi$ và hàm chuyển đổi $P=g(\xi)$, lan truyền hiệp phương sai tuyến tính hóa là:
+\begin{equation}
+    \Sigma_P\approx J_g\Sigma_\xi J_g^{\mathsf T}.
+    \label{eq:theory-uncertainty-propagation}
+\end{equation}
+Hiệp phương sai heatmap 2D chưa đủ xác định $\Sigma_P$. Công thức nêu yêu cầu cho đánh giá uncertainty 3D, nhưng đồ án hiện chưa có đánh giá đầy đủ đại lượng này.
+
+\section{RoboRefer và vai trò của mô hình nền}
+\label{sec:theory-roborefer}
+
+\subsection{Hướng tiếp cận của RoboRefer}
+
+RoboRefer được đề xuất cho spatial referring trong robot, với đầu vào RGB hoặc RGB-D và câu lệnh; đầu ra định vị được mô tả bằng điểm hai chiều \cite{zhou2025roborefer}. Công trình sử dụng bộ mã hóa RGB và depth riêng cùng các projector, đồng thời nghiên cứu supervised fine-tuning và reinforcement fine-tuning cho hiểu biết và suy luận không gian.
+
+Checkpoint dùng trong đồ án là RoboRefer-2B-SFT theo bản phát hành của tác giả \cite{roborefer2bsftModelCard}. Sử dụng bản SFT không có nghĩa hệ thống đã dùng bản RFT hoặc tái lập đầy đủ kết quả multi-step reasoning của công trình gốc.
+
+\subsection{Đường baseline và đường sidecar}
+
+Baseline chạy mô hình gốc trên RGB-D và câu lệnh để nhận $p_{\mathrm{RR}}$. Sidecar sử dụng lưới feature trước projector, ký hiệu $R_0,D_0$, và câu lệnh để tạo các đầu ra P-CRA-U. Trong workspace, feature có kích thước $24\times32$ với 1.152 chiều tại mỗi ô.
+
+Giữ backbone cố định giới hạn các tham số được học thêm và cho phép tái sử dụng feature cache. Tuy nhiên, sidecar vẫn phụ thuộc chất lượng feature nền và không mặc định khôi phục được thông tin đã mất trong mã hóa. Hiệu quả cần được đo trên cùng sample và cùng quy tắc đánh giá với baseline.
+
+\subsection{Giới hạn đầu ra baseline trong giao thức đồ án}
+
+Tọa độ baseline không trực tiếp cung cấp distribution đã hiệu chuẩn, answerability bốn lớp hoặc năm score nguồn theo quy tắc của đồ án. Nhận định này nói về đầu ra được khai thác trong giao thức, không phủ nhận thông tin quan hệ có thể nằm trong biểu diễn nội bộ.
+
+Disagreement giữa điểm RoboRefer và sidecar có thể là tín hiệu bổ sung khi cả hai điểm thực sự được thu thập. Nếu split chưa có điểm baseline trong prediction sidecar, cần biểu diễn trạng thái thiếu. Prediction Test-IID V2 chính thức không sử dụng disagreement thực, nên không quy cải thiện của V2 cho tín hiệu này.
+
+\section{Phân bố không gian và đặc trưng heatmap}
+\label{sec:theory-spatial-distribution}
+
+\subsection{Logit và xác suất trên lưới}
+
+Gọi $\Omega$ là lưới $h\times w$ và $\ell_j$ là logit tại ô $j$. Softmax theo không gian tạo:
+\begin{equation}
+    H_j=\frac{\exp(\ell_j)}{\sum_{k\in\Omega}\exp(\ell_k)},
+    \qquad \sum_{j\in\Omega}H_j=1.
+    \label{eq:theory-spatial-softmax}
+\end{equation}
+$H_j$ là khối lượng của ô theo biểu diễn mô hình, chưa phải xác suất đã kiểm chứng rằng ô đó thuộc mask đích.
+
+Cần phân biệt với sigmoid độc lập để dự đoán mask. Khi dùng sigmoid, nhiều pixel có thể cùng cao và tổng không bằng một. Việc dùng logit cho mục tiêu mask và chuẩn hóa softmax trong hậu xử lý của đồ án là hai thao tác có vai trò khác nhau.
+
+Trên mẫu \texttt{ABSENT}, softmax vẫn có tổng bằng một, nên MAP vẫn tồn tại về mặt toán học. Head answerability và policy cần ngăn việc coi đỉnh heatmap như bằng chứng chắc chắn có đích.
+
+\subsection{MAP và chuyển đổi tọa độ}
+
+Vị trí MAP là:
+\begin{equation}
+    \widehat{j}_{\mathrm{MAP}}=
+    \underset{j\in\Omega}{\operatorname{arg\,max}}\,H_j.
+    \label{eq:theory-map}
+\end{equation}
+Nếu ô $(x,y)$ được đánh số từ không, tâm ô trên ảnh $W\times H_{\mathrm{img}}$ là:
+\begin{equation}
+    u=\frac{x+1/2}{w}W,\qquad
+    v=\frac{y+1/2}{h}H_{\mathrm{img}}.
+    \label{eq:theory-grid-pixel}
+\end{equation}
+Tọa độ liên tục cần được chuyển sang chỉ số pixel và giới hạn theo kích thước ảnh. Quy tắc chuyển đổi cụ thể của V2 được nêu ở Chương~3. Lưới tạo giới hạn lượng tử hóa; nội suy heatmap để hiển thị không làm tăng thông tin không gian mà mô hình đã dự đoán.
+
+\subsection{Entropy và chênh lệch đỉnh}
+
+Entropy chuẩn hóa là:
+\begin{equation}
+    \mathcal{H}_{\mathrm{norm}}=
+    -\frac{1}{\log|\Omega|}\sum_{j\in\Omega}H_j\log H_j.
+    \label{eq:theory-entropy}
+\end{equation}
+Giá trị gần một biểu thị phân bố gần đều; gần không biểu thị tập trung. Phân bố có thể tập trung vào vị trí sai, hoặc trải rộng trên một vật lớn nhưng vẫn phù hợp. Entropy vì vậy không được dùng trực tiếp như xác suất lỗi.
+
+Với hai giá trị ô lớn nhất $H_{(1)}\geq H_{(2)}$, peak margin của hậu xử lý V2 là:
+\begin{equation}
+    \Delta_{\mathrm{peak}}=H_{(1)}-H_{(2)}.
+    \label{eq:theory-peak-margin}
+\end{equation}
+Hai ô có thể kề nhau trong cùng vùng. Margin này khác chênh lệch giữa hai vật hoặc hai mode độc lập.
+
+\subsection{Moment, mode và hiệp phương sai}
+
+Với vị trí ô $x_j$ trong hệ tọa độ xác định:
+\begin{equation}
+    \mu=\sum_jH_jx_j,\qquad
+    \Sigma=\sum_jH_j(x_j-\mu)(x_j-\mu)^{\mathsf T}.
+    \label{eq:theory-spatial-moments}
+\end{equation}
+Trung bình của phân bố hai đỉnh có thể nằm giữa các đỉnh, nơi không có vật. Vì vậy, trung bình chưa luôn thích hợp làm điểm grounding. Hiệp phương sai toàn phân bố trộn độ phân tán trong vùng với sự tách biệt giữa các vùng.
+
+Mode có thể được khảo sát qua vùng liên thông trên ngưỡng tương đối, tính khối lượng vùng và lấy đỉnh trong vùng. V2 dùng cách hậu xử lý này và lưu tối đa ba vùng theo khối lượng. Mode count phụ thuộc ngưỡng, phép liên thông và giới hạn số vùng; nó không phải số vật thật.
+
+Hiệp phương sai cục bộ được tính với trọng số chuẩn hóa trong riêng một vùng. Báo cáo cần phân biệt tọa độ lưới/pixel và hiệp phương sai cục bộ/toàn cục. Các đại lượng đó mô tả phân bố 2D, chưa là sai số gắp 3D đã hiệu chuẩn.
+
+\section{Bất định đa phương thức}
+\label{sec:theory-uncertainty}
+
+\subsection{Bất định dữ liệu và bất định mô hình}
+
+Kendall và Gal phân biệt aleatoric uncertainty, liên quan đến nhiễu quan sát, với epistemic uncertainty, liên quan đến bất định mô hình \cite{kendall2017uncertainties}. Phân biệt này hỗ trợ xác định nguồn gốc khái quát của bất định.
+
+Đồ án tập trung vào dấu hiệu theo nguồn được gán nhãn, không ước lượng posterior của trọng số mô hình. Vector năm nguồn hoặc entropy heatmap chưa chứng minh đã tách aleatoric và epistemic. Bayesian inference và ensemble là những hướng khác có thể nghiên cứu, chưa phải phương pháp chính đã đánh giá.
+
+\subsection{Năm nhóm bất định}
+
+Vector score theo nguồn là:
+\begin{equation}
+    \mathbf{s}_{\mathrm{src}}=
+    [s_{\mathrm{sem}},s_{\mathrm{rel}},s_{\mathrm{spa}},
+     s_{\mathrm{depth}},s_{\mathrm{occ}}].
+    \label{eq:theory-source-vector}
+\end{equation}
+\begin{description}
+    \item[Ngữ nghĩa:] Bằng chứng chưa đủ để gắn mô tả với đúng đối tượng hoặc để phân biệt các đối tượng theo câu lệnh.
+    \item[Quan hệ:] Ràng buộc hoặc hệ quy chiếu chưa rõ, không nhất quán hoặc không thỏa theo quy tắc dữ liệu.
+    \item[Không gian:] Lựa chọn vị trí còn mơ hồ hoặc có nhiều ứng viên trong nhiệm vụ chọn một đích.
+    \item[Độ sâu:] Depth thiếu, nhiễu hoặc suy giảm, làm giảm bằng chứng cho quan hệ khoảng cách.
+    \item[Che khuất:] Đích hoặc vật mốc bị che, khiến phần quan sát không đủ cho nội dung cần xác định.
+\end{description}
+
+Nhiều nguồn có thể cùng xuất hiện. Head nguồn dùng sigmoid từng thành phần:
+\begin{equation}
+    s_k=\sigma(a_k)=\frac{1}{1+\exp(-a_k)}.
+    \label{eq:theory-source-sigmoid}
+\end{equation}
+Tổng năm score không cần bằng một. Nguồn không gian trong dữ liệu hiện tại được giám sát yếu qua \texttt{AMBIGUOUS}; kết quả của nguồn này phải được diễn giải cùng sự phụ thuộc giữa hai nhãn.
+
+\subsection{Dự đoán nguồn và giải thích nguyên nhân}
+
+Score cao là dự đoán theo mục tiêu học, không xác nhận nguyên nhân duy nhất của lỗi. Score khớp nhãn cũng chưa chứng minh thay đổi riêng nguồn đó chắc chắn sửa được grounding.
+
+Counterfactual hỗ trợ khảo sát độ nhạy dưới thay đổi được thiết kế, như suy giảm depth hoặc đổi câu lệnh. Kết luận nhân quả mạnh cần giả thiết và kiểm soát bổ sung. Khóa luận sử dụng các variant cho đánh giá phân tầng theo protocol.
+
+Ngưỡng biến score thành nhãn dương phải được quy định rõ. V2 chính thức dùng ngưỡng chung $0{,}5$ cho năm nguồn. Việc code hỗ trợ fit ngưỡng riêng chưa có nghĩa artifact V2 đã dùng chức năng đó.
+
+\subsection{Precision, recall và F1}
+
+Với số đúng dương $\mathrm{TP}$, sai dương $\mathrm{FP}$ và sai âm $\mathrm{FN}$:
+\begin{equation}
+    \operatorname{Precision}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}},
+    \quad \operatorname{Recall}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}},
+    \quad F_1=\frac{2\mathrm{TP}}{2\mathrm{TP}+\mathrm{FP}+\mathrm{FN}}.
+    \label{eq:theory-f1}
+\end{equation}
+Mẫu số bằng không cần quy ước trong code đánh giá. Macro-F1 trung bình F1 theo lớp; micro-F1 gộp số đếm trước khi tính. Khi nhãn mất cân bằng, hai chỉ số có thể khác nhau đáng kể. Kết quả per-source giúp xác định nguồn tạo nhiều cảnh báo sai.
+
+\section{Khả năng trả lời câu lệnh}
+\label{sec:theory-answerability}
+
+\subsection{Bốn trạng thái}
+
+Answerability mô tả khả năng đưa ra một lựa chọn hợp lệ từ câu lệnh và quan sát:
+\begin{description}
+    \item[\texttt{FOUND}:] Có đủ bằng chứng xác định một đích phù hợp. Ví dụ, chỉ một quả táo thỏa quan hệ trong câu lệnh.
+    \item[\texttt{AMBIGUOUS}:] Chưa có lựa chọn duy nhất. Ví dụ, hai vật cùng thỏa trong nhiệm vụ chỉ chọn một vật.
+    \item[\texttt{ABSENT}:] Không có vật thỏa yêu cầu theo nhãn chuẩn. Ví dụ, loại vật được chỉ định không hiện hữu trong cảnh.
+    \item[\texttt{INSUFFICIENT\_EVIDENCE}:] Quan sát chưa đủ kết luận. Ví dụ, phần vật mốc cần thiết bị che hoặc depth cho quan hệ bị suy giảm.
+\end{description}
+Không thấy vật rõ chưa đủ khẳng định \texttt{ABSENT}; heatmap nhiều đỉnh cũng chưa đủ gán \texttt{AMBIGUOUS}. Đánh giá phải dựa trên quy tắc và nhãn của dữ liệu.
+
+\subsection{Phân loại và đánh giá}
+
+Với bốn logit $b_c$:
+\begin{equation}
+    p_{\mathrm{ans}}(c\mid x)=
+    \frac{\exp(b_c)}{\sum_{c'}\exp(b_{c'})}.
+    \label{eq:theory-answerability-softmax}
+\end{equation}
+Lớp argmax được dùng trong policy hiện tại. Vector đầy đủ vẫn hữu ích cho calibrator, vì hai dự đoán cùng lớp có thể khác mức phân biệt giữa các trạng thái.
+
+Accuracy đo tỷ lệ đúng toàn tập; macro-F1 và recall từng lớp giúp khảo sát các trạng thái ít gặp. Ma trận nhầm lẫn giúp phân biệt hệ thống nhầm không hiện hữu thành thiếu bằng chứng, hay nhầm thiếu bằng chứng thành \texttt{FOUND}.
+
+\subsection{Answerability và lỗi grounding}
+
+Điểm có thể trong mask nhưng câu lệnh vẫn mơ hồ hoặc thiếu bằng chứng. Ngược lại, predicted \texttt{FOUND} có thể đi kèm điểm sai. Sự kiện lỗi của risk trong đồ án là:
+\begin{equation}
+    y_{\mathrm{err},i}=
+    \mathbf{1}\{s_i^\star\neq\mathrm{FOUND}
+        \ \lor\ \widehat{p}_i\notin M_i\}.
+    \label{eq:theory-error-event}
+\end{equation}
+$s_i^\star$ là trạng thái chuẩn. Khi không có mask hợp lệ, điều kiện chấp nhận vị trí không được xem là thỏa. Định nghĩa phải được giữ nguyên cho Brier, NLL, AUROC và selective risk; nó khác point-in-target trên riêng tập có đích.
+
+\section{Hiệu chuẩn xác suất và rủi ro grounding}
+\label{sec:theory-calibration}
+
+\subsection{Ý nghĩa của hiệu chuẩn}
+
+Score có thể xếp hạng mẫu khó tốt mà chưa thể hiện đúng tần suất lỗi. Guo và cộng sự nghiên cứu sai lệch giữa confidence mạng và accuracy quan sát, cùng các cách hiệu chuẩn sau huấn luyện \cite{guo2017calibration}.
+
+Với $r(x)$ là xác suất lỗi dự đoán, hiệu chuẩn lý tưởng là:
+\begin{equation}
+    \mathbb{E}[y_{\mathrm{err}}\mid r(X)=s]=s.
+    \label{eq:theory-risk-calibration}
+\end{equation}
+Trong dữ liệu hữu hạn, score gần nhau được nhóm để so sánh risk trung bình và tỷ lệ lỗi. Nhóm risk khoảng $0{,}1$ được kỳ vọng có khoảng $10\%$ lỗi. Đây là tính chất theo nhóm, không phải bảo đảm cho riêng một mẫu.
+
+Hiệu chuẩn cũng khác độ sắc. Hệ thống luôn trả tỷ lệ lỗi trung bình có thể phù hợp tổng thể nhưng không phân biệt được mẫu nào nên chấp nhận. Cần đánh giá cùng khả năng xếp hạng và risk--coverage.
+
+\subsection{Temperature scaling}
+
+Temperature scaling chia logit bởi $T>0$ trước softmax:
+\begin{equation}
+    p_c^{(T)}=\frac{\exp(b_c/T)}{\sum_k\exp(b_k/T)}.
+    \label{eq:theory-temperature}
+\end{equation}
+Phương pháp được khảo sát trong \cite{guo2017calibration}. Cùng một $T$ dương giữ thứ tự logit và argmax, nhưng thay độ tập trung của xác suất. Tham số được fit trên dữ liệu riêng.
+
+Hiệu chuẩn head answerability chưa đồng nghĩa hiệu chuẩn sự kiện lỗi ở Công thức~\eqref{eq:theory-error-event}, vì sự kiện đó còn phụ thuộc vị trí. Temperature scaling là phương pháp tham chiếu; calibrator V2 không chỉ là phép chia nhiệt độ.
+
+\subsection{Platt scaling và isotonic regression}
+
+Platt scaling ánh xạ score $s$ bằng sigmoid:
+\begin{equation}
+    r(s)=\sigma(as+b).
+    \label{eq:theory-platt}
+\end{equation}
+Isotonic regression học ánh xạ đơn điệu linh hoạt hơn. Niculescu-Mizil và Caruana so sánh các cách này cùng ảnh hưởng của lượng dữ liệu \cite{niculescu2005probabilities}.
+
+Khi score được định hướng lớn hơn nghĩa là rủi ro cao hơn, ánh xạ đơn điệu giữ thứ tự xếp hạng, trừ hòa điểm. Ánh xạ linh hoạt cần đủ dữ liệu để tránh học theo nhiễu calibration.
+
+\subsection{Logistic calibration từ nhiều bằng chứng}
+
+Với vector evidence $e(x)$:
+\begin{equation}
+    r_{\mathrm{ground}}(x)=
+    \sigma(w^{\mathsf T}\widetilde{e}(x)+b),
+    \qquad \widetilde{e}_k=\frac{e_k-\mu_k}{\sigma_k}.
+    \label{eq:theory-logistic-calibration}
+\end{equation}
+$\mu_k,\sigma_k$ được tính từ dữ liệu fit; phương sai rất nhỏ cần quy tắc xử lý. Regularization hạn chế độ lớn trọng số và độ nhạy với calibration.
+
+V2 sử dụng bằng chứng heatmap, answerability, nguồn bất định, relation consistency và sự phù hợp RGB--depth. Hệ số logistic không tự xác định tác động nhân quả của nguồn. MLP nhỏ có thể mô hình hóa tương tác phi tuyến, nhưng không mặc định tốt hơn. MLP là lựa chọn lý thuyết để đối chiếu; kết quả chính thức dùng logistic calibrator.
+
+\subsection{Tách dữ liệu và cross-fitting theo family}
+
+Train học sidecar; dev chọn checkpoint; calibration fit calibrator và xác định ngưỡng; Test-IID đánh giá hệ thống cố định. Tách vai trò hạn chế điều chỉnh theo chính tập báo cáo cuối.
+
+Cross-fitting giữ một fold để dự đoán bằng calibrator fit trên các fold còn lại. Variant cùng family phải ở cùng fold nhằm tránh rò rỉ giữa những quan sát có liên hệ. Sau đó, calibrator cuối được fit trên toàn calibration để triển khai.
+
+Cross-fitting giảm việc đánh giá trên chính các hàng đã fit nhưng không bảo đảm độ tin cậy dưới mọi thay đổi phân bố. Ngưỡng chọn từ prediction cross-fit còn cần được kiểm tra bằng kết quả của calibrator cuối trên test.
+
+\section{Chỉ số hiệu chuẩn và xếp hạng rủi ro}
+\label{sec:theory-calibration-metrics}
+
+\subsection{Brier score}
+
+Với nhãn lỗi $y_i\in\{0,1\}$ và risk $r_i$, Brier score nhị phân là:
+\begin{equation}
+    \operatorname{BS}=\frac{1}{N}\sum_{i=1}^{N}(r_i-y_i)^2.
+    \label{eq:theory-brier}
+\end{equation}
+Giá trị nhỏ hơn thể hiện dự đoán xác suất tốt hơn theo bình phương sai số. Chỉ số chịu ảnh hưởng của cả độ tin cậy và khả năng phân biệt, không chỉ riêng calibration.
+
+Với answerability nhiều lớp, một quy ước Brier là trung bình theo mẫu của tổng sai số bình phương giữa vector xác suất và one-hot. Cần chỉ rõ có chia thêm cho số lớp hay không khi so sánh báo cáo.
+
+\subsection{Negative log-likelihood}
+
+NLL nhị phân là:
+\begin{equation}
+    \operatorname{NLL}=-\frac{1}{N}\sum_{i=1}^{N}
+    [y_i\log r_i+(1-y_i)\log(1-r_i)].
+    \label{eq:theory-nll}
+\end{equation}
+Dự đoán sai nhưng rất tự tin bị phạt lớn. Code cần giới hạn xác suất khỏi đúng 0 hoặc 1 để tránh log không xác định, với quy tắc nhất quán.
+
+NLL answerability là trung bình $-\log p_{\mathrm{ans}}(s_i^\star\mid x_i)$. Nó khác NLL risk về nhãn đích và số lớp; không được gộp hai đại lượng thành một chỉ số.
+
+\subsection{Expected Calibration Error}
+
+Chia $[0,1]$ thành các bin $B_m$. Với risk:
+\begin{equation}
+    \overline{r}_m=\frac{1}{|B_m|}\sum_{i\in B_m}r_i,\qquad
+    \overline{y}_m=\frac{1}{|B_m|}\sum_{i\in B_m}y_i,
+\end{equation}
+\begin{equation}
+    \operatorname{ECE}=
+    \sum_{m:|B_m|>0}\frac{|B_m|}{N}
+       |\overline{r}_m-\overline{y}_m|.
+    \label{eq:theory-ece}
+\end{equation}
+Risk được so với tỷ lệ lỗi; confidence phân loại được so với accuracy. Đảo hai cách diễn giải sẽ làm sai ý nghĩa reliability.
+
+ECE phụ thuộc số bin, ranh giới và số mẫu. ECE nhỏ không bảo đảm mọi nhóm vật thể hoặc nhóm nhỏ đều được hiệu chuẩn tốt. Đồ án báo ECE risk với mười bin độ rộng bằng nhau.
+
+\subsection{Reliability diagram}
+
+Reliability diagram đặt risk trung bình $\overline{r}_m$ trên trục ngang và tỷ lệ lỗi $\overline{y}_m$ trên trục dọc. Đường chéo thể hiện sự phù hợp lý tưởng. Điểm trên đường chéo cho biết risk thấp hơn lỗi quan sát; điểm dưới cho biết risk cao hơn lỗi quan sát.
+
+Cần kèm số mẫu hoặc histogram để không diễn giải một bin rất nhỏ ngang với bin nhiều mẫu. Nếu thêm khoảng tin cậy, cách tính phải phản ánh cấu trúc family. Hình reliability của Test-IID được trình bày ở Chương 5 cùng ECE và giới hạn diễn giải.
+
+\subsection{AUROC và average precision}
+
+AUROC đo khả năng score xếp mẫu lỗi cao hơn mẫu không lỗi khi thay ngưỡng. Với lỗi là lớp dương, giá trị cao hơn thường tốt hơn. Đây là chỉ số xếp hạng: risk chưa đúng về xác suất vẫn có thể có AUROC cao.
+
+Average precision tổng hợp precision theo mức tăng recall:
+\begin{equation}
+    \operatorname{AP}=
+    \sum_k(\operatorname{Recall}_k-\operatorname{Recall}_{k-1})
+                   \operatorname{Precision}_k.
+    \label{eq:theory-ap}
+\end{equation}
+AP phụ thuộc tỷ lệ lớp dương và khác cách tích phân hình thang của đường precision--recall. Khi báo AP hoặc AUPRC cần nêu quy tắc tính; đồ án sử dụng average precision cho các giá trị AP đã lưu.
+
+Brier, NLL và ECE đánh giá chất lượng xác suất; AUROC và AP đánh giá xếp hạng. Hai nhóm bổ sung nhau, không thể thay thế nhau.
+
+\section{Dự đoán chọn lọc và chính sách quyết định}
+\label{sec:theory-selective}
+
+\subsection{Chấp nhận và từ chối}
+
+Selective prediction cho phép chỉ chấp nhận dự đoán trên một phần dữ liệu. Geifman và El-Yaniv nghiên cứu selective classification cho mạng sâu \cite{geifman2017selective}; SelectiveNet học đồng thời dự đoán và cơ chế chọn lọc \cite{geifman2019selectivenet}. Đồ án dùng chính sách sau huấn luyện dựa trên risk và answerability.
+
+Gọi $g_\tau(x)\in\{0,1\}$ là hàm chấp nhận. Nếu chỉ dùng risk, $g_\tau(x)=\mathbf{1}\{r(x)\leq\tau\}$. Tập được chấp nhận bởi policy còn cần điều kiện predicted answerability là \texttt{FOUND}.
+
+\subsection{Coverage và selective risk}
+
+Trên $N$ mẫu:
+\begin{equation}
+    \operatorname{Coverage}(\tau)=
+    \frac{1}{N}\sum_{i=1}^{N}g_\tau(x_i),
+    \label{eq:theory-coverage}
+\end{equation}
+\begin{equation}
+    \operatorname{Risk}(\tau)=
+    \frac{\sum_i g_\tau(x_i)y_i}{\sum_i g_\tau(x_i)}.
+    \label{eq:theory-selective-risk}
+\end{equation}
+Nếu không chấp nhận mẫu nào, risk không xác định; không được coi trường hợp đó như hệ thống tốt vì không có lỗi.
+
+Hai đại lượng phụ thuộc cách định nghĩa $g_\tau$. Lọc theo risk trên toàn tập có thể khác tập \texttt{EXECUTE} do policy thêm điều kiện answerability. Cần phân biệt sự trùng nhau trong một kết quả cụ thể với sự đồng nhất theo định nghĩa.
+
+\subsection{Đường risk--coverage và AURC}
+
+Sắp mẫu theo risk tăng dần rồi lần lượt chấp nhận thêm tạo đường risk--coverage. Với xếp hạng tốt, phần coverage thấp thường có ít lỗi hơn toàn tập.
+
+Với $y_{(j)}$ là nhãn lỗi ở thứ tự đã sắp, AURC rời rạc có thể tính:
+\begin{equation}
+    \operatorname{AURC}=\frac{1}{N}\sum_{k=1}^{N}
+           \left(\frac{1}{k}\sum_{j=1}^{k}y_{(j)}\right).
+    \label{eq:theory-aurc}
+\end{equation}
+Giá trị nhỏ hơn tốt hơn với cùng định nghĩa lỗi. Excess AURC là chênh lệch với thứ tự oracle đưa mẫu không lỗi lên trước. Oracle cần nhãn chuẩn, chỉ là mốc phân tích.
+
+Đường cong không nhất thiết tăng đều từng bước do tính rời rạc và hòa score. Điểm operating threshold cần được đánh dấu với coverage và risk thực nghiệm. Risk thấp ở một mức coverage không mô tả hiệu quả trên toàn bộ đường cong.
+
+\subsection{Bốn quyết định của policy}
+
+V2 ưu tiên answerability: predicted \texttt{ABSENT} dẫn tới \texttt{ABSTAIN}; \texttt{AMBIGUOUS} dẫn tới \texttt{ASK\_USER}; \texttt{INSUFFICIENT\_EVIDENCE} dẫn tới \texttt{REOBSERVE}. Với predicted \texttt{FOUND}, risk đạt ngưỡng dẫn tới \texttt{EXECUTE}; nếu chưa đạt, score nguồn hỗ trợ chọn hỏi lại hoặc quan sát lại.
+
+Luật dựa trên nguồn chưa chứng minh việc hỏi lại hoặc quan sát lại sẽ khắc phục lỗi. Đánh giá recovery cần chuỗi quan sát hoặc tương tác riêng.
+
+Ngưỡng được chọn trên calibration và cố định trước kiểm tra. Một cận nhị thức dùng tham khảo chọn ngưỡng phải được diễn giải cùng giả thiết độc lập, sự phụ thuộc giữa variant và việc khảo sát nhiều ngưỡng. Thủ tục này không tự chứng minh một bảo đảm an toàn robot.
+
+Trong offline evaluation, \texttt{EXECUTE} nghĩa là chấp nhận nhận thức. Chuyển động còn cần kiểm tra đối tượng, hình học 3D, TF, khả năng tiếp cận, va chạm và kết quả thao tác. Chỉ số policy không thay thế các đánh giá đó.
+
+\section{Vùng tin cậy không gian}
+\label{sec:theory-conformal}
+
+\subsection{Dự đoán theo tập}
+
+Dự đoán theo tập trả vùng $C_\alpha(x)$ thay vì chỉ một vị trí. Conformal prediction xây tập từ score calibration; bảo đảm bao phủ yêu cầu các điều kiện như tính trao đổi được giữa calibration và dữ liệu mới \cite{angelopoulos2021conformal}.
+
+Trong thiết lập chuẩn có nhãn điểm $Y$, mục tiêu bao phủ biên là:
+\begin{equation}
+    \Pr\{Y_{\mathrm{new}}\in C_\alpha(X_{\mathrm{new}})\}
+    \geq1-\alpha.
+    \label{eq:theory-conformal-point}
+\end{equation}
+Bao phủ biên là tính chất trên phân bố mẫu mới, không bảo đảm cho từng ảnh hoặc mọi nhóm điều kiện. Distribution-free không có nghĩa đúng dưới mọi chuyển dịch phân bố.
+
+\subsection{Vùng highest-density}
+
+Sắp ô theo $H_{(1)}\geq\cdots\geq H_{(|\Omega|)}$. Với khối lượng $m$, chọn ô đầu tiên đến khi đạt khối lượng:
+\begin{equation}
+    k(m)=\min\left\{k:\sum_{j=1}^{k}H_{(j)}\geq m\right\},
+    \qquad C_m=\{(1),\ldots,(k(m))\}.
+    \label{eq:theory-hd-region}
+\end{equation}
+Vùng có thể gồm nhiều phần rời nhau. Hộp bao của vùng có thể chứa nhiều pixel không được chọn; nó không thay thế tập ô khi đánh giá coverage.
+
+Score của một mẫu calibration có đích trong đồ án là khối lượng tích lũy cần để vùng lần đầu giao mask đích, ký hiệu $S_i$. Đây là score theo sự kiện giao mask, không phải chứa toàn bộ vật.
+
+\subsection{Phân vị và sự kiện bao phủ}
+
+Với $n$ score và mức lỗi $\alpha$, chỉ số phân vị hữu hạn mẫu trong split conformal là:
+\begin{equation}
+    k_\alpha=\left\lceil(n+1)(1-\alpha)\right\rceil.
+    \label{eq:theory-conformal-quantile}
+\end{equation}
+Ngưỡng lấy theo thống kê thứ tự tương ứng trong thiết lập chuẩn; nếu chỉ số vượt $n$, cần quy tắc ngưỡng cực đại phù hợp bảo đảm lý thuyết. Split conformal được nghiên cứu cho xây dựng tập dự đoán từ mô hình cố định \cite{lei2018distributionfree}.
+
+V2 lưu ngưỡng khối lượng $m_\alpha$ trong calibrator. Evaluator chính thức báo score coverage theo sự kiện:
+\begin{equation}
+    S_i\leq m_\alpha.
+    \label{eq:theory-region-score-event}
+\end{equation}
+Một phép kiểm tra khác dựng vùng bằng đúng hậu xử lý rồi xét giao trực tiếp:
+\begin{equation}
+    C_\alpha(x_i)\cap M_i\neq\varnothing.
+    \label{eq:theory-region-intersection}
+\end{equation}
+Hai sự kiện có thể khác nhau trên lưới rời rạc: vùng nhận cả ô làm tổng khối lượng đạt hoặc vượt ngưỡng, còn score ghi tổng đến ô target đầu tiên. Nếu ô này vượt ngưỡng, vùng có thể giao mask trong khi score event không đạt. Thứ tự các ô đồng xác suất cũng cần giữ nhất quán với evaluator và policy. Vì vậy, score coverage và direct-intersection coverage phải được báo riêng, như phân tích ở Chương~5.
+
+Cả hai phép kiểm tra đều không bảo đảm MAP nằm trong mask, vùng nằm hoàn toàn trong vật hoặc điểm gắp hợp lệ. Grounding accuracy, region coverage và robot success là các đại lượng khác nhau.
+
+\subsection{Family và giới hạn bảo đảm}
+
+Variant cùng family có phụ thuộc. Lee, Barber và Willett nghiên cứu suy luận phân phối tự do với dữ liệu phân cấp, nơi tính trao đổi được thông thường cần xét lại \cite{lee2023hierarchical}.
+
+V2 tính phân vị từ các mẫu có đích trên calibration, chưa phải thủ tục conformal phân cấp được chứng minh cho family. Khóa luận do đó báo coverage thực nghiệm và mức danh nghĩa, kèm giới hạn cấu trúc dữ liệu. Bootstrap family đánh giá bất định của số liệu nhưng không tự sửa giả thiết thuật toán conformal.
+
+\subsection{Bao phủ và diện tích}
+
+Phủ toàn ảnh có thể giao hầu hết mask nhưng ít hữu ích cho định vị. Tỷ lệ diện tích là:
+\begin{equation}
+    A(C_i)=\frac{|C_i|}{|\Omega|}.
+    \label{eq:theory-region-area}
+\end{equation}
+Cần báo coverage cùng trung bình/trung vị diện tích và các ca trượt. Diện tích trên lưới là tỷ lệ ô được chọn; nội suy chỉ phục vụ xem hình.
+
+Vùng nhỏ chưa đủ tốt nếu thường trượt; coverage cao cũng chưa đủ nếu vùng quá lớn. Chương 5 trình bày đồng thời các đại lượng để đánh giá vùng của V2.
+
+\section{Các nghiên cứu liên quan}
+\label{sec:theory-related-work}
+
+\subsection{Grounding theo biểu thức tham chiếu}
+
+MAttNet phân tách biểu thức thành thông tin chủ thể, vị trí và quan hệ, rồi kết hợp bằng attention \cite{yu2018mattnet}. Công trình này cho thấy biểu diễn theo vai trò là một hướng đã có trong grounding. P-CRA-U vận dụng tổ chức đích--vật mốc--quan hệ bằng query slots trên feature RGB-D đóng băng; thiết kế của khóa luận cần được phân biệt với cơ chế attention của MAttNet.
+
+GRES mở rộng referring expression segmentation sang một, nhiều hoặc không có đích \cite{liu2023gres}. Đây là cơ sở quan trọng để xem xét trường hợp vượt ngoài một referent. Tuy nhiên, nhiều referent hợp lệ không luôn là câu lệnh mơ hồ: một yêu cầu lấy tất cả vật cùng loại có thể xác định rõ dù có nhiều đích. Answerability bốn lớp của khóa luận được định nghĩa theo giao thức dữ liệu riêng.
+
+Từ đối chiếu này, khóa luận chọn đánh giá đồng thời vị trí và điều kiện trả lời. Phân bố vị trí, mask segmentation và answerability có mục tiêu khác nhau; Test-IID của P-CRA-U chưa phải benchmark so sánh trực tiếp với MAttNet hay GRES. Khoảng trống trong hệ thống đang xét là kết nối các đầu ra này với risk chấp nhận trên cùng dữ liệu RGB-D.
+
+\subsection{VLM có hiểu biết không gian}
+
+SpatialVLM nghiên cứu học hiểu biết không gian từ dữ liệu VQA có thông tin hình học \cite{chen2024spatialvlm}. Trọng tâm này liên quan đến năng lực biểu diễn không gian của VLM. P-CRA-U tập trung vào đầu ra nhận thức và quyết định chấp nhận trên feature nền đã có, nên kết quả của hai hướng không thể so trực tiếp khi khác nhiệm vụ và dữ liệu.
+
+RoboRefer nghiên cứu spatial referring với thông tin depth và suy luận không gian \cite{zhou2025roborefer}. Đây là nền trực tiếp và đối chứng định lượng của khóa luận. So sánh được giới hạn ở checkpoint RoboRefer-2B-SFT và runner đã khóa: baseline sinh điểm, còn P-CRA-U dự đoán heatmap cùng các head bổ trợ trên tower đóng băng.
+
+Khác biệt cần kiểm chứng là việc thay đổi biểu diễn đầu ra và thêm bước đánh giá độ tin cậy có cải thiện hệ thống trong giao thức này hay không. Khóa luận không suy từ giới hạn của runner point-only sang khẳng định mọi phiên bản RoboRefer hoặc SpatialVLM đều thiếu năng lực tương ứng.
+
+\subsection{Bất định và hiệu chuẩn đa phương thức}
+
+Phân biệt bất định quan sát và mô hình hỗ trợ hiểu giới hạn của các đại lượng uncertainty \cite{kendall2017uncertainties}. Các nhãn nguồn của đồ án là mục tiêu giám sát cụ thể, chưa thay thế Bayesian inference hoặc phân rã nhân quả.
+
+Nghiên cứu calibration chỉ ra nhu cầu đánh giá xác suất bên cạnh nhãn dự đoán \cite{guo2017calibration,niculescu2005probabilities}. Đối với khóa luận, biến cố cần hiệu chuẩn là non-FOUND hoặc MAP ngoài target. Vì thế, calibrator học risk của điều kiện chấp nhận, có phạm vi rộng hơn xác suất sai vị trí trên riêng mẫu FOUND.
+
+V2 dùng vector evidence gồm phân bố không gian, answerability, source và thống kê fusion. Multimodal calibration ở đây chỉ cách dùng bằng chứng nhiều thành phần RGB-D--ngôn ngữ, khác camera calibration. So sánh với $1-p(\mathrm{FOUND})$ kiểm tra thay đổi chất lượng risk của toàn bộ quy trình. Để tách hiệu quả của việc fit xác suất khỏi hiệu quả của thêm evidence, cần đối chứng scalar-only và loại bỏ source; các đối chứng này chưa có trong kết quả chính thức.
+
+\subsection{Selective prediction và conformal prediction}
+
+Selective classification xem xét việc chấp nhận dự đoán \cite{geifman2017selective,geifman2019selectivenet}; conformal prediction xem xét tập dự đoán và bao phủ \cite{angelopoulos2021conformal,lei2018distributionfree}. Hai hướng có mục tiêu khác nhau.
+
+Trong đồ án, risk tham gia policy, còn vùng không gian là đầu ra theo tập để đánh giá bổ sung. Policy bốn quyết định dùng luật sau huấn luyện, khác với việc học đồng thời bộ chọn lọc như SelectiveNet. Chất lượng của luật được kiểm tra bằng lỗi nhận thức trong tập chấp nhận; hiệu quả của hỏi lại hoặc quan sát lại cần chuỗi tương tác riêng.
+
+Vùng highest-density được kiểm tra bằng coverage và diện tích, với score event tách khỏi giao region--mask trực tiếp. Phụ thuộc giữa variant cùng family giới hạn việc áp dụng bảo đảm conformal tiêu chuẩn. Hai đầu ra risk và region do đó bổ sung hai góc đánh giá, chưa tạo thành một bảo đảm an toàn cho toàn chuỗi robot.
+
+\subsection{Đối chiếu phạm vi các phương pháp}
+
+Bảng~\ref{tab:theory-related-work} tổng hợp các hướng liên quan. Bảng dùng mô tả thay cho đánh dấu có/không cho mọi năng lực, vì phương pháp giải các nhiệm vụ khác nhau và chưa được kiểm tra trong cùng giao thức.
+
+\begin{table}[htbp]
+    \centering
+    \setlength{\tabcolsep}{4pt}
+    \renewcommand{\arraystretch}{1.15}
+    \caption{Các hướng nghiên cứu liên quan và mối liên hệ với khóa luận.}
+    \label{tab:theory-related-work}
+    \begingroup
+    \footnotesize
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.26\textwidth}@{}}
+        \toprule
+        \textbf{Phương pháp} & \textbf{Trọng tâm} &
+        \textbf{Liên hệ với đồ án} & \textbf{Giới hạn đối chiếu} \\
+        \midrule
+        MAttNet \cite{yu2018mattnet} &
+        Grounding qua chủ thể, vị trí, quan hệ &
+        Phân biệt đích và ngữ cảnh &
+        Nhiệm vụ và backbone khác V2 \\
+        GRES \cite{liu2023gres} &
+        Segmentation một, nhiều hoặc không có đích &
+        Xem xét số referent &
+        Khác answerability bốn lớp \\
+        SpatialVLM \cite{chen2024spatialvlm} &
+        Hiểu biết không gian qua dữ liệu VQA &
+        Vai trò dữ liệu hình học &
+        Chưa chạy như baseline trong đồ án \\
+        RoboRefer \cite{zhou2025roborefer} &
+        RGB-D spatial referring &
+        Backbone và baseline điểm &
+        Dùng bản 2B-SFT theo protocol \\
+        Calibration \cite{guo2017calibration} &
+        Xác suất phù hợp tần suất thực nghiệm &
+        Hiệu chuẩn risk sau freeze &
+        Sự kiện lỗi cần xác định riêng \\
+        SelectiveNet \cite{geifman2019selectivenet} &
+        Học dự đoán và chọn lọc &
+        Đánh đổi risk--coverage &
+        Policy được áp sau huấn luyện \\
+        Conformal \cite{angelopoulos2021conformal} &
+        Tập dự đoán và coverage &
+        Vùng không gian &
+        Cần xét giả thiết theo family \\
+        P-CRA-U &
+        Distribution, answerability, nguồn và risk &
+        Thiết kế triển khai của khóa luận &
+        Test-IID mô phỏng; demo ở bước nhận thức \\
+        \bottomrule
+    \end{tabularx}
+    \endgroup
+\end{table}
+
+Các công trình là điểm tham chiếu, không phải benchmark đã chạy đầy đủ. So sánh định lượng gồm RoboRefer gốc, V2 lịch sử và P-CRA-U có Adapter trên cùng Test-IID. Adapter chỉ cập nhật answerability; calibrator risk được fit lại sau khi đóng băng mô hình. Bộ IID đã được quan sát ở vòng V2, nên kết quả Adapter là đánh giá lại. Chưa có đầy đủ ablation cũng giới hạn việc quy cải thiện cho một cơ chế riêng.
+
+Các định nghĩa xác suất và selective prediction ở chương này áp dụng cho
+cả hai phiên bản. V2 lịch sử dùng logistic 18 evidence; P-CRA-U hiện tại
+dùng 33 evidence và yêu cầu dự đoán FOUND khi chọn ngưỡng lẫn khi vận hành.
+Vùng không gian kế thừa phân bố và mass đã khóa của V2. Vì vậy,
+hiệu chỉnh answerability/risk không đồng nghĩa học lại vùng không gian.
+
+\section{Khoảng trống nghiên cứu và định hướng phương pháp}
+\label{sec:theory-gaps}
+
+Đối chiếu các hướng trên cho thấy grounding theo vai trò, nhiều/không có referent, calibration và selective prediction đều có cơ sở nghiên cứu riêng. Khóa luận xác định một \emph{khoảng trống tích hợp và kiểm chứng trong hệ thống RoboRefer RGB-D đang triển khai}: cần nối dự đoán vị trí với trạng thái trả lời và risk bằng một giao thức độc lập, có thể truy nguyên. Khoảng trống này được cụ thể hóa thành bốn vấn đề.
+
+\paragraph{Điểm duy nhất chưa mô tả các lựa chọn cạnh tranh.}
+Tọa độ thuận tiện cho định vị nhưng không trực tiếp mô tả nhiều vùng có thể phù hợp. Distribution bổ sung bằng chứng, với điều kiện không đồng nhất heatmap sắc với độ tin cậy.
+
+\paragraph{Cần bằng chứng quan hệ theo câu lệnh.}
+Điểm không trực tiếp cho thấy vật mốc hoặc mức phù hợp ràng buộc. Query-centric representation tổ chức vai trò đích--vật mốc--quan hệ; slot học được cần được mô tả đúng mức triển khai, không coi là parser ký hiệu đầy đủ.
+
+\paragraph{Cần phân biệt khả năng trả lời và dấu hiệu bất định.}
+Điểm không cho biết đích hiện hữu, mơ hồ hay thiếu bằng chứng. Answerability và các head nguồn tạo các mục tiêu riêng. Nhãn yếu và cảnh báo sai cần được phân tích khi diễn giải.
+
+\paragraph{Cần liên kết evidence với rủi ro chấp nhận.}
+Score thô chưa đủ định nghĩa quyết định. Calibration độc lập và risk--coverage cho phép đo đánh đổi khi chấp nhận. Vùng không gian bổ sung đầu ra theo tập, với coverage được báo theo sự kiện và giả thiết phù hợp.
+
+Từ bốn vấn đề này, ý tưởng thiết kế P-CRA-U gồm hai phần tương ứng với đóng góp ở Chương~1. Phần thứ nhất học sidecar đa nhiệm có điều kiện theo truy vấn trên backbone đóng băng, để giữ phân bố vị trí và dự đoán answerability/source thay vì chỉ một tọa độ. Phần thứ hai fit risk độc lập từ evidence sau freeze và dùng risk cho policy chọn lọc; vùng không gian được đánh giá như đầu ra riêng.
+
+Thiết kế đặt ra giả thuyết rằng cách tổ chức này có thể cải thiện grounding tổng thể và chất lượng quyết định nhận thức. Chương~5 kiểm tra giả thuyết bằng so sánh paired với RoboRefer, chất lượng xác suất và risk--coverage. Việc đã kết hợp các khối trong code là bằng chứng hiện thực; hiệu quả toàn hệ thống là bằng chứng thực nghiệm; lợi ích riêng của từng khối và tính mới tuyệt đối còn cần đối chứng rộng hơn. Đây là ranh giới giữa ý tưởng đề xuất, kết quả đã chứng minh và công việc tiếp theo.

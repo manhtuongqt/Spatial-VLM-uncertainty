@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "protocol_id": "pcra_u_calibration_v1",
+  "status": "LOCKED_BEFORE_CALIBRATION_CAPTURE",
+  "dataset_master_seed": 240820263001,
+  "grouped_crossfit_seed": 240820263002,
+  "family_bootstrap_seed": 240820263003,
+  "family_bootstrap_replicates": 5000,
+  "family_prefix": "v211cal_family_",
+  "capture_suffixes": ["clean_capture", "occlusion_capture"],
+  "collision_policy": "reject_any_prior_family_capture_seed_layout_instruction_or_template_identity",
+  "test_seed_assignment_created": false,
+  "test_iid_opened": false,
+  "test_ood_opened": false
+}

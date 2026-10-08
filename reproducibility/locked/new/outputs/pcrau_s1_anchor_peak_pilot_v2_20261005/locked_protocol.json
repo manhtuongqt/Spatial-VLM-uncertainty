@@ -1,0 +1,201 @@
+{
+  "arm_order_each_epoch": [
+    "C1",
+    "P1",
+    "P2"
+  ],
+  "baseline_bundle": {
+    "calibrator": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/selected_calibrator.json",
+    "calibrator_sha256": "19e0c35424144cf753109978b9d08ddaa16edcadbe0c1dc1515103fb88b8de7d",
+    "checkpoint": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/model.safetensors",
+    "checkpoint_sha256": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045",
+    "config": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/config.json",
+    "config_sha256": "b214670c6c4a679f755a9953e15bae4bbb71ee5eea1980fa8e3d64030d79f85b",
+    "historical_artifacts_preserved": true,
+    "historical_model_display_name": "P-CRA-U V2 lịch sử",
+    "model_display_name": "P-CRA-U",
+    "not_selected_experiment": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_support_split_dev_20261003",
+    "note": "Người dùng chọn V2 + adapter answerability + logistic33 làm P-CRA-U hiện tại và chấp nhận đánh đổi risk thực nghiệm 9,42% trên IID cũ. Giữ nguyên ngưỡng 0,2611932834526145; ngân sách calibration 7,5% chưa đạt trên test. Artifact V2 lịch sử được bảo tồn.",
+    "observed_test_selective_risk": 0.09418282548476455,
+    "official_v2_replaced": false,
+    "policy": "hard_found",
+    "profiles": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/profiles.json",
+    "profiles_sha256": "df39fa55843d657111a2c0bee2fee68aad1f2c9ada4c2fc257527eb420f6c9ff",
+    "risk_target": 0.075,
+    "risk_threshold": 0.2611932834526145,
+    "robot_motion_commanded": false,
+    "selected_as_primary_model": true,
+    "selected_on": "2026-10-03",
+    "selection": "answerability_language_adapter_logistic33",
+    "selection_document": "/home/dhcn/ur_ws/src/myproject/new/docs/MODEL_SELECTION.md",
+    "source_profile": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/active_experimental_profile.json",
+    "status": "USER_SELECTED_P_CRA_U_ADAPTER",
+    "test_report": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/test_iid_7p5/full_metrics.json",
+    "test_risk_target_met": false,
+    "user_accepted_empirical_risk_tradeoff": true
+  },
+  "config": {
+    "arms": {
+      "C1": {
+        "conditioning": "phrase",
+        "peak_weight": 0.0
+      },
+      "P1": {
+        "conditioning": "phrase",
+        "peak_weight": 0.1
+      },
+      "P2": {
+        "conditioning": "whole_text",
+        "peak_weight": 0.1
+      }
+    },
+    "control_comparisons": [
+      "P1_vs_C1: objective improvement; other binding metric nonregression",
+      "P1_vs_P2: phrase-specific benefit under matched objective"
+    ],
+    "epoch_orchestration_implemented": false,
+    "gates": {
+      "bootstrap_resamples": 5000,
+      "bootstrap_seed": 24082026,
+      "empty_each_tolerance": 1e-06,
+      "found_both_hits": 12,
+      "found_denominator": 16,
+      "median_sidecar_overhead_max_fraction": 0.2,
+      "phrase_extra_hits_or_pairs": 2,
+      "phrase_other_metric_nonregression": true,
+      "swap_both_hits": 8,
+      "swap_denominator": 15,
+      "visible_denominator": 61,
+      "visible_hits": 49
+    },
+    "objective": {
+      "base_empty_weight": 0.25,
+      "empty": "full-mask pixels == 0; softplus(max logit) plus existing mean BCE",
+      "grid_shape": [
+        24,
+        32
+      ],
+      "image_shape": [
+        480,
+        640
+      ],
+      "loss_dtype": "FP32",
+      "margin": 1.0,
+      "max_ties": "first flattened row-major index; torch.max(dim=-1)",
+      "mean_over": "eligible active slots across visible-ranking and empty-peak cases",
+      "visible_no_center": "skip auxiliary only; preserve dense BCE+Dice, sample, family and denominator",
+      "visible_no_outside": "skip auxiliary only; preserve dense BCE+Dice"
+    },
+    "optimizer_authorized_in_preflight": false,
+    "pilot": {
+      "empty_weight": 0.25,
+      "families_per_batch": 4,
+      "gradient_clip_norm": 1.0,
+      "learning_rate": 0.0003,
+      "max_epochs": 15,
+      "patience": 5,
+      "prefixes": [
+        "",
+        "Please ",
+        "In this scene, ",
+        "Can you "
+      ],
+      "seed": 24082026,
+      "version": "pcrau_anchor_shadow_pilot_v1",
+      "weight_decay": 0.001
+    },
+    "scope": "development train/dev only; no verifier, calibration samples, IID/OOD, MC or robot",
+    "selection": {
+      "checkpoint_for_gates": "selected dev best only",
+      "split": "dev",
+      "ties": "earliest epoch",
+      "tuple": [
+        "visible_anchor_hits",
+        "matched_swap_both_hits",
+        "negative_empty_mean_sigmoid_max"
+      ]
+    },
+    "version": "pcrau_anchor_peak_v2_preflight_v1"
+  },
+  "config_sha256": "f53e0f9c4bfd567c8791b7216d0a702535ce7a197f2aedcd72f4da97416c7e88",
+  "design_sha256": "0c4efd907413523bf273044c9520662750bbbca0b2cb72218fe712b02531a412",
+  "device": "cuda",
+  "epoch_orchestration_implemented": true,
+  "execution_addendum_sha256": "5019bb1413e8fb61f31516630a623edb5fab4d6e8ac11c34f2556f9a39c4e6fb",
+  "initialization_sha256": {
+    "C1": "e808b0e0b3a40dc4d26210f0a5b9bce08c4074a5da18f65e4ebc8698593e7057",
+    "P1": "e808b0e0b3a40dc4d26210f0a5b9bce08c4074a5da18f65e4ebc8698593e7057",
+    "P2": "e808b0e0b3a40dc4d26210f0a5b9bce08c4074a5da18f65e4ebc8698593e7057"
+  },
+  "pre_optimizer_checks_pass": true,
+  "precision": "MLP/loss FP32; frozen extractor/head config AMP bfloat16 on CUDA",
+  "preflight_receipt_sha256": "498cadf0f8b55d9c0c6e4e2611da152435e45b5fe382acdcce3403043cf17ecd",
+  "protocol": {
+    "empty_weight": 0.25,
+    "families_per_batch": 4,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0003,
+    "max_epochs": 15,
+    "patience": 5,
+    "prefixes": [
+      "",
+      "Please ",
+      "In this scene, ",
+      "Can you "
+    ],
+    "seed": 24082026,
+    "version": "pcrau_anchor_shadow_pilot_v1",
+    "weight_decay": 0.001
+  },
+  "protocol_sha256": "0c4efd907413523bf273044c9520662750bbbca0b2cb72218fe712b02531a412",
+  "runtime": {
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA RTX 2000 Ada Generation",
+    "python": "3.10.14",
+    "torch": "2.13.0+cu130"
+  },
+  "source_sha256": {
+    "/home/dhcn/ur_ws/src/myproject/new/scripts/run_anchor_peak_pilot.py": "cea50e413d11b337883f66b92effb41c331c3ec09b21b764edc573d34ab91b94",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/__init__.py": "1554c33ac020e5df63b32e11e0b30063badc98cd2b2fa77518571425bbe7c728",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/acceptance_ranker.py": "f8ac619d1576ea1dc14ecb915116fee573ea0a45fca7b78eb94bcdf43820f0b3",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_experiment.py": "585a7d3d631d23834d5c3b7179e6765eb395dd8f5cebdbab5119ee4d0e1a270c",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_pilot.py": "ccf00611e076fe16cb6d074850434f9ee7ce2c37705c829b4236f52227312cc8",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_runner.py": "58acc51869b2046225928b873ff7be60ff86bfb625248642e9563eaeeb37167e",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow.py": "a8de58f3f9d56b7a842996b5ff9e04f3b75201b52d3ce48eb2e8b2552c6df3d6",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow_experiment.py": "9849fa47a5c05c46476ff571b9f31abbc5f66fb1f219b4884ca79da1a5ac4836",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow_pilot.py": "0e8422a8aa2f99fc6766ff4a31a27829441ed7d3ba8d5c2189cfffe159381ced",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/answerability_evidence.py": "b4edeb538de7961700ef84a967cebf8ce26ec5cef193fbf743add2b4b968d8b2",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/calibration.py": "39eeba2db00eb2e196fe90150503945c76f79820c9b41eede2cb523a4314ba73",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/checkpoint.py": "a260ad8ca5f50bcd2e44f547b73befc6fb2e48f4de09c893fcb4e98bdcbce8e7",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/dataset.py": "5d0d484225eb1f2e1f92f62ab1522e9e435ff7df58f89d0f218792e0fd553770",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/engine.py": "d0a2835899c656e08c89d0d3893525b35b1176f69463afe49be47c39b9721b8d",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/language_augmentation.py": "aa19305808e6f22b046cf54168609358e5260e9d7d631231efd65b68b7520000",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/losses.py": "f47b6acfd5450f485f48e2ddb731eaef50cafeacdfbfbdfe232c5f21b263b320",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/metrics.py": "cd25d2595e95fa57fc6304c65f43cb66747372b9b43872b436eeefd31b2d17cc",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/model.py": "e356ceaab36de474024bdb99b9eb2c96ccaa6a24bd211e269e99e7481b8e28b6",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/policy.py": "14dd19343ccae0f0c35fa5533df57fe88465e574b15d7cb42ac6f2841a42c719",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/postprocess.py": "1883771b0c78846d91b1c0ceee34218f8d88c532d8bd1983de5051bca088d5af",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/query_parser.py": "0ed7d562541d4efda37b6b2227d7798d6db90a00bb4bc37042572366215ca051",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/selective_experiment.py": "3fd3bbaa37e4395bb0a69cc2f6b5d172ca684712f7d5182d7aa5807495267053",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/support_evidence.py": "70e8c5d19d99d02f7712e6231cd63451c584fda706014c600b5d30abddebcf10",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/text.py": "4f527981242ad85aedd013f4b27ea1570966d48f042209da72b5c2872fa363bc",
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/utils.py": "9e260968b2609ab34c304e6e0d432d1bb464db35263b369adb9a1af5fb25f4bf",
+    "/home/dhcn/ur_ws/src/myproject/new/tests/test_anchor_peak_pilot.py": "77ea668b1ac99f7843d5f960ac37fc2ffb2c7d15f5cc48d1e270774e29ecc28e"
+  },
+  "support_counts": {
+    "dev": {
+      "center_visible": 61,
+      "empty": 3,
+      "visible": 61
+    },
+    "train": {
+      "center_visible": 250,
+      "empty": 5,
+      "visible": 251
+    }
+  },
+  "trainable_per_arm": 33024,
+  "training_authorized": true,
+  "unit_checks_sha256": "769ec5014a47fb215988440a7cd0d64899e03232dd70e05e2feedf3c0fc1b2f6"
+}

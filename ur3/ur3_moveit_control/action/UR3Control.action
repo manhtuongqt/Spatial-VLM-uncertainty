@@ -1,0 +1,18 @@
+# Request
+uint8 MOVE_HOME=0
+uint8 MOVE_JOINT=1
+uint8 MOVE_POSE=2
+uint8 MOVE_LINEAR=3
+
+uint8 command_type
+sensor_msgs/JointState joint_goal
+geometry_msgs/PoseStamped pose_goal
+---
+# Result
+bool success
+string message
+float64 planning_time_sec
+float64 execution_time_sec
+---
+# Feedback
+string state

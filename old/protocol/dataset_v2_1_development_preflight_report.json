@@ -1,0 +1,220 @@
+{
+  "authorized_next_action": "CAPTURE_CANARY_000_20_FAMILIES",
+  "calibration_or_test_created": false,
+  "capture_performed": false,
+  "checks": {
+    "baseline_and_v2_history_unchanged": {
+      "checked_count": 7,
+      "mismatches": [],
+      "passed": true
+    },
+    "batch_and_resume_lock": {
+      "batch_family_counts": [
+        20,
+        95,
+        95,
+        95,
+        95
+      ],
+      "canary_split_counts": {
+        "dev": 4,
+        "train": 16
+      },
+      "canary_state_counts": {
+        "ABSENT": 4,
+        "AMBIGUOUS": 4,
+        "FOUND": 8,
+        "INSUFFICIENT_EVIDENCE": 4
+      },
+      "passed": true
+    },
+    "deterministic_static_replay": {
+      "passed": true
+    },
+    "four_state_ontology": {
+      "errors": [],
+      "passed": true
+    },
+    "fresh_family_sample_capture_identity": {
+      "capture_overlap_count": 0,
+      "family_overlap_count": 0,
+      "passed": true
+    },
+    "fresh_instruction_namespace": {
+      "instruction_count": 2000,
+      "passed": true,
+      "prior_overlap_count": 0,
+      "unique_count": 2000
+    },
+    "fresh_layouts_and_split_isolation": {
+      "layout_count": 800,
+      "passed": true,
+      "prior_overlap_count": 0,
+      "unique_count": 800
+    },
+    "fresh_seed_namespace": {
+      "passed": true,
+      "prior_overlap_count": 0,
+      "seed_count": 2400,
+      "unique_seed_count": 2400
+    },
+    "locked_population": {
+      "capture_count": 800,
+      "counts": {
+        "family_category_by_split": {
+          "dev": {
+            "direct_grounding": 12,
+            "front_behind_camera": 12,
+            "multi_anchor_depth_order": 12,
+            "nearer_farther": 14,
+            "occlusion_depth_evidence": 14,
+            "relation_2d": 16
+          },
+          "train": {
+            "direct_grounding": 48,
+            "front_behind_camera": 48,
+            "multi_anchor_depth_order": 48,
+            "nearer_farther": 56,
+            "occlusion_depth_evidence": 56,
+            "relation_2d": 64
+          }
+        },
+        "ood_axis_by_split": {
+          "dev": {
+            "none": 80
+          },
+          "train": {
+            "none": 320
+          }
+        },
+        "primary_answerability_by_split": {
+          "dev": {
+            "ABSENT": 14,
+            "AMBIGUOUS": 14,
+            "FOUND": 32,
+            "INSUFFICIENT_EVIDENCE": 20
+          },
+          "train": {
+            "ABSENT": 56,
+            "AMBIGUOUS": 56,
+            "FOUND": 128,
+            "INSUFFICIENT_EVIDENCE": 80
+          }
+        },
+        "split": {
+          "dev": 80,
+          "train": 320
+        },
+        "state_submode_by_split": {
+          "dev": {
+            "anchor_absent": 5,
+            "attribute_tie": 4,
+            "cross_modal_conflict": 4,
+            "depth_invalid_or_corrupt": 6,
+            "multi_anchor_conflict": 1,
+            "occlusion": 6,
+            "relation_tie": 3,
+            "same_class_duplicate": 6,
+            "target_absent": 5,
+            "too_small_or_out_of_view": 4,
+            "unique_visible_referent": 32,
+            "unsatisfied_relation": 4
+          },
+          "train": {
+            "anchor_absent": 19,
+            "attribute_tie": 14,
+            "cross_modal_conflict": 16,
+            "depth_invalid_or_corrupt": 24,
+            "multi_anchor_conflict": 9,
+            "occlusion": 24,
+            "relation_tie": 11,
+            "same_class_duplicate": 22,
+            "target_absent": 19,
+            "too_small_or_out_of_view": 16,
+            "unique_visible_referent": 128,
+            "unsatisfied_relation": 18
+          }
+        }
+      },
+      "family_count": 400,
+      "passed": true,
+      "sample_count": 2000
+    },
+    "locked_source_and_denylist_hashes": {
+      "denylist_count": 15,
+      "mismatches": [],
+      "passed": true,
+      "source_count": 5
+    },
+    "observable_relation_geometry_v2_1": {
+      "evaluated_predicates": 908,
+      "failed_predicates": 0,
+      "geometry_version": "dataset_v2_relation_geometry_v2_1.1.0",
+      "passed": true,
+      "predicate_failures": []
+    },
+    "oracle_and_sealed_split_boundary": {
+      "inference_payload_findings": [],
+      "passed": true,
+      "sealed_splits": [
+        "calibration",
+        "test_iid",
+        "test_ood"
+      ]
+    },
+    "relation_and_shutdown_prerequisites": {
+      "passed": true,
+      "relation_decision": "PASS_RELATION_REPAIR_PILOT",
+      "relation_report_sha256": "cb6682cd737a5a78333512ead277c21de4682d937679d63abf1b90e4fc200839",
+      "shutdown_decision": "PASS_V2_1_SHUTDOWN_GATE",
+      "shutdown_report_sha256": "ff60705b4607608c85d211bfdba80446be5b0343980b0b08092c985e51458b51"
+    },
+    "runtime_output_and_ordered_shutdown": {
+      "capture_output_root": "datasets/roborefer_dataset_v2_1_1_development_400_20260824",
+      "capture_output_root_absent_or_empty": true,
+      "missing_runtime_artifacts": [],
+      "passed": true,
+      "shutdown_sequence": [
+        "capture_node",
+        "action_server_and_servo",
+        "move_group",
+        "gazebo"
+      ]
+    },
+    "seen_assets_only_and_ood_holdout": {
+      "active_asset_ids": [
+        "cube_blue_01",
+        "cube_green_01",
+        "cube_orange_01",
+        "cube_pink_01",
+        "cube_purple_01",
+        "cube_yellow_01",
+        "mango_01",
+        "ycb_apple_01",
+        "ycb_apple_02",
+        "ycb_apple_03",
+        "ycb_lemon_01",
+        "ycb_mug_01",
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01",
+        "ycb_orange_02",
+        "ycb_orange_03",
+        "ycb_tomato_soup_can_01"
+      ],
+      "excluded_active": [],
+      "heldout_active": [],
+      "passed": true
+    }
+  },
+  "decision": "GO_DEVELOPMENT_V2_1_CAPTURE_400",
+  "failures": [],
+  "figures_created": 0,
+  "gate": "LOCK_DEVELOPMENT_V2_1_CAPTURE_400",
+  "generated_at_utc": "2026-08-24T05:28:08.448774+00:00",
+  "passed": true,
+  "protocol_id": "roborefer_dataset_v2_1_1_development_capture_400",
+  "schema_version": 1,
+  "scientific_status": "STATIC_PREFLIGHT_PLANNED_NOT_CAPTURED",
+  "tables_02_to_06": "NOT_RUN",
+  "training_performed": false
+}

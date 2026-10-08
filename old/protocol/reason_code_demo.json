@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-18T08:13:15.561045+00:00",
+  "all_cases_passed": true,
+  "cases": [
+    {
+      "accepted": false,
+      "reason_code": "AREA_TOO_SMALL",
+      "detail": "seeded component area 64px is below minimum 120px",
+      "diagnostics": {
+        "input_shape": [
+          100,
+          100
+        ],
+        "seed_points_xy_input": [
+          [
+            50,
+            50
+          ]
+        ],
+        "thresholds": {
+          "min_depth_m": 0.05,
+          "max_depth_m": 2.0,
+          "min_area_px": 120,
+          "max_area_fraction": 0.5,
+          "reject_border_truncated": false
+        },
+        "seed_points_xy_valid": [
+          [
+            50,
+            50
+          ]
+        ],
+        "valid_depth_pixels": 64,
+        "seed_depth_m": 0.6200000047683716,
+        "roi_xyxy": [
+          0,
+          0,
+          99,
+          99
+        ],
+        "max_area_px": 5000,
+        "foreground_component_count": 1,
+        "components": [
+          {
+            "label": 1,
+            "area_px": 64,
+            "bbox_xyxy": [
+              46,
+              46,
+              53,
+              53
+            ],
+            "seed_support_count": 1,
+            "distance_to_seed_px": 0.0,
+            "touches_image_border": false,
+            "touches_roi_boundary": false
+          }
+        ],
+        "selected_component": {
+          "label": 1,
+          "area_px": 64,
+          "bbox_xyxy": [
+            46,
+            46,
+            53,
+            53
+          ],
+          "seed_support_count": 1,
+          "distance_to_seed_px": 0.0,
+          "touches_image_border": false,
+          "touches_roi_boundary": false
+        }
+      },
+      "expected_reason_code": "AREA_TOO_SMALL",
+      "demo_passed": true,
+      "image": "demo_wp0_reason_codes/AREA_TOO_SMALL.png"
+    },
+    {
+      "accepted": false,
+      "reason_code": "AREA_TOO_LARGE",
+      "detail": "bounded seeded component area 3600px exceeds maximum 1440px",
+      "diagnostics": {
+        "input_shape": [
+          120,
+          120
+        ],
+        "seed_points_xy_input": [
+          [
+            50,
+            50
+          ]
+        ],
+        "thresholds": {
+          "min_depth_m": 0.05,
+          "max_depth_m": 2.0,
+          "min_area_px": 120,
+          "max_area_fraction": 0.1,
+          "reject_border_truncated": false
+        },
+        "seed_points_xy_valid": [
+          [
+            50,
+            50
+          ]
+        ],
+        "valid_depth_pixels": 3600,
+        "seed_depth_m": 0.6200000047683716,
+        "roi_xyxy": [
+          0,
+          0,
+          105,
+          105
+        ],
+        "max_area_px": 1440,
+        "foreground_component_count": 1,
+        "components": [
+          {
+            "label": 1,
+            "area_px": 3600,
+            "bbox_xyxy": [
+              20,
+              20,
+              79,
+              79
+            ],
+            "seed_support_count": 1,
+            "distance_to_seed_px": 0.0,
+            "touches_image_border": false,
+            "touches_roi_boundary": false
+          }
+        ],
+        "selected_component": {
+          "label": 1,
+          "area_px": 3600,
+          "bbox_xyxy": [
+            20,
+            20,
+            79,
+            79
+          ],
+          "seed_support_count": 1,
+          "distance_to_seed_px": 0.0,
+          "touches_image_border": false,
+          "touches_roi_boundary": false
+        }
+      },
+      "expected_reason_code": "AREA_TOO_LARGE",
+      "demo_passed": true,
+      "image": "demo_wp0_reason_codes/AREA_TOO_LARGE.png"
+    },
+    {
+      "accepted": false,
+      "reason_code": "NO_SEED_SUPPORT",
+      "detail": "no RoboRefer seed point lies inside the depth image",
+      "diagnostics": {
+        "input_shape": [
+          80,
+          100
+        ],
+        "seed_points_xy_input": [
+          [
+            -1,
+            40
+          ]
+        ],
+        "thresholds": {
+          "min_depth_m": 0.05,
+          "max_depth_m": 2.0,
+          "min_area_px": 120,
+          "max_area_fraction": 0.12,
+          "reject_border_truncated": false
+        },
+        "seed_points_xy_valid": []
+      },
+      "expected_reason_code": "NO_SEED_SUPPORT",
+      "demo_passed": true,
+      "image": "demo_wp0_reason_codes/NO_SEED_SUPPORT.png"
+    },
+    {
+      "accepted": false,
+      "reason_code": "PLANE_MERGE",
+      "detail": "seeded component area 5041px exceeds 1440px and continues to the ROI boundary",
+      "diagnostics": {
+        "input_shape": [
+          120,
+          120
+        ],
+        "seed_points_xy_input": [
+          [
+            60,
+            60
+          ]
+        ],
+        "thresholds": {
+          "min_depth_m": 0.05,
+          "max_depth_m": 2.0,
+          "min_area_px": 120,
+          "max_area_fraction": 0.1,
+          "reject_border_truncated": false
+        },
+        "seed_points_xy_valid": [
+          [
+            60,
+            60
+          ]
+        ],
+        "valid_depth_pixels": 14400,
+        "seed_depth_m": 0.6200000047683716,
+        "roi_xyxy": [
+          25,
+          25,
+          95,
+          95
+        ],
+        "max_area_px": 1440,
+        "foreground_component_count": 1,
+        "components": [
+          {
+            "label": 1,
+            "area_px": 5041,
+            "bbox_xyxy": [
+              25,
+              25,
+              95,
+              95
+            ],
+            "seed_support_count": 1,
+            "distance_to_seed_px": 0.0,
+            "touches_image_border": false,
+            "touches_roi_boundary": true
+          }
+        ],
+        "selected_component": {
+          "label": 1,
+          "area_px": 5041,
+          "bbox_xyxy": [
+            25,
+            25,
+            95,
+            95
+          ],
+          "seed_support_count": 1,
+          "distance_to_seed_px": 0.0,
+          "touches_image_border": false,
+          "touches_roi_boundary": true
+        }
+      },
+      "expected_reason_code": "PLANE_MERGE",
+      "demo_passed": true,
+      "image": "demo_wp0_reason_codes/PLANE_MERGE.png"
+    },
+    {
+      "accepted": false,
+      "reason_code": "BORDER_TRUNCATED",
+      "detail": "seeded component touches the image boundary",
+      "diagnostics": {
+        "input_shape": [
+          100,
+          120
+        ],
+        "seed_points_xy_input": [
+          [
+            18,
+            52
+          ]
+        ],
+        "thresholds": {
+          "min_depth_m": 0.05,
+          "max_depth_m": 2.0,
+          "min_area_px": 120,
+          "max_area_fraction": 0.5,
+          "reject_border_truncated": true
+        },
+        "seed_points_xy_valid": [
+          [
+            18,
+            52
+          ]
+        ],
+        "valid_depth_pixels": 1575,
+        "seed_depth_m": 0.6200000047683716,
+        "roi_xyxy": [
+          0,
+          0,
+          98,
+          99
+        ],
+        "max_area_px": 6000,
+        "foreground_component_count": 1,
+        "components": [
+          {
+            "label": 1,
+            "area_px": 1575,
+            "bbox_xyxy": [
+              0,
+              30,
+              34,
+              74
+            ],
+            "seed_support_count": 1,
+            "distance_to_seed_px": 0.0,
+            "touches_image_border": true,
+            "touches_roi_boundary": true
+          }
+        ],
+        "selected_component": {
+          "label": 1,
+          "area_px": 1575,
+          "bbox_xyxy": [
+            0,
+            30,
+            34,
+            74
+          ],
+          "seed_support_count": 1,
+          "distance_to_seed_px": 0.0,
+          "touches_image_border": true,
+          "touches_roi_boundary": true
+        }
+      },
+      "expected_reason_code": "BORDER_TRUNCATED",
+      "demo_passed": true,
+      "image": "demo_wp0_reason_codes/BORDER_TRUNCATED.png"
+    },
+    {
+      "accepted": false,
+      "reason_code": "UNSTABLE_3D",
+      "expected_reason_code": "UNSTABLE_3D",
+      "demo_passed": true,
+      "sample_count": 7,
+      "position_mean_m": [
+        0.3228571428571429,
+        -0.17999999999999997,
+        0.03
+      ],
+      "dimensions_m": [
+        0.06,
+        0.06,
+        0.06
+      ],
+      "position_stddev_m": 0.019794866372215756,
+      "threshold_m": 0.003,
+      "image": "demo_wp0_reason_codes/UNSTABLE_3D.png"
+    }
+  ],
+  "locked_pilot_post_hoc_diagnostic": {
+    "accepted": false,
+    "reason_code": "PLANE_MERGE",
+    "detail": "seeded component area 39117px exceeds 36864px and continues to the ROI boundary",
+    "diagnostics": {
+      "input_shape": [
+        480,
+        640
+      ],
+      "seed_points_xy_input": [
+        [
+          357,
+          66
+        ]
+      ],
+      "thresholds": {
+        "min_depth_m": 0.05,
+        "max_depth_m": 2.0,
+        "min_area_px": 120,
+        "max_area_fraction": 0.12,
+        "reject_border_truncated": false
+      },
+      "seed_points_xy_valid": [
+        [
+          357,
+          66
+        ]
+      ],
+      "valid_depth_pixels": 307200,
+      "seed_depth_m": 0.36822789907455444,
+      "roi_xyxy": [
+        247,
+        0,
+        467,
+        176
+      ],
+      "max_area_px": 36864,
+      "foreground_component_count": 1,
+      "components": [
+        {
+          "label": 1,
+          "area_px": 39117,
+          "bbox_xyxy": [
+            247,
+            0,
+            467,
+            176
+          ],
+          "seed_support_count": 1,
+          "distance_to_seed_px": 0.0,
+          "touches_image_border": true,
+          "touches_roi_boundary": true
+        }
+      ],
+      "selected_component": {
+        "label": 1,
+        "area_px": 39117,
+        "bbox_xyxy": [
+          247,
+          0,
+          467,
+          176
+        ],
+        "seed_support_count": 1,
+        "distance_to_seed_px": 0.0,
+        "touches_image_border": true,
+        "touches_roi_boundary": true
+      }
+    },
+    "scene_id": "pilot_scene_0007",
+    "seed_pixel_xy": [
+      357,
+      66
+    ],
+    "interpretation": "POST_HOC_DIAGNOSTIC_ONLY",
+    "note": "Runs Gate v2 on locked inputs; it does not rewrite or rescore the frozen pilot."
+  }
+}

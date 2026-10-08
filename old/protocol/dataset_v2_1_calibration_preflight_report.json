@@ -1,0 +1,170 @@
+{
+  "authorized_next_action": "CAPTURE_CALIBRATION_CANARY_20",
+  "calibrator_fit_performed": false,
+  "capture_performed": false,
+  "checks": {
+    "baseline_unchanged": {
+      "checked": 18,
+      "mismatches": [],
+      "passed": true
+    },
+    "batch_resume_and_canary_lock": {
+      "batch_family_counts": [
+        20,
+        90,
+        90
+      ],
+      "canary_categories": {
+        "direct_grounding": 3,
+        "front_behind_camera": 3,
+        "multi_anchor_depth_order": 4,
+        "nearer_farther": 3,
+        "occlusion_depth_evidence": 3,
+        "relation_2d": 4
+      },
+      "canary_states": {
+        "ABSENT": 5,
+        "AMBIGUOUS": 5,
+        "FOUND": 5,
+        "INSUFFICIENT_EVIDENCE": 5
+      },
+      "passed": true
+    },
+    "calibration_contract_config_seed_consistency": {
+      "master_seed": 240820263001,
+      "passed": true
+    },
+    "deterministic_static_replay": {
+      "passed": true
+    },
+    "four_state_ontology": {
+      "errors": [],
+      "passed": true
+    },
+    "fresh_family_sample_capture_identity": {
+      "capture_prior_overlap": 0,
+      "family_prior_overlap": 0,
+      "passed": true
+    },
+    "fresh_instruction_namespace": {
+      "count": 1000,
+      "passed": true,
+      "prior_overlap": 0,
+      "unique": 1000
+    },
+    "fresh_language_template_family_namespace": {
+      "count": 1000,
+      "passed": true,
+      "prior_overlap": 0,
+      "unique": 1000
+    },
+    "fresh_layout_namespace": {
+      "count": 400,
+      "passed": true,
+      "prior_overlap": 0,
+      "unique": 400
+    },
+    "fresh_seed_namespace": {
+      "count": 1200,
+      "passed": true,
+      "prior_overlap": 0,
+      "unique": 1200
+    },
+    "frozen_architecture_checkpoint_prerequisite": {
+      "passed": true
+    },
+    "locked_calibration_population": {
+      "counts": {
+        "family_category": {
+          "direct_grounding": 30,
+          "front_behind_camera": 30,
+          "multi_anchor_depth_order": 30,
+          "nearer_farther": 35,
+          "occlusion_depth_evidence": 35,
+          "relation_2d": 40
+        },
+        "ood_axis": {
+          "none": 200
+        },
+        "primary_answerability": {
+          "ABSENT": 35,
+          "AMBIGUOUS": 35,
+          "FOUND": 80,
+          "INSUFFICIENT_EVIDENCE": 50
+        },
+        "split": {
+          "calibration": 200
+        },
+        "state_submode": {
+          "anchor_absent": 10,
+          "attribute_tie": 8,
+          "cross_modal_conflict": 9,
+          "depth_invalid_or_corrupt": 14,
+          "multi_anchor_conflict": 6,
+          "occlusion": 16,
+          "relation_tie": 6,
+          "same_class_duplicate": 15,
+          "target_absent": 12,
+          "too_small_or_out_of_view": 11,
+          "unique_visible_referent": 80,
+          "unsatisfied_relation": 13
+        }
+      },
+      "half_of_development_marginals": true,
+      "passed": true
+    },
+    "locked_source_and_denylist_hashes": {
+      "mismatches": [],
+      "passed": true
+    },
+    "observable_relation_geometry_v2_1": {
+      "evaluated_predicates": 458,
+      "geometry_version": "dataset_v2_relation_geometry_v2_1.1.0",
+      "passed": true
+    },
+    "oracle_free_calibration_only_test_sealed": {
+      "inference_payload_findings": [],
+      "passed": true
+    },
+    "runtime_output_and_ordered_shutdown": {
+      "missing": [],
+      "output_absent_or_empty": true,
+      "passed": true
+    },
+    "seen_assets_only_ood_held_out": {
+      "active_asset_ids": [
+        "cube_blue_01",
+        "cube_green_01",
+        "cube_orange_01",
+        "cube_pink_01",
+        "cube_purple_01",
+        "cube_yellow_01",
+        "mango_01",
+        "ycb_apple_01",
+        "ycb_apple_02",
+        "ycb_apple_03",
+        "ycb_lemon_01",
+        "ycb_mug_01",
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01",
+        "ycb_orange_02",
+        "ycb_orange_03",
+        "ycb_tomato_soup_can_01"
+      ],
+      "excluded_active": [],
+      "heldout_active": [],
+      "passed": true
+    }
+  },
+  "decision": "GO_CALIBRATION_CAPTURE_200",
+  "failures": [],
+  "gate": "LOCK_INDEPENDENT_CALIBRATION_CAPTURE_200",
+  "generated_at_utc": "2026-08-24T08:43:01.767353+00:00",
+  "model_inference_performed": false,
+  "passed": true,
+  "protocol_id": "roborefer_dataset_v2_1_calibration_capture_200",
+  "schema_version": 1,
+  "scientific_status": "STATIC_PREFLIGHT_CALIBRATION_NOT_CAPTURED_TEST_SEALED",
+  "test_opened": false,
+  "training_performed": false
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_FEATURE_EXTRACTION",
+  "created_at_local": "2026-09-24",
+  "scope": "Post-hoc prompt-aligned counterfactual diagnostic only",
+  "bindings": [
+    {
+      "path": "workspace/mh_pcrau_v3/day6_prompt_aligned_cache.py",
+      "sha256": "2eb48bae392a1bb1128c2e3c5e4bc7cca27103cb80478118f96a3ecd88f2c105"
+    },
+    {
+      "path": "protocol/MH_PCRAU_V3_DAY6_PROMPT_ALIGNED_DIAGNOSTIC_LOCK.json",
+      "sha256": "c0f978bec993810e80435d60018f4c483927ae8818b9acc6e59e01701da606df"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_03_prompt_aligned/PROMPT_ALIGNED_INPUT_MANIFEST.jsonl",
+      "sha256": "762f5101c3a2a6ac82caaa1842ec164690a25e0223291238ab54a21058e09c0d"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_06/S1A_FEATURE_CACHE_MANIFEST.json",
+      "sha256": "60396fa3ac5fcb1eaeb1633e530494d8fa779eaa56674043e53f79044b342bc3"
+    }
+  ],
+  "labels_or_oracle_passed_to_model": false,
+  "training_or_model_selection_allowed": false,
+  "confirmatory_claim_allowed": false,
+  "generalization_hold_must_remain": true
+}

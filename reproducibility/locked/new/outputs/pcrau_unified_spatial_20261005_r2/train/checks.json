@@ -1,0 +1,17 @@
+{
+  "all_features_finite": true,
+  "anchor_hits": 226,
+  "batch20_latency_ms_median": 63.27239550046215,
+  "bypass_exact": true,
+  "empty_anchor": 5,
+  "families": 320,
+  "latency_includes_export_and_boundary_checks": true,
+  "representative_baseline_capture_plain_exact": true,
+  "samples": 1600,
+  "scope": {
+    "DIRECT_BYPASS": 560,
+    "PARSE_UNSUPPORTED": 784,
+    "SUPPORTED_DIAGNOSTIC": 256
+  },
+  "visible_anchor": 251
+}

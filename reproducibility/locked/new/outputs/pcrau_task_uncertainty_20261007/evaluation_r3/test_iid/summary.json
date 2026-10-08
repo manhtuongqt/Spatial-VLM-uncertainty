@@ -1,0 +1,291 @@
+{
+  "batch20_feature_cache_pipeline_MC_latency_median_ms": 193.9322215000061,
+  "family_bootstrap": {
+    "families": 200,
+    "fixed_models_profiles": true,
+    "includes_fit_or_selection_uncertainty": false,
+    "metrics": {
+      "brier": {
+        "ci95": [
+          -0.008457414497872313,
+          0.0019234043647196784
+        ],
+        "point": -0.0031477843584015036,
+        "valid_resamples": 5000
+      },
+      "correct_acceptance_rate": {
+        "ci95": [
+          0.0010000000000000009,
+          0.013999999999999957
+        ],
+        "point": 0.007000000000000006,
+        "valid_resamples": 5000
+      },
+      "coverage": {
+        "ci95": [
+          -0.0010000000000000009,
+          0.017000000000000015
+        ],
+        "point": 0.008000000000000007,
+        "valid_resamples": 5000
+      },
+      "nll": {
+        "ci95": [
+          -0.026156560316407954,
+          0.007167011322574967
+        ],
+        "point": -0.009093079412639482,
+        "valid_resamples": 5000
+      },
+      "selective_risk": {
+        "ci95": [
+          -0.017184337532769305,
+          0.017724374010050552
+        ],
+        "point": 0.0007351139426611114,
+        "valid_resamples": 5000
+      },
+      "valid_recall": {
+        "ci95": [
+          0.0024390243902439046,
+          0.033767488550097126
+        ],
+        "point": 0.01728395061728405,
+        "valid_resamples": 5000
+      }
+    },
+    "resamples": 5000,
+    "seed": 24082026
+  },
+  "paired": {
+    "changed_acceptance": 22,
+    "changed_actions": 22,
+    "counts": {
+      "new_correct_accept": 9,
+      "new_error_accept": 6,
+      "removed_correct_accept": 2,
+      "removed_error_accept": 5
+    }
+  },
+  "primary": {
+    "answerability": {
+      "accuracy": 0.811,
+      "confusion_matrix": [
+        [
+          365,
+          0,
+          22,
+          33
+        ],
+        [
+          0,
+          105,
+          0,
+          0
+        ],
+        [
+          15,
+          0,
+          87,
+          30
+        ],
+        [
+          40,
+          0,
+          49,
+          254
+        ]
+      ],
+      "macro_f1": 0.8096861471861472,
+      "per_class": [
+        {
+          "f1": 0.8690476190476191,
+          "precision": 0.8690476190476191,
+          "recall": 0.8690476190476191
+        },
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "f1": 0.6000000000000001,
+          "precision": 0.5506329113924051,
+          "recall": 0.6590909090909091
+        },
+        {
+          "f1": 0.7696969696969697,
+          "precision": 0.8012618296529969,
+          "recall": 0.7405247813411079
+        }
+      ]
+    },
+    "grounding": {
+      "FOUND_MAP_hits": 405,
+      "composite_error_prevalence": 0.595,
+      "target_present": 835,
+      "target_present_hits": 775,
+      "truth_FOUND": 420
+    },
+    "policy": {
+      "accepted": 371,
+      "accepted_absent_truth": 6,
+      "accepted_non_found_truth": 29,
+      "actions": {
+        "ABSTAIN": 158,
+        "ASK_USER": 129,
+        "EXECUTE": 371,
+        "REOBSERVE": 342
+      },
+      "answer_gate_bypassed": 0,
+      "bypass_correct": 0,
+      "bypass_errors": 0,
+      "correct_acceptances": 337,
+      "correct_found_rejected": 68,
+      "correct_found_total": 405,
+      "coverage": 0.371,
+      "empirical_risk": 0.09164420485175202,
+      "errors": 34,
+      "samples": 1000,
+      "wilson_upper_95": 0.12533630740843266
+    },
+    "probability": {
+      "aurc": 0.2493303409641809,
+      "brier": 0.0724828789859624,
+      "ece_10": 0.026790975265245803,
+      "nll": 0.24331678272233073
+    }
+  },
+  "reference_live44": {
+    "answerability": {
+      "accuracy": 0.811,
+      "confusion_matrix": [
+        [
+          365,
+          0,
+          22,
+          33
+        ],
+        [
+          0,
+          105,
+          0,
+          0
+        ],
+        [
+          15,
+          0,
+          87,
+          30
+        ],
+        [
+          40,
+          0,
+          49,
+          254
+        ]
+      ],
+      "macro_f1": 0.8096861471861472,
+      "per_class": [
+        {
+          "f1": 0.8690476190476191,
+          "precision": 0.8690476190476191,
+          "recall": 0.8690476190476191
+        },
+        {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "f1": 0.6000000000000001,
+          "precision": 0.5506329113924051,
+          "recall": 0.6590909090909091
+        },
+        {
+          "f1": 0.7696969696969697,
+          "precision": 0.8012618296529969,
+          "recall": 0.7405247813411079
+        }
+      ]
+    },
+    "grounding": {
+      "FOUND_MAP_hits": 405,
+      "composite_error_prevalence": 0.595,
+      "target_present": 835,
+      "target_present_hits": 775,
+      "truth_FOUND": 420
+    },
+    "policy": {
+      "accepted": 363,
+      "accepted_absent_truth": 6,
+      "accepted_non_found_truth": 28,
+      "actions": {
+        "ABSTAIN": 158,
+        "ASK_USER": 134,
+        "EXECUTE": 363,
+        "REOBSERVE": 345
+      },
+      "answer_gate_bypassed": 0,
+      "bypass_correct": 0,
+      "bypass_errors": 0,
+      "correct_acceptances": 330,
+      "correct_found_rejected": 75,
+      "correct_found_total": 405,
+      "coverage": 0.363,
+      "empirical_risk": 0.09090909090909091,
+      "errors": 33,
+      "samples": 1000,
+      "wilson_upper_95": 0.12492216204819889
+    },
+    "probability": {
+      "aurc": 0.2553128934120098,
+      "brier": 0.07563066334436391,
+      "ece_10": 0.030122143096535048,
+      "nll": 0.2524098621349701
+    }
+  },
+  "tasks": {
+    "completion": {
+      "IID_completion_reference_evaluation_performed": false,
+      "baseline_hidden_core_mass_on_meaningful_pairs": null,
+      "baseline_reference_PIT": null,
+      "baseline_reference_mass": null,
+      "eligible_pairs": 0,
+      "full_amodal_ground_truth": false,
+      "hidden_core_mass_mean_on_meaningful_pairs": null,
+      "meaningful_hidden_pairs": 0,
+      "reference_PIT": null,
+      "reference_mass": null
+    },
+    "depth": {
+      "MAE_m": 0.029929963803291323,
+      "RMSE_m": 0.042631143840669176,
+      "interval_95_coverage": 0.994,
+      "mixture_NLL": -1.7963660161940227,
+      "reference_is_sensor_measurement": true,
+      "valid_predicted_node_samples": 1000
+    },
+    "relation": {
+      "accuracy": 0.890625,
+      "brier": 0.07684424673302045,
+      "centroid_reference_samples": 128,
+      "reference_definition": "single_visible_requested_target_and_anchor_centroids_12px"
+    },
+    "samples": 1000,
+    "semantic": {
+      "foreground_identity_accuracy": 0.9441624365482234,
+      "foreground_nodes": 985,
+      "node_identity_NLL": 0.35075257464490334,
+      "node_identity_accuracy": 0.943,
+      "noun_matching_brier": 0.07179076215254214,
+      "noun_matching_samples": 477
+    },
+    "spatial": {
+      "anchor_hits": 131,
+      "target_hits": 775,
+      "target_present": 835,
+      "visible_anchors": 153
+    }
+  }
+}

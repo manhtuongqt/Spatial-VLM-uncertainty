@@ -1,0 +1,129 @@
+{
+  "audit_scope": "append_only_live_output_parser_repair_only",
+  "capture_authorized": false,
+  "cell_counts": {
+    "ABSENT|leftmost": 8,
+    "ABSENT|rightmost": 8,
+    "ABSENT|second_from_left": 8,
+    "ABSENT|second_from_right": 8,
+    "AMBIGUOUS|leftmost": 8,
+    "AMBIGUOUS|rightmost": 8,
+    "AMBIGUOUS|second_from_left": 8,
+    "AMBIGUOUS|second_from_right": 8,
+    "FOUND|leftmost": 8,
+    "FOUND|rightmost": 8,
+    "FOUND|second_from_left": 8,
+    "FOUND|second_from_right": 8,
+    "INSUFFICIENT_EVIDENCE|leftmost": 8,
+    "INSUFFICIENT_EVIDENCE|rightmost": 8,
+    "INSUFFICIENT_EVIDENCE|second_from_left": 8,
+    "INSUFFICIENT_EVIDENCE|second_from_right": 8
+  },
+  "checked_at_utc": "2026-09-15T07:20:49.768518+00:00",
+  "checks": {
+    "affine_logit_unchanged": true,
+    "artifact_manifest_includes_r6_code": true,
+    "attempt_03_hash_unchanged": true,
+    "attempt_04_absent_before_lock": true,
+    "attempts_01_02_03_preserved_blocked": true,
+    "base_k_regression_pass": true,
+    "capture_absent": true,
+    "capture_authorization_absent": true,
+    "capture_lock_schema_exact": true,
+    "capture_node_required_sources_unchanged": true,
+    "capture_requires_attempt_04_pass": true,
+    "cell_count_16": true,
+    "dataset_absent": true,
+    "downstream_binds_r6_lock": true,
+    "downstream_cli_complete": true,
+    "every_cell_has_8": true,
+    "family_count_128": true,
+    "feature_count_12_unchanged": true,
+    "joint_warning_regression_pass": true,
+    "parser_regression_pass": true,
+    "r5_audit_hash_unchanged": true,
+    "r5_lock_hash_unchanged": true,
+    "r6_camera_array_parser_strict_length_and_finite": true,
+    "r6_downstream_parses": true,
+    "r6_joint_parser_starts_at_header": true,
+    "r6_output_append_only_attempt_04": true,
+    "r6_retains_existing_tolerances": true,
+    "r6_runner_parses": true,
+    "refit_forbidden": true,
+    "single_capture_attempt_only": true,
+    "six_joint_pose_regression_pass": true,
+    "test_iid_ood_sealed": true,
+    "threshold_grid_unchanged": true,
+    "wrist_k_regression_pass": true
+  },
+  "implementation_revision": "r6",
+  "parser_regression": {
+    "base_k": [
+      521.93325561,
+      0.0,
+      320.0,
+      0.0,
+      521.93325561,
+      240.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "checks": {
+      "all_six_locked_joints_parse": true,
+      "attempt_03_is_immutable_blocked": true,
+      "base_k_parses_exactly_9_finite_floats": true,
+      "joint_warning_preamble_is_ignored": true,
+      "recorded_joint_pose_passes_existing_tolerance": true,
+      "wrist_k_parses_exactly_9_finite_floats": true
+    },
+    "joint_comparison": {
+      "elbow_joint": {
+        "absolute_error": 3.08397751780376e-12,
+        "expected": 1.3428,
+        "observed": 1.342800000003084
+      },
+      "shoulder_lift_joint": {
+        "absolute_error": 6.745715097622451e-13,
+        "expected": -1.8273,
+        "observed": -1.8272999999993254
+      },
+      "shoulder_pan_joint": {
+        "absolute_error": 1.9984014443252818e-15,
+        "expected": 1.3815,
+        "observed": 1.381499999999998
+      },
+      "wrist_1_joint": {
+        "absolute_error": 2.1438406605511773e-12,
+        "expected": -1.2863,
+        "observed": -1.2862999999978562
+      },
+      "wrist_2_joint": {
+        "absolute_error": 1.5476508963274682e-13,
+        "expected": -1.5708,
+        "observed": -1.5707999999998452
+      },
+      "wrist_3_joint": {
+        "absolute_error": 5.773159728050814e-14,
+        "expected": -1.9601,
+        "observed": -1.9600999999999422
+      }
+    },
+    "status": "PASS",
+    "wrist_k": [
+      606.08166504,
+      0.0,
+      325.54367065,
+      0.0,
+      605.79730225,
+      249.99615479,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "protocol_id": "gazebo_calibration_v3",
+  "schema_version": 1,
+  "scientific_method_changed": false,
+  "status": "PASS"
+}

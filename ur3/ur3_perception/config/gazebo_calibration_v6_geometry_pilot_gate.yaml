@@ -1,0 +1,309 @@
+schema_version: 1
+protocol_id: gazebo_calibration_v6_geometry_pilot
+frozen_before_capture: true
+parent_family_count: 32
+split_parent_family_count:
+  development_geometry_only: 32
+state_quota:
+  development_geometry_only:
+    FOUND: 8
+    AMBIGUOUS: 8
+    ABSENT: 8
+    INSUFFICIENT_EVIDENCE: 8
+relation_variant_quota:
+  development_geometry_only:
+    leftmost: 8
+    rightmost: 8
+    second_from_left: 8
+    second_from_right: 8
+state_relation_cell_quota:
+  development_geometry_only: 2
+layout_uniqueness:
+  full_pose_signatures_unique: true
+  no_pose_signature_overlap_with_prior_uq_attempts: true
+  byte_identical_rgb_forbidden: true
+  perceptual_near_duplicate_rule:
+    metric: whole-frame grayscale mean absolute difference and changed-pixel fraction
+    gray_absdiff_threshold_for_changed_pixel: 3
+    near_duplicate_if_gray_mad_below: 0.05
+    and_changed_pixel_fraction_below: 0.002
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+insufficient_evidence_rule:
+  min_visible_pixels_inclusive: 1
+  max_visible_pixels_exclusive: 120
+  projected_center_outer_margin_fraction: 0.2
+output_contract:
+  point_regex: ^POINT \[\(([0-9]*\.?[0-9]+), ([0-9]*\.?[0-9]+)\)\]$
+  abstain_literal: ABSTAIN
+  allowed_actions:
+  - POINT
+  - ABSTAIN
+  point_state: FOUND
+  abstain_states:
+  - AMBIGUOUS
+  - ABSENT
+  - INSUFFICIENT_EVIDENCE
+camera:
+  frame: camera_color_optical_frame
+  base_frame: base_link
+  resolution:
+  - 640
+  - 480
+  intrinsics:
+    fx: 606.0816650391
+    fy: 605.7973022461
+    cx: 325.5436706543
+    cy: 249.9961547852
+  view_joint_pose:
+  - 1.3815
+  - -1.8273
+  - 1.3428
+  - -1.2863
+  - -1.5708
+  - -1.9601
+  depth_unit: metre
+  valid_depth_range_m:
+  - 0.1
+  - 2.0
+family_split_rule:
+  all_variants_same_parent_same_split: true
+  identical_rendered_scene_queries_share_parent_family: true
+  co_locate:
+  - views
+  - paraphrases
+  - visibility_variants
+  - counterfactuals
+  - queries_over_identical_layout
+model_input_allowlist:
+- rgb
+- depth_m
+- instruction
+evaluator_only:
+- semantic_labels
+- answerability_state
+- target_id
+- candidate_set
+- scene_layout
+policies:
+  no_sam2: true
+  no_training: true
+  no_model_inference: true
+  no_materialization: true
+  no_b2: true
+  no_test_access: true
+  no_dev_v2_fit_or_selection: true
+  no_robot_manipulation: true
+  full_train_uq_only_after_pilot_pass: true
+  no_model_inference_during_capture: true
+  no_materialization_before_128_of_128_geometry_pass: true
+  no_grounding_or_risk_estimator_refit: true
+  capture_requires_post_preflight_compatibility_lock: true
+inference_lock:
+  backbone: B0
+  greedy_decoding: true
+  max_new_tokens: 40
+  stochastic_draws: 3
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  seed_rule: sha256(protocol_id:sample_id:model_id:draw)[0:4]
+  self_consistency_is_calibrated_probability: false
+risk_feature_schema:
+- action_POINT
+- action_INVALID
+- self_consistency
+- point_dispersion
+- boundary_distance
+- local_depth_valid_fraction
+- local_depth_median
+- local_depth_mad
+- relation_leftmost
+- relation_rightmost
+- relation_second_from_left
+- relation_second_from_right
+selection_rule:
+  selection_split: val_uq_only
+  found_hit_delta_min: -0.125
+  nonfound_abstain_recall: strictly_higher_than_b0
+  nonfound_false_accept: strictly_lower_than_b0
+  exact_contract: not_lower_than_b0
+  invalid_is_abstain: false
+  aurc: not_worse_than_b0
+  tie_break:
+  - lower_false_accept
+  - higher_found_hit
+  - simpler_method
+statistical_protocol:
+  unit: parent_family
+  bootstrap_draws: 10000
+  bootstrap_seed: 13092026
+  confidence_interval: 0.95
+  paired: true
+  mcnemar: exact_two_sided_when_applicable
+sealed:
+  train_uq: read_only_hash_and_frozen_provenance
+  val_uq: closed_for_selection
+  gazebo_dev_answerability_v2: closed_no_reuse
+  gazebo_calibration_v2: closed_historical_negative_no_reuse
+  gazebo_test_iid: true
+  gazebo_test_ood: true
+  robot: true
+full_revision:
+  predecessor: gazebo_train_uq_v2_full_r2
+  predecessor_decision: REJECT_316_OF_320_NO_MATERIALIZATION
+  repair_scope: geometry_stability_only
+  required_acceptance: 320/320_in_one_attempt
+  no_sample_reuse: true
+calibration_protocol:
+  input_score: frozen_spatial_risk_v2_raw_probability
+  calibrator_count: 1
+  calibrator: positive_slope_affine_logit
+  formula: p=clip(p_raw,1e-6,1-1e-6); z=logit(p); p_cal=sigmoid(exp(log_a)*z+b)
+  fit_objective: mean_binary_negative_log_likelihood
+  optimizer: scipy.optimize.minimize_L-BFGS-B
+  initial_parameters:
+    log_a: 0.0
+    b: 0.0
+  bounds:
+    log_a:
+    - -5.0
+    - 5.0
+    b:
+    - -10.0
+    - 10.0
+  optimizer_options:
+    maxiter: 1000
+    ftol: 1.0e-12
+    gtol: 1.0e-08
+  probability_gate: ECE-10 and Brier both strictly decrease
+  ranking_invariance: AURC and AUROC-error absolute difference at most 1e-12
+  fit_split: Gazebo_calibration_v6
+operating_point_rule:
+  threshold_grid:
+  - 0.0
+  - 0.01
+  - 0.02
+  - 0.03
+  - 0.04
+  - 0.05
+  - 0.06
+  - 0.07
+  - 0.08
+  - 0.09
+  - 0.1
+  - 0.11
+  - 0.12
+  - 0.13
+  - 0.14
+  - 0.15
+  - 0.16
+  - 0.17
+  - 0.18
+  - 0.19
+  - 0.2
+  - 0.21
+  - 0.22
+  - 0.23
+  - 0.24
+  - 0.25
+  - 0.26
+  - 0.27
+  - 0.28
+  - 0.29
+  - 0.3
+  - 0.31
+  - 0.32
+  - 0.33
+  - 0.34
+  - 0.35
+  - 0.36
+  - 0.37
+  - 0.38
+  - 0.39
+  - 0.4
+  - 0.41
+  - 0.42
+  - 0.43
+  - 0.44
+  - 0.45
+  - 0.46
+  - 0.47
+  - 0.48
+  - 0.49
+  - 0.5
+  - 0.51
+  - 0.52
+  - 0.53
+  - 0.54
+  - 0.55
+  - 0.56
+  - 0.57
+  - 0.58
+  - 0.59
+  - 0.6
+  - 0.61
+  - 0.62
+  - 0.63
+  - 0.64
+  - 0.65
+  - 0.66
+  - 0.67
+  - 0.68
+  - 0.69
+  - 0.7
+  - 0.71
+  - 0.72
+  - 0.73
+  - 0.74
+  - 0.75
+  - 0.76
+  - 0.77
+  - 0.78
+  - 0.79
+  - 0.8
+  - 0.81
+  - 0.82
+  - 0.83
+  - 0.84
+  - 0.85
+  - 0.86
+  - 0.87
+  - 0.88
+  - 0.89
+  - 0.9
+  - 0.91
+  - 0.92
+  - 0.93
+  - 0.94
+  - 0.95
+  - 0.96
+  - 0.97
+  - 0.98
+  - 0.99
+  - 1.0
+  action: ABSTAIN iff calibrated_risk >= threshold; otherwise preserve frozen B0 action
+  eligibility_vs_frozen_b0:
+    found_hit_at_008_delta_min: -0.125
+    nonfound_abstain_recall: strictly_higher
+    nonfound_false_accept: strictly_lower
+    exact_contract: not_lower
+    invalid_is_abstain: false
+  selection_lexicographic:
+  - lowest_nonfound_false_accept
+  - highest_found_hit_at_008
+  - highest_corrected_safe_task_accuracy
+  - highest_coverage
+  - lowest_threshold
+revision:
+  parent: gazebo_calibration_v1
+  parent_decision: INVALID_PREFLIGHT_ORDER
+  repair_scope: execution_order_and_fresh_identities_only
+  no_sample_reuse: true
+contract_lock_sha256: 850921e200d921592128c76e11c8deeb5a7d6177ea315f1ff8d286f873084b6d
+frozen_risk_estimator:
+  type: sklearn.ensemble.HistGradientBoostingClassifier
+  joblib_sha256: f296e2e33abdd66437d2976a91ff78b4e707d67244f3b998dc9d9b011cbd5bc2
+  refit_allowed: false

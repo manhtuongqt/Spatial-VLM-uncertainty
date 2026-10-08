@@ -1,0 +1,31 @@
+rgbd_object_pose:
+  ros__parameters:
+    use_sim_time: true
+    color_topic: /wrist_camera/color/image_raw
+    depth_topic: /wrist_camera/depth/image_raw
+    camera_info_topic: /wrist_camera/color/camera_info
+    # Simulation publishes registered depth aligned to RGB, matching
+    # realsense2_camera align_depth_to_color.
+    camera_frame: camera_color_optical_frame
+    base_frame: base_link
+    oracle_topic: /ur3_perception/oracle_tf
+    oracle_object_name: red_cube
+    # Evaluation-only offset; the Gazebo model pose is already the cube center.
+    oracle_offset_z: 0.0
+    sync_slop_sec: 0.08
+    depth_window_radius: 3
+    min_depth_m: 0.05
+    max_depth_m: 2.0
+    min_mask_area_px: 80.0
+    object_height_m: 0.06
+    min_dimension_m: 0.04
+    # Covers the largest selected YCB object (cracker box) while DINO and the
+    # semantic registry still reject scene-sized regions.
+    max_dimension_m: 0.22
+    stability_window_size: 7
+    max_position_stddev_m: 0.003
+    max_pose_age_sec: 1.0
+    # Lab convention: UR3/camera faces +Y; its left-hand pick area is -X.
+    workspace_min: [-0.36, 0.08, 0.0]
+    workspace_max: [0.02, 0.46, 0.22]
+    estimate_yaw: false

@@ -1,0 +1,73 @@
+schema_version: 1
+protocol_id: gazebo_train_uq_v2_pilot
+frozen_before_capture: true
+parent_family_count: 32
+split_parent_family_count:
+  geometry_pilot: 32
+state_quota:
+  FOUND: 8
+  AMBIGUOUS: 8
+  ABSENT: 8
+  INSUFFICIENT_EVIDENCE: 8
+relation_variant_quota:
+  leftmost: 8
+  rightmost: 8
+  second_from_left: 8
+  second_from_right: 8
+state_relation_cell_quota: 2
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+insufficient_evidence_rule:
+  min_visible_pixels_inclusive: 1
+  max_visible_pixels_exclusive: 120
+  projected_center_outer_margin_fraction: 0.2
+output_contract:
+  point_regex: ^POINT \[\(([0-9]*\.?[0-9]+), ([0-9]*\.?[0-9]+)\)\]$
+  abstain_literal: ABSTAIN
+  allowed_actions:
+  - POINT
+  - ABSTAIN
+  point_state: FOUND
+  abstain_states:
+  - AMBIGUOUS
+  - ABSENT
+  - INSUFFICIENT_EVIDENCE
+camera:
+  frame: camera_color_optical_frame
+  base_frame: base_link
+  resolution:
+  - 640
+  - 480
+  intrinsics:
+    fx: 606.0816650391
+    fy: 605.7973022461
+    cx: 325.5436706543
+    cy: 249.9961547852
+  view_joint_pose:
+  - 1.3815
+  - -1.8273
+  - 1.3428
+  - -1.2863
+  - -1.5708
+  - -1.9601
+  depth_unit: metre
+  valid_depth_range_m:
+  - 0.1
+  - 2.0
+model_input_allowlist:
+- rgb
+- depth_m
+- instruction
+evaluator_only:
+- semantic_labels
+- answerability_state
+- target_id
+- candidate_set
+policies:
+  no_sam2: true
+  no_training: true
+  no_b2: true
+  no_test_access: true
+  no_dev_v2_fit_or_selection: true

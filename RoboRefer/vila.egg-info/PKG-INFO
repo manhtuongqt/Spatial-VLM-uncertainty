@@ -1,0 +1,879 @@
+Metadata-Version: 2.4
+Name: vila
+Version: 2.0.0
+Summary: VILA: On Pre-training for Visual Language Models
+Project-URL: Homepage, https://hanlab.mit.edu/projects/vila
+Project-URL: Bug Tracker, https://github.com/NVlabs/VILA/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch==2.5.1
+Requires-Dist: torchaudio==2.5.1
+Requires-Dist: torchvision==0.20.1
+Requires-Dist: nvidia-cublas-cu12==12.4.5.8
+Requires-Dist: nvidia-cuda-cupti-cu12==12.4.127
+Requires-Dist: nvidia-cuda-nvrtc-cu12==12.4.127
+Requires-Dist: nvidia-cuda-runtime-cu12==12.4.127
+Requires-Dist: nvidia-cudnn-cu12==9.1.0.70
+Requires-Dist: nvidia-cufft-cu12==11.2.1.3
+Requires-Dist: nvidia-curand-cu12==10.3.5.147
+Requires-Dist: nvidia-cusolver-cu12==11.6.1.9
+Requires-Dist: nvidia-cusparse-cu12==12.3.1.170
+Requires-Dist: nvidia-cusparselt-cu12==0.6.2
+Requires-Dist: nvidia-ml-py==12.570.86
+Requires-Dist: nvidia-nccl-cu12==2.21.5
+Requires-Dist: nvidia-nvjitlink-cu12==12.4.127
+Requires-Dist: nvidia-nvtx-cu12==12.4.127
+Requires-Dist: math-verify
+Requires-Dist: shortuuid
+Requires-Dist: peft>=0.9.0
+Requires-Dist: markdown2[all]
+Requires-Dist: fire
+Requires-Dist: seaborn
+Requires-Dist: ring_flash_attn
+Requires-Dist: einops-exts
+Requires-Dist: timm
+Requires-Dist: openpyxl==3.1.2
+Requires-Dist: pytorchvideo==0.1.5
+Requires-Dist: decord==0.6.0
+Requires-Dist: webdataset==0.2.86
+Requires-Dist: pywsd==1.2.4
+Requires-Dist: s2wrapper @ git+https://github.com/bfshi/scaling_on_scales
+Requires-Dist: tyro
+Requires-Dist: pre-commit
+Requires-Dist: loguru
+Requires-Dist: hydra-core==1.4.0.dev1
+Requires-Dist: termcolor
+Requires-Dist: loguru
+Requires-Dist: flask
+Requires-Dist: absl-py==2.1.0
+Requires-Dist: accelerate==1.3.0
+Requires-Dist: aenum==3.1.15
+Requires-Dist: aiohappyeyeballs==2.4.6
+Requires-Dist: aiohttp==3.11.12
+Requires-Dist: aiohttp-cors==0.7.0
+Requires-Dist: aiosignal==1.3.2
+Requires-Dist: airportsdata==20241001
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: antlr4-python3-runtime==4.13.2
+Requires-Dist: anyio==4.8.0
+Requires-Dist: argon2-cffi==23.1.0
+Requires-Dist: argon2-cffi-bindings==21.2.0
+Requires-Dist: arrow==1.3.0
+Requires-Dist: astor==0.8.1
+Requires-Dist: asttokens==3.0.0
+Requires-Dist: async-lru==2.0.4
+Requires-Dist: attrs==25.1.0
+Requires-Dist: av==14.1.0
+Requires-Dist: babel==2.17.0
+Requires-Dist: beautifulsoup4==4.13.3
+Requires-Dist: bitsandbytes==0.45.2
+Requires-Dist: black==25.1.0
+Requires-Dist: blake3==1.0.4
+Requires-Dist: bleach==6.2.0
+Requires-Dist: blis==0.7.11
+Requires-Dist: cachetools==5.5.1
+Requires-Dist: catalogue==2.0.10
+Requires-Dist: certifi==2025.1.31
+Requires-Dist: cffi==1.17.1
+Requires-Dist: chardet==5.2.0
+Requires-Dist: charset-normalizer==3.4.1
+Requires-Dist: click==8.1.8
+Requires-Dist: clip @ git+https://github.com/openai/CLIP.git@dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1
+Requires-Dist: cloudpathlib==0.16.0
+Requires-Dist: cloudpickle==3.1.1
+Requires-Dist: colorama==0.4.6
+Requires-Dist: colorful==0.5.6
+Requires-Dist: colorlog==6.9.0
+Requires-Dist: comm==0.2.2
+Requires-Dist: compressed-tensors==0.9.1
+Requires-Dist: confection==0.1.5
+Requires-Dist: contourpy==1.3.1
+Requires-Dist: cycler==0.12.1
+Requires-Dist: cymem==2.0.11
+Requires-Dist: DataProperty==1.1.0
+Requires-Dist: datasets==3.2.0
+Requires-Dist: debugpy==1.8.12
+Requires-Dist: decorator==5.1.1
+Requires-Dist: deepspeed==0.15.4
+Requires-Dist: defusedxml==0.7.1
+Requires-Dist: depyf==0.18.0
+Requires-Dist: dill==0.3.8
+Requires-Dist: diskcache==5.6.3
+Requires-Dist: distlib==0.3.9
+Requires-Dist: distro==1.9.0
+Requires-Dist: docker-pycreds==0.4.0
+Requires-Dist: einops==0.8.1
+Requires-Dist: executing==2.2.0
+Requires-Dist: fastapi==0.115.8
+Requires-Dist: fastjsonschema==2.21.1
+Requires-Dist: filelock==3.17.0
+Requires-Dist: flake8==7.1.1
+Requires-Dist: fonttools==4.56.0
+Requires-Dist: fqdn==1.5.1
+Requires-Dist: frozenlist==1.5.0
+Requires-Dist: fsspec==2024.9.0
+Requires-Dist: ftfy==6.3.1
+Requires-Dist: gguf==0.10.0
+Requires-Dist: gitdb==4.0.12
+Requires-Dist: GitPython==3.1.44
+Requires-Dist: google-api-core==2.24.1
+Requires-Dist: google-auth==2.38.0
+Requires-Dist: googleapis-common-protos==1.67.0
+Requires-Dist: grpcio==1.70.0
+Requires-Dist: h11==0.14.0
+Requires-Dist: hf_transfer==0.1.9
+Requires-Dist: hjson==3.1.0
+Requires-Dist: httpcore==1.0.7
+Requires-Dist: httptools==0.6.4
+Requires-Dist: httpx==0.28.1
+Requires-Dist: huggingface-hub==0.28.1
+Requires-Dist: idna==3.10
+Requires-Dist: importlib_metadata==8.6.1
+Requires-Dist: iniconfig==2.0.0
+Requires-Dist: inquirerpy==0.3.4
+Requires-Dist: interegular==0.3.3
+Requires-Dist: ipykernel==6.29.5
+Requires-Dist: ipython==8.32.0
+Requires-Dist: ipywidgets==8.1.5
+Requires-Dist: isoduration==20.11.0
+Requires-Dist: isort==6.0.0
+Requires-Dist: jedi==0.19.2
+Requires-Dist: Jinja2==3.1.5
+Requires-Dist: jiter==0.8.2
+Requires-Dist: joblib==1.4.2
+Requires-Dist: json5==0.10.0
+Requires-Dist: jsonlines==4.0.0
+Requires-Dist: jsonpointer==3.0.0
+Requires-Dist: jsonschema==4.23.0
+Requires-Dist: jsonschema-specifications==2024.10.1
+Requires-Dist: jupyter==1.1.1
+Requires-Dist: jupyter-console==6.6.3
+Requires-Dist: jupyter-events==0.12.0
+Requires-Dist: jupyter-lsp==2.2.5
+Requires-Dist: jupyter_client==8.6.3
+Requires-Dist: jupyter_core==5.7.2
+Requires-Dist: jupyter_server==2.15.0
+Requires-Dist: jupyter_server_terminals==0.5.3
+Requires-Dist: jupyterlab==4.3.5
+Requires-Dist: jupyterlab_pygments==0.3.0
+Requires-Dist: jupyterlab_server==2.27.3
+Requires-Dist: jupyterlab_widgets==3.0.13
+Requires-Dist: kiwisolver==1.4.8
+Requires-Dist: langcodes==3.5.0
+Requires-Dist: language_data==1.3.0
+Requires-Dist: lark==1.2.2
+Requires-Dist: latex2sympy2_extended==1.0.6
+Requires-Dist: liger_kernel==0.5.2
+Requires-Dist: lighteval @ git+https://github.com/huggingface/lighteval.git@4f381b352c0e467b5870a97d41cb66b487a2c503
+Requires-Dist: lm-format-enforcer==0.10.9
+Requires-Dist: lxml==5.3.1
+Requires-Dist: marisa-trie==1.2.1
+Requires-Dist: markdown-it-py==3.0.0
+Requires-Dist: MarkupSafe==3.0.2
+Requires-Dist: math-verify==0.5.2
+Requires-Dist: matplotlib==3.10.0
+Requires-Dist: matplotlib-inline==0.1.7
+Requires-Dist: mbstrdecoder==1.1.4
+Requires-Dist: mccabe==0.7.0
+Requires-Dist: mdurl==0.1.2
+Requires-Dist: mistral_common==1.5.3
+Requires-Dist: mistune==3.1.1
+Requires-Dist: mpmath==1.3.0
+Requires-Dist: msgpack==1.1.0
+Requires-Dist: msgspec==0.19.0
+Requires-Dist: multidict==6.1.0
+Requires-Dist: multiprocess==0.70.16
+Requires-Dist: murmurhash==1.0.12
+Requires-Dist: mypy-extensions==1.0.0
+Requires-Dist: nbclient==0.10.2
+Requires-Dist: nbconvert==7.16.6
+Requires-Dist: nbformat==5.10.4
+Requires-Dist: nest-asyncio==1.6.0
+Requires-Dist: networkx==3.4.2
+Requires-Dist: ninja==1.11.1.3
+Requires-Dist: nltk==3.9.1
+Requires-Dist: notebook==7.3.2
+Requires-Dist: notebook_shim==0.2.4
+Requires-Dist: numpy==1.26.4
+Requires-Dist: openai==1.63.0
+Requires-Dist: opencensus==0.11.4
+Requires-Dist: opencensus-context==0.1.3
+Requires-Dist: opencv-python==4.11.0.86
+Requires-Dist: opencv-python-headless==4.11.0.86
+Requires-Dist: outlines==0.1.11
+Requires-Dist: outlines_core==0.1.26
+Requires-Dist: overrides==7.7.0
+Requires-Dist: packaging==24.2
+Requires-Dist: pandas==2.2.3
+Requires-Dist: pandocfilters==1.5.1
+Requires-Dist: parameterized==0.9.0
+Requires-Dist: parso==0.8.4
+Requires-Dist: partial-json-parser==0.2.1.1.post5
+Requires-Dist: pathspec==0.12.1
+Requires-Dist: pathvalidate==3.2.3
+Requires-Dist: pexpect==4.9.0
+Requires-Dist: pfzy==0.3.4
+Requires-Dist: pillow==11.1.0
+Requires-Dist: platformdirs==4.3.6
+Requires-Dist: pluggy==1.5.0
+Requires-Dist: portalocker==3.1.1
+Requires-Dist: preshed==3.0.9
+Requires-Dist: prometheus-fastapi-instrumentator==7.0.2
+Requires-Dist: prometheus_client==0.21.1
+Requires-Dist: prompt_toolkit==3.0.50
+Requires-Dist: propcache==0.2.1
+Requires-Dist: proto-plus==1.26.0
+Requires-Dist: protobuf==3.20.3
+Requires-Dist: psutil==7.0.0
+Requires-Dist: ptyprocess==0.7.0
+Requires-Dist: pure_eval==0.2.3
+Requires-Dist: py-cpuinfo==9.0.0
+Requires-Dist: py-spy==0.4.0
+Requires-Dist: pyarrow==19.0.0
+Requires-Dist: pyasn1==0.6.1
+Requires-Dist: pyasn1_modules==0.4.1
+Requires-Dist: pybind11==2.13.6
+Requires-Dist: pycodestyle==2.12.1
+Requires-Dist: pycountry==24.6.1
+Requires-Dist: pycparser==2.22
+Requires-Dist: pydantic==2.10.6
+Requires-Dist: pydantic_core==2.27.2
+Requires-Dist: pyflakes==3.2.0
+Requires-Dist: Pygments==2.19.1
+Requires-Dist: pyparsing==3.2.1
+Requires-Dist: pytablewriter==1.2.1
+Requires-Dist: pytest==8.3.4
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: python-json-logger==3.2.1
+Requires-Dist: pytz==2025.1
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: pyzmq==26.2.1
+Requires-Dist: qwen-vl-utils==0.0.10
+Requires-Dist: referencing==0.36.2
+Requires-Dist: regex==2024.11.6
+Requires-Dist: requests==2.32.3
+Requires-Dist: rfc3339-validator==0.1.4
+Requires-Dist: rfc3986-validator==0.1.1
+Requires-Dist: rich==13.9.4
+Requires-Dist: rouge_score==0.1.2
+Requires-Dist: rpds-py==0.22.3
+Requires-Dist: rsa==4.9
+Requires-Dist: sacrebleu==2.5.1
+Requires-Dist: safetensors==0.5.2
+Requires-Dist: scikit-learn==1.6.1
+Requires-Dist: scipy==1.15.1
+Requires-Dist: Send2Trash==1.8.3
+Requires-Dist: sentencepiece==0.2.0
+Requires-Dist: sentry-sdk==2.21.0
+Requires-Dist: setproctitle==1.3.4
+Requires-Dist: six==1.17.0
+Requires-Dist: smart-open==6.4.0
+Requires-Dist: smmap==5.0.2
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: soupsieve==2.6
+Requires-Dist: spacy==3.7.2
+Requires-Dist: spacy-legacy==3.0.12
+Requires-Dist: spacy-loggers==1.0.5
+Requires-Dist: srsly==2.5.1
+Requires-Dist: stack-data==0.6.3
+Requires-Dist: starlette==0.45.3
+Requires-Dist: sympy==1.13.1
+Requires-Dist: tabledata==1.3.4
+Requires-Dist: tabulate==0.9.0
+Requires-Dist: tcolorpy==0.1.7
+Requires-Dist: tensorboardX==2.6.2.2
+Requires-Dist: termcolor==2.3.0
+Requires-Dist: terminado==0.18.1
+Requires-Dist: thinc==8.2.5
+Requires-Dist: threadpoolctl==3.5.0
+Requires-Dist: tiktoken==0.8.0
+Requires-Dist: tinycss2==1.4.0
+Requires-Dist: tokenizers==0.21.0
+Requires-Dist: tornado==6.4.2
+Requires-Dist: tqdm==4.67.1
+Requires-Dist: traitlets==5.14.3
+Requires-Dist: transformers==4.49.0
+Requires-Dist: typepy==1.3.4
+Requires-Dist: typer==0.9.4
+Requires-Dist: types-python-dateutil==2.9.0.20241206
+Requires-Dist: typing_extensions==4.12.2
+Requires-Dist: tzdata==2025.1
+Requires-Dist: uri-template==1.3.0
+Requires-Dist: urllib3==2.3.0
+Requires-Dist: uvicorn==0.34.0
+Requires-Dist: uvloop==0.21.0
+Requires-Dist: virtualenv==20.29.2
+Requires-Dist: vllm==0.7.2
+Requires-Dist: wandb==0.18.3
+Requires-Dist: wasabi==1.1.3
+Requires-Dist: watchfiles==1.0.4
+Requires-Dist: wcwidth==0.2.13
+Requires-Dist: weasel==0.3.4
+Requires-Dist: webcolors==24.11.1
+Requires-Dist: webencodings==0.5.1
+Requires-Dist: websocket-client==1.8.0
+Requires-Dist: websockets==14.2
+Requires-Dist: widgetsnbextension==4.0.13
+Requires-Dist: xformers==0.0.28.post3
+Requires-Dist: xgrammar==0.1.11
+Requires-Dist: xxhash==3.5.0
+Requires-Dist: yarl==1.18.3
+Requires-Dist: zipp==3.21.0
+Provides-Extra: train
+Requires-Dist: deepspeed==0.15.4; extra == "train"
+Requires-Dist: ninja; extra == "train"
+Requires-Dist: wandb; extra == "train"
+Provides-Extra: eval
+Requires-Dist: word2number; extra == "eval"
+Requires-Dist: Levenshtein; extra == "eval"
+Requires-Dist: nltk; extra == "eval"
+Requires-Dist: pywsd; extra == "eval"
+Dynamic: license-file
+
+
+<h1 align="center">RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics</h1>
+
+<h3 align="center">From words to exactly where you mean — with RoboRefer </h3>
+
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2506.04308"><img src="https://img.shields.io/badge/arXiv-2506.04308-b31b1b.svg?logo=arxiv" alt="arXiv"></a>
+  &nbsp;
+  <a href="https://zhoues.github.io/RoboRefer/"><img src="https://img.shields.io/badge/%F0%9F%8F%A0%20Project-Homepage-blue" alt="Project Homepage"></a>
+  &nbsp;
+  <a href="https://huggingface.co/datasets/JingkunAn/RefSpatial"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-RefSpatial--Dataset-brightgreen" alt="Dataset"></a>
+  &nbsp;
+  <a href="https://huggingface.co/datasets/BAAI/RefSpatial-Bench"><img src="https://img.shields.io/badge/🤗%20Benchmark-RefSpatial--Bench-green.svg" alt="Benchmark"></a>
+  &nbsp;
+  <a href="https://huggingface.co/collections/Zhoues/roborefer-and-refspatial-6857c97848fab02271310b89"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Weights-RoboRefer-yellow" alt="Weights"></a>
+</p>
+
+
+<div style="text-align: center; background-color: white;">
+    <img src="assets/motivation.png" width=100% >
+</div>
+
+
+## 🔥 Updates
+
+[2025-12-16] 🔥🔥🔥 We’ve released RoboTracer, a more powerful version of RoboRefer, on [arxiv](https://arxiv.org/abs/2512.13660) and launched the [project page](https://zhoues.github.io/RoboTracer/). It retains all RoboRefer features while adding multi-step, metric-grounded spatial tracing with explicit reasoning. Come and try the newer dataset TraceSpatial and the more challenging benchmark TraceSpatial-Bench!
+
+[2025-10-25] 🔥🔥🔥 [RefSpatial-Expand-Bench](https://huggingface.co/datasets/JingkunAn/RefSpatial-Expand-Bench) is now released! Based on the original benchmark, the new version expands indoor scenes (e.g., factories, stores) and introduces previously **unexplored outdoor scenarios (e.g., streets, parking lots)**, offering a **more comprehensive evaluation of spatial referring tasks**.
+
+[2025-09-26] 🔥🔥🔥 RefSpatial-Bench is now used by [Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) and [Gemini-Robotics-1.5](https://deepmind.google/discover/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/) to evaluate spatial reasoning in complex embodied scenarios! Come on, test your model with RefSpatial-Bench!
+
+<table>
+  <tr>
+    <th>Qwen3-VL Results</th>
+    <th>Gemini-Robotics-1.5 Results</th>
+  </tr>
+  <tr>
+    <td><img width="1749" height="747" alt="Qwen-3-VL" src="https://github.com/user-attachments/assets/852d42fb-76b4-40b7-81ba-577040d62fac" /></td>
+    <td><img width="1420" height="787" alt="Gemini-Robotics-1 5-2" src="https://github.com/user-attachments/assets/f7529979-36e0-4d83-946c-882b4ac69e69" /></td>
+
+
+</table>
+
+
+
+[2025-09-18] 🔥🔥🔥 RoboRefer gets accepted to NeurIPS 2025! See you in Mexico City and San Diego, USA!
+
+[2025-07-29] We release the SFT-trained 8B model and test examples of outdoor scenes.
+
+[2025-07-01] We release the RefSpatial Dataset and SFT training code.
+
+[2025-06-23] We release the SFT-trained 2B model and inference code with RefSpatial-Bench evaluation code.
+
+[2025-06-06] RefSpatial-Bench is released on [HF](https://huggingface.co/datasets/BAAI/RefSpatial-Bench). Let's evaluate your model's spatial referring ability!
+
+[2025-06-06] RoboRefer is released on [arxiv](https://arxiv.org/abs/2506.04308) and the project page is set up at [here](https://zhoues.github.io/RoboRefer/).
+
+
+
+## 🤗 Model Zoo &  Dataset & Benchmark
+
+
+<table>
+  <tr>
+    <th>Model/Dataset/Benchmark</th>
+    <th>Note</th>
+  </tr>
+  <tr>
+    <td><a href="https://huggingface.co/Zhoues/NVILA-2B-Depth">NVILA-2B-Depth</a></td>
+    <td> The base model with depth encoder initialized from the image encoder. </td>
+  </tr>
+  <tr>
+    <td><a href="https://huggingface.co/Zhoues/RoboRefer-2B-Depth-Align">RoboRefer-2B-Align</a></td>
+    <td> The 1st SFT step of the 2B model for depth alignment. </td>
+  </tr>
+    <tr>
+    <td><a href="https://huggingface.co/Zhoues/RoboRefer-2B-SFT">RoboRefer-2B-SFT</a></td>
+    <td> The 2nd SFT step of the 2B model for spatial understanding and referring.</td>
+  </tr>
+  <tr>
+    <td><a href="https://huggingface.co/Zhoues/NVILA-8B-Depth">NVILA-8B-Depth</a></td>
+    <td> The base model with depth encoder initialized from the image encoder. </td>
+  </tr>
+  <tr>
+    <td><a href="https://huggingface.co/Zhoues/RoboRefer-8B-SFT">RoboRefer-8B-SFT</a></td>
+    <td> The 2nd SFT step of the 8B model for spatial understanding and referring.</td>
+  </tr>
+  <tr>
+    <td>RoboRefer-2B-RFT (Coming soon)</td>
+    <td> The RFT-trained 2B model for multi-step spatial referring with reasoning.</td>
+  </tr>
+  <tr>
+    <td><a href="https://huggingface.co/datasets/JingkunAn/RefSpatial">RefSpatial Dataset</a></td>
+    <td> The dataset for spatial understanding and referring with reasoning. </td>
+  </tr>
+  <tr>
+    <td><a href="https://huggingface.co/datasets/BAAI/RefSpatial-Bench">RefSpatial-Bench</a></td>
+    <td> The benchmark for spatial referring with reasoning. </td>
+  </tr>
+  <tr>
+    <td><a href="https://huggingface.co/datasets/JingkunAn/RefSpatial-Expand-Bench">RefSpatial-Expand-Bench</a></td>
+    <td> A more comprehensive benchmark for spatial referring with reasoning. </td>
+  </tr>
+</table>
+
+## 🚀 Quick Start
+1. Install [Anaconda Distribution](https://www.anaconda.com/download/).
+2. Install the necessary Python packages in the environment.
+      ```bash
+      bash env_setup.sh roborefer
+      ```
+3. Activate a conda environment.
+      ```bash
+      conda activate roborefer
+      ```
+
+
+## 💡 Inference
+
+1. Download the model weights from the [model zoo](#-model-zoo---dataset--benchmark) (e.g., `RoboRefer-2B-SFT`).
+
+2. Download the relative depth estimation model weights (e.g., [`Depth-Anything-V2-Large`](https://huggingface.co/depth-anything/Depth-Anything-V2-Large/resolve/main/depth_anything_v2_vitl.pth?download=true)).
+
+3. Run the inference api server.
+      ```bash
+      cd API 
+      
+      python api.py \
+      --port 25547 \
+      --depth_model_path /your/custom/path/depth_anything_v2_vitl.pth \
+      --vlm_model_path /your/custom/path/to/roborefer
+      ```
+
+4. Run the inference script with the API and check the results in the `assets` folder.
+> [!NOTE]
+> RoboRefer natively supports both RGB and RGB-D inputs. If you don't have depth data, it can be inferred from RGB using DepthAnything V2 by setting `enable_depth=1`. Just set `enable_depth=0` for RGB-only input or `1` for RGB-D input in use_api.py. https://github.com/Zhoues/RoboRefer/blob/15f93d48c1e205d954eeb8de989cdae3cef7abbb/API/use_api.py#L61
+
+      ```bash
+      cd API 
+      
+      ## Tabletop scenes
+      python use_api.py \
+      --image_path ../assets/tabletop.jpg \
+      --prompt "Pick the apple in front of the logo side of the leftmost cup." \
+      --output_path ../assets/my_tabletop_result_1.jpg \
+      --url http://127.0.0.1:25547
+
+      python use_api.py \
+      --image_path ../assets/tabletop.jpg \
+      --prompt "Point out the apple nearest to the second cup from left to right." \
+      --output_path ../assets/my_tabletop_result_2.jpg \
+      --url http://127.0.0.1:25547
+
+      python use_api.py \
+      --image_path ../assets/tabletop.jpg \
+      --prompt "Point to the free area between the farthest apple and pink cake." \
+      --output_path ../assets/my_tabletop_result_3.jpg \
+      --url http://127.0.0.1:25547
+
+      ## Outdoor scenes
+      python use_api.py \
+      --image_path ../assets/outdoor_1.jpg \
+      --prompt "Point to the free area between the black vehicle on the right and the white sedan in front of it." \
+      --output_path ../assets/my_outdoor_result_1.jpg \
+      --url http://127.0.0.1:25547
+
+      python use_api.py \
+      --image_path ../assets/outdoor_2.png \
+      --prompt "Point to the free area between the first black vehicle and the second black vehicle from left to right." \
+      --output_path ../assets/my_outdoor_result_2.png \
+      --url http://127.0.0.1:25547
+
+      python use_api.py \
+      --image_path ../assets/outdoor_3.png \
+      --prompt "Point to the third car in the row closest to the viewer, from right to left" \
+      --output_path ../assets/my_outdoor_result_3.png \
+      --url http://127.0.0.1:25547
+
+      python use_api.py \
+      --image_path ../assets/outdoor_3.png \
+      --prompt "Point to the brown car in the row closest to the viewer" \
+      --output_path ../assets/my_outdoor_result_4.png \
+      --url http://127.0.0.1:25547
+      ```
+
+Below are the results of the inference as examples (tabletop scenes and outdoor scenes).
+
+<table>
+  <tr>
+    <th>Original Image</th>
+    <th>"Pick the apple in front of the logo side of the leftmost cup."</th>
+    <th>"Point out the apple nearest to the second cup from left to right."</th>
+    <th>"Point to the free area between the farthest apple and pink cake."</th>
+  </tr>
+  <tr>
+    <td><img src="assets/tabletop.jpg" width=100% ></td>
+    <td><img src="assets/tabletop_result_1.jpg" width=100% ></td>
+    <td><img src="assets/tabletop_result_2.jpg" width=100% ></td>
+    <td><img src="assets/tabletop_result_3.jpg" width=100% ></td>
+
+</table>
+
+<table>
+  <tr>
+    <th>Original Image</th>
+    <th>"Point to the free area between the black vehicle on the right and the white sedan in front of it."</th>
+  </tr>
+  <tr>
+    <td><img src="assets/outdoor_1.jpg" width=100% ></td>
+    <td><img src="assets/outdoor_result_1.jpg" width=100% ></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Original Image</th>
+    <th>"Point to the free area between the first black vehicle and the second black vehicle from left to right."</th>
+  </tr>
+  <tr>
+    <td><img src="assets/outdoor_2.png" width=100% ></td>
+    <td><img src="assets/outdoor_result_2.png" width=100% ></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Original Image</th>
+    <th>"Point to the third car in the row closest to the viewer, from right to left"</th>
+    <th>"Point to the brown car in the row closest to the viewer"</th>
+  </tr>
+  <tr>
+    <td><img src="assets/outdoor_3.png" width=100% ></td>
+    <td><img src="assets/outdoor_result_3.png" width=100% ></td>
+    <td><img src="assets/outdoor_result_4.png" width=100% ></td>
+  </tr>
+</table>
+
+
+
+
+## 🔍 Evaluation for RefSpatial-Bench
+
+1. Open the `Evaluation` folder and download the RefSpatial-Bench/RefSpatial-Expand-Bench from the [model zoo](#-model-zoo---dataset--benchmark).
+    ```bash
+    cd Evaluation
+    git lfs install
+    git clone https://huggingface.co/datasets/BAAI/RefSpatial-Bench
+    # git clone https://huggingface.co/datasets/JingkunAn/RefSpatial-Expand-Bench
+    ```
+
+2. Run the API server as the same as the third step in [Inference](#-inference).
+    ```bash
+    cd API
+    python api.py \
+    --port 25547 \
+    --depth_model_path /your/custom/path/depth_anything_v2_vitl.pth \
+    --vlm_model_path /your/custom/path/to/roborefer
+    ```
+
+3. Run the evaluation script. 
+    - If the `model_name` has `Depth` in the name, the depth model will be used. Therefore, you can choose `RoboRefer-2B-SFT`, `RoboRefer-2B-SFT-Depth` as the model name for RGB/RGB-D inference, respectively.
+    - The `task_name` can be `Location`, `Placement`, `Unseen`, or `all` to evaluate on all tasks.
+
+    ```bash
+    cd Evaluation
+    python test_benchmark.py \
+    --model_name RoboRefer-2B-SFT-Depth \ 
+    --task_name Location \
+    --url http://127.0.0.1:25547
+    ```
+
+4. Summarize the results.
+    - The `model_name` must be the same as the one used in the evaluation script.
+    - The `task_name` can be `Location`/`Placement`/`Unseen` to summarize the results for the corresponding task.
+
+    ```bash
+    cd Evaluation
+    python summarize_acc.py \
+    --model_name RoboRefer-2B-SFT-Depth \
+    --task_name Location
+    ```
+
+## 📚 Training
+
+### Step 1: Download RefSpatial Dataset.
+Download the RefSpatial dataset from the [model zoo](#-model-zoo---dataset--benchmark) and extract it by running the provided `unzip_dataset.sh` from the RefSpatial root directory to decompress all of the `*.tar.gz` files.
+> [!NOTE]
+> The full raw dataset (~357GB) is in the same format as the LLaVA dataset.
+
+  ```bash
+  cd RefSpatial
+  bash unzip_dataset.sh
+  ```
+
+
+  This script will automatically perform the following actions:
+
+  1. **Merge Split Files**: For files that are split into `.part_a`, `.part_b`, etc., the script will use the `cat` command to combine them into a single, complete `.tar.gz` file. For example, `image.tar.gz.part_a`, `...` will be merged into `image.tar.gz`.
+  2. **Extract Archives**: The script will then use the `tar` command to extract all `.tar.gz` archives into their current directories.
+
+### Step 2 (Optional): Clean up Archives.
+To save disk space, delete all `.tar.gz` and `.part_*` files after successful decompression by running:
+
+> [!Warning]
+> Please run this script only after confirming that all data has been successfully decompressed.
+
+```bash
+bash delete_tar_gz.sh
+```
+
+### Step 3: Download base model weights.
+Download the RoboRefer base model weights or depth aligned model weights from the [model zoo](#-model-zoo---dataset--benchmark).
+
+
+### Step 4: Train the model.
+
+
+#### Step 4.1: Add custom datasets (e.g., RefSpatial Dataset)
+
+Add your dataset to the `register_datasets_mixtures()` function in `RoboRefer/llava/data/datasets_mixture.py`. The flexible `dataset_type` named `spatialdataset` supports both RGB-only and RGB-D training. For RGB-D training, set the `depth_path` in the dataset config. For RGB-only, just leave out the `depth_path`.
+
+Below is an example of how to register the RefSpatial dataset for both RGB-only and RGB-D training in the `register_datasets_mixtures()` function in `RoboRefer/llava/data/datasets_mixture.py`. The RefSpatial dataset has already been implemented in its corresponding module.
+
+<details>
+<summary>Example of Adding RefSpatial Dataset</summary>
+<pre><code>
+def register_datasets_mixtures():
+
+    ### OpenImage (2D Dataset)
+    2D_choice_qa = Dataset(
+        dataset_name="2D_choice_qa",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/2D/choice_qa.json",
+        image_path="./RefSpatial/2D/image",
+        depth_path="./RefSpatial/2D/depth"
+    )
+    add_dataset(2D_choice_qa)
+
+    2D_choice_qa_RGB = Dataset(
+        dataset_name="2D_choice_qa_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/2D/choice_qa.json",
+        image_path="./RefSpatial/2D/image"
+    )
+    add_dataset(2D_choice_qa_RGB)
+
+    2D_reasoning_template_qa = Dataset(
+        dataset_name="2D_reasoning_template_qa",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/2D/reasoning_template_qa.json",
+        image_path="./RefSpatial/2D/image",
+        depth_path="./RefSpatial/2D/depth"
+    )
+    add_dataset(2D_reasoning_template_qa)
+
+    2D_reasoning_template_qa_RGB = Dataset(
+        dataset_name="2D_reasoning_template_qa_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/2D/reasoning_template_qa.json",
+        image_path="./RefSpatial/2D/image"
+    )
+    add_dataset(2D_reasoning_template_qa_RGB)
+
+    ### CA-1M (3D Dataset)
+    3D_choice_qa = Dataset(
+        dataset_name="3D_choice_qa",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/choice_qa.json",
+        image_path="./RefSpatial/3D/image",
+        depth_path="./RefSpatial/3D/depth"
+    )
+    add_dataset(3D_choice_qa)
+
+    3D_choice_qa_RGB = Dataset(
+        dataset_name="3D_choice_qa_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/choice_qa.json",
+        image_path="./RefSpatial/3D/image"
+    )
+    add_dataset(3D_choice_qa_RGB)
+
+    3D_reasoning_template_qa = Dataset(
+        dataset_name="3D_reasoning_template_qa",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/reasoning_template_qa.json",
+        image_path="./RefSpatial/3D/image",
+        depth_path="./RefSpatial/3D/depth"
+    )
+    add_dataset(3D_reasoning_template_qa)
+
+    3D_reasoning_template_qa_RGB = Dataset(
+        dataset_name="3D_reasoning_template_qa_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/reasoning_template_qa.json",
+        image_path="./RefSpatial/3D/image"
+    )
+    add_dataset(3D_reasoning_template_qa_RGB)
+
+    3D_vacant_qa = Dataset(
+        dataset_name="3D_vacant_qa",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/vacant_qa.json",
+        image_path="./RefSpatial/3D/image",
+        depth_path="./RefSpatial/3D/depth"
+    )
+    add_dataset(3D_vacant_qa)
+
+    3D_vacant_qa_RGB = Dataset(
+        dataset_name="3D_vacant_qa_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/vacant_qa.json",
+        image_path="./RefSpatial/3D/image"
+    )
+    add_dataset(3D_vacant_qa_RGB)
+
+    3D_multi_view_qa = Dataset(
+        dataset_name="3D_multi_view_qa",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/multi_view_qa.json",
+        image_path="./RefSpatial/3D/image_multi_view",
+        depth_path="./RefSpatial/3D/depth_multi_view"
+    )
+    add_dataset(3D_multi_view_qa)
+
+    3D_multi_view_qa_RGB = Dataset(
+        dataset_name="3D_multi_view_qa_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/multi_view_qa.json",
+        image_path="./RefSpatial/3D/image_multi_view"
+    )
+    add_dataset(3D_multi_view_qa_RGB)
+
+    3D_visual_choice_qa = Dataset(
+        dataset_name="3D_visual_choice_qa",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/visual_choice_qa.json",
+        image_path="./RefSpatial/3D/image_visual_choice",
+        depth_path="./RefSpatial/3D/depth"
+    )
+    add_dataset(3D_visual_choice_qa)
+
+    3D_visual_choice_qa_RGB = Dataset(
+        dataset_name="3D_visual_choice_qa_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/3D/visual_choice_qa.json",
+        image_path="./RefSpatial/3D/image_visual_choice"
+    )
+    add_dataset(3D_visual_choice_qa_RGB)
+
+    ### Simulator (Simulator Dataset)
+    simulation_dataset = Dataset(
+        dataset_name="simulation_dataset",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/Simulator/metadata.json",
+        image_path="./RefSpatial/Simulator/image",
+        depth_path="./RefSpatial/Simulator/depth"
+    )
+    add_dataset(simulation_dataset)
+
+    simulation_dataset_RGB = Dataset(
+        dataset_name="simulation_dataset_RGB",
+        dataset_type="spatialdataset",
+        data_path="./RefSpatial/Simulator/metadata.json",
+        image_path="./RefSpatial/Simulator/image"
+    )
+    add_dataset(simulation_dataset_RGB)
+</code></pre>
+
+</details>
+
+
+#### Step 4.2: Use scripts to start training
+In `scripts/RoboRefer`, we provide scripts for depth alignment, SFT training, and RFT training (coming soon). You can run them using the commands below. Be sure to update the base model path and add your custom dataset(s) in the script. After registering your datasets in `register_datasets_mixtures()`, you can use `+` to include multiple datasets.
+
+```bash
+bash scripts/roborefer/depth_align_2B.sh # or bash scripts/roborefer/depth_align_2B_cluster.sh. If you use a cluster for training, you can run this script. 8B variant is the same.
+
+bash scripts/roborefer/depth_sft_2B.sh # or bash scripts/roborefer/depth_sft_2B_cluster.sh. If you use a cluster for training, you can run this script. 8B variant is the same.
+```
+    
+
+## 🕶️Overview
+
+### The Overview of RoboRefer
+
+We introduce RoboRefer, **the first 3D-aware reasoning VLM** for multi-step spatial referring with explicit reasoning.
+
+<div align="center"> 
+    <img src="assets/pipeline.png" alt="Logo" style="width=100%;vertical-align:middle">
+</div>
+
+
+### The Overview of the RefSpatial Dataset and its Generation Pipeline
+
+We present RefSpatial, a dataset can enable general VLMs to adapt to spatial referring tasks, with **20M QA pairs (2x prior)** and **31 spatial relations (vs. 15 prior)** and **complex reasoning processes (up to 5 steps)**.
+
+
+<div align="center"> 
+    <img src="assets/dataset.png" alt="Logo" style="width=100%;vertical-align:middle">
+</div>
+
+
+## TODO
+- [x] Release RefSpatial-Bench evaluation code (About 1 week).
+- [x] Release the SFT-trained 2B RoboRefer model and inference code (About 2 weeks).
+- [x] Release the SFT-trained 8B RoboRefer model (About 3 weeks).
+- [x] Release the RefSpatial Dataset and SFT training code (About 1 month).
+- [ ] Release the RFT-trained RoboRefer model and training code (Maybe 2 months or more).
+- [ ] Release the Dataset Generation Pipeline (Maybe 2 months or more).
+
+
+## Contact
+If you have any questions about the code or the paper, feel free to email Enshen (`zhouenshen@buaa.edu.cn`) and Jingkun (`anjingkun02@gmail.com`). 
+
+
+
+
+
+
+## Acknowledgment
+- This repository is built upon the codebase of [NVILA](https://github.com/NVlabs/VILA), [SpatialRGPT](https://github.com/AnjieCheng/SpatialRGPT) and [R1-V](https://github.com/Deep-Agent/R1-V).
+
+- We acknowledge [OpenImage](https://storage.googleapis.com/openimages/web/index.html), [CA-1M](https://github.com/apple/ml-cubifyanything), [Objaverse](https://github.com/allenai/objaverse-xl), and [Infinigen](https://github.com/princeton-vl/infinigen) for their data and assets.
+
+
+
+
+
+
+
+
+## 📑 Citation
+
+If you find RoboRefer, RefSpatial, and RefeSpatial-Bench useful for your research, please cite using this BibTeX:
+```
+@article{zhou2025roborefer,
+  title={RoboRefer: Towards Spatial Referring with Reasoning in Vision-Language Models for Robotics},
+  author={Zhou, Enshen and An, Jingkun and Chi, Cheng and Han, Yi and Rong, Shanyu and Zhang, Chi and Wang, Pengwei and Wang, Zhongyuan and Huang, Tiejun and Sheng, Lu and others},
+  journal={arXiv preprint arXiv:2506.04308},
+  year={2025}
+}
+```

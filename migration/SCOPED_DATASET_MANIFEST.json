@@ -1,0 +1,63 @@
+{
+  "version": "pcrau_scoped_restore_20261008",
+  "user_scope": "1600 train + 400 dev + 1000 calibration + 1000 old Test-IID; no extra historical/benchmark/OCID datasets",
+  "total_samples": 4000,
+  "profiles": [
+    {
+      "name": "train_dev",
+      "samples": 2000,
+      "splits": {
+        "dev": 400,
+        "train": 1600
+      },
+      "families": 400,
+      "dataset_root": "old/roborefer_dataset_v2_1_1_development_400_20260824",
+      "feature_root": "old/results/pcra_u_feature_cache/pcra_u_development_v1",
+      "manifest": "old/protocol/pcra_u_development_train_manifest.json",
+      "feature_index": "old/results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json",
+      "manifest_sha256": "1de697018ad22c51498c4e17d1c6b82220b9829e1e9dbc0dab6601c3570f6745",
+      "feature_index_sha256": "70635252307f412c79a71ce004d940167ab8b670958b3e22fbd96d3dc9eaf905",
+      "referenced_files_checked": 12722,
+      "dataset_allocated_bytes": 1715388416,
+      "feature_cache_allocated_bytes": 4412215296
+    },
+    {
+      "name": "calibration",
+      "samples": 1000,
+      "splits": {
+        "calibration": 1000
+      },
+      "families": 200,
+      "dataset_root": "old/datasets/roborefer_dataset_v2_1_calibration_200_20260824",
+      "feature_root": "old/results/pcra_u_feature_cache/pcra_u_calibration_v1",
+      "manifest": "old/protocol/pcra_u_calibration_eval_manifest.json",
+      "feature_index": "old/results/pcra_u_feature_cache/pcra_u_calibration_v1/indexes/index_full.json",
+      "manifest_sha256": "7298d247bd523d1a02c6a6815fc65b414c65ac8cb90e6c06eebf48dc118d1758",
+      "feature_index_sha256": "b64e68315145e5f4ea9688f8417be6911ff5175a827bc0328922bfe38bff9e37",
+      "referenced_files_checked": 6358,
+      "dataset_allocated_bytes": 859353088,
+      "feature_cache_allocated_bytes": 2195558400
+    },
+    {
+      "name": "test_iid",
+      "samples": 1000,
+      "splits": {
+        "test_iid": 1000
+      },
+      "families": 200,
+      "dataset_root": "new/test_iid/dataset",
+      "feature_root": "new/test_iid/feature_cache",
+      "manifest": "new/test_iid/protocol/test_iid_eval_manifest.json",
+      "feature_index": "new/test_iid/feature_cache/indexes/index_full.json",
+      "manifest_sha256": "a18e1f67fc28b2efa67573a1bf89eb484b39c44364477688175836f61f66e945",
+      "feature_index_sha256": "c7e0432f392608659ae5701e704a675b19bfa4a2d6f933c74ef38b0f79212e84",
+      "referenced_files_checked": 6359,
+      "dataset_allocated_bytes": 869023744,
+      "feature_cache_allocated_bytes": 2199105536
+    }
+  ],
+  "missing_referenced_files": [],
+  "tensor_features_are_existing_caches_not_new_samples": true,
+  "drive_folder_link": null,
+  "uploaded_to_drive": false
+}

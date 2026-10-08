@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://download.ros.org/schema/package_format3.xsd"?>
+<package format="3">
+  <name>ur3_perception</name>
+  <version>0.1.0</version>
+  <description>Registered RGB-D synchronization, pixel projection and oracle validation for UR3.</description>
+  <maintainer email="qbao1607@gmail.com">uet_ur3</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>image_geometry</exec_depend>
+  <exec_depend>message_filters</exec_depend>
+  <exec_depend>ros_gz_interfaces</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>tf2_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>ur3_moveit_control</exec_depend>
+  <exec_depend>ur3_perception_interfaces</exec_depend>
+  <exec_depend>ur_simulation_gz</exec_depend>
+  <exec_depend>rqt_image_view</exec_depend>
+  <exec_depend>realsense2_camera</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+
+  <test_depend>ament_cmake_pytest</test_depend>
+  <test_depend>launch_testing</test_depend>
+  <test_depend>launch_testing_ament_cmake</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export><build_type>ament_cmake</build_type></export>
+</package>

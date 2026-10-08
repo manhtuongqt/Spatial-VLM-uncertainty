@@ -1,0 +1,5 @@
+{
+  "status": "FAILED_BEFORE_CALIBRATION_AND_IID",
+  "reason": "float32 column-mass sum caused relation compatibility marginally outside [0,1]; fix by float64 normalization before integration",
+  "original_freeze_preserved": "neural_freeze.json"
+}

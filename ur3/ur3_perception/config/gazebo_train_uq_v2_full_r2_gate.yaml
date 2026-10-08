@@ -1,0 +1,277 @@
+schema_version: 1
+protocol_id: gazebo_train_uq_v2_full_r2
+frozen_before_capture: true
+parent_family_count: 320
+split_parent_family_count:
+  train_uq: 256
+  val_uq: 64
+state_quota:
+  train_uq:
+    FOUND: 64
+    AMBIGUOUS: 64
+    ABSENT: 64
+    INSUFFICIENT_EVIDENCE: 64
+  val_uq:
+    FOUND: 16
+    AMBIGUOUS: 16
+    ABSENT: 16
+    INSUFFICIENT_EVIDENCE: 16
+relation_variant_quota:
+  train_uq:
+    leftmost: 64
+    rightmost: 64
+    second_from_left: 64
+    second_from_right: 64
+  val_uq:
+    leftmost: 16
+    rightmost: 16
+    second_from_left: 16
+    second_from_right: 16
+state_relation_cell_quota:
+  train_uq: 16
+  val_uq: 4
+layout_uniqueness:
+  full_pose_signatures_unique: true
+  no_pose_signature_overlap_with_prior_uq_attempts: true
+  byte_identical_rgb_forbidden: true
+  perceptual_near_duplicate_rule:
+    metric: whole-frame grayscale mean absolute difference and changed-pixel fraction
+    gray_absdiff_threshold_for_changed_pixel: 3
+    near_duplicate_if_gray_mad_below: 0.05
+    and_changed_pixel_fraction_below: 0.002
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+insufficient_evidence_rule:
+  min_visible_pixels_inclusive: 1
+  max_visible_pixels_exclusive: 120
+  projected_center_outer_margin_fraction: 0.2
+output_contract:
+  point_regex: ^POINT \[\(([0-9]*\.?[0-9]+), ([0-9]*\.?[0-9]+)\)\]$
+  abstain_literal: ABSTAIN
+  allowed_actions:
+  - POINT
+  - ABSTAIN
+  point_state: FOUND
+  abstain_states:
+  - AMBIGUOUS
+  - ABSENT
+  - INSUFFICIENT_EVIDENCE
+camera:
+  frame: camera_color_optical_frame
+  base_frame: base_link
+  resolution:
+  - 640
+  - 480
+  intrinsics:
+    fx: 606.0816650391
+    fy: 605.7973022461
+    cx: 325.5436706543
+    cy: 249.9961547852
+  view_joint_pose:
+  - 1.3815
+  - -1.8273
+  - 1.3428
+  - -1.2863
+  - -1.5708
+  - -1.9601
+  depth_unit: metre
+  valid_depth_range_m:
+  - 0.1
+  - 2.0
+family_split_rule:
+  all_variants_same_parent_same_split: true
+  identical_rendered_scene_queries_share_parent_family: true
+  co_locate:
+  - views
+  - paraphrases
+  - visibility_variants
+  - counterfactuals
+  - queries_over_identical_layout
+model_input_allowlist:
+- rgb
+- depth_m
+- instruction
+evaluator_only:
+- semantic_labels
+- answerability_state
+- target_id
+- candidate_set
+- scene_layout
+policies:
+  no_sam2: true
+  no_training: false
+  no_model_inference: false
+  no_materialization: false
+  no_b2: true
+  no_test_access: true
+  no_dev_v2_fit_or_selection: true
+  no_robot_manipulation: true
+  full_train_uq_only_after_pilot_pass: true
+full_dataset_only_after_pilot:
+  protocol_id: gazebo_train_uq_v2_pilot_r6
+  required_geometry_qc: 32/32 PASS
+inference_lock:
+  backbone: B0
+  greedy_decoding: true
+  max_new_tokens: 40
+  stochastic_draws: 3
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  seed_rule: sha256(protocol_id:sample_id:model_id:draw)[0:4]
+  self_consistency_is_calibrated_probability: false
+risk_feature_schema:
+- b0_action_one_hot
+- b0_exact_contract
+- b0_self_consistency
+- stochastic_point_dispersion
+- predicted_x
+- predicted_y
+- distance_to_image_boundary
+- local_depth_valid_fraction
+- local_depth_median
+- local_depth_mad
+- instruction_relation_one_hot
+proposed_method:
+  maximum_methods: 1
+  type: L2_regularized_logistic_regression
+  normalization_fit_split: train_uq_only
+  C_grid_selected_on_val_uq:
+  - 0.01
+  - 0.1
+  - 1.0
+  - 10.0
+  decision_threshold_grid:
+  - 0.0
+  - 0.01
+  - 0.02
+  - 0.03
+  - 0.04
+  - 0.05
+  - 0.06
+  - 0.07
+  - 0.08
+  - 0.09
+  - 0.1
+  - 0.11
+  - 0.12
+  - 0.13
+  - 0.14
+  - 0.15
+  - 0.16
+  - 0.17
+  - 0.18
+  - 0.19
+  - 0.2
+  - 0.21
+  - 0.22
+  - 0.23
+  - 0.24
+  - 0.25
+  - 0.26
+  - 0.27
+  - 0.28
+  - 0.29
+  - 0.3
+  - 0.31
+  - 0.32
+  - 0.33
+  - 0.34
+  - 0.35
+  - 0.36
+  - 0.37
+  - 0.38
+  - 0.39
+  - 0.4
+  - 0.41
+  - 0.42
+  - 0.43
+  - 0.44
+  - 0.45
+  - 0.46
+  - 0.47
+  - 0.48
+  - 0.49
+  - 0.5
+  - 0.51
+  - 0.52
+  - 0.53
+  - 0.54
+  - 0.55
+  - 0.56
+  - 0.57
+  - 0.58
+  - 0.59
+  - 0.6
+  - 0.61
+  - 0.62
+  - 0.63
+  - 0.64
+  - 0.65
+  - 0.66
+  - 0.67
+  - 0.68
+  - 0.69
+  - 0.7
+  - 0.71
+  - 0.72
+  - 0.73
+  - 0.74
+  - 0.75
+  - 0.76
+  - 0.77
+  - 0.78
+  - 0.79
+  - 0.8
+  - 0.81
+  - 0.82
+  - 0.83
+  - 0.84
+  - 0.85
+  - 0.86
+  - 0.87
+  - 0.88
+  - 0.89
+  - 0.9
+  - 0.91
+  - 0.92
+  - 0.93
+  - 0.94
+  - 0.95
+  - 0.96
+  - 0.97
+  - 0.98
+  - 0.99
+  - 1.0
+selection_rule:
+  selection_split: val_uq_only
+  found_hit_delta_min: -0.125
+  nonfound_abstain_recall: strictly_higher_than_b0
+  nonfound_false_accept: strictly_lower_than_b0
+  exact_contract: not_lower_than_b0
+  invalid_is_abstain: false
+  aurc: not_worse_than_b0
+  tie_break:
+  - lower_false_accept
+  - higher_found_hit
+  - simpler_method
+statistical_protocol:
+  unit: parent_family
+  bootstrap_draws: 10000
+  bootstrap_seed: 13092026
+  confidence_interval: 0.95
+  paired: true
+  mcnemar: exact_two_sided_when_applicable
+sealed:
+  gazebo_dev_answerability_v2: one_confirmation_only_after_val_freeze
+  gazebo_calibration: true
+  gazebo_test_iid: true
+  gazebo_test_ood: true
+full_revision:
+  predecessor: gazebo_train_uq_v2_full
+  predecessor_decision: REJECT_317_OF_320_NO_MATERIALIZATION
+  repair_scope: geometry_stability_only
+  required_acceptance: 320/320_in_one_attempt
+  no_sample_reuse: true

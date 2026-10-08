@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "mh_pcrau_v3_anti_shortcut_val_v1_robust_eval_r5",
+  "status": "FROZEN_BEFORE_R5_CAPTURE_AND_ANY_CHECKPOINT_INFERENCE",
+  "created_at_utc": "2026-09-25T04:47:02Z",
+  "purpose": "One-shot independent validation of the robust Day-6 candidate after the original Val shortcut finding.",
+  "parent_protocol": "protocol/MH_PCRAU_V3_ANTI_SHORTCUT_VAL_V1_LOCK.json",
+  "amendment_scope": "The robust candidate replaces only the original frozen primary checkpoint. Dataset size, pre-inference gates, metrics, bootstrap, effect-size requirement and sealed Test policy are unchanged.",
+  "primary_checkpoint": {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06_robust_candidate_r2/s1a_robust_fixed_epoch54.pt",
+    "sha256": "9adc075afd6d43e2c495db25f184c2c2f3a7c42f5dca020bd3d8df3522368f22",
+    "selection_timing": "trained_and_selected_before_r5_scene_generation_or_capture",
+    "selection_source": "robust training development only; no anti-shortcut image or label was available"
+  },
+  "fixed_comparator_checkpoint": {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_best.pt",
+    "sha256": "042a6c7fd4456f0eaeea4e5361392c3f428581c0d5b66a541fdfe6d590e0dfa1",
+    "role": "diagnostic comparator only; never used to choose or tune the primary checkpoint"
+  },
+  "r5_design": {
+    "directory": "ketqua1/09_danh_gia/anti_shortcut_val_v1_r5",
+    "families": 256,
+    "design_static_qc_sha256": "6e7c7d3167bafffe0f67ccc55a51a9672861cf0a19ee893c4f958f2edb8ec2b0",
+    "design_index_sha256": "ff3f174670fd6834e9262dd6294a37a6e823282e1e8e474be2de3c3a4393b3b4",
+    "batch_bindings": {
+      "0": {
+        "scenes": "adddcc05986afe91cf01e3a97e67af382fc977c6d1adc590eaf29afea40a48fd",
+        "annotations": "e7aa8bd779ef525184d7658c8caebf710159db3b28e6eb0cbbebf163fd6cad42",
+        "gate": "ffc2348fdf3946f686d2ba0c8c9854ac197c883b2cba4ae3e0acef98c34b589f",
+        "capture_source_lock": "393dd4225932345530fefb30b938e43ed6d8417678e39d08b03659623e370546"
+      },
+      "1": {
+        "scenes": "6bd21ad19ec4f56284cd8d9d10f97323a70102a7fc1358de61bed765bbe15f27",
+        "annotations": "ab34d4fbb4c0b9f95ef803df6998f315ab877d782273241630af595c50df3906",
+        "gate": "23b57c991619f4ac85bebef9cb9067babad824956aed5bda6c641b966665fe76",
+        "capture_source_lock": "3320cd2be5aca42f124bbab2fad46d70be7b50474e847364ea379bc847374284"
+      },
+      "2": {
+        "scenes": "4565266ef6ed2be167be545aa211a1d642b0aea5fa271ffe02c88d2b9009b2a1",
+        "annotations": "d558b073b7c78ce13952273961a22f14410c7cc188d64b26618ce851a7524368",
+        "gate": "313f4463f7765d9e72163659ee568bb6c83f7ffe1aef3c52ec0499da2133a749",
+        "capture_source_lock": "45dda9f543e042342395494807de26e53d43d0f7eb20510d24a61a1153856872"
+      },
+      "3": {
+        "scenes": "25e3bfb50d56a1c7b2234e0bea438c4f64bad85f8b9c4ef8a298680eb5785003",
+        "annotations": "6fd9bc955bef1a08164355ea2011f9f743a6ff2a6cd8453ea709f1591450ba80",
+        "gate": "7ed25719b79e60ca45c249e11a92caee89754c4c5ce501f48a589fc6258a49b4",
+        "capture_source_lock": "17a627dcab7f933f740545099477c82a5bb9608c94bea0cc523932d06345b7bf"
+      }
+    }
+  },
+  "one_shot_rules": {
+    "checkpoint_open_before_preinference_qc_pass": false,
+    "threshold_tuning_after_prediction_open": false,
+    "model_selection_on_r5": false,
+    "primary_metrics": [
+      "answerability_macro_f1",
+      "point_l2_mean",
+      "hit_at_0_03",
+      "hit_at_0_05"
+    ],
+    "confidence_intervals": "95% parent-family bootstrap, 10000 draws, seed 25092026",
+    "minimum_effect_over_matching_shortcut_baseline": 0.05,
+    "failure_policy": "Report the observed failure; do not filter cases, tune thresholds, or replace the checkpoint."
+  },
+  "sealed": {
+    "calibration": true,
+    "test_iid": true,
+    "test_ood": true,
+    "robot_validation": true
+  }
+}

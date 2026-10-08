@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.roborefer/protocol/reason_event_v1.schema.json",
+  "title": "RoboRefer structured reason event v1",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["accepted", "reason_code", "diagnostics"],
+  "properties": {
+    "accepted": {"type": "boolean"},
+    "reason_code": {
+      "type": ["string", "null"],
+      "enum": [
+        "DEPTH_COMPONENT_ACCEPTED",
+        "NO_VALID_DEPTH",
+        "NO_SEED_SUPPORT",
+        "AREA_TOO_SMALL",
+        "AREA_TOO_LARGE",
+        "PLANE_MERGE",
+        "BORDER_TRUNCATED",
+        "UNSTABLE_3D",
+        null
+      ]
+    },
+    "detail": {"type": "string"},
+    "diagnostics": {"type": "object"}
+  }
+}

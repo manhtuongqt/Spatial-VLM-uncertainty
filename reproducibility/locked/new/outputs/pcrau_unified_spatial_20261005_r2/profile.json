@@ -1,0 +1,17 @@
+{
+  "accepted_families": 199,
+  "accepted_samples": 351,
+  "bundle_sha256": "5478ac842cab60f8a2bff5e7c8a193b7f806f374ee63b72e38a38f68fa1da81a",
+  "coverage": 0.351,
+  "empirical_risk": 0.045584045584045586,
+  "errors": 16,
+  "evidence_producer": "pcrau_unified_live_evidence_v1",
+  "minimum_accepted_families": 60,
+  "model": "P1_G44",
+  "policy": "hard_found",
+  "risk_target": 0.075,
+  "status": "PASS",
+  "threshold": 0.2889643687106893,
+  "threshold_selected_on": "calibration_family_OOF_only",
+  "wilson_upper_95": 0.07275698687367922
+}

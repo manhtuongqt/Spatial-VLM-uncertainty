@@ -1,0 +1,13 @@
+{
+  "calibration_is_fit_only_not_independent_audit": true,
+  "calibration_opened_before_freeze": false,
+  "checkpoint": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/model.safetensors",
+  "checkpoint_sha256": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045",
+  "config": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/config.json",
+  "config_sha256": "b214670c6c4a679f755a9953e15bae4bbb71ee5eea1980fa8e3d64030d79f85b",
+  "epoch": 13,
+  "script_sha256": "934c998980d9ae561ad499c3dad7ffc6bdf36ba6690d0bf1062a9414eb369220",
+  "selected_arm": "detail_cost",
+  "source_v2_sha256": "1505152fca7b725d7db701c1341ad1a57049d6b5ac450a9f5ce0c8d78705ba26",
+  "test_accessed": false
+}

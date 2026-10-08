@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "mh_pcrau_v3_anti_shortcut_val_v1",
+  "status": "FROZEN_BEFORE_CAPTURE_AND_MODEL_INFERENCE",
+  "created_at_utc": "2026-09-24T10:07:20.402148+00:00",
+  "purpose": "Independent one-shot development challenge for honest model selection evidence; not Test.",
+  "frozen_model": {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_best.pt",
+    "sha256": "042a6c7fd4456f0eaeea4e5361392c3f428581c0d5b66a541fdfe6d590e0dfa1"
+  },
+  "required_families": 256,
+  "cell_design": {
+    "answerability_states": [
+      "FOUND",
+      "AMBIGUOUS",
+      "ABSENT",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "relations": [
+      "leftmost",
+      "rightmost",
+      "second_from_left",
+      "second_from_right"
+    ],
+    "families_per_cell": 16
+  },
+  "generation_requirements": {
+    "fresh_parent_families": true,
+    "historical_layout_signature_overlap": 0,
+    "historical_physical_signature_overlap": 0,
+    "historical_rgb_sha256_overlap": 0,
+    "sample_order": "seeded cryptographic permutation after labels are assigned; ID must not encode state/relation",
+    "camera_pose_strata": 4,
+    "object_triplet_strata_minimum": 8,
+    "continuous_position_sampling": true,
+    "matched_nuisance_across_answerability_states": [
+      "camera_pose",
+      "background",
+      "object_set",
+      "lighting",
+      "target_x_bin",
+      "target_y_bin"
+    ],
+    "instruction_paraphrase_templates_per_relation_minimum": 4,
+    "answerability_state_must_not_be_named_in_prompt": true,
+    "found_target_xy_bins": {
+      "x_bins": 4,
+      "y_bins": 4,
+      "minimum_per_occupied_bin": 2
+    }
+  },
+  "qc_before_inference": {
+    "accepted_families_exact": 256,
+    "state_relation_balance_exact": true,
+    "rgb_depth_registration": "PASS_ALL",
+    "semantic_geometry_answerability_qc": "PASS_ALL",
+    "near_duplicate_phash_distance_min": 8,
+    "text_only_answerability_macro_f1_max": 0.35,
+    "rgb_thumbnail_16x12_answerability_macro_f1_max": 0.7,
+    "depth_thumbnail_16x12_answerability_macro_f1_max": 0.7,
+    "relation_centroid_hit_at_0_05_max": 0.6,
+    "all_or_nothing": true
+  },
+  "evaluation": {
+    "one_shot": true,
+    "no_retraining_or_threshold_tuning_after_open": true,
+    "primary_metrics": [
+      "answerability_macro_f1",
+      "point_l2_mean",
+      "hit_at_0_03",
+      "hit_at_0_05"
+    ],
+    "secondary_metrics": [
+      "PCK_0.01_to_0.15",
+      "Gaussian_NLL",
+      "per_class_recall",
+      "false_accept_rate"
+    ],
+    "relation_head_label": "instruction_relation_parser_auxiliary",
+    "confidence_intervals": "95% parent-family bootstrap, 10000 draws, seed 25092026",
+    "mandatory_baselines": [
+      "text_only",
+      "RGB_thumbnail_16x12_linear",
+      "depth_thumbnail_16x12_linear",
+      "relation_centroid"
+    ],
+    "minimum_effect_over_matching_shortcut_baseline": 0.05
+  },
+  "gate": {
+    "old_val_generalization_claim": "INVALIDATED_BY_SHORTCUT_AUDIT",
+    "day7_oof_s1b": "HOLD_UNTIL_ANTI_SHORTCUT_DATA_QC_PASS_AND_ONE_SHOT_EVALUATION",
+    "calibration_test_robot": "SEALED",
+    "permitted_claim_before_new_evaluation": "S1A_ENGINEERING_COMPLETE_ONLY"
+  },
+  "source_bindings": {
+    "audit_source": {
+      "path": "workspace/mh_pcrau_v3/day6_shortcut_audit.py",
+      "sha256": "d3cc52b1408f748bf1c5aad2bc439b347bd6f5ddbcf3f672804ba1b8d785d604"
+    },
+    "old_decision": {
+      "path": "ketqua1/07_huan_luyen/ngay_06/S1A_DECISION.json",
+      "sha256": "20354fe21b627bf2adc4e9201fc7d4f9cd3660643896cc8f13692913ca2cbbdd"
+    },
+    "audit_metrics": {
+      "path": "ketqua1/09_danh_gia/metrics/ngay_06/amendment_01/S1A_SHORTCUT_AUDIT.json",
+      "sha256": "6ab26fe9780111779571cf64d3f1e9bce7f010583d53d898923ea76bcf89343a"
+    }
+  }
+}

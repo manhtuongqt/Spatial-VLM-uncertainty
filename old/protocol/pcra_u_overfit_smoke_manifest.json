@@ -1,0 +1,731 @@
+{
+  "access_policy": "TRAIN_SUPERVISION_ONLY_NEVER_INFERENCE_PAYLOAD",
+  "answerability_counts": {
+    "ABSENT": 1,
+    "AMBIGUOUS": 2,
+    "FOUND": 8,
+    "INSUFFICIENT_EVIDENCE": 4
+  },
+  "answerability_order": [
+    "FOUND",
+    "AMBIGUOUS",
+    "ABSENT",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "created_at_utc": "2026-08-21T05:57:21.293356+00:00",
+  "dataset_root": "datasets/roborefer_dataset_v1_prototype_20260818_155606",
+  "entries": [
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0031__clean.json",
+      "cache_metadata_sha256": "9e143a967a9fc913c1edae8220fe896945302d044c658d57f5528377a6a61300",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0031__clean/depth_relative_model_input.png",
+      "depth_sha256": "12f2aa9e3cb036cd6a74289507703411a52a0ec4dfd1a390a39d001163f654bd",
+      "evaluator_relation_labels_for_audit_only": [
+        "direct"
+      ],
+      "family_id": "wp2_family_0031",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0031__clean.safetensors",
+      "feature_tensor_sha256": "cc7f75dfb576d4099e31cb35fe7bb464f1162e68354c3c7477938751c065a393",
+      "instruction": "Point to one visible point well inside the round red apple.",
+      "instruction_sha256": "4e6571309363d07ad151268007363eef158e476cbe08f3cbe93ac1ef5e52d5c5",
+      "language_relation_category": "direct",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0031/clean/record.json",
+      "record_sha256": "5cdc2d4a649e2b0cf89167cab70e47856ca4019ae98e841c1746bb7f9551de76",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0031__clean/rgb_model_input.jpg",
+      "rgb_sha256": "bd74d515372317166fe3cbbb2c71bdb817d5154d358e9135ae320f292296ee50",
+      "sample_id": "wp2_family_0031__clean",
+      "source_labels": [],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0031__clean/target_mask.png",
+      "target_mask_sha256": "59941e82ab5c80925907a4317dc65c4ea95c4ecef214cd615cdb2121f121b6c7",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0036__clean.json",
+      "cache_metadata_sha256": "c7d15fe85054f2972fc593703cd244d5a3eb109fe6a756b9701aa0334585b282",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0036__clean/depth_relative_model_input.png",
+      "depth_sha256": "2d1392fcd24711c650ea8cceaf1685d5dec31c77efea1c48ee074ed9e643c34d",
+      "evaluator_relation_labels_for_audit_only": [
+        "right_of"
+      ],
+      "family_id": "wp2_family_0036",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0036__clean.safetensors",
+      "feature_tensor_sha256": "a96f5d27aa28e5eae0736abc858f6c9b83fdc77f2c1c1c1ee8c8226c041b0ae2",
+      "instruction": "Point to the round red apple that is right of the round orange fruit in the image.",
+      "instruction_sha256": "1470d5abf4a65af0207c25b1404ef7260e2e929cba7460d73549405dd4f05644",
+      "language_relation_category": "right_of",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0036/clean/record.json",
+      "record_sha256": "761147ad39c2436b17b715d0feddaf667d087ba19d98cd3b323b6891d9d4b8af",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0036__clean/rgb_model_input.jpg",
+      "rgb_sha256": "219d30fc54874386bbf4e4bcf414d67f374a3ec66cbe628bce491b1c7cc4eb8a",
+      "sample_id": "wp2_family_0036__clean",
+      "source_labels": [],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0036__clean/target_mask.png",
+      "target_mask_sha256": "bd74f99d13d8ddbcc572085058692a53c9bef999b47ecbabdfae5dd9d507b834",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0001__clean.json",
+      "cache_metadata_sha256": "3ea47def22af1dc034e35b8e29f0f07f1a51f300932304949a1c260646666a5d",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0001__clean/depth_relative_model_input.png",
+      "depth_sha256": "fb66d573dcfaa18e2652f22e8a431b22bc091a77138f6a21033a728aa77e59de",
+      "evaluator_relation_labels_for_audit_only": [
+        "nearer_than"
+      ],
+      "family_id": "wp2_family_0001",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0001__clean.safetensors",
+      "feature_tensor_sha256": "2b08af230c1113e716552dbd0a80b2ed69fd5f321a7977243f286cd78cd7bcaf",
+      "instruction": "Point to the round red apple that is closer to the camera than the round orange fruit.",
+      "instruction_sha256": "87a253a8563dcb5dddf24f8e95ddff11772e2954411dc3d5fccc2cd36f490e58",
+      "language_relation_category": "nearer_than",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0001/clean/record.json",
+      "record_sha256": "f691663e61dfc894577850aa7a78fa72012549835f5be13c2cb0efebe4e6c155",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0001__clean/rgb_model_input.jpg",
+      "rgb_sha256": "f331647af34590a70a6644c7ae77a036f327226e66946a7bad725ac196b22c20",
+      "sample_id": "wp2_family_0001__clean",
+      "source_labels": [],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0001__clean/target_mask.png",
+      "target_mask_sha256": "5024661106494a08284a15a476527d124e199759bab6844c90e7509a17ba23e3",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 3,
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0013__depth_corruption.json",
+      "cache_metadata_sha256": "f422e9725babd3b8c84617add56ca5ca03c4b5dfa74ae8e27f5345bc9a65d8b3",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0013__depth_corruption/depth_relative_model_input.png",
+      "depth_sha256": "3c6c71d84ff5c704aa889485ed6e3dc134e73e2849d31bd5187dba84358b469b",
+      "evaluator_relation_labels_for_audit_only": [
+        "front_of"
+      ],
+      "family_id": "wp2_family_0013",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0013__depth_corruption.safetensors",
+      "feature_tensor_sha256": "9f1c9c13d69597fa056ffbe6f9731f39f2715e9cd0007770247dc819f8c99d87",
+      "instruction": "Point to the round red apple that is in front of the round orange fruit.",
+      "instruction_sha256": "afdfc3222db0373470cade49d6ae574b346b88d589f96179c2e45a4bae37c3d0",
+      "language_relation_category": "front_of",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0013/depth_corruption/record.json",
+      "record_sha256": "68ab028e22a9744b2cfeb79762356102c348fec4ae43d7213cef479a4e5cfa6b",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0013__depth_corruption/rgb_model_input.jpg",
+      "rgb_sha256": "20397f30c0de0e20ae40731ddf233bd419066897aa022c4ea09a99d5456764d6",
+      "sample_id": "wp2_family_0013__depth_corruption",
+      "source_labels": [
+        "depth"
+      ],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0013__depth_corruption/target_mask.png",
+      "target_mask_sha256": "191ba3482c732e07c8cd7efdf2b888b60df5b498f0f8d71b0d0c0c8d31a3040d",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0022__clean.json",
+      "cache_metadata_sha256": "82bfb9d98830b9c4ccb3d13f2a02db0ab2263bf1655422fdedd60dce091bacbb",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0022__clean/depth_relative_model_input.png",
+      "depth_sha256": "ce266c42cc419836bb7e5c03d91f794521e931f8824c6d42bebeb266c74604a9",
+      "evaluator_relation_labels_for_audit_only": [
+        "between_in_depth"
+      ],
+      "family_id": "wp2_family_0022",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0022__clean.safetensors",
+      "feature_tensor_sha256": "a64654c5d1e79cf8cc66158100a24ca9fb7c6bd59af94d3d9e2261c6c3530a85",
+      "instruction": "Point to the round orange fruit whose camera depth is between the nearer round red apple and farther long curved yellow banana.",
+      "instruction_sha256": "d035438637de0b9964e4602fd38b0d5eae16fe5a834e11c8a28873e3fe69ab4f",
+      "language_relation_category": "between_in_depth",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0022/clean/record.json",
+      "record_sha256": "26765262223d65c11d18c8917939551f8805eb53239fc634ceb9b652ae9b8bce",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0022__clean/rgb_model_input.jpg",
+      "rgb_sha256": "593d3ab32ea29963356908381ee97173fdd10eddb4f3b1f2fd4fde2ddddb0aa0",
+      "sample_id": "wp2_family_0022__clean",
+      "source_labels": [],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0022__clean/target_mask.png",
+      "target_mask_sha256": "fca1d61074be8a1f4e9872ae2fde42c86a671654cdf47586d3aa923b7cf70d08",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 3,
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0023__occlusion_view_counterfactual.json",
+      "cache_metadata_sha256": "1232ab997b397307da2e2cd8de2282d356ae514688f95086d2bcb8547e1c4a49",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0023__occlusion_view_counterfactual/depth_relative_model_input.png",
+      "depth_sha256": "2057f4b22cd537202ce38fb90e8f8e182baf87dadb150be94ab5e957fc387c5f",
+      "evaluator_relation_labels_for_audit_only": [
+        "between_in_depth"
+      ],
+      "family_id": "wp2_family_0023",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0023__occlusion_view_counterfactual.safetensors",
+      "feature_tensor_sha256": "68fae63f545ac65b8643d2f199b7c102f61c035a05bd8cacad605610ef786bfc",
+      "instruction": "Point to the red tomato soup can whose camera depth is between the nearer yellow mustard bottle and farther long curved yellow banana.",
+      "instruction_sha256": "2aa24efcd8d7b7749e063902df4c92458be6c14975a9308ac6faf2000d7f7d71",
+      "language_relation_category": "between_in_depth",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0023/occlusion_view_counterfactual/record.json",
+      "record_sha256": "a93c0084402a205d289052cf32eea05dbd7fcf62f2b3bff531a9d8415eea8d73",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0023__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "rgb_sha256": "2f03e3380beaa156cd8911222a25f730e87d9655ad23871ff29e8c16c53352f8",
+      "sample_id": "wp2_family_0023__occlusion_view_counterfactual",
+      "source_labels": [
+        "occlusion",
+        "spatial"
+      ],
+      "source_multihot": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0023__occlusion_view_counterfactual/target_mask.png",
+      "target_mask_sha256": "0501a7ff367c4c7cdac2f49680e2f05a3822d721976e3baca648c0a3e831158b",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 3,
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0026__occlusion_view_counterfactual.json",
+      "cache_metadata_sha256": "8f5099dfea69703c72a65e3ac406169af026f52bdda69f15cc2b2dec9aad18ff",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0026__occlusion_view_counterfactual/depth_relative_model_input.png",
+      "depth_sha256": "45269a829303787fb391124b875f73872291b0d23aff60f3275f8e4b543229c7",
+      "evaluator_relation_labels_for_audit_only": [
+        "behind"
+      ],
+      "family_id": "wp2_family_0026",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0026__occlusion_view_counterfactual.safetensors",
+      "feature_tensor_sha256": "d17dec4b72622d4cc617742675e43aaa46ce4f76639365f5573b1dcaa73be2e7",
+      "instruction": "Point to the round red apple behind the round orange fruit using the visible surface and depth ordering.",
+      "instruction_sha256": "21da059f01f7a25101f9ec1ed5bb189d27614ac8a323973356813e43b6b09b18",
+      "language_relation_category": "behind",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0026/occlusion_view_counterfactual/record.json",
+      "record_sha256": "e945b432e822a84ccc9b75f07207cc12680ffebba1d942880c24a24c74909106",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0026__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "rgb_sha256": "e361b68df2c2fa481af41218c87e9fed7f8a841f1f90c8a1e76adfbe84fc71d7",
+      "sample_id": "wp2_family_0026__occlusion_view_counterfactual",
+      "source_labels": [
+        "occlusion",
+        "spatial"
+      ],
+      "source_multihot": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0026__occlusion_view_counterfactual/target_mask.png",
+      "target_mask_sha256": "2f904cce630bdeb37cc32bcc270e05f6271d34cd2d17dc99a44c1fab7ed89b16",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 1,
+      "answerability_state": "AMBIGUOUS",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0041__clean.json",
+      "cache_metadata_sha256": "d2b60a9b8d2ce2bd1c9152c9ee0c416fc20de22329f303139beaa3f86f98e37f",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0041__clean/depth_relative_model_input.png",
+      "depth_sha256": "d459437e8d9fa7f276127ef1838a9daf5f1dda89e333b9c9074b3f538a548cf2",
+      "evaluator_relation_labels_for_audit_only": [
+        "semantic_reference"
+      ],
+      "family_id": "wp2_family_0041",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0041__clean.safetensors",
+      "feature_tensor_sha256": "99039ba152a5bb39e5b4174bb1bcd455e4eab9a5d233c76d63d8c327adc8d523",
+      "instruction": "Point to the orange-colored fruit on the tabletop.",
+      "instruction_sha256": "ca17b3827d33c0746497b8137a5720edc3cba57e415b619523fcd631a8b269bc",
+      "language_relation_category": "semantic_reference",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0041/clean/record.json",
+      "record_sha256": "86059cf68fdc8b32c06b567928eccb29dc96c538669748c86262f7a0a19658f0",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0041__clean/rgb_model_input.jpg",
+      "rgb_sha256": "c33025e8ec19ef2a2c12b12eae4ad2fa0e04edcaa2dde0e50e94b2bc3854e0aa",
+      "sample_id": "wp2_family_0041__clean",
+      "source_labels": [
+        "semantic"
+      ],
+      "source_multihot": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0041__clean/target_mask.png",
+      "target_mask_sha256": "c95a9191b7bb7d60b07567637fbe3748a1eb43b7896958ce984e0b30d20409be",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 1,
+      "answerability_state": "AMBIGUOUS",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0042__depth_corruption.json",
+      "cache_metadata_sha256": "c4bf53ef24692f46c24b7b5ef8acf354d9bec29e0b569899c1fa6e362d083bf3",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0042__depth_corruption/depth_relative_model_input.png",
+      "depth_sha256": "312eb8d3876f38253e6b0b9696237e883cfaba4893cfeb6113aa76ff2ce3405d",
+      "evaluator_relation_labels_for_audit_only": [
+        "semantic_reference"
+      ],
+      "family_id": "wp2_family_0042",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0042__depth_corruption.safetensors",
+      "feature_tensor_sha256": "8877039707b91beb258a66c1b3158f18353df13fe827654cc28374c4abb0df5b",
+      "instruction": "Point to the orange-colored fruit on the tabletop.",
+      "instruction_sha256": "ca17b3827d33c0746497b8137a5720edc3cba57e415b619523fcd631a8b269bc",
+      "language_relation_category": "semantic_reference",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0042/depth_corruption/record.json",
+      "record_sha256": "535d0188f8ecb8200e5b1687800e4854d544c6e4df6875ccba783fe8f9c78447",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0042__depth_corruption/rgb_model_input.jpg",
+      "rgb_sha256": "533683603c79daf13e8889d8bba1967c20b73b9486bc011001a36f7c1627c365",
+      "sample_id": "wp2_family_0042__depth_corruption",
+      "source_labels": [
+        "depth",
+        "semantic"
+      ],
+      "source_multihot": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0042__depth_corruption/target_mask.png",
+      "target_mask_sha256": "e73978e31fce574312a451767e14a5e0b1cf383af179e79267d426f90c90b9c4",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 2,
+      "answerability_state": "ABSENT",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0043__clean.json",
+      "cache_metadata_sha256": "86c53a6e9b3b73e04ef66e87a3758722acda66982a24d235401174a58194ddec",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0043__clean/depth_relative_model_input.png",
+      "depth_sha256": "3482c4e7a7b13f2b5533e9695938e321a89c2757f52ec3b27f02dd595ff2be27",
+      "evaluator_relation_labels_for_audit_only": [
+        "semantic_reference"
+      ],
+      "family_id": "wp2_family_0043",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0043__clean.safetensors",
+      "feature_tensor_sha256": "4a535142702afc967d7337f67c70d9c4b465b0a2d8e6c73325f029323b38776c",
+      "instruction": "Point to the blue handheld power drill on the tabletop.",
+      "instruction_sha256": "ecb20df6b86c910b46115bf3878ec86e635a218c06313c4640e37a983118117d",
+      "language_relation_category": "semantic_reference",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0043/clean/record.json",
+      "record_sha256": "444d5250425eaad89fa108537934833a1b1e9493abe97151126879d99630ec4b",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0043__clean/rgb_model_input.jpg",
+      "rgb_sha256": "6411d87868aa5dc53a3422471a3e50484a0ae20b2b8453731fa895a1b5138296",
+      "sample_id": "wp2_family_0043__clean",
+      "source_labels": [
+        "semantic"
+      ],
+      "source_multihot": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0043__clean/target_mask.png",
+      "target_mask_sha256": "45e945d98ded38001430be13601895981708846604f9db9184b3b6af1dd62402",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0045__clean.json",
+      "cache_metadata_sha256": "9ec7b43b895c09d533473835bbe7ec77dcd08e05b00d88e47a5e7db1d0ebe503",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0045__clean/depth_relative_model_input.png",
+      "depth_sha256": "ed75b517ebf6e6f6675b8ea55c0f8d2b9b8d17fca09f539ac053e290349cfd2a",
+      "evaluator_relation_labels_for_audit_only": [
+        "more_elongated_than"
+      ],
+      "family_id": "wp2_family_0045",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0045__clean.safetensors",
+      "feature_tensor_sha256": "83cbc8fb9efcdeacd8203f58f89ea3cc343e86c579ce2eda9ce789beadd4ccaa",
+      "instruction": "Point to the long curved fruit that is more elongated than both round fruits.",
+      "instruction_sha256": "494163c40ae1282ae360fa15ba0cac8b73c1b119ea9cb21eb8c0377abd29dc3d",
+      "language_relation_category": "more_elongated_than",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0045/clean/record.json",
+      "record_sha256": "27dce5a255bff4cc1986b2c69a0a4843dbc57738ec7b9c1a53857453151f5f78",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0045__clean/rgb_model_input.jpg",
+      "rgb_sha256": "e61b7a75d763c869e27d727f90bb8fa7b9974c9e313cb15696b459fb51a256c4",
+      "sample_id": "wp2_family_0045__clean",
+      "source_labels": [],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0045__clean/target_mask.png",
+      "target_mask_sha256": "8952218b1dbd252d1c9da49340136c266f1862d67971e535c5baecf3cf3f0fcb",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0049__clean.json",
+      "cache_metadata_sha256": "6d2a29def7660ffa65408408dfd757f74c91ec5621814ca72067a837a2bf46ae",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0049__clean/depth_relative_model_input.png",
+      "depth_sha256": "3066bc55f02d99668f073ade1852f206d655ea96d834fb04f7ffd08698d67ecf",
+      "evaluator_relation_labels_for_audit_only": [
+        "taller_than"
+      ],
+      "family_id": "wp2_family_0049",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0049__clean.safetensors",
+      "feature_tensor_sha256": "8bfc6d0bba85dbf2c8cf3e7dda31309ee4a0c718a5752ea18a419ee96982b1b9",
+      "instruction": "Point to the upright yellow bottle physically taller than both round fruits.",
+      "instruction_sha256": "ae2cbc78d1f025c4c0f8a3f1a8403f0a56f881514541dd2742391fdb70d9ff51",
+      "language_relation_category": "taller_than",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0049/clean/record.json",
+      "record_sha256": "79a45b5c76c9a7f1addd13f0237bb66eb6daab11b3650738eb6f28b3a41a466c",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0049__clean/rgb_model_input.jpg",
+      "rgb_sha256": "e74771a1a8d682b5b272b279ac73be063fdd98f17f0ec8c24fcc34ea40a51c21",
+      "sample_id": "wp2_family_0049__clean",
+      "source_labels": [],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0049__clean/target_mask.png",
+      "target_mask_sha256": "6fe5755bfbb24f6c26aac05d101b9c9af767aa32556abca392209a195072fa6f",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 3,
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0006__depth_corruption.json",
+      "cache_metadata_sha256": "44cc88febc1a976dc2bf8e23863a166398220aa8bb4aecc2d977cbf08dc90dbe",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0006__depth_corruption/depth_relative_model_input.png",
+      "depth_sha256": "b8361d79f7d42306dc10436ba5ef9e4ae0773e555c34f984e6b9458e9123ac51",
+      "evaluator_relation_labels_for_audit_only": [
+        "farther_than"
+      ],
+      "family_id": "wp2_family_0006",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0006__depth_corruption.safetensors",
+      "feature_tensor_sha256": "d3952bd529b01f631428f405a177d1e3d8fe233f711679626fb00be7dbfa8c49",
+      "instruction": "Point to the round red apple that is farther from the camera than the round orange fruit.",
+      "instruction_sha256": "7a5d7e55ba57941070b3e1c974bd23d6c45a2e2c5beb251a1049e2db6d357581",
+      "language_relation_category": "farther_than",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0006/depth_corruption/record.json",
+      "record_sha256": "8521218cd97b50e5e5c9e2e17df32821a78956b8e09040e7725053c1d20a2705",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0006__depth_corruption/rgb_model_input.jpg",
+      "rgb_sha256": "609a5d19bc7966867e63036018ee072310ead4fa08fc8ed5bdcce043e2b764eb",
+      "sample_id": "wp2_family_0006__depth_corruption",
+      "source_labels": [
+        "depth"
+      ],
+      "source_multihot": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0006__depth_corruption/target_mask.png",
+      "target_mask_sha256": "ff9ead334a12dac027b4d4578ae788fadee020af542c67b99976ba5c04045346",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0015__relation_counterfactual.json",
+      "cache_metadata_sha256": "f8784c14831d57af54788d6e186fe0e3ad379c01dce5e591d17ba9c6209ed9ef",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0015__relation_counterfactual/depth_relative_model_input.png",
+      "depth_sha256": "f0ba7e9916b498964cf0dac6f07a4eccf91505f132a668bca5f4cd003178f7ed",
+      "evaluator_relation_labels_for_audit_only": [
+        "behind"
+      ],
+      "family_id": "wp2_family_0015",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0015__relation_counterfactual.safetensors",
+      "feature_tensor_sha256": "c69323a66311a0cba0571f97e1d0ddb8227b759c96cf33127f94ecce0857aae3",
+      "instruction": "Point to the yellow mustard bottle that is behind the red tomato soup can.",
+      "instruction_sha256": "3709759ef1ca8f6212873c3dbeeea963d08a828e007821829eb3480380dd051b",
+      "language_relation_category": "behind",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0015/relation_counterfactual/record.json",
+      "record_sha256": "de0c3465a4e3fc9331fd3c7228fb3095209270bef14689e35c214dccc26c9871",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0015__relation_counterfactual/rgb_model_input.jpg",
+      "rgb_sha256": "e72bff75f6c9b76d32c831e5f383cca614f668513ad8a5c8c8915e9b07fd41c0",
+      "sample_id": "wp2_family_0015__relation_counterfactual",
+      "source_labels": [
+        "relation"
+      ],
+      "source_multihot": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0015__relation_counterfactual/target_mask.png",
+      "target_mask_sha256": "423f58e1ca8fa12d4c859d49129db0c90e016895ebbba51e549bdec22147211b",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    },
+    {
+      "answerability_index": 0,
+      "answerability_state": "FOUND",
+      "cache_metadata_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0034__semantic_counterfactual.json",
+      "cache_metadata_sha256": "ac2716d2b44012c3471a0d40df8a17eb92b8bf024ea96ef70e14fa1ffed3c569",
+      "depth_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0034__semantic_counterfactual/depth_relative_model_input.png",
+      "depth_sha256": "1ad1678bf1cde6677c7444cea44cf8a359c99afc81e06db5b91004608e982f23",
+      "evaluator_relation_labels_for_audit_only": [
+        "direct"
+      ],
+      "family_id": "wp2_family_0034",
+      "feature_dtype": "torch.float16",
+      "feature_shape": [
+        13,
+        1024,
+        1152
+      ],
+      "feature_tensor_path": "results/wp3_feature_hook_smoke_20260821/hook_a/cache/wp2_family_0034__semantic_counterfactual.safetensors",
+      "feature_tensor_sha256": "30ea66adc5b6042b1093bc209cb8069efdeb46705b9d0521d967e2d82cb28644",
+      "instruction": "Point to the round red apple.",
+      "instruction_sha256": "9b2687a3fbad5b7f24d16d3058d6c9cc74bc6cd382998fcf146d0484376335a0",
+      "language_relation_category": "direct",
+      "local_tile_count": 12,
+      "record_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/records/train/wp2_family_0034/semantic_counterfactual/record.json",
+      "record_sha256": "1435c5bdd46d16567f362f31deed12c8b50346e79e891e31040b91e5fe38b77c",
+      "rgb_depth_aligned": true,
+      "rgb_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/media/wp2_family_0034__semantic_counterfactual/rgb_model_input.jpg",
+      "rgb_sha256": "bfcb9b41d4fe6f2b7f9bbe40fa3693014a5a4ac16644097bcfc0a6f54a6d6361",
+      "sample_id": "wp2_family_0034__semantic_counterfactual",
+      "source_labels": [
+        "semantic"
+      ],
+      "source_multihot": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "split": "train",
+      "target_mask_path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/evaluator/wp2_family_0034__semantic_counterfactual/target_mask.png",
+      "target_mask_sha256": "348b206560ab59247a3cf5e7ad083306164aab2a9eb01639fa103ffd250891a3",
+      "thumbnail_present": true,
+      "tile_order": "row_major_local_then_thumbnail"
+    }
+  ],
+  "family_count": 15,
+  "feature_source": "results/wp3_feature_hook_smoke_20260821/hook_a/cache",
+  "gates": {
+    "all_five_sources_present": true,
+    "all_train": true,
+    "answerability_coverage_exact": true,
+    "exactly_15_families": true,
+    "exactly_15_samples": true,
+    "feature_shapes_locked": true,
+    "hook_a_only": true,
+    "rgb_depth_aligned": true
+  },
+  "protected_inputs": {
+    "files": {
+      "datasets/roborefer_dataset_v1_prototype_20260818_155606/artifact_manifest.json": "dce432874c86f3928eccac21f3dd9c9e22d5b5ae56bd7378143a0293ce9ced7c",
+      "datasets/roborefer_dataset_v1_prototype_20260818_155606/dataset_index.json": "d4fe5be9286d9bdc5c56e84247e157d4a5fcc2afd3a9637c73e027484f4882fa",
+      "datasets/roborefer_dataset_v1_prototype_20260818_155606/family_manifest.json": "7014a1e454f2b253b62d0e995990439a1d2f36d6002965c4b59c99e99ce48184",
+      "protocol/test_report.json": "34fc44d561309a0a94299bc57d6dbcce6972493fa5e278656b9de2714fcb721c",
+      "protocol/wp1_test_report.json": "861d996ccbb4f176abd97cb7da7ff9c7438b2a2268975695896f22c48a92be2e",
+      "protocol/wp2_test_report.json": "72ccfdd51339abd44125d09200962cf05fa42ce8d43c33cbfc76bf7a3e0a6f7f",
+      "protocol/wp3_contract_lock.json": "3d054b7e0d7c6cb4e5891a1c4a55578ee5ee402ac94b3b7a04e6667445a84253",
+      "results/wp3_data_audit_20260821/audit_manifest.json": "1d506f1650cb8e724d7dc9d6abedd942af500371fabff37519b1c5086c00d15c"
+    },
+    "trees": {
+      "datasets/roborefer_dataset_v1_prototype_20260818_155606": "d8e0479f65bc381207912f270f59de9808ca37e9520040d1ac498262e15875fc",
+      "results/roborefer_depth_sensitivity_v1_20260818_152700": "857e6b5e169b933572a41fb7251c9cbc78a4146d99f0f76845b27e9187472a9c",
+      "results/roborefer_pilot_v0_20260813_173305": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c"
+    }
+  },
+  "protocol_id": "pcra_u_overfit_smoke_v1",
+  "sample_count": 15,
+  "schema_version": 1,
+  "source_order": [
+    "semantic",
+    "relation",
+    "spatial",
+    "depth",
+    "occlusion"
+  ],
+  "source_positive_counts": {
+    "depth": 3,
+    "occlusion": 2,
+    "relation": 1,
+    "semantic": 4,
+    "spatial": 2
+  }
+}

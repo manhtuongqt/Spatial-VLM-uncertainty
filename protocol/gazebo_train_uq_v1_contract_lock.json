@@ -1,0 +1,197 @@
+{
+  "camera": {
+    "base_frame": "base_link",
+    "depth_unit": "metre",
+    "frame": "camera_color_optical_frame",
+    "intrinsics": {
+      "cx": 325.5436706543,
+      "cy": 249.9961547852,
+      "fx": 606.0816650391,
+      "fy": 605.7973022461
+    },
+    "resolution": [
+      640,
+      480
+    ],
+    "valid_depth_range_m": [
+      0.1,
+      2.0
+    ],
+    "view_joint_pose": [
+      1.3815,
+      -1.8273,
+      1.3428,
+      -1.2863,
+      -1.5708,
+      -1.9601
+    ]
+  },
+  "dev_v2_frozen_artifact_sha256": {
+    "datasets/Gazebo_dev_answerability_v2/manifest.json": "57fe333df4570cd32093d9810fb347e91ce7af90ce596805ad3fe25d52aad28a",
+    "protocol/gazebo_dev_answerability_v2_contract_lock.json": "93da829b80d5fa1f2bb7a00a0f79ad80717e99e846a163e572ecb309a32a08e8",
+    "results/spatial_vlm_refspatial_v1/gazebo_dev_answerability_v2/GAZEBO_DEV_ANSWERABILITY_V2_QC.json": "3ac26194dd2410472dbc763fcc82905bf15fcad2d7f9619ace395c91d406912d",
+    "results/spatial_vlm_refspatial_v1/gazebo_dev_answerability_v2/evaluation/B0_B1_ANSWERABILITY_V2_METRICS.json": "161f3971f781b1b9a901667273be297764948b5512ea78fdf329e578616c0983"
+  },
+  "family_split_rule": {
+    "all_variants_same_parent_same_split": true,
+    "co_locate": [
+      "views",
+      "paraphrases",
+      "visibility_variants",
+      "counterfactuals"
+    ]
+  },
+  "future_splits": {
+    "gazebo_calibration": "SEALED_NOT_MATERIALIZED",
+    "gazebo_test_iid": "SEALED_NOT_MATERIALIZED",
+    "gazebo_test_ood": "SEALED_NOT_MATERIALIZED"
+  },
+  "inference_configuration": {
+    "greedy_decoding": true,
+    "max_new_tokens": 64,
+    "metrics": "protocol/gazebo_train_uq_v1_metrics.py",
+    "models": [
+      "b0",
+      "clean_b1",
+      "b1_uq"
+    ],
+    "parser": "strict POINT [(x, y)] or exact ABSTAIN; tolerant parsing diagnostic only",
+    "runner": "protocol/gazebo_train_uq_v1_infer.py",
+    "stochastic_draws": 3
+  },
+  "insufficient_evidence_rule": {
+    "max_visible_pixels_exclusive": 120,
+    "min_visible_pixels_inclusive": 1,
+    "projected_center_outer_margin_fraction": 0.2
+  },
+  "locked_at_utc": "2026-09-11T08:30:45.389645+00:00",
+  "min_visible_evidence_px": 120,
+  "model_definition": {
+    "b0": "frozen RoboRefer-2B-SFT",
+    "b1_uq": "untrained; must be a new Train-UQ-only LoRA adapter and receive a separate training lock after capture QC",
+    "clean_b1": "frozen D_tabletop_clean_v1 LoRA"
+  },
+  "model_inventory_sha256": "5f5a4cc9695da9afefecae7f4d5acdd225094d24214897f84351b373ac911f0e",
+  "model_selection": {
+    "checkpoint_rule": "lexicographic: maximize Val-UQ safe-task accuracy; minimize Val-UQ false-accept rate; maximize Val-UQ FOUND Hit@0.08; then lowest validation loss",
+    "forbidden_selection_splits": [
+      "train_uq",
+      "gazebo_dev_answerability_v2",
+      "gazebo_calibration",
+      "gazebo_test_iid",
+      "gazebo_test_ood"
+    ],
+    "selection_split": "val_uq",
+    "threshold_rule": "select only on Val-UQ after model checkpoint freeze"
+  },
+  "model_sha256": {
+    "b0_base": "042b822932ef41c36e775ab6dba0a0d1864f2c1fa0233bf29c7631584a85ffe7",
+    "b1_uq_adapter": null,
+    "clean_b1_adapter": "c043faf8567d961c64ef39458530321adf57e3b13fc603bc85f559fcafe4d181"
+  },
+  "output_contract": {
+    "abstain_literal": "ABSTAIN",
+    "abstain_states": [
+      "AMBIGUOUS",
+      "ABSENT",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "allowed_actions": [
+      "POINT",
+      "ABSTAIN"
+    ],
+    "point_regex": "^POINT \\[\\(([0-9]*\\.?[0-9]+), ([0-9]*\\.?[0-9]+)\\)\\]$",
+    "point_state": "FOUND"
+  },
+  "parent_family_count": 320,
+  "policies": {
+    "b2_closed": true,
+    "no_calibration_or_test_access": true,
+    "no_capture_before_lock": true,
+    "no_dev_v2_fit_or_selection": true,
+    "no_sam2": true,
+    "no_training_before_geometry_qc_pass": true,
+    "test_iid_ood_sealed": true
+  },
+  "post_val_dev_rule": {
+    "allowed": "one blinded paired report after B1-UQ checkpoint and parser are frozen",
+    "forbidden": [
+      "checkpoint_selection",
+      "threshold_selection",
+      "prompt_editing",
+      "training",
+      "repeat_until_success"
+    ],
+    "frozen_dev_dataset": "Gazebo_dev_answerability_v2"
+  },
+  "promotion_gate": {
+    "abstention": "strictly higher non-FOUND abstain recall and strictly lower non-FOUND false-accept rate than B0",
+    "decision_if_fail": "KEEP_B0_AND_REPORT_NEGATIVE_RESULT",
+    "format": "no exact-output-contract regression",
+    "found_grounding": "B1-UQ must be non-inferior to B0 at frozen margin -0.125 on Dev-v2 FOUND Hit@0.08",
+    "risk": "AURC no worse than B0"
+  },
+  "protocol_id": "gazebo_train_uq_v1",
+  "reference_frame": "image_viewer_left_to_right",
+  "relation_variant_quota": {
+    "train_uq": {
+      "leftmost": 64,
+      "rightmost": 64,
+      "second_from_left": 64,
+      "second_from_right": 64
+    },
+    "val_uq": {
+      "leftmost": 16,
+      "rightmost": 16,
+      "second_from_left": 16,
+      "second_from_right": 16
+    }
+  },
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "protocol/gazebo_train_uq_v1_infer.py": "8b6b7c8cda132e757edb66de7567a106f24916b655c76c1675183a055cf26823",
+    "protocol/gazebo_train_uq_v1_metrics.py": "57b0ab85e78e28346e620f928fde8b1283556a6daa896b293d7bb31cc7ad0721",
+    "protocol/gazebo_train_uq_v1_pipeline.py": "d4bc3abe39bded9c05991ae63a66aa3d4a55b14738981681e2ab27859c30c399",
+    "protocol/generate_gazebo_train_uq_v1_contract.py": "487eabaad1beb6780bc64bee9940968404b167397c82d02da43a934f9f43879f",
+    "ur3/ur3_moveit_control/launch/ur3_susgrip_sim.launch.py": "eb39c70b4ef647d860e74c3ad127c2d4d4044e2528bc8e1953a77d13c12a6d81",
+    "ur3/ur3_moveit_control/urdf/d435i_wrist_camera.xacro": "950a835a158c7177c4b057c7eeddaf80116989e854f9ec49c97d18207ec9069f",
+    "ur3/ur3_perception/config/gazebo_train_uq_v1_annotations.yaml": "7396a2874159c3ab6c83ed74d0154aadf24ea2f3f70e6b9443e8f6be2346d995",
+    "ur3/ur3_perception/config/gazebo_train_uq_v1_gate.yaml": "01003a690fdf3b790585ef181506e435ac7ec4c0691016d1b13e8109cb935aae",
+    "ur3/ur3_perception/config/gazebo_train_uq_v1_scenes.yaml": "dd5588c855330ad579f940d912c6c9611ef13fdf56b22a77bfbce353975852ce",
+    "ur3/ur3_perception/launch/roborefer_pilot_capture.launch.py": "83c889f22fb8a346d7ad4f98a93cfc6bb9df41a3cb68b22cbb7d0db263d3590e",
+    "ur3/ur3_perception/scripts/move_camera_to_view.py": "b71cb575ab88fa6af6bf206bbdaea1656de838365156a606b272631829ff8437",
+    "ur3/ur3_perception/scripts/roborefer_grounder.py": "62a516a23cced5a404c3cb876ec3d322022c5256849a7bd8c21968ef4b2eb95b",
+    "ur3/ur3_perception/scripts/roborefer_pilot_capture.py": "1243b2829b1b81e0380fceda25661aa9e39d1ec622ce529b1789a7bfa4685b19",
+    "ur3/ur3_perception/scripts/roborefer_pilot_evaluator.py": "657e17cf4c6529d22d2393e500bb5d2bde168c5713f06e44206922206d6cbf38",
+    "ur3/ur3_perception/scripts/roborefer_pilot_runner.py": "cf9c3135836669be42e306e1642f47b9896011c3133d8a68525ba99dcd10497e",
+    "ur3/ur3_perception/scripts/roborefer_pilot_validate.py": "f6b958b35da440339f0ad3e07be07da0139b464a69692db8fc760fbdeb318021",
+    "ur3/ur3_perception/scripts/spatial_point_utils.py": "30a9bd4ccaf4665781e9fc2d352d09540c88d8c4a702187fb158c10e0e2b2d02",
+    "ur3/ur_simulation_gz/launch/ur_sim_control.launch.py": "51a049a380624d30d904ff5cc49f8fe4b231c1c01bac49175ef588cc87b2b0a1",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place.sdf": "e50cc296d810adb712a42eb784cfd7fef8a6c5b2792735f46d46d9636182e652"
+  },
+  "split_parent_family_count": {
+    "train_uq": 256,
+    "val_uq": 64
+  },
+  "state_quota": {
+    "train_uq": {
+      "ABSENT": 64,
+      "AMBIGUOUS": 64,
+      "FOUND": 64,
+      "INSUFFICIENT_EVIDENCE": 64
+    },
+    "val_uq": {
+      "ABSENT": 16,
+      "AMBIGUOUS": 16,
+      "FOUND": 16,
+      "INSUFFICIENT_EVIDENCE": 16
+    }
+  },
+  "state_relation_cell_quota": {
+    "train_uq": 16,
+    "val_uq": 4
+  },
+  "status": "LOCKED_BEFORE_CAPTURE_AND_TRAINING",
+  "tie_margin_normalized": 0.03,
+  "workspace_root": "/home/dhcn/ur_ws/src/myproject"
+}

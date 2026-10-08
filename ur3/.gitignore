@@ -1,0 +1,38 @@
+# Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# ROS 2 / colcon generated artifacts
+build/
+install/
+log/
+.colcon/
+
+# Runtime outputs and reproducible data (keep outside the source repository)
+datasets/
+demo_results/
+*.db3
+*.mcap
+
+# External-model weights must be downloaded on the target workstation.
+weights/
+*.pth
+*.pt
+*.onnx
+*.safetensors
+*.ckpt
+
+# Local environments and runtime diagnostics
+.venv/
+venv/
+*.log
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gazebo_calibration_v6",
+  "status": "LIVE_PREFLIGHT_FAILURE_FROZEN_NO_CAPTURE",
+  "classification": "EXECUTION_ENVIRONMENT_FAILURE_NOT_SCIENTIFIC_NEGATIVE",
+  "cause": "Invocation overwrote sourced ROS PYTHONPATH; probes failed to import rclpy before sensor checks.",
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V6_DATA_DESIGN_LOCK.json": "850921e200d921592128c76e11c8deeb5a7d6177ea315f1ff8d286f873084b6d",
+    "protocol/GAZEBO_CALIBRATION_V6_IMPLEMENTATION_LOCK.json": "89d3416e7c870e635c3f6277a6dbbc2d5d12891c23f3a686c9a4fe2d4f7b821d",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/PREFLIGHT_STATIC.json": "05be37274246b8364a0fc65a2c45d8c9707abfebe85cf7777169cb9c4ea18002",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/PREFLIGHT_LIVE.json": "a735ee37971b3917c7ccee19171056868a26ecc425984f5f585b87273834253e",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/CALIBRATION_V6_FINAL_DECISION.json": "492cb4884077eec05ade91c114370eb3c30a1579fd15c66337b1e6d76d52c49e"
+  },
+  "capture_authorized": false,
+  "calibrator_fit_call_count": 0,
+  "scientific_hypothesis": "NOT_TESTED",
+  "scientific_decision": null,
+  "test_iid_ood_access": false,
+  "robot_access": false
+}

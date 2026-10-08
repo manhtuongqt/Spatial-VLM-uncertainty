@@ -1,0 +1,5987 @@
+{
+  "asset_partition_sha256": "dd950e8ebc9affe1166525ec057d6288df59381cd9be8056f7f215503fe5b98d",
+  "counts": {
+    "family_category": {
+      "direct_grounding": 5,
+      "front_behind_camera": 5,
+      "multi_anchor_depth_order": 5,
+      "nearer_farther": 5,
+      "occlusion_depth_evidence": 5,
+      "relation_2d": 5
+    },
+    "ood_axis": {
+      "asset": 5,
+      "depth_noise": 5,
+      "language": 5,
+      "layout": 5,
+      "none": 5,
+      "viewpoint": 5
+    },
+    "primary_answerability": {
+      "ABSENT": 7,
+      "AMBIGUOUS": 7,
+      "FOUND": 8,
+      "INSUFFICIENT_EVIDENCE": 8
+    },
+    "state_submode": {
+      "anchor_absent": 2,
+      "attribute_tie": 2,
+      "cross_modal_conflict": 2,
+      "depth_invalid_or_corrupt": 2,
+      "multi_anchor_conflict": 1,
+      "occlusion": 2,
+      "relation_tie": 2,
+      "same_class_duplicate": 2,
+      "target_absent": 3,
+      "too_small_or_out_of_view": 2,
+      "unique_visible_referent": 8,
+      "unsatisfied_relation": 2
+    }
+  },
+  "design_assignment_commitment_sha256": "45f0ec073d1b71d3e4a07336262c98e5ef875ac5befd2a585b51bdb16b3cb22c",
+  "design_seed_lock_sha256": "264bce933ec282c6045eed6a1a02d8bba87381702e3e1989646ea6b9dc9f0ad0",
+  "eligible_for_official_dataset": false,
+  "families": [
+    {
+      "asset_pool": "test_ood_heldout",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "multi_anchor_depth_order",
+      "family_id": "v2pilot_family_000001",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "AMBIGUOUS",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "cube_purple_01",
+          "ycb_orange_01",
+          "ycb_pear_01",
+          "ycb_plum_01"
+        ],
+        "anchor_ids": [
+          "cube_purple_01",
+          "ycb_orange_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_pear_01",
+          "ycb_plum_01"
+        ],
+        "instruction": "Locate the fruit between the purple cube and orange in camera depth.",
+        "occluder_id": "ycb_tomato_soup_can_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "between_in_depth",
+        "valid_target_ids": [
+          "ycb_pear_01",
+          "ycb_plum_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 890640303,
+        "language": 1560582674,
+        "layout": 1302116976,
+        "occlusion": 53677296,
+        "sensor": 1601013798
+      },
+      "split": "pilot_only",
+      "state_submode": "relation_tie",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_purple_01",
+            "ycb_orange_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "capture_id": "v2pilot_family_000001__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit between the purple cube and orange in camera depth.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "between_in_depth"
+          ],
+          "severity": 2,
+          "state_submode": "relation_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000001__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000001__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01",
+            "ycb_orange_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "capture_id": "v2pilot_family_000001__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit between the purple cube and orange in camera depth.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "between_in_depth"
+          ],
+          "severity": 2,
+          "state_submode": "relation_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01",
+            "ycb_orange_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "capture_id": "v2pilot_family_000001__occlusion_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit between the purple cube and orange in camera depth.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_tomato_soup_can_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "between_in_depth"
+          ],
+          "severity": 2,
+          "state_submode": "relation_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "multi_anchor_depth_order",
+      "family_id": "v2pilot_family_000002",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "ycb_apple_01",
+          "ycb_lemon_01",
+          "ycb_mustard_bottle_01",
+          "ycb_orange_01"
+        ],
+        "anchor_ids": [
+          "ycb_apple_01",
+          "ycb_lemon_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_orange_01"
+        ],
+        "instruction": "Locate the orange nearer to the camera than both the apple and lemon.",
+        "occluder_id": "cube_blue_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than_both",
+        "valid_target_ids": [
+          "ycb_orange_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 744127913,
+        "language": 1664390682,
+        "layout": 903608211,
+        "occlusion": 920916495,
+        "sensor": 163953282
+      },
+      "split": "pilot_only",
+      "state_submode": "cross_modal_conflict",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_apple_01",
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000002__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange nearer to the camera than both the apple and lemon.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "cross_modal_conflict",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000002__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000002__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01",
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000002__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange nearer to the camera than both the apple and lemon.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "cross_modal_conflict",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01",
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000002__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange nearer to the camera than both the apple and lemon.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_blue_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "cross_modal_conflict",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "nearer_farther",
+      "family_id": "v2pilot_family_000003",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_orange_01",
+          "mango_01",
+          "ycb_apple_01",
+          "ycb_lemon_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "ycb_apple_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_lemon_01"
+        ],
+        "instruction": "Locate the lemon that is nearer than the apple.",
+        "occluder_id": "cube_purple_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than",
+        "valid_target_ids": [
+          "ycb_lemon_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 399733979,
+        "language": 1922568843,
+        "layout": 1938042968,
+        "occlusion": 445664668,
+        "sensor": 1382909129
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "capture_id": "v2pilot_family_000003__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the lemon that is nearer than the apple.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000003__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000003__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the apple that is farther than the lemon.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "farther_than"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "capture_id": "v2pilot_family_000003__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the lemon that is nearer than the apple.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "capture_id": "v2pilot_family_000003__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the lemon that is nearer than the apple.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_purple_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "test_ood_heldout",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "direct_grounding",
+      "family_id": "v2pilot_family_000004",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "ycb_pear_01"
+        ],
+        "anchor_ids": [],
+        "candidate_target_ids": [
+          "ycb_pear_01"
+        ],
+        "instruction": "Locate the pear.",
+        "occluder_id": "cube_green_01",
+        "reference_frame": "object_semantics",
+        "relation": "direct",
+        "valid_target_ids": [
+          "ycb_pear_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1028015642,
+        "language": 446398801,
+        "layout": 911764450,
+        "occlusion": 1752851032,
+        "sensor": 446317956
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_pear_01"
+          ],
+          "capture_id": "v2pilot_family_000004__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pear.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_pear_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000004__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000004__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01"
+          ],
+          "capture_id": "v2pilot_family_000004__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the pear.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01"
+          ],
+          "capture_id": "v2pilot_family_000004__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the pear.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_green_01",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "front_behind_camera",
+      "family_id": "v2pilot_family_000005",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_orange_01",
+          "cube_yellow_01",
+          "ycb_lemon_01",
+          "ycb_mustard_bottle_01"
+        ],
+        "anchor_ids": [
+          "cube_yellow_01"
+        ],
+        "candidate_target_ids": [
+          "cube_orange_01"
+        ],
+        "instruction": "Locate the orange cube that is front of the yellow cube.",
+        "occluder_id": "ycb_lemon_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": [
+          "cube_orange_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 2097214137,
+        "language": 221151502,
+        "layout": 550600738,
+        "occlusion": 1661659339,
+        "sensor": 1497951121
+      },
+      "split": "pilot_only",
+      "state_submode": "occlusion",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000005__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange cube that is front of the yellow cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "cube_orange_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000005__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_orange_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_yellow_01"
+          ],
+          "capture_id": "v2pilot_family_000005__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the yellow cube that is behind the orange cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "cube_yellow_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000005__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange cube that is front of the yellow cube.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "cube_orange_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000005__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange cube that is front of the yellow cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_lemon_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "cube_orange_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "multi_anchor_depth_order",
+      "family_id": "v2pilot_family_000006",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "ABSENT",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_green_01",
+          "cube_orange_01",
+          "cube_purple_01",
+          "ycb_lemon_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "cube_green_01",
+          "cube_purple_01"
+        ],
+        "candidate_target_ids": [
+          "cube_blue_01"
+        ],
+        "instruction": "Locate the blue cube nearer to the camera than both the green cube and purple cube.",
+        "occluder_id": "cube_yellow_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than_both",
+        "valid_target_ids": []
+      },
+      "seed_bundle": {
+        "counterfactual": 1133410648,
+        "language": 833633938,
+        "layout": 1906234099,
+        "occlusion": 649168710,
+        "sensor": 1677732277
+      },
+      "split": "pilot_only",
+      "state_submode": "target_absent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_green_01",
+            "cube_purple_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_blue_01"
+          ],
+          "capture_id": "v2pilot_family_000006__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the blue cube nearer to the camera than both the green cube and purple cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000006__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000006__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01",
+            "cube_purple_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_blue_01"
+          ],
+          "capture_id": "v2pilot_family_000006__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the blue cube nearer to the camera than both the green cube and purple cube.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01",
+            "cube_purple_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_blue_01"
+          ],
+          "capture_id": "v2pilot_family_000006__occlusion_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the blue cube nearer to the camera than both the green cube and purple cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_yellow_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_ood_heldout",
+      "eligible_for_official_dataset": false,
+      "family_category": "nearer_farther",
+      "family_id": "v2pilot_family_000007",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "AMBIGUOUS",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "cube_purple_01",
+          "ycb_apple_01",
+          "ycb_apple_02"
+        ],
+        "anchor_ids": [
+          "cube_purple_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_apple_01",
+          "ycb_apple_02"
+        ],
+        "instruction": "Locate the fruit that is nearer than the purple cube.",
+        "occluder_id": "ycb_mustard_bottle_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than",
+        "valid_target_ids": [
+          "ycb_apple_01",
+          "ycb_apple_02"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1209126102,
+        "language": 168465535,
+        "layout": 752019613,
+        "occlusion": 135328329,
+        "sensor": 501721229
+      },
+      "split": "pilot_only",
+      "state_submode": "same_class_duplicate",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01",
+            "ycb_apple_02"
+          ],
+          "capture_id": "v2pilot_family_000007__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit that is nearer than the purple cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "same_class_duplicate",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01",
+            "ycb_apple_02"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000007__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_purple_01"
+          ],
+          "capture_id": "v2pilot_family_000007__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the purple cube that is farther than the apple.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "farther_than"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_purple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01",
+            "ycb_apple_02"
+          ],
+          "capture_id": "v2pilot_family_000007__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit that is nearer than the purple cube.",
+          "perturbation": {
+            "kind": "heldout_stripe_dropout",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "same_class_duplicate",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01",
+            "ycb_apple_02"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01",
+            "ycb_apple_02"
+          ],
+          "capture_id": "v2pilot_family_000007__occlusion_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit that is nearer than the purple cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_mustard_bottle_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "same_class_duplicate",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01",
+            "ycb_apple_02"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "direct_grounding",
+      "family_id": "v2pilot_family_000008",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "ycb_mustard_bottle_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [],
+        "candidate_target_ids": [
+          "ycb_mustard_bottle_01"
+        ],
+        "instruction": "Locate the mustard bottle.",
+        "occluder_id": "ycb_lemon_01",
+        "reference_frame": "object_semantics",
+        "relation": "direct",
+        "valid_target_ids": [
+          "ycb_mustard_bottle_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 897990485,
+        "language": 1011025367,
+        "layout": 587695436,
+        "occlusion": 768098686,
+        "sensor": 1800438252
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000008__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000008__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000008__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000008__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000008__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_lemon_01",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "test_ood_heldout",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "relation_2d",
+      "family_id": "v2pilot_family_000009",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "ABSENT",
+      "primary_scene": {
+        "active_scene_ids": [
+          "ycb_apple_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "ycb_apple_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_tuna_fish_can_01"
+        ],
+        "instruction": "Locate the tuna fish can that is right of the apple.",
+        "occluder_id": "mango_01",
+        "reference_frame": "image",
+        "relation": "right_of",
+        "valid_target_ids": []
+      },
+      "seed_bundle": {
+        "counterfactual": 1958434237,
+        "language": 1286120728,
+        "layout": 2030769965,
+        "occlusion": 1760347856,
+        "sensor": 70064142
+      },
+      "split": "pilot_only",
+      "state_submode": "target_absent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tuna_fish_can_01"
+          ],
+          "capture_id": "v2pilot_family_000009__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the tuna fish can that is right of the apple.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000009__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_tuna_fish_can_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000009__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the apple that is left of the tuna fish can.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tuna_fish_can_01"
+          ],
+          "capture_id": "v2pilot_family_000009__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the tuna fish can that is right of the apple.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tuna_fish_can_01"
+          ],
+          "capture_id": "v2pilot_family_000009__occlusion_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the tuna fish can that is right of the apple.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "mango_01",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_ood_heldout",
+      "eligible_for_official_dataset": false,
+      "family_category": "relation_2d",
+      "family_id": "v2pilot_family_000010",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "ycb_apple_01",
+          "ycb_lemon_01"
+        ],
+        "anchor_ids": [
+          "ycb_lemon_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_apple_01"
+        ],
+        "instruction": "Locate the apple that is left of the lemon.",
+        "occluder_id": "ycb_tomato_soup_can_01",
+        "reference_frame": "image",
+        "relation": "left_of",
+        "valid_target_ids": [
+          "ycb_apple_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1200680504,
+        "language": 673625413,
+        "layout": 602456433,
+        "occlusion": 586443045,
+        "sensor": 194972366
+      },
+      "split": "pilot_only",
+      "state_submode": "depth_invalid_or_corrupt",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000010__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the apple that is left of the lemon.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000010__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "capture_id": "v2pilot_family_000010__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the lemon that is right of the apple.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000010__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the apple that is left of the lemon.",
+          "perturbation": {
+            "kind": "heldout_stripe_dropout",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000010__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the apple that is left of the lemon.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_tomato_soup_can_01",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "nearer_farther",
+      "family_id": "v2pilot_family_000011",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "ABSENT",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_yellow_01",
+          "ycb_mustard_bottle_01",
+          "ycb_orange_01"
+        ],
+        "anchor_ids": [
+          "cube_yellow_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_orange_01"
+        ],
+        "instruction": "Locate the orange that is nearer than the yellow cube.",
+        "occluder_id": "cube_blue_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than",
+        "valid_target_ids": []
+      },
+      "seed_bundle": {
+        "counterfactual": 1759117231,
+        "language": 1770118560,
+        "layout": 942558749,
+        "occlusion": 961324532,
+        "sensor": 1003125148
+      },
+      "split": "pilot_only",
+      "state_submode": "unsatisfied_relation",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000011__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the orange that is nearer than the yellow cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000011__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_yellow_01"
+          ],
+          "capture_id": "v2pilot_family_000011__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the yellow cube that is farther than the orange.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "farther_than"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000011__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the orange that is nearer than the yellow cube.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000011__occlusion_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the orange that is nearer than the yellow cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_blue_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "front_behind_camera",
+      "family_id": "v2pilot_family_000012",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "AMBIGUOUS",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_blue_01",
+          "cube_green_01",
+          "ycb_lemon_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "cube_green_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_lemon_01",
+          "cube_blue_01"
+        ],
+        "instruction": "Locate the lemon that is behind the green cube.",
+        "occluder_id": "cube_purple_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "behind",
+        "valid_target_ids": [
+          "ycb_lemon_01",
+          "cube_blue_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1603793475,
+        "language": 1880670751,
+        "layout": 1737297402,
+        "occlusion": 1622623500,
+        "sensor": 1430544113
+      },
+      "split": "pilot_only",
+      "state_submode": "attribute_tie",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01",
+            "cube_blue_01"
+          ],
+          "capture_id": "v2pilot_family_000012__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the lemon that is behind the green cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 2,
+          "state_submode": "attribute_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01",
+            "cube_blue_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000012__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_green_01"
+          ],
+          "capture_id": "v2pilot_family_000012__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the green cube that is front of the lemon.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_green_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01",
+            "cube_blue_01"
+          ],
+          "capture_id": "v2pilot_family_000012__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the lemon that is behind the green cube.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 2,
+          "state_submode": "attribute_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01",
+            "cube_blue_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01",
+            "cube_blue_01"
+          ],
+          "capture_id": "v2pilot_family_000012__occlusion_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the lemon that is behind the green cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_purple_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 2,
+          "state_submode": "attribute_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01",
+            "cube_blue_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "front_behind_camera",
+      "family_id": "v2pilot_family_000013",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "cube_purple_01",
+          "ycb_mug_01"
+        ],
+        "anchor_ids": [
+          "cube_purple_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_mug_01"
+        ],
+        "instruction": "Locate the mug that is front of the purple cube.",
+        "occluder_id": "cube_green_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": [
+          "ycb_mug_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 672749794,
+        "language": 1526866835,
+        "layout": 1460171453,
+        "occlusion": 1997409041,
+        "sensor": 310560199
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mug_01"
+          ],
+          "capture_id": "v2pilot_family_000013__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mug that is front of the purple cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mug_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000013__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_mug_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_purple_01"
+          ],
+          "capture_id": "v2pilot_family_000013__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the purple cube that is behind the mug.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_purple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mug_01"
+          ],
+          "capture_id": "v2pilot_family_000013__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the mug that is front of the purple cube.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_mug_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mug_01"
+          ],
+          "capture_id": "v2pilot_family_000013__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the mug that is front of the purple cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_green_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_mug_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "relation_2d",
+      "family_id": "v2pilot_family_000014",
+      "language_template_bank_id": "language_v2_ood_heldout_templates",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_orange_01",
+          "ycb_mustard_bottle_01",
+          "ycb_orange_01"
+        ],
+        "anchor_ids": [
+          "ycb_orange_01"
+        ],
+        "candidate_target_ids": [
+          "cube_orange_01"
+        ],
+        "instruction": "Point out the orange cube; it lies left of relative to the orange.",
+        "occluder_id": "cube_yellow_01",
+        "reference_frame": "image",
+        "relation": "left_of",
+        "valid_target_ids": [
+          "cube_orange_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1652405916,
+        "language": 1505948565,
+        "layout": 1999885769,
+        "occlusion": 515223698,
+        "sensor": 2015409141
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000014__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Point out the orange cube; it lies left of relative to the orange.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_orange_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000014__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Which image location corresponds to the mustard bottle?",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_orange_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000014__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Point out the orange; it lies right of relative to the orange cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000014__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the orange cube; it lies left of relative to the orange.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "cube_orange_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000014__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the orange cube; it lies left of relative to the orange.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_yellow_01",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "cube_orange_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "relation_2d",
+      "family_id": "v2pilot_family_000015",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "AMBIGUOUS",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_blue_01",
+          "cube_orange_01",
+          "mango_01",
+          "ycb_apple_01",
+          "ycb_lemon_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "ycb_apple_01"
+        ],
+        "candidate_target_ids": [
+          "cube_blue_01",
+          "mango_01"
+        ],
+        "instruction": "Locate the blue cube that is right of the apple.",
+        "occluder_id": "cube_yellow_01",
+        "reference_frame": "image",
+        "relation": "right_of",
+        "valid_target_ids": [
+          "cube_blue_01",
+          "mango_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 2067651134,
+        "language": 203177522,
+        "layout": 1788146929,
+        "occlusion": 1357986915,
+        "sensor": 1780152442
+      },
+      "split": "pilot_only",
+      "state_submode": "multi_anchor_conflict",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_blue_01",
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000015__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the blue cube that is right of the apple.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 2,
+          "state_submode": "multi_anchor_conflict",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "cube_blue_01",
+            "mango_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000015__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_blue_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000015__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the apple that is left of the blue cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_blue_01",
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000015__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the blue cube that is right of the apple.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 2,
+          "state_submode": "multi_anchor_conflict",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "cube_blue_01",
+            "mango_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_blue_01",
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000015__occlusion_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the blue cube that is right of the apple.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_yellow_01",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 2,
+          "state_submode": "multi_anchor_conflict",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "cube_blue_01",
+            "mango_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "multi_anchor_depth_order",
+      "family_id": "v2pilot_family_000016",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_blue_01",
+          "cube_pink_01",
+          "cube_yellow_01",
+          "mango_01",
+          "ycb_lemon_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "ycb_lemon_01",
+          "cube_yellow_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_tomato_soup_can_01"
+        ],
+        "instruction": "Locate the tomato soup can nearer to the camera than both the lemon and yellow cube.",
+        "occluder_id": "ycb_mustard_bottle_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than_both",
+        "valid_target_ids": [
+          "ycb_tomato_soup_can_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1494126022,
+        "language": 73850668,
+        "layout": 511553360,
+        "occlusion": 1892716404,
+        "sensor": 1185621894
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_lemon_01",
+            "cube_yellow_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000016__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can nearer to the camera than both the lemon and yellow cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000016__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000016__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01",
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000016__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the tomato soup can nearer to the camera than both the lemon and yellow cube.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01",
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000016__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the tomato soup can nearer to the camera than both the lemon and yellow cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_mustard_bottle_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "occlusion_depth_evidence",
+      "family_id": "v2pilot_family_000017",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_yellow_01",
+          "ycb_mustard_bottle_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "cube_yellow_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_mustard_bottle_01"
+        ],
+        "instruction": "Locate the mustard bottle that is front of the yellow cube.",
+        "occluder_id": "ycb_lemon_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": [
+          "ycb_mustard_bottle_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1294657691,
+        "language": 1274599122,
+        "layout": 671805744,
+        "occlusion": 1791895776,
+        "sensor": 972172165
+      },
+      "split": "pilot_only",
+      "state_submode": "depth_invalid_or_corrupt",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000017__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the mustard bottle that is front of the yellow cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000017__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_yellow_01"
+          ],
+          "capture_id": "v2pilot_family_000017__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the yellow cube that is behind the mustard bottle.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "cube_yellow_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000017__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the mustard bottle that is front of the yellow cube.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000017__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the mustard bottle that is front of the yellow cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_lemon_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "nearer_farther",
+      "family_id": "v2pilot_family_000018",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "ABSENT",
+      "primary_scene": {
+        "active_scene_ids": [
+          "mango_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "cube_green_01"
+        ],
+        "candidate_target_ids": [
+          "mango_01"
+        ],
+        "instruction": "Locate the mango that is farther than the green cube.",
+        "occluder_id": "cube_blue_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "farther_than",
+        "valid_target_ids": []
+      },
+      "seed_bundle": {
+        "counterfactual": 589423463,
+        "language": 1185909943,
+        "layout": 210725592,
+        "occlusion": 473748875,
+        "sensor": 431222078
+      },
+      "split": "pilot_only",
+      "state_submode": "anchor_absent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000018__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the mango that is farther than the green cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "farther_than"
+          ],
+          "severity": 3,
+          "state_submode": "anchor_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000018__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "mango_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_green_01"
+          ],
+          "capture_id": "v2pilot_family_000018__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the green cube that is nearer than the mango.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 3,
+          "state_submode": "anchor_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000018__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the mango that is farther than the green cube.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "farther_than"
+          ],
+          "severity": 3,
+          "state_submode": "anchor_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000018__occlusion_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the mango that is farther than the green cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_blue_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "farther_than"
+          ],
+          "severity": 3,
+          "state_submode": "anchor_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "direct_grounding",
+      "family_id": "v2pilot_family_000019",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "AMBIGUOUS",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "ycb_apple_01",
+          "ycb_mug_01"
+        ],
+        "anchor_ids": [],
+        "candidate_target_ids": [
+          "ycb_apple_01",
+          "ycb_mug_01"
+        ],
+        "instruction": "Locate the apple.",
+        "occluder_id": "ycb_tomato_soup_can_01",
+        "reference_frame": "object_semantics",
+        "relation": "direct",
+        "valid_target_ids": [
+          "ycb_apple_01",
+          "ycb_mug_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1311405654,
+        "language": 1608723482,
+        "layout": 1210813069,
+        "occlusion": 274528516,
+        "sensor": 11596540
+      },
+      "split": "pilot_only",
+      "state_submode": "relation_tie",
+      "variant_specs": [
+        {
+          "anchor_ids": [],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01",
+            "ycb_mug_01"
+          ],
+          "capture_id": "v2pilot_family_000019__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the apple.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "relation_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01",
+            "ycb_mug_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000019__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000019__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01",
+            "ycb_mug_01"
+          ],
+          "capture_id": "v2pilot_family_000019__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the apple.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "relation_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01",
+            "ycb_mug_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01",
+            "ycb_mug_01"
+          ],
+          "capture_id": "v2pilot_family_000019__occlusion_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the apple.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_tomato_soup_can_01",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "relation_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01",
+            "ycb_mug_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "occlusion_depth_evidence",
+      "family_id": "v2pilot_family_000020",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_orange_01",
+          "ycb_apple_01",
+          "ycb_lemon_01",
+          "ycb_mustard_bottle_01",
+          "ycb_orange_01"
+        ],
+        "anchor_ids": [
+          "ycb_apple_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_orange_01"
+        ],
+        "instruction": "Locate the orange that is front of the apple.",
+        "occluder_id": "cube_blue_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": [
+          "ycb_orange_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 830813255,
+        "language": 1845227300,
+        "layout": 1427983529,
+        "occlusion": 1802089839,
+        "sensor": 1963715776
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000020__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the orange that is front of the apple.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000020__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000020__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the apple that is behind the orange.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000020__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange that is front of the apple.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000020__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange that is front of the apple.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_blue_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "occlusion_depth_evidence",
+      "family_id": "v2pilot_family_000021",
+      "language_template_bank_id": "language_v2_ood_heldout_templates",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "ycb_apple_01",
+          "ycb_lemon_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "ycb_apple_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_lemon_01"
+        ],
+        "instruction": "Point out the lemon; it lies front of relative to the apple.",
+        "occluder_id": "cube_purple_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": [
+          "ycb_lemon_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 715957905,
+        "language": 1580024738,
+        "layout": 819166701,
+        "occlusion": 1319754293,
+        "sensor": 2143335631
+      },
+      "split": "pilot_only",
+      "state_submode": "too_small_or_out_of_view",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "capture_id": "v2pilot_family_000021__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the lemon; it lies front of relative to the apple.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000021__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Which image location corresponds to the tomato soup can?",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000021__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the apple; it lies behind relative to the lemon.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "capture_id": "v2pilot_family_000021__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the lemon; it lies front of relative to the apple.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "capture_id": "v2pilot_family_000021__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the lemon; it lies front of relative to the apple.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_purple_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_lemon_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "test_ood_heldout",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "direct_grounding",
+      "family_id": "v2pilot_family_000022",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "AMBIGUOUS",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "ycb_pear_01",
+          "ycb_plum_01"
+        ],
+        "anchor_ids": [],
+        "candidate_target_ids": [
+          "ycb_pear_01",
+          "ycb_plum_01"
+        ],
+        "instruction": "Locate the fruit.",
+        "occluder_id": "cube_green_01",
+        "reference_frame": "object_semantics",
+        "relation": "direct",
+        "valid_target_ids": [
+          "ycb_pear_01",
+          "ycb_plum_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1981479726,
+        "language": 1573532513,
+        "layout": 161520252,
+        "occlusion": 426500680,
+        "sensor": 1635987710
+      },
+      "split": "pilot_only",
+      "state_submode": "attribute_tie",
+      "variant_specs": [
+        {
+          "anchor_ids": [],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "capture_id": "v2pilot_family_000022__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "attribute_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000022__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000022__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "capture_id": "v2pilot_family_000022__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "attribute_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "capture_id": "v2pilot_family_000022__occlusion_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_green_01",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 2,
+          "state_submode": "attribute_tie",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_pear_01",
+            "ycb_plum_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "occlusion_depth_evidence",
+      "family_id": "v2pilot_family_000023",
+      "language_template_bank_id": "language_v2_ood_heldout_templates",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "ABSENT",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_yellow_01",
+          "ycb_mustard_bottle_01"
+        ],
+        "anchor_ids": [
+          "cube_yellow_01"
+        ],
+        "candidate_target_ids": [
+          "cube_orange_01"
+        ],
+        "instruction": "Point out the orange cube; it lies front of relative to the yellow cube.",
+        "occluder_id": "ycb_lemon_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": []
+      },
+      "seed_bundle": {
+        "counterfactual": 921687291,
+        "language": 986889905,
+        "layout": 504688842,
+        "occlusion": 398506552,
+        "sensor": 787995897
+      },
+      "split": "pilot_only",
+      "state_submode": "target_absent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000023__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Point out the orange cube; it lies front of relative to the yellow cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000023__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Which image location corresponds to the mustard bottle?",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_orange_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_yellow_01"
+          ],
+          "capture_id": "v2pilot_family_000023__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Point out the yellow cube; it lies behind relative to the orange cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000023__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Point out the orange cube; it lies front of relative to the yellow cube.",
+          "perturbation": {
+            "kind": "localized_holes_edges",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000023__occlusion_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Point out the orange cube; it lies front of relative to the yellow cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_lemon_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 3,
+          "state_submode": "target_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_ood_heldout",
+      "eligible_for_official_dataset": false,
+      "family_category": "occlusion_depth_evidence",
+      "family_id": "v2pilot_family_000024",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "AMBIGUOUS",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_green_01",
+          "ycb_orange_01",
+          "ycb_orange_02",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "cube_green_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_orange_01",
+          "ycb_orange_02"
+        ],
+        "instruction": "Locate the fruit that is front of the green cube.",
+        "occluder_id": "cube_yellow_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": [
+          "ycb_orange_01",
+          "ycb_orange_02"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 300630911,
+        "language": 1266443728,
+        "layout": 824514741,
+        "occlusion": 1048806354,
+        "sensor": 557179907
+      },
+      "split": "pilot_only",
+      "state_submode": "same_class_duplicate",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01",
+            "ycb_orange_02"
+          ],
+          "capture_id": "v2pilot_family_000024__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit that is front of the green cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "same_class_duplicate",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01",
+            "ycb_orange_02"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000024__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_green_01"
+          ],
+          "capture_id": "v2pilot_family_000024__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the green cube that is behind the orange.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_green_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01",
+            "ycb_orange_02"
+          ],
+          "capture_id": "v2pilot_family_000024__clean_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit that is front of the green cube.",
+          "perturbation": {
+            "kind": "heldout_stripe_dropout",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "same_class_duplicate",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01",
+            "ycb_orange_02"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_green_01"
+          ],
+          "answerability_state": "AMBIGUOUS",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01",
+            "ycb_orange_02"
+          ],
+          "capture_id": "v2pilot_family_000024__occlusion_capture",
+          "expected_intervention": "ASK_USER",
+          "instruction": "Locate the fruit that is front of the green cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_yellow_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "same_class_duplicate",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01",
+            "ycb_orange_02"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "front_behind_camera",
+      "family_id": "v2pilot_family_000025",
+      "language_template_bank_id": "language_v2_ood_heldout_templates",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "cube_purple_01",
+          "ycb_mustard_bottle_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "cube_purple_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_tomato_soup_can_01"
+        ],
+        "instruction": "Point out the tomato soup can; it lies front of relative to the purple cube.",
+        "occluder_id": "ycb_mustard_bottle_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "front_of",
+        "valid_target_ids": [
+          "ycb_tomato_soup_can_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 1454042765,
+        "language": 726664376,
+        "layout": 791654256,
+        "occlusion": 530698827,
+        "sensor": 1018547887
+      },
+      "split": "pilot_only",
+      "state_submode": "occlusion",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000025__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the tomato soup can; it lies front of relative to the purple cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000025__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Which image location corresponds to the pink cube?",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "cube_purple_01"
+          ],
+          "capture_id": "v2pilot_family_000025__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the purple cube; it lies behind relative to the tomato soup can.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "cube_purple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000025__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the tomato soup can; it lies front of relative to the purple cube.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_purple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000025__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the tomato soup can; it lies front of relative to the purple cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_mustard_bottle_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_ood_heldout",
+      "eligible_for_official_dataset": false,
+      "family_category": "front_behind_camera",
+      "family_id": "v2pilot_family_000026",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "ABSENT",
+      "primary_scene": {
+        "active_scene_ids": [
+          "ycb_mustard_bottle_01",
+          "ycb_orange_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "ycb_orange_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_mustard_bottle_01"
+        ],
+        "instruction": "Locate the mustard bottle that is behind the orange.",
+        "occluder_id": "ycb_lemon_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "behind",
+        "valid_target_ids": []
+      },
+      "seed_bundle": {
+        "counterfactual": 878800897,
+        "language": 1917229982,
+        "layout": 306242273,
+        "occlusion": 1415579587,
+        "sensor": 764044485
+      },
+      "split": "pilot_only",
+      "state_submode": "unsatisfied_relation",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000026__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the mustard bottle that is behind the orange.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000026__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000026__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the orange that is front of the mustard bottle.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "front_of"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000026__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the mustard bottle that is behind the orange.",
+          "perturbation": {
+            "kind": "heldout_stripe_dropout",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000026__occlusion_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the mustard bottle that is behind the orange.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_lemon_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "behind"
+          ],
+          "severity": 3,
+          "state_submode": "unsatisfied_relation",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "nearer_farther",
+      "family_id": "v2pilot_family_000027",
+      "language_template_bank_id": "language_v2_ood_heldout_templates",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "mango_01",
+          "ycb_apple_01",
+          "ycb_tomato_soup_can_01"
+        ],
+        "anchor_ids": [
+          "ycb_apple_01"
+        ],
+        "candidate_target_ids": [
+          "mango_01"
+        ],
+        "instruction": "Point out the mango; it lies nearer than relative to the apple.",
+        "occluder_id": "cube_blue_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than",
+        "valid_target_ids": [
+          "mango_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 395285949,
+        "language": 1205379631,
+        "layout": 779417379,
+        "occlusion": 2093776687,
+        "sensor": 230854039
+      },
+      "split": "pilot_only",
+      "state_submode": "too_small_or_out_of_view",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000027__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the mango; it lies nearer than relative to the apple.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "mango_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000027__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Which image location corresponds to the tomato soup can?",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "mango_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000027__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the apple; it lies farther than relative to the mango.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "farther_than"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000027__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the mango; it lies nearer than relative to the apple.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "mango_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_apple_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "mango_01"
+          ],
+          "capture_id": "v2pilot_family_000027__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Point out the mango; it lies nearer than relative to the apple.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_blue_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than"
+          ],
+          "severity": 2,
+          "state_submode": "too_small_or_out_of_view",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "mango_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": true,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "multi_anchor_depth_order",
+      "family_id": "v2pilot_family_000028",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "INSUFFICIENT_EVIDENCE",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_pink_01",
+          "cube_yellow_01",
+          "ycb_apple_01",
+          "ycb_lemon_01"
+        ],
+        "anchor_ids": [
+          "ycb_lemon_01",
+          "cube_yellow_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_apple_01"
+        ],
+        "instruction": "Locate the apple nearer to the camera than both the lemon and yellow cube.",
+        "occluder_id": "ycb_tomato_soup_can_01",
+        "reference_frame": "camera_color_optical_frame",
+        "relation": "nearer_than_both",
+        "valid_target_ids": [
+          "ycb_apple_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 2111348926,
+        "language": 75408959,
+        "layout": 1054191235,
+        "occlusion": 1382172303,
+        "sensor": 1943534600
+      },
+      "split": "pilot_only",
+      "state_submode": "cross_modal_conflict",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "ycb_lemon_01",
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000028__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the apple nearer to the camera than both the lemon and yellow cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "cross_modal_conflict",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000028__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_pink_01"
+          ],
+          "capture_id": "v2pilot_family_000028__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the pink cube.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_pink_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01",
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000028__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the apple nearer to the camera than both the lemon and yellow cube.",
+          "perturbation": {
+            "kind": "bias_noise",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "cross_modal_conflict",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "ycb_lemon_01",
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_apple_01"
+          ],
+          "capture_id": "v2pilot_family_000028__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the apple nearer to the camera than both the lemon and yellow cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "ycb_tomato_soup_can_01",
+            "severity": 2
+          },
+          "reference_frame": "camera_color_optical_frame",
+          "relations": [
+            "nearer_than_both"
+          ],
+          "severity": 2,
+          "state_submode": "cross_modal_conflict",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_apple_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "seen",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_ood_heldout",
+      "eligible_for_official_dataset": false,
+      "family_category": "relation_2d",
+      "family_id": "v2pilot_family_000029",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "FOUND",
+      "primary_scene": {
+        "active_scene_ids": [
+          "cube_yellow_01",
+          "ycb_mustard_bottle_01",
+          "ycb_orange_01"
+        ],
+        "anchor_ids": [
+          "cube_yellow_01"
+        ],
+        "candidate_target_ids": [
+          "ycb_orange_01"
+        ],
+        "instruction": "Locate the orange that is right of the yellow cube.",
+        "occluder_id": "cube_blue_01",
+        "reference_frame": "image",
+        "relation": "right_of",
+        "valid_target_ids": [
+          "ycb_orange_01"
+        ]
+      },
+      "seed_bundle": {
+        "counterfactual": 143930326,
+        "language": 748342685,
+        "layout": 1755969397,
+        "occlusion": 932452938,
+        "sensor": 183312402
+      },
+      "split": "pilot_only",
+      "state_submode": "unique_visible_referent",
+      "variant_specs": [
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000029__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the orange that is right of the yellow cube.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "capture_id": "v2pilot_family_000029__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the mustard bottle.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_mustard_bottle_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "ycb_orange_01"
+          ],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "cube_yellow_01"
+          ],
+          "capture_id": "v2pilot_family_000029__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the yellow cube that is left of the orange.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "image",
+          "relations": [
+            "left_of"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "cube_yellow_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000029__clean_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange that is right of the yellow cube.",
+          "perturbation": {
+            "kind": "heldout_stripe_dropout",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 2,
+          "state_submode": "depth_invalid_or_corrupt",
+          "uncertainty_sources": [
+            "depth"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [
+            "cube_yellow_01"
+          ],
+          "answerability_state": "INSUFFICIENT_EVIDENCE",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_orange_01"
+          ],
+          "capture_id": "v2pilot_family_000029__occlusion_capture",
+          "expected_intervention": "REOBSERVE",
+          "instruction": "Locate the orange that is right of the yellow cube.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_blue_01",
+            "severity": 2
+          },
+          "reference_frame": "image",
+          "relations": [
+            "right_of"
+          ],
+          "severity": 2,
+          "state_submode": "occlusion",
+          "uncertainty_sources": [
+            "occlusion"
+          ],
+          "valid_target_ids": [
+            "ycb_orange_01"
+          ],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    },
+    {
+      "asset_pool": "test_ood_heldout",
+      "camera_bin_id": "camera_v2_iid",
+      "depth_dependent": false,
+      "depth_noise_generator_id": "depth_noise_v2_iid",
+      "eligible_for_official_dataset": false,
+      "family_category": "direct_grounding",
+      "family_id": "v2pilot_family_000030",
+      "language_template_bank_id": "language_v2_iid",
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "pilot_exclusion_policy": "NEVER_REUSE_ID_SEED_CAPTURE_LAYOUT_OR_SAMPLE_IN_OFFICIAL_DATASET",
+      "primary_answerability_stratum": "ABSENT",
+      "primary_scene": {
+        "active_scene_ids": [
+          "ycb_tomato_soup_can_01",
+          "ycb_tuna_fish_can_01"
+        ],
+        "anchor_ids": [],
+        "candidate_target_ids": [
+          "ycb_tuna_fish_can_01"
+        ],
+        "instruction": "Locate the tuna fish can.",
+        "occluder_id": "cube_purple_01",
+        "reference_frame": "object_semantics",
+        "relation": "direct",
+        "valid_target_ids": []
+      },
+      "seed_bundle": {
+        "counterfactual": 76129464,
+        "language": 1328621831,
+        "layout": 1050873137,
+        "occlusion": 2091283020,
+        "sensor": 962546513
+      },
+      "split": "pilot_only",
+      "state_submode": "anchor_absent",
+      "variant_specs": [
+        {
+          "anchor_ids": [],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tuna_fish_can_01"
+          ],
+          "capture_id": "v2pilot_family_000030__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the tuna fish can.",
+          "perturbation": {
+            "kind": "none",
+            "severity": 0
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 3,
+          "state_submode": "anchor_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "clean"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000030__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "semantic_swap",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "semantic_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "FOUND",
+          "answerable": true,
+          "candidate_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "capture_id": "v2pilot_family_000030__clean_capture",
+          "expected_intervention": "EXECUTE",
+          "instruction": "Locate the tomato soup can.",
+          "perturbation": {
+            "kind": "relation_inverse",
+            "severity": 1
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 0,
+          "state_submode": "unique_visible_referent",
+          "uncertainty_sources": [],
+          "valid_target_ids": [
+            "ycb_tomato_soup_can_01"
+          ],
+          "variant": "relation_counterfactual"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tuna_fish_can_01"
+          ],
+          "capture_id": "v2pilot_family_000030__clean_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the tuna fish can.",
+          "perturbation": {
+            "kind": "inversion_shift",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 3,
+          "state_submode": "anchor_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "depth_corruption"
+        },
+        {
+          "anchor_ids": [],
+          "answerability_state": "ABSENT",
+          "answerable": false,
+          "candidate_target_ids": [
+            "ycb_tuna_fish_can_01"
+          ],
+          "capture_id": "v2pilot_family_000030__occlusion_capture",
+          "expected_intervention": "ABSTAIN",
+          "instruction": "Locate the tuna fish can.",
+          "perturbation": {
+            "kind": "physical_occluder",
+            "occluder_id": "cube_purple_01",
+            "severity": 2
+          },
+          "reference_frame": "object_semantics",
+          "relations": [
+            "direct"
+          ],
+          "severity": 3,
+          "state_submode": "anchor_absent",
+          "uncertainty_sources": [
+            "semantic",
+            "relation"
+          ],
+          "valid_target_ids": [],
+          "variant": "occlusion_view_counterfactual"
+        }
+      ],
+      "variants": [
+        "clean",
+        "semantic_counterfactual",
+        "relation_counterfactual",
+        "depth_corruption",
+        "occlusion_view_counterfactual"
+      ]
+    }
+  ],
+  "family_count": 30,
+  "generator_version": "dataset_v2_pilot_generator_v1.2.0",
+  "protocol_id": "roborefer_dataset_v2_pilot_only",
+  "reserved_development_commitments": {
+    "all_seed_values_sha256": "0ffc2b8ac0e17b3a25f2a650c44f0925b654c0a4b72f23bd2b5cfc2fb5f78df7",
+    "assignment_commitment_sha256": "d6790084dab886bbca226c892256e0ee4ca86f9a51c6970b9c2c03b99bcbc2a2",
+    "family_ids_sha256": "0e8765aa4152cc76710aa57790e4c21732a807063042da5ffac9ba47a2aba79a"
+  },
+  "sample_count": 150,
+  "schema_version": 1,
+  "split": "pilot_only",
+  "status": "MATERIALIZED_STATIC_NOT_CAPTURED",
+  "variant_count_per_family": 5
+}

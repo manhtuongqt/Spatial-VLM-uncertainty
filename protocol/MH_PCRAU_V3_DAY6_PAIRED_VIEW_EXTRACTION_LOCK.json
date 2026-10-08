@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_FEATURE_EXTRACTION",
+  "created_at_local": "2026-09-24",
+  "purpose": "Frozen h_spatial extraction for the paired second-view robustness diagnostic",
+  "bindings": [
+    {
+      "path": "protocol/MH_PCRAU_V3_DAY6_PAIRED_VIEW_STRESS_LOCK.json",
+      "sha256": "0b27540526d503f45e88585caeeafc3dbdd1c2c448ae9cd1995a05c68c613776"
+    },
+    {
+      "path": "workspace/mh_pcrau_v3/day6_paired_view_cache.py",
+      "sha256": "9be3b6c7987ad9eb8df32471294aad0a29cbcf4018a26c9d22c22094bb8238d0"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_INPUT_MANIFEST.jsonl",
+      "sha256": "08cf545f557b48a50d6f9f5bec9cf6590917c40fe14b36bdace3733a70b4b3a2"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_06/S1A_FEATURE_CACHE_MANIFEST.json",
+      "sha256": "60396fa3ac5fcb1eaeb1633e530494d8fa779eaa56674043e53f79044b342bc3"
+    }
+  ],
+  "precision_policy": "Canonical G0/Day-6: RGB/depth towers and projectors BF16; LLM and h_spatial FP32; eager attention; TF32 off",
+  "model_input_allowlist": [
+    "rgb_path",
+    "depth_view_path",
+    "instruction"
+  ],
+  "labels_or_oracle_passed_to_model": false,
+  "training_or_model_selection_allowed": false
+}

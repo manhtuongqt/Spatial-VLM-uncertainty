@@ -1,0 +1,55 @@
+{
+  "candidate_mapping": "SHA256(protocol_id|master_seed|family_index|candidate_index) first 63 bits",
+  "candidate_pool_size_per_family": 65536,
+  "candidate_ranking": "SHA256(protocol_id|rank|family_index|candidate_seed)",
+  "denied_seed_count": 1260,
+  "denied_source_artifacts": [
+    {
+      "path": "protocol/dataset_v2_pilot_capture_plan.json",
+      "sha256": "cc51a94daf820221981c58d2ce33e036e96e0f2f480bd913eaa914204f552f3d"
+    },
+    {
+      "path": "protocol/dataset_v2_development_capture_plan.json",
+      "sha256": "0bbcf09d9dda1ac9317a7e554ac925223951fdad9966b22b984f2b96cab47408"
+    }
+  ],
+  "master_seed": 210820261,
+  "official_reuse_forbidden": true,
+  "protocol_id": "roborefer_dataset_v2_1_relation_repair",
+  "repair_family_namespace": "v21repair_family_*",
+  "schema_version": 1,
+  "selected_seed_count": 30,
+  "selected_seeds": [
+    126164258409797903,
+    173203781987662215,
+    732089609355807747,
+    1368423581441196826,
+    1523876082479987004,
+    1610113124889619615,
+    1677116063571396992,
+    1970038644709287923,
+    2076185514362373362,
+    2382347701387779896,
+    2822193900477961086,
+    4218016936597560906,
+    4709920993650272280,
+    4993275134703455191,
+    5265708372376571130,
+    5278959200660043981,
+    5322626006322044677,
+    5741639651111920798,
+    5783885848279453329,
+    6001958925585453916,
+    6233317009728271102,
+    6326339571200553790,
+    6421456428393189548,
+    6650596723742944913,
+    7020199150879552980,
+    7125089323478055038,
+    7238503933206920899,
+    7443733477888187739,
+    8067912219662389476,
+    8549117969973025909
+  ],
+  "selection_rule": "first candidate passing locked collision, projection and predictor filters"
+}

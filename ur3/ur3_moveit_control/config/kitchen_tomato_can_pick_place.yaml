@@ -1,0 +1,50 @@
+fixed_pick_place:
+  ros__parameters:
+    # The manipulation runner samples the reset pose inside this calibrated
+    # workspace. Neither the sampled pose nor these bounds are published to
+    # RoboRefer; the perception path receives only wrist RGB-D.
+    initial_object_pose: [-0.165, 0.25, 0.050948, 0.0, 0.0, 0.0, 1.0]
+    randomize_object: true
+    random_x_range: [-0.180, -0.150]
+    random_y_range: [0.215, 0.285]
+    random_yaw_range: [-0.35, 0.35]
+
+    # Preserve a cluttered tabletop. The target pose is sampled separately;
+    # these entries only shuffle distractors between collision-safe slots.
+    randomize_scene_objects: true
+    scene_object_names: [ycb_sugar_box, ycb_tomato_soup_can, ycb_cracker_box,
+                         ycb_banana, ycb_orange]
+    scene_object_z_values: [0.088107, 0.050948, 0.106710, 0.018376, 0.037010]
+    scene_object_sizes_xy: [0.049450, 0.093374,
+                            0.067900, 0.067900,
+                            0.071720, 0.163986,
+                            0.108971, 0.178395,
+                            0.074020, 0.074020]
+    scene_object_slots_xy: [-0.43, 0.11, -0.43, 0.40,
+                            0.18, 0.12, 0.22, 0.50]
+
+    object_size: 0.068
+    source_keepout_object_size: 0.068
+    source_keepout_center_xy: [0.0, 0.38]
+    source_keepout_size_xy: [0.20, 0.25]
+    source_keepout_clearance_m: 0.005
+    workspace_max: [0.02, 0.46, 0.18]
+    detection_timeout: 120.0
+    perception_settle_time: 1.0
+
+    # Top grasp calibrated for the 68 mm diameter, 102 mm tall can proxy.
+    grasp_offset_xyz: [0.0, 0.0, 0.010]
+    approach_distance: 0.15
+    lift_distance: 0.16
+    gripper_staged_motion: true
+    gripper_closed_position: 0.032
+    gripper_max_effort: 50.0
+    gripper_close_stages: [0.055, 0.046, 0.038, 0.032]
+    gripper_open_stages: [0.038, 0.046, 0.055, 0.065]
+    gripper_stage_pause_sec: 0.05
+    settle_time: 0.25
+
+    industrial_linear_transfers: true
+    place_approach_distance: 0.17
+    place_offset_xyz: [0.0, 0.0, 0.10]
+    bin_place_slots_xy: [0.0, 0.0]

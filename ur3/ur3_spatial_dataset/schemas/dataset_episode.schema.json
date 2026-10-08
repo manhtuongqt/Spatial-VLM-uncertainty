@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uet.local/ur3/dataset_episode.schema.json",
+  "title": "UR3 reproducible episode",
+  "type": "object",
+  "required": ["schema_version", "run_id", "episode", "scene_id", "random_seed", "files", "result"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string"},
+    "episode": {"type": "integer", "minimum": 1},
+    "scene_id": {"type": "string"},
+    "random_seed": {"type": "integer"},
+    "files": {
+      "type": "object",
+      "required": ["rgb", "depth", "camera_info", "tf_snapshot", "joint_state", "ground_truth", "spatial_scene", "rosbag"]
+    },
+    "result": {"type": "object"}
+  }
+}

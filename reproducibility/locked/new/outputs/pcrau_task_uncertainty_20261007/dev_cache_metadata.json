@@ -1,0 +1,2402 @@
+[
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000001",
+    "prompt": "From the current image and depth pair, locate the apple that is right of the purple cube. Use the spatial relation exactly as stated. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000001__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000001",
+    "prompt": "Within this observed manipulation scene, locate the pink cube. Rely on the observed geometry when resolving the query. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000001__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000001",
+    "prompt": "From the registered color and depth frame, locate the purple cube that is left of the apple. Use the spatial relation exactly as stated. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000001__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000001",
+    "prompt": "For the presently visible object arrangement, locate the apple that is right of the purple cube. Do not assume evidence outside the frame. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000001__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000001",
+    "prompt": "In the present wrist-camera evidence, locate the apple that is right of the purple cube. Resolve the referent from this scene only. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000001__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000008",
+    "prompt": "For the current robot-camera observation, locate the fruit. Use the registered spatial evidence. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000008__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000008",
+    "prompt": "Using the observed tabletop configuration, locate the tomato soup can. Do not assume evidence outside the frame. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000008__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000008",
+    "prompt": "From the registered color and depth frame, locate the tomato soup can. Use the registered spatial evidence. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000008__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000008",
+    "prompt": "From the registered color and depth frame, locate the fruit. Use the spatial relation exactly as stated. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000008__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000008",
+    "prompt": "From the registered color and depth frame, locate the fruit. Base the localization on the current frame. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000008__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000010",
+    "prompt": "Within this observed manipulation scene, locate the apple. Resolve the referent from this scene only. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000010__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000010",
+    "prompt": "Within this observed manipulation scene, locate the pink cube. Use visible object and relation evidence. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000010__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000010",
+    "prompt": "Within the current metric-depth scene, locate the pink cube. Use visible object and relation evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000010__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000010",
+    "prompt": "Within the currently observed tabletop scene, locate the apple. Use the spatial relation exactly as stated. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000010__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000010",
+    "prompt": "Using only this synchronized RGB-D observation, locate the apple. Treat this frame as the complete current observation. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000010__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000017",
+    "prompt": "Using only this synchronized RGB-D observation, locate the mustard bottle between the yellow cube and green cube in camera depth. Do not assume evidence outside the frame. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000017__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000017",
+    "prompt": "Using the visual evidence in this frame, locate the tomato soup can. Use visible object and relation evidence. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000017__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000017",
+    "prompt": "Using the visual evidence in this frame, locate the tomato soup can. Base the localization on the current frame. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000017__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000017",
+    "prompt": "For the current robot-camera observation, locate the mustard bottle between the yellow cube and green cube in camera depth. Do not assume evidence outside the frame. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000017__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000017",
+    "prompt": "Within this observed manipulation scene, locate the mustard bottle between the yellow cube and green cube in camera depth. Resolve the referent from this scene only. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000017__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000020",
+    "prompt": "In this robot-mounted camera observation, locate the orange that is left of the apple. Resolve the referent from this scene only. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000020__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000020",
+    "prompt": "Using the current color-depth evidence, locate the mustard bottle. Base the localization on the current frame. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000020__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000020",
+    "prompt": "Using the current color-depth evidence, locate the apple that is right of the orange. Resolve the referent from this scene only. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000020__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000020",
+    "prompt": "Using the current color-depth evidence, locate the orange that is left of the apple. Use the spatial relation exactly as stated. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000020__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000020",
+    "prompt": "For the scene currently projected in the image, locate the orange that is left of the apple. Treat this frame as the complete current observation. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000020__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000028",
+    "prompt": "Using this registered workspace frame, locate the apple. Do not assume evidence outside the frame. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000028__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000028",
+    "prompt": "Using the visual evidence in this frame, locate the pink cube. Rely on the observed geometry when resolving the query. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000028__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000028",
+    "prompt": "Using the visual evidence in this frame, locate the pink cube. Use the spatial relation exactly as stated. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000028__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000028",
+    "prompt": "From the current image and depth pair, locate the apple. Treat this frame as the complete current observation. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000028__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000028",
+    "prompt": "Within the current metric-depth scene, locate the apple. Use visible object and relation evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000028__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000030",
+    "prompt": "From the current image and depth pair, locate the lemon that is left of the green cube. Use the spatial relation exactly as stated. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000030__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000030",
+    "prompt": "For the scene currently projected in the image, locate the tomato soup can. Treat this frame as the complete current observation. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000030__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000030",
+    "prompt": "Using only this synchronized RGB-D observation, locate the green cube that is right of the lemon. Resolve the referent from this scene only. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000030__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000030",
+    "prompt": "For this synchronized workspace observation, locate the lemon that is left of the green cube. Treat this frame as the complete current observation. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000030__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000030",
+    "prompt": "In the present wrist-camera evidence, locate the lemon that is left of the green cube. Resolve the referent from this scene only. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000030__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000032",
+    "prompt": "Using the observed tabletop configuration, locate the orange cube that is behind the orange. Resolve the referent from this scene only. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000032__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000032",
+    "prompt": "From this evidence-limited camera view, locate the mustard bottle. Rely on the observed geometry when resolving the query. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000032__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000032",
+    "prompt": "In the present registered sensor view, locate the orange that is front of the orange cube. Do not assume evidence outside the frame. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000032__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000032",
+    "prompt": "Using the observed tabletop configuration, locate the orange cube that is behind the orange. Use visible object and relation evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000032__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000032",
+    "prompt": "From this evidence-limited camera view, locate the orange cube that is behind the orange. Base the localization on the current frame. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000032__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000033",
+    "prompt": "From this evidence-limited camera view, locate the blue cube between the apple and lemon in camera depth. Use visible object and relation evidence. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000033__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000033",
+    "prompt": "Using this registered workspace frame, locate the tomato soup can. Use visible object and relation evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000033__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000033",
+    "prompt": "Using the current color-depth evidence, locate the tomato soup can. Rely on the observed geometry when resolving the query. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000033__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000033",
+    "prompt": "From the current image and depth pair, locate the blue cube between the apple and lemon in camera depth. Do not assume evidence outside the frame. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000033__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000033",
+    "prompt": "For the current robot-camera observation, locate the blue cube between the apple and lemon in camera depth. Use the spatial relation exactly as stated. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000033__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000037",
+    "prompt": "Using the current color-depth evidence, locate the apple that is front of the purple cube. Base the localization on the current frame. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000037__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000037",
+    "prompt": "For the presently visible object arrangement, locate the pink cube. Treat this frame as the complete current observation. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000037__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000037",
+    "prompt": "Using the current color-depth evidence, locate the purple cube that is behind the apple. Rely on the observed geometry when resolving the query. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000037__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000037",
+    "prompt": "Within the currently observed tabletop scene, locate the apple that is front of the purple cube. Use the spatial relation exactly as stated. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000037__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000037",
+    "prompt": "From the current image and depth pair, locate the apple that is front of the purple cube. Base the localization on the current frame. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000037__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000042",
+    "prompt": "Within this observed manipulation scene, locate the blue cube that is left of the green cube. Use the spatial relation exactly as stated. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000042__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000042",
+    "prompt": "From the scene now visible to the wrist camera, locate the tomato soup can. Do not assume evidence outside the frame. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000042__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000042",
+    "prompt": "Using the visual evidence in this frame, locate the green cube that is right of the blue cube. Base the localization on the current frame. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000042__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000042",
+    "prompt": "From the current image and depth pair, locate the blue cube that is left of the green cube. Base the localization on the current frame. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000042__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000042",
+    "prompt": "Using this registered workspace frame, locate the blue cube that is left of the green cube. Do not assume evidence outside the frame. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000042__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000043",
+    "prompt": "From the registered color and depth frame, locate the tomato soup can between the purple cube and orange in camera depth. Use visible object and relation evidence. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000043__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000043",
+    "prompt": "Based on the visible RGB-D frame, locate the pink cube. Rely on the observed geometry when resolving the query. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000043__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000043",
+    "prompt": "Within the currently observed tabletop scene, locate the pink cube. Use the spatial relation exactly as stated. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000043__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000043",
+    "prompt": "Within the current metric-depth scene, locate the tomato soup can between the purple cube and orange in camera depth. Use the spatial relation exactly as stated. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000043__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000043",
+    "prompt": "For the current robot-camera observation, locate the tomato soup can between the purple cube and orange in camera depth. Resolve the referent from this scene only. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000043__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000047",
+    "prompt": "From this evidence-limited camera view, locate the orange that is nearer than the yellow cube. Use the registered spatial evidence. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000047__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000047",
+    "prompt": "For this synchronized workspace observation, locate the mustard bottle. Use visible object and relation evidence. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000047__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000047",
+    "prompt": "In the camera frame available for this query, locate the yellow cube that is farther than the orange. Base the localization on the current frame. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000047__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000047",
+    "prompt": "Within the current metric-depth scene, locate the orange that is nearer than the yellow cube. Rely on the observed geometry when resolving the query. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000047__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000047",
+    "prompt": "Using this registered workspace frame, locate the orange that is nearer than the yellow cube. Resolve the referent from this scene only. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000047__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000048",
+    "prompt": "Within this observed manipulation scene, locate the lemon. Use the spatial relation exactly as stated. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000048__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000048",
+    "prompt": "In this robot-mounted camera observation, locate the tomato soup can. Do not assume evidence outside the frame. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000048__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000048",
+    "prompt": "Considering the visible scene evidence alone, locate the tomato soup can. Treat this frame as the complete current observation. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000048__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000048",
+    "prompt": "For the presently visible object arrangement, locate the lemon. Treat this frame as the complete current observation. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000048__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000048",
+    "prompt": "From the registered color and depth frame, locate the lemon. Do not assume evidence outside the frame. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000048__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000052",
+    "prompt": "Using this registered workspace frame, locate the tomato soup can that is front of the lemon. Resolve the referent from this scene only. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000052__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000052",
+    "prompt": "Within the current metric-depth scene, locate the pink cube. Use the spatial relation exactly as stated. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000052__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000052",
+    "prompt": "Using the current color-depth evidence, locate the lemon that is behind the tomato soup can. Resolve the referent from this scene only. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000052__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000052",
+    "prompt": "Within the camera evidence now available, locate the tomato soup can that is front of the lemon. Rely on the observed geometry when resolving the query. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000052__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000052",
+    "prompt": "Within the camera evidence now available, locate the tomato soup can that is front of the lemon. Use visible object and relation evidence. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000052__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000053",
+    "prompt": "In the camera frame available for this query, locate the mustard bottle that is front of the yellow cube. Resolve the referent from this scene only. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000053__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000053",
+    "prompt": "From the registered color and depth frame, locate the tomato soup can. Base the localization on the current frame. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000053__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000053",
+    "prompt": "Within the current metric-depth scene, locate the yellow cube that is behind the mustard bottle. Use visible object and relation evidence. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000053__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000053",
+    "prompt": "From this evidence-limited camera view, locate the mustard bottle that is front of the yellow cube. Use the spatial relation exactly as stated. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000053__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000053",
+    "prompt": "Using only this synchronized RGB-D observation, locate the mustard bottle that is front of the yellow cube. Use visible object and relation evidence. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000053__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000056",
+    "prompt": "For the presently visible object arrangement, locate the orange that is farther than the apple. Treat this frame as the complete current observation. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000056__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000056",
+    "prompt": "For the presently visible object arrangement, locate the mustard bottle. Treat this frame as the complete current observation. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000056__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000056",
+    "prompt": "Within the current metric-depth scene, locate the apple that is nearer than the orange. Do not assume evidence outside the frame. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000056__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000056",
+    "prompt": "Using the visual evidence in this frame, locate the orange that is farther than the apple. Do not assume evidence outside the frame. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000056__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000056",
+    "prompt": "Based on the visible RGB-D frame, locate the orange that is farther than the apple. Do not assume evidence outside the frame. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000056__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000057",
+    "prompt": "Using only this synchronized RGB-D observation, locate the lemon. Use visible object and relation evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000057__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000057",
+    "prompt": "From the scene now visible to the wrist camera, locate the tomato soup can. Resolve the referent from this scene only. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000057__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000057",
+    "prompt": "Within the currently observed tabletop scene, locate the tomato soup can. Do not assume evidence outside the frame. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000057__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000057",
+    "prompt": "Within the current metric-depth scene, locate the lemon. Base the localization on the current frame. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000057__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000057",
+    "prompt": "Within the currently observed tabletop scene, locate the lemon. Base the localization on the current frame. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000057__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000070",
+    "prompt": "In the camera frame available for this query, locate the tomato soup can that is farther than the lemon. Treat this frame as the complete current observation. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000070__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000070",
+    "prompt": "For this synchronized workspace observation, locate the pink cube. Use visible object and relation evidence. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000070__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000070",
+    "prompt": "Within the currently observed tabletop scene, locate the lemon that is nearer than the tomato soup can. Resolve the referent from this scene only. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000070__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000070",
+    "prompt": "From this evidence-limited camera view, locate the tomato soup can that is farther than the lemon. Do not assume evidence outside the frame. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000070__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000070",
+    "prompt": "From this evidence-limited camera view, locate the tomato soup can that is farther than the lemon. Use the spatial relation exactly as stated. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000070__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000081",
+    "prompt": "In this robot-mounted camera observation, locate the mango that is right of the apple. Use the spatial relation exactly as stated. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000081__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000081",
+    "prompt": "Within the current metric-depth scene, locate the tomato soup can. Treat this frame as the complete current observation. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000081__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000081",
+    "prompt": "From the registered color and depth frame, locate the apple that is left of the mango. Treat this frame as the complete current observation. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000081__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000081",
+    "prompt": "From the registered color and depth frame, locate the mango that is right of the apple. Base the localization on the current frame. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000081__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000081",
+    "prompt": "Within the camera evidence now available, locate the mango that is right of the apple. Use the spatial relation exactly as stated. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000081__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000084",
+    "prompt": "In this robot-mounted camera observation, locate the lemon that is front of the green cube. Rely on the observed geometry when resolving the query. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000084__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000084",
+    "prompt": "For the scene currently projected in the image, locate the tomato soup can. Use visible object and relation evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000084__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000084",
+    "prompt": "Using the observed tabletop configuration, locate the green cube that is behind the lemon. Resolve the referent from this scene only. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000084__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000084",
+    "prompt": "In the camera frame available for this query, locate the lemon that is front of the green cube. Base the localization on the current frame. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000084__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000084",
+    "prompt": "Within the camera evidence now available, locate the lemon that is front of the green cube. Resolve the referent from this scene only. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000084__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000095",
+    "prompt": "In this metric RGB-D workspace view, locate the orange cube. Rely on the observed geometry when resolving the query. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000095__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000095",
+    "prompt": "Based on the visible RGB-D frame, locate the mustard bottle. Resolve the referent from this scene only. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000095__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000095",
+    "prompt": "Within this observed manipulation scene, locate the mustard bottle. Resolve the referent from this scene only. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000095__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000095",
+    "prompt": "For the scene currently projected in the image, locate the orange cube. Rely on the observed geometry when resolving the query. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000095__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000095",
+    "prompt": "In this robot-mounted camera observation, locate the orange cube. Use visible object and relation evidence. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000095__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000105",
+    "prompt": "Within the currently observed tabletop scene, locate the blue cube that is nearer than the apple. Use visible object and relation evidence. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000105__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000105",
+    "prompt": "In this robot-mounted camera observation, locate the tomato soup can. Use the registered spatial evidence. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000105__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000105",
+    "prompt": "In the present registered sensor view, locate the apple that is farther than the blue cube. Use visible object and relation evidence. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000105__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000105",
+    "prompt": "Based on the visible RGB-D frame, locate the blue cube that is nearer than the apple. Resolve the referent from this scene only. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000105__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000105",
+    "prompt": "In the present wrist-camera evidence, locate the blue cube that is nearer than the apple. Base the localization on the current frame. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000105__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000110",
+    "prompt": "From the registered color and depth frame, locate the orange that is front of the apple. Resolve the referent from this scene only. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000110__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000110",
+    "prompt": "From the registered color and depth frame, locate the mustard bottle. Use the spatial relation exactly as stated. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000110__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000110",
+    "prompt": "For the presently visible object arrangement, locate the apple that is behind the orange. Base the localization on the current frame. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000110__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000110",
+    "prompt": "For the current robot-camera observation, locate the orange that is front of the apple. Treat this frame as the complete current observation. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000110__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000110",
+    "prompt": "Considering the visible scene evidence alone, locate the orange that is front of the apple. Treat this frame as the complete current observation. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000110__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000123",
+    "prompt": "Using only this synchronized RGB-D observation, locate the blue cube between the apple and lemon in camera depth. Rely on the observed geometry when resolving the query. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000123__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000123",
+    "prompt": "In this metric RGB-D workspace view, locate the tomato soup can. Base the localization on the current frame. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000123__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000123",
+    "prompt": "In this metric RGB-D workspace view, locate the tomato soup can. Base the localization on the current frame. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000123__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000123",
+    "prompt": "Using the visual evidence in this frame, locate the blue cube between the apple and lemon in camera depth. Do not assume evidence outside the frame. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000123__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000123",
+    "prompt": "In the present registered sensor view, locate the blue cube between the apple and lemon in camera depth. Base the localization on the current frame. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000123__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000124",
+    "prompt": "Within the camera evidence now available, locate the tomato soup can that is behind the lemon. Rely on the observed geometry when resolving the query. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000124__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000124",
+    "prompt": "In the present registered sensor view, locate the pink cube. Treat this frame as the complete current observation. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000124__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000124",
+    "prompt": "Using this registered workspace frame, locate the lemon that is front of the tomato soup can. Do not assume evidence outside the frame. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000124__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000124",
+    "prompt": "Within this observed manipulation scene, locate the tomato soup can that is behind the lemon. Rely on the observed geometry when resolving the query. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000124__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000124",
+    "prompt": "Considering the visible scene evidence alone, locate the tomato soup can that is behind the lemon. Rely on the observed geometry when resolving the query. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000124__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000126",
+    "prompt": "In the camera frame available for this query, locate the fruit that is behind the green cube. Use the spatial relation exactly as stated. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000126__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000126",
+    "prompt": "For this synchronized workspace observation, locate the tomato soup can. Use visible object and relation evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000126__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000126",
+    "prompt": "Considering the visible scene evidence alone, locate the green cube that is front of the orange. Do not assume evidence outside the frame. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000126__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000126",
+    "prompt": "Within the camera evidence now available, locate the fruit that is behind the green cube. Resolve the referent from this scene only. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000126__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000126",
+    "prompt": "In this metric RGB-D workspace view, locate the fruit that is behind the green cube. Resolve the referent from this scene only. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000126__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000131",
+    "prompt": "Using the current color-depth evidence, locate the orange cube that is front of the yellow cube. Rely on the observed geometry when resolving the query. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000131__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000131",
+    "prompt": "Based on the visible RGB-D frame, locate the mustard bottle. Resolve the referent from this scene only. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000131__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000131",
+    "prompt": "Within this observed manipulation scene, locate the yellow cube that is behind the orange cube. Use the spatial relation exactly as stated. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000131__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000131",
+    "prompt": "Using the observed tabletop configuration, locate the orange cube that is front of the yellow cube. Use the spatial relation exactly as stated. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000131__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000131",
+    "prompt": "In the camera frame available for this query, locate the orange cube that is front of the yellow cube. Base the localization on the current frame. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000131__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000136",
+    "prompt": "In the present registered sensor view, locate the apple that is farther than the lemon. Treat this frame as the complete current observation. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000136__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000136",
+    "prompt": "Using only this synchronized RGB-D observation, locate the pink cube. Use the registered spatial evidence. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000136__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000136",
+    "prompt": "In this robot-mounted camera observation, locate the lemon that is nearer than the apple. Use the spatial relation exactly as stated. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000136__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000136",
+    "prompt": "Within this observed manipulation scene, locate the apple that is farther than the lemon. Do not assume evidence outside the frame. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000136__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000136",
+    "prompt": "In the present wrist-camera evidence, locate the apple that is farther than the lemon. Use the registered spatial evidence. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000136__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000149",
+    "prompt": "In the present registered sensor view, locate the orange cube that is front of the yellow cube. Rely on the observed geometry when resolving the query. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000149__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000149",
+    "prompt": "For the current robot-camera observation, locate the mustard bottle. Resolve the referent from this scene only. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000149__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000149",
+    "prompt": "For the scene currently projected in the image, locate the yellow cube that is behind the orange cube. Use visible object and relation evidence. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000149__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000149",
+    "prompt": "For the presently visible object arrangement, locate the orange cube that is front of the yellow cube. Do not assume evidence outside the frame. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000149__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000149",
+    "prompt": "In this robot-mounted camera observation, locate the orange cube that is front of the yellow cube. Rely on the observed geometry when resolving the query. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000149__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000151",
+    "prompt": "For this synchronized workspace observation, locate the tomato soup can that is front of the purple cube. Treat this frame as the complete current observation. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000151__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000151",
+    "prompt": "Using the current color-depth evidence, locate the pink cube. Use the registered spatial evidence. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000151__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000151",
+    "prompt": "Using only this synchronized RGB-D observation, locate the purple cube that is behind the tomato soup can. Do not assume evidence outside the frame. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000151__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000151",
+    "prompt": "For the presently visible object arrangement, locate the tomato soup can that is front of the purple cube. Treat this frame as the complete current observation. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000151__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000151",
+    "prompt": "For the presently visible object arrangement, locate the tomato soup can that is front of the purple cube. Treat this frame as the complete current observation. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000151__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000154",
+    "prompt": "Using the observed tabletop configuration, locate the apple that is left of the lemon. Use visible object and relation evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000154__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000154",
+    "prompt": "In the present wrist-camera evidence, locate the pink cube. Use visible object and relation evidence. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000154__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000154",
+    "prompt": "Within the current metric-depth scene, locate the lemon that is right of the apple. Resolve the referent from this scene only. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000154__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000154",
+    "prompt": "Using the observed tabletop configuration, locate the apple that is left of the lemon. Rely on the observed geometry when resolving the query. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000154__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000154",
+    "prompt": "For the presently visible object arrangement, locate the apple that is left of the lemon. Resolve the referent from this scene only. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000154__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000161",
+    "prompt": "From the registered color and depth frame, locate the mustard bottle between the yellow cube and green cube in camera depth. Rely on the observed geometry when resolving the query. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000161__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000161",
+    "prompt": "From this evidence-limited camera view, locate the tomato soup can. Treat this frame as the complete current observation. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000161__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000161",
+    "prompt": "From the current image and depth pair, locate the tomato soup can. Base the localization on the current frame. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000161__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000161",
+    "prompt": "Using the observed tabletop configuration, locate the mustard bottle between the yellow cube and green cube in camera depth. Base the localization on the current frame. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000161__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000161",
+    "prompt": "From the registered color and depth frame, locate the mustard bottle between the yellow cube and green cube in camera depth. Use the spatial relation exactly as stated. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000161__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000162",
+    "prompt": "For the scene currently projected in the image, locate the fruit that is front of the green cube. Base the localization on the current frame. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000162__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000162",
+    "prompt": "Based on the visible RGB-D frame, locate the tomato soup can. Use the spatial relation exactly as stated. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000162__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000162",
+    "prompt": "Based on the visible RGB-D frame, locate the green cube that is behind the orange. Treat this frame as the complete current observation. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000162__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000162",
+    "prompt": "From the current image and depth pair, locate the fruit that is front of the green cube. Use the spatial relation exactly as stated. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000162__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000162",
+    "prompt": "For this synchronized workspace observation, locate the fruit that is front of the green cube. Rely on the observed geometry when resolving the query. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000162__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000164",
+    "prompt": "Using the current color-depth evidence, locate the fruit that is farther than the apple. Treat this frame as the complete current observation. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000164__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000164",
+    "prompt": "Using this registered workspace frame, locate the mustard bottle. Treat this frame as the complete current observation. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000164__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000164",
+    "prompt": "In the camera frame available for this query, locate the apple that is nearer than the lemon. Do not assume evidence outside the frame. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000164__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000164",
+    "prompt": "From the registered color and depth frame, locate the fruit that is farther than the apple. Base the localization on the current frame. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000164__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000164",
+    "prompt": "In the camera frame available for this query, locate the fruit that is farther than the apple. Use the registered spatial evidence. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000164__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000172",
+    "prompt": "Using the visual evidence in this frame, locate the apple that is farther than the lemon. Use the registered spatial evidence. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000172__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000172",
+    "prompt": "In this metric RGB-D workspace view, locate the pink cube. Resolve the referent from this scene only. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000172__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000172",
+    "prompt": "Within the camera evidence now available, locate the lemon that is nearer than the apple. Treat this frame as the complete current observation. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000172__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000172",
+    "prompt": "Using the current color-depth evidence, locate the apple that is farther than the lemon. Do not assume evidence outside the frame. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000172__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000172",
+    "prompt": "In the camera frame available for this query, locate the apple that is farther than the lemon. Use visible object and relation evidence. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000172__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000176",
+    "prompt": "Within the current metric-depth scene, locate the orange cube nearer to the camera than both the orange and apple. Use visible object and relation evidence. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000176__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000176",
+    "prompt": "Using the current color-depth evidence, locate the mustard bottle. Use the registered spatial evidence. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000176__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000176",
+    "prompt": "From the registered color and depth frame, locate the mustard bottle. Use the registered spatial evidence. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000176__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000176",
+    "prompt": "For the current robot-camera observation, locate the orange cube nearer to the camera than both the orange and apple. Treat this frame as the complete current observation. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000176__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000176",
+    "prompt": "In the present wrist-camera evidence, locate the orange cube nearer to the camera than both the orange and apple. Use visible object and relation evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000176__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000178",
+    "prompt": "From the scene now visible to the wrist camera, locate the tomato soup can that is left of the lemon. Use the registered spatial evidence. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000178__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000178",
+    "prompt": "In the present registered sensor view, locate the pink cube. Treat this frame as the complete current observation. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000178__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000178",
+    "prompt": "Using only this synchronized RGB-D observation, locate the lemon that is right of the tomato soup can. Use the spatial relation exactly as stated. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000178__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000178",
+    "prompt": "For the current robot-camera observation, locate the tomato soup can that is left of the lemon. Do not assume evidence outside the frame. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000178__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000178",
+    "prompt": "In the present wrist-camera evidence, locate the tomato soup can that is left of the lemon. Use the registered spatial evidence. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000178__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000184",
+    "prompt": "For the current robot-camera observation, locate the mug nearer to the camera than both the lemon and yellow cube. Rely on the observed geometry when resolving the query. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000184__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000184",
+    "prompt": "Using only this synchronized RGB-D observation, locate the pink cube. Treat this frame as the complete current observation. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000184__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000184",
+    "prompt": "From the current image and depth pair, locate the pink cube. Resolve the referent from this scene only. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000184__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000184",
+    "prompt": "In this metric RGB-D workspace view, locate the mug nearer to the camera than both the lemon and yellow cube. Use the spatial relation exactly as stated. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000184__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000184",
+    "prompt": "For the scene currently projected in the image, locate the mug nearer to the camera than both the lemon and yellow cube. Rely on the observed geometry when resolving the query. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000184__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000190",
+    "prompt": "Within the camera evidence now available, locate the apple. Use the registered spatial evidence. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000190__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000190",
+    "prompt": "Using the observed tabletop configuration, locate the pink cube. Treat this frame as the complete current observation. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000190__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000190",
+    "prompt": "From this evidence-limited camera view, locate the pink cube. Use the registered spatial evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000190__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000190",
+    "prompt": "In this metric RGB-D workspace view, locate the apple. Rely on the observed geometry when resolving the query. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000190__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000190",
+    "prompt": "From this evidence-limited camera view, locate the apple. Base the localization on the current frame. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000190__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000202",
+    "prompt": "In the camera frame available for this query, locate the mug that is behind the lemon. Treat this frame as the complete current observation. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000202__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000202",
+    "prompt": "For the current robot-camera observation, locate the pink cube. Use the registered spatial evidence. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000202__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000202",
+    "prompt": "For the current robot-camera observation, locate the lemon that is front of the mug. Use the registered spatial evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000202__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000202",
+    "prompt": "In this robot-mounted camera observation, locate the mug that is behind the lemon. Treat this frame as the complete current observation. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000202__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000202",
+    "prompt": "Within the camera evidence now available, locate the mug that is behind the lemon. Base the localization on the current frame. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000202__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000207",
+    "prompt": "From the current image and depth pair, locate the mango between the apple and lemon in camera depth. Use the spatial relation exactly as stated. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000207__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000207",
+    "prompt": "Using the current color-depth evidence, locate the tomato soup can. Base the localization on the current frame. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000207__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000207",
+    "prompt": "Using the observed tabletop configuration, locate the tomato soup can. Treat this frame as the complete current observation. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000207__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000207",
+    "prompt": "Using only this synchronized RGB-D observation, locate the mango between the apple and lemon in camera depth. Use the spatial relation exactly as stated. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000207__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000207",
+    "prompt": "For the scene currently projected in the image, locate the mango between the apple and lemon in camera depth. Treat this frame as the complete current observation. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000207__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000213",
+    "prompt": "Considering the visible scene evidence alone, locate the blue cube between the apple and lemon in camera depth. Base the localization on the current frame. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000213__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000213",
+    "prompt": "Using the observed tabletop configuration, locate the tomato soup can. Use the spatial relation exactly as stated. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000213__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000213",
+    "prompt": "Using the visual evidence in this frame, locate the tomato soup can. Use the registered spatial evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000213__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000213",
+    "prompt": "For the presently visible object arrangement, locate the blue cube between the apple and lemon in camera depth. Treat this frame as the complete current observation. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000213__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000213",
+    "prompt": "In the present wrist-camera evidence, locate the blue cube between the apple and lemon in camera depth. Base the localization on the current frame. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000213__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000214",
+    "prompt": "In this robot-mounted camera observation, locate the tomato soup can that is front of the lemon. Treat this frame as the complete current observation. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000214__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000214",
+    "prompt": "From the registered color and depth frame, locate the pink cube. Do not assume evidence outside the frame. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000214__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000214",
+    "prompt": "From the scene now visible to the wrist camera, locate the lemon that is behind the tomato soup can. Use visible object and relation evidence. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000214__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000214",
+    "prompt": "In this robot-mounted camera observation, locate the tomato soup can that is front of the lemon. Use visible object and relation evidence. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000214__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000214",
+    "prompt": "Within the camera evidence now available, locate the tomato soup can that is front of the lemon. Use visible object and relation evidence. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000214__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000216",
+    "prompt": "From the current image and depth pair, locate the mango nearer to the camera than both the green cube and purple cube. Rely on the observed geometry when resolving the query. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000216__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000216",
+    "prompt": "Using the visual evidence in this frame, locate the tomato soup can. Rely on the observed geometry when resolving the query. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000216__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000216",
+    "prompt": "For the scene currently projected in the image, locate the tomato soup can. Treat this frame as the complete current observation. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000216__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000216",
+    "prompt": "Using the visual evidence in this frame, locate the mango nearer to the camera than both the green cube and purple cube. Use the spatial relation exactly as stated. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000216__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000216",
+    "prompt": "For the presently visible object arrangement, locate the mango nearer to the camera than both the green cube and purple cube. Use visible object and relation evidence. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000216__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000221",
+    "prompt": "In the camera frame available for this query, locate the fruit that is front of the yellow cube. Rely on the observed geometry when resolving the query. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000221__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000221",
+    "prompt": "In this metric RGB-D workspace view, locate the mustard bottle. Rely on the observed geometry when resolving the query. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000221__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000221",
+    "prompt": "Using only this synchronized RGB-D observation, locate the yellow cube that is behind the apple. Treat this frame as the complete current observation. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000221__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000221",
+    "prompt": "From the scene now visible to the wrist camera, locate the fruit that is front of the yellow cube. Rely on the observed geometry when resolving the query. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000221__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000221",
+    "prompt": "From the current image and depth pair, locate the fruit that is front of the yellow cube. Use the registered spatial evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000221__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000222",
+    "prompt": "From the registered color and depth frame, locate the blue cube. Use the registered spatial evidence. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000222__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000222",
+    "prompt": "For the presently visible object arrangement, locate the tomato soup can. Rely on the observed geometry when resolving the query. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000222__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000222",
+    "prompt": "Using only this synchronized RGB-D observation, locate the tomato soup can. Use visible object and relation evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000222__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000222",
+    "prompt": "Within the current metric-depth scene, locate the blue cube. Base the localization on the current frame. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000222__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000222",
+    "prompt": "In the present registered sensor view, locate the blue cube. Use visible object and relation evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000222__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000223",
+    "prompt": "Within the current metric-depth scene, locate the tomato soup can that is nearer than the purple cube. Resolve the referent from this scene only. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000223__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000223",
+    "prompt": "Using this registered workspace frame, locate the pink cube. Use visible object and relation evidence. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000223__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000223",
+    "prompt": "Using only this synchronized RGB-D observation, locate the purple cube that is farther than the tomato soup can. Resolve the referent from this scene only. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000223__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000223",
+    "prompt": "Based on the visible RGB-D frame, locate the tomato soup can that is nearer than the purple cube. Do not assume evidence outside the frame. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000223__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000223",
+    "prompt": "For the current robot-camera observation, locate the tomato soup can that is nearer than the purple cube. Treat this frame as the complete current observation. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000223__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000233",
+    "prompt": "For the presently visible object arrangement, locate the mustard bottle. Treat this frame as the complete current observation. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000233__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000233",
+    "prompt": "Based on the visible RGB-D frame, locate the tomato soup can. Resolve the referent from this scene only. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000233__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000233",
+    "prompt": "Using the visual evidence in this frame, locate the tomato soup can. Use visible object and relation evidence. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000233__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000233",
+    "prompt": "In this robot-mounted camera observation, locate the mustard bottle. Use visible object and relation evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000233__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000233",
+    "prompt": "From the current image and depth pair, locate the mustard bottle. Treat this frame as the complete current observation. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000233__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000241",
+    "prompt": "Using only this synchronized RGB-D observation, locate the tomato soup can that is right of the purple cube. Base the localization on the current frame. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000241__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000241",
+    "prompt": "For the scene currently projected in the image, locate the pink cube. Base the localization on the current frame. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000241__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000241",
+    "prompt": "Considering the visible scene evidence alone, locate the purple cube that is left of the tomato soup can. Use the registered spatial evidence. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000241__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000241",
+    "prompt": "Using the visual evidence in this frame, locate the tomato soup can that is right of the purple cube. Resolve the referent from this scene only. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000241__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000241",
+    "prompt": "Within the camera evidence now available, locate the tomato soup can that is right of the purple cube. Rely on the observed geometry when resolving the query. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000241__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000261",
+    "prompt": "Using the current color-depth evidence, locate the mango that is nearer than the apple. Resolve the referent from this scene only. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000261__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000261",
+    "prompt": "For the presently visible object arrangement, locate the tomato soup can. Use the registered spatial evidence. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000261__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000261",
+    "prompt": "Within this observed manipulation scene, locate the apple that is farther than the mango. Use visible object and relation evidence. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000261__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000261",
+    "prompt": "Using the current color-depth evidence, locate the mango that is nearer than the apple. Use the spatial relation exactly as stated. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000261__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000261",
+    "prompt": "Within the current metric-depth scene, locate the mango that is nearer than the apple. Use the spatial relation exactly as stated. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000261__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000274",
+    "prompt": "From the registered color and depth frame, locate the mug that is front of the lemon. Use the spatial relation exactly as stated. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000274__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000274",
+    "prompt": "Using the visual evidence in this frame, locate the pink cube. Use visible object and relation evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000274__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000274",
+    "prompt": "From this evidence-limited camera view, locate the lemon that is behind the mug. Do not assume evidence outside the frame. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000274__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000274",
+    "prompt": "From this evidence-limited camera view, locate the mug that is front of the lemon. Rely on the observed geometry when resolving the query. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000274__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000274",
+    "prompt": "From the registered color and depth frame, locate the mug that is front of the lemon. Treat this frame as the complete current observation. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000274__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000284",
+    "prompt": "From this evidence-limited camera view, locate the orange cube that is front of the orange. Do not assume evidence outside the frame. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000284__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000284",
+    "prompt": "From the registered color and depth frame, locate the mustard bottle. Use the spatial relation exactly as stated. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000284__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000284",
+    "prompt": "For this synchronized workspace observation, locate the orange that is behind the orange cube. Treat this frame as the complete current observation. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000284__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000284",
+    "prompt": "Within the camera evidence now available, locate the orange cube that is front of the orange. Use visible object and relation evidence. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000284__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000284",
+    "prompt": "For this synchronized workspace observation, locate the orange cube that is front of the orange. Treat this frame as the complete current observation. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000284__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000295",
+    "prompt": "For the presently visible object arrangement, locate the fruit that is front of the purple cube. Do not assume evidence outside the frame. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000295__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000295",
+    "prompt": "Using this registered workspace frame, locate the pink cube. Treat this frame as the complete current observation. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000295__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000295",
+    "prompt": "In the camera frame available for this query, locate the purple cube that is behind the orange. Base the localization on the current frame. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000295__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000295",
+    "prompt": "In the present wrist-camera evidence, locate the fruit that is front of the purple cube. Base the localization on the current frame. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000295__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000295",
+    "prompt": "Within the camera evidence now available, locate the fruit that is front of the purple cube. Rely on the observed geometry when resolving the query. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000295__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000298",
+    "prompt": "Using this registered workspace frame, locate the apple that is farther than the lemon. Treat this frame as the complete current observation. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000298__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000298",
+    "prompt": "Using the observed tabletop configuration, locate the pink cube. Use visible object and relation evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000298__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000298",
+    "prompt": "From the current image and depth pair, locate the lemon that is nearer than the apple. Treat this frame as the complete current observation. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000298__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000298",
+    "prompt": "Using only this synchronized RGB-D observation, locate the apple that is farther than the lemon. Resolve the referent from this scene only. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000298__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000298",
+    "prompt": "For the scene currently projected in the image, locate the apple that is farther than the lemon. Treat this frame as the complete current observation. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000298__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000306",
+    "prompt": "In this metric RGB-D workspace view, locate the mango that is front of the green cube. Use the spatial relation exactly as stated. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000306__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000306",
+    "prompt": "Based on the visible RGB-D frame, locate the tomato soup can. Use visible object and relation evidence. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000306__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000306",
+    "prompt": "For the presently visible object arrangement, locate the green cube that is behind the mango. Use visible object and relation evidence. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000306__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000306",
+    "prompt": "Using this registered workspace frame, locate the mango that is front of the green cube. Do not assume evidence outside the frame. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000306__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000306",
+    "prompt": "Using the current color-depth evidence, locate the mango that is front of the green cube. Use visible object and relation evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000306__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000309",
+    "prompt": "In the camera frame available for this query, locate the lemon that is nearer than the apple. Use visible object and relation evidence. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000309__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000309",
+    "prompt": "In this metric RGB-D workspace view, locate the tomato soup can. Use visible object and relation evidence. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000309__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000309",
+    "prompt": "Using the observed tabletop configuration, locate the apple that is farther than the lemon. Use the spatial relation exactly as stated. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000309__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000309",
+    "prompt": "From the registered color and depth frame, locate the lemon that is nearer than the apple. Resolve the referent from this scene only. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000309__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000309",
+    "prompt": "Using the current color-depth evidence, locate the lemon that is nearer than the apple. Use the spatial relation exactly as stated. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000309__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000314",
+    "prompt": "Using the current color-depth evidence, locate the fruit that is front of the apple. Base the localization on the current frame. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000314__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000314",
+    "prompt": "Using the observed tabletop configuration, locate the tomato soup can. Base the localization on the current frame. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000314__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000314",
+    "prompt": "Using the current color-depth evidence, locate the apple that is behind the orange. Rely on the observed geometry when resolving the query. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000314__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000314",
+    "prompt": "Within this observed manipulation scene, locate the fruit that is front of the apple. Rely on the observed geometry when resolving the query. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000314__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000314",
+    "prompt": "In the present wrist-camera evidence, locate the fruit that is front of the apple. Use the spatial relation exactly as stated. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000314__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000322",
+    "prompt": "In this metric RGB-D workspace view, locate the tomato soup can that is farther than the lemon. Use the spatial relation exactly as stated. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000322__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000322",
+    "prompt": "Using only this synchronized RGB-D observation, locate the pink cube. Rely on the observed geometry when resolving the query. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000322__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000322",
+    "prompt": "Based on the visible RGB-D frame, locate the lemon that is nearer than the tomato soup can. Use visible object and relation evidence. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000322__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000322",
+    "prompt": "From this evidence-limited camera view, locate the tomato soup can that is farther than the lemon. Use visible object and relation evidence. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000322__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000322",
+    "prompt": "In this metric RGB-D workspace view, locate the tomato soup can that is farther than the lemon. Use the spatial relation exactly as stated. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000322__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000323",
+    "prompt": "From this evidence-limited camera view, locate the fruit that is nearer than the yellow cube. Resolve the referent from this scene only. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000323__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000323",
+    "prompt": "Within the currently observed tabletop scene, locate the tomato soup can. Use the spatial relation exactly as stated. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000323__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000323",
+    "prompt": "In the present wrist-camera evidence, locate the yellow cube that is farther than the orange. Resolve the referent from this scene only. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000323__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000323",
+    "prompt": "For this synchronized workspace observation, locate the fruit that is nearer than the yellow cube. Use the registered spatial evidence. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000323__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000323",
+    "prompt": "From this evidence-limited camera view, locate the fruit that is nearer than the yellow cube. Resolve the referent from this scene only. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000323__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000325",
+    "prompt": "For this synchronized workspace observation, locate the apple that is front of the purple cube. Rely on the observed geometry when resolving the query. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000325__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000325",
+    "prompt": "In the present wrist-camera evidence, locate the pink cube. Treat this frame as the complete current observation. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000325__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000325",
+    "prompt": "Within the current metric-depth scene, locate the purple cube that is behind the apple. Rely on the observed geometry when resolving the query. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000325__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000325",
+    "prompt": "Considering the visible scene evidence alone, locate the apple that is front of the purple cube. Treat this frame as the complete current observation. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000325__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000325",
+    "prompt": "Considering the visible scene evidence alone, locate the apple that is front of the purple cube. Treat this frame as the complete current observation. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000325__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000334",
+    "prompt": "Based on the visible RGB-D frame, locate the fruit nearer to the camera than both the lemon and yellow cube. Resolve the referent from this scene only. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000334__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000334",
+    "prompt": "From the current image and depth pair, locate the pink cube. Use visible object and relation evidence. Report the corresponding point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000334__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000334",
+    "prompt": "In this metric RGB-D workspace view, locate the pink cube. Base the localization on the current frame. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000334__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000334",
+    "prompt": "Based on the visible RGB-D frame, locate the fruit nearer to the camera than both the lemon and yellow cube. Treat this frame as the complete current observation. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000334__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000334",
+    "prompt": "For this synchronized workspace observation, locate the fruit nearer to the camera than both the lemon and yellow cube. Do not assume evidence outside the frame. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000334__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000336",
+    "prompt": "Based on the visible RGB-D frame, locate the lemon that is farther than the green cube. Base the localization on the current frame. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000336__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000336",
+    "prompt": "In the camera frame available for this query, locate the tomato soup can. Resolve the referent from this scene only. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000336__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000336",
+    "prompt": "Based on the visible RGB-D frame, locate the green cube that is nearer than the lemon. Rely on the observed geometry when resolving the query. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000336__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000336",
+    "prompt": "Within the camera evidence now available, locate the lemon that is farther than the green cube. Do not assume evidence outside the frame. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000336__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000336",
+    "prompt": "From the current image and depth pair, locate the lemon that is farther than the green cube. Use visible object and relation evidence. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000336__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000341",
+    "prompt": "In the present wrist-camera evidence, locate the mustard bottle that is front of the yellow cube. Use visible object and relation evidence. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000341__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000341",
+    "prompt": "From this evidence-limited camera view, locate the tomato soup can. Use the spatial relation exactly as stated. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000341__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000341",
+    "prompt": "For the presently visible object arrangement, locate the yellow cube that is behind the mustard bottle. Base the localization on the current frame. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000341__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000341",
+    "prompt": "Using this registered workspace frame, locate the mustard bottle that is front of the yellow cube. Use visible object and relation evidence. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000341__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000341",
+    "prompt": "Within the currently observed tabletop scene, locate the mustard bottle that is front of the yellow cube. Use visible object and relation evidence. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000341__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000346",
+    "prompt": "From the current image and depth pair, locate the mug nearer to the camera than both the lemon and yellow cube. Do not assume evidence outside the frame. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000346__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000346",
+    "prompt": "Within the camera evidence now available, locate the pink cube. Rely on the observed geometry when resolving the query. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000346__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000346",
+    "prompt": "From the current image and depth pair, locate the pink cube. Base the localization on the current frame. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000346__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000346",
+    "prompt": "In the camera frame available for this query, locate the mug nearer to the camera than both the lemon and yellow cube. Use the registered spatial evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000346__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000346",
+    "prompt": "From the scene now visible to the wrist camera, locate the mug nearer to the camera than both the lemon and yellow cube. Resolve the referent from this scene only. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000346__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000349",
+    "prompt": "Using this registered workspace frame, locate the tomato soup can that is front of the purple cube. Rely on the observed geometry when resolving the query. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000349__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000349",
+    "prompt": "Using the visual evidence in this frame, locate the pink cube. Use the registered spatial evidence. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000349__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000349",
+    "prompt": "Using this registered workspace frame, locate the purple cube that is behind the tomato soup can. Treat this frame as the complete current observation. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000349__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000349",
+    "prompt": "In the present registered sensor view, locate the tomato soup can that is front of the purple cube. Resolve the referent from this scene only. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000349__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000349",
+    "prompt": "Within the camera evidence now available, locate the tomato soup can that is front of the purple cube. Use the spatial relation exactly as stated. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000349__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000361",
+    "prompt": "Within this observed manipulation scene, locate the apple that is right of the purple cube. Rely on the observed geometry when resolving the query. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000361__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000361",
+    "prompt": "Within this observed manipulation scene, locate the pink cube. Treat this frame as the complete current observation. State the pixel that localizes the requested object. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000361__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000361",
+    "prompt": "From the scene now visible to the wrist camera, locate the purple cube that is left of the apple. Base the localization on the current frame. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000361__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000361",
+    "prompt": "Using only this synchronized RGB-D observation, locate the apple that is right of the purple cube. Rely on the observed geometry when resolving the query. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000361__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000361",
+    "prompt": "For this synchronized workspace observation, locate the apple that is right of the purple cube. Use the spatial relation exactly as stated. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000361__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000363",
+    "prompt": "From the scene now visible to the wrist camera, locate the lemon that is front of the apple. Resolve the referent from this scene only. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000363__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000363",
+    "prompt": "From the scene now visible to the wrist camera, locate the tomato soup can. Use the registered spatial evidence. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000363__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000363",
+    "prompt": "Using the visual evidence in this frame, locate the apple that is behind the lemon. Use visible object and relation evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000363__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000363",
+    "prompt": "In this robot-mounted camera observation, locate the lemon that is front of the apple. Use visible object and relation evidence. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000363__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000363",
+    "prompt": "Within this observed manipulation scene, locate the lemon that is front of the apple. Rely on the observed geometry when resolving the query. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000363__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000364",
+    "prompt": "In this robot-mounted camera observation, locate the mug. Use the spatial relation exactly as stated. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000364__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000364",
+    "prompt": "For this synchronized workspace observation, locate the pink cube. Resolve the referent from this scene only. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000364__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000364",
+    "prompt": "Based on the visible RGB-D frame, locate the pink cube. Base the localization on the current frame. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000364__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000364",
+    "prompt": "From the registered color and depth frame, locate the mug. Do not assume evidence outside the frame. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000364__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000364",
+    "prompt": "In the present wrist-camera evidence, locate the mug. Use the registered spatial evidence. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000364__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000367",
+    "prompt": "Using this registered workspace frame, locate the fruit. Use visible object and relation evidence. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000367__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000367",
+    "prompt": "Within the current metric-depth scene, locate the pink cube. Use the registered spatial evidence. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000367__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000367",
+    "prompt": "In this metric RGB-D workspace view, locate the pink cube. Use visible object and relation evidence. Indicate one matching point in the camera image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000367__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000367",
+    "prompt": "For the presently visible object arrangement, locate the fruit. Do not assume evidence outside the frame. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000367__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000367",
+    "prompt": "Within the currently observed tabletop scene, locate the fruit. Treat this frame as the complete current observation. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000367__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000368",
+    "prompt": "For the current robot-camera observation, locate the fruit that is behind the apple. Base the localization on the current frame. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000368__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000368",
+    "prompt": "Using the visual evidence in this frame, locate the tomato soup can. Use the spatial relation exactly as stated. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000368__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000368",
+    "prompt": "Using the observed tabletop configuration, locate the apple that is front of the apple. Use visible object and relation evidence. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000368__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000368",
+    "prompt": "From the registered color and depth frame, locate the fruit that is behind the apple. Use the registered spatial evidence. Indicate the localized point in the registered frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000368__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000368",
+    "prompt": "For this synchronized workspace observation, locate the fruit that is behind the apple. Base the localization on the current frame. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000368__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000373",
+    "prompt": "Using this registered workspace frame, locate the mug. Treat this frame as the complete current observation. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000373__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000373",
+    "prompt": "Using this registered workspace frame, locate the pink cube. Rely on the observed geometry when resolving the query. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000373__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000373",
+    "prompt": "In this metric RGB-D workspace view, locate the pink cube. Use visible object and relation evidence. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000373__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000373",
+    "prompt": "Based on the visible RGB-D frame, locate the mug. Treat this frame as the complete current observation. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000373__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000373",
+    "prompt": "Within the currently observed tabletop scene, locate the mug. Do not assume evidence outside the frame. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000373__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000379",
+    "prompt": "For the current robot-camera observation, locate the apple that is right of the purple cube. Do not assume evidence outside the frame. Provide the target point in the camera frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000379__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000379",
+    "prompt": "From the registered color and depth frame, locate the pink cube. Base the localization on the current frame. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000379__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000379",
+    "prompt": "In the camera frame available for this query, locate the purple cube that is left of the apple. Resolve the referent from this scene only. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000379__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000379",
+    "prompt": "Using this registered workspace frame, locate the apple that is right of the purple cube. Use the registered spatial evidence. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000379__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000379",
+    "prompt": "Based on the visible RGB-D frame, locate the apple that is right of the purple cube. Use visible object and relation evidence. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000379__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000383",
+    "prompt": "For this synchronized workspace observation, locate the fruit that is right of the yellow cube. Rely on the observed geometry when resolving the query. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000383__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000383",
+    "prompt": "From this evidence-limited camera view, locate the tomato soup can. Resolve the referent from this scene only. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000383__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000383",
+    "prompt": "In the present wrist-camera evidence, locate the yellow cube that is left of the apple. Base the localization on the current frame. Give the location supported by color and depth. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000383__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000383",
+    "prompt": "Within the currently observed tabletop scene, locate the fruit that is right of the yellow cube. Resolve the referent from this scene only. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000383__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000383",
+    "prompt": "Using the current color-depth evidence, locate the fruit that is right of the yellow cube. Treat this frame as the complete current observation. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000383__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000384",
+    "prompt": "For the presently visible object arrangement, locate the fruit that is front of the green cube. Rely on the observed geometry when resolving the query. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000384__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000384",
+    "prompt": "Within the camera evidence now available, locate the tomato soup can. Rely on the observed geometry when resolving the query. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000384__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000384",
+    "prompt": "From the scene now visible to the wrist camera, locate the green cube that is behind the apple. Resolve the referent from this scene only. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000384__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000384",
+    "prompt": "From the registered color and depth frame, locate the fruit that is front of the green cube. Do not assume evidence outside the frame. Give the corresponding location in the color frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000384__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000384",
+    "prompt": "Within the camera evidence now available, locate the fruit that is front of the green cube. Do not assume evidence outside the frame. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000384__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000385",
+    "prompt": "In this robot-mounted camera observation, locate the tomato soup can that is right of the purple cube. Rely on the observed geometry when resolving the query. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000385__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000385",
+    "prompt": "From this evidence-limited camera view, locate the pink cube. Resolve the referent from this scene only. Return the image location warranted by the sensors. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000385__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000385",
+    "prompt": "Using only this synchronized RGB-D observation, locate the purple cube that is left of the tomato soup can. Resolve the referent from this scene only. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000385__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000385",
+    "prompt": "For this synchronized workspace observation, locate the tomato soup can that is right of the purple cube. Rely on the observed geometry when resolving the query. Indicate its evidence-supported position in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000385__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000385",
+    "prompt": "Using the observed tabletop configuration, locate the tomato soup can that is right of the purple cube. Use the spatial relation exactly as stated. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000385__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000388",
+    "prompt": "Considering the visible scene evidence alone, locate the apple that is left of the lemon. Use the registered spatial evidence. Provide a single evidence-backed image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000388__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000388",
+    "prompt": "Within the current metric-depth scene, locate the pink cube. Rely on the observed geometry when resolving the query. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000388__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000388",
+    "prompt": "For the presently visible object arrangement, locate the lemon that is right of the apple. Resolve the referent from this scene only. Report the localized point in the observed frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000388__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000388",
+    "prompt": "From this evidence-limited camera view, locate the apple that is left of the lemon. Resolve the referent from this scene only. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000388__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000388",
+    "prompt": "From the current image and depth pair, locate the apple that is left of the lemon. Use the registered spatial evidence. Respond with the target's camera-image position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000388__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000389",
+    "prompt": "Within the current metric-depth scene, locate the orange that is right of the yellow cube. Use the spatial relation exactly as stated. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000389__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000389",
+    "prompt": "Within the current metric-depth scene, locate the mustard bottle. Use visible object and relation evidence. Mark its position using image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000389__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000389",
+    "prompt": "For the scene currently projected in the image, locate the yellow cube that is left of the orange. Treat this frame as the complete current observation. Output the matching point in image coordinates. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000389__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000389",
+    "prompt": "Using only this synchronized RGB-D observation, locate the orange that is right of the yellow cube. Do not assume evidence outside the frame. Return the appropriate pixel in this observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000389__depth_corruption"
+  },
+  {
+    "completion_is_reference": true,
+    "family_id": "v211dev_family_000389",
+    "prompt": "Considering the visible scene evidence alone, locate the orange that is right of the yellow cube. Resolve the referent from this scene only. Output the referent location supported by this view. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000389__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000392",
+    "prompt": "In this metric RGB-D workspace view, locate the orange cube that is left of the orange. Base the localization on the current frame. Report where the referent projects in the image. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000392__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000392",
+    "prompt": "From this evidence-limited camera view, locate the mustard bottle. Use the spatial relation exactly as stated. Give the pixel location justified by the observation. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000392__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000392",
+    "prompt": "Within the camera evidence now available, locate the orange that is right of the orange cube. Use the registered spatial evidence. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000392__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000392",
+    "prompt": "Based on the visible RGB-D frame, locate the orange cube that is left of the orange. Use the registered spatial evidence. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000392__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000392",
+    "prompt": "For this synchronized workspace observation, locate the orange cube that is left of the orange. Base the localization on the current frame. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000392__occlusion_view_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000395",
+    "prompt": "In the present wrist-camera evidence, locate the fruit that is right of the yellow cube. Use visible object and relation evidence. Provide its projected position in the current frame. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000395__clean"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000395",
+    "prompt": "Based on the visible RGB-D frame, locate the tomato soup can. Treat this frame as the complete current observation. Return the supported image-coordinate location. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000395__semantic_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000395",
+    "prompt": "From the current image and depth pair, locate the yellow cube that is left of the apple. Use the spatial relation exactly as stated. Mark the corresponding pixel position. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000395__relation_counterfactual"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000395",
+    "prompt": "Within the currently observed tabletop scene, locate the fruit that is right of the yellow cube. Use visible object and relation evidence. Return one point supported by the visible evidence. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000395__depth_corruption"
+  },
+  {
+    "completion_is_reference": false,
+    "family_id": "v211dev_family_000395",
+    "prompt": "Using only this synchronized RGB-D observation, locate the fruit that is right of the yellow cube. Use visible object and relation evidence. Respond with the localized image point. Output the target pixel as (x, y) in image coordinates.",
+    "sample_id": "v211dev_family_000395__occlusion_view_counterfactual"
+  }
+]

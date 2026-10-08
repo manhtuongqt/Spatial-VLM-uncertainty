@@ -1,0 +1,21 @@
+schema_version: 1
+protocol_id: roborefer_pilot_v0
+gate_profile_id: depth_component_v1
+frozen_before_pilot: true
+description: >-
+  B2 applies the existing point-seeded registered-depth component gate to the
+  already locked B1 point. It never queries RoboRefer again and never replaces
+  the B1 point. This generic pilot gate is not the task-specific five-step gate.
+min_depth_m: 0.05
+max_depth_m: 2.0
+depth_seed_radius_px: 5
+depth_roi_radius_px: 110
+depth_near_tolerance_m: 0.015
+depth_far_tolerance_m: 0.055
+min_mask_area_px: 120
+max_mask_area_fraction: 0.12
+bbox_padding_px: 5
+require_exactly_one_point: true
+require_seed_supported: true
+reject_mask_touching_image_border: false
+evaluator_safe_margin_px: 4

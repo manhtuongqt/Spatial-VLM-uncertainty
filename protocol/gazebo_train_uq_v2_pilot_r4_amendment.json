@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "amendment_id": "gazebo_train_uq_v2_pilot_r4_controlled_occlusion_amendment_v1",
+  "status": "LOCKED_BEFORE_R4_DESIGN_AND_CAPTURE",
+  "locked_at_utc": "2026-09-14T04:42:00+00:00",
+  "scope": "geometry-pilot controlled-partial-occlusion repair only",
+  "parent_attempt": {
+    "protocol_id": "gazebo_train_uq_v2_pilot_r3",
+    "decision": "REJECT",
+    "verified_rows": 27,
+    "captured_rows": 32,
+    "reason": "edge-FOV INSUFFICIENT_EVIDENCE passed only 3/8",
+    "contract_lock_sha256": "c394a1c8a6b0044493da64def2707925dfa3f96edd548e3c724ff23e1d7b9131",
+    "capture_lock_sha256": "6027908558e8d8ed98346a2bb2bb04a187e889a2d2ba9de851f6ce5072491af3",
+    "geometry_qc_sha256": "cd7c63639fa5d11fda7f186bd02b6094020712736facc42006d909c695a98fd2",
+    "decision_sha256": "76919940c892cc325bd2a6402b31cd46c0e23a11ce304ccfa20ef4ee5bfd0025"
+  },
+  "characterization_evidence": {
+    "usage": "engineering geometry only; forbidden from Train-UQ, Val-UQ and evaluation",
+    "model_inference_performed": false,
+    "v1_decision": "REJECT_BLUE_CUBE_NO_OCCLUSION",
+    "v1_report_sha256": "b1f743afd8eedc3b98ec2fde4bccd9c1db001fa87dbaab4659ca8345be15ff95",
+    "v2_decision": "REJECT_SWEEP_TOO_FAR",
+    "v2_report_sha256": "c7219ec76e291a4f1f3724dde0f334c9a30ddda7376552c0adfb8f19c610f1f9",
+    "v3_decision": "REJECT_2_OF_6_TARGET_YAW_PAIRS",
+    "v3_report_sha256": "b2f5221a4ab681db4b92871ae6bf0fc12295d048dedf2c6f4cc71d72c893efee",
+    "v4_decision": "REJECT_4_OF_6_TARGET_YAW_PAIRS",
+    "v4_report_sha256": "b9dfa3584aef0530daf9fea9d68776ea1d73c7bc8459d8a59c06aaa05f896fbc",
+    "v5_decision": "PASS_6_OF_6_TARGET_YAW_PAIRS",
+    "v5_report_sha256": "d56437b133cd1ada7cbfc523295029ca1bbaa5564a5ae8d85ac34d2c2ef023f1",
+    "selected_target_pixel_range": [51, 82],
+    "internal_margin": "20 <= target_visible_pixels <= 100",
+    "official_gate_unchanged": "1 <= target_visible_pixels < 120"
+  },
+  "unchanged_scientific_contract": {
+    "grounding_backbone": "frozen B0",
+    "hypothesis_metrics_and_selection_rule": "unchanged from hypothesis_lock.json",
+    "maximum_proposed_methods": 1,
+    "B1": "negative ablation not promoted",
+    "B2": "closed"
+  },
+  "r4_design_contract": {
+    "scene_count": 32,
+    "state_relation_design": "4 states x 4 relations x 2 repetitions",
+    "all_family_layout_and_pose_signatures_new": true,
+    "reuse_of_prior_pilot_rows": false,
+    "insufficient_evidence_mechanism": "controlled partial occlusion by non-candidate ycb_cracker_box label 21",
+    "capture_attempts": 1,
+    "no_inference_materialization_training_or_manipulation": true,
+    "advance_only_if_geometry_qc": "32/32 PASS"
+  },
+  "sealed_data": {
+    "gazebo_dev_answerability_v2": "SEALED_FOR_FIT_AND_SELECTION",
+    "gazebo_calibration": "SEALED",
+    "gazebo_test_iid": "SEALED",
+    "gazebo_test_ood": "SEALED"
+  },
+  "immutability": {
+    "wp4_locks_unchanged": true,
+    "r2_r3_and_characterization_attempts_append_only": true,
+    "r4_contract_and_capture_lock_required_before_capture": true
+  }
+}

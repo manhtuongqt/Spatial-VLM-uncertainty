@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gazebo_calibration_v2",
+  "revision": "fit_r2",
+  "status": "LOCKED_AFTER_FROZEN_PREDICTION_BEFORE_ORACLE_JOIN_OR_FIT",
+  "reason": "The successful all-or-nothing materialization is locked as revision r3, while the original v2 fit wrapper references the unused pre-amendment lock path.",
+  "allowed_change": "Reference the immutable materialization-r3 lock and record this fit wrapper/amendment in the fit-input and final locks.",
+  "scientific_contract_change": false,
+  "frozen_unchanged": {
+    "grounding": "B0",
+    "stochastic_draws": 3,
+    "risk_features": 16,
+    "risk_estimator": "Logistic-L2 C=0.1",
+    "calibrator": "binary temperature scaling with one scalar T",
+    "fit_objective": "binary negative log likelihood",
+    "threshold_grid": "0.00 through 1.00 inclusive, step 0.01",
+    "threshold_selection": "preregistered eligibility then lexicographic rule",
+    "probability_gates": "ECE-10 and Brier strictly lower; AURC/AUROC invariant"
+  },
+  "prediction_audit": {
+    "records": 128,
+    "unique_sample_ids": 128,
+    "stochastic_draws_per_record": 3,
+    "inference_exceptions": 0,
+    "oracle_opened_by_runner": false
+  },
+  "sealed": {
+    "dev_v2": true,
+    "test_iid": true,
+    "test_ood": true,
+    "robot_deployment": true
+  },
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V2_CONTRACT_LOCK.json": "5a805e1746f5dcae40075b2cfd0db2d656aa46df1b5d6ca193c3ceed082da494",
+    "protocol/gazebo_calibration_v2_materialization_r3_lock.json": "3baf6370c9b70e9a0ba881f5bb9176e694db15a749e013d2856c216df3cd9137",
+    "protocol/gazebo_calibration_v2_materialization_r3_amendment.json": "e6468beb8b7543ab1a3a6bd1360fb344fbbb8d512fa9f945f9cc635a4a7dcb63",
+    "protocol/gazebo_calibration_v2_fit.py": "9bbd4b6b136da31dde7299fd3936fb6afd36abcc899334cda9d77a61788f1790",
+    "protocol/gazebo_calibration_v1_fit.py": "a2554eba441d56324d282796e88130dc48f151ad90f96625c1d08223313b79d5",
+    "protocol/gazebo_calibration_v2_fit_r2.py": "c8d44add440ecbc2af6c785d1873d7589af4508b4b8d4c135ac173450c9d0502",
+    "datasets/Gazebo_calibration_v2/manifest.json": "a8d777f1333b08d40bf9ca887bf57b289bec745197cf53875254ac0a8c5fbae9",
+    "datasets/Gazebo_calibration_v2/inference_manifest.jsonl": "54ebdcc0d1f4c777a899f8b6099652b6e44929630b800e72a5a3a85954a6bce8",
+    "datasets/Gazebo_calibration_v2/evaluator_ground_truth.jsonl": "17515928b4ccc2faa135ca3f430963e458d41e802d13b9723868b81fd33a3964",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v2/b0_predictions/predictions.jsonl": "40a8eee2e378d053ba5f68c169ff27da266e441b10146551e9dd1cb2d9dcbd3b",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v2/b0_predictions/run.json": "34acbe00f9fc3735ed7cb5c77f7c5299783ec48729cc06070efd9f7797d58b98"
+  },
+  "locked_at_utc": "2026-09-14T10:06:00+00:00"
+}

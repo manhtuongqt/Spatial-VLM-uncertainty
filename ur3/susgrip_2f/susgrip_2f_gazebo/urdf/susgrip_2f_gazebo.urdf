@@ -1,0 +1,158 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="susgrip">
+
+    <material name="color_base">
+        <color rgba="0.423529 0.494118 0.882353 1.0" />
+    </material>
+    <material name="color_finger">
+        <color rgba="0.572549 0.72549 0.890196 1.0" />
+    </material>
+
+
+    <link name="gripper_body">
+    <visual>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <geometry>
+            <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/2F_MainBody.STL" />
+        </geometry>
+        <material name="color_base" />
+    </visual>
+
+    <collision>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <geometry>
+            <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/2F_MainBody.STL" />
+        </geometry>
+    </collision>
+
+    <inertial>
+        <origin xyz="0. 0. 0.06" rpy="0. 0. 0." />
+        <mass value="1.0" />
+        <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+    </inertial>
+    </link>
+
+    <gazebo reference="gripper_body">
+        <self_collide>false</self_collide>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/SkyBlue</material>
+    </gazebo>
+
+    <link name="world" />
+
+    <joint name="world_to_base" type="fixed">
+        <parent link="world" />
+        <child link="gripper_body" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+
+
+    <link name="finger_left">
+    <visual>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <geometry>
+            <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/FingerTip.STL" />
+        </geometry>
+        <material name="color_finger" />
+    </visual>
+
+    <collision>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <geometry>
+            <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/FingerTip.STL" />
+        </geometry>
+    </collision>
+
+    <inertial>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <mass value="0.1" />
+        <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+    </inertial>
+    </link>
+
+    <gazebo reference="finger_left">
+        <self_collide>false</self_collide>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <joint name="gripper_joint" type="prismatic">
+        <parent link="gripper_body" />
+        <child link="finger_left" />
+        <origin xyz="0.0135 0.0 0.112" rpy="0 0 3.14159265" />
+        <axis xyz="-1 0 0" />
+        <limit lower="0.0" upper="0.065" effort="100" velocity="0.1" />
+        <dynamics damping="5.0" friction="0.1" />
+    </joint>
+
+    <link name="finger_right">
+    <visual>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <geometry>
+            <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/FingerTip.STL" />
+        </geometry>
+        <material name="color_finger" />
+    </visual>
+
+    <collision>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <geometry>
+            <mesh filename="package://susgrip_2f_description/meshes/susgrip_2f_simple/FingerTip.STL" />
+        </geometry>
+    </collision>
+
+    <inertial>
+        <origin xyz="0. 0. 0." rpy="0. 0. 0." />
+        <mass value="0.1" />
+        <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001" />
+    </inertial>
+    </link>
+
+    <gazebo reference="finger_right">
+        <self_collide>false</self_collide>
+        <mu1>0.2</mu1>
+        <mu2>0.2</mu2>
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <joint name="gripper_joint_mimic" type="prismatic">
+        <parent link="gripper_body" />
+        <child link="finger_right" />
+        <origin xyz="-0.0135 0.0 0.112" rpy="0 0 0" />
+        <axis xyz="-1 0 0" />
+        <limit lower="0.0" upper="0.065" effort="100" velocity="0.1" />
+        <mimic joint="gripper_joint" multiplier="1.0" offset="0" />
+        <dynamics damping="5.0" friction="0.1" />
+    </joint>
+
+
+    <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <joint name="gripper_joint">
+            <command_interface name="position" />
+            <command_interface name="velocity" />
+            <command_interface name="effort" />
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+            <state_interface name="effort" />
+        </joint>
+        <!-- Native mimic configuration for gripper_joint_mimic (finger_right) -->
+        <joint name="gripper_joint_mimic">
+            <param name="mimic">gripper_joint</param>
+            <param name="multiplier">1.0</param>
+            <state_interface name="position" />
+            <state_interface name="velocity" />
+            <state_interface name="effort" />
+        </joint>
+    </ros2_control>
+
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <parameters>$(find susgrip_2f_gazebo)/config/susgrip_2f.yaml</parameters>
+            <robot_param_node>/robot_state_publisher_gazebo</robot_param_node>
+        </plugin>
+    </gazebo>
+</robot>

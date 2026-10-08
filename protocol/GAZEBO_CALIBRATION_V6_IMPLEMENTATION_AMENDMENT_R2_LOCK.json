@@ -1,0 +1,77 @@
+{
+  "behavioral_change": {
+    "new_live_artifact": "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/PREFLIGHT_LIVE_ATTEMPT_02.json",
+    "prepend_python_path": [
+      "/home/dhcn/ur_ws/src/myproject/protocol",
+      "/opt/ros/humble/local/lib/python3.10/dist-packages",
+      "/opt/ros/humble/lib/python3.10/site-packages"
+    ],
+    "required_precheck": "/usr/bin/python3 -c 'import rclpy'"
+  },
+  "calibration_manifest_summary": {
+    "all_cells_match": true,
+    "cell_count": 16,
+    "expected_repetitions_per_cell": 8,
+    "expected_rows": 128,
+    "rows": 128,
+    "unique_family_ids": true,
+    "unique_layout_ids": true,
+    "unique_layout_signatures": true,
+    "unique_scene_ids": true,
+    "unique_seeds": true
+  },
+  "calibrator_fit_call_count": 0,
+  "capture_authorized": false,
+  "checks": {
+    "attempt_01_preserved_blocked": true,
+    "calibration_manifest_4x4x8_unchanged": true,
+    "existing_workflow_decision_preserved": true,
+    "frozen_v6_predecessors_unchanged": true,
+    "no_capture_dataset_or_authorization": true,
+    "pilot_manifest_4x4x2_unchanged": true,
+    "test_and_robot_remain_sealed": true
+  },
+  "locked_at_utc": "2026-09-22T04:59:35.874855+00:00",
+  "model_inference_run": false,
+  "pilot_manifest_summary": {
+    "all_cells_match": true,
+    "cell_count": 16,
+    "expected_repetitions_per_cell": 2,
+    "expected_rows": 32,
+    "rows": 32,
+    "unique_family_ids": true,
+    "unique_layout_ids": true,
+    "unique_layout_signatures": true,
+    "unique_scene_ids": true,
+    "unique_seeds": true
+  },
+  "pilot_or_calibration_captured": false,
+  "protocol_id": "gazebo_calibration_v6",
+  "robot_access": false,
+  "schema_version": 1,
+  "scientific_hypothesis": "NOT_TESTED",
+  "scope": "ROS Python environment restoration for live preflight only",
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V6_DATA_DESIGN_LOCK.json": "850921e200d921592128c76e11c8deeb5a7d6177ea315f1ff8d286f873084b6d",
+    "protocol/GAZEBO_CALIBRATION_V6_IMPLEMENTATION_LOCK.json": "89d3416e7c870e635c3f6277a6dbbc2d5d12891c23f3a686c9a4fe2d4f7b821d",
+    "protocol/GAZEBO_CALIBRATION_V6_LIVE_FAILURE_LOCK.json": "5449570008060680aea675e178059bcdca379140fead3064ec02422b248bad10",
+    "protocol/gazebo_calibration_v6_family_manifest.jsonl": "ac7bdaff26c03cce9d6cec215915696fc32355b95706505521d75b8a473141c4",
+    "protocol/gazebo_calibration_v6_geometry_pilot_family_manifest.jsonl": "f25371449a9c564476ecee092c9fcbe6167708143af738b3496521789aae322e",
+    "protocol/gazebo_calibration_v6_pipeline.py": "b5010c45c38e24bc7a1b30f21ee1d4441b49ceec0bb8c7fbff8b1ca01690ee01",
+    "protocol/gazebo_calibration_v6_pipeline_r2.py": "25b3dcb227ca1b1af1bd1c9858891339394abfc2100aee96b7648cd65a6f02ff",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/CALIBRATION_V6_FINAL_DECISION.json": "492cb4884077eec05ade91c114370eb3c30a1579fd15c66337b1e6d76d52c49e",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/PREFLIGHT_STATIC.json": "05be37274246b8364a0fc65a2c45d8c9707abfebe85cf7777169cb9c4ea18002",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/PREFLIGHT_LIVE.json": "a735ee37971b3917c7ccee19171056868a26ecc425984f5f585b87273834253e",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_geometry_pilot_gate.yaml": "a014b3aba3ae047fcf313b454ae745ba8216596f942398ad19c27e4488520203",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_geometry_pilot_scenes.yaml": "86e2fd1965312b4f299047d3c74bf16597c5d5c65322cf022dbd0fd9b51f44f0"
+  },
+  "status": "IMPLEMENTATION_AMENDMENT_R2_FROZEN_BEFORE_LIVE_PREFLIGHT_ATTEMPT_02",
+  "test_iid_ood_access": false,
+  "unchanged": [
+    "Calibration-v6 data design and all 32/128 manifests",
+    "B0 and frozen spatial-risk v2 with 12 ordered features",
+    "unsafe definition, visibility thresholds, metrics, affine-logit optimizer, threshold grid, and scientific gates",
+    "live attempt 01, its failure lock, static preflight, and existing workflow decision",
+    "Test-IID/OOD and robot sealing"
+  ]
+}

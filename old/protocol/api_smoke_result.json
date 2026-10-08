@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-18T08:10:38.631710+00:00",
+  "server_url": "http://127.0.0.1:25548",
+  "server_configuration_expected": {
+    "skip_depth_model": true,
+    "generation_mode": "greedy",
+    "seed": 8132026
+  },
+  "scene_id": "pilot_scene_0008",
+  "inputs": {
+    "rgb": "results/roborefer_pilot_v0_20260813_173305/dataset_attempt_02/pilot_scene_0008/input/rgb.png",
+    "rgb_sha256": "7bb607b1d9b1fc3594071ee8f75cffa3e40349fabd51e3ebfd20e6a7a5787235",
+    "registered_depth_view": "results/roborefer_pilot_v0_20260813_173305/predictions/pilot_scene_0008/request_depth_registered_view.png",
+    "registered_depth_view_sha256": "7d8633a1d72614ccbd0a9961efd0894bb0577b38a446d6b75826db55ee0a8fb3"
+  },
+  "queries": [
+    {
+      "mode": "RGB",
+      "http_status": 200,
+      "latency_ms": 1418.58,
+      "answer": "[(0.787, 0.477)]",
+      "normalized_point_xy": [
+        0.787,
+        0.477
+      ],
+      "generation_mode": "greedy",
+      "generation_config": {
+        "do_sample": false,
+        "temperature": null,
+        "top_k": null,
+        "top_p": null
+      },
+      "model_fingerprint": {
+        "file_count": 61,
+        "inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+        "model_name": "RoboRefer-2B-SFT",
+        "model_root": "/home/dhcn/ur_ws/src/myproject/RoboRefer/models/RoboRefer-2B-SFT"
+      },
+      "random_seed": 8132026,
+      "passed": true,
+      "error": null
+    },
+    {
+      "mode": "RGB-D",
+      "http_status": 200,
+      "latency_ms": 1813.975,
+      "answer": "[(0.787, 0.481)]",
+      "normalized_point_xy": [
+        0.787,
+        0.481
+      ],
+      "generation_mode": "greedy",
+      "generation_config": {
+        "do_sample": false,
+        "temperature": null,
+        "top_k": null,
+        "top_p": null
+      },
+      "model_fingerprint": {
+        "file_count": 61,
+        "inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+        "model_name": "RoboRefer-2B-SFT",
+        "model_root": "/home/dhcn/ur_ws/src/myproject/RoboRefer/models/RoboRefer-2B-SFT"
+      },
+      "random_seed": 8132026,
+      "passed": true,
+      "error": null
+    }
+  ],
+  "all_passed": true
+}

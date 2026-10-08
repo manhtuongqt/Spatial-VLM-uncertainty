@@ -1,0 +1,21 @@
+{
+  "calibration": {
+    "families": 128,
+    "relations": 4,
+    "state_relation_cell_quota": 8,
+    "states": 4
+  },
+  "capture_authorized": false,
+  "capture_order_rule": "sha256_sort_gazebo_calibration_v3_capture_order_v1",
+  "contract_lock_sha256": "99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841",
+  "family_disjoint_from": [
+    "Gazebo_train_uq and Gazebo_val_uq including failed attempts/pilots",
+    "Gazebo_dev_answerability_v2",
+    "Gazebo_calibration_v1 and Gazebo_calibration_v2",
+    "all reserved or materialized Test-IID/Test-OOD namespaces"
+  ],
+  "protocol_id": "gazebo_calibration_v3",
+  "schema_version": 1,
+  "status": "PREREGISTERED_IMPLEMENTATION_INPUT",
+  "test_iid_ood_sealed": true
+}

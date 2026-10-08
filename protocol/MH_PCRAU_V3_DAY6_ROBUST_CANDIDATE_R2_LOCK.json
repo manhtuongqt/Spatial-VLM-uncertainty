@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_ROBUST_CANDIDATE_TRAINING",
+  "created_at_local": "2026-09-24",
+  "method_id": "MH-PCRA-U-v3-robust-candidate-r2",
+  "seed": 26092026,
+  "revision_reason": "Preserve the original Day-6 budget of 432 optimizer updates after train examples increased from 256 to 768",
+  "bindings": [
+    {"path": "workspace/mh_pcrau_v3/day6_robust_candidate_train_r2.py", "sha256": "d66f9a6d2a8b877a74fcfe0f753e1405c023a2bfb4861df4853bcbb5d5a71ba9"},
+    {"path": "workspace/mh_pcrau_v3/day6_robust_candidate_train.py", "sha256": "3036a39a72285a17ab56976bd6ad3b5f0ba5269c81fda980358d447c8ab1bda6"},
+    {"path": "protocol/MH_PCRAU_V3_DAY6_ROBUST_CANDIDATE_LOCK.json", "sha256": "9ce0c488b11aeecb262ef71b9448de79b40beaa3abd2edf0cfa0d38919913e9d"},
+    {"path": "ketqua1/07_huan_luyen/ngay_06/amendment_04_robust_candidate/ROBUST_CANDIDATE_DECISION.json", "sha256": "eef1d7f29c54fc66f9e1828e73a2b381b3ca828c999f6d430900ac579ddeb76c"},
+    {"path": "ketqua1/07_huan_luyen/ngay_06/amendment_04_robust_candidate/ROBUST_CANDIDATE_CHECKPOINT_MANIFEST.json", "sha256": "a634b4c10eff1842a60e921f129782108e60477e61df222b26871f5457e37254"}
+  ],
+  "loss_weights": {
+    "relation": 1.0,
+    "reasoning": 1.0,
+    "spatial": 0.5,
+    "source": 1.0,
+    "answerability": 1.0,
+    "confidence": 0.0,
+    "language_modeling": 0.0
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "main_learning_rate": 0.0005,
+    "log_variance_head_learning_rate": 0.000005,
+    "weight_decay": 0.0,
+    "maximum_gradient_norm": 5.0
+  },
+  "training": {
+    "initialization": "from_same_seed_not_from_attempt01_checkpoint",
+    "fixed_epochs": 18,
+    "batch_size": 32,
+    "train_examples": 768,
+    "batches_per_epoch": 24,
+    "fixed_optimizer_updates": 432,
+    "checkpoint_selection": "NONE_FIXED_FINAL_UPDATE"
+  },
+  "unchanged_from_attempt01": [
+    "data and cache identities",
+    "architecture and seed",
+    "loss weights",
+    "optimizer learning rates",
+    "batch size and gradient clipping",
+    "no Val-based checkpoint selection"
+  ],
+  "claims": {
+    "candidate_ready_does_not_mean_generalization_pass": true,
+    "paired_metrics_are_training_fit_only": true,
+    "fresh_anti_shortcut_val_required": true,
+    "day7_oof_s1b_authorized": false,
+    "calibration_test_robot": "SEALED"
+  }
+}

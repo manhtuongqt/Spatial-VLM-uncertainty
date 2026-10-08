@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "training_checkpoint_v1.schema.json",
+  "title": "Atomic P-CRA-U training checkpoint metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "checkpoint_id", "run_id", "epoch", "global_step",
+    "created_at_utc", "selection", "metrics", "identity", "runtime",
+    "finite_model_tensors", "state_components"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "checkpoint_id": {"type": "string", "pattern": "^step_[0-9]{9}$"},
+    "run_id": {"type": "string", "minLength": 3},
+    "epoch": {"type": "integer", "minimum": 0},
+    "global_step": {"type": "integer", "minimum": 0},
+    "created_at_utc": {"type": "string", "format": "date-time"},
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["split", "metric", "mode", "value", "eligible_for_best"],
+      "properties": {
+        "split": {"enum": ["train", "dev"]},
+        "metric": {"type": "string", "minLength": 1},
+        "mode": {"enum": ["min", "max"]},
+        "value": {"type": "number"},
+        "eligible_for_best": {"type": "boolean"}
+      }
+    },
+    "metrics": {"type": "object", "additionalProperties": {"type": "number"}},
+    "identity": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+    },
+    "runtime": {"type": "object"},
+    "finite_model_tensors": {"const": true},
+    "state_components": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["model", "optimizer", "scheduler", "scaler", "rng", "sampler", "extra"]}
+    }
+  }
+}

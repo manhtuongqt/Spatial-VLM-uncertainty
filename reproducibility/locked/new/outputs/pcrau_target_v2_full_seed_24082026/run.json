@@ -1,0 +1,16 @@
+{
+  "config_sha256": "e4f21ccc255c2f097fd8b062e21e954719357cb6e00645758bc1cdf36a290b0c",
+  "dev_families": 80,
+  "run_name": "pcrau_target_v2_full_seed_24082026",
+  "runtime": {
+    "cuda_available": true,
+    "cuda_runtime": "12.4",
+    "gpu": "NVIDIA RTX 2000 Ada Generation",
+    "python": "3.10.14",
+    "torch": "2.5.1+cu124"
+  },
+  "schema_version": 1,
+  "scientific_status": "DEVELOPMENT_ONLY",
+  "sealed_test_splits_accessed": false,
+  "train_families": 320
+}

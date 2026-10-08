@@ -1,0 +1,20 @@
+fixed_pick_place:
+  ros__parameters:
+    # One chosen cube is sampled only in the source workspace below/left of
+    # the physical tray; all non-selected cubes are shuffled into safe slots.
+    randomize_object: true
+    random_x_range: [-0.16, -0.11]
+    random_y_range: [0.14, 0.20]
+    random_yaw_range: [-0.35, 0.35]
+    randomize_scene_objects: true
+    scene_object_names: [red_cube, green_cube, blue_cube, yellow_cube, orange_cube, purple_cube, pink_cube]
+    scene_object_slots_xy: [-0.34, 0.10, -0.34, 0.40, -0.24, 0.46,
+                            -0.02, 0.10, 0.15, 0.14, 0.18, 0.28]
+    # Physical target-bin footprint plus 5 mm margin: source placement is
+    # rejected before Gazebo reset if any cube could enter this keep-out.
+    source_keepout_center_xy: [0.0, 0.38]
+    source_keepout_size_xy: [0.20, 0.25]
+    source_keepout_clearance_m: 0.005
+    source_keepout_object_size: 0.06
+    detection_timeout: 65.0
+    perception_settle_time: 1.0

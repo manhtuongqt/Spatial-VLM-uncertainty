@@ -1,0 +1,121 @@
+{
+  "calibration_families_captured": 0,
+  "calibrator_fit_call_count": 0,
+  "capture_authorized": false,
+  "checks": {
+    "attempts_01_02_immutable": true,
+    "frozen_predecessors_unchanged": true,
+    "no_capture_dataset_or_authorization": true,
+    "optical_basis_matches_sdf_downward_view": true,
+    "pilot_calibration_manifests_unchanged": true,
+    "sdf_model_static_and_frame_ids_match": true,
+    "test_robot_sealed": true
+  },
+  "fixed_camera_tf": {
+    "basis": {
+      "optical_x_in_base": [
+        0.0,
+        -1.0000000000000002,
+        -1.5700924586840402e-16
+      ],
+      "optical_y_in_base": [
+        -1.0000000000000002,
+        0.0,
+        -4.896804360142959e-12
+      ],
+      "optical_z_in_base": [
+        4.896804360142959e-12,
+        1.5700924586840402e-16,
+        -1.0000000000000002
+      ]
+    },
+    "body_to_optical_rpy": [
+      -1.5707963267948966,
+      0.0,
+      -1.5707963267948966
+    ],
+    "child_frame": "top_table_camera_optical_frame",
+    "parent_frame": "base_link",
+    "rotation_xyzw": [
+      -0.7071067811865476,
+      0.7071067811865476,
+      -1.731226273449238e-12,
+      1.7313372957517006e-12
+    ],
+    "sdf_pose_xyz_rpy": [
+      0.0,
+      0.45,
+      1.8,
+      0.0,
+      1.57079632679,
+      0.0
+    ],
+    "translation_xyz_m": [
+      0.0,
+      0.45,
+      1.8
+    ],
+    "world_to_base_assumption": "UR spawn has no pose flags; base_link coincides with world origin"
+  },
+  "locked_at_utc": "2026-09-22T06:35:08.167943+00:00",
+  "model_inference_run": false,
+  "pilot_families_captured": 0,
+  "protocol_id": "gazebo_calibration_v6",
+  "publisher_command": [
+    "ros2",
+    "run",
+    "tf2_ros",
+    "static_transform_publisher",
+    "--x",
+    "0.0",
+    "--y",
+    "0.45",
+    "--z",
+    "1.8",
+    "--qx",
+    "-0.7071067811865476",
+    "--qy",
+    "0.7071067811865476",
+    "--qz",
+    "-1.731226273449238e-12",
+    "--qw",
+    "1.7313372957517006e-12",
+    "--frame-id",
+    "base_link",
+    "--child-frame-id",
+    "top_table_camera_optical_frame"
+  ],
+  "robot_access": false,
+  "schema_version": 1,
+  "scientific_decision": null,
+  "scientific_hypothesis": "NOT_TESTED",
+  "scope": "fixed-camera static TF publication for simulation-only live preflight",
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V6_DATA_DESIGN_LOCK.json": "850921e200d921592128c76e11c8deeb5a7d6177ea315f1ff8d286f873084b6d",
+    "protocol/GAZEBO_CALIBRATION_V6_IMPLEMENTATION_AMENDMENT_R2_LOCK.json": "4ba0765cd8f68eccfd11fd905db4048856eec130652dd62c786c6b27bae4846b",
+    "protocol/GAZEBO_CALIBRATION_V6_IMPLEMENTATION_LOCK.json": "89d3416e7c870e635c3f6277a6dbbc2d5d12891c23f3a686c9a4fe2d4f7b821d",
+    "protocol/GAZEBO_CALIBRATION_V6_LIVE_ATTEMPT_02_FAILURE_LOCK.json": "9821413b61281bb5882955354354821ae57d8d4b86a3862ed0f7c8cd49308d04",
+    "protocol/gazebo_calibration_v6_family_manifest.jsonl": "ac7bdaff26c03cce9d6cec215915696fc32355b95706505521d75b8a473141c4",
+    "protocol/gazebo_calibration_v6_geometry_pilot_family_manifest.jsonl": "f25371449a9c564476ecee092c9fcbe6167708143af738b3496521789aae322e",
+    "protocol/gazebo_calibration_v6_pipeline_r2.py": "25b3dcb227ca1b1af1bd1c9858891339394abfc2100aee96b7648cd65a6f02ff",
+    "protocol/gazebo_calibration_v6_pipeline_r3.py": "0e38902719ebe397b0d5c7d12eca48041fccd3d0524a614acc2fd872b610dce8",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/CALIBRATION_V6_FINAL_DECISION.json": "492cb4884077eec05ade91c114370eb3c30a1579fd15c66337b1e6d76d52c49e",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/PREFLIGHT_STATIC.json": "05be37274246b8364a0fc65a2c45d8c9707abfebe85cf7777169cb9c4ea18002",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/R2_ROS_ENVIRONMENT_PREFLIGHT.json": "3eb820ca14faf3f1ede3e252976cedf79824610cceee9a4e7eaa749018e8c9c3",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/PREFLIGHT_LIVE.json": "a735ee37971b3917c7ccee19171056868a26ecc425984f5f585b87273834253e",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/PREFLIGHT_LIVE_ATTEMPT_02.json": "b426317c8e10190d5704dd78e832b729110412bb4fea7ba5d7e69a6d9d527381",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_geometry_pilot_gate.yaml": "a014b3aba3ae047fcf313b454ae745ba8216596f942398ad19c27e4488520203",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_geometry_pilot_scenes.yaml": "86e2fd1965312b4f299047d3c74bf16597c5d5c65322cf022dbd0fd9b51f44f0",
+    "ur3/ur_simulation_gz/launch/ur_sim_control.launch.py": "51a049a380624d30d904ff5cc49f8fe4b231c1c01bac49175ef588cc87b2b0a1",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place_uq_occlusion_v2.sdf": "6ee5cd6ede77d3fc8247557746ca25f0c03d0e08e0156d0360059d8e691c1193"
+  },
+  "status": "IMPLEMENTATION_AMENDMENT_R3_FROZEN_BEFORE_TF_PREFLIGHT_AND_ATTEMPT_03",
+  "test_iid_ood_access": false,
+  "unchanged": [
+    "Calibration-v6 data design and pilot 32/calibration 128 manifests, IDs, seeds, layouts",
+    "B0, frozen spatial-risk v2 and 12 ordered features",
+    "visibility thresholds, unsafe definition, metrics, calibrator, optimizer and scientific gates",
+    "attempts 01/02, their failure locks, and existing workflow decision",
+    "Test-IID/OOD and robot policy sealing"
+  ]
+}

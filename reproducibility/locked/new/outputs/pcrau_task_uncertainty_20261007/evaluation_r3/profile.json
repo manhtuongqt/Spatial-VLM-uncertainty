@@ -1,0 +1,15 @@
+{
+  "accepted_families": 199,
+  "accepted_samples": 362,
+  "coverage": 0.362,
+  "empirical_risk": 0.04696132596685083,
+  "errors": 17,
+  "minimum_accepted_families": 60,
+  "policy": "hard_found",
+  "risk_target": 0.075,
+  "status": "PASS",
+  "threshold": 0.37876498603729764,
+  "threshold_selection": "calibration_family_OOF_only",
+  "version": "pcrau_task_uncertainty_s6_v1",
+  "wilson_upper_95": 0.07391317520082592
+}

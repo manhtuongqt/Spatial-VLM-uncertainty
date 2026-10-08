@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "protocol_id": "pcra_u_calibration_v1",
+  "scientific_status": "CALIBRATION_FIT_ONLY_TESTS_SEALED",
+  "dataset": {
+    "root": "datasets/roborefer_dataset_v2_1_calibration_200_20260824",
+    "split": "calibration",
+    "family_count": 200,
+    "sample_count": 1000,
+    "capture_count": 400,
+    "variants_per_family": 5,
+    "primary_family_strata": {
+      "FOUND": 80,
+      "INSUFFICIENT_EVIDENCE": 50,
+      "AMBIGUOUS": 35,
+      "ABSENT": 35
+    }
+  },
+  "frozen_model": {
+    "train_config": "protocol/pcra_u_development_train_config.json",
+    "checkpoint": "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000",
+    "epoch": 10,
+    "step": 2000,
+    "model_sha256": "14dba40d2de437f082aece9b342931a48c58202ae4242d577d4a4ffd7eecaab3",
+    "development_feature_index": "results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json",
+    "roborefer_frozen": true,
+    "pcra_u_frozen": true
+  },
+  "feature_input": {
+    "model_root": "RoboRefer/models/RoboRefer-2B-SFT",
+    "stage": "tower_output_before_projector",
+    "raw_shape": [13, 1024, 1152],
+    "raw_dtype": "torch.float16",
+    "local_tile_count": 12,
+    "thumbnail_index": 12,
+    "tile_grid_rows_columns": [3, 4],
+    "patch_grid_per_tile": [32, 32],
+    "pool_kernel": [4, 4],
+    "pooled_grid_shape": [24, 32, 1152],
+    "pooled_thumbnail_shape": [1152],
+    "cache_dtype": "torch.float16",
+    "training_dtype": "torch.float32",
+    "deduplication_key": "sha256(rgb_sha256 + depth_sha256)",
+    "raw_cache_retained": false
+  },
+  "raw_evidence": {
+    "heatmap_probability": "sigmoid_logits_normalized_to_unit_mass_for_summary_only",
+    "entropy_normalization": "divide_by_log_768",
+    "local_mass_window": [3, 3],
+    "mode_rule": "8_connected_local_maximum_at_least_0.5_times_global_max",
+    "spatial_score": {
+      "answer_found_log_odds": 1.0,
+      "one_minus_normalized_entropy": 1.0,
+      "local_map_mass_3x3": 2.0,
+      "top1_top2_peak_margin": 10.0,
+      "log1p_mode_count": -0.25
+    },
+    "multimodal_score_additions": {
+      "mean_source_probability": -0.5,
+      "rgb_depth_thumbnail_cosine": 0.5,
+      "rgb_depth_thumbnail_mean_absolute_gap": -0.5,
+      "invalid_depth_fraction": -0.5
+    },
+    "relation_from_prompt_only": true,
+    "evaluator_or_oracle_allowed": false
+  },
+  "calibrators": {
+    "spatial_platt": {
+      "input": "spatial_raw_score",
+      "target": "y_error",
+      "l2_slope": 0.0001,
+      "max_iterations": 500,
+      "fit_scope": "all_calibration_families"
+    },
+    "multimodal_platt": {
+      "input": "multimodal_raw_score",
+      "target": "y_error",
+      "l2_slope": 0.0001,
+      "max_iterations": 500,
+      "fit_scope": "all_calibration_families",
+      "primary": true
+    }
+  },
+  "diagnostics": {
+    "grouped_crossfit_folds": 5,
+    "fold_assignment": "sha256(seed|family_id)_mod_5",
+    "ece_bins": 10,
+    "bootstrap_unit": "family",
+    "bootstrap_replicates": 5000,
+    "bootstrap_confidence_level": 0.95,
+    "risk_at_reference_coverage": 0.8,
+    "coverage_at_target_risk": 0.05
+  },
+  "threshold_policy": {
+    "calibrator": "multimodal_platt",
+    "target_accepted_error_risk": 0.05,
+    "minimum_accepted_families": 60,
+    "objective": "maximum_coverage",
+    "tie_break": "lower_risk_threshold",
+    "fallback": "ABSTAIN_ALL"
+  },
+  "seeds": {
+    "master": 240820263001,
+    "grouped_crossfit": 240820263002,
+    "family_bootstrap": 240820263003
+  },
+  "safety": {
+    "model_training": false,
+    "checkpoint_selection": false,
+    "architecture_selection": false,
+    "calibration_fit": true,
+    "test_iid_opened": false,
+    "test_ood_opened": false,
+    "robot_publish": false,
+    "baseline_modification": false
+  }
+}

@@ -1,0 +1,10 @@
+# Project a pixel using the latest synchronized registered depth and CameraInfo.
+uint32 u
+uint32 v
+uint32 window_radius
+---
+bool success
+string message
+float32 depth_m
+geometry_msgs/PointStamped point_camera
+geometry_msgs/PointStamped point_base

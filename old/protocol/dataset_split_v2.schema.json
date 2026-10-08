@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.roborefer/protocol/dataset_split_v2.schema.json",
+  "title": "RoboRefer Dataset Expansion V2 pre-capture family assignment manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "manifest_id",
+    "lifecycle_status",
+    "created_before_capture",
+    "family_definition",
+    "variants",
+    "asset_partition_sha256",
+    "seed_lock_sha256",
+    "summary",
+    "families"
+  ],
+  "properties": {
+    "schema_version": {"const": 2},
+    "protocol_id": {"const": "roborefer_dataset_expansion_v2"},
+    "manifest_id": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "lifecycle_status": {
+      "enum": [
+        "DESIGN_LOCKED_NOT_CAPTURED",
+        "PILOT_CAPTURED_EXCLUDED_FROM_OFFICIAL",
+        "OFFICIAL_CAPTURED_QC_PENDING",
+        "OFFICIAL_CAPTURED_QC_PASSED",
+        "SEALED_NOT_OPENED",
+        "OPENED_FOR_AUTHORIZED_PHASE"
+      ]
+    },
+    "created_before_capture": {"const": true},
+    "family_definition": {"const": "scene_query_family"},
+    "variants": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "clean",
+          "semantic_counterfactual",
+          "relation_counterfactual",
+          "depth_corruption",
+          "occlusion_view_counterfactual"
+        ]
+      }
+    },
+    "asset_partition_sha256": {"$ref": "#/$defs/sha256"},
+    "seed_lock_sha256": {"$ref": "#/$defs/sha256"},
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family_count",
+        "sample_count_planned",
+        "counts_by_split",
+        "counts_by_primary_answerability",
+        "counts_by_family_category",
+        "depth_dependent_family_count"
+      ],
+      "properties": {
+        "family_count": {"type": "integer", "minimum": 1},
+        "sample_count_planned": {"type": "integer", "minimum": 5},
+        "counts_by_split": {"$ref": "#/$defs/nonnegativeCounts"},
+        "counts_by_primary_answerability": {"$ref": "#/$defs/nonnegativeCounts"},
+        "counts_by_family_category": {"$ref": "#/$defs/nonnegativeCounts"},
+        "depth_dependent_family_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "families": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/familyAssignment"}
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nonnegativeCounts": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "seedBundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layout", "language", "sensor", "counterfactual", "occlusion"],
+      "properties": {
+        "layout": {"type": "integer", "minimum": 1, "maximum": 2147483646},
+        "language": {"type": "integer", "minimum": 1, "maximum": 2147483646},
+        "sensor": {"type": "integer", "minimum": 1, "maximum": 2147483646},
+        "counterfactual": {"type": "integer", "minimum": 1, "maximum": 2147483646},
+        "occlusion": {"type": "integer", "minimum": 1, "maximum": 2147483646}
+      }
+    },
+    "familyAssignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family_id",
+        "split",
+        "primary_answerability_stratum",
+        "family_category",
+        "depth_dependent",
+        "ood_axis",
+        "asset_pool",
+        "layout_generator_id",
+        "camera_bin_id",
+        "language_template_bank_id",
+        "depth_noise_generator_id",
+        "seed_bundle",
+        "variants",
+        "eligible_for_official_dataset"
+      ],
+      "properties": {
+        "family_id": {
+          "type": "string",
+          "pattern": "^(v2|v2pilot)_family_[0-9]{6}$"
+        },
+        "split": {
+          "enum": ["pilot_only", "train", "dev", "calibration", "test_iid", "test_ood"]
+        },
+        "primary_answerability_stratum": {
+          "enum": ["FOUND", "INSUFFICIENT_EVIDENCE", "AMBIGUOUS", "ABSENT"]
+        },
+        "family_category": {
+          "enum": [
+            "direct_grounding",
+            "relation_2d",
+            "nearer_farther",
+            "front_behind_camera",
+            "multi_anchor_depth_order",
+            "occlusion_depth_evidence"
+          ]
+        },
+        "depth_dependent": {"type": "boolean"},
+        "ood_axis": {
+          "enum": ["none", "asset", "layout", "viewpoint", "language", "depth_noise", "crossed"]
+        },
+        "asset_pool": {"enum": ["seen", "test_ood_heldout", "mixed_ood"]},
+        "layout_generator_id": {"type": "string", "minLength": 1},
+        "camera_bin_id": {"type": "string", "minLength": 1},
+        "language_template_bank_id": {"type": "string", "minLength": 1},
+        "depth_noise_generator_id": {"type": "string", "minLength": 1},
+        "seed_bundle": {"$ref": "#/$defs/seedBundle"},
+        "variants": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "clean",
+              "semantic_counterfactual",
+              "relation_counterfactual",
+              "depth_corruption",
+              "occlusion_view_counterfactual"
+            ]
+          }
+        },
+        "eligible_for_official_dataset": {"type": "boolean"}
+      }
+    }
+  }
+}

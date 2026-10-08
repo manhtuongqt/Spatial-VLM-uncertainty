@@ -1,0 +1,45 @@
+{
+  "status": "LOCKED_BEFORE_CURRENT_TEST_INFERENCE",
+  "started_at_utc": "2026-10-03T08:47:20.789319+00:00",
+  "authorization": "User requested test after choosing 7.5%",
+  "active_profile": {
+    "calibrator": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/selected_calibrator.json",
+    "checkpoint": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/model.safetensors",
+    "config": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/config.json",
+    "official_v2_replaced": false,
+    "policy": "hard_found",
+    "profiles": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/profiles.json",
+    "risk_target": 0.075,
+    "risk_threshold": 0.2611932834526145,
+    "robot_motion_commanded": false,
+    "status": "CALIBRATION_FIT_ONLY"
+  },
+  "frozen_files": {
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/model.safetensors": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/config.json": "b214670c6c4a679f755a9953e15bae4bbb71ee5eea1980fa8e3d64030d79f85b",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/selected_calibrator.json": "19e0c35424144cf753109978b9d08ddaa16edcadbe0c1dc1515103fb88b8de7d",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/profiles.json": "df39fa55843d657111a2c0bee2fee68aad1f2c9ada4c2fc257527eb420f6c9ff"
+  },
+  "protected_files": {
+    "/home/dhcn/ur_ws/src/myproject/new/hinhanh/19_answerability_confusion/fig19_answerability_confusion_test_iid.png": "cbea667c8d6d975bd0182df3045730c1b16e48db948a4b1b5f4c87ff82379933",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_target_v2_full_seed_24082026/checkpoints/best/model.safetensors": "1505152fca7b725d7db701c1341ad1a57049d6b5ac450a9f5ce0c8d78705ba26",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_target_v2_full_seed_24082026/config.json": "e4f21ccc255c2f097fd8b062e21e954719357cb6e00645758bc1cdf36a290b0c",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_target_v2_full_seed_24082026/evaluation/calibration/calibrator.json": "f4ed0abb06ed9628415d9ec710da3f3bccf6df6cb85eebd1b3f68fdb6ac67112",
+    "/home/dhcn/ur_ws/src/myproject/new/test_iid/evaluation/best_v2/predictions.jsonl": "4663f1a4870bfc3e9ff25939f994a351b18491cbcb78c34c3cf86efdc186691f",
+    "/home/dhcn/ur_ws/src/myproject/new/test_iid/evaluation/best_v2/decisions.jsonl": "fa12428bacd524a69e0f0a7fb03d641e1cede9c4b8f165024e55ba7898fa5275",
+    "/home/dhcn/ur_ws/src/myproject/new/test_iid/evaluation/best_v2/full_metrics.json": "c14560432f8a4daaf977a4c176cce7e79d181a44228d7c1d76e99f6774b722ad",
+    "/home/dhcn/ur_ws/src/myproject/new/test_iid/protocol/test_iid_eval_manifest.json": "a18e1f67fc28b2efa67573a1bf89eb484b39c44364477688175836f61f66e945",
+    "/home/dhcn/ur_ws/src/myproject/new/test_iid/feature_cache/indexes/index_full.json": "c7e0432f392608659ae5701e704a675b19bfa4a2d6f933c74ef38b0f79212e84",
+    "/home/dhcn/ur_ws/src/myproject/latex/Chapter1/chapter1.tex": "c6d58db21abeb1df632089bfc5e2563420142001fe5ce981c5433d133050f534",
+    "/home/dhcn/ur_ws/src/myproject/latex/Chapter2/chapter2.tex": "b2bed294d4c2de1d3975df61015ee63429f74ba79cbdb0f4f774c0cc6a60b140",
+    "/home/dhcn/ur_ws/src/myproject/latex/Chapter3/chapter3.tex": "07f476114077e025609011f4b2f280d410354f2cd02a81e3e10440448d06cb4d",
+    "/home/dhcn/ur_ws/src/myproject/latex/Chapter4/chapter4.tex": "b08d93b516ab4c41ac240e4a50e03b667c741c836dcef8ab81a420555d07bb3a",
+    "/home/dhcn/ur_ws/src/myproject/latex/Chapter5/chapter5.tex": "26a88e08c47df4b5e9669a004a2d603f14bb497d5041fd31cca0cac79a817055",
+    "/home/dhcn/ur_ws/src/myproject/latex/Chapter6/chapter6.tex": "46e883430e065d684222b4f2429ee71d0f681deea99131e19d946c59d6bcbf56"
+  },
+  "dataset": "existing Test-IID 200 families / 1000 samples",
+  "historically_observed_test": true,
+  "threshold_selection_on_test": false,
+  "training_on_test": false,
+  "robot_motion_commanded": false
+}

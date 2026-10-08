@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.roborefer/protocol/dataset_v1.schema.json",
+  "title": "RoboRefer Dataset v1 sample record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "protocol_id", "sample_id", "family_id", "split",
+    "variant", "family_category", "depth_dependent", "instruction",
+    "inference_payload", "sensor_evidence", "evaluator_only", "provenance",
+    "artifact_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "protocol_id": {"const": "roborefer_dataset_v1_prototype"},
+    "sample_id": {"type": "string", "pattern": "^wp2_family_[0-9]{4}__[a-z_]+$"},
+    "family_id": {"type": "string", "pattern": "^wp2_family_[0-9]{4}$"},
+    "split": {"enum": ["train", "dev", "calibration", "test"]},
+    "variant": {"enum": ["clean", "semantic_counterfactual", "relation_counterfactual", "depth_corruption", "occlusion_view_counterfactual"]},
+    "family_category": {"enum": ["nearer_farther", "front_behind_camera", "multi_anchor_depth_order", "occlusion_depth_evidence", "direct_grounding", "relation_2d", "ambiguous_absent", "shape_comparison", "metric_comparison"]},
+    "depth_dependent": {"type": "boolean"},
+    "instruction": {"type": "string", "minLength": 12},
+    "inference_payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rgb_model_input", "depth_relative_model_input", "enable_depth", "prompt", "coordinate_suffix"],
+      "properties": {
+        "rgb_model_input": {"$ref": "#/$defs/fileRef"},
+        "depth_relative_model_input": {"$ref": "#/$defs/fileRef"},
+        "enable_depth": {"const": true},
+        "prompt": {"type": "string"},
+        "coordinate_suffix": {"type": "string"}
+      }
+    },
+    "sensor_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rgb_original", "depth_metric", "depth_relative_clean", "camera_info", "tf_snapshot", "registered_rgb_depth", "capture_timestamps"],
+      "properties": {
+        "rgb_original": {"$ref": "#/$defs/fileRef"},
+        "depth_metric": {"$ref": "#/$defs/fileRef"},
+        "depth_relative_clean": {"$ref": "#/$defs/fileRef"},
+        "camera_info": {"$ref": "#/$defs/fileRef"},
+        "tf_snapshot": {"$ref": "#/$defs/fileRef"},
+        "registered_rgb_depth": {"const": true},
+        "capture_timestamps": {
+          "type": "object",
+          "required": ["rgb_sec", "depth_sec", "labels_sec", "max_spread_sec"],
+          "properties": {
+            "rgb_sec": {"type": "number"}, "depth_sec": {"type": "number"},
+            "labels_sec": {"type": "number"}, "max_spread_sec": {"type": "number", "minimum": 0}
+          }
+        }
+      }
+    },
+    "evaluator_only": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["access_policy", "semantic_instance_labels", "masks", "spatial_label", "uncertainty_label", "object_oracle"],
+      "properties": {
+        "access_policy": {"const": "never_export_to_inference_payload"},
+        "semantic_instance_labels": {"$ref": "#/$defs/fileRef"},
+        "masks": {
+          "type": "object",
+          "required": ["target", "target_interior", "anchor", "graspable", "reachable", "valid_depth"],
+          "properties": {
+            "target": {"$ref": "#/$defs/fileRef"},
+            "target_interior": {"$ref": "#/$defs/fileRef"},
+            "anchor": {"type": "array", "items": {"$ref": "#/$defs/namedMask"}},
+            "graspable": {"$ref": "#/$defs/fileRef"},
+            "reachable": {"$ref": "#/$defs/fileRef"},
+            "valid_depth": {"$ref": "#/$defs/fileRef"}
+          }
+        },
+        "spatial_label": {
+          "type": "object",
+          "required": ["target_ids", "anchor_ids", "valid_target_ids", "relations", "relation_graph", "reference_frame"],
+          "properties": {
+            "target_ids": {"type": "array", "items": {"type": "string"}},
+            "anchor_ids": {"type": "array", "items": {"type": "string"}},
+            "valid_target_ids": {"type": "array", "items": {"type": "string"}},
+            "relations": {"type": "array", "items": {"type": "string"}},
+            "relation_graph": {"type": "array", "items": {"type": "object"}},
+            "reference_frame": {"enum": ["camera_color_optical_frame", "image", "base_link", "object_semantics"]}
+          }
+        },
+        "uncertainty_label": {
+          "type": "object",
+          "required": ["answerable", "state", "sources", "severity", "expected_intervention"],
+          "properties": {
+            "answerable": {"type": "boolean"},
+            "state": {"enum": ["FOUND", "AMBIGUOUS", "ABSENT", "INSUFFICIENT_EVIDENCE"]},
+            "sources": {"type": "array", "items": {"enum": ["semantic", "relation", "spatial", "depth", "calibration", "occlusion", "action"]}},
+            "severity": {"type": "integer", "minimum": 0, "maximum": 3},
+            "expected_intervention": {"enum": ["EXECUTE", "REOBSERVE", "REPROMPT", "ASK_USER", "ABSTAIN"]}
+          }
+        },
+        "object_oracle": {
+          "type": "object",
+          "required": ["requested_layout_base_link", "label_ids", "reachability_label_policy"],
+          "properties": {
+            "requested_layout_base_link": {"type": "object"},
+            "label_ids": {"type": "object"},
+            "reachability_label_policy": {"type": "string"}
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["seed", "generator_version", "capture_id", "capture_backend", "perturbation", "source_dataset_ids", "code_config_checkpoint_sha256"],
+      "properties": {
+        "seed": {"type": "integer"},
+        "generator_version": {"type": "string"},
+        "capture_id": {"type": "string"},
+        "capture_backend": {"const": "Gazebo Fortress RGB-D + semantic segmentation"},
+        "perturbation": {"type": "object"},
+        "source_dataset_ids": {"type": "array", "maxItems": 0},
+        "code_config_checkpoint_sha256": {"type": "object"}
+      }
+    },
+    "artifact_sha256": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "$defs": {
+    "fileRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "bytes"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1}
+      }
+    },
+    "namedMask": {
+      "type": "object", "additionalProperties": false,
+      "required": ["object_id", "path", "sha256", "bytes"],
+      "properties": {
+        "object_id": {"type": "string"},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "bytes": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

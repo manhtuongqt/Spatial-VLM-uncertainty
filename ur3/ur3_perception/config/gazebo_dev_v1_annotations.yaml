@@ -1,0 +1,26 @@
+schema_version: 1
+protocol_id: gazebo_dev_v1
+oracle_usage: evaluation_only_open_after_prediction_lock
+semantic_label_source: gazebo_evaluation_camera_not_vlm_input
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+states: [FOUND, AMBIGUOUS, ABSENT, INSUFFICIENT_EVIDENCE]
+scenes:
+  gazebo_dev_0000: {family_id: spatial_vlm_v1/dev/pilot/parent_0000, seed: 3405692441, state: FOUND, target_id: ycb_apple, target_label: 26, candidate_ids: [ycb_apple, ycb_orange, mango], candidate_labels: [26, 27, 29], rank_from: left, rank: 1}
+  gazebo_dev_0001: {family_id: spatial_vlm_v1/dev/pilot/parent_0001, seed: 156012329, state: AMBIGUOUS, target_id: null, target_label: null, valid_target_ids: [ycb_apple, ycb_orange], valid_target_labels: [26, 27], candidate_ids: [ycb_apple, ycb_orange], candidate_labels: [26, 27], rank_from: left, rank: 1}
+  gazebo_dev_0002: {family_id: spatial_vlm_v1/dev/pilot/parent_0002, seed: 1305781045, state: ABSENT, target_id: ycb_power_drill, target_label: 28, candidate_ids: [], candidate_labels: [], rank_from: left, rank: 1}
+  gazebo_dev_0003: {family_id: spatial_vlm_v1/dev/pilot/parent_0003, seed: 3754883153, state: INSUFFICIENT_EVIDENCE, target_id: ycb_apple, target_label: 26, candidate_ids: [ycb_apple], candidate_labels: [26], occluder_ids: [], occluder_labels: [], rank_from: left, rank: 1}
+  gazebo_dev_0004: {family_id: spatial_vlm_v1/dev/pilot/parent_0004, seed: 1892136124, state: FOUND, target_id: mango, target_label: 29, candidate_ids: [ycb_apple, ycb_orange, mango], candidate_labels: [26, 27, 29], rank_from: right, rank: 1}
+  gazebo_dev_0005: {family_id: spatial_vlm_v1/dev/pilot/parent_0005, seed: 48174959, state: AMBIGUOUS, target_id: null, target_label: null, valid_target_ids: [ycb_apple, ycb_orange], valid_target_labels: [26, 27], candidate_ids: [ycb_apple, ycb_orange], candidate_labels: [26, 27], rank_from: right, rank: 1}
+  gazebo_dev_0006: {family_id: spatial_vlm_v1/dev/pilot/parent_0006, seed: 3693890958, state: ABSENT, target_id: ycb_banana, target_label: 25, candidate_ids: [], candidate_labels: [], rank_from: right, rank: 1}
+  gazebo_dev_0007: {family_id: spatial_vlm_v1/dev/pilot/parent_0007, seed: 2364750150, state: INSUFFICIENT_EVIDENCE, target_id: ycb_orange, target_label: 27, candidate_ids: [ycb_orange], candidate_labels: [27], occluder_ids: [], occluder_labels: [], rank_from: right, rank: 1}
+  gazebo_dev_0008: {family_id: spatial_vlm_v1/dev/pilot/parent_0008, seed: 2358494497, state: FOUND, target_id: ycb_mustard_bottle, target_label: 24, candidate_ids: [ycb_tomato_soup_can, ycb_mustard_bottle, ycb_apple, ycb_orange], candidate_labels: [23, 24, 26, 27], rank_from: left, rank: 2}
+  gazebo_dev_0009: {family_id: spatial_vlm_v1/dev/pilot/parent_0009, seed: 3982905600, state: AMBIGUOUS, target_id: null, target_label: null, valid_target_ids: [ycb_mustard_bottle, ycb_apple], valid_target_labels: [24, 26], candidate_ids: [ycb_tomato_soup_can, ycb_mustard_bottle, ycb_apple, ycb_orange], candidate_labels: [23, 24, 26, 27], rank_from: left, rank: 2}
+  gazebo_dev_0010: {family_id: spatial_vlm_v1/dev/pilot/parent_0010, seed: 2440751914, state: ABSENT, target_id: ycb_mustard_bottle, target_label: 24, candidate_ids: [], candidate_labels: [], rank_from: left, rank: 2}
+  gazebo_dev_0011: {family_id: spatial_vlm_v1/dev/pilot/parent_0011, seed: 1630592170, state: INSUFFICIENT_EVIDENCE, target_id: ycb_tomato_soup_can, target_label: 23, candidate_ids: [ycb_tomato_soup_can], candidate_labels: [23], occluder_ids: [], occluder_labels: [], rank_from: right, rank: 3}
+  gazebo_dev_0012: {family_id: spatial_vlm_v1/dev/pilot/parent_0012, seed: 1555102541, state: FOUND, target_id: ycb_apple, target_label: 26, candidate_ids: [ycb_tomato_soup_can, ycb_mustard_bottle, ycb_apple, ycb_orange, mango], candidate_labels: [23, 24, 26, 27, 29], rank_from: right, rank: 3}
+  gazebo_dev_0013: {family_id: spatial_vlm_v1/dev/pilot/parent_0013, seed: 554625019, state: AMBIGUOUS, target_id: null, target_label: null, valid_target_ids: [ycb_mustard_bottle, ycb_apple], valid_target_labels: [24, 26], candidate_ids: [ycb_tomato_soup_can, ycb_mustard_bottle, ycb_apple, ycb_orange], candidate_labels: [23, 24, 26, 27], rank_from: right, rank: 3}
+  gazebo_dev_0014: {family_id: spatial_vlm_v1/dev/pilot/parent_0014, seed: 1453332530, state: ABSENT, target_id: ycb_cracker_box, target_label: 21, candidate_ids: [], candidate_labels: [], rank_from: right, rank: 3}
+  gazebo_dev_0015: {family_id: spatial_vlm_v1/dev/pilot/parent_0015, seed: 4000362842, state: INSUFFICIENT_EVIDENCE, target_id: mango, target_label: 29, candidate_ids: [mango], candidate_labels: [29], occluder_ids: [], occluder_labels: [], rank_from: right, rank: 3}

@@ -1,0 +1,16 @@
+/home/dhcn/ur_ws/
+/home/dhcn/workspace/ros_ur_driver/
+/home/dhcn/.local/lib/python3.10/
+/home/dhcn/.local/bin/
+/home/dhcn/Downloads/
+/home/dhcn/.ignition/
+/home/dhcn/.gazebo/
+/home/dhcn/.rviz2/
+/home/dhcn/.sdformat/
+/home/dhcn/.codex/attachments/
+/home/dhcn/.99-realsense-libusb.rules
+/home/dhcn/.realsense-config.json
+/home/dhcn/.cache/tectonic/
+/home/dhcn/.cache/Tectonic/
+/opt/ros/humble/share/ur_description/
+/opt/ros/humble/share/realsense2_description/

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "protocol_id": "pcra_u_development_train_v1",
+  "status": "LOCKED_BEFORE_PREFLIGHT",
+  "master_seed": 24082026,
+  "feature_extraction_seed": 24082026,
+  "preflight_batch_selection": "first_sha256_ordered_train_sample_per_answerability_class",
+  "canary_family_source": "family_manifest.batch_assignments[batch_id=canary_000]",
+  "canary_run_a_seed": 24082026,
+  "canary_run_b_seed": 24082026,
+  "full_training_seed": 24082026,
+  "epoch_order": "ascending_sha256(seed:epoch:family_id:variant:sample_id)",
+  "dataloader_workers": 0,
+  "deterministic_algorithms": true,
+  "cublas_workspace_config": ":4096:8",
+  "tf32_allowed": false,
+  "manual_posthoc_sample_selection": false
+}

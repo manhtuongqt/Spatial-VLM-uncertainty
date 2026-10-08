@@ -1,0 +1,23 @@
+schema_version: 1
+protocol_id: gazebo_uq_occlusion_characterization_v9
+official_pilot_gate_unchanged:
+  min_inclusive: 1
+  max_exclusive: 120
+internal_design_margin:
+  min_inclusive: 20
+  max_inclusive: 100
+selection_rule:
+  at_least_three_samples_inside_internal_margin: true
+  prefer_maximum_distance_to_nearest_internal_bound: true
+  per_mango_yaw: true
+capture_acceptance:
+  all_scene_rgb_sha256_unique: true
+policies:
+  engineering_only: true
+  no_model_inference: true
+  no_training: true
+  never_materialize_into_train_or_val: true
+  semantic_labels_evaluator_only: true
+  no_dev_calibration_or_test_access: true
+  no_robot_manipulation: true
+  collision_free_visual_only_occluder: true

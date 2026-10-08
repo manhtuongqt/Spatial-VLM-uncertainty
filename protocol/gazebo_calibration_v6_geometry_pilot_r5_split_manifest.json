@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gazebo_calibration_v6_geometry_pilot_r5",
+  "status": "FROZEN_DESIGN_INPUT",
+  "families": 32,
+  "population": "4 state x 4 relation x 2",
+  "data_design_lock_sha256": "5ed3e9d8dd083a4c58fe9ba7e8319e156849ffc14f80063d36dc0bf02fedf26f",
+  "exclusion_registry_sha256": "f0457bd6989714c357963ed3918579d58e692f676676d02483d46138350e8cb5",
+  "selected_nonce": 0,
+  "test_iid_ood_sealed": true,
+  "capture_authorized": false
+}

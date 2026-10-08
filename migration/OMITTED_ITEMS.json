@@ -1,0 +1,346 @@
+[
+  {
+    "path": "new/src/pcrau/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "new/scripts/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "new/tests/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "new/demo_gazebo/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "new/demo_gazebo/runs",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "new/hinhanh/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "new/test_iid/scripts/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "protocol/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "old/protocol/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "old/protocol/logs",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/.git",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/.pytest_cache",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur3_moveit_control/launch/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur3_moveit_control/scripts/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur3_moveit_control/test/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur3_perception/launch/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur3_perception/scripts/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur3_perception/test/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur_simulation_gz/launch/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "ur3/ur_simulation_gz/scripts/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/.git",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/models",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/API/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/API/Depth_Anything_V2/assets/examples_video/basketball.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "RoboRefer/API/Depth_Anything_V2/assets/examples_video/ferris_wheel.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "RoboRefer/API/Depth_Anything_V2/depth_anything_v2/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/API/Depth_Anything_V2/depth_anything_v2/dinov2_layers/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/API/Depth_Anything_V2/depth_anything_v2/util/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/Evaluation/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/data/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/data/dataset_impl/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/encoders/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/encoders/image/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/encoders/video/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/language_model/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/liger/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/multimodal_encoder/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/multimodal_encoder/intern/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/multimodal_encoder/siglip/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/multimodal_projector/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/realquantize/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/spatial/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/model/utils/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/train/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/train/callbacks/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/train/sequence_parallel/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/trl/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/trl/environment/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/trl/extras/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/trl/models/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/trl/trainer/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/utils/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/llava/wids/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/scripts/mh_pcrau_v3/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "RoboRefer/tests/mh_pcrau_v3/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/.git",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/checkpoints",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/demo/data/gallery/01_dog.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "sam2/demo/data/gallery/02_cups.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "sam2/demo/data/gallery/03_blocks.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "sam2/demo/data/gallery/04_coffee.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "sam2/demo/data/gallery/05_default_juggle.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "sam2/demo/frontend/src/assets/videos/sam2_720px_dark.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "sam2/notebooks/videos",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/sam2/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/sam2/modeling/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/sam2/modeling/backbones/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/sam2/modeling/sam/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/sam2/utils/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "sam2/sav_dataset/example/sav_000001.mp4",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "workspace/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_best.pt",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_final.pt",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_final_optimizer.pt",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06_robust_candidate/s1a_robust_fixed_epoch54.pt",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06_robust_candidate_r2/s1a_robust_fixed_epoch54.pt",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/g1/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "workspace/mh_pcrau_v3/tests/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "plan/MIGRATION_BACKUP_20261008",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "latex/prism_adapter_20261003.zip",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "latex/Chapter5/__pycache__",
+    "reason": "data/cache/history/generated directory"
+  },
+  {
+    "path": "baocao1/bao_cao_benchmark.log",
+    "reason": "data/model/media/build product or private key suffix"
+  },
+  {
+    "path": "baocao1/bao_cao_tien_do.log",
+    "reason": "data/model/media/build product or private key suffix"
+  }
+]

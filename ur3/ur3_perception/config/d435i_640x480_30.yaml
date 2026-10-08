@@ -1,0 +1,82 @@
+# Snapshot captured from the D435i connected on 2026-07-30.
+# This file is a reproducible device/profile record, not a substitute for
+# tabletop depth-bias or hand-eye calibration.
+device:
+  model: Intel RealSense D435i
+  serial_number: "243722071709"
+  product_id: "0x0B3A"
+  firmware_version: "5.17.3.10"
+  usb_type: "3.2"
+  realsense_ros_version: "4.58.2"
+  librealsense_version: "2.58.2"
+
+stream_profile:
+  color:
+    width: 640
+    height: 480
+    fps: 30
+    encoding: RGB8
+    frame_id: camera_color_optical_frame
+    distortion_model: plumb_bob
+    distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
+    intrinsics:
+      fx: 606.0816650390625
+      fy: 605.7973022460938
+      cx: 325.5436706542969
+      cy: 249.99615478515625
+    horizontal_fov_rad: 0.9715630778667533
+    vertical_fov_rad: 0.7544042578636287
+
+  raw_depth:
+    width: 640
+    height: 480
+    fps: 30
+    encoding: Z16
+    frame_id: camera_depth_optical_frame
+    distortion_model: plumb_bob
+    distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
+    intrinsics:
+      fx: 392.01446533203125
+      fy: 392.01446533203125
+      cx: 320.73468017578125
+      cy: 245.4236602783203
+    horizontal_fov_rad: 1.369198175134661
+    vertical_fov_rad: 1.0987161046299276
+
+  aligned_depth_to_color:
+    width: 640
+    height: 480
+    fps: 30
+    frame_id: camera_color_optical_frame
+    # Alignment resamples raw depth into the color camera geometry.
+    intrinsics_source: color
+
+depth_to_color_extrinsics:
+  # Transform published by the connected camera driver.
+  translation_m: [-0.00001929425161506515, 0.014987622387707233, 0.000239046843489632]
+  quaternion_xyzw: [0.0074482508935034275, 0.0014022595714777708, 0.0036398887168616056, 0.9999646544456482]
+  rotation_rpy_rad: [0.014906791844906, 0.002750201873804, 0.007300501346330]
+
+simulation_contract:
+  mode: aligned_depth_to_color
+  color_topic: /wrist_camera/color/image_raw
+  depth_topic: /wrist_camera/depth/image_raw
+  camera_info_topic: /wrist_camera/color/camera_info
+  optical_frame: camera_color_optical_frame
+  depth_encoding: 32FC1
+  depth_unit: m
+  synthetic_depth_noise_stddev_m: 0.0
+
+calibration_status:
+  # 0.001 m/unit is the nominal D400-family setting. Measure/verify it before
+  # using the real robot; it was not inferred from CameraInfo.
+  nominal_depth_scale_m_per_unit: 0.001
+  measured_depth_scale_m_per_unit: null
+  tabletop_depth_bias_m: null
+  tabletop_depth_stddev_m: null
+  hand_eye_tool_to_camera: uncalibrated_for_final_lab_mount
+  note: >-
+    Intrinsics and factory depth-to-color extrinsics above are device outputs.
+    Depth bias and hand-eye transform must be measured after choosing the final
+    table distance and installing the rigid wrist bracket.
+

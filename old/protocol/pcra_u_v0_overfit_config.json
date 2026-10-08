@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "protocol_id": "pcra_u_overfit_smoke_v1",
+  "seed": 8132026,
+  "feature_input": {
+    "source_run": "results/wp3_feature_hook_smoke_20260821",
+    "run_id": "hook_a",
+    "tensor_keys": ["R0", "D0"],
+    "input_shape": [13, 1024, 1152],
+    "local_tile_count": 12,
+    "thumbnail_index": 12,
+    "tile_grid": [3, 4],
+    "patch_grid_per_tile": [32, 32],
+    "pool_kernel": [4, 4],
+    "output_grid": [24, 32],
+    "thumbnail_policy": "global_context_only"
+  },
+  "language": {
+    "tokenizer": "lowercase_alphanumeric_regex_v1",
+    "token_id": "sha256_mod_4095_plus_1",
+    "vocab_size": 4096,
+    "max_tokens": 48,
+    "relations": [
+      "direct",
+      "left_of",
+      "right_of",
+      "front_of",
+      "behind",
+      "nearer_than",
+      "farther_than",
+      "between_in_depth",
+      "nearer_than_both",
+      "shape_comparison",
+      "semantic_reference",
+      "unknown"
+    ]
+  },
+  "model": {
+    "hidden_dim": 96,
+    "query_dim": 96,
+    "dropout": 0.0,
+    "answerability_classes": ["FOUND", "AMBIGUOUS", "ABSENT", "INSUFFICIENT_EVIDENCE"],
+    "source_classes": ["semantic", "relation", "spatial", "depth", "occlusion"]
+  },
+  "loss": {
+    "heatmap_weight": 1.0,
+    "answerability_weight": 0.5,
+    "source_weight": 0.5,
+    "heatmap": "found_only_weighted_bce_plus_soft_dice",
+    "answerability": "inverse_frequency_weighted_cross_entropy",
+    "source": "positive_weighted_bce",
+    "positive_weight_clamp": [1.0, 20.0]
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.003,
+    "weight_decay": 0.0,
+    "steps": 600,
+    "batch_size": 15,
+    "gradient_clip_norm": 5.0,
+    "dtype": "torch.float32",
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "eval_interval": 25,
+    "checkpoint_steps": [250, 255, 600],
+    "resume_replay_from_step": 250,
+    "resume_replay_to_step": 255
+  },
+  "gates": {
+    "max_final_initial_loss_ratio": 0.35,
+    "min_answerability_correct": 14,
+    "answerability_total": 15,
+    "min_source_micro_f1": 0.9,
+    "min_found_point_in_target_correct": 7,
+    "found_total": 8,
+    "min_found_mean_mass_in_target": 0.5,
+    "min_active_head_gradient_norm": 1e-10,
+    "require_final_model_hash_equal_ab": true,
+    "require_resume_model_hash_equal": true,
+    "require_protected_hashes_unchanged": true
+  },
+  "safety": {
+    "allowed_splits": ["train"],
+    "training_performed_before_gate": false,
+    "dataset_scaling_allowed": false,
+    "robot_publish_allowed": false,
+    "scientific_tables_allowed": ["table_07_training_checkpoint"],
+    "scientific_tables_forbidden": ["table_02_grounding_main", "table_03_answerability", "table_04_calibration", "table_05_source_attribution", "table_06_ablation"]
+  }
+}

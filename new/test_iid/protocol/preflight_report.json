@@ -1,0 +1,58 @@
+{
+  "capture_plan_sha256": "29be3e97508ae52e18eab7c6d7a9a03f9941f45143e4bc56dd719bd36f6f02c4",
+  "checks": {
+    "best_v2_and_calibrator_frozen": {
+      "passed": true
+    },
+    "coverage_and_object_priority": {
+      "categories": {
+        "direct_grounding": 30,
+        "front_behind_camera": 30,
+        "multi_anchor_depth_order": 30,
+        "nearer_farther": 35,
+        "occlusion_depth_evidence": 35,
+        "relation_2d": 40
+      },
+      "passed": true,
+      "primary_cube_anchor_count": 40,
+      "states": {
+        "ABSENT": 35,
+        "AMBIGUOUS": 35,
+        "FOUND": 80,
+        "INSUFFICIENT_EVIDENCE": 50
+      },
+      "target_groups": {
+        "box": 20,
+        "container": 30,
+        "cube": 10,
+        "fruit": 110,
+        "mug": 30
+      }
+    },
+    "deterministic_replay": {
+      "passed": true
+    },
+    "historical_disjointness": {
+      "overlaps": {
+        "capture_id": 0,
+        "family_id": 0,
+        "instruction": 0,
+        "layout": 0
+      },
+      "passed": true
+    },
+    "iid_and_sealed_boundary": {
+      "passed": true
+    },
+    "population_and_identity": {
+      "passed": true
+    }
+  },
+  "decision": "GO_TEST_IID_CAPTURE_CANARY",
+  "freeze_lock_sha256": "76c0b04c5e14fc08033d44d478f85d2aa8955f87f81ad717d66f8f29e67cec02",
+  "manifest_sha256": "67378993952827cc328930f287357d699bd0803ab9a9ba40c38772f8794f3c04",
+  "passed": true,
+  "protocol_id": "roborefer_dataset_v2_1_test_iid_capture_200",
+  "schema_version": 1,
+  "test_inference_performed": false
+}

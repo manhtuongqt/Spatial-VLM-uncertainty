@@ -1,0 +1,16 @@
+{
+  "calibration": {
+    "families": 128,
+    "state_relation_cell_quota": 8
+  },
+  "family_disjoint_from": [
+    "Gazebo_train_uq",
+    "Gazebo_val_uq",
+    "Gazebo_dev_answerability_v2",
+    "all Gazebo UQ pilots and failed full attempts"
+  ],
+  "protocol_id": "gazebo_calibration_v1",
+  "schema_version": 1,
+  "status": "PREREGISTERED",
+  "test_iid_ood_sealed": true
+}

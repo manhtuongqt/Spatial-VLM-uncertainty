@@ -1,0 +1,41 @@
+{
+  "baseline_bundle": {
+    "calibrator": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/selected_calibrator.json",
+    "calibrator_sha256": "19e0c35424144cf753109978b9d08ddaa16edcadbe0c1dc1515103fb88b8de7d",
+    "checkpoint": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/model.safetensors",
+    "checkpoint_sha256": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045",
+    "config": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/config.json",
+    "config_sha256": "b214670c6c4a679f755a9953e15bae4bbb71ee5eea1980fa8e3d64030d79f85b",
+    "historical_artifacts_preserved": true,
+    "historical_model_display_name": "P-CRA-U V2 lịch sử",
+    "model_display_name": "P-CRA-U",
+    "not_selected_experiment": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_support_split_dev_20261003",
+    "note": "Người dùng chọn V2 + adapter answerability + logistic33 làm P-CRA-U hiện tại và chấp nhận đánh đổi risk thực nghiệm 9,42% trên IID cũ. Giữ nguyên ngưỡng 0,2611932834526145; ngân sách calibration 7,5% chưa đạt trên test. Artifact V2 lịch sử được bảo tồn.",
+    "observed_test_selective_risk": 0.09418282548476455,
+    "official_v2_replaced": false,
+    "policy": "hard_found",
+    "profiles": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/profiles.json",
+    "profiles_sha256": "df39fa55843d657111a2c0bee2fee68aad1f2c9ada4c2fc257527eb420f6c9ff",
+    "risk_target": 0.075,
+    "risk_threshold": 0.2611932834526145,
+    "robot_motion_commanded": false,
+    "selected_as_primary_model": true,
+    "selected_on": "2026-10-03",
+    "selection": "answerability_language_adapter_logistic33",
+    "selection_document": "/home/dhcn/ur_ws/src/myproject/new/docs/MODEL_SELECTION.md",
+    "source_profile": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/active_experimental_profile.json",
+    "status": "USER_SELECTED_P_CRA_U_ADAPTER",
+    "test_report": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/test_iid_7p5/full_metrics.json",
+    "test_risk_target_met": false,
+    "user_accepted_empirical_risk_tradeoff": true
+  },
+  "baseline_state_sha256": "66a2d17434f7ef18123d14db542b2d618130427e46d46d8bd9c5a3646296a9a2",
+  "checkpoints": {
+    "C1": "40e3e26a7e524ca0187f92204d7268ad69f824c9e015370ea2b6dd1160aa36c9",
+    "P1": "2bbff4da63d49d115f98a5dfd72db05ef90b200e9e6f96a586fa4c216e294347",
+    "P2": "b2762ed979f1b6d7e7f9eacf01a54aa85671c741783c45ffdd872e0a5e165f14"
+  },
+  "only_residual_updated": true,
+  "protocol_sha256": "0c4efd907413523bf273044c9520662750bbbca0b2cb72218fe712b02531a412",
+  "trainable_parameters_per_arm": 33024
+}

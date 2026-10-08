@@ -1,0 +1,206 @@
+{
+  "audit": {
+    "calibration": {
+      "all_features_finite": true,
+      "anchor_hits": 140,
+      "batch20_latency_ms_median": 63.755814500837005,
+      "bypass_exact": true,
+      "empty_anchor": 1,
+      "families": 200,
+      "latency_includes_export_and_boundary_checks": true,
+      "representative_baseline_capture_plain_exact": true,
+      "samples": 1000,
+      "scope": {
+        "DIRECT_BYPASS": 350,
+        "PARSE_UNSUPPORTED": 490,
+        "SUPPORTED_DIAGNOSTIC": 160
+      },
+      "visible_anchor": 159
+    },
+    "dev": {
+      "all_features_finite": true,
+      "anchor_hits": 48,
+      "batch20_latency_ms_median": 65.42103100036911,
+      "bypass_exact": true,
+      "empty_anchor": 3,
+      "families": 80,
+      "historical33_max_abs_delta_by_feature": {
+        "absent_probability": 1.4314427971839905e-05,
+        "ambiguous_probability": 2.6338966563344e-09,
+        "anchor_sigmoid_max_mean": 0.0,
+        "anchor_sigmoid_max_min": 0.0,
+        "base_absent": 0.0,
+        "base_ambiguous": 0.0,
+        "base_found": 0.0,
+        "base_insufficient_evidence": 0.0,
+        "depth_uncertainty": 0.0,
+        "edge_probability_min": 0.0,
+        "found_probability": 1.471489667892456e-07,
+        "fusion_gate_mean": 0.0,
+        "heatmap_entropy": 0.0,
+        "insufficient_probability": 1.4126300811767578e-05,
+        "interior_sigmoid_max": 0.0,
+        "interior_sigmoid_mean": 7.450580596923828e-09,
+        "mode_count": 0.0,
+        "occlusion_uncertainty": 0.0,
+        "peak_margin": 0.0,
+        "relation_consistency": 0.0,
+        "relation_uncertainty": 0.0,
+        "rgb_depth_cosine": 0.0,
+        "rgb_depth_mae": 0.0,
+        "roborefer_disagreement": 0.0,
+        "roborefer_missing": 0.0,
+        "semantic_uncertainty": 0.0,
+        "spatial_peak": 0.0,
+        "spatial_top10_mass": 1.1920928955078125e-07,
+        "spatial_top5_mass": 1.1920928955078125e-07,
+        "spatial_uncertainty": 0.0,
+        "target_interior_peak_distance": 0.0,
+        "target_sigmoid_max": 0.0,
+        "target_sigmoid_mean": 1.1175870895385742e-08
+      },
+      "latency_includes_export_and_boundary_checks": true,
+      "representative_baseline_capture_plain_exact": true,
+      "samples": 400,
+      "scope": {
+        "DIRECT_BYPASS": 140,
+        "PARSE_UNSUPPORTED": 196,
+        "SUPPORTED_DIAGNOSTIC": 64
+      },
+      "visible_anchor": 61
+    },
+    "train": {
+      "all_features_finite": true,
+      "anchor_hits": 226,
+      "batch20_latency_ms_median": 63.27239550046215,
+      "bypass_exact": true,
+      "empty_anchor": 5,
+      "families": 320,
+      "latency_includes_export_and_boundary_checks": true,
+      "representative_baseline_capture_plain_exact": true,
+      "samples": 1600,
+      "scope": {
+        "DIRECT_BYPASS": 560,
+        "PARSE_UNSUPPORTED": 784,
+        "SUPPORTED_DIAGNOSTIC": 256
+      },
+      "visible_anchor": 251
+    }
+  },
+  "bundle_reload_exact_representative20": true,
+  "cached_baseline_evidence_used": false,
+  "calibration_oof_probability_metrics": {
+    "aurc": 0.2408549756333553,
+    "brier": 0.06395613333977339,
+    "ece_10": 0.015056913966734947,
+    "nll": 0.2172111216986255
+  },
+  "calibration_profile": {
+    "accepted_families": 199,
+    "accepted_samples": 351,
+    "bundle_sha256": "5478ac842cab60f8a2bff5e7c8a193b7f806f374ee63b72e38a38f68fa1da81a",
+    "coverage": 0.351,
+    "empirical_risk": 0.045584045584045586,
+    "errors": 16,
+    "evidence_producer": "pcrau_unified_live_evidence_v1",
+    "minimum_accepted_families": 60,
+    "model": "P1_G44",
+    "policy": "hard_found",
+    "risk_target": 0.075,
+    "status": "PASS",
+    "threshold": 0.2889643687106893,
+    "threshold_selected_on": "calibration_family_OOF_only",
+    "wilson_upper_95": 0.07275698687367922
+  },
+  "geometry_in_risk": {
+    "calibration": {
+      "max_abs_geometry_logit_effect": 1.4041483044702328,
+      "nonzero_geometry_effect": 160,
+      "supported": 160
+    },
+    "dev": {
+      "max_abs_geometry_logit_effect": 1.3758427194868488,
+      "nonzero_geometry_effect": 64,
+      "supported": 64
+    },
+    "train": {
+      "max_abs_geometry_logit_effect": 1.3963919535020244,
+      "nonzero_geometry_effect": 256,
+      "supported": 256
+    }
+  },
+  "iid_opened": false,
+  "neural_optimizer_steps": 0,
+  "neural_states_unchanged": true,
+  "performance_gates_advisory_only": true,
+  "protected_files_unchanged": 1193,
+  "split_policy": {
+    "calibration": {
+      "accepted": 357,
+      "accepted_absent_truth": 0,
+      "accepted_non_found_truth": 15,
+      "actions": {
+        "ABSTAIN": 106,
+        "ASK_USER": 123,
+        "EXECUTE": 357,
+        "REOBSERVE": 414
+      },
+      "answer_gate_bypassed": 0,
+      "bypass_correct": 0,
+      "bypass_errors": 0,
+      "correct_acceptances": 340,
+      "correct_found_rejected": 71,
+      "correct_found_total": 411,
+      "coverage": 0.357,
+      "empirical_risk": 0.047619047619047616,
+      "errors": 17,
+      "samples": 1000,
+      "wilson_upper_95": 0.07493002138410576
+    },
+    "dev": {
+      "accepted": 139,
+      "accepted_absent_truth": 2,
+      "accepted_non_found_truth": 5,
+      "actions": {
+        "ABSTAIN": 53,
+        "ASK_USER": 49,
+        "EXECUTE": 139,
+        "REOBSERVE": 159
+      },
+      "answer_gate_bypassed": 0,
+      "bypass_correct": 0,
+      "bypass_errors": 0,
+      "correct_acceptances": 132,
+      "correct_found_rejected": 32,
+      "correct_found_total": 164,
+      "coverage": 0.3475,
+      "empirical_risk": 0.050359712230215826,
+      "errors": 7,
+      "samples": 400,
+      "wilson_upper_95": 0.10029955075902429
+    },
+    "train": {
+      "accepted": 663,
+      "accepted_absent_truth": 0,
+      "accepted_non_found_truth": 3,
+      "actions": {
+        "ABSTAIN": 214,
+        "ASK_USER": 178,
+        "EXECUTE": 663,
+        "REOBSERVE": 545
+      },
+      "answer_gate_bypassed": 0,
+      "bypass_correct": 0,
+      "bypass_errors": 0,
+      "correct_acceptances": 648,
+      "correct_found_rejected": 11,
+      "correct_found_total": 659,
+      "coverage": 0.414375,
+      "empirical_risk": 0.02262443438914027,
+      "errors": 15,
+      "samples": 1600,
+      "wilson_upper_95": 0.03699138868390937
+    }
+  },
+  "version": "pcrau_unified_live_evidence_v1"
+}

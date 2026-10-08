@@ -1,0 +1,33 @@
+{
+  "capture_compatibility_lock_sha256": "525f595e2fe7ccd6b659ae16cd8b1f6b34dbdb40c425fb7b35b0da5ad5bbb93d",
+  "capture_input_manifest_sha256": "572f2e2e9e3a119d6b3877e57da0bcbfc884063fa1d41cd0c7040ac47f284018",
+  "capture_manifest_sha256": "ebfd12c0b35cd7bd4f33925c4474ab0c0321ed4f3f8c36e38b179646793b329a",
+  "capture_status": "COMPLETE",
+  "contract_generator_sha256": "fe2972f55d4b8711ab7eec15093f9736127582ca6d3991195288ce29dd7092ce",
+  "dev_v2_access": "forbidden_for_training_or_selection",
+  "locked_at_utc": "2026-09-14T05:55:47.021452+00:00",
+  "locked_at_utc_final": "2026-09-14T05:55:47.022246+00:00",
+  "model_input_allowlist": [
+    "image",
+    "depth",
+    "instruction"
+  ],
+  "no_sam2": true,
+  "pipeline_source_sha256": "df7697ecc21ed0df448ac8ab66a9d7b2d14dc233305251e293d4dd34fa58636f",
+  "predecessor_rejected_geometry_qc_sha256": "05d18f51d5a58ab0a8ff5b401c0a02366e2b2c871fa85e71e1dfcd49e1971221",
+  "primary_contract_lock_sha256": "5c295712a7e8c7f3a385b1031b07ab20b6a796473ef98af9f7f93d0dfacc9a53",
+  "protocol_id": "gazebo_train_uq_v2_full_r2",
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "protocol/gazebo_train_uq_v2_full_r2_capture_compatibility_lock.json": "525f595e2fe7ccd6b659ae16cd8b1f6b34dbdb40c425fb7b35b0da5ad5bbb93d",
+    "protocol/gazebo_train_uq_v2_full_r2_contract_lock.json": "5c295712a7e8c7f3a385b1031b07ab20b6a796473ef98af9f7f93d0dfacc9a53",
+    "protocol/materialize_gazebo_train_uq_v1.py": "b1a52392c25123e121496755198708788f89a6a6f06de9e893a837cd2cc739ed",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_full_r2/capture_attempt_01/capture_manifest.json": "ebfd12c0b35cd7bd4f33925c4474ab0c0321ed4f3f8c36e38b179646793b329a",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_full_r2/capture_attempt_01/input_manifest.jsonl": "572f2e2e9e3a119d6b3877e57da0bcbfc884063fa1d41cd0c7040ac47f284018",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_full_r2_annotations.yaml": "f9bf1a3d31efa3f8f5256c9d17d51e2769930d653f3ea5b88adb6cd0bb0daceb",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_full_r2_gate.yaml": "664b699460dd5b0efc2fd593322eda98400b8596fdf69a39da8bcbf6b81b4cc3",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_full_r2_scenes.yaml": "4d11299d9b71faab8d246360a25239a9dd364e1b11e0f8c5705a64e1c339c649"
+  },
+  "status": "LOCKED_BEFORE_GEOMETRY_QC_AND_MATERIALIZATION",
+  "wrapper_source_sha256": "48991029a408069bed79d91aa31d971a000df944040deb84e4ecff9f277fb6db"
+}

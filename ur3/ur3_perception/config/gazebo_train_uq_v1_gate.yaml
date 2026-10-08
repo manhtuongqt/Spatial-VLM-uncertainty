@@ -1,0 +1,134 @@
+schema_version: 1
+protocol_id: gazebo_train_uq_v1
+frozen_before_capture: true
+parent_family_count: 320
+split_parent_family_count:
+  train_uq: 256
+  val_uq: 64
+state_quota:
+  train_uq:
+    FOUND: 64
+    AMBIGUOUS: 64
+    ABSENT: 64
+    INSUFFICIENT_EVIDENCE: 64
+  val_uq:
+    FOUND: 16
+    AMBIGUOUS: 16
+    ABSENT: 16
+    INSUFFICIENT_EVIDENCE: 16
+relation_variant_quota:
+  train_uq:
+    leftmost: 64
+    rightmost: 64
+    second_from_left: 64
+    second_from_right: 64
+  val_uq:
+    leftmost: 16
+    rightmost: 16
+    second_from_left: 16
+    second_from_right: 16
+state_relation_cell_quota:
+  train_uq: 16
+  val_uq: 4
+focus_object_quota_min:
+  train_uq:
+    ycb_apple: 200
+    ycb_orange: 200
+    mango: 200
+  val_uq:
+    ycb_apple: 50
+    ycb_orange: 50
+    mango: 50
+hard_case_quota_min:
+  train_uq:
+    edge_truncation: 96
+  val_uq:
+    edge_truncation: 24
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+insufficient_evidence_rule:
+  min_visible_pixels_inclusive: 1
+  max_visible_pixels_exclusive: 120
+  projected_center_outer_margin_fraction: 0.2
+output_contract:
+  point_regex: ^POINT \[\(([0-9]*\.?[0-9]+), ([0-9]*\.?[0-9]+)\)\]$
+  abstain_literal: ABSTAIN
+  allowed_actions:
+  - POINT
+  - ABSTAIN
+  point_state: FOUND
+  abstain_states:
+  - AMBIGUOUS
+  - ABSENT
+  - INSUFFICIENT_EVIDENCE
+camera:
+  frame: camera_color_optical_frame
+  base_frame: base_link
+  resolution:
+  - 640
+  - 480
+  intrinsics:
+    fx: 606.0816650391
+    fy: 605.7973022461
+    cx: 325.5436706543
+    cy: 249.9961547852
+  view_joint_pose:
+  - 1.3815
+  - -1.8273
+  - 1.3428
+  - -1.2863
+  - -1.5708
+  - -1.9601
+  depth_unit: metre
+  valid_depth_range_m:
+  - 0.1
+  - 2.0
+family_split_rule:
+  all_variants_same_parent_same_split: true
+  co_locate:
+  - views
+  - paraphrases
+  - visibility_variants
+  - counterfactuals
+model_input_allowlist:
+- rgb
+- depth_m
+- instruction
+evaluator_only:
+- semantic_labels
+- target_id
+- target_mask
+- context_ids
+- candidate_set
+- answerability_state
+- scene_layout
+- camera_to_world
+model_selection:
+  selection_split: val_uq
+  forbidden_selection_splits:
+  - train_uq
+  - gazebo_dev_answerability_v2
+  - gazebo_calibration
+  - gazebo_test_iid
+  - gazebo_test_ood
+  checkpoint_rule: 'lexicographic: maximize Val-UQ safe-task accuracy; minimize Val-UQ false-accept rate; maximize Val-UQ FOUND Hit@0.08; then
+    lowest validation loss'
+  threshold_rule: select only on Val-UQ after model checkpoint freeze
+post_val_dev_rule:
+  frozen_dev_dataset: Gazebo_dev_answerability_v2
+  allowed: one blinded paired report after B1-UQ checkpoint and parser are frozen
+  forbidden:
+  - checkpoint_selection
+  - threshold_selection
+  - prompt_editing
+  - training
+  - repeat_until_success
+future_splits:
+  gazebo_calibration: SEALED_NOT_MATERIALIZED
+  gazebo_test_iid: SEALED_NOT_MATERIALIZED
+  gazebo_test_ood: SEALED_NOT_MATERIALIZED
+no_sam2: true
+b2_opened: false
+test_iid_ood_access: false

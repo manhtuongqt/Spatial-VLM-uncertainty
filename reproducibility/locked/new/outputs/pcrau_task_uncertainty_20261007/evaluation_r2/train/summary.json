@@ -1,0 +1,46 @@
+{
+  "batch20_feature_cache_pipeline_MC_latency_median_ms": 193.0209524998645,
+  "tasks": {
+    "completion": {
+      "IID_completion_reference_evaluation_performed": false,
+      "baseline_hidden_core_mass_on_meaningful_pairs": 0.248150837593322,
+      "baseline_reference_PIT": 0.9758064516129032,
+      "baseline_reference_mass": 0.9780136958114467,
+      "eligible_pairs": 124,
+      "full_amodal_ground_truth": false,
+      "hidden_core_mass_mean_on_meaningful_pairs": 0.16827900579127839,
+      "meaningful_hidden_pairs": 9,
+      "reference_PIT": 0.9838709677419355,
+      "reference_mass": 0.9234951690297052
+    },
+    "depth": {
+      "MAE_m": 0.02924890658073127,
+      "RMSE_m": 0.040782595751428015,
+      "interval_95_coverage": 0.99375,
+      "mixture_NLL": -1.7984451631180292,
+      "reference_is_sensor_measurement": true,
+      "valid_predicted_node_samples": 1600
+    },
+    "relation": {
+      "accuracy": 0.9069767441860465,
+      "brier": 0.06280706825204638,
+      "centroid_reference_samples": 215,
+      "reference_definition": "single_visible_requested_target_and_anchor_centroids_12px"
+    },
+    "samples": 1600,
+    "semantic": {
+      "foreground_identity_accuracy": 0.9047619047619048,
+      "foreground_nodes": 1575,
+      "node_identity_NLL": 0.31806962380901466,
+      "node_identity_accuracy": 0.90625,
+      "noun_matching_brier": 0.07328128897317407,
+      "noun_matching_samples": 759
+    },
+    "spatial": {
+      "anchor_hits": 226,
+      "target_hits": 1309,
+      "target_present": 1341,
+      "visible_anchors": 251
+    }
+  }
+}

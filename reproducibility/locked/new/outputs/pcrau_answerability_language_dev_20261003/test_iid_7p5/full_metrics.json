@@ -1,0 +1,282 @@
+{
+  "status": "TEST_IID_REEVALUATION_COMPLETE_BUDGET_NOT_MET",
+  "evaluated_at_utc": "2026-10-03T08:51:11.261403+00:00",
+  "samples": 1000,
+  "families": 200,
+  "profile": {
+    "risk_target": 0.075,
+    "risk_threshold": 0.2611932834526145,
+    "policy": "hard_found"
+  },
+  "test_history": "Existing Test-IID historically observed; not a fresh untouched confirmation set",
+  "threshold_selected_on_test": false,
+  "calibrator_fit_on_test": false,
+  "model_selected_on_test": false,
+  "robot_motion_commanded": false,
+  "official_v2_replaced": false,
+  "answerability_before": {
+    "confusion_matrix": [
+      [
+        345,
+        0,
+        31,
+        44
+      ],
+      [
+        0,
+        105,
+        0,
+        0
+      ],
+      [
+        17,
+        0,
+        85,
+        30
+      ],
+      [
+        53,
+        0,
+        57,
+        233
+      ]
+    ],
+    "accuracy": 0.768,
+    "macro_f1": 0.7751618578731566,
+    "per_class": [
+      {
+        "precision": 0.8313253012048193,
+        "recall": 0.8214285714285714,
+        "f1": 0.8263473053892216
+      },
+      {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "precision": 0.4913294797687861,
+        "recall": 0.6439393939393939,
+        "f1": 0.5573770491803279
+      },
+      {
+        "precision": 0.758957654723127,
+        "recall": 0.6793002915451894,
+        "f1": 0.7169230769230769
+      }
+    ],
+    "false_found": 70,
+    "missed_found": 75
+  },
+  "answerability_after": {
+    "confusion_matrix": [
+      [
+        365,
+        0,
+        22,
+        33
+      ],
+      [
+        0,
+        105,
+        0,
+        0
+      ],
+      [
+        15,
+        0,
+        87,
+        30
+      ],
+      [
+        40,
+        0,
+        49,
+        254
+      ]
+    ],
+    "accuracy": 0.811,
+    "macro_f1": 0.8096861471861472,
+    "per_class": [
+      {
+        "precision": 0.8690476190476191,
+        "recall": 0.8690476190476191,
+        "f1": 0.8690476190476191
+      },
+      {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "precision": 0.5506329113924051,
+        "recall": 0.6590909090909091,
+        "f1": 0.6000000000000001
+      },
+      {
+        "precision": 0.8012618296529969,
+        "recall": 0.7405247813411079,
+        "f1": 0.7696969696969697
+      }
+    ],
+    "false_found": 55,
+    "missed_found": 55
+  },
+  "policy": {
+    "samples": 1000,
+    "accepted": 361,
+    "coverage": 0.361,
+    "errors": 34,
+    "empirical_risk": 0.09418282548476455,
+    "wilson_upper_95": 0.12873055701310315,
+    "correct_acceptances": 327,
+    "correct_found_rejected": 78,
+    "correct_found_total": 405,
+    "accepted_non_found_truth": 29,
+    "accepted_absent_truth": 7,
+    "answer_gate_bypassed": 0,
+    "bypass_correct": 0,
+    "bypass_errors": 0,
+    "actions": {
+      "EXECUTE": 361,
+      "REOBSERVE": 347,
+      "ASK_USER": 134,
+      "ABSTAIN": 158
+    },
+    "valid_acceptance_recall": 0.8074074074074075,
+    "accepted_correct_rate": 0.9058171745152355,
+    "accepted_error_truth": {
+      "FOUND": 5,
+      "INSUFFICIENT_EVIDENCE": 22,
+      "ABSENT": 7
+    },
+    "valid_rejected_predictions": {
+      "ABSENT": 16,
+      "INSUFFICIENT_EVIDENCE": 32,
+      "FOUND": 30
+    },
+    "valid_answerability_rejected": 48,
+    "valid_risk_rejected": 30,
+    "point_hits_among_accepted": 346,
+    "budget_met_by_empirical_risk": false,
+    "budget_met_by_wilson_upper": false
+  },
+  "historical_v2_policy": {
+    "profile": "historical V2 locked threshold 0.0937008824; different calibration/budget protocol",
+    "accepted": 255,
+    "correct_acceptances": 249,
+    "errors": 6,
+    "coverage": 0.255,
+    "empirical_risk": 0.023529411764705882,
+    "valid_acceptance_recall": 0.6148148148148148,
+    "actions": {
+      "ABSTAIN": 173,
+      "EXECUTE": 255,
+      "REOBSERVE": 375,
+      "ASK_USER": 197
+    }
+  },
+  "risk_metrics": {
+    "brier": 0.07710818211207604,
+    "nll": 0.2570656680261664,
+    "ece_10": 0.03108022004479418,
+    "aurc": 0.25574809901372536,
+    "positive_error_rate": 0.595,
+    "oracle_aurc": 0.22923070217918806,
+    "excess_aurc": 0.0265173968345373
+  },
+  "historical_v2_risk_metrics": {
+    "accepted_families": 195,
+    "accepted_samples": 255,
+    "aurc": 0.26045059712042623,
+    "average_precision": 0.9620209475193559,
+    "brier": 0.09614534285070162,
+    "coverage_at_frozen_threshold": 0.255,
+    "definition": "error = non-FOUND ground truth OR MAP point outside target",
+    "ece_10": 0.04646995180675784,
+    "excess_aurc": 0.03121989494123817,
+    "frozen_threshold": 0.09370088241237143,
+    "nll": 0.2984760946090687,
+    "oracle_aurc": 0.22923070217918806,
+    "positive_error_rate": 0.595,
+    "roc_auc": 0.9454632223259675,
+    "selective_risk_at_frozen_threshold": 0.023529411764705882
+  },
+  "case_audit": {
+    "valid_total": 405,
+    "valid_misclassified_before": 66,
+    "valid_misclassified_after": 48,
+    "recovered_valid_answerability": 30,
+    "lost_valid_answerability": 12,
+    "net_valid_answerability_gain": 18,
+    "all_classification_fixed": 71,
+    "all_classification_regressed": 28,
+    "policy_added_correct": 78,
+    "policy_lost_correct": 0
+  },
+  "family_bootstrap": {
+    "unit": "family_cluster",
+    "families": 200,
+    "replicates": 20000,
+    "seed": 24082026,
+    "variants_kept_together": true,
+    "threshold_held_fixed": true,
+    "new_selective_risk": {
+      "estimate": 0.09418282548476455,
+      "ci95_low": 0.06371191135734072,
+      "ci95_high": 0.12534838781356886
+    },
+    "new_coverage": {
+      "estimate": 0.361,
+      "ci95_low": 0.338,
+      "ci95_high": 0.384
+    },
+    "new_valid_acceptance_recall": {
+      "estimate": 0.8074074074074075,
+      "ci95_low": 0.7667493796526055,
+      "ci95_high": 0.8488687946053735
+    },
+    "new_answerability_macro_f1": {
+      "estimate": 0.8096861471861472,
+      "ci95_low": 0.7734701112593574,
+      "ci95_high": 0.8416651366877552
+    },
+    "paired_macro_f1_delta": {
+      "estimate": 0.034524289312990564,
+      "ci95_low": 0.01573879241115714,
+      "ci95_high": 0.053924925591168626
+    },
+    "paired_accuracy_delta": {
+      "estimate": 0.04300000000000004,
+      "ci95_low": 0.023,
+      "ci95_high": 0.064
+    },
+    "paired_policy_valid_recall_delta_different_profiles": {
+      "estimate": 0.19259259259259265,
+      "ci95_low": 0.1525,
+      "ci95_high": 0.23373493975903614
+    },
+    "paired_policy_risk_delta_different_profiles": {
+      "estimate": 0.07065341372005866,
+      "ci95_low": 0.03781654985542099,
+      "ci95_high": 0.10412669093696023
+    }
+  },
+  "grounding": {
+    "target_present": 835,
+    "hits": 775,
+    "point_in_target": 0.9281437125748503,
+    "unchanged_from_v2": true
+  },
+  "verification": {
+    "full_sample_id_join": true,
+    "runtime_matches_annotation_free_rule": true,
+    "grounding_source_edge_and_evaluator_exactly_unchanged": true,
+    "locked_and_protected_hashes_unchanged": true
+  },
+  "artifacts": {
+    "predictions_sha256": "775d499ce38a4d49e3e7c5488acc6dd644adfe3978c7ace71cdf6ad2eb5fa1e4",
+    "runtime_decisions_sha256": "c5012ab23dba624084713c2b2a6e35cda1b3ad98942e3700c8bdcc82080cb6c9",
+    "evaluation_lock_sha256": "81790407956167d1fefed848aa1744c40fcc304a5f6ffa238fc8bfc81c634b8f"
+  }
+}

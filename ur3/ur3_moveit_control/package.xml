@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>ur3_moveit_control</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="qbao1607@gmail.com">dhcn-1</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>action_msgs</depend>
+  <depend>control_msgs</depend>
+  <depend>moveit_msgs</depend>
+  <depend>shape_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>ros_gz_interfaces</depend>
+  <depend>ur3_perception_interfaces</depend>
+  <depend>susgrip_2f_gazebo</depend>
+  <depend>ur_description</depend>
+  <depend>realsense2_description</depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>ur_moveit_config</exec_depend>
+  <exec_depend>ur_simulation_gz</exec_depend>
+
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+  <test_depend>ament_cmake_pytest</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>launch_testing</test_depend>
+  <test_depend>launch_testing_ament_cmake</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

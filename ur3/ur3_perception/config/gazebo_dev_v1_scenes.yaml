@@ -1,0 +1,177 @@
+schema_version: 1
+protocol_id: gazebo_dev_v1
+expected_scene_count: 16
+capture_mode: no_manipulation_shadow
+random_seed: 8132026
+view_joint_pose: [1.3815, -1.8273, 1.3428, -1.2863, -1.5708, -1.9601]
+camera_frame: camera_color_optical_frame
+base_frame: base_link
+coordinate_suffix: >-
+  Your answer must be exactly one list containing one normalized image point,
+  formatted as [(x, y)], where x and y are between 0 and 1. Return no words.
+
+# Every movable object is reset for every record. Unused objects go to locked
+# storage positions outside the wrist-camera view.
+objects:
+  red_cube: {z: 0.030000, storage_pose: [-0.65, 1.40, 0.0]}
+  blue_cube: {z: 0.025000, storage_pose: [-0.45, 1.40, 0.0]}
+  green_cube: {z: 0.025000, storage_pose: [-0.25, 1.40, 0.0]}
+  yellow_cube: {z: 0.025000, storage_pose: [-0.05, 1.40, 0.0]}
+  orange_cube: {z: 0.025000, storage_pose: [0.15, 1.40, 0.0]}
+  purple_cube: {z: 0.025000, storage_pose: [0.35, 1.40, 0.0]}
+  pink_cube: {z: 0.025000, storage_pose: [0.55, 1.40, 0.0]}
+  ycb_cracker_box: {z: 0.106710, storage_pose: [-0.02, 0.85, 0.0]}
+  ycb_sugar_box: {z: 0.088107, storage_pose: [0.20, 0.85, 0.0]}
+  ycb_tomato_soup_can: {z: 0.050948, storage_pose: [-0.55, 1.10, 0.0]}
+  ycb_mustard_bottle: {z: 0.095695, storage_pose: [-0.38, 1.10, 0.0]}
+  ycb_banana: {z: 0.018376, storage_pose: [-0.30, 0.85, 0.25]}
+  ycb_apple: {z: 0.037710, storage_pose: [-0.21, 1.10, 0.0]}
+  ycb_orange: {z: 0.037010, storage_pose: [-0.04, 1.10, 0.0]}
+  ycb_power_drill: {z: 0.028689, storage_pose: [-0.62, 0.85, -0.25]}
+  mango: {z: 0.030000, storage_pose: [0.38, 0.85, 0.35]}
+
+scenes:
+  - scene_id: gazebo_dev_0000
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0000
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the leftmost round fruit among the red apple, orange, and mango in the image.
+    poses:
+      ycb_apple: [-0.25, 0.13, 0.0]
+      ycb_orange: [-0.25, 0.30, 0.0]
+      mango: [-0.25, 0.47, 0.0]
+
+  - scene_id: gazebo_dev_0001
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0001
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the leftmost round fruit among the red apple and orange in the image.
+    poses:
+      ycb_apple: [-0.17, 0.25, 0.0]
+      ycb_orange: [-0.25, 0.24, 0.0]
+
+  - scene_id: gazebo_dev_0002
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0002
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the leftmost blue power drill among the visible tabletop items in the image.
+    poses:
+      ycb_apple: [-0.25, 0.18, 0.0]
+      ycb_orange: [-0.25, 0.36, 0.0]
+      ycb_mustard_bottle: [-0.42, 0.48, 0.0]
+
+  - scene_id: gazebo_dev_0003
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0003
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the leftmost red apple among the visible tabletop items in the image.
+    poses:
+      ycb_apple: [-0.20, 0.055, 0.0]
+      ycb_orange: [-0.28, 0.46, 0.0]
+
+  - scene_id: gazebo_dev_0004
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0004
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the rightmost round fruit among the red apple, orange, and mango in the image.
+    poses:
+      ycb_apple: [-0.26, 0.13, 0.0]
+      ycb_orange: [-0.26, 0.30, 0.0]
+      mango: [-0.26, 0.47, 0.0]
+
+  - scene_id: gazebo_dev_0005
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0005
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the rightmost round fruit among the red apple and orange in the image.
+    poses:
+      ycb_apple: [-0.17, 0.36, 0.0]
+      ycb_orange: [-0.25, 0.35, 0.0]
+
+  - scene_id: gazebo_dev_0006
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0006
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the rightmost yellow banana among the visible tabletop items in the image.
+    poses:
+      ycb_apple: [-0.26, 0.15, 0.0]
+      ycb_orange: [-0.26, 0.34, 0.0]
+      ycb_mustard_bottle: [-0.43, 0.50, 0.0]
+
+  - scene_id: gazebo_dev_0007
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0007
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the rightmost orange among the visible tabletop items in the image.
+    poses:
+      ycb_orange: [-0.20, 0.551, 0.0]
+      ycb_apple: [-0.28, 0.16, 0.0]
+
+  - scene_id: gazebo_dev_0008
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0008
+    task_type: horizontal_ordinal_ranking
+    instruction: Among the soup can, mustard bottle, apple, and orange, point to the second object from left to right in the image.
+    poses:
+      ycb_tomato_soup_can: [-0.24, 0.14, 0.0]
+      ycb_mustard_bottle: [-0.24, 0.25, 0.0]
+      ycb_apple: [-0.24, 0.36, 0.0]
+      ycb_orange: [-0.24, 0.47, 0.0]
+
+  - scene_id: gazebo_dev_0009
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0009
+    task_type: horizontal_ordinal_ranking
+    instruction: Among the soup can, mustard bottle, apple, and orange, point to the second object from left to right in the image.
+    poses:
+      ycb_tomato_soup_can: [-0.25, 0.12, 0.0]
+      ycb_mustard_bottle: [-0.18, 0.29, 0.0]
+      ycb_apple: [-0.26, 0.277, 0.0]
+      ycb_orange: [-0.25, 0.48, 0.0]
+
+  - scene_id: gazebo_dev_0010
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0010
+    task_type: horizontal_ordinal_ranking
+    instruction: Among the visible tabletop items, point to the second yellow mustard bottle from left to right in the image.
+    poses:
+      ycb_tomato_soup_can: [-0.26, 0.13, 0.0]
+      ycb_apple: [-0.26, 0.31, 0.0]
+      ycb_orange: [-0.26, 0.48, 0.0]
+
+  - scene_id: gazebo_dev_0011
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0011
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the third tomato soup can from right to left among the visible tabletop items in the image.
+    poses:
+      ycb_tomato_soup_can: [-0.18, 0.053, 0.0]
+      ycb_apple: [-0.28, 0.12, 0.0]
+      ycb_orange: [-0.28, 0.48, 0.0]
+
+  - scene_id: gazebo_dev_0012
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0012
+    task_type: horizontal_ordinal_ranking
+    instruction: Among the soup can, mustard bottle, apple, orange, and mango, point to the third object from right to left in the image.
+    poses:
+      ycb_tomato_soup_can: [-0.23, 0.13, 0.0]
+      ycb_mustard_bottle: [-0.23, 0.22, 0.0]
+      ycb_apple: [-0.23, 0.31, 0.0]
+      ycb_orange: [-0.23, 0.40, 0.0]
+      mango: [-0.23, 0.49, 0.0]
+
+  - scene_id: gazebo_dev_0013
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0013
+    task_type: horizontal_ordinal_ranking
+    instruction: Among the soup can, mustard bottle, apple, and orange, point to the third object from right to left in the image.
+    poses:
+      ycb_tomato_soup_can: [-0.25, 0.11, 0.0]
+      ycb_mustard_bottle: [-0.18, 0.30, 0.0]
+      ycb_apple: [-0.26, 0.287, 0.0]
+      ycb_orange: [-0.25, 0.49, 0.0]
+
+  - scene_id: gazebo_dev_0014
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0014
+    task_type: horizontal_ordinal_ranking
+    instruction: Among the visible tabletop items, point to the third cracker box from right to left in the image.
+    poses:
+      ycb_tomato_soup_can: [-0.27, 0.12, 0.0]
+      ycb_apple: [-0.27, 0.31, 0.0]
+      ycb_orange: [-0.27, 0.49, 0.0]
+
+  - scene_id: gazebo_dev_0015
+    scene_family_id: spatial_vlm_v1/dev/pilot/parent_0015
+    task_type: horizontal_ordinal_ranking
+    instruction: Point to the third mango from right to left among the visible tabletop items in the image.
+    poses:
+      mango: [-0.18, 0.550, 0.0]
+      ycb_apple: [-0.28, 0.14, 0.0]
+      ycb_orange: [-0.28, 0.54, 0.0]

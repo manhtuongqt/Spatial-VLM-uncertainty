@@ -1,0 +1,31 @@
+{
+  "amendment_id": "AMENDMENT_01_EXPECTED_INVISIBLE_INVERSE_ANCHOR",
+  "schema_version": 1,
+  "issued_at_utc": "2026-08-21T15:28:00Z",
+  "reason": "The locked validator placed the documented too-small relation-counterfactual anchor exception inside the FOUND branch, although this counterfactual preserves INSUFFICIENT_EVIDENCE. The original deliberately invisible target becomes the inverse-query anchor by construction.",
+  "scope": {
+    "answerability_state": "INSUFFICIENT_EVIDENCE",
+    "state_submode": "too_small_or_out_of_view",
+    "variant": "relation_counterfactual",
+    "accepted_condition": "one or more inverse-query anchor masks have zero visible pixels",
+    "required_intervention": "REOBSERVE"
+  },
+  "unchanged_checks": [
+    "all locked artifact hashes",
+    "all protected WP0-WP3 and WP2 hashes",
+    "ontology cardinality",
+    "target/interior/action-mask invariants",
+    "RGB-depth-semantic synchronization",
+    "metric relation evidence",
+    "oracle leakage",
+    "pilot-official disjointness",
+    "deterministic replay"
+  ],
+  "locked_validator_path": "protocol/dataset_v2_pilot_validate.py",
+  "locked_validator_sha256": "e48c825bb9b9e5307b1066456b549c0444b12edf846a73ed2dd34ade0c59734c",
+  "amended_validator_path": "protocol/dataset_v2_pilot_validate_amendment_01.py",
+  "amended_validator_sha256_at_issue": "d5c7d238494bb865d18d8aa7a26da97fb68369cf139147c28f98bf7854907a3f",
+  "raw_capture_manifest_sha256": "8c47737c6dd8cbfea8885c78d4a1ace8aab5fcac5d90aca1f67dc5e07938724c",
+  "raw_or_materialized_data_modified": false,
+  "training_performed": false
+}

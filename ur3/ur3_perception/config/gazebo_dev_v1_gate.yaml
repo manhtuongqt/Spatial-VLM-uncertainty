@@ -1,0 +1,31 @@
+schema_version: 1
+protocol_id: gazebo_dev_v1
+frozen_before_capture: true
+split: dev
+parent_family_count: 16
+state_quota: {FOUND: 4, AMBIGUOUS: 4, ABSENT: 4, INSUFFICIENT_EVIDENCE: 4}
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+insufficient_evidence_rule:
+  min_visible_pixels_inclusive: 1
+  max_visible_pixels_exclusive: 120
+  projected_center_outer_margin_fraction: 0.20
+max_sensor_spread_sec: 0.02
+camera:
+  frame: camera_color_optical_frame
+  base_frame: base_link
+  resolution: [640, 480]
+  intrinsics: {fx: 606.0816650391, fy: 605.7973022461, cx: 325.5436706543, cy: 249.9961547852}
+  view_joint_pose: [1.3815, -1.8273, 1.3428, -1.2863, -1.5708, -1.9601]
+  depth_unit: metre
+  valid_depth_range_m: [0.10, 2.0]
+family_split_rule:
+  all_variants_same_parent_same_split: true
+  co_locate: [views, paraphrases, visibility_variants, counterfactuals]
+model_input_allowlist: [rgb, depth_m, instruction]
+evaluator_only: [semantic_labels, target_id, target_mask, anchor_ids, anchor_masks, candidate_set, answerability_state, scene_layout, camera_to_world]
+no_sam2: true
+b2_opened: false
+test_iid_ood_access: false

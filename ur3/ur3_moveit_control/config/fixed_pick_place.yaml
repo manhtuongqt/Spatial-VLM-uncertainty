@@ -1,0 +1,119 @@
+fixed_pick_place:
+  ros__parameters:
+    pose_frame: base_link
+    # Keep this at fixed for the V0 regression. The perception launch overrides it.
+    object_pose_source: fixed
+    arm_action: /ur3_control
+    gripper_action: /gripper_controller/gripper_cmd
+    server_timeout: 60.0
+    motion_timeout: 120.0
+    gripper_timeout: 15.0
+    detection_timeout: 30.0
+    max_pose_age_sec: 1.0
+    minimum_confidence: 0.5
+    minimum_valid_frames: 7
+    max_position_stddev_m: 0.003
+    workspace_min: [-0.36, 0.08, 0.0]
+    workspace_max: [0.02, 0.46, 0.12]
+
+    # gripper_tcp poses [x, y, z, qx, qy, qz, qw]. The quaternion below is a
+    # top-down tool with a fixed +90 degree in-plane yaw; it stays identical at
+    # every pick, transfer and place waypoint.
+    # Torque-aware UR3 cell: both stations stay in the compact working sector.
+    # Every production segment keeps one identical, vertically-down tool pose.
+    pregrasp_pose: [-0.13, 0.24, 0.20, 0.70710678, 0.70710678, 0.0, 0.0]
+    grasp_pose:    [-0.13, 0.24, 0.03, 0.70710678, 0.70710678, 0.0, 0.0]
+    lift_pose:     [-0.13, 0.24, 0.20, 0.70710678, 0.70710678, 0.0, 0.0]
+    preplace_pose: [0.00, 0.38, 0.20, 0.70710678, 0.70710678, 0.0, 0.0]
+    # Release above the tray rim instead of pushing the gripper/arm into a
+    # contact-constrained configuration. The cube drops only 70 mm into it.
+    place_pose:    [0.00, 0.38, 0.11, 0.70710678, 0.70710678, 0.0, 0.0]
+    # Fixed eye-in-hand observation pose and dynamic pose-generation parameters.
+    # The runner uses the joint posture below as the deterministic observation
+    # entry point; view_pose is retained for diagnostics/backward compatibility.
+    view_pose: [-0.0234, 0.2390, 0.25, 0.70710678, 0.70710678, 0.0, 0.0]
+    # Collision-aware IK calibration centers the wrist RGB-D optical axis on
+    # (-0.13, 0.24) while keeping both camera and TCP vertically downward.
+    view_joint_pose: [1.1815, -1.8273, 1.3428, -1.0863, -1.5708, -1.9601]
+    # Retained as a non-industrial fallback. The default industrial profile
+    # transfers linearly at z=0.20 and therefore does not use this posture.
+    place_joint_pose: [-0.3873415, -1.0436025, 0.6870591, -1.2142529, -1.5707963, 2.7542512]
+    # Use collision-aware point-to-point planning only for the long horizontal
+    # transfers (view -> pregrasp and lift -> preplace). End orientations stay
+    # identical and top-down; grasp/lift/place/retreat remain vertical linear
+    # motions. This makes every shuffled workspace slot reachable.
+    industrial_linear_transfers: false
+    approach_distance: 0.17
+    lift_distance: 0.17
+    place_approach_distance: 0.09
+    grasp_offset_xyz: [0.0, 0.0, 0.0]
+    # Keep the simulated TCP above the table collision margin. This leaves the
+    # 50 mm green/blue cubes centered between the fingers without changing the
+    # fixed top-down wrist orientation.
+    minimum_grasp_tcp_z: 0.03
+    place_offset_xyz: [0.0, 0.0, 0.07]
+    # Bin floor top is z=0.01; 60 mm cube resting center is z=0.04.
+    bin_object_pose: [0.00, 0.38, 0.04, 0.0]
+    # Measured clear tray interior and nine non-overlapping 2-D drop cells.
+    # Each committed placement publishes its base_link AABB on
+    # /ur3_manipulation/bin_occupancy and remains in the MoveIt scene.
+    bin_interior_size_xy: [0.18, 0.23]
+    bin_place_slots_xy: [-0.055, -0.075, 0.0, -0.075, 0.055, -0.075,
+                         -0.055, 0.0, 0.0, 0.0, 0.055, 0.0,
+                         -0.055, 0.075, 0.0, 0.075, 0.055, 0.075]
+    bin_place_clearance_m: 0.0
+    # Default production-style behavior: do not rotate the wrist to follow a
+    # cube yaw. The tool and wrist camera remain vertically downward.
+    use_object_yaw_for_grasp: false
+    fixed_tool_yaw: 1.57079632679
+
+    # Use the full simulated/physical joint opening before every approach.  The
+    # cube is 60 mm wide; keeping margin here prevents fingertip contact from
+    # stopping a vertical descent before the commanded grasp height.
+    gripper_open_position: 0.065
+    # Match the 50--60 mm simulated cubes; 5 mm would unrealistically command
+    # the fingers through the object and keep the action active until timeout.
+    gripper_closed_position: 0.050
+    gripper_max_effort: 40.0
+    settle_time: 0.75
+    attachment_timeout: 5.0
+    # Slightly conservative Planning Scene geometry prevents a zero-clearance
+    # contact with the table from becoming a start-state collision.
+    object_size: 0.055
+    episode_count: 3
+    inter_episode_delay: 1.0
+    stop_on_failure: false
+    metrics_output: ""
+    reset_service: /world/ur3_pick_place/set_pose
+    initial_object_pose: [-0.13, 0.18, 0.03, 0.0, 0.0, 0.0, 1.0]
+    distractor_object_pose: [-0.30, 0.12, 0.03, 0.0, 0.0, 0.0, 1.0]
+    randomize_object: false
+    random_seed: 7
+    # Randomized source-cube region: entirely outside the 200 x 250 mm tray.
+    random_x_range: [-0.16, -0.11]
+    random_y_range: [0.14, 0.20]
+    random_yaw_range: [-0.35, 0.35]
+    randomize_scene_objects: true
+    scene_object_names: [red_cube, green_cube, blue_cube, yellow_cube, orange_cube, purple_cube, pink_cube]
+    # Seven separated slots used once at interactive-session startup. Every
+    # color remains where the camera can observe it for later chat commands.
+    # Minimum 130 mm center spacing clears the open gripper around every target.
+    # Every non-selected cube is reset outside the orange tray.  The slot at
+    # (0.00, 0.24) from earlier demos is deliberately removed: with a 60 mm
+    # cube it overlapped the tray floor/edge.
+    continuous_scene_slots_xy: [-0.34, 0.10, -0.34, 0.40, -0.24, 0.46,
+                                -0.02, 0.10, 0.15, 0.14, 0.18, 0.28,
+                                -0.13, 0.18]
+    scene_object_slots_xy: [-0.34, 0.10, -0.34, 0.40, -0.24, 0.46,
+                            -0.02, 0.10, 0.15, 0.14, 0.18, 0.28]
+    source_keepout_center_xy: [0.0, 0.38]
+    source_keepout_size_xy: [0.20, 0.25]
+    source_keepout_clearance_m: 0.005
+    source_keepout_object_size: 0.06
+    # For robustness sweeps choose one axis at a time and list its values.
+    # x/y/z are metres; yaw is radians.
+    error_injection_axis: none
+    error_injection_values: [0.0]
+    place_recovery_attempts: 4
+    place_recovery_offset_m: 0.015
+    return_home: true

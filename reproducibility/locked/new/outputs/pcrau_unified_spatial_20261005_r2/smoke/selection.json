@@ -1,0 +1,8 @@
+{
+  "depth_path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000027__clean/depth_relative_model_input.png",
+  "feature_path": "/home/dhcn/ur_ws/src/myproject/old/results/pcra_u_feature_cache/pcra_u_development_v1/features/bc329625732b124baf253e0ff39762d293b71d6d808adf6a07f452bd429b6f82.safetensors",
+  "prompt": "From this evidence-limited camera view, locate the mango that is right of the apple. Rely on the observed geometry when resolving the query. State the requested referent's image location. Output the target pixel as (x, y) in image coordinates.",
+  "rgb_path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000027__clean/rgb_model_input.jpg",
+  "sample_id": "v211dev_family_000027__clean",
+  "split": "train"
+}

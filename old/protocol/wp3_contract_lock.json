@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "contract_id": "wp3_graph_feature_contract_v1",
+  "locked_at_utc": "2026-08-21T04:32:49+00:00",
+  "status": "LOCKED",
+  "scope": "Query-graph schema, oracle boundary, pre-projector feature hook, dynamic-tile metadata, cache payload, determinism and non-interference gates.",
+  "runtime_status": "CONFIG_LOCKED_RUNTIME_FEATURE_VERIFICATION_PENDING",
+  "artifacts": {
+    "protocol/WP3_GRAPH_FEATURE_CONTRACT.md": "26c89e0b00ec2dddcdc7648c16becb8eb791b69e874c6ea6d2b0a0aa63437aec",
+    "protocol/query_graph_v1.schema.json": "2206e691db3bf44ff27efcf652ddc13b7da2139aa22fc35fc74870b46fb1f57b"
+  },
+  "model_config_inputs": {
+    "RoboRefer/models/RoboRefer-2B-SFT/config.json": "e6a316c869fc8701bd6c1d7489bd94accd7f2c12bccaee0acf4c0b279b0d8fbd",
+    "RoboRefer/models/RoboRefer-2B-SFT/vision_tower/config.json": "0f42c3fdf982483503a9727e6661ab279eaa5d8ca9e1c533084c451d088b2771",
+    "RoboRefer/models/RoboRefer-2B-SFT/depth_tower/config.json": "72b587539cf906b7a7e83a45a98eac8a070221b8c31b4afbe113809fcb4edc3e",
+    "RoboRefer/models/RoboRefer-2B-SFT/vision_tower/preprocessor_config.json": "4c85fdac96f2ce697f4d633dbc8469a7e5b80dc0d38af284cf4da9ff2330abc3",
+    "RoboRefer/models/RoboRefer-2B-SFT/depth_tower/preprocessor_config.json": "4c85fdac96f2ce697f4d633dbc8469a7e5b80dc0d38af284cf4da9ff2330abc3",
+    "RoboRefer/models/RoboRefer-2B-SFT/mm_projector/config.json": "cafda23ca60df5ad12a937da717c33f0a57582db018d9e9ff5d01240520e9201",
+    "RoboRefer/models/RoboRefer-2B-SFT/depth_projector/config.json": "4785b843b715f5783c80ce89d3a7590fe7932c3c2e39256f548e169d64aa5624"
+  },
+  "source_inputs": {
+    "RoboRefer/llava/mm_utils.py": "05fbec07c579e4cf4369f90d5b4fb7b590ce4caaf93c8047dabbe66e49f6e122",
+    "RoboRefer/llava/model/multimodal_encoder/vision_encoder.py": "b08f8271d5ea6a416c7099d33f432304db8b62c9198a3e61caa9b21451d3140e",
+    "RoboRefer/llava/model/multimodal_projector/base_projector.py": "bf1cfa16c738d2769f7e548d84fab375066f59902a7b31de352250f602b6231f"
+  },
+  "dataset_inputs": {
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/dataset_index.json": "d4fe5be9286d9bdc5c56e84247e157d4a5fcc2afd3a9637c73e027484f4882fa",
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/family_manifest.json": "7014a1e454f2b253b62d0e995990439a1d2f36d6002965c4b59c99e99ce48184",
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/artifact_manifest.json": "dce432874c86f3928eccac21f3dd9c9e22d5b5ae56bd7378143a0293ce9ced7c"
+  },
+  "static_validation": {
+    "json_schema_draft_2020_12_valid": true,
+    "language_graph_example_valid": true,
+    "predicted_graph_example_valid": true,
+    "oracle_graph_example_valid": true,
+    "predicted_graph_oracle_leakage_example_rejected": true,
+    "audit_source_compiles": true
+  },
+  "prohibitions_until_runtime_gate": [
+    "NO_PCRA_TRAINING",
+    "NO_DATASET_SCALING",
+    "NO_CALIBRATION_OR_TEST_MODEL_SELECTION",
+    "NO_ORACLE_INFERENCE_CACHE",
+    "NO_ROBOT_TARGET_PUBLICATION"
+  ]
+}

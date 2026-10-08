@@ -1,0 +1,25 @@
+<?xml version="1.0"?> 
+<package format="3">
+  <name>susgrip_2f_hardware</name>
+  <version>0.0.1</version>
+  <description>Python based ros2_control hardware interface for SusGrip 2F</description>
+  <maintainer email="buiminhgiang2003@gmail.com">buiminhgiang</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>ros2_control</depend>
+  <depend>hardware_interface</depend>
+  <depend>controller_manager</depend>
+  <depend>gripper_controllers</depend>
+  <depend>gripper_msgs</depend>
+  <depend>pymodbus</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+    <hardware_interface plugin="plugin.xml"/>
+  </export>
+</package>

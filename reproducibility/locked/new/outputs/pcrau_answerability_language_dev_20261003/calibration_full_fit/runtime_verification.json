@@ -1,0 +1,15 @@
+{
+  "all_original_v2_weights_unchanged": true,
+  "annotation_free_decisions": 1000,
+  "default_budget": 0.075,
+  "default_policy": "hard_found",
+  "fit_all_is_not_test": true,
+  "fresh_dev_smoke_samples": 20,
+  "fresh_predictions_match_selected_dev": true,
+  "robot_motion_commanded": false,
+  "runtime_fit_all_count_matches_locked_profile": true,
+  "source_hashes_preserved": true,
+  "status": "PASS",
+  "targeted_test_functions": 18,
+  "wrong_checkpoint_predictions_rejected": true
+}

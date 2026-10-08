@@ -1,0 +1,60 @@
+fixed_pick_place:
+  ros__parameters:
+    initial_object_pose: [-0.165, 0.18, 0.037010, 0.0, 0.0, 0.0, 1.0]
+    randomize_object: true
+    # Stay in the calibrated observation/IK band used by the successful apple
+    # demo. The fruit is beside the tray in X, never inside its footprint.
+    random_x_range: [-0.18, -0.15]
+    random_y_range: [0.27, 0.31]
+    random_yaw_range: [-0.35, 0.35]
+
+    # Shuffle the four fruit models among safe table slots.  Z values are the
+    # collision support heights from the Gazebo world; XY sizes are used by
+    # the tray keep-out validator (the banana is intentionally non-square).
+    randomize_scene_objects: true
+    scene_object_names: [ycb_orange, ycb_banana, ycb_apple, mango]
+    scene_object_z_values: [0.037010, 0.018376, 0.035953, 0.030]
+    scene_object_sizes_xy: [0.07402, 0.07402,
+                            0.108971, 0.178395,
+                            0.07542, 0.07542,
+                            0.060, 0.060]
+    scene_object_slots_xy: [-0.34, 0.12, -0.34, 0.42, 0.18, 0.13,
+                            0.22, 0.48]
+
+    source_keepout_center_xy: [0.0, 0.38]
+    source_keepout_size_xy: [0.20, 0.25]
+    source_keepout_clearance_m: 0.005
+    source_keepout_object_size: 0.075
+    object_size: 0.075
+    # Finger-centre spacing is 27 mm + 2q and each fingertip is 26 mm wide,
+    # hence the clear aperture is approximately 1 mm + 2q.  q=36 mm matches
+    # the 74 mm YCB orange instead of leaving the old 101 mm aperture open.
+    # Four short stages retain visible, progressive motion without the long
+    # pauses of the earlier demo.
+    gripper_staged_motion: true
+    gripper_closed_position: 0.036
+    gripper_max_effort: 55.0
+    gripper_close_stages: [0.058, 0.050, 0.043, 0.036]
+    gripper_open_stages: [0.043, 0.050, 0.058, 0.065]
+    gripper_stage_pause_sec: 0.05
+    settle_time: 0.20
+    workspace_max: [0.02, 0.46, 0.16]
+    detection_timeout: 100.0
+    perception_settle_time: 0.50
+    minimum_valid_frames: 5
+    industrial_linear_transfers: true
+    # Keep all pose orientations identical and shorten the vertical strokes.
+    # RGB-D reports the visible top surface of the sphere rather than its
+    # geometric centre.  Keep the TCP 15 mm above that point so the open palm
+    # does not collide with the orange during the final Cartesian approach;
+    # the staged fingers still close around the upper half before attachment.
+    grasp_offset_xyz: [0.0, 0.0, 0.015]
+    approach_distance: 0.14
+    lift_distance: 0.14
+    # TCP place is z=0.14; a 140 mm approach gives a z=0.28 transfer height.
+    # Release in the near half of the tray: its centre (y=0.38) is outside the
+    # robust top-down IK envelope at this height, while y=0.31 remains fully
+    # inside the tray after accounting for the orange's 75 mm footprint.
+    place_approach_distance: 0.14
+    place_offset_xyz: [0.0, 0.0, 0.10]
+    bin_place_slots_xy: [0.0, -0.07]

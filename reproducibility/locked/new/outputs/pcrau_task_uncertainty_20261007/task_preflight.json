@@ -1,0 +1,10 @@
+{
+  "RNG_original_states_preserved": true,
+  "depth_MC_changes_mean": true,
+  "reference_head_trainable_parameters": 87199,
+  "same_seed_rows_and_raw_samples_exact": true,
+  "samples": 20,
+  "spatial_MC_changes_maps": true,
+  "status": "PASS",
+  "vector_dimensions": 60
+}

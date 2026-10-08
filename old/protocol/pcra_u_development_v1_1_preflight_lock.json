@@ -1,0 +1,170 @@
+{
+  "acceptance_policy": {
+    "min_clean_found_point_in_target_each_seed": 0.5,
+    "min_seed_count_strictly_above_clean_threshold": 2,
+    "paired_family_bootstrap": {
+      "all_found_noninferiority_min_lower_bound": -0.02,
+      "answerability_noninferiority_min_lower_bound": -0.02,
+      "clean_superiority_min_lower_bound": 0.0,
+      "conditional_on_seed_gates": true,
+      "delta_direction": "v1_1_minus_v1_for_Gc_Ga_A_and_F",
+      "false_found_noninferiority_max_upper_bound": 0.02,
+      "interval": "two_sided_95_percent_percentile_2.5_97.5",
+      "reference": "immutable_v1_epoch_10_predictions",
+      "replicates": 10000,
+      "resampling_unit": "dev_family_id_keep_all_variants",
+      "seed": 24082029,
+      "v1_1_seed_aggregation": "mean_metric_across_three_selected_seeds_within_each_resample"
+    },
+    "point_estimate_false_found_strict_improvement": true,
+    "posthoc_threshold_or_seed_exclusion_forbidden": true,
+    "report_all_seeds": true,
+    "require_three_eligible_seeds": true,
+    "strict_clean_improvement_threshold": 0.53125
+  },
+  "allowed_next_action": "RUN_EXACTLY_20_EPOCHS_FOR_EACH_LOCKED_SEED",
+  "artifacts": {
+    "protocol/PCRA_U_DEVELOPMENT_V1_1_REVISION_CONTRACT.md": "32ed1b755545c5e25f24e2711cced0b28c411565d98df07094da6bd20b95d400",
+    "protocol/pcra_u_development_v1_1_common.py": "aeeb5561927fd606f3f05271bd78f277df44179a63cd19baf69b7073275a0aea",
+    "protocol/pcra_u_development_v1_1_config.json": "8af4da5d8fde3a8c2a5112744bfd14ac8509d2983622d4913f5a74d177334c12",
+    "protocol/pcra_u_development_v1_1_manifest.json": "2f620c609cec60f32c07cd480636245e19d15c63fb5a14241ba46ae0651910f9",
+    "protocol/pcra_u_development_v1_1_preflight.py": "22b4f0e6fb7c9ac032c6459a3b0728641c28ca97b22c45dff1f5be45522fe25b",
+    "protocol/pcra_u_development_v1_1_train.py": "95eafde44127f0adbe471b33f89665bed9cb71dd1461b7f6db60d7df46caf820",
+    "protocol/training_checkpoint_manager.py": "be7cc1d4c0bdbc99bfb18caf9bf93cab68942c9b37f67a44930f4a47cbee0ce3"
+  },
+  "checkpoint_selection": {
+    "eligibility": {
+      "max_false_found_rate": 0.1147368421,
+      "min_all_found_point_in_target": 0.8371428571,
+      "min_answerability_macro_f1": 0.7220238435,
+      "min_epoch": 6
+    },
+    "metric": "dev_scientific_score_v1_1",
+    "mode": "max",
+    "pointer_name": "best_dev_scientific_score_v1_1.json",
+    "relaxation_after_observation_forbidden": true,
+    "score": {
+      "all_found_point_in_target_weight": 0.2,
+      "answerability_macro_f1_weight": 0.2,
+      "clean_found_point_in_target_weight": 0.45,
+      "formula": "0.45*Gc + 0.20*Ga + 0.20*A + 0.15*(1-F)",
+      "one_minus_false_found_rate_weight": 0.15
+    },
+    "split": "dev",
+    "tie_break": [
+      "lower_false_found_rate",
+      "higher_clean_found_point_in_target",
+      "earlier_epoch"
+    ],
+    "total_loss_is_selection_metric": false
+  },
+  "checks": {
+    "acceptance_and_bootstrap_policy_exact": true,
+    "add_only_execution_paths_exact": true,
+    "all_exact_parent_hashes_match": true,
+    "design_files_exist": true,
+    "dropout_revision_exact": true,
+    "eligibility_thresholds_exact": true,
+    "exact_family_preserving_dataset_counts": true,
+    "historical_calibration_quarantined_and_tests_still_unopened": true,
+    "immutable_feature_cache_identity_and_alignment": true,
+    "immutable_v1_reference_metrics_reproduced": true,
+    "implementation_contains_locked_revision": true,
+    "implementation_files_exist_and_parse": true,
+    "implementation_has_no_resume_old_pointer_or_calibration_input": true,
+    "normalized_clean_found_objective_exact": true,
+    "optimizer_and_equal_epoch_plan_exact": true,
+    "preflight_has_no_training_authority_or_optimizer_step": true,
+    "protocol_identity_locked": true,
+    "scientific_checkpoint_score_exact": true,
+    "selection_manifest_exact": true,
+    "three_fresh_locked_seeds_exact": true,
+    "v1_input_language_and_model_shape_compatible": true
+  },
+  "config_protocol_id": "pcra_u_development_v1_1",
+  "created_at_utc": "2026-08-24T09:54:33.990233+00:00",
+  "decision": "GO_RUN_THREE_FRESH_V1_1_SEEDS",
+  "fresh_initialization_only": true,
+  "gradient_split": "train",
+  "historical_v1_calibration_used": false,
+  "optimizer_step_performed": false,
+  "parent_artifacts": {
+    "datasets/roborefer_dataset_v2_1_1_development_400_20260824/DATASET_V2_1_DEVELOPMENT_FULL_QC_REPORT.json": "630d96be2f5bc90ff012954fbf73ae44b8a197d670d9a78f55252359ab2a6ff5",
+    "datasets/roborefer_dataset_v2_1_1_development_400_20260824/dataset_index.json": "84e6357ae3b63d374935539f927a6b83ff7b911ae98e2fbcdb525efa19ea24ba",
+    "datasets/roborefer_dataset_v2_1_1_development_400_20260824/family_manifest.json": "9dcc239e1be232c6869f3b066fa32a2be9cdf5386eda31e2b896e4ac7b2c26c6",
+    "protocol/PCRA_U_DEVELOPMENT_TRAIN_CONTRACT.md": "796b937124de60382448bcfb1d3f8e071dfd061141521f54118988be872492b3",
+    "protocol/pcra_u_architecture_freeze_lock.json": "aa897d0dedde31b4a3f1e7cf45a1336c8b163097f6c93de9f6a8b90a732aea4f",
+    "protocol/pcra_u_calibrator_threshold_freeze_lock.json": "79af935a50ff5e4163f6cfda58c80e0d7d4a974a1dca5751497b19d8552af529",
+    "protocol/pcra_u_development_common.py": "95b17f41b1526d1b760177fae4240ecd8bf96f37a4a936405d9cda6667571bfc",
+    "protocol/pcra_u_development_execution_lock.json": "43aad05392666e6fc7a2d7d5d325070b94a3e618e5ac7e740bcc54d61173921b",
+    "protocol/pcra_u_development_feature_manifest.json": "113b3e88196596569ec1d23156564cecae15e5763ddc74525e3f0b13ab1520a4",
+    "protocol/pcra_u_development_train.py": "de28a0ab9d34290583237ab50878e77cd9a52971198cfb6fa1d87eccb9b44896",
+    "protocol/pcra_u_development_train_config.json": "bf689c54c9be780dd9dfcfeea8acfd355d3f778bef881cd9e81f06162207c14a",
+    "protocol/pcra_u_development_train_manifest.json": "1de697018ad22c51498c4e17d1c6b82220b9829e1e9dbc0dab6601c3570f6745",
+    "protocol/training_checkpoint_manager.py": "be7cc1d4c0bdbc99bfb18caf9bf93cab68942c9b37f67a44930f4a47cbee0ce3",
+    "results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json": "70635252307f412c79a71ce004d940167ab8b670958b3e22fbd96d3dc9eaf905",
+    "results/pcra_u_runs/pcra_u_calibration_20260824/PCRA_U_CALIBRATION_REPORT.json": "5217b7b6a3bbf61b3d48513adb77c2dfa272739f4d9df89140d3afbb2ffe0f13",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/PCRA_U_DEVELOPMENT_TRAIN_REPORT.json": "5c0873766ac5e637190e589a7eeaf77c2bef2da429d1dd50551836ca3738a805",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/manifest.json": "b59f742727d35cdbb2c9575571d89d2b5853f903dcd5b1358014d7d977ec64a5",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/metadata.json": "03de47beb29320aea32a69331c1d5805b23929cf2bc77274195b2ccd5d94accc",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/model.safetensors": "14dba40d2de437f082aece9b342931a48c58202ae4242d577d4a4ffd7eecaab3",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/metrics/development_epoch_010.json": "58134b52143f07e9cc37310a336c54d992479f5ba70016bf016a149d8299b3a1",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/predictions/dev_predictions_exploratory.json": "3f6c68dc50611205cd4213911b8b59822cefd85487780f610c6ae409720d22d2"
+  },
+  "protocol_id": "pcra_u_development_v1_1",
+  "schema_version": 1,
+  "seed_runs": [
+    {
+      "epochs": 20,
+      "initialization": "fresh_sidecar_random_initialization",
+      "resume_checkpoint": null,
+      "run_id": "v1_1_seed_24082026",
+      "run_root": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082026",
+      "seed": 24082026
+    },
+    {
+      "epochs": 20,
+      "initialization": "fresh_sidecar_random_initialization",
+      "resume_checkpoint": null,
+      "run_id": "v1_1_seed_24082027",
+      "run_root": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082027",
+      "seed": 24082027
+    },
+    {
+      "epochs": 20,
+      "initialization": "fresh_sidecar_random_initialization",
+      "resume_checkpoint": null,
+      "run_id": "v1_1_seed_24082028",
+      "run_root": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082028",
+      "seed": 24082028
+    }
+  ],
+  "selection_split": "dev",
+  "status": "LOCKED_AFTER_PREFLIGHT_BEFORE_V1_1_OPTIMIZER_STEP",
+  "tables_02_to_06": "NOT_RUN",
+  "test_iid_opened": false,
+  "test_ood_opened": false,
+  "training_performed": false,
+  "v1_1_calibration_fit": false,
+  "validated_dataset_counts": {
+    "dev_ambiguous_or_absent": 95,
+    "dev_clean_found": 32,
+    "dev_families": 80,
+    "dev_found": 168,
+    "dev_other_found": 136,
+    "dev_samples": 400,
+    "train_clean_found": 128,
+    "train_families": 320,
+    "train_found": 673,
+    "train_other_found": 545,
+    "train_samples": 1600
+  },
+  "validated_v1_reference_counts": {
+    "all_found_correct": 144,
+    "all_found_denominator": 168,
+    "clean_found_correct": 17,
+    "clean_found_denominator": 32,
+    "false_found_count": 9,
+    "false_found_denominator": 95
+  }
+}

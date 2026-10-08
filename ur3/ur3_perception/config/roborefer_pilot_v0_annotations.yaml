@@ -1,0 +1,99 @@
+schema_version: 1
+protocol_id: roborefer_pilot_v0
+oracle_usage: evaluation_only_open_after_prediction_lock
+semantic_label_source: gazebo_evaluation_camera_not_vlm_input
+scenes:
+  pilot_scene_0001:
+    scene_family_id: pilot_family_direct_apple
+    task_type: direct_grounding
+    target_state: single
+    target_model: ycb_apple
+    target_semantic_labels: [26]
+  pilot_scene_0002:
+    scene_family_id: pilot_family_direct_orange
+    task_type: direct_grounding
+    target_state: single
+    target_model: ycb_orange
+    target_semantic_labels: [27]
+  pilot_scene_0003:
+    scene_family_id: pilot_family_right_of_reference
+    task_type: relative_2d
+    target_state: single
+    target_model: ycb_apple
+    target_semantic_labels: [26]
+    relation_qc:
+      type: centroid_x_greater
+      target_label: 26
+      reference_label: 24
+      min_delta_x_px: 0.0
+  pilot_scene_0004:
+    scene_family_id: pilot_family_depth_closer
+    task_type: depth_relation
+    target_state: single
+    target_model: ycb_apple
+    target_semantic_labels: [26]
+    relation_qc:
+      type: median_depth_less
+      target_label: 26
+      reference_label: 27
+      min_depth_margin_m: 0.0
+  pilot_scene_0005:
+    scene_family_id: pilot_family_two_reference_between
+    task_type: multi_reference
+    target_state: single
+    target_model: ycb_tomato_soup_can
+    target_semantic_labels: [23]
+    relation_qc:
+      type: bounded_between_corridor
+      candidate_label: 23
+      reference_a_label: 27
+      reference_b_label: 25
+      projection_min: 0.0
+      projection_max: 1.0
+      max_perpendicular_to_reference_distance_ratio: 0.35
+  pilot_scene_0006:
+    scene_family_id: pilot_family_height_comparison
+    task_type: metric_comparison
+    target_state: single
+    target_model: ycb_mustard_bottle
+    target_semantic_labels: [24]
+    relation_qc:
+      type: visible_bbox_height_greater
+      target_label: 24
+      comparison_labels: [26, 27]
+      fully_verifiable_from_visible_masks: false
+  pilot_scene_0007:
+    scene_family_id: pilot_family_elongated_shape
+    task_type: shape_comparison
+    target_state: single
+    target_model: ycb_banana
+    target_semantic_labels: [25]
+    relation_qc:
+      type: visible_bbox_width_greater
+      target_label: 25
+      comparison_labels: [26, 27]
+  pilot_scene_0008:
+    scene_family_id: pilot_family_partial_occlusion
+    task_type: occlusion
+    target_state: single
+    target_model: ycb_orange
+    target_semantic_labels: [27]
+    expected_visibility: partial
+    relation_qc:
+      type: both_labels_visible
+      required_labels: [27, 24]
+      fully_verifiable_from_visible_masks: false
+  pilot_scene_0009:
+    scene_family_id: pilot_family_ambiguous_orange
+    task_type: ambiguous_command
+    target_state: ambiguous
+    plausible_models: [ycb_orange, mango]
+    plausible_semantic_labels: [27, 29]
+    desired_decision: abstain_or_ask
+  pilot_scene_0010:
+    scene_family_id: pilot_family_target_absent
+    task_type: target_absent
+    target_state: absent
+    absent_model: ycb_power_drill
+    absent_semantic_label: 28
+    desired_decision: abstain

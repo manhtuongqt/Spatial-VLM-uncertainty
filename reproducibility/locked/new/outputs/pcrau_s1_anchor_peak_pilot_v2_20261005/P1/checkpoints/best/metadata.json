@@ -1,0 +1,28 @@
+{
+  "arm": "P1",
+  "baseline_checkpoint_sha256": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045",
+  "completed_epochs": 13,
+  "completed_optimizer_steps": 208,
+  "conditioning": "phrase",
+  "dev": {
+    "anchor_cell_hits": 48,
+    "anchor_hit_rate": 0.7868852459016393,
+    "anchor_hits": 48,
+    "confident_wrong_anchor_ge_0p9": 6,
+    "empty_max_sigmoid_max": 0.785308580887758,
+    "empty_mean_sigmoid_max": 0.3324044636512753,
+    "found_anchor_hits": 13,
+    "found_both_hits": 12,
+    "found_target_hits": 14,
+    "swap_both_hits": 8,
+    "swap_same_peak": 1,
+    "wrong_anchor_inside_target": 1
+  },
+  "epoch": 8,
+  "epoch_zero_based": 7,
+  "mlp_sha256": "2bbff4da63d49d115f98a5dfd72db05ef90b200e9e6f96a586fa4c216e294347",
+  "optimizer_steps": 128,
+  "protocol_sha256": "0c4efd907413523bf273044c9520662750bbbca0b2cb72218fe712b02531a412",
+  "residual_state_sha256": "4227a7b6754eb8bd3ff676012b354ed426ad4ff9d58ef8829225a5a7bd8be543",
+  "selected_from": "P1/checkpoints/epoch_008"
+}

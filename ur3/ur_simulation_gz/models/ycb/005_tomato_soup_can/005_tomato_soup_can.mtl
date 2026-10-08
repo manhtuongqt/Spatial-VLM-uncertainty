@@ -1,0 +1,7 @@
+newmtl ycb_005_tomato_soup_can_material
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+d 1.0
+illum 1
+map_Kd 005_tomato_soup_can.png

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "amendment_id": "gazebo_train_uq_v2_pilot_r6_preflight_order_amendment_v1",
+  "status": "LOCKED_BEFORE_R6_DESIGN_AND_CAPTURE",
+  "locked_at_utc": "2026-09-14T05:20:00+00:00",
+  "scope": "repeat the locked collision-free geometry design with fresh identities after an invalid preflight order",
+  "parent_attempt": {
+    "protocol_id": "gazebo_train_uq_v2_pilot_r5",
+    "decision": "INVALID_PREFLIGHT_ORDER",
+    "captured_rows": 32,
+    "geometry_qc_performed": false,
+    "contract_lock_sha256": "7d40d080b4afc5768fa8b15d86eb3bdf0d5804b984fcfd7726ccaedc4259c8e7",
+    "capture_lock_sha256": "2c43286401895214167e787fe047a97ce96dc143626441b53cd3ed34e997dabd",
+    "capture_manifest_sha256": "0e3c814c04d8faa1d16cfd349ae4bc7a479cf82b14959c65f675bcbaa4c7f91d",
+    "decision_sha256": "72efad4c710fa7b4ab785ed7e10f7b4802b8a90109baca7c475e084d42fa68b1"
+  },
+  "unchanged_scientific_contract": {
+    "grounding_backbone": "frozen B0",
+    "hypothesis_metrics_and_selection_rule": "unchanged from hypothesis_lock.json",
+    "geometry_and_official_gates": "unchanged from r5",
+    "maximum_proposed_methods": 1,
+    "B1": "negative ablation not promoted",
+    "B2": "closed"
+  },
+  "r6_design_contract": {
+    "scene_count": 32,
+    "state_relation_design": "4 states x 4 relations x 2 repetitions",
+    "all_scene_family_layout_and_pose_signatures_new": true,
+    "reuse_of_r5_rows": false,
+    "capture_attempts": 1,
+    "required_order": "contract lock -> static preflight PASS -> live preflight PASS -> capture start -> geometry QC",
+    "advance_only_if_geometry_qc": "32/32 PASS"
+  },
+  "sealed_data": {
+    "gazebo_dev_answerability_v2": "SEALED_FOR_FIT_AND_SELECTION",
+    "gazebo_calibration": "SEALED",
+    "gazebo_test_iid": "SEALED",
+    "gazebo_test_ood": "SEALED"
+  }
+}

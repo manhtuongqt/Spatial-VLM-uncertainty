@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "protocol_id": "pcra_u_development_v1_1",
+  "status": "LOCKED_BEFORE_PREFLIGHT_NO_OPTIMIZER_STEP_AUTHORIZED",
+  "scientific_status": "EXPLORATORY_DEV_ONLY_REUSED_DEV_CALIBRATION_AND_TEST_FORBIDDEN",
+  "parent_protocol_id": "pcra_u_development_train_v1",
+  "parent_artifacts": {
+    "protocol/PCRA_U_DEVELOPMENT_TRAIN_CONTRACT.md": "796b937124de60382448bcfb1d3f8e071dfd061141521f54118988be872492b3",
+    "protocol/pcra_u_development_train_config.json": "bf689c54c9be780dd9dfcfeea8acfd355d3f778bef881cd9e81f06162207c14a",
+    "protocol/pcra_u_development_train_manifest.json": "1de697018ad22c51498c4e17d1c6b82220b9829e1e9dbc0dab6601c3570f6745",
+    "protocol/pcra_u_development_feature_manifest.json": "113b3e88196596569ec1d23156564cecae15e5763ddc74525e3f0b13ab1520a4",
+    "protocol/pcra_u_development_execution_lock.json": "43aad05392666e6fc7a2d7d5d325070b94a3e618e5ac7e740bcc54d61173921b",
+    "protocol/pcra_u_development_common.py": "95b17f41b1526d1b760177fae4240ecd8bf96f37a4a936405d9cda6667571bfc",
+    "protocol/pcra_u_development_train.py": "de28a0ab9d34290583237ab50878e77cd9a52971198cfb6fa1d87eccb9b44896",
+    "protocol/training_checkpoint_manager.py": "be7cc1d4c0bdbc99bfb18caf9bf93cab68942c9b37f67a44930f4a47cbee0ce3",
+    "results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json": "70635252307f412c79a71ce004d940167ab8b670958b3e22fbd96d3dc9eaf905",
+    "datasets/roborefer_dataset_v2_1_1_development_400_20260824/dataset_index.json": "84e6357ae3b63d374935539f927a6b83ff7b911ae98e2fbcdb525efa19ea24ba",
+    "datasets/roborefer_dataset_v2_1_1_development_400_20260824/family_manifest.json": "9dcc239e1be232c6869f3b066fa32a2be9cdf5386eda31e2b896e4ac7b2c26c6",
+    "datasets/roborefer_dataset_v2_1_1_development_400_20260824/DATASET_V2_1_DEVELOPMENT_FULL_QC_REPORT.json": "630d96be2f5bc90ff012954fbf73ae44b8a197d670d9a78f55252359ab2a6ff5",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/PCRA_U_DEVELOPMENT_TRAIN_REPORT.json": "5c0873766ac5e637190e589a7eeaf77c2bef2da429d1dd50551836ca3738a805",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/metrics/development_epoch_010.json": "58134b52143f07e9cc37310a336c54d992479f5ba70016bf016a149d8299b3a1",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/predictions/dev_predictions_exploratory.json": "3f6c68dc50611205cd4213911b8b59822cefd85487780f610c6ae409720d22d2",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/manifest.json": "b59f742727d35cdbb2c9575571d89d2b5853f903dcd5b1358014d7d977ec64a5",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/metadata.json": "03de47beb29320aea32a69331c1d5805b23929cf2bc77274195b2ccd5d94accc",
+    "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/model.safetensors": "14dba40d2de437f082aece9b342931a48c58202ae4242d577d4a4ffd7eecaab3",
+    "protocol/pcra_u_architecture_freeze_lock.json": "aa897d0dedde31b4a3f1e7cf45a1336c8b163097f6c93de9f6a8b90a732aea4f",
+    "protocol/pcra_u_calibrator_threshold_freeze_lock.json": "79af935a50ff5e4163f6cfda58c80e0d7d4a974a1dca5751497b19d8552af529",
+    "results/pcra_u_runs/pcra_u_calibration_20260824/PCRA_U_CALIBRATION_REPORT.json": "5217b7b6a3bbf61b3d48513adb77c2dfa272739f4d9df89140d3afbb2ffe0f13"
+  },
+  "dataset_reuse": {
+    "parent_manifest_path": "protocol/pcra_u_development_train_manifest.json",
+    "feature_manifest_path": "protocol/pcra_u_development_feature_manifest.json",
+    "feature_cache_index_path": "results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json",
+    "family_is_independent_unit": true,
+    "gradient_split": "train",
+    "selection_split": "dev",
+    "train_families": 320,
+    "train_samples": 1600,
+    "dev_families": 80,
+    "dev_samples": 400,
+    "variants_per_family": 5,
+    "train_found": 673,
+    "train_clean_found": 128,
+    "train_other_found": 545,
+    "dev_found": 168,
+    "dev_clean_found": 32,
+    "dev_other_found": 136,
+    "dev_ambiguous_or_absent": 95,
+    "unique_feature_pairs": 1242,
+    "new_split_or_resampling": false
+  },
+  "execution_paths": {
+    "preflight_lock": "protocol/pcra_u_development_v1_1_preflight_lock.json",
+    "canary_run_root": "results/pcra_u_runs/pcra_u_development_v1_1_canary_20260824",
+    "campaign_run_root": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824"
+  },
+  "seed_runs": [
+    {
+      "run_id": "v1_1_seed_24082026",
+      "seed": 24082026,
+      "initialization": "fresh_sidecar_random_initialization",
+      "resume_checkpoint": null,
+      "epochs": 20,
+      "run_root": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082026"
+    },
+    {
+      "run_id": "v1_1_seed_24082027",
+      "seed": 24082027,
+      "initialization": "fresh_sidecar_random_initialization",
+      "resume_checkpoint": null,
+      "epochs": 20,
+      "run_root": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082027"
+    },
+    {
+      "run_id": "v1_1_seed_24082028",
+      "seed": 24082028,
+      "initialization": "fresh_sidecar_random_initialization",
+      "resume_checkpoint": null,
+      "epochs": 20,
+      "run_root": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082028"
+    }
+  ],
+  "checkpoint_selection": {
+    "split": "dev",
+    "metric": "dev_scientific_score_v1_1",
+    "mode": "max",
+    "pointer_name": "best_dev_scientific_score_v1_1.json",
+    "score": {
+      "formula": "0.45*Gc + 0.20*Ga + 0.20*A + 0.15*(1-F)",
+      "clean_found_point_in_target_weight": 0.45,
+      "all_found_point_in_target_weight": 0.2,
+      "answerability_macro_f1_weight": 0.2,
+      "one_minus_false_found_rate_weight": 0.15
+    },
+    "eligibility": {
+      "min_epoch": 6,
+      "min_all_found_point_in_target": 0.8371428571,
+      "min_answerability_macro_f1": 0.7220238435,
+      "max_false_found_rate": 0.1147368421
+    },
+    "tie_break": [
+      "lower_false_found_rate",
+      "higher_clean_found_point_in_target",
+      "earlier_epoch"
+    ],
+    "total_loss_is_selection_metric": false,
+    "relaxation_after_observation_forbidden": true
+  },
+  "v1_reference": {
+    "selected_epoch": 10,
+    "selected_step": 2000,
+    "model_sha256": "14dba40d2de437f082aece9b342931a48c58202ae4242d577d4a4ffd7eecaab3",
+    "clean_found_point_in_target": 0.53125,
+    "clean_found_correct": 17,
+    "clean_found_denominator": 32,
+    "all_found_point_in_target": 0.8571428571428571,
+    "all_found_correct": 144,
+    "all_found_denominator": 168,
+    "answerability_macro_f1": 0.7420238435082854,
+    "false_found_rate": 0.09473684210526316,
+    "false_found_count": 9,
+    "false_found_denominator": 95
+  },
+  "acceptance_policy": {
+    "require_three_eligible_seeds": true,
+    "min_clean_found_point_in_target_each_seed": 0.5,
+    "strict_clean_improvement_threshold": 0.53125,
+    "min_seed_count_strictly_above_clean_threshold": 2,
+    "point_estimate_false_found_strict_improvement": true,
+    "paired_family_bootstrap": {
+      "conditional_on_seed_gates": true,
+      "replicates": 10000,
+      "seed": 24082029,
+      "resampling_unit": "dev_family_id_keep_all_variants",
+      "v1_1_seed_aggregation": "mean_metric_across_three_selected_seeds_within_each_resample",
+      "reference": "immutable_v1_epoch_10_predictions",
+      "interval": "two_sided_95_percent_percentile_2.5_97.5",
+      "delta_direction": "v1_1_minus_v1_for_Gc_Ga_A_and_F",
+      "clean_superiority_min_lower_bound": 0.0,
+      "all_found_noninferiority_min_lower_bound": -0.02,
+      "answerability_noninferiority_min_lower_bound": -0.02,
+      "false_found_noninferiority_max_upper_bound": 0.02
+    },
+    "posthoc_threshold_or_seed_exclusion_forbidden": true,
+    "report_all_seeds": true
+  },
+  "implementation_artifacts": [
+    "protocol/pcra_u_development_v1_1_common.py",
+    "protocol/pcra_u_development_v1_1_train.py"
+  ],
+  "calibration_test_boundary": {
+    "historical_v1_calibration_exists": true,
+    "historical_v1_calibration_role": "QUARANTINED_DIAGNOSTIC_ONLY",
+    "historical_v1_calibration_reuse_for_v1_1": false,
+    "new_independent_calibration_required_if_v1_1_accepted": true,
+    "v1_1_calibration_fit": false,
+    "test_iid_opened": false,
+    "test_ood_opened": false,
+    "forbidden_input_roots": [
+      "datasets/roborefer_dataset_v2_1_calibration_200_20260824",
+      "results/pcra_u_runs/pcra_u_calibration_20260824"
+    ],
+    "tables_02_to_06": "NOT_RUN"
+  }
+}

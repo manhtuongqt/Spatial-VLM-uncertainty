@@ -1,0 +1,313 @@
+{
+  "IID_opened": false,
+  "RGBD_one_case_smoke_pass": true,
+  "artifacts_sha256": {
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/README.md": "cb9f55c8851ac3c58ba0841d4d2f483e5967b5efec312e4703610a494bbc2e42",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/RUN_STATUS.json": "9f785af97cc0acb5879158ca8b8d24a75b8dd721d39c5aa53107c9655b8433ff",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/bundle.json": "0aacaedf3fa27a2686f936893f5e694b7bea88eeb0675da6503238eecd126446",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/calibration/anchor_evaluation.jsonl": "053f9ea4919f3eb81b1012e0d0b6d0f91060707140ce6fcf9e8299b2f8fa726f",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/calibration/checks.json": "fe2d9d593ae3f6fd62887e90ce94e89e1a8ea5f93c9c3350a3f122c72a3c2ae8",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/calibration/crossfit_risk.npz": "08c53e0e34c8234195986a2746c8696cbe440a24a1a28e85276c24bf54b79993",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/calibration/evaluator_join.jsonl": "cd02ee097f23c8b4393149af3595a858590285365859636605fa1d441eb9b388",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/calibration/observable.jsonl": "f44ff4c231515bc04ea5bda45ec13bab2735352b98b8935098af140c98874f57",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/calibration/runtime_predictions.jsonl": "478d47ff4704a952e9706d595e0f9de8597cf6a83718346a8a60f2b68d7a30de",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/calibrator.json": "61c1c27d5eab3e90841c4b81965b28363cd72de3d7b80ad6b2751918f6fa195a",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/data_provenance.json": "1c803878d66c412df5052754b6943883101d7e035ec27177e9125cec60c0ed15",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/dev/anchor_evaluation.jsonl": "a4ccea09b6832d4376d1c4e14fa1c690834ee1b3bd41293bbc6b01391e608650",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/dev/checks.json": "25d24b7ab9de9be014e155309b7efc02e05877653d3d652223034d95d150707c",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/dev/evaluator_join.jsonl": "a73e609e5105262fddbacbc59fa6e166d8101c9e0eadd06745ca1fcec91d29e7",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/dev/observable.jsonl": "efaa815940cea18f405613e7ca930460dcdb00c2fad37453191abd05eaea8f8a",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/dev/runtime_predictions.jsonl": "0a4f7e4b5bb6437f7eabd8564c34c15e230bc3a6b5409518057c0f67991080b8",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/anchor_mlp.safetensors": "2bbff4da63d49d115f98a5dfd72db05ef90b200e9e6f96a586fa4c216e294347",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/freeze_lock.json": "5478ac842cab60f8a2bff5e7c8a193b7f806f374ee63b72e38a38f68fa1da81a",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/000_support_evidence.py": "70e8c5d19d99d02f7712e6231cd63451c584fda706014c600b5d30abddebcf10",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/001_verifier_risk.py": "9be77767a5ab0506b647a663dfd03ed4e7265e5e56d627348812a8ca88095f26",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/002_acceptance_ranker.py": "f8ac619d1576ea1dc14ecb915116fee573ea0a45fca7b78eb94bcdf43820f0b3",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/003_selective_experiment.py": "3fd3bbaa37e4395bb0a69cc2f6b5d172ca684712f7d5182d7aa5807495267053",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/004_dataset.py": "5d0d484225eb1f2e1f92f62ab1522e9e435ff7df58f89d0f218792e0fd553770",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/005_utils.py": "9e260968b2609ab34c304e6e0d432d1bb464db35263b369adb9a1af5fb25f4bf",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/006_calibration.py": "39eeba2db00eb2e196fe90150503945c76f79820c9b41eede2cb523a4314ba73",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/007_anchor_peak_experiment.py": "585a7d3d631d23834d5c3b7179e6765eb395dd8f5cebdbab5119ee4d0e1a270c",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/008_anchor_shadow.py": "a8de58f3f9d56b7a842996b5ff9e04f3b75201b52d3ce48eb2e8b2552c6df3d6",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/009_horizontal_verifier.py": "23c303bb593563e7932e40440a5d3a2260b0278e39aa438a6226a7d6cf68f3da",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/010___init__.py": "1554c33ac020e5df63b32e11e0b30063badc98cd2b2fa77518571425bbe7c728",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/011_model.py": "e356ceaab36de474024bdb99b9eb2c96ccaa6a24bd211e269e99e7481b8e28b6",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/012_postprocess.py": "1883771b0c78846d91b1c0ceee34218f8d88c532d8bd1983de5051bca088d5af",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/013_frozen_rgbd.py": "b0ffa24f342cd485b6c3f9678e66092b3ecf5ba403fc92c18989893ef5f031d1",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/014_policy.py": "14dd19343ccae0f0c35fa5533df57fe88465e574b15d7cb42ac6f2841a42c719",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/015_engine.py": "d0a2835899c656e08c89d0d3893525b35b1176f69463afe49be47c39b9721b8d",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/016_query_parser.py": "0ed7d562541d4efda37b6b2227d7798d6db90a00bb4bc37042572366215ca051",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/017_losses.py": "f47b6acfd5450f485f48e2ddb731eaef50cafeacdfbfbdfe232c5f21b263b320",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/018_text.py": "4f527981242ad85aedd013f4b27ea1570966d48f042209da72b5c2872fa363bc",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/019_anchor_shadow_pilot.py": "0e8422a8aa2f99fc6766ff4a31a27829441ed7d3ba8d5c2189cfffe159381ced",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/020_answerability_evidence.py": "b4edeb538de7961700ef84a967cebf8ce26ec5cef193fbf743add2b4b968d8b2",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/021_anchor_peak_pilot.py": "ccf00611e076fe16cb6d074850434f9ee7ce2c37705c829b4236f52227312cc8",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/022_metrics.py": "cd25d2595e95fa57fc6304c65f43cb66747372b9b43872b436eeefd31b2d17cc",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/023_language_augmentation.py": "aa19305808e6f22b046cf54168609358e5260e9d7d631231efd65b68b7520000",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/024_anchor_shadow_experiment.py": "9849fa47a5c05c46476ff571b9f31abbc5f66fb1f219b4884ca79da1a5ac4836",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/025_checkpoint.py": "a260ad8ca5f50bcd2e44f547b73befc6fb2e48f4de09c893fcb4e98bdcbce8e7",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/026_anchor_peak_runner.py": "58acc51869b2046225928b873ff7be60ff86bfb625248642e9563eaeeb37167e",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/027_unified_inference.py": "beeb2ca5e4b1b33df160f5a5b6f379d7d107e517dd7aa9562b54abb629500076",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/028_build_unified_spatial_bundle.py": "a57318c104cec0634ea45929cee65a0e03dd510c0cb8897c26776ccd2bbc4484",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/029_infer_spatial_variant.py": "ff3fe9549cdbab6c5a729a50699c22cc7ff2784312e6677f463804e0f91377d7",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/030_test_unified_inference.py": "96c6a60320244495b00105ff8d2fce6722f88a21d9abc8d168cc72460a982942",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/031_test_horizontal_verifier.py": "d065a4a61570ec30fe1d90f66ef1956a04f449a6b6a7b0258aa4394f12f7d6ce",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/032_wp3_feature_hook_smoke.py": "61838a542fd3f82ce38d41233a9ff9a933375ccb9c97dae6af3824b0a90c6fcb",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/source_snapshot/033_pcra_u_development_common.py": "95b17f41b1526d1b760177fae4240ecd8bf96f37a4a936405d9cda6667571bfc",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/profile.json": "629dd7c0ca184b81b2dd4914f625ea3ebbe57a2ecac1c357b7010a10132e6cbc",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/CASE_TABLE.md": "dbd8bd37aa4ac58dd823fce0e8da5a8972caee7f72c8da6e2d5de27cd57b9703",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_01.json": "bb10851b367ac2ce0cd72dbea3b2445f1f925e19a928dee4f74db0ff256084e4",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_02.json": "b108f531ed903398670436897ea1f0465dc8f315a1b0104766594f4da53d71c5",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_03.json": "1300280a9977adb0ab80fab6a33aa3bbab82f690361687c99318159eafaa75a2",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_04.json": "fcabd0b31ef903bf5bc52b64509064c56123f4407c1018cbedd41042356b5353",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_05.json": "a4279de009351342a002ed1b6130734646e07d36f8b156514db77a039f734c51",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_06.json": "28b623fc6b6a30afaeacd1726e2a78061aa6bdcdb5c64a8322664800c3dfcbaf",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_07.json": "ba54e17a6577c4ad83c57dba031c1304e1c3010fb22ff3b2397585c95e734650",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/case_08.json": "4b85cb65e735a962a9131e9d9e3870c1d3a94a98709bec4089297880eba91919",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/dev_cases.pdf": "bad94c3ab2b2c32ec36e7d816f7023ee468cab4d7ae2d7d193ac3e1fd83b6537",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/dev_cases.png": "857c4d6826f3b0a86796f7666f38061fb3925507e0f561a819bbd456f36f0457",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/report/provenance.json": "34e1a0c6681cfa16fc01b08a4a8dc7980746c883661c20a2ef0a964729a509cb",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/smoke/comparison.json": "3b1195a5d2c84dfb34c336cfdff423171ec047aba400f4a7f7b08b3a56b8aa52",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/smoke/feature_prediction.json": "0ac4558d3c166b4f6f59f381f8af4f73f039bde767a429b5862c2289bb43cf46",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/smoke/rgbd_prediction.json": "88d4d93292b10ee147593471eb08f12aa535325b1a97c085f77c1e2256c42fc2",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/smoke/selection.json": "1c5a3a50dda3761f06fb61be1ec64af1de18d75595659da8f001f91ad1eda9a5",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/summary.json": "f6ec7e4830749317c8c8fc7bf90f0bd1f7f7c8d46cf1b33710482b25e6273df2",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/train/anchor_evaluation.jsonl": "f7d40555baaed15d9eea20a1ebf32d2f760553d9ae5c073febdc16884fd79673",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/train/checks.json": "b4fece49ae45ffabf93c9fe1d333c14989ec74af4076d7e99aab4f6f6fb5be47",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/train/evaluator_join.jsonl": "9cc753af8ffc09f6c65eb4487b3a1b338e9215076896795d4cf3ef79a5afcbcb",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/train/observable.jsonl": "68222847c887960ccb11b1581c663634a2017474b262818d391375db73632c5e",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/train/runtime_predictions.jsonl": "0ef9190227a5406d0085ac3f2091185ed09d246b4e662e6582d9ec0a6ab9b295",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/unit_checks.json": "89ca83ff6a301d0ec0c8f58922256d167d474635e8ab650248ee3bcf1a5554e2"
+  },
+  "bundle_sha256": "0aacaedf3fa27a2686f936893f5e694b7bea88eeb0675da6503238eecd126446",
+  "calibration_fit_in_verification": false,
+  "current_bundle_files_unchanged": 76,
+  "documentation_sha256": {
+    "/home/dhcn/ur_ws/src/myproject/new/docs/UNIFIED_SPATIAL_INFERENCE.md": "07703a915194836f38ebfc9649b26b8bea4ed30594fdbb4119cd2434ce6d9573",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/README.md": "cb9f55c8851ac3c58ba0841d4d2f483e5967b5efec312e4703610a494bbc2e42",
+    "/home/dhcn/ur_ws/src/myproject/plan/S3_UNIFIED_INFERENCE_PROTOCOL_20261005.md": "423724bbc860a581756bd8b55dfbd7c9b7f947015d48e178b2fd1acc0f05baec",
+    "/home/dhcn/ur_ws/src/myproject/plan/S3_UNIFIED_SPATIAL_INFERENCE_20261005.md": "265f35409e3e200f3f6255bb87202c0d937b72a57dfeaf2b54ba0b14248c3244"
+  },
+  "freeze_sha256": "5478ac842cab60f8a2bff5e7c8a193b7f806f374ee63b72e38a38f68fa1da81a",
+  "geometry_zero_diagnostic": {
+    "calibration": {
+      "cases": [
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.27215489037022583,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.535986275053414,
+          "sample_id": "v211cal_family_000004__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.25364123711732206,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.4574972028828905,
+          "sample_id": "v211cal_family_000040__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.10420714636307202,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.2901903292774097,
+          "sample_id": "v211cal_family_000057__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.24437611691714642,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.48137099268251893,
+          "sample_id": "v211cal_family_000065__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.17532888873305796,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.30569827926951165,
+          "sample_id": "v211cal_family_000085__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.18821429679005622,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.3571882019682838,
+          "sample_id": "v211cal_family_000155__clean"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.2280380244410305,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.41450841218002593,
+          "sample_id": "v211cal_family_000155__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.1277941403601043,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.3303182129759669,
+          "sample_id": "v211cal_family_000162__clean"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.12678187495687346,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.32852352234592413,
+          "sample_id": "v211cal_family_000190__clean"
+        }
+      ],
+      "causal_benefit_claimed": false,
+      "is_retrained_ablation": false,
+      "raw_geometry_zero_changed_decisions": 9
+    },
+    "dev": {
+      "cases": [
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.20275830258232608,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.4857523178599105,
+          "sample_id": "v211dev_family_000001__clean"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.1448973880252486,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.3745441160235959,
+          "sample_id": "v211dev_family_000001__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.2802462613072785,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.33877353097943463,
+          "sample_id": "v211dev_family_000042__clean"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.2752908355645037,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.40511030700812894,
+          "sample_id": "v211dev_family_000081__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.15299177381192006,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.41690699629482786,
+          "sample_id": "v211dev_family_000383__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.1847557842661593,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.3622945176377813,
+          "sample_id": "v211dev_family_000389__relation_counterfactual"
+        }
+      ],
+      "causal_benefit_claimed": false,
+      "is_retrained_ablation": false,
+      "raw_geometry_zero_changed_decisions": 6
+    },
+    "train": {
+      "cases": [
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.28343503867190256,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.3460149373410322,
+          "sample_id": "v211dev_family_000045__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.20708592151922856,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.38046417185480064,
+          "sample_id": "v211dev_family_000050__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.1300329069129391,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.31363286630471815,
+          "sample_id": "v211dev_family_000055__clean"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.11625374919331838,
+          "geometry_zero_action": "REOBSERVE",
+          "geometry_zero_risk": 0.31736064174096706,
+          "sample_id": "v211dev_family_000078__clean"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.12590272411794037,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.3158416710047256,
+          "sample_id": "v211dev_family_000155__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.1974738239220611,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.40562609463515875,
+          "sample_id": "v211dev_family_000174__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.2628175543542795,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.4708075884250744,
+          "sample_id": "v211dev_family_000237__relation_counterfactual"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.2114633461236791,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.4868487886932321,
+          "sample_id": "v211dev_family_000302__clean"
+        },
+        {
+          "current_action": "EXECUTE",
+          "current_risk": 0.18710475976272462,
+          "geometry_zero_action": "ASK_USER",
+          "geometry_zero_risk": 0.3896407476062744,
+          "sample_id": "v211dev_family_000391__relation_counterfactual"
+        }
+      ],
+      "causal_benefit_claimed": false,
+      "is_retrained_ablation": false,
+      "raw_geometry_zero_changed_decisions": 9
+    }
+  },
+  "historical_protected_files_unchanged": 3300,
+  "markdown_links_checked": 31,
+  "neural_training_steps": 0,
+  "original_1193_task_snapshot_available": false,
+  "performance_gate_pass_claimed": false,
+  "protected_hash_snapshot_origin": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_horizontal_verifier_iid_cached_20261005/provenance.json",
+  "robot_motion_commanded": false,
+  "runtime_rows_replayed": {
+    "calibration": 1000,
+    "dev": 400,
+    "train": 1600
+  },
+  "source_AST_checks": 7,
+  "status": "PASS_TECHNICAL_AND_ARTIFACT_VERIFICATION",
+  "tests_passed": [
+    "test_visual_boundary_rejects_oracle_nonfinite_and_shape",
+    "test_export_preserves_pre_adapter_and_prompt_edge_mask",
+    "test_scope_geometry_and_inputs_not_mutated",
+    "test_geometry_changes_risk_and_policy_with_exact_trace",
+    "test_live_calibrator_and_bundle_guard",
+    "test_right_left_sign_and_pair_mass",
+    "test_same_grid_peak_fails_margin",
+    "test_diffuse_map_score_is_not_presence_or_binding_probability",
+    "test_direct_and_unsupported_have_no_fabricated_geometry",
+    "test_inputs_unchanged_and_oracle_kwargs_rejected",
+    "test_nonfinite_or_invalid_distribution_rejected",
+    "test_risk_feature_vector_ignores_all_evaluator_fields",
+    "test_calibrator_bundle_mismatch_rejected_before_prediction"
+  ],
+  "verified_on_local_date": "2026-10-07"
+}

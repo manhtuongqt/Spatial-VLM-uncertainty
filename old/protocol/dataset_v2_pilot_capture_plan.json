@@ -1,0 +1,10211 @@
+{
+  "camera_poses": {
+    "camera_v2_iid": [
+      1.3815,
+      -1.8273,
+      1.3428,
+      -1.2863,
+      -1.5708,
+      -1.9601
+    ],
+    "camera_v2_ood_elevation_azimuth": [
+      1.1815,
+      -1.8273,
+      1.3428,
+      -1.2863,
+      -1.5708,
+      -1.9601
+    ]
+  },
+  "capture_count": 60,
+  "captures": [
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000001__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000001",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.47,
+          0.1
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.2,
+          0.25,
+          0
+        ],
+        "ycb_plum": [
+          -0.2,
+          0.36,
+          0.2
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        6,
+        7,
+        27,
+        105,
+        109
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "cube_purple_01",
+        "ycb_orange_01",
+        "ycb_pear_01",
+        "ycb_plum_01"
+      ],
+      "seed": 1601013798,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000001__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000001",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.47,
+          0.1
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.2,
+          0.25,
+          0
+        ],
+        "ycb_plum": [
+          -0.2,
+          0.36,
+          0.2
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.27626,
+          0.19606,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        6,
+        27,
+        105,
+        109
+      ],
+      "required_visible_object_ids": [
+        "cube_purple_01",
+        "ycb_orange_01",
+        "ycb_pear_01",
+        "ycb_plum_01"
+      ],
+      "seed": 53677296,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000002__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000002",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.3,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.4,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        24,
+        26,
+        27,
+        104
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_lemon_01",
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01"
+      ],
+      "seed": 163953282,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000002__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000002",
+      "layout": {
+        "blue_cube": [
+          -0.2,
+          0.074,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.3,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.4,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        26,
+        27,
+        104
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_lemon_01",
+        "ycb_orange_01"
+      ],
+      "seed": 920916495,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000003__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000003",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        23,
+        26,
+        104
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_lemon_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1382909129,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000003__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000003",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          -0.2,
+          0.075,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        26,
+        104
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_lemon_01"
+      ],
+      "seed": 445664668,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000004__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000004",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        7,
+        105
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "ycb_pear_01"
+      ],
+      "seed": 446317956,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000004__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000004",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.2,
+          0.088,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        105
+      ],
+      "required_visible_object_ids": [
+        "ycb_pear_01"
+      ],
+      "seed": 1752851032,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000005__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000005",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.075,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.4,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        4,
+        5,
+        24
+      ],
+      "required_visible_object_ids": [
+        "cube_orange_01",
+        "cube_yellow_01",
+        "ycb_mustard_bottle_01"
+      ],
+      "seed": 1497951121,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000005__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000005",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.075,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.4,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        4,
+        5
+      ],
+      "required_visible_object_ids": [
+        "cube_orange_01",
+        "cube_yellow_01"
+      ],
+      "seed": 1661659339,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000006__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000006",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          -0.2,
+          0.47,
+          0.1
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        23
+      ],
+      "required_visible_object_ids": [
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1677732277,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000006__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000006",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          -0.2,
+          0.47,
+          0.1
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.08,
+          0.098,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [],
+      "required_visible_object_ids": [],
+      "seed": 649168710,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000007__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000007",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          -0.2,
+          0.29,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        6,
+        7,
+        26,
+        102
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "cube_purple_01",
+        "ycb_apple_01",
+        "ycb_apple_02"
+      ],
+      "seed": 501721229,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000007__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000007",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          -0.2,
+          0.29,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.076,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        6,
+        26,
+        102
+      ],
+      "required_visible_object_ids": [
+        "cube_purple_01",
+        "ycb_apple_01",
+        "ycb_apple_02"
+      ],
+      "seed": 135328329,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000008__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000008",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        23,
+        24
+      ],
+      "required_visible_object_ids": [
+        "ycb_mustard_bottle_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1800438252,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000008__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000008",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.097,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        24
+      ],
+      "required_visible_object_ids": [
+        "ycb_mustard_bottle_01"
+      ],
+      "seed": 768098686,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000009__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000009",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        23
+      ],
+      "required_visible_object_ids": [
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 70064142,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000009__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000009",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.08,
+          0.08,
+          0
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [],
+      "required_visible_object_ids": [],
+      "seed": 1760347856,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000010__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000010",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        7,
+        26,
+        104
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "ycb_apple_01",
+        "ycb_lemon_01"
+      ],
+      "seed": 194972366,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000010__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000010",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.2,
+          0.073,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        26,
+        104
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_lemon_01"
+      ],
+      "seed": 586443045,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000011__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000011",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.4,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.16,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        4,
+        24,
+        27
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01"
+      ],
+      "seed": 1003125148,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000011__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000011",
+      "layout": {
+        "blue_cube": [
+          -0.08,
+          0.101,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.4,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.16,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        4,
+        27
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_orange_01"
+      ],
+      "seed": 961324532,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000012__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000012",
+      "layout": {
+        "blue_cube": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "green_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        2,
+        3,
+        23,
+        104
+      ],
+      "required_visible_object_ids": [
+        "cube_blue_01",
+        "cube_green_01",
+        "ycb_lemon_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1430544113,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000012__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000012",
+      "layout": {
+        "blue_cube": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "green_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          -0.2,
+          0.275,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        2,
+        3,
+        104
+      ],
+      "required_visible_object_ids": [
+        "cube_blue_01",
+        "cube_green_01",
+        "ycb_lemon_01"
+      ],
+      "seed": 1622623500,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000013__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000013",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.4,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        6,
+        7,
+        111
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "cube_purple_01",
+        "ycb_mug_01"
+      ],
+      "seed": 310560199,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000013__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000013",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.1406,
+          0.06928,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.4,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        6,
+        111
+      ],
+      "required_visible_object_ids": [
+        "cube_purple_01",
+        "ycb_mug_01"
+      ],
+      "seed": 1997409041,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000014__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000014",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        5,
+        24,
+        27
+      ],
+      "required_visible_object_ids": [
+        "cube_orange_01",
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01"
+      ],
+      "seed": 2015409141,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000014__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000014",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.079,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        5,
+        27
+      ],
+      "required_visible_object_ids": [
+        "cube_orange_01",
+        "ycb_orange_01"
+      ],
+      "seed": 515223698,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000015__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000015",
+      "layout": {
+        "blue_cube": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        2,
+        23,
+        26,
+        29
+      ],
+      "required_visible_object_ids": [
+        "cube_blue_01",
+        "mango_01",
+        "ycb_apple_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1780152442,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000015__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000015",
+      "layout": {
+        "blue_cube": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.279,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        2,
+        26,
+        29
+      ],
+      "required_visible_object_ids": [
+        "cube_blue_01",
+        "mango_01",
+        "ycb_apple_01"
+      ],
+      "seed": 1357986915,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000016__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000016",
+      "layout": {
+        "blue_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.47,
+          0.1
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        4,
+        7,
+        23,
+        104
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "cube_yellow_01",
+        "ycb_lemon_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1185621894,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000016__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000016",
+      "layout": {
+        "blue_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.47,
+          0.1
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        4,
+        23,
+        104
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_lemon_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1892716404,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000017__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000017",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.4,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        4,
+        23,
+        24
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_mustard_bottle_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 972172165,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "capture_id": "v2pilot_family_000017__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000017",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.077,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.4,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "viewpoint",
+      "required_visible_label_ids": [
+        4,
+        24
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_mustard_bottle_01"
+      ],
+      "seed": 1791895776,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.1815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000018__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000018",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        23
+      ],
+      "required_visible_object_ids": [
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 431222078,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000018__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000018",
+      "layout": {
+        "blue_cube": [
+          -0.08,
+          0.098,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [],
+      "required_visible_object_ids": [],
+      "seed": 473748875,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000019__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000019",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        7,
+        26,
+        111
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "ycb_apple_01",
+        "ycb_mug_01"
+      ],
+      "seed": 11596540,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000019__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000019",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.2,
+          0.093,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        26,
+        111
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_mug_01"
+      ],
+      "seed": 274528516,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000020__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000020",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        24,
+        26,
+        27
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01"
+      ],
+      "seed": 1963715776,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000020__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000020",
+      "layout": {
+        "blue_cube": [
+          -0.2,
+          0.074,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          -0.43,
+          0.14,
+          0.1
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.43,
+          0.34,
+          0.1
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "ood_axis": "layout",
+      "required_visible_label_ids": [
+        26,
+        27
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_orange_01"
+      ],
+      "seed": 1802089839,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000021__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000021",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          0.55,
+          0.16,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        23,
+        26
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 2143335631,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000021__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000021",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.55,
+          0.075,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          0.55,
+          0.16,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        26
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01"
+      ],
+      "seed": 1319754293,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000022__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000022",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_plum": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        7,
+        105,
+        109
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "ycb_pear_01",
+        "ycb_plum_01"
+      ],
+      "seed": 1635987710,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000022__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000022",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.2,
+          0.088,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "ycb_plum": [
+          -0.2,
+          0.47,
+          0.2
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        105,
+        109
+      ],
+      "required_visible_object_ids": [
+        "ycb_pear_01",
+        "ycb_plum_01"
+      ],
+      "seed": 426500680,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000023__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000023",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.47,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        24
+      ],
+      "required_visible_object_ids": [
+        "ycb_mustard_bottle_01"
+      ],
+      "seed": 787995897,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000023__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000023",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.08,
+          0.097,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.47,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [],
+      "required_visible_object_ids": [],
+      "seed": 398506552,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000024__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000024",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.2,
+          0.29,
+          0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        3,
+        23,
+        27,
+        103
+      ],
+      "required_visible_object_ids": [
+        "cube_green_01",
+        "ycb_orange_01",
+        "ycb_orange_02",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 557179907,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000024__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000024",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.2,
+          0.29,
+          0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.074,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        3,
+        27,
+        103
+      ],
+      "required_visible_object_ids": [
+        "cube_green_01",
+        "ycb_orange_01",
+        "ycb_orange_02"
+      ],
+      "seed": 1048806354,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000025__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000025",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        6,
+        7,
+        23
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "cube_purple_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 1018547887,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000025__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000025",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        6,
+        23
+      ],
+      "required_visible_object_ids": [
+        "cube_purple_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 530698827,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000026__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000026",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        23,
+        24,
+        27
+      ],
+      "required_visible_object_ids": [
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 764044485,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000026__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000026",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.08,
+          0.094,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        24,
+        27
+      ],
+      "required_visible_object_ids": [
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01"
+      ],
+      "seed": 1415579587,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000027__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000027",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.55,
+          0.16,
+          0
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        23,
+        26
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01",
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 230854039,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000027__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000027",
+      "layout": {
+        "blue_cube": [
+          0.55,
+          0.061,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.55,
+          0.16,
+          0
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.47,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "language",
+      "required_visible_label_ids": [
+        26
+      ],
+      "required_visible_object_ids": [
+        "ycb_apple_01"
+      ],
+      "seed": 2093776687,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000028__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000028",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.47,
+          0.1
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        4,
+        7,
+        26,
+        104
+      ],
+      "required_visible_object_ids": [
+        "cube_pink_01",
+        "cube_yellow_01",
+        "ycb_apple_01",
+        "ycb_lemon_01"
+      ],
+      "seed": 1943534600,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000028__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000028",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.2,
+          0.16,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.2,
+          0.073,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.47,
+          0.1
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "none",
+      "required_visible_label_ids": [
+        4,
+        26,
+        104
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_apple_01",
+        "ycb_lemon_01"
+      ],
+      "seed": 1382172303,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000029__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000029",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.16,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        4,
+        24,
+        27
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_mustard_bottle_01",
+        "ycb_orange_01"
+      ],
+      "seed": 183312402,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000029__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000029",
+      "layout": {
+        "blue_cube": [
+          -0.2,
+          0.274,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_orange": [
+          -0.2,
+          0.36,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.72,
+          1.08,
+          0
+        ],
+        "ycb_tuna_fish_can": [
+          0.54,
+          1.32,
+          0.1
+        ],
+        "yellow_cube": [
+          -0.2,
+          0.16,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "depth_noise",
+      "required_visible_label_ids": [
+        4,
+        27
+      ],
+      "required_visible_object_ids": [
+        "cube_yellow_01",
+        "ycb_orange_01"
+      ],
+      "seed": 932452938,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000030__clean_capture",
+      "condition": "clean",
+      "family_id": "v2pilot_family_000030",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          0.18,
+          0.84,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [
+        23
+      ],
+      "required_visible_object_ids": [
+        "ycb_tomato_soup_can_01"
+      ],
+      "seed": 962546513,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    {
+      "camera_bin_id": "camera_v2_iid",
+      "capture_id": "v2pilot_family_000030__occlusion_capture",
+      "condition": "occlusion",
+      "family_id": "v2pilot_family_000030",
+      "layout": {
+        "blue_cube": [
+          -0.54,
+          0.84,
+          0
+        ],
+        "green_cube": [
+          -0.36,
+          0.84,
+          0
+        ],
+        "mango": [
+          0.36,
+          1.08,
+          0.35
+        ],
+        "orange_cube": [
+          0,
+          0.84,
+          0
+        ],
+        "pink_cube": [
+          0.36,
+          0.84,
+          0
+        ],
+        "purple_cube": [
+          -0.08,
+          0.098,
+          0
+        ],
+        "red_cube": [
+          -0.72,
+          0.84,
+          0
+        ],
+        "ycb_apple": [
+          -0.18,
+          1.08,
+          0
+        ],
+        "ycb_apple_02": [
+          0.72,
+          1.08,
+          0.2
+        ],
+        "ycb_apple_03": [
+          0,
+          1.32,
+          -0.35
+        ],
+        "ycb_banana": [
+          -0.36,
+          1.08,
+          0.25
+        ],
+        "ycb_banana_02": [
+          0.54,
+          1.08,
+          -0.45
+        ],
+        "ycb_banana_03": [
+          -0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_cracker_box": [
+          0.54,
+          0.84,
+          0
+        ],
+        "ycb_lemon": [
+          -0.54,
+          1.32,
+          0.35
+        ],
+        "ycb_mug": [
+          0.72,
+          1.32,
+          -0.8
+        ],
+        "ycb_mustard_bottle": [
+          -0.54,
+          1.08,
+          0
+        ],
+        "ycb_orange": [
+          0,
+          1.08,
+          0
+        ],
+        "ycb_orange_02": [
+          -0.72,
+          1.32,
+          -0.2
+        ],
+        "ycb_orange_03": [
+          0.18,
+          1.32,
+          0.4
+        ],
+        "ycb_pear": [
+          -0.36,
+          1.32,
+          -0.3
+        ],
+        "ycb_plum": [
+          0.36,
+          1.32,
+          0.55
+        ],
+        "ycb_power_drill": [
+          0.18,
+          1.08,
+          -0.25
+        ],
+        "ycb_sugar_box": [
+          0.72,
+          0.84,
+          0
+        ],
+        "ycb_tomato_soup_can": [
+          -0.08,
+          0.18,
+          0.15
+        ],
+        "ycb_tuna_fish_can": [
+          -0.2,
+          0.18,
+          0
+        ],
+        "yellow_cube": [
+          -0.18,
+          0.84,
+          0
+        ]
+      },
+      "layout_generator_id": "layout_v2_iid",
+      "ood_axis": "asset",
+      "required_visible_label_ids": [],
+      "required_visible_object_ids": [],
+      "seed": 2091283020,
+      "split": "pilot_only",
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    }
+  ],
+  "captures_per_family": 2,
+  "coordinate_suffix": "Output the target pixel as (x, y) in image coordinates.",
+  "manifest_sha256": "2c6be2c52afeae6962a5f3998850d3728c39f873e4a25b34a078a3b0d1307bf9",
+  "object_registry": {
+    "blue_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_blue_01",
+      "label": 2,
+      "semantic_class": "blue cube",
+      "storage_pose_xyyaw": [
+        -0.54,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "green_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_green_01",
+      "label": 3,
+      "semantic_class": "green cube",
+      "storage_pose_xyyaw": [
+        -0.36,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "mango": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.055,
+      "id": "mango_01",
+      "label": 29,
+      "semantic_class": "mango",
+      "storage_pose_xyyaw": [
+        0.36,
+        1.08,
+        0.35
+      ],
+      "z": 0.03
+    },
+    "orange_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_orange_01",
+      "label": 5,
+      "semantic_class": "orange cube",
+      "storage_pose_xyyaw": [
+        0,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "pink_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_pink_01",
+      "label": 7,
+      "semantic_class": "pink cube",
+      "storage_pose_xyyaw": [
+        0.36,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "purple_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_purple_01",
+      "label": 6,
+      "semantic_class": "purple cube",
+      "storage_pose_xyyaw": [
+        0.18,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "red_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.043,
+      "id": "cube_red_01",
+      "label": 1,
+      "semantic_class": "red cube",
+      "storage_pose_xyyaw": [
+        -0.72,
+        0.84,
+        0
+      ],
+      "z": 0.03
+    },
+    "ycb_apple": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_apple_01",
+      "label": 26,
+      "semantic_class": "apple",
+      "storage_pose_xyyaw": [
+        -0.18,
+        1.08,
+        0
+      ],
+      "z": 0.03771
+    },
+    "ycb_apple_02": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_apple_02",
+      "label": 102,
+      "semantic_class": "apple",
+      "storage_pose_xyyaw": [
+        0.72,
+        1.08,
+        0.2
+      ],
+      "z": 0.036453
+    },
+    "ycb_apple_03": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_apple_03",
+      "label": 107,
+      "semantic_class": "apple",
+      "storage_pose_xyyaw": [
+        0,
+        1.32,
+        -0.35
+      ],
+      "z": 0.036453
+    },
+    "ycb_banana": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.106,
+      "id": "ycb_banana_01",
+      "label": 25,
+      "semantic_class": "banana",
+      "storage_pose_xyyaw": [
+        -0.36,
+        1.08,
+        0.25
+      ],
+      "z": 0.018376
+    },
+    "ycb_banana_02": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.106,
+      "id": "ycb_banana_02",
+      "label": 101,
+      "semantic_class": "banana",
+      "storage_pose_xyyaw": [
+        0.54,
+        1.08,
+        -0.45
+      ],
+      "z": 0.018876
+    },
+    "ycb_banana_03": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.106,
+      "id": "ycb_banana_03",
+      "label": 106,
+      "semantic_class": "banana",
+      "storage_pose_xyyaw": [
+        -0.18,
+        1.32,
+        0.4
+      ],
+      "z": 0.018876
+    },
+    "ycb_cracker_box": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.091,
+      "id": "ycb_cracker_box_01",
+      "label": 21,
+      "semantic_class": "cracker box",
+      "storage_pose_xyyaw": [
+        0.54,
+        0.84,
+        0
+      ],
+      "z": 0.10671
+    },
+    "ycb_lemon": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.041,
+      "id": "ycb_lemon_01",
+      "label": 104,
+      "semantic_class": "lemon",
+      "storage_pose_xyyaw": [
+        -0.54,
+        1.32,
+        0.35
+      ],
+      "z": 0.026999
+    },
+    "ycb_mug": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.064,
+      "id": "ycb_mug_01",
+      "label": 111,
+      "semantic_class": "mug",
+      "storage_pose_xyyaw": [
+        0.72,
+        1.32,
+        -0.8
+      ],
+      "z": 0.041177
+    },
+    "ycb_mustard_bottle": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.035,
+      "id": "ycb_mustard_bottle_01",
+      "label": 24,
+      "semantic_class": "mustard bottle",
+      "storage_pose_xyyaw": [
+        -0.54,
+        1.08,
+        0
+      ],
+      "z": 0.095695
+    },
+    "ycb_orange": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_orange_01",
+      "label": 27,
+      "semantic_class": "orange",
+      "storage_pose_xyyaw": [
+        0,
+        1.08,
+        0
+      ],
+      "z": 0.03701
+    },
+    "ycb_orange_02": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_orange_02",
+      "label": 103,
+      "semantic_class": "orange",
+      "storage_pose_xyyaw": [
+        -0.72,
+        1.32,
+        -0.2
+      ],
+      "z": 0.036184
+    },
+    "ycb_orange_03": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_orange_03",
+      "label": 108,
+      "semantic_class": "orange",
+      "storage_pose_xyyaw": [
+        0.18,
+        1.32,
+        0.4
+      ],
+      "z": 0.036184
+    },
+    "ycb_pear": {
+      "asset_partition": "test_ood_heldout",
+      "footprint_radius_m": 0.048,
+      "id": "ycb_pear_01",
+      "label": 105,
+      "semantic_class": "pear",
+      "storage_pose_xyyaw": [
+        -0.36,
+        1.32,
+        -0.3
+      ],
+      "z": 0.033322
+    },
+    "ycb_plum": {
+      "asset_partition": "test_ood_heldout",
+      "footprint_radius_m": 0.039,
+      "id": "ycb_plum_01",
+      "label": 109,
+      "semantic_class": "plum",
+      "storage_pose_xyyaw": [
+        0.36,
+        1.32,
+        0.55
+      ],
+      "z": 0.027025
+    },
+    "ycb_power_drill": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.132,
+      "id": "ycb_power_drill_01",
+      "label": 28,
+      "semantic_class": "power drill",
+      "storage_pose_xyyaw": [
+        0.18,
+        1.08,
+        -0.25
+      ],
+      "z": 0.028689
+    },
+    "ycb_sugar_box": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.057,
+      "id": "ycb_sugar_box_01",
+      "label": 22,
+      "semantic_class": "sugar box",
+      "storage_pose_xyyaw": [
+        0.72,
+        0.84,
+        0
+      ],
+      "z": 0.088107
+    },
+    "ycb_tomato_soup_can": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.038,
+      "id": "ycb_tomato_soup_can_01",
+      "label": 23,
+      "semantic_class": "tomato soup can",
+      "storage_pose_xyyaw": [
+        -0.72,
+        1.08,
+        0
+      ],
+      "z": 0.050948
+    },
+    "ycb_tuna_fish_can": {
+      "asset_partition": "test_ood_heldout",
+      "footprint_radius_m": 0.046,
+      "id": "ycb_tuna_fish_can_01",
+      "label": 110,
+      "semantic_class": "tuna fish can",
+      "storage_pose_xyyaw": [
+        0.54,
+        1.32,
+        0.1
+      ],
+      "z": 0.017264
+    },
+    "yellow_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_yellow_01",
+      "label": 4,
+      "semantic_class": "yellow cube",
+      "storage_pose_xyyaw": [
+        -0.18,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    }
+  },
+  "protocol_id": "roborefer_dataset_v2_pilot_only",
+  "schema_version": 1,
+  "sensor_contract": {
+    "depth_topic": "/wrist_camera/depth/image_raw",
+    "max_timestamp_spread_sec": 0.035,
+    "metric_depth_unit": "metre",
+    "rgb_topic": "/wrist_camera/color/image_raw",
+    "semantic_label_topic": "/wrist_camera/evaluation_labels/labels_map"
+  },
+  "status": "STATIC_PLAN_CAPTURE_FORBIDDEN_UNTIL_PREFLIGHT_PASS",
+  "workspace_roi_base_link": {
+    "x_m": [
+      -0.6,
+      0.6
+    ],
+    "y_m": [
+      0.06,
+      0.65
+    ]
+  },
+  "world_file": "ur3/ur_simulation_gz/worlds/ur3_pick_place_inventory_v2.sdf",
+  "world_sha256": "6cff65b57c398220ce77b8d4cf7bfa7a93574a15063ed5793f17318142268f3a"
+}

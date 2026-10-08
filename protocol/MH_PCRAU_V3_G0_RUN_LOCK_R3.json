@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "method_id": "MH-PCRA-U-v3",
+  "namespace": "mh_pcrau_v3",
+  "status": "FROZEN_BEFORE_G0_GPU_RUN",
+  "created_at_utc": "2026-09-23T10:35:59.592632+00:00",
+  "seed": 20260924,
+  "prerequisites": [
+    {
+      "path": "protocol/MH_PCRAU_V3_HYPOTHESIS_LOCK.json",
+      "sha256": "49fc6ae3c8089d6cdcfa10c2c3b3d8209daa9f25cd817f70bbb2df7cbbdda7ae"
+    },
+    {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/DAY_01_DECISION.json",
+      "sha256": "f9ee2c3ef31bbcccc29b36e02200c7ef882a865537068b66da3c6a3f1a5654c0"
+    },
+    {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/MH_PCRAU_V3_ARCHITECTURE_IDENTITY.json",
+      "sha256": "8fd053dd494625d0d69f6465e531adca59f0c2b09cc3d47789e0c91a59c5fbd5"
+    },
+    {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/DATA_ACCESS_BOUNDARY.json",
+      "sha256": "1fedd3b54e2f425ad3655ee69bbe2f2c458796ef03dfd6ba31e1c00c91df0df2"
+    },
+    {
+      "path": "ketqua1/00_quan_tri_khoa/ngay_01/ENVIRONMENT_LOCK.json",
+      "sha256": "2265f118b3d617d57c1030c8d929c951716fbc9fa88d58da45a3303927de302d"
+    }
+  ],
+  "code": [
+    {
+      "path": "RoboRefer/llava/model/spatial/__init__.py",
+      "sha256": "623115ce5b606c6b2d325e72a8895b8fbe9d41d8a9448b5eda25e2f1443088b9"
+    },
+    {
+      "path": "RoboRefer/llava/model/spatial/hidden_state_adapter.py",
+      "sha256": "ccab70c15875b7c40a2dce6cf078d124abcbd5a2e524a70e3332aebd57bf6cbb"
+    },
+    {
+      "path": "RoboRefer/scripts/mh_pcrau_v3/run_g0_feasibility.py",
+      "sha256": "6cda74394b0539d1fbb46c601f1b5368b24cf2f4284c8c6f17d2d8ce232760f2"
+    },
+    {
+      "path": "RoboRefer/tests/mh_pcrau_v3/test_h_spatial_adapter.py",
+      "sha256": "1862f2d5b32c9a0cf028498cbfafc024913406b900fe943540e4c8dda88d6465"
+    },
+    {
+      "path": "RoboRefer/llava/model/llava_arch.py",
+      "sha256": "f0f822711f0aebc1f06abe87f23ad7122a05114ed4ce445432589500262b74ec"
+    },
+    {
+      "path": "RoboRefer/llava/model/language_model/llava_llama.py",
+      "sha256": "c5a4dceb1a079e3ea37a7ed69b83e185e6bd2fca4842ab22a91fc1fb1c80e5ab"
+    },
+    {
+      "path": "RoboRefer/llava/model/builder.py",
+      "sha256": "6a65888778f7d8506e7f51ad78b6d6969bcd4ae50cefff11ce6bddf28d7efa39"
+    },
+    {
+      "path": "RoboRefer/llava/model/language_model/builder.py",
+      "sha256": "517ad8927c73a288ef4fff6d7f5aa274fee7d517d0fc06ffb68b48ef7b4434ba"
+    },
+    {
+      "path": "RoboRefer/llava/mm_utils.py",
+      "sha256": "05fbec07c579e4cf4369f90d5b4fb7b590ce4caaf93c8047dabbe66e49f6e122"
+    },
+    {
+      "path": "RoboRefer/llava/utils/tokenizer.py",
+      "sha256": "b9841c2c6aea347ef871608487213e77a98da2d44b867352e81f7c0d499b84c1"
+    },
+    {
+      "path": "RoboRefer/llava/utils/media.py",
+      "sha256": "e81e8635d91d536077886faea8c5cd39c094970ae1b22294170b30c4419d4139"
+    },
+    {
+      "path": "RoboRefer/llava/conversation.py",
+      "sha256": "0f959601e43ed2d24ad4a46e21d153d3855bb01f78401b34a22c042c13a3b67b"
+    },
+    {
+      "path": "RoboRefer/llava/constants.py",
+      "sha256": "0f399a23a9e080be42d652477f023e4af538e2dc982804fee0df797e4e85caf0"
+    }
+  ],
+  "model_inventory": [
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/config.json",
+      "sha256": "e6a316c869fc8701bd6c1d7489bd94accd7f2c12bccaee0acf4c0b279b0d8fbd"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/depth_projector/config.json",
+      "sha256": "4785b843b715f5783c80ce89d3a7590fe7932c3c2e39256f548e169d64aa5624"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/depth_projector/model.safetensors",
+      "sha256": "077b99b727dfd07aaf60280baaad16be7560c71c05f0811b58bd5b593aca73d3"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/depth_tower/config.json",
+      "sha256": "72b587539cf906b7a7e83a45a98eac8a070221b8c31b4afbe113809fcb4edc3e"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/depth_tower/model.safetensors",
+      "sha256": "640aecc60714538d98ecc6ab817454446075b11c86915d836d0e50e7d5cff6a2"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/depth_tower/preprocessor_config.json",
+      "sha256": "4c85fdac96f2ce697f4d633dbc8469a7e5b80dc0d38af284cf4da9ff2330abc3"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/added_tokens.json",
+      "sha256": "6a11d479c16d4ca642a5130afee50b0ee90801013181fe9393d87a37b7e5434c"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/config.json",
+      "sha256": "593d4e90ae4e24843ceddc02716cbdd45c311d313be6997d78249d8a4a666d6c"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/generation_config.json",
+      "sha256": "722a06091ec871c6cbc3dda5412f294267bcd5d9310f4ffbef1d358000dd3bfc"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/model.safetensors",
+      "sha256": "0bfb140450d88d5698d7af3ae8c87af7d7d356fdefe94d66a5ff5b319218071d"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/special_tokens_map.json",
+      "sha256": "0bbf5ad7e87a2de32653b693bf54eb651ee66a777ab4cb3f76f386bfaa5eca77"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/tokenizer.json",
+      "sha256": "c2e99f750957188ad0c9c3cd55d518b66c1527f44853aad1f5ec04f127681512"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/tokenizer_config.json",
+      "sha256": "70c9c73b04195c8e57f19c476bef21c74b666171e885f52e58a13a2f31ce30e5"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/llm/vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/mm_projector/config.json",
+      "sha256": "cafda23ca60df5ad12a937da717c33f0a57582db018d9e9ff5d01240520e9201"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/mm_projector/model.safetensors",
+      "sha256": "0c84546f1ff8591f43cc2862dd80837d90c83e2c4f2e9cce9f5f951793433f13"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/vision_tower/config.json",
+      "sha256": "0f42c3fdf982483503a9727e6661ab279eaa5d8ca9e1c533084c451d088b2771"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/vision_tower/model.safetensors",
+      "sha256": "86c782eccce96224a8e0402a3676bb1dbc3d77b279b3c5392b96e99fe008443d"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/vision_tower/preprocessor_config.json",
+      "sha256": "4c85fdac96f2ce697f4d633dbc8469a7e5b80dc0d38af284cf4da9ff2330abc3"
+    }
+  ],
+  "model_inventory_sha256": "3fbc67dba3241346bef4baff5d6888e5464f170650f3cd9cc8288aacec514069",
+  "dataset_manifest": {
+    "path": "datasets/Gazebo_train_uq_v2_full_r3/manifest.json",
+    "sha256": "87b2c73222b142a40b058ad63d94e34f5668dc60e78330153fcaf6cec4ab6271"
+  },
+  "inference_manifest": {
+    "path": "datasets/Gazebo_train_uq_v2_full_r3/inference_manifest.jsonl",
+    "sha256": "fd9862e30bac0a723c0cfe64c51a91bbe3f9e50dc98cacf973f538f512ad1caf"
+  },
+  "selection_rule": "Gazebo_train_uq_v2_full_r3 train_uq only; ascending sample_id; first valid RGB-D record, then first different instruction token length. Chosen before model forward.",
+  "depth_contract": "Existing depth_view.png is the canonical encoder representation; linked metric_depth records provenance, not an additional model input.",
+  "samples": [
+    {
+      "sample_id": "gazebo_uq_v2_full_r3_train_uq_000",
+      "rgb": {
+        "path": "datasets/Gazebo_train_uq_v2_full_r3/records/gazebo_uq_v2_full_r3_train_uq_000/input/rgb.png",
+        "sha256": "4d7c2f6392c4aedef0fc25de605cbf5b9a9498404ca37db67a5752b082319277"
+      },
+      "depth": {
+        "path": "datasets/Gazebo_train_uq_v2_full_r3/records/gazebo_uq_v2_full_r3_train_uq_000/input/depth_view.png",
+        "sha256": "027e08cacfef2d0a1629ca64073b9aede3c69852a2bbb989c8d5ebfb0c3c300c"
+      },
+      "metric_depth": {
+        "path": "datasets/Gazebo_train_uq_v2_full_r3/records/gazebo_uq_v2_full_r3_train_uq_000/input/depth_m.npy",
+        "sha256": "3487524bd2dba3faeca1f9b9da460f0b5c874825a7661d105f9d410c474cda0f"
+      },
+      "instruction": "Among the red apple, orange, and yellow mango, identify the leftmost object in the image. If exactly one requested target is identifiable and sufficiently visible, return exactly POINT [(x, y)], using one normalized image point with x and y between 0 and 1. If the request is ambiguous, the target is absent, or visual evidence is insufficient, return exactly ABSTAIN. Return no other text.",
+      "instruction_sha256": "990d685b2a131d0901c48db209ddebdc635ba3048b2ed2754a3af53add990aaa",
+      "instruction_tokens": 83
+    },
+    {
+      "sample_id": "gazebo_uq_v2_full_r3_train_uq_002",
+      "rgb": {
+        "path": "datasets/Gazebo_train_uq_v2_full_r3/records/gazebo_uq_v2_full_r3_train_uq_002/input/rgb.png",
+        "sha256": "5bc002010c3725f3fdc9bcc1d0d74532716a839404d979ead5221067e2993518"
+      },
+      "depth": {
+        "path": "datasets/Gazebo_train_uq_v2_full_r3/records/gazebo_uq_v2_full_r3_train_uq_002/input/depth_view.png",
+        "sha256": "9ebdf975bd15c5c64684cf89535f827b2c53f032a6ad2a6cc7c736eb53e89e00"
+      },
+      "metric_depth": {
+        "path": "datasets/Gazebo_train_uq_v2_full_r3/records/gazebo_uq_v2_full_r3_train_uq_002/input/depth_m.npy",
+        "sha256": "43a402989e0b56e5add4819dc7119e19c1901b37eb2ff31ccc42340e3a112bb1"
+      },
+      "instruction": "Among the red apple, orange, and yellow mango, identify the second object from left to right in the image. If exactly one requested target is identifiable and sufficiently visible, return exactly POINT [(x, y)], using one normalized image point with x and y between 0 and 1. If the request is ambiguous, the target is absent, or visual evidence is insufficient, return exactly ABSTAIN. Return no other text.",
+      "instruction_sha256": "0330d7c5b8fb16095c5d8a0b3d7498195b97d4b228d26088da2f8777dc6cded5",
+      "instruction_tokens": 86
+    }
+  ],
+  "exclusions": [],
+  "model_load": {
+    "api": "LlavaLlamaModel with BF16 checkpoint, promote frozen LLM to FP32",
+    "attn_implementation": "eager",
+    "device_map": "cuda:0",
+    "quantization": null,
+    "dtype": "RGB/depth towers and projectors BF16; frozen LLM and returned features FP32"
+  },
+  "deviation": {
+    "previous_lock": {
+      "path": "protocol/MH_PCRAU_V3_G0_RUN_LOCK_R2.json",
+      "sha256": "2fe58e51607846b699adcfcaac586d998f034c90e93b0dea5d9569ac51ff4f8e"
+    },
+    "failure_evidence": {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_02/attempt_02_bf16/H_SPATIAL_PADDING_INVARIANCE.json",
+      "sha256": "8c879b29d70d7ae28c5ff7031d77ff6ce45b73a7ec0671a05a9815d9b5bfaa0b"
+    },
+    "previous_runner_archive": {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_02/attempt_02_bf16/run_g0_feasibility.py",
+      "sha256": "67cbb03246ee42481763e1eca161f877171e01201956f306c16c677510037b90"
+    },
+    "reason": "BF16 passed finite/leakage/resource/reload but failed fixed mixed-batch tolerance. Promote only frozen LLM arithmetic to FP32. Same checkpoint values, samples, tolerances and budget; all earlier failures retained."
+  },
+  "tolerances": {
+    "repeat": {
+      "cosine_min": 0.999999,
+      "max_abs": 1e-05
+    },
+    "invariance": {
+      "cosine_min": 0.99999,
+      "max_abs": 0.002,
+      "rtol": 0.001,
+      "atol": 0.002
+    }
+  },
+  "resource": {
+    "peak_reserved_mib_max": 14742,
+    "forward_seconds_max": 30,
+    "warmup": 1,
+    "measured_repeats": 3
+  },
+  "scope": "G0 only; no training/capture/calibration/test/robot; one temporary detached linear probe with one backward and zero optimizer steps.",
+  "plan_sources": [
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_02/DAU_RA_VA_TIEU_CHI_NGHIEM_THU_G0.md",
+      "sha256": "f2d141a422df6a4e80f7226d7be8ea1ba231c2a2d712500cb3abeee5ad93fec9"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_02/DAU_VAO_VA_RANH_GIOI_NGAY_02.md",
+      "sha256": "5f4cc230325bdf9369b2091c9e6470029d8cc18ba9d3b7ef46ed290702071b38"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_02/MUC_TIEU_VA_CHECKLIST_NGAY_02.md",
+      "sha256": "3ab5b038029d8fae4dc6634ad1e0499480b3a0349c630fcbadcb8dc312bbe7e1"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_02/README.md",
+      "sha256": "d5f2ad754e2aa8a587bfd732f83bd2749a470d1779eac433d3e824455b295237"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_02/THIET_KE_KY_THUAT_H_SPATIAL_G0.md",
+      "sha256": "63290ba4c30b89b6a311e1f4613ff50c5c39ec748e3b6397cd768112ca086d64"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-07",
+  "pptx_sha256": "88f2eeea53a8bbac796d1a8525239fe1760897bfc8c747caaf8d0a2984f0dc81",
+  "images": [
+    {
+      "file": "figures/ppt_slide_04_image_01.png",
+      "source_file": "/home/dhcn/Downloads/báo cáo kết quả đồ án.pptx",
+      "source_member": "ppt/media/image1.png",
+      "slide": 4,
+      "sha256": "56c56abf97dbc9150d5a5e12222568bf23bf1b71038d0492bec6603b21338802",
+      "exact_bytes": true
+    },
+    {
+      "file": "figures/ppt_slide_05_image_02.png",
+      "source_file": "/home/dhcn/Downloads/báo cáo kết quả đồ án.pptx",
+      "source_member": "ppt/media/image2.png",
+      "slide": 5,
+      "sha256": "28782753df4dc829fa2409efba3cd9a916236069ef7ccfee30d38205a5571612",
+      "exact_bytes": true
+    },
+    {
+      "file": "figures/ppt_slide_06_image_03.png",
+      "source_file": "/home/dhcn/Downloads/báo cáo kết quả đồ án.pptx",
+      "source_member": "ppt/media/image3.png",
+      "slide": 6,
+      "sha256": "0918345f3a3e96d8beb0268ffd51060b9fb8fae086d6c2a8d7b5d0e7700b79c5",
+      "exact_bytes": true
+    },
+    {
+      "file": "figures/ppt_slide_07_image_04.png",
+      "source_file": "/home/dhcn/Downloads/báo cáo kết quả đồ án.pptx",
+      "source_member": "ppt/media/image4.png",
+      "slide": 7,
+      "sha256": "b8e7619a856491059b8de962c65ad5f8368e43d34c8cf318a984c86de729d757",
+      "exact_bytes": true
+    },
+    {
+      "file": "figures/ppt_slide_09_image_05.png",
+      "source_file": "/home/dhcn/Downloads/báo cáo kết quả đồ án.pptx",
+      "source_member": "ppt/media/image5.png",
+      "slide": 9,
+      "sha256": "f34114f04862cd823bc94d46a691de80921aeb553b34a0622bda5889588d0e1c",
+      "exact_bytes": true
+    },
+    {
+      "file": "figures/s6_iid_comparison.png",
+      "source_file": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_task_uncertainty_20261007/evaluation_r3/report_r2/IID_comparison.png",
+      "sha256": "d9309b45b907aee2c3e340155ba6a9cfcc1d2ed893cc78e225aca80881d5eb74",
+      "exact_bytes": true
+    },
+    {
+      "file": "figures/s6_occlusion_label_preview.png",
+      "source_file": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_task_uncertainty_20261007/data/occlusion_label_preview.png",
+      "sha256": "ba33427518345728b627f82091eb39e3c28f182030bcc688c000197aa8de9fb4",
+      "exact_bytes": true
+    },
+    {
+      "file": "figures/s6_case_apple_purple_cube.png",
+      "source_file": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_task_uncertainty_20261007/evaluation_r3/report_r2/v211dev_family_000379_dashboard.png",
+      "sha256": "1c03f931518ee6c9ddf89934bcbbd6f56ede88f3808153a96401bfe6c3b71599",
+      "exact_bytes": true
+    }
+  ],
+  "slide_7_discrepancy": {
+    "macro_F1_in_image": 0.8597,
+    "verified_IID_macro_F1": 0.8096861471861472,
+    "source": "new/outputs/pcrau_answerability_language_dev_20261003/test_iid_7p5/full_metrics.json"
+  },
+  "evaluation_is_old_IID_reevaluation": true,
+  "report_images": [
+    "figures/ppt_slide_04_image_01.png",
+    "figures/ppt_slide_05_image_02.png",
+    "figures/ppt_slide_06_image_03.png",
+    "figures/ppt_slide_07_image_04.png",
+    "figures/ppt_slide_09_image_05.png"
+  ],
+  "report_scope": "Current methods with Kendall & Gal and MC Dropout; results and conclusions based on supplied PowerPoint."
+}

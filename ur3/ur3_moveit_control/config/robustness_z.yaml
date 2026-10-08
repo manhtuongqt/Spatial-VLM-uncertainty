@@ -1,0 +1,4 @@
+fixed_pick_place:
+  ros__parameters:
+    error_injection_axis: "z"
+    error_injection_values: [-0.020, -0.010, -0.005, 0.0, 0.005, 0.010, 0.020]

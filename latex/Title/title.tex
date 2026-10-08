@@ -1,0 +1,65 @@
+\begin{titlepage}
+\thispagestyle{empty}
+
+% ==== Khung trang bìa (2 lớp) ====
+\begin{tikzpicture}[remember picture, overlay]
+  % Khung ngoài
+  \draw[line width=1.5pt]
+    ($(current page.north west)+(15mm,-15mm)$)
+    rectangle
+    ($(current page.south east)+(-15mm,15mm)$);
+  % Khung trong
+  \draw[line width=0.8pt]
+    ($(current page.north west)+(20mm,-20mm)$)
+    rectangle
+    ($(current page.south east)+(-20mm,20mm)$);
+\end{tikzpicture}
+
+\begin{center}
+\vspace*{5mm}
+
+{\Large \bfseries ĐẠI HỌC QUỐC GIA HÀ NỘI}\\[2mm]
+{\Large \bfseries TRƯỜNG ĐẠI HỌC CÔNG NGHỆ}\\[6mm]
+
+\rule{8cm}{0.4pt}\\[8mm]
+
+% Logo
+\includegraphics[scale=0.5]{logo-uet.jpg}\\[10mm]
+
+% Tiêu đề chính
+{\Large \bfseries BÁO CÁO ĐỒ ÁN NGÀNH KĨ THUẬT ROBOT}\\[4mm]
+{\large \bfseries }\\[8mm]
+
+% Tên đề tài
+{\centering
+\begin{minipage}{0.9\textwidth}
+\centering
+{\large \bfseries
+Đề tài: Fine-tuning ViFi-CLIP cho nhận diện hành động trong tương tác và cộng tác người–robot
+}
+\end{minipage}
+}\\[12mm]
+
+% Thông tin nhóm
+\begin{minipage}{0.9\textwidth}
+\raggedright
+\textbf{Sinh viên thực hiện:}\\[2mm]
+Nguyễn Mạnh Tường – 22027536\\
+
+\\[4mm]
+
+\textbf{Lớp:} K67E-RE\\[2mm]
+\textbf{Giảng viên hướng dẫn:}\\
+PSG.TS Hoàng Văn Xiêm\\
+
+
+
+\end{minipage}
+
+\vfill
+
+{\large Hà Nội, tháng 6 năm 2026}
+
+\end{center}
+
+\end{titlepage}

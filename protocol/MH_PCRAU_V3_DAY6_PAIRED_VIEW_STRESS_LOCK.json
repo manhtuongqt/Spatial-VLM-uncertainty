@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_PAIRED_VIEW_FEATURE_EXTRACTION",
+  "created_at_utc": "2026-09-24T10:10:17.013728+00:00",
+  "purpose": "Paired second-view robustness diagnostic only",
+  "boundaries": {
+    "independent_validation": false,
+    "test": false,
+    "calibration": false,
+    "training": false,
+    "model_selection": false,
+    "checkpoint_frozen": true
+  },
+  "checkpoint": {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_best.pt",
+    "sha256": "042a6c7fd4456f0eaeea4e5361392c3f428581c0d5b66a541fdfe6d590e0dfa1"
+  },
+  "source": {
+    "path": "ketqua1/01_dau_vao_tien_xu_ly/ngay_03/gazebo_pilot_512_revision_v2/PILOT_512_SELECTED_INDEX.jsonl",
+    "sha256": "063d141af45caad57790f6ae9b21f69d193319022b6af81139b710e9e59afe8e"
+  },
+  "input_manifest": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_INPUT_MANIFEST.jsonl",
+    "sha256": "08cf545f557b48a50d6f9f5bec9cf6590917c40fe14b36bdace3733a70b4b3a2"
+  },
+  "supervision": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_SUPERVISION.jsonl",
+    "sha256": "8862d4cfb945c447211347c246f6dbdc4421d34f040f320c06685b859d7a722e"
+  },
+  "split_audit": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_SPLIT_AUDIT.json",
+    "sha256": "44655338f05feba9ffc235fa21c2aee4762a073486ebbfae985465d80eeb1c62"
+  },
+  "old_train_reference": {
+    "input": {
+      "path": "ketqua1/07_huan_luyen/ngay_06/S1A_INPUT_MANIFEST.jsonl",
+      "sha256": "228462ec071c3813b3cf90ab8dba818a39dcc1d7af6bab42eccd4cdc669f4038"
+    },
+    "supervision": {
+      "path": "ketqua1/07_huan_luyen/ngay_06/S1A_SUPERVISION_STORE.jsonl",
+      "sha256": "91934900aa388eac30e9994ff1886a2ee6fcbfdd79d8d0e650db934cb7adfdcd"
+    }
+  },
+  "preprocessing": {
+    "depth_view": "inverse depth, valid 0.10..2.0 m, per-image percentile 2..98, identical to canonical materializer",
+    "model_input_allowlist": [
+      "rgb_path",
+      "depth_view_path",
+      "instruction"
+    ],
+    "oracle_passed_to_model": false
+  },
+  "source_code": {
+    "path": "workspace/mh_pcrau_v3/day6_paired_view_prepare.py",
+    "sha256": "406712af56131f140dc8e6a1c9eff579d943681cb11e3354b5ef25b83cafd8cd"
+  }
+}

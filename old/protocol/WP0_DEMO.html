@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WP0 structured reason-code demo</title>
+<style>body{font-family:system-ui;background:#0d1117;color:#e6edf3;margin:0;padding:28px}h1{margin-bottom:6px}.meta{color:#9da7b3}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:18px;margin-top:24px}.card{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:14px}img{width:100%;border-radius:8px}h2{font-size:18px;color:#f0b429}p{line-height:1.45}.pass{color:#56d364;font-weight:700}code{color:#79c0ff}pre{white-space:pre-wrap;background:#161b22;padding:16px;border-radius:8px}</style></head>
+<body><h1>WP0 — Demo structured reason codes</h1>
+<p class="meta">Moi the duoc tao boi chinh Gate v2 / stability gate dang duoc node ROS su dung. Day la demo deterministic, CPU-only.</p>
+<div class="grid"><article class="card"><img src="demo_wp0_reason_codes/AREA_TOO_SMALL.png" alt="AREA_TOO_SMALL"><h2>AREA_TOO_SMALL</h2><p>Vung depth co seed nho hon dien tich toi thieu.</p><p class="pass">DEMO PASS: observed = expected</p></article><article class="card"><img src="demo_wp0_reason_codes/AREA_TOO_LARGE.png" alt="AREA_TOO_LARGE"><h2>AREA_TOO_LARGE</h2><p>Vung co seed qua lon nhung van nam gon trong ROI.</p><p class="pass">DEMO PASS: observed = expected</p></article><article class="card"><img src="demo_wp0_reason_codes/NO_SEED_SUPPORT.png" alt="NO_SEED_SUPPORT"><h2>NO_SEED_SUPPORT</h2><p>Khong co depth hop le / thanh phan lien thong do seed RoboRefer ho tro.</p><p class="pass">DEMO PASS: observed = expected</p></article><article class="card"><img src="demo_wp0_reason_codes/PLANE_MERGE.png" alt="PLANE_MERGE"><h2>PLANE_MERGE</h2><p>Vung qua lon va tiep tuc den bien ROI: dau hieu vat bi dinh voi mat phang.</p><p class="pass">DEMO PASS: observed = expected</p></article><article class="card"><img src="demo_wp0_reason_codes/BORDER_TRUNCATED.png" alt="BORDER_TRUNCATED"><h2>BORDER_TRUNCATED</h2><p>Vung muc tieu cham bien anh, hinh dang co the bi cat mat.</p><p class="pass">DEMO PASS: observed = expected</p></article><article class="card"><img src="demo_wp0_reason_codes/UNSTABLE_3D.png" alt="UNSTABLE_3D"><h2>UNSTABLE_3D</h2><p>Cua so diem 3D da du mau nhung dao dong vuot nguong.</p><p class="pass">DEMO PASS: observed = expected</p></article></div>
+<h2>Chan doan hau nghiem pilot_scene_0007</h2>
+<p>Chi doc input da khoa; khong sua artifact va khong tinh lai diem pilot.</p>
+<pre>{
+  &quot;accepted&quot;: false,
+  &quot;reason_code&quot;: &quot;PLANE_MERGE&quot;,
+  &quot;detail&quot;: &quot;seeded component area 39117px exceeds 36864px and continues to the ROI boundary&quot;,
+  &quot;diagnostics&quot;: {
+    &quot;input_shape&quot;: [
+      480,
+      640
+    ],
+    &quot;seed_points_xy_input&quot;: [
+      [
+        357,
+        66
+      ]
+    ],
+    &quot;thresholds&quot;: {
+      &quot;min_depth_m&quot;: 0.05,
+      &quot;max_depth_m&quot;: 2.0,
+      &quot;min_area_px&quot;: 120,
+      &quot;max_area_fraction&quot;: 0.12,
+      &quot;reject_border_truncated&quot;: false
+    },
+    &quot;seed_points_xy_valid&quot;: [
+      [
+        357,
+        66
+      ]
+    ],
+    &quot;valid_depth_pixels&quot;: 307200,
+    &quot;seed_depth_m&quot;: 0.36822789907455444,
+    &quot;roi_xyxy&quot;: [
+      247,
+      0,
+      467,
+      176
+    ],
+    &quot;max_area_px&quot;: 36864,
+    &quot;foreground_component_count&quot;: 1,
+    &quot;components&quot;: [
+      {
+        &quot;label&quot;: 1,
+        &quot;area_px&quot;: 39117,
+        &quot;bbox_xyxy&quot;: [
+          247,
+          0,
+          467,
+          176
+        ],
+        &quot;seed_support_count&quot;: 1,
+        &quot;distance_to_seed_px&quot;: 0.0,
+        &quot;touches_image_border&quot;: true,
+        &quot;touches_roi_boundary&quot;: true
+      }
+    ],
+    &quot;selected_component&quot;: {
+      &quot;label&quot;: 1,
+      &quot;area_px&quot;: 39117,
+      &quot;bbox_xyxy&quot;: [
+        247,
+        0,
+        467,
+        176
+      ],
+      &quot;seed_support_count&quot;: 1,
+      &quot;distance_to_seed_px&quot;: 0.0,
+      &quot;touches_image_border&quot;: true,
+      &quot;touches_roi_boundary&quot;: true
+    }
+  },
+  &quot;scene_id&quot;: &quot;pilot_scene_0007&quot;,
+  &quot;seed_pixel_xy&quot;: [
+    357,
+    66
+  ],
+  &quot;interpretation&quot;: &quot;POST_HOC_DIAGNOSTIC_ONLY&quot;,
+  &quot;note&quot;: &quot;Runs Gate v2 on locked inputs; it does not rewrite or rescore the frozen pilot.&quot;
+}</pre>
+</body></html>

@@ -1,0 +1,92 @@
+{
+  "calibration_fit": false,
+  "created_at_utc": "2026-08-24T10:14:14.745683+00:00",
+  "decision": "RETAIN_V1_STEP_2000_REJECT_V1_1",
+  "failure_audit": {
+    "passed": true,
+    "path": "results/pcra_u_runs/pcra_u_development_v1_1_failure_audit_20260824/PCRA_U_DEVELOPMENT_V1_1_FAILURE_AUDIT_REPORT.json",
+    "sha256": "1af9f1bfe3ec0b46d7d3cf3efa27c9564c206b82734a4f69a0e49bb32ebc3724"
+  },
+  "prohibitions": [
+    "do_not_promote_any_v1_1_ineligible_checkpoint",
+    "do_not_run_posthoc_v1_1_prediction_or_bootstrap_under_this_campaign",
+    "do_not_open_calibration_test_iid_or_test_ood"
+  ],
+  "protocol_id": "pcra_u_development_v1_1_decision_lock",
+  "rejected_campaign": {
+    "best_observed_ineligible_diagnostic_only": [
+      {
+        "A": 0.7620567937589943,
+        "C": 0.6600680003558089,
+        "F": 0.14736842105263157,
+        "Ga": 0.7738095238095238,
+        "Gc": 0.5,
+        "S": 0.5413105413105413,
+        "checkpoint": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082026/checkpoints/development/step_000003800",
+        "eligible": false,
+        "epoch": 19,
+        "failed_checks": [
+          "all_found_grounding_at_least_minimum",
+          "false_found_rate_at_most_maximum"
+        ],
+        "global_step": 3800,
+        "model_sha256": "ca4a4b549f25f4c632fedd8d47f1a4f9c5285edcaf5ee237b49bc363f8423070",
+        "seed": 24082026,
+        "status": "BEST_OBSERVED_INELIGIBLE_DIAGNOSTIC_ONLY_NOT_PROMOTABLE"
+      },
+      {
+        "A": 0.6097473404994888,
+        "C": 0.655861592160048,
+        "F": 0.010526315789473684,
+        "Ga": 0.7321428571428571,
+        "Gc": 0.53125,
+        "S": 0.5049063336306869,
+        "checkpoint": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082027/checkpoints/development/step_000001200",
+        "eligible": false,
+        "epoch": 6,
+        "failed_checks": [
+          "all_found_grounding_at_least_minimum",
+          "answerability_macro_f1_at_least_minimum"
+        ],
+        "global_step": 1200,
+        "model_sha256": "3f3746f49d340ffaf69c86d35e643fac3f05fa88c1555126d7b943b75b419518",
+        "seed": 24082027,
+        "status": "BEST_OBSERVED_INELIGIBLE_DIAGNOSTIC_ONLY_NOT_PROMOTABLE"
+      },
+      {
+        "A": 0.7318780181755961,
+        "C": 0.6439045823318611,
+        "F": 0.10526315789473684,
+        "Ga": 0.7619047619047619,
+        "Gc": 0.46875,
+        "S": 0.5674931129476584,
+        "checkpoint": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824_seed_24082028/checkpoints/development/step_000003200",
+        "eligible": false,
+        "epoch": 16,
+        "failed_checks": [
+          "all_found_grounding_at_least_minimum"
+        ],
+        "global_step": 3200,
+        "model_sha256": "41c29f34d277dcd5b22a17571b9f057b22f018c4e10a386d526139f80fe71f32",
+        "seed": 24082028,
+        "status": "BEST_OBSERVED_INELIGIBLE_DIAGNOSTIC_ONLY_NOT_PROMOTABLE"
+      }
+    ],
+    "checkpoint_count": 60,
+    "checkpoint_inventory_canonical_sha256": "422f114e653579b94de6a93a99d59c9c3fdf65a50500b7e5d0f400e439876337",
+    "eligible_checkpoint_count": 0,
+    "path": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824",
+    "report_sha256": "55252bb513243d249cf0d09718beb527790ddff488b2c920cfa744f0e049d18b"
+  },
+  "retained_model": {
+    "checkpoint": "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000",
+    "epoch": 10,
+    "global_step": 2000,
+    "model_sha256": "14dba40d2de437f082aece9b342931a48c58202ae4242d577d4a4ffd7eecaab3",
+    "name": "P-CRA-U-development-v1"
+  },
+  "schema_version": 1,
+  "status": "LOCKED_AFTER_FAILURE_AUDIT_PASS",
+  "table_generation_typeerror_scientific_effect": "NONE",
+  "test_opened": false
+}

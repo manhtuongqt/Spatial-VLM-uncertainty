@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+  <!--
+    ROS 2 Humble's Fast-DDS shared-memory transport can retain damaged port
+    segments after a large Gazebo graph is interrupted.  The symptom is a
+    process-wide CDR error: "sequence size exceeds remaining buffer".
+
+    Loopback UDP is fast enough for this single-machine demo and avoids the
+    stale shared-memory path while preserving the same ROS interfaces.
+  -->
+  <transport_descriptors>
+    <transport_descriptor>
+      <transport_id>ur3_udp_transport</transport_id>
+      <type>UDPv4</type>
+    </transport_descriptor>
+  </transport_descriptors>
+
+  <participant profile_name="ur3_udp_only" is_default_profile="true">
+    <rtps>
+      <userTransports>
+        <transport_id>ur3_udp_transport</transport_id>
+      </userTransports>
+      <useBuiltinTransports>false</useBuiltinTransports>
+    </rtps>
+  </participant>
+</profiles>

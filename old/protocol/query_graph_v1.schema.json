@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.roborefer.dev/schema/query_graph_v1.schema.json",
+  "title": "WP3 Query-Centric Spatial Relation Graph v1",
+  "description": "Machine-readable contract for language, predicted, and evaluator-only oracle query graphs. Inference graphs never contain evaluator object IDs or masks.",
+  "oneOf": [
+    {"$ref": "#/$defs/language_graph"},
+    {"$ref": "#/$defs/predicted_graph"},
+    {"$ref": "#/$defs/oracle_graph"}
+  ],
+  "$defs": {
+    "predicate": {
+      "type": "string",
+      "enum": [
+        "direct",
+        "left_of",
+        "right_of",
+        "nearer_than",
+        "farther_than",
+        "front_of",
+        "behind",
+        "between_in_depth",
+        "nearer_than_both",
+        "semantic_reference",
+        "more_elongated_than",
+        "taller_than"
+      ]
+    },
+    "reference_frame": {
+      "type": "string",
+      "enum": [
+        "image",
+        "camera_color_optical_frame",
+        "base_link",
+        "object_semantics"
+      ]
+    },
+    "common_header": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "graph_id",
+        "sample_id",
+        "graph_mode",
+        "access_scope",
+        "reference_frame",
+        "nodes",
+        "edges"
+      ],
+      "properties": {
+        "schema_version": {"const": 1},
+        "graph_id": {"type": "string", "minLength": 1},
+        "sample_id": {"type": "string", "minLength": 1},
+        "reference_frame": {"$ref": "#/$defs/reference_frame"},
+        "nodes": {"type": "array", "minItems": 1, "maxItems": 4},
+        "edges": {"type": "array", "maxItems": 3}
+      }
+    },
+    "language_node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "role", "slot", "mention"],
+      "properties": {
+        "node_id": {"type": "string", "pattern": "^(target|anchor_[1-3])$"},
+        "role": {"enum": ["target", "anchor"]},
+        "slot": {"type": "integer", "minimum": 0, "maximum": 3},
+        "mention": {"type": "string", "minLength": 1},
+        "class_hint": {"type": ["string", "null"]},
+        "attributes": {
+          "type": "object",
+          "additionalProperties": {"type": ["string", "number", "boolean", "null"]}
+        }
+      }
+    },
+    "predicted_node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "role", "slot", "mention", "distribution_ref"],
+      "properties": {
+        "node_id": {"type": "string", "pattern": "^(target|anchor_[1-3])$"},
+        "role": {"enum": ["target", "anchor"]},
+        "slot": {"type": "integer", "minimum": 0, "maximum": 3},
+        "mention": {"type": "string", "minLength": 1},
+        "class_hint": {"type": ["string", "null"]},
+        "distribution_ref": {"type": "string", "minLength": 1},
+        "map_point_xy_normalized": {
+          "type": "array",
+          "prefixItems": [
+            {"type": "number", "minimum": 0, "maximum": 1},
+            {"type": "number", "minimum": 0, "maximum": 1}
+          ],
+          "items": false
+        },
+        "raw_evidence": {
+          "type": "object",
+          "description": "Uncalibrated observable evidence. Values must not be named probability or confidence.",
+          "additionalProperties": {"type": ["number", "integer", "boolean", "null"]}
+        }
+      }
+    },
+    "oracle_node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["node_id", "role", "slot", "object_ids"],
+      "properties": {
+        "node_id": {"type": "string", "pattern": "^(target|anchor_[1-3])$"},
+        "role": {"enum": ["target", "anchor"]},
+        "slot": {"type": "integer", "minimum": 0, "maximum": 3},
+        "object_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "mask_refs": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "language_edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edge_id", "subject_node_id", "predicate", "object_node_ids", "reference_frame", "clause_index"],
+      "properties": {
+        "edge_id": {"type": "string", "minLength": 1},
+        "subject_node_id": {"const": "target"},
+        "predicate": {"$ref": "#/$defs/predicate"},
+        "object_node_ids": {
+          "type": "array",
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^anchor_[1-3]$"}
+        },
+        "reference_frame": {"$ref": "#/$defs/reference_frame"},
+        "clause_index": {"type": "integer", "minimum": 0, "maximum": 2}
+      }
+    },
+    "predicted_edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edge_id", "subject_node_id", "predicate", "object_node_ids", "reference_frame", "clause_index", "raw_logit"],
+      "properties": {
+        "edge_id": {"type": "string", "minLength": 1},
+        "subject_node_id": {"const": "target"},
+        "predicate": {"$ref": "#/$defs/predicate"},
+        "object_node_ids": {
+          "type": "array",
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^anchor_[1-3]$"}
+        },
+        "reference_frame": {"$ref": "#/$defs/reference_frame"},
+        "clause_index": {"type": "integer", "minimum": 0, "maximum": 2},
+        "raw_logit": {"type": "number"},
+        "evidence_ref": {"type": ["string", "null"]}
+      }
+    },
+    "oracle_edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edge_id", "subject_node_id", "predicate", "object_node_ids", "reference_frame", "clause_index"],
+      "properties": {
+        "edge_id": {"type": "string", "minLength": 1},
+        "subject_node_id": {"const": "target"},
+        "predicate": {"$ref": "#/$defs/predicate"},
+        "object_node_ids": {
+          "type": "array",
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^anchor_[1-3]$"}
+        },
+        "reference_frame": {"$ref": "#/$defs/reference_frame"},
+        "clause_index": {"type": "integer", "minimum": 0, "maximum": 2},
+        "evidence_policy": {"type": ["string", "null"]}
+      }
+    },
+    "language_graph": {
+      "allOf": [
+        {"$ref": "#/$defs/common_header"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema_version": {"const": 1},
+            "graph_id": {"type": "string"},
+            "sample_id": {"type": "string"},
+            "graph_mode": {"const": "language"},
+            "access_scope": {"const": "inference"},
+            "reference_frame": {"$ref": "#/$defs/reference_frame"},
+            "nodes": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"$ref": "#/$defs/language_node"}},
+            "edges": {"type": "array", "maxItems": 3, "items": {"$ref": "#/$defs/language_edge"}}
+          }
+        }
+      ]
+    },
+    "predicted_graph": {
+      "allOf": [
+        {"$ref": "#/$defs/common_header"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema_version": {"const": 1},
+            "graph_id": {"type": "string"},
+            "sample_id": {"type": "string"},
+            "graph_mode": {"const": "predicted"},
+            "access_scope": {"const": "inference"},
+            "reference_frame": {"$ref": "#/$defs/reference_frame"},
+            "nodes": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"$ref": "#/$defs/predicted_node"}},
+            "edges": {"type": "array", "maxItems": 3, "items": {"$ref": "#/$defs/predicted_edge"}}
+          }
+        }
+      ]
+    },
+    "oracle_graph": {
+      "allOf": [
+        {"$ref": "#/$defs/common_header"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "schema_version": {"const": 1},
+            "graph_id": {"type": "string"},
+            "sample_id": {"type": "string"},
+            "graph_mode": {"const": "oracle"},
+            "access_scope": {"const": "evaluator_only"},
+            "reference_frame": {"$ref": "#/$defs/reference_frame"},
+            "nodes": {"type": "array", "minItems": 1, "maxItems": 4, "items": {"$ref": "#/$defs/oracle_node"}},
+            "edges": {"type": "array", "maxItems": 3, "items": {"$ref": "#/$defs/oracle_edge"}}
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "capture_authorized": false,
+  "locked_at_utc": "2026-09-22T04:39:00.190414+00:00",
+  "protocol_id": "gazebo_calibration_v6",
+  "robot_access": false,
+  "scene_generation_authorized": true,
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V6_DATA_DESIGN_LOCK.json": "850921e200d921592128c76e11c8deeb5a7d6177ea315f1ff8d286f873084b6d",
+    "protocol/certify_gazebo_calibration_v5_prerender.py": "d6208ccd176ddc519799e31136ccc766d7a33bc78d470a79efd913db779afd53",
+    "protocol/certify_gazebo_calibration_v6_prerender.py": "49dfdd3df3fc11b438f689af643e52acd0df7235911272cd137d06f4565a0d36",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/PRE_RENDER_INTERVAL_CERTIFICATE.json": "fbe22e54e3dd02200a3cab2da402b6fe36c338a0043d157e4b05a720859dc88a"
+  },
+  "status": "PRE_RENDER_CERTIFICATE_FROZEN_PASS",
+  "test_iid_ood_access": false
+}

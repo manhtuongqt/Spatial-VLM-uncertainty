@@ -1,0 +1,288 @@
+{
+  "calibration_or_test_created": false,
+  "checks": {
+    "batch_and_resume_contract": {
+      "batch_sizes": [
+        20,
+        95,
+        95,
+        95,
+        95
+      ],
+      "canary": {
+        "category_counts": {
+          "direct_grounding": 4,
+          "front_behind_camera": 3,
+          "multi_anchor_depth_order": 3,
+          "nearer_farther": 3,
+          "occlusion_depth_evidence": 3,
+          "relation_2d": 4
+        },
+        "split_counts": {
+          "dev": 4,
+          "train": 16
+        },
+        "state_counts": {
+          "ABSENT": 4,
+          "AMBIGUOUS": 4,
+          "FOUND": 8,
+          "INSUFFICIENT_EVIDENCE": 4
+        }
+      },
+      "passed": true,
+      "resume_contract": {
+        "checkpoint_after_each_family": true,
+        "checkpoint_at_batch_boundary": true,
+        "existing_complete_capture": "VERIFY_ALL_DECLARED_HASHES_THEN_SKIP",
+        "existing_partial_or_corrupt_capture": "FAIL_NEVER_OVERWRITE",
+        "identity_key": "capture_id",
+        "next_batch_requires_previous_raw_qc_pass": true,
+        "write_mode": "ATOMIC_CREATE_ONLY"
+      }
+    },
+    "deterministic_static_replay": {
+      "passed": true
+    },
+    "family_sample_capture_identity": {
+      "passed": true
+    },
+    "instruction_and_template_disjointness": {
+      "development_instruction_count": 2000,
+      "passed": true,
+      "pilot_overlap_count": 0,
+      "train_dev_overlap_count": 0,
+      "unique_instruction_count": 2000,
+      "unique_template_family_count": 2000
+    },
+    "layout_bounds_collision_and_uniqueness": {
+      "cross_family_duplicates": 0,
+      "cross_split_duplicates": 0,
+      "failures": [],
+      "layouts_checked": 800,
+      "passed": true,
+      "unique_layout_fingerprints": 770
+    },
+    "locked_counts_and_commitment": {
+      "capture_count": 800,
+      "commitment": "d6790084dab886bbca226c892256e0ee4ca86f9a51c6970b9c2c03b99bcbc2a2",
+      "counts": {
+        "family_category_by_split": {
+          "dev": {
+            "direct_grounding": 12,
+            "front_behind_camera": 12,
+            "multi_anchor_depth_order": 12,
+            "nearer_farther": 14,
+            "occlusion_depth_evidence": 14,
+            "relation_2d": 16
+          },
+          "train": {
+            "direct_grounding": 48,
+            "front_behind_camera": 48,
+            "multi_anchor_depth_order": 48,
+            "nearer_farther": 56,
+            "occlusion_depth_evidence": 56,
+            "relation_2d": 64
+          }
+        },
+        "ood_axis_by_split": {
+          "dev": {
+            "none": 80
+          },
+          "train": {
+            "none": 320
+          }
+        },
+        "primary_answerability_by_split": {
+          "dev": {
+            "ABSENT": 14,
+            "AMBIGUOUS": 14,
+            "FOUND": 32,
+            "INSUFFICIENT_EVIDENCE": 20
+          },
+          "train": {
+            "ABSENT": 56,
+            "AMBIGUOUS": 56,
+            "FOUND": 128,
+            "INSUFFICIENT_EVIDENCE": 80
+          }
+        },
+        "split": {
+          "dev": 80,
+          "train": 320
+        },
+        "state_submode_by_split": {
+          "dev": {
+            "anchor_absent": 5,
+            "attribute_tie": 4,
+            "cross_modal_conflict": 4,
+            "depth_invalid_or_corrupt": 6,
+            "multi_anchor_conflict": 1,
+            "occlusion": 6,
+            "relation_tie": 3,
+            "same_class_duplicate": 6,
+            "target_absent": 5,
+            "too_small_or_out_of_view": 4,
+            "unique_visible_referent": 32,
+            "unsatisfied_relation": 4
+          },
+          "train": {
+            "anchor_absent": 19,
+            "attribute_tie": 14,
+            "cross_modal_conflict": 16,
+            "depth_invalid_or_corrupt": 24,
+            "multi_anchor_conflict": 9,
+            "occlusion": 24,
+            "relation_tie": 11,
+            "same_class_duplicate": 22,
+            "target_absent": 19,
+            "too_small_or_out_of_view": 16,
+            "unique_visible_referent": 128,
+            "unsatisfied_relation": 18
+          }
+        }
+      },
+      "family_count": 400,
+      "passed": true,
+      "sample_count": 2000
+    },
+    "object_registry_and_world_labels": {
+      "findings": [],
+      "instance_count": 27,
+      "passed": true
+    },
+    "ontology_semantics_and_relation_geometry": {
+      "failures": [],
+      "passed": true,
+      "relation_checks": 356
+    },
+    "oracle_and_sealed_split_boundary": {
+      "inference_payload_findings": [],
+      "passed": true,
+      "sealed_split_leakage": [],
+      "sealed_splits": [
+        "calibration",
+        "test_iid",
+        "test_ood"
+      ]
+    },
+    "pilot_and_split_disjointness": {
+      "development_seed_count": 2000,
+      "passed": true,
+      "pilot_layout_overlap_count": 0,
+      "pilot_seed_overlap_count": 0,
+      "train_dev_layout_seed_overlap_count": 0,
+      "unique_development_seed_count": 2000
+    },
+    "pilot_gate_prerequisite": {
+      "decision": "GO_DEVELOPMENT_CAPTURE_400",
+      "passed": true,
+      "pilot_qc_sha256": "1a3433a72b7567539187a11e2796082a4a0c26d024897d1af5c203af22aea09e",
+      "pilot_raw_manifest_sha256": "8c47737c6dd8cbfea8885c78d4a1ace8aab5fcac5d90aca1f67dc5e07938724c",
+      "pilot_tree_digest": "a7d7bc4f437f142ada995655d0cd1f8096c6d1a17d9e0ed487e26c65c87187b0"
+    },
+    "protected_wp0_wp3_wp2_hashes": {
+      "failures": [],
+      "passed": true,
+      "tree_digests": {
+        "datasets/roborefer_dataset_v1_prototype_20260818_155606": "d8e0479f65bc381207912f270f59de9808ca37e9520040d1ac498262e15875fc",
+        "results/roborefer_depth_sensitivity_v1_20260818_152700": "857e6b5e169b933572a41fb7251c9cbc78a4146d99f0f76845b27e9187472a9c",
+        "results/roborefer_pilot_v0_20260813_173305": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c"
+      }
+    },
+    "required_evidence_visibility_envelope": {
+      "envelope_base_link": {
+        "x_m": [
+          -0.42,
+          -0.08
+        ],
+        "y_m": [
+          0.12,
+          0.5
+        ]
+      },
+      "failures": [],
+      "passed": true
+    },
+    "runtime_and_output_precondition": {
+      "capture_output_root": "datasets/roborefer_dataset_v2_development_400_20260821",
+      "capture_output_root_absent_or_empty": true,
+      "missing_runtime_artifacts": [],
+      "passed": true
+    },
+    "seen_asset_partition": {
+      "excluded_assets": [
+        "cup",
+        "kettle",
+        "ycb_bleach_cleanser_01"
+      ],
+      "failures": [],
+      "heldout_assets": [
+        "ycb_pear_01",
+        "ycb_plum_01",
+        "ycb_tuna_fish_can_01"
+      ],
+      "passed": true,
+      "runtime_reserved_assets": [
+        "cube_red_01"
+      ],
+      "seen_asset_count_including_clones": 24
+    },
+    "submode_counts": {
+      "by_split": {
+        "dev": {
+          "anchor_absent": 5,
+          "attribute_tie": 4,
+          "cross_modal_conflict": 4,
+          "depth_invalid_or_corrupt": 6,
+          "multi_anchor_conflict": 1,
+          "occlusion": 6,
+          "relation_tie": 3,
+          "same_class_duplicate": 6,
+          "target_absent": 5,
+          "too_small_or_out_of_view": 4,
+          "unique_visible_referent": 32,
+          "unsatisfied_relation": 4
+        },
+        "train": {
+          "anchor_absent": 19,
+          "attribute_tie": 14,
+          "cross_modal_conflict": 16,
+          "depth_invalid_or_corrupt": 24,
+          "multi_anchor_conflict": 9,
+          "occlusion": 24,
+          "relation_tie": 11,
+          "same_class_duplicate": 22,
+          "target_absent": 19,
+          "too_small_or_out_of_view": 16,
+          "unique_visible_referent": 128,
+          "unsatisfied_relation": 18
+        }
+      },
+      "global": {
+        "anchor_absent": 24,
+        "attribute_tie": 18,
+        "cross_modal_conflict": 20,
+        "depth_invalid_or_corrupt": 30,
+        "multi_anchor_conflict": 10,
+        "occlusion": 30,
+        "relation_tie": 14,
+        "same_class_duplicate": 28,
+        "target_absent": 24,
+        "too_small_or_out_of_view": 20,
+        "unique_visible_referent": 160,
+        "unsatisfied_relation": 22
+      },
+      "passed": true
+    }
+  },
+  "decision": "GO_DEVELOPMENT_CAPTURE_400",
+  "failures": [],
+  "figures_created": 0,
+  "generated_at_utc": "2026-08-21T10:11:33.358735+00:00",
+  "passed": true,
+  "protocol_id": "roborefer_dataset_v2_development_capture_400",
+  "schema_version": 1,
+  "scientific_status": "STATIC_PREFLIGHT_PLANNED_NOT_CAPTURED",
+  "tables_02_to_06": "NOT_RUN",
+  "training_performed": false
+}

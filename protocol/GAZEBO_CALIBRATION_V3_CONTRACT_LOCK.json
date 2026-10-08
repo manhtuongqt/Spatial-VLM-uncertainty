@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "gazebo_calibration_v3",
+  "locked_at_utc": "2026-09-15T05:46:26+00:00",
+  "status": "PREREGISTERED_LOCKED_NO_CAPTURE_AUTHORIZATION",
+  "purpose": "Freeze the independent Calibration-v3 population, data boundary, affine-logit calibration procedure, metrics, operating-point rule, and terminal decisions before implementation, family generation, capture, materialization, inference, or calibration access.",
+  "scientific_position": {
+    "completed_checkpoint": "SPATIAL_RISK_V2_METHOD_FROZEN_AWAITING_NEW_CALIBRATION_CONTRACT",
+    "current_checkpoint": "CALIBRATION_V3_PRECAPTURE_CONTRACT_LOCKED",
+    "claim_boundary": "Spatial-risk v2 passed development gates on Val-UQ only. This contract creates no calibration, generalization, deployment, or robot evidence.",
+    "next_checkpoint_after_this_lock": "Implement and freeze the Calibration-v3 generator, manifests, capture code, and compatibility audit before any static/live preflight or capture."
+  },
+  "frozen_upstream": {
+    "grounding_backbone": "B0",
+    "b0_grounding_lock_sha256": "6e1da7e9759eacfaadf7be07467f4996e95575fd2a6225af25d87e4f74418b09",
+    "spatial_risk_method_v2_hypothesis_lock": {
+      "path": "protocol/spatial_risk_method_v2_hypothesis_lock.json",
+      "sha256": "8f6e21941fd04dc4ac91fe0fb918d65b5e8d191a52db9dd27cc93d6c39aff5fc"
+    },
+    "spatial_risk_v2_runner": {
+      "path": "protocol/spatial_risk_v2_development.py",
+      "sha256": "e2c9c276e5211e9af21acd12535d496cf79fd714ea66a2d7fad50c05518a301e"
+    },
+    "spatial_risk_v2_model": {
+      "path": "results/spatial_vlm_refspatial_v1/wp5_spatial_risk_v2_development/spatial_risk_v2_estimator.joblib",
+      "sha256": "f296e2e33abdd66437d2976a91ff78b4e707d67244f3b998dc9d9b011cbd5bc2",
+      "inspectable_path": "results/spatial_vlm_refspatial_v1/wp5_spatial_risk_v2_development/spatial_risk_v2_estimator.json",
+      "inspectable_sha256": "ad2053849df0d927c13705a9946a66f85b7a6e7e3b11a45c747865af3d130f29",
+      "fit_call_count": 1,
+      "refit_allowed": false
+    },
+    "spatial_risk_v2_development_decision": {
+      "path": "results/spatial_vlm_refspatial_v1/wp5_spatial_risk_v2_development/spatial_risk_v2_development_decision.json",
+      "sha256": "d0e5c91c66f4f65a8dc6a5bd0c91bf91552d35275361fe34b1b33b4b6bf62c56",
+      "decision": "SPATIAL_RISK_V2_METHOD_FROZEN_AWAITING_NEW_CALIBRATION_CONTRACT",
+      "development_threshold_reference_only": 0.75
+    },
+    "spatial_risk_v2_artifact_manifest_sha256": "a3ea213cde45e69e5565eae419d2bf1a841b410a7b95b021e95b583ca5101d55",
+    "feature_count": 12,
+    "feature_names_in_order": [
+      "action_POINT",
+      "action_INVALID",
+      "self_consistency",
+      "point_dispersion",
+      "boundary_distance",
+      "local_depth_valid_fraction",
+      "local_depth_median",
+      "local_depth_mad",
+      "relation_leftmost",
+      "relation_rightmost",
+      "relation_second_from_left",
+      "relation_second_from_right"
+    ],
+    "immutable_components": [
+      "B0 weights, prompt, decoding, semantic parser, and RGB-D preprocessing",
+      "spatial-risk v2 model binary and feature extraction semantics",
+      "unsafe definition and Hit@0.08 radius",
+      "development result and historical Calibration-v2 result"
+    ]
+  },
+  "historical_calibration_boundary": {
+    "calibration_v2_state": "CLOSED_HISTORICAL_NEGATIVE",
+    "calibration_v2_dataset_manifest_sha256": "a8d777f1333b08d40bf9ca887bf57b289bec745197cf53875254ac0a8c5fbae9",
+    "calibration_v2_final_lock_sha256": "dca4a2f4dbeb437895ad95f1c0aff00358ab65b68ddfe7ac761aab6a07e3056f",
+    "calibration_v2_metrics_sha256": "48fedfe0b2637127331dab6945d2d6aad21d6f9c96c56683202625b59b67bf5d",
+    "observed_negative_result": "Temperature scaling reduced Brier from 0.139282 to 0.137580 but increased ECE-10 from 0.049936 to 0.051019; the joint probability gate failed.",
+    "reuse_prohibited": true,
+    "prohibited_uses": [
+      "calibrator fitting",
+      "optimizer or parameter selection",
+      "feature or model selection",
+      "operating-threshold selection",
+      "stopping or retry decisions",
+      "Calibration-v3 success evaluation"
+    ]
+  },
+  "population_design": {
+    "dataset_namespace": "Gazebo_calibration_v3",
+    "split": "calibration",
+    "parent_family_count": 128,
+    "records_per_parent_family": 1,
+    "state_relation_cell_quota": 8,
+    "answerability_states_in_order": [
+      "FOUND",
+      "AMBIGUOUS",
+      "ABSENT",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "relation_variants_in_order": [
+      "leftmost",
+      "rightmost",
+      "second_from_left",
+      "second_from_right"
+    ],
+    "cell_index_rule": "family_index = ((state_index * 4 + relation_index) * 8) + cell_repetition, where every index is zero-based and the ordered lists in this contract are authoritative.",
+    "identifier_rules": {
+      "sample_and_scene_id": "gazebo_calibration_v3_{family_index:03d}",
+      "layout_id": "gazebo_calibration_v3_layout_{family_index:03d}",
+      "family_id": "spatial_vlm_gazebo_calibration_v3/calibration/parent_{family_index:03d}",
+      "identifier_reuse_allowed": false
+    },
+    "deterministic_seed_rule": "uint32(first_8_hex(sha256('gazebo_calibration_v3_seed_v1|' + family_id + '|' + state + '|' + relation_variant + '|' + decimal_cell_repetition)))",
+    "capture_order_rule": "Sort all 128 family IDs by the full hexadecimal SHA-256 of 'gazebo_calibration_v3_capture_order_v1|' + family_id; ties are impossible unless IDs duplicate, which is a hard failure.",
+    "focus_objects": [
+      "ycb_apple",
+      "ycb_orange",
+      "ycb_mango"
+    ],
+    "relation_scope": "horizontal ordinal ranking answerability",
+    "no_adaptive_sampling": true,
+    "no_row_replacement": true,
+    "no_post_capture_rebalancing": true
+  },
+  "camera_and_geometry": {
+    "camera": {
+      "frame": "camera_color_optical_frame",
+      "base_frame": "base_link",
+      "resolution": [
+        640,
+        480
+      ],
+      "intrinsics": {
+        "fx": 606.0816650391,
+        "fy": 605.7973022461,
+        "cx": 325.5436706543,
+        "cy": 249.9961547852
+      },
+      "depth_unit": "metre",
+      "valid_depth_range_m": [
+        0.1,
+        2.0
+      ],
+      "view_joint_pose": [
+        1.3815,
+        -1.8273,
+        1.3428,
+        -1.2863,
+        -1.5708,
+        -1.9601
+      ]
+    },
+    "reference_frame": "image_viewer_left_to_right",
+    "visibility_gates": {
+      "minimum_sufficient_pixels": 120,
+      "insufficient_evidence_min_visible_pixels_inclusive": 1,
+      "insufficient_evidence_max_visible_pixels_exclusive": 120,
+      "insufficient_projected_center_outer_margin_fraction": 0.2,
+      "tie_margin_normalized": 0.03
+    },
+    "required_raw_modalities": [
+      "RGB",
+      "depth_view",
+      "metric_depth_m",
+      "camera_intrinsics",
+      "camera_to_base_TF",
+      "semantic_instance_labels",
+      "target_mask",
+      "anchor_mask_union",
+      "visibility metadata"
+    ],
+    "robot_manipulation_during_capture": false,
+    "sam2_allowed": false
+  },
+  "family_and_leakage_contract": {
+    "must_be_disjoint_from": [
+      "Gazebo_train_uq and Gazebo_val_uq, including all failed full attempts and pilots",
+      "Gazebo_dev_answerability_v2",
+      "Gazebo_calibration_v1 and Gazebo_calibration_v2, including invalid attempts",
+      "every reserved or materialized Test-IID and Test-OOD namespace"
+    ],
+    "exclusion_source_sha256": {
+      "datasets/Gazebo_dev_answerability_v2/manifest.json": "57fe333df4570cd32093d9810fb347e91ce7af90ce596805ad3fe25d52aad28a",
+      "datasets/Gazebo_dev_answerability_v2/inference_manifest.jsonl": "4544cfb9d033f57b7065e3810fedbd9e3b3a83ee2e63e6a90d7282c9395a0cbd",
+      "datasets/Gazebo_train_uq_v2_full_r3/manifest.json": "87b2c73222b142a40b058ad63d94e34f5668dc60e78330153fcaf6cec4ab6271",
+      "protocol/gazebo_calibration_v1_family_manifest.jsonl": "ab6b37b3bdb19b047c04be7b8108d41bc86836fe84f62502e489b980b21ecc5e",
+      "protocol/gazebo_calibration_v2_family_manifest.jsonl": "13d0aed3cf6da38a9be0a539e21b91828347aa16e9e74dde68c23d7502d2ec64",
+      "protocol/gazebo_train_uq_v2_full_family_manifest.jsonl": "a060b7b1a39bf1f1b10ffaddfaf7c2322edf4b51a62d7a20628ac55ab62221ce",
+      "protocol/gazebo_train_uq_v2_full_r2_family_manifest.jsonl": "834c16feec0ec58dbf023ec21164d7c9c172b4840e3789861b713bf5ce9514cc",
+      "protocol/gazebo_train_uq_v2_full_r3_family_manifest.jsonl": "75fc3a42490d22fe37b1e2a52a12b551abfb9ee8c975029279a935b0bfafacae"
+    },
+    "identity_overlap_gate": "Zero overlap for sample_id, scene_id, layout_id, family_id, deterministic seed, capture ID, and raw RGB SHA-256.",
+    "physical_layout_signature": {
+      "canonicalization": "Canonical JSON with sorted object model names and each object's physical pose (x,y,z,roll,pitch,yaw) rounded to 6 decimal places, occluder identity/geometry/pose, camera frame/intrinsics/view pose, and world identifier. Exclude sample, scene, layout, family, split, state, relation, instruction, and file-path identifiers.",
+      "digest": "SHA-256 of UTF-8 canonical JSON with sorted keys and compact separators",
+      "overlap_gate": "All 128 Calibration-v3 layout signatures must be unique and must have zero intersection with every available prior Gazebo layout-signature set."
+    },
+    "perceptual_duplicate_gate": "Before materialization, report exact RGB SHA-256 duplicates and the same perceptual-duplicate audit used by Train-UQ full-r3 and Calibration-v2; any cross-split or within-split duplicate rejects the entire attempt.",
+    "future_test_rule": "Future Test-IID/OOD contracts must include the frozen Calibration-v3 family, seed, layout-signature, and RGB-hash sets in their exclusion registries before Test materialization."
+  },
+  "required_execution_order": [
+    {
+      "step": 1,
+      "name": "contract_lock",
+      "requirement": "Hash-lock this file before any Calibration-v3 implementation, family generation, preflight, capture, or access."
+    },
+    {
+      "step": 2,
+      "name": "implementation_and_manifest_freeze",
+      "requirement": "Create the deterministic generator, 128-row family manifest, split manifest, scene/annotation/gate configs, capture pipeline, materializer, inference runner, and affine-logit evaluator; bind their hashes and all exclusion-set hashes in an implementation freeze artifact."
+    },
+    {
+      "step": 3,
+      "name": "static_preflight",
+      "requirement": "Verify upstream hashes, exact 4x4x8 balance, unique IDs/seeds/layout signatures, zero prior-family/layout overlap, oracle-free model inputs, camera/config consistency, and sealed Test state."
+    },
+    {
+      "step": 4,
+      "name": "live_preflight",
+      "requirement": "Verify Gazebo services, RGB/depth/semantic topics, intrinsics, TF, fixed view pose, reset behavior, storage, and no manipulation. Capture remains forbidden unless both preflights pass."
+    },
+    {
+      "step": 5,
+      "name": "capture_authorization_lock",
+      "requirement": "After both preflights pass, create an immutable capture-compatibility lock binding this contract hash, the implementation freeze, exact manifests/configs, exclusion audit, and static/live preflight PASS artifacts."
+    },
+    {
+      "step": 6,
+      "name": "capture",
+      "requirement": "Capture exactly one complete 128-family attempt in the deterministic capture order. No outcome-contingent recapture, row filtering, replacement, or mixing across attempts."
+    },
+    {
+      "step": 7,
+      "name": "geometry_and_duplicate_qc",
+      "requirement": "Run state, relation, visibility, projection, metric-depth, TF, exact-duplicate, perceptual-duplicate, family-overlap, and layout-overlap audits before model inference or calibration. Any required-gate failure rejects and freezes the whole attempt."
+    },
+    {
+      "step": 8,
+      "name": "materialization_lock",
+      "requirement": "Only after QC PASS, materialize RGB-D inference inputs and evaluator-only oracle files separately; freeze their manifests and hashes."
+    },
+    {
+      "step": 9,
+      "name": "frozen_inference",
+      "requirement": "Run frozen B0 decoding and the frozen 12-feature spatial-risk v2 estimator on the oracle-free inference manifest. Lock all raw B0 outputs, features, and v2 raw probabilities before joining evaluator labels."
+    },
+    {
+      "step": 10,
+      "name": "single_calibrator_fit_and_operating_point",
+      "requirement": "Join the locked raw predictions to Calibration-v3 labels, fit the one preregistered affine-logit calibrator exactly once, evaluate probability/ranking gates, scan the locked threshold grid, and freeze one terminal decision."
+    }
+  ],
+  "attempt_policy": {
+    "capture_attempts_authorized_by_this_contract": 1,
+    "calibrator_fit_attempts_authorized": 1,
+    "partial_attempt_reuse_allowed": false,
+    "failed_row_repair_allowed": false,
+    "cross_attempt_merge_allowed": false,
+    "gate_relaxation_allowed": false,
+    "failure_rule": "Freeze the failed attempt and stop. Any retry requires an append-only amendment or replacement contract locked before generating or observing the retry, with a new namespace, new family IDs, new seeds, new layouts, and documented non-outcome-based rationale."
+  },
+  "unsafe_and_metric_contract": {
+    "immutable": true,
+    "unsafe_definition": {
+      "non_found": "answerability_state is AMBIGUOUS, ABSENT, or INSUFFICIENT_EVIDENCE",
+      "found_error": "answerability_state is FOUND and the semantic point is missing, invalid, out of bounds, or has normalized Euclidean target error greater than 0.08"
+    },
+    "safe_definition": "answerability_state is FOUND and exactly one finite in-bounds semantic point has normalized Euclidean target error at most 0.08",
+    "ece_10": "Ten equal-width bins on [0,1], intervals [lower,upper) except final [0.9,1.0], empty bins omitted, sample-weighted absolute confidence-frequency gap for unsafe=1.",
+    "brier": "mean((predicted_unsafe_probability - unsafe_indicator)^2)",
+    "aurc": "Sort parent families by ascending risk with sample_id as deterministic tie-break; compute empirical unsafe rate at every coverage prefix; take the arithmetic mean of prefix risks.",
+    "auroc_error": "Unsafe is the positive class; ties receive average pair credit 0.5.",
+    "false_accept_rate_nonfound": "count(action == POINT on non-FOUND) / count(non-FOUND)",
+    "nonfound_abstain_recall": "count(exact ABSTAIN on non-FOUND) / count(non-FOUND)",
+    "invalid_is_abstain": false,
+    "statistical_reporting": {
+      "paired": true,
+      "unit": "parent_family",
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 13092026,
+      "confidence_interval": 0.95,
+      "mcnemar": "exact two-sided for paired safe-task correctness"
+    }
+  },
+  "calibration_protocol": {
+    "input_score": "frozen spatial_risk_v2_raw_probability",
+    "calibrator": "positive_slope_affine_logit",
+    "calibrator_count": 1,
+    "fit_split": "Gazebo_calibration_v3 only",
+    "fit_objective": "Mean binary negative log likelihood over all 128 parent families; no weighting, resampling, subgroup fitting, or regularization.",
+    "formula": "p=clip(p_raw,1e-6,1-1e-6); z=log(p/(1-p)); p_cal=sigmoid(exp(log_a)*z+b)",
+    "parameters": [
+      "log_a",
+      "b"
+    ],
+    "initial_parameters": {
+      "log_a": 0.0,
+      "b": 0.0
+    },
+    "bounds": {
+      "log_a": [
+        -5.0,
+        5.0
+      ],
+      "b": [
+        -10.0,
+        10.0
+      ]
+    },
+    "optimizer": "scipy.optimize.minimize(method='L-BFGS-B')",
+    "optimizer_options": {
+      "maxiter": 1000,
+      "ftol": 1e-12,
+      "gtol": 1e-08
+    },
+    "required_runtime": {
+      "python": "3.10.12",
+      "numpy": "1.26.4",
+      "scipy": "1.15.3",
+      "scikit_learn": "1.7.2",
+      "joblib": "1.5.3"
+    },
+    "optimizer_failure": "Terminal calibration failure; no alternative initialization, solver, bound, weighting, retry, or fallback calibrator is allowed under this contract.",
+    "probability_success_gate": {
+      "ece_10": "calibrated ECE-10 must be strictly lower than raw v2 ECE-10 on the same 128 families",
+      "brier": "calibrated Brier must be strictly lower than raw v2 Brier on the same 128 families",
+      "joint_rule": "both gates must pass; equality or improvement in only one metric is failure"
+    },
+    "ranking_invariance_gate": {
+      "positive_slope_required": true,
+      "aurc_absolute_difference_max": 1e-12,
+      "auroc_error_absolute_difference_max": 1e-12
+    }
+  },
+  "operating_point_rule": {
+    "action": "ABSTAIN iff calibrated_risk >= threshold; otherwise preserve the frozen B0 action and point.",
+    "threshold_grid": {
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "step": 0.01,
+      "count": 101
+    },
+    "eligibility_vs_frozen_b0": {
+      "found_hit_at_008_delta_min": -0.125,
+      "nonfound_abstain_recall": "strictly_higher",
+      "nonfound_false_accept": "strictly_lower",
+      "exact_contract": "not_lower",
+      "invalid_is_abstain": false
+    },
+    "selection_lexicographic": [
+      "lowest_nonfound_false_accept",
+      "highest_found_hit_at_008",
+      "highest_corrected_safe_task_accuracy",
+      "highest_coverage",
+      "lowest_threshold"
+    ],
+    "development_threshold_usage": "The Val-UQ threshold 0.75 is provenance/reference only and is not a Calibration-v3 candidate preference or tie-break."
+  },
+  "terminal_decision_rule": {
+    "pass_requires": [
+      "all capture, QC, materialization, leakage, and raw-prediction locks pass",
+      "optimizer terminates successfully under the single locked invocation",
+      "ECE-10 strictly decreases",
+      "Brier strictly decreases",
+      "AURC and AUROC-error satisfy ranking invariance",
+      "at least one threshold satisfies every operating-point eligibility gate"
+    ],
+    "decision_if_pass": "CALIBRATION_V3_PASS_ELIGIBLE_FOR_SEPARATE_LOCKED_TEST_AUTHORIZATION",
+    "decision_if_fail": "CALIBRATION_V3_NEGATIVE_NO_TEST_OR_ROBOT",
+    "no_intermediate_success": "Pipeline completion, optimizer completion, one probability metric improving, ranking signal, or an eligible threshold alone is not a pass.",
+    "pass_authority_limit": "A pass authorizes only creation and review of a separate Test-IID/OOD access lock. It does not unseal Test, authorize a Test run, or authorize robot evaluation."
+  },
+  "access_and_sealing": {
+    "capture_authorized_by_this_file": false,
+    "condition_for_capture_authorization": "A separate immutable capture-compatibility lock must bind this contract hash, all v3 implementation/config/manifest hashes, exclusion-registry hashes, and PASS results from static and live preflight.",
+    "train_uq": "READ_ONLY_HASH_AND_FROZEN_PROVENANCE; no refit or reselection",
+    "val_uq": "CLOSED_FOR_SELECTION; no further viewing or tuning",
+    "dev_v2": "CLOSED_NO_REUSE",
+    "calibration_v1": "CLOSED_INVALID_ATTEMPT",
+    "calibration_v2": "CLOSED_HISTORICAL_NEGATIVE_NO_REUSE",
+    "calibration_v3": "NOT_GENERATED_NOT_CAPTURED_NOT_ACCESSED",
+    "test_iid": "SEALED_AND_UNAUTHORIZED",
+    "test_ood": "SEALED_AND_UNAUTHORIZED",
+    "gazebo_robot_policy": "CLOSED",
+    "real_ur3": "CLOSED_OPTIONAL_FUTURE_ONLY"
+  },
+  "forbidden_actions": [
+    "Refit, retry, reweight, resample, or modify spatial-risk v2.",
+    "Use Val-UQ, Dev-v2, or Calibration-v2 to alter this contract or choose any Calibration-v3 method detail.",
+    "Generate or inspect Calibration-v3 outcomes before the required compatibility lock and preflights.",
+    "Filter failed rows, replace individual families, merge attempts, or relax gates after observing data.",
+    "Open, preview, materialize, or evaluate Test-IID/Test-OOD.",
+    "Execute or evaluate robot ACT, REOBSERVE, or ABSTAIN policy."
+  ],
+  "deviation_policy": "Any change to population size, quotas, ID/seed/order rules, camera/geometry gates, family exclusions, upstream model/features, unsafe or metric definitions, calibrator, optimizer, threshold rule, success gates, or access boundary invalidates this protocol identity. The replacement or append-only amendment must be hash-locked before generating or observing affected data and must never be outcome-contingent.",
+  "lock_finalization": {
+    "self_hash_storage": "The SHA-256 of this complete file cannot be embedded without circularity. Record the externally computed SHA-256 in the next capture-compatibility lock and every downstream Calibration-v3 artifact.",
+    "family_manifest_exists_at_lock_time": false,
+    "capture_or_data_access_performed_by_lock_creation": false
+  },
+  "assertions": [
+    "This is a preregistration contract, not a calibration result.",
+    "Calibration-v3 is independent of the observed Calibration-v2 outcomes by data, not by method-design chronology.",
+    "Exactly one affine-logit calibrator fit is authorized after all preceding gates pass.",
+    "Test-IID/OOD and robot remain closed regardless of this contract's existence."
+  ]
+}

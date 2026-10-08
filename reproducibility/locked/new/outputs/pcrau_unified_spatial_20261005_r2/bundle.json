@@ -1,0 +1,17 @@
+{
+  "calibrator": {
+    "path": "calibrator.json",
+    "sha256": "61c1c27d5eab3e90841c4b81965b28363cd72de3d7b80ad6b2751918f6fa195a"
+  },
+  "freeze_lock": {
+    "path": "frozen/freeze_lock.json",
+    "sha256": "5478ac842cab60f8a2bff5e7c8a193b7f806f374ee63b72e38a38f68fa1da81a"
+  },
+  "profile": {
+    "path": "profile.json",
+    "sha256": "629dd7c0ca184b81b2dd4914f625ea3ebbe57a2ecac1c357b7010a10132e6cbc"
+  },
+  "robot_motion_commanded": false,
+  "selected_as_active": false,
+  "version": "pcrau_unified_live_evidence_v1"
+}

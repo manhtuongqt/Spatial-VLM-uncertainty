@@ -1,0 +1,122 @@
+{
+  "condition_count": 6,
+  "condition_order": [
+    "rgb_only",
+    "correct_depth",
+    "flat_depth",
+    "shuffled_depth",
+    "inverted_depth",
+    "localized_holes_edge"
+  ],
+  "conditions": {
+    "correct_depth": {
+      "enable_depth": true,
+      "transform": "locked inverse_depth_percentile_v1"
+    },
+    "flat_depth": {
+      "enable_depth": true,
+      "transform": "all pixels uint8=127"
+    },
+    "inverted_depth": {
+      "enable_depth": true,
+      "transform": "255-correct relative depth"
+    },
+    "localized_holes_edge": {
+      "enable_depth": true,
+      "transform": "zero Canny(24,72) depth edges dilated 7x7 plus three fixed 10% image patches",
+      "uses_rgb_or_oracle_to_choose_holes": false
+    },
+    "rgb_only": {
+      "enable_depth": false,
+      "transform": "none"
+    },
+    "shuffled_depth": {
+      "enable_depth": true,
+      "transform": "cyclic next-scene derangement"
+    }
+  },
+  "dataset_root": "results/roborefer_pilot_v0_20260813_173305/dataset_attempt_02",
+  "decision_rule": [
+    "FIX_DEPTH_PIPELINE_FIRST if correct-depth parse rate <1.0, correct-depth single-target hit rate <0.75, or correct depth trails RGB by more than one hit.",
+    "Otherwise GO_PCRA_F if corrupted-pair displacement-sensitive rate <=0.20 and instance-switch rate <=0.10.",
+    "Otherwise NO_GO_PCRA_F because the existing checkpoint measurably responds to depth; prioritize P-CRA-U/calibration/intervention."
+  ],
+  "decision_thresholds": {
+    "displacement_sensitive_normalized": 0.02,
+    "go_pcra_f_max_instance_switch_rate": 0.1,
+    "go_pcra_f_max_sensitive_pair_rate": 0.2,
+    "maximum_correct_depth_hit_deficit_vs_rgb": 1,
+    "minimum_correct_depth_point_hit_rate": 0.75,
+    "required_correct_depth_parse_rate": 1.0
+  },
+  "evaluation": {
+    "instance_switch": "semantic label at counterfactual point differs from semantic label at correct-depth point",
+    "limitations_locked_before_run": [
+      "Checkpoint emits one point and no heatmap, so WP1 cannot measure heatmap change.",
+      "Ten-scene WP1 is diagnostic and cannot support significance claims."
+    ],
+    "oracle_access": "ONLY_AFTER_prediction_lock_verifies",
+    "point_displacement": "Euclidean distance in normalized image coordinates and pixels",
+    "safe_eroded_margin_px": 4,
+    "task_groups": {
+      "direct": [
+        "direct_grounding"
+      ],
+      "relation_or_comparison": [
+        "relative_2d",
+        "depth_relation",
+        "multi_reference",
+        "metric_comparison",
+        "shape_comparison",
+        "occlusion"
+      ],
+      "selective": [
+        "ambiguous_command",
+        "target_absent"
+      ]
+    }
+  },
+  "evaluator_source_sha256": {
+    "protocol/test_wp1_depth_sensitivity.py": "8ae386448e2035ad39df359993371924e8f76bcee3355c2b41002247ecb03caa",
+    "protocol/wp1_evaluate.py": "c4ab1428413a76545883f6472f3afa81297e8cdcfd762b1a7f3b241da8ac1d3e",
+    "ur3/ur3_perception/config/roborefer_pilot_v0_annotations.yaml": "804f781ce0cd4ab0bfe28eb44c1c280e471a397ee4dae516e4b112a5d0aa0095",
+    "ur3/ur3_perception/config/roborefer_pilot_v0_gate.yaml": "6d3acca4490dbe83ddf0b0cc68a3f31fff6491b9e9f89cdce0cb1fe21edd8cc3"
+  },
+  "expected_record_count": 60,
+  "input_lock": {
+    "capture_manifest_sha256": "c67e57b8b593e8615603000b94fd40cabab59ea53676816fba8e27663f39124b",
+    "input_manifest_sha256": "1e29278ea935b0821688a4fc28110b8fb25880b01dd9b7f22e7def852055ae5d"
+  },
+  "locked_at_utc": "2026-08-18T08:27:00.401432+00:00",
+  "model": {
+    "inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+    "name": "RoboRefer-2B-SFT"
+  },
+  "pilot_lock": {
+    "file_count": 173,
+    "relative_path": "results/roborefer_pilot_v0_20260813_173305",
+    "tree_sha256": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c"
+  },
+  "protocol_id": "roborefer_depth_sensitivity_v1",
+  "query_attempts_per_scene_condition": 1,
+  "request_lock": {
+    "generation_mode": "greedy",
+    "prompt": "instruction + single space + coordinate_suffix",
+    "random_seed": 8132026,
+    "retry_count": 0,
+    "rgb": "source RGB decoded then JPEG quality=90"
+  },
+  "result_root": "results/roborefer_depth_sensitivity_v1_20260818_152700",
+  "robot_manipulation_performed": false,
+  "runner_oracle_access": false,
+  "runner_source_sha256": {
+    "RoboRefer/API/api.py": "2ecab5b808e37d17dd08a8a558a23a1988f0506c74abc7951e2ff612a11c3135",
+    "protocol/reason_code_registry_v1.json": "3c726807238f71c057f7e4d9ce42ed2edf44cac68d63140296d42e2c573c6512",
+    "protocol/reason_event_v1.schema.json": "ac367d25f7ba96991ecd6fdee4a667862cec49e74cc61b187e4c6572ce88faef",
+    "protocol/wp1_common.py": "0752f6306c18bd04ccea730c9c6bac2c57637e76c0df9464b59d56adb10bfc3b",
+    "protocol/wp1_runner.py": "46094e9ab6ded36e915de3a27b9c81297c0dfa0efeca0ae2b778b4aca70aafe1"
+  },
+  "scene_count": 10,
+  "schema_version": 1,
+  "status": "LOCKED_BEFORE_INFERENCE"
+}

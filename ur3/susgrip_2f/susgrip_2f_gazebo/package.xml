@@ -1,0 +1,31 @@
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>susgrip_2f_gazebo</name>
+  <version>0.0.1</version>
+  <description>Apicoo Robotics SusGrip 2F Gripper ROS2 package </description>
+  <maintainer email="nghia.nguyenkhac@apicoorobotic.com">hongxiem</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <depend>rclpy</depend>
+  <depend>xacro</depend>
+  <depend>rviz2</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_ros_control</depend>
+  <depend>controller_manager</depend>
+  <depend>ros2_control</depend>
+  <depend>ros2_controllers</depend>
+  <depend>ros2_control_test_assets</depend>
+  <depend>ros2_control_demos</depend>
+  <depend>ros2_control_utils</depend>
+
+  <exec_depend>python3-pyqt5</exec_depend>
+  <exec_depend>susgrip_2f_description</exec_depend>
+
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

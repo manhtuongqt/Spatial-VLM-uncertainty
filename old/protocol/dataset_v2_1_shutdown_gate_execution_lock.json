@@ -1,0 +1,37 @@
+{
+  "baseline_expected_sha256": {
+    "datasets/roborefer_dataset_v2_development_400_20260821/raw/raw_capture_manifest.json": "4cd11a991267e93773881e6cce69455f8bfe0572e20732641f5bf0881bb0ceb4",
+    "protocol/dataset_v2_development_execution_lock.json": "c3b5af0dc35d5d4641a20b08475c9f2e53e11934e0c0569c4885b4921204cfa7",
+    "protocol/dataset_v2_pilot_execution_lock.json": "ffa1a538371909813bebae1ec6cf47b655cf421f8759b967a56a06a443b61df6",
+    "ur3/ur3_moveit_control/config/ur3_susgrip_gazebo_controllers.yaml": "01d81becf2f387ccded9f762029e15a7e9816a56187cf3bbeccca27fbc02d49b",
+    "ur3/ur3_moveit_control/urdf/d435i_wrist_camera.xacro": "950a835a158c7177c4b057c7eeddaf80116989e854f9ec49c97d18207ec9069f",
+    "ur3/ur_simulation_gz/launch/ur_sim_control.launch.py": "42aab333d2cd7b028502a4ae4fe037866b2bc649ad427ecd6bf9de91d4744855",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place_inventory_v2.sdf": "6cff65b57c398220ce77b8d4cf7bfa7a93574a15063ed5793f17318142268f3a"
+  },
+  "capture_authorized": true,
+  "capture_count": 30,
+  "capture_output_root": "datasets/roborefer_dataset_v2_1_shutdown_gate_canary_20260824",
+  "capture_plan_sha256": "6d615cd7d84076e9b52bb4aa33ad9f8cd347945a750d5afc2e411c29612f1eea",
+  "decision": "GO_RELATION_REPAIR_CAPTURE_30",
+  "family_count": 30,
+  "gate_expected_capture_count": 1,
+  "gate_id": "FIX_V2_1_SHUTDOWN_GATE",
+  "locked_artifact_sha256": {
+    "datasets/roborefer_dataset_v2_development_400_20260821/raw/raw_capture_manifest.json": "4cd11a991267e93773881e6cce69455f8bfe0572e20732641f5bf0881bb0ceb4",
+    "protocol/dataset_v2_1_shutdown_gate.py": "8f80c050a3412a90e3dea25f4aecda56727e1e8cb132369bcfb2ffb7e97a9232",
+    "protocol/dataset_v2_development_execution_lock.json": "c3b5af0dc35d5d4641a20b08475c9f2e53e11934e0c0569c4885b4921204cfa7",
+    "protocol/dataset_v2_pilot_execution_lock.json": "ffa1a538371909813bebae1ec6cf47b655cf421f8759b967a56a06a443b61df6",
+    "protocol/dataset_v2_relation_repair_capture.launch.py": "dcc22c7d7fd4217ed468a80ed693bc1d9d555cec2fae22ea9f8bf4836394c576",
+    "protocol/dataset_v2_relation_repair_capture.py": "cc8510e85e1f9b9c28810d08657188c843339e253cd161e919aac99218a318a4",
+    "protocol/dataset_v2_relation_repair_shutdown.py": "859f13254e5fc3a35c5bb5cebdb89436e8b096735387381b5885655914b863ca",
+    "ur3/ur3_moveit_control/config/ur3_susgrip_gazebo_controllers.yaml": "01d81becf2f387ccded9f762029e15a7e9816a56187cf3bbeccca27fbc02d49b",
+    "ur3/ur3_moveit_control/urdf/d435i_wrist_camera.xacro": "950a835a158c7177c4b057c7eeddaf80116989e854f9ec49c97d18207ec9069f",
+    "ur3/ur_simulation_gz/launch/ur_sim_control.launch.py": "42aab333d2cd7b028502a4ae4fe037866b2bc649ad427ecd6bf9de91d4744855",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place_inventory_v2.sdf": "6cff65b57c398220ce77b8d4cf7bfa7a93574a15063ed5793f17318142268f3a"
+  },
+  "locked_at_utc": "2026-08-24T04:54:04.950255+00:00",
+  "official_dataset_eligible": false,
+  "protocol_id": "roborefer_dataset_v2_1_relation_repair",
+  "schema_version": 1,
+  "training_authorized": false
+}

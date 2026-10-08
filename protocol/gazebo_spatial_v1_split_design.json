@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gazebo_spatial_v1_split_design",
+  "status": "DRAFT_NOT_CAPTURED_NOT_FROZEN",
+  "created_date": "2026-09-08",
+  "purpose": "WP0-WP1 preparation for the eight-week plan; independent robot-domain evaluation",
+  "camera_scope": "one fixed camera for core; one explicitly defined reobserve action",
+  "namespaces": {
+    "train_uq": {"seed_namespace": "spatial_vlm_v1/train_uq", "role": "fit learned answerability/risk head only"},
+    "dev": {"seed_namespace": "spatial_vlm_v1/dev", "role": "model selection and failure analysis; calibration cross-validation"},
+    "calibration": {"seed_namespace": "spatial_vlm_v1/calibration", "role": "final calibrator and thresholds after model freeze"},
+    "test_iid": {"seed_namespace": "spatial_vlm_v1/test_iid", "role": "locked final evaluation"},
+    "test_ood": {"seed_namespace": "spatial_vlm_v1/test_ood", "role": "locked final single-axis OOD evaluation"}
+  },
+  "family_rule": {
+    "unit": "scene-query family, with a parent scene lineage ID",
+    "all_shared_parent_scenes_same_split": true,
+    "co_locate": ["views", "paraphrases", "depth_corruptions", "occlusion_variants", "counterfactuals"],
+    "assignment": "pre-register parent-scene namespace and deterministic seed manifest before capture",
+    "checks": ["family_id disjointness", "parent_scene_id disjointness", "source-scene lineage audit", "RGB/depth hash overlaps", "asset/layout OOD axis audit"]
+  },
+  "states": ["FOUND", "AMBIGUOUS", "ABSENT", "INSUFFICIENT_EVIDENCE"],
+  "required_ground_truth": ["target and anchor masks/IDs", "metric depth", "camera intrinsics", "camera-to-world transform", "relation reference frame", "visibility", "answerability rule and valid-target set"],
+  "inference_allowlist": ["sample_id", "RGB", "depth", "instruction", "camera calibration only if explicitly required by downstream projection"],
+  "oracle_forbidden_inputs": ["target mask", "anchor masks/IDs", "answerability GT", "relation truth", "source rationale", "ground-truth risk"],
+  "legacy_data_policy": "Existing Gazebo raw dataset is absent in datasets root. Restore and verify lineage or recapture; legacy cache/checkpoint integrity does not establish independent data availability.",
+  "ood_policy": "Choose one axis before capture. Pear appears in RefSpatial adaptation pool; do not claim unseen semantic category for pear. Unseen mesh requires explicit asset lineage.",
+  "counts_per_split": null,
+  "counts_status": "PENDING_CAPTURE_THROUGHPUT_AND_STATE_RELATION_COVERAGE_BUDGET_WEEK_2",
+  "must_resolve_before_capture_lock": ["family counts and state quotas", "relation ontology passing annotation gates", "metric relation margins and ambiguity rules", "OOD axis and asset IDs", "camera pose and corruption parameters", "capture runtime/disk budget", "reobserve budget and policy development scenes"],
+  "test_access_gate": ["dataset QC", "model hash frozen", "risk estimator frozen", "calibrator frozen", "thresholds frozen", "policy frozen"],
+  "grounding_training_on_gazebo": false,
+  "new_split_artifacts_created": false
+}

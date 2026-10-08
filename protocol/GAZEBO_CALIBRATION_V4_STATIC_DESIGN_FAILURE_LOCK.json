@@ -1,0 +1,23 @@
+{
+  "calibration_decision": null,
+  "classification": "DATA_DESIGN_FAILURE_NOT_CALIBRATOR_SCIENTIFIC_NEGATIVE",
+  "failed_checks": [
+    "preregistered_candidate_footprints_collision_free",
+    "other_prerender_checks_pass"
+  ],
+  "locked_at_utc": "2026-09-22T04:21:19.883134+00:00",
+  "new_append_only_data_design_revision_required": true,
+  "protocol_id": "gazebo_calibration_v4",
+  "robot_access": false,
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V4_DATA_DESIGN_LOCK.json": "3f31389613f8aec15bcd19f2132bfe4f939fb3cfa51bdf1e571d71058e7ce3d9",
+    "protocol/audit_gazebo_calibration_v4_static_design.py": "37ae97e948b8f3614a6b355e171db677e688a6f9edc19ea0f45821e708c1f526",
+    "protocol/generate_gazebo_calibration_v4_design.py": "58dd91a9bf55e5488385e9b53d3106b25d3f725cc12c184789d0f0410cb372b7",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v3/capture_attempt_01/gazebo_calibration_v3_100/input/tf_snapshot.json": "8263a23f506acaff67748ab6be0fa4428ef8807596a162a6393da68905c2fc9d",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v4/STATIC_DESIGN_AUDIT.json": "10387b1d9eb84efc3e0de40cd3a36d9fcb53db6f44a3ad5c8519a8fddd7b3a2f",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place_uq_occlusion_v2.sdf": "6ee5cd6ede77d3fc8247557746ca25f0c03d0e08e0156d0360059d8e691c1193"
+  },
+  "status": "STATIC_DESIGN_FAILURE_FROZEN_NO_PILOT_OR_CALIBRATION_CAPTURE",
+  "test_iid_ood_access": false
+}

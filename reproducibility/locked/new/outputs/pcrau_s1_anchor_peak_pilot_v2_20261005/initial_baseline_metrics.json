@@ -1,0 +1,134 @@
+{
+  "dev": {
+    "empty": 3,
+    "families": 16,
+    "found": 16,
+    "matched_swap_pairs": 15,
+    "models": {
+      "C1": {
+        "anchor_cell_hits": 44,
+        "anchor_hit_rate": 0.7213114754098361,
+        "anchor_hits": 44,
+        "confident_wrong_anchor_ge_0p9": 11,
+        "empty_max_sigmoid_max": 0.8489721980074492,
+        "empty_mean_sigmoid_max": 0.6848706619634658,
+        "found_anchor_hits": 12,
+        "found_both_hits": 11,
+        "found_target_hits": 14,
+        "swap_both_hits": 6,
+        "swap_same_peak": 2,
+        "wrong_anchor_inside_target": 2
+      },
+      "M0": {
+        "anchor_cell_hits": 44,
+        "anchor_hit_rate": 0.7213114754098361,
+        "anchor_hits": 44,
+        "confident_wrong_anchor_ge_0p9": 11,
+        "empty_max_sigmoid_max": 0.8489721980074492,
+        "empty_mean_sigmoid_max": 0.6848706619634658,
+        "found_anchor_hits": 12,
+        "found_both_hits": 11,
+        "found_target_hits": 14,
+        "swap_both_hits": 6,
+        "swap_same_peak": 2,
+        "wrong_anchor_inside_target": 2
+      },
+      "P1": {
+        "anchor_cell_hits": 44,
+        "anchor_hit_rate": 0.7213114754098361,
+        "anchor_hits": 44,
+        "confident_wrong_anchor_ge_0p9": 11,
+        "empty_max_sigmoid_max": 0.8489721980074492,
+        "empty_mean_sigmoid_max": 0.6848706619634658,
+        "found_anchor_hits": 12,
+        "found_both_hits": 11,
+        "found_target_hits": 14,
+        "swap_both_hits": 6,
+        "swap_same_peak": 2,
+        "wrong_anchor_inside_target": 2
+      },
+      "P2": {
+        "anchor_cell_hits": 44,
+        "anchor_hit_rate": 0.7213114754098361,
+        "anchor_hits": 44,
+        "confident_wrong_anchor_ge_0p9": 11,
+        "empty_max_sigmoid_max": 0.8489721980074492,
+        "empty_mean_sigmoid_max": 0.6848706619634658,
+        "found_anchor_hits": 12,
+        "found_both_hits": 11,
+        "found_target_hits": 14,
+        "swap_both_hits": 6,
+        "swap_same_peak": 2,
+        "wrong_anchor_inside_target": 2
+      }
+    },
+    "samples": 64,
+    "visible": 61
+  },
+  "train": {
+    "empty": 5,
+    "families": 64,
+    "found": 57,
+    "matched_swap_pairs": 51,
+    "models": {
+      "C1": {
+        "anchor_cell_hits": 209,
+        "anchor_hit_rate": 0.8326693227091634,
+        "anchor_hits": 209,
+        "confident_wrong_anchor_ge_0p9": 33,
+        "empty_max_sigmoid_max": 0.9958012047285281,
+        "empty_mean_sigmoid_max": 0.48194643254479086,
+        "found_anchor_hits": 47,
+        "found_both_hits": 44,
+        "found_target_hits": 52,
+        "swap_both_hits": 29,
+        "swap_same_peak": 5,
+        "wrong_anchor_inside_target": 14
+      },
+      "M0": {
+        "anchor_cell_hits": 209,
+        "anchor_hit_rate": 0.8326693227091634,
+        "anchor_hits": 209,
+        "confident_wrong_anchor_ge_0p9": 33,
+        "empty_max_sigmoid_max": 0.9958012047285281,
+        "empty_mean_sigmoid_max": 0.48194643254479086,
+        "found_anchor_hits": 47,
+        "found_both_hits": 44,
+        "found_target_hits": 52,
+        "swap_both_hits": 29,
+        "swap_same_peak": 5,
+        "wrong_anchor_inside_target": 14
+      },
+      "P1": {
+        "anchor_cell_hits": 209,
+        "anchor_hit_rate": 0.8326693227091634,
+        "anchor_hits": 209,
+        "confident_wrong_anchor_ge_0p9": 33,
+        "empty_max_sigmoid_max": 0.9958012047285281,
+        "empty_mean_sigmoid_max": 0.48194643254479086,
+        "found_anchor_hits": 47,
+        "found_both_hits": 44,
+        "found_target_hits": 52,
+        "swap_both_hits": 29,
+        "swap_same_peak": 5,
+        "wrong_anchor_inside_target": 14
+      },
+      "P2": {
+        "anchor_cell_hits": 209,
+        "anchor_hit_rate": 0.8326693227091634,
+        "anchor_hits": 209,
+        "confident_wrong_anchor_ge_0p9": 33,
+        "empty_max_sigmoid_max": 0.9958012047285281,
+        "empty_mean_sigmoid_max": 0.48194643254479086,
+        "found_anchor_hits": 47,
+        "found_both_hits": 44,
+        "found_target_hits": 52,
+        "swap_both_hits": 29,
+        "swap_same_peak": 5,
+        "wrong_anchor_inside_target": 14
+      }
+    },
+    "samples": 256,
+    "visible": 251
+  }
+}

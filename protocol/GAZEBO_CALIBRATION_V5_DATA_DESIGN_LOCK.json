@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "gazebo_calibration_v5",
+  "status": "PREREGISTERED_DATA_DESIGN_ONLY_NO_SCENE_GENERATION_OR_CAPTURE_AUTHORIZATION",
+  "purpose": "Append-only repair of v4 preregistered pre-render collision failure; preserve the frozen scientific method while independently separating non-target candidates in the insufficient-evidence geometry class.",
+  "predecessor": {
+    "protocol/GAZEBO_CALIBRATION_V4_DATA_DESIGN_LOCK.json": "3f31389613f8aec15bcd19f2132bfe4f939fb3cfa51bdf1e571d71058e7ce3d9",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v4/STATIC_DESIGN_AUDIT.json": "10387b1d9eb84efc3e0de40cd3a36d9fcb53db6f44a3ad5c8519a8fddd7b3a2f",
+    "protocol/GAZEBO_CALIBRATION_V4_STATIC_DESIGN_FAILURE_LOCK.json": "c2a32d4d92962d51b9086a56945b188a93a0860bccf54864e82df25c47b59802"
+  },
+  "frozen_sources_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V3_CONTRACT_LOCK.json": "99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841",
+    "protocol/spatial_risk_method_v2_hypothesis_lock.json": "8f6e21941fd04dc4ac91fe0fb918d65b5e8d191a52db9dd27cc93d6c39aff5fc",
+    "results/spatial_vlm_refspatial_v1/wp5_spatial_risk_v2_development/spatial_risk_v2_estimator.joblib": "f296e2e33abdd66437d2976a91ff78b4e707d67244f3b998dc9d9b011cbd5bc2",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place_uq_occlusion_v2.sdf": "6ee5cd6ede77d3fc8247557746ca25f0c03d0e08e0156d0360059d8e691c1193",
+    "ur3/ur3_perception/config/gazebo_calibration_v3_scenes.yaml": "a32b8c1cf7488d05ac39bba29332743b0b5010fbaddc117b5ef038d68932e6ca",
+    "ur3/ur3_perception/config/gazebo_calibration_v3_annotations.yaml": "5d0217d02bf5cfa5007f9931ffe83bd0303f695cf6814e4605a71a2a7825cdca",
+    "ur3/ur3_perception/config/gazebo_calibration_v3_gate.yaml": "8278c325d200fac09357a26cedbf167286a38e5ee11059fcf74aa8b709233503",
+    "protocol/gazebo_calibration_v3_family_manifest.jsonl": "07b438b96e29ab85e7fc543b426e27358f6819735f606cf2613e6d96776c1054",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v3/capture_attempt_01/gazebo_calibration_v3_100/input/tf_snapshot.json": "8263a23f506acaff67748ab6be0fa4428ef8807596a162a6393da68905c2fc9d"
+  },
+  "observed_pre_render_failure": {
+    "v4_pilot_candidate_sphere_overlaps": 4,
+    "v4_calibration_candidate_sphere_overlaps": 16,
+    "affected_relations": ["leftmost", "rightmost"],
+    "source_of_radii": "Locked world SDF collision sphere radii, not RGB or model outcomes.",
+    "collision_radii_m": {"ycb_apple": 0.03771, "ycb_orange": 0.03701, "mango": 0.03},
+    "sum_apple_orange_collision_radii_m": 0.07472,
+    "inference_or_calibrator_fit_on_v4": false,
+    "v4_prior_artifacts_immutable": true
+  },
+  "inherit_unchanged": {
+    "grounding_backbone": "B0, completely frozen",
+    "risk_model": "frozen spatial-risk v2 binary and exact 12 ordered oracle-free features; never refit",
+    "world_camera_and_view_pose": "Frozen v3/v4 Gazebo world, 640x480 wrist camera intrinsics/frame and six-joint view pose; no viewpoint change",
+    "answerability": "Same FOUND/AMBIGUOUS/ABSENT/INSUFFICIENT_EVIDENCE definitions and 4 horizontal ordinal relations",
+    "visibility_gate": "INSUFFICIENT_EVIDENCE target 1 <= semantic pixels < 120, in inherited projected-center margin; EVERY other candidate >= 120 visible pixels; other state/geometry gates unchanged",
+    "method_and_metrics": "Inherit v3 parent scientific contract without changing unsafe, ECE-10, Brier, AURC, AUROC-error, Hit@0.08, bootstrap, exact McNemar, positive-slope affine-logit objective, optimizer, initialization, bounds, success/failure gates, or 101-point threshold grid and lexicographic rule",
+    "claim_boundary": "Static geometry PASS or pilot QC PASS is infrastructure/data evidence, never scientific calibration PASS"
+  },
+  "population_and_independence": {
+    "pilot": {"protocol_id": "gazebo_calibration_v5_geometry_pilot", "split": "development_geometry_only", "family_count": 32, "repetitions_per_state_relation_cell": 2},
+    "calibration": {"protocol_id": "gazebo_calibration_v5", "split": "calibration", "family_count": 128, "repetitions_per_state_relation_cell": 8},
+    "states_in_order": ["FOUND", "AMBIGUOUS", "ABSENT", "INSUFFICIENT_EVIDENCE"],
+    "relations_in_order": ["leftmost", "rightmost", "second_from_left", "second_from_right"],
+    "family_index_rule": "index=((state_index*4+relation_index)*repetitions_per_state_relation_cell)+cell_repetition; all indices zero-based",
+    "scene_id": "{protocol_id}_{index:03d}",
+    "layout_id": "{protocol_id}_layout_{index:03d}",
+    "family_id_calibration": "spatial_vlm_gazebo_calibration_v5/calibration/parent_{index:03d}",
+    "family_id_pilot": "spatial_vlm_gazebo_calibration_v5_geometry_pilot/development/parent_{index:03d}",
+    "seed_rule": "uint32(first_8_hex(sha256(protocol_id + '_seed_v1|' + family_id + '|' + state + '|' + relation_variant + '|' + decimal_cell_repetition)))",
+    "capture_order_rule": "sort by full SHA-256 of protocol_id + '_capture_order_v1|' + family_id; no ties",
+    "mandatory_exclusions": "Both v5 splits must be family/scene/layout ID, seed, physical layout signature and captured RGB disjoint from each other AND every prior Dev/UQ/Calibration attempt, including failed Calibration-v3 and generated-but-unrendered v4 static-preview layouts. Never open sealed Test inputs; only consult existing non-sensitive exclusion metadata.",
+    "reuse_forbidden": "No v3/v4 row, image, label or scene allowed in v5 calibration; frozen v3 geometry is a template only. Geometry pilot is never used to fit or evaluate a calibrator.",
+    "no_adaptive_scenes": "Do not resample, select, delete, replace or mix individual families after observing pilot or calibration outcomes."
+  },
+  "exact_geometry_revision": {
+    "repair_scope": "Only non-target candidate anchors in INSUFFICIENT_EVIDENCE scenes change relative to v4. All other v4 deterministic geometric transforms and jitter/yaw formulas are inherited verbatim with NEW v5 seeds.",
+    "fixed_target_occluder_geometry": "Reuse the frozen v3 geometry template for the target plus neutral visual-only occluder; do not reuse v3 images or calibration labels. The inherited center-projection and target visibility gate remains unchanged.",
+    "candidate_identity_to_anchor": "Sort the two non-target candidate IDs lexicographically; assign index 0 to the first anchor and index 1 to the second anchor for each relation.",
+    "relation_aware_context_projected_center_targets_normalized": {
+      "leftmost": [[0.72, 0.55], [0.88, 0.75]],
+      "rightmost": [[0.27, 0.54], [0.45, 0.75]],
+      "second_from_left": [[0.42, 0.55], [0.78, 0.75]],
+      "second_from_right": [[0.42, 0.55], [0.78, 0.75]]
+    },
+    "per_family_fixed_jitter": "For candidate index i=0,1 and frozen uint32 family seed h: u=anchor_u+0.0040*(((h>>(8*i)) mod 5)-2); v=anchor_v+0.0050*(((h>>(8*i+3)) mod 5)-2). Thus the entire seed-independent envelope has |u-anchor_u|<=0.008 and |v-anchor_v|<=0.010. No retry or selection based on rendered pixels.",
+    "candidate_pose": "Inverse-project (u*640,v*480) with frozen camera intrinsics and camera-to-base TF onto that asset's horizontal support plane z from frozen v3 scene object config; preserve asset identity and support z. yaw=0.0700+0.0070*((h>>(16+3*i)) mod 11). Bind exact camera transform, projection implementation and resulting pose signatures in a subsequent implementation lock before rendering.",
+    "non_insufficient_states": "Inherit v4 fixed transform from v3 state/relation/repetition geometry template: every visible object's base-link x += 0.0020+0.0007*(h mod 7), y += -0.0030+0.0006*((h>>3) mod 9), yaw += 0.0340+0.0050*((h>>7) mod 11), using NEW v5 seed h; do not tune based on rendered scenes.",
+    "collision_clearance_from_world_sdf": {
+      "candidate_pair": "For every possible jitter u/v, planar distance between candidate sphere centers minus their SDF collision radii must be >= 0.010 m; planar distance is conservative because actual 3-D distance cannot be smaller.",
+      "candidate_to_target": "Each candidate sphere to mango collision sphere XY distance minus radii must be >= 0.010 m; the mango–panel intentional visual overlap is exempt.",
+      "candidate_to_panel": "Use the exact 0.100 x 0.100 m visual-only occluder footprint rotated by its frozen yaw; point-to-oriented-rectangle minimum planar distance minus candidate sphere radius must be >= 0.010 m. The panel is collision-free but visual overlap with non-target candidates is forbidden.",
+      "candidate_to_table_edge": "Work table from frozen SDF has x bounds [-0.8,0.8] m and y bounds [-0.65,1.55] m; each candidate center must be at least its SDF collision radius + 0.010 m inside every edge."
+    },
+    "projection_and_relation_guards": {
+      "candidate_image_center_envelope": "0.08 <= u,v <= 0.92 throughout the entire fixed jitter envelope",
+      "candidate_pair_normalized_separation_min": 0.12,
+      "candidate_to_target_and_panel_normalized_separation_min": 0.08,
+      "relation_order": "Target projected x is strictly left of both candidates for leftmost, right of both for rightmost, and strictly between them for each second-from relation. All four checks must hold throughout the entire jitter envelope.",
+      "target_near_image_and_valid_depth": "Apply the inherited v3 projected-center rule and depth range unchanged"
+    },
+    "certificate_rule": "After THIS lock is externally SHA-256 recorded but before generating any v5 scene/manifest, run read-only interval analysis over all possible jitter values. Use the frozen TF and SDF to bound inverse-projection x/y via all four corners of each (u,v) rectangle; use lower bounds on AABB-to-AABB distance for candidate-pair and candidate-to-target; for candidate-to-panel use oriented rectangle separation or a conservative enclosing box. Reject if any clearance cannot be PROVED >= 0.010 m. Evaluate camera, table, target/panel image and ordinal guards on the same envelope. No choosing new anchor values after seeing this certificate under this lock.",
+    "post_render_qc_rule": "Analytic clearance cannot prove semantic visibility. Only a separately authorized, all-or-nothing rendered pilot with 32/32 PASS (including 8/8 INSUFFICIENT_EVIDENCE with each non-target candidate >=120 pixels) may authorize a distinct 128-family calibration capture."
+  },
+  "gate_order": [
+    "hash-lock v5 data design and verify immutable predecessors",
+    "read-only worst-case pre-render certificate with no generated scenes, RGB or labels",
+    "only if certificate PASS, build deterministic generator/scene/config/manifests and freeze full implementation plus disjointness audit",
+    "static/live preflight, separately authorized single pilot capture, then pilot 32/32 geometry/RGB/TF/leakage QC",
+    "only if pilot PASS, separately authorize one new 128-family calibration capture; QC all 128/128 before materialization or inference",
+    "only if calibration QC PASS, frozen B0 and risk v2 inference, raw prediction locks before oracle join, fit calibrator once, apply inherited probability/ranking/operating-point gates, report one honest v5 scientific decision",
+    "Test-IID/OOD and Gazebo/real robot remain sealed even if v5 calibration PASS"
+  ],
+  "policy": {
+    "capture_authorized": false,
+    "pilot_or_calibration_scene_generated": false,
+    "pilot_or_calibration_captured": false,
+    "dataset_materialized": false,
+    "model_inference_run": false,
+    "calibrator_fit_call_count": 0,
+    "scientific_result_exists": false,
+    "test_iid_ood_access": false,
+    "robot_access": false,
+    "static_certificate_failure_rule": "Freeze negative static certificate and STOP. Any new anchors need a NEW append-only data-design revision, never an edit of this file.",
+    "pilot_or_calibration_qc_failure_rule": "Freeze entire attempt and STOP before inference; this is a data failure, not a scientific calibrator negative."
+  }
+}

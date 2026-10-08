@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gazebo_calibration_v2",
+  "status": "LOCKED_BEFORE_V2_DESIGN_AND_CAPTURE",
+  "parent_attempt": {
+    "protocol_id": "gazebo_calibration_v1",
+    "decision": "INVALID_PREFLIGHT_ORDER",
+    "contract_lock_sha256": "85cec1d3fab21100746c12f155d9d10b17997ab144eb21612c9a300919cac27c",
+    "capture_compatibility_lock_sha256": "9bef5731e4295f30ed938bb4c56c71d502ca44fb177d5cef6902881059e2e815",
+    "decision_sha256": "ebfa737d7c299b6ad07ac5975f392c78074f329c35444402e7608f99c4803189",
+    "final_live_preflight_sha256": "0cd4feda806c8e9ae7e76baa8f58ce9df32701bf0106a9470222f5442a422523",
+    "usable_scene_count": 0,
+    "partial_scene_directories_must_not_be_reused": true
+  },
+  "amendment_scope": "execution ordering and fresh scene identity/layout revision only",
+  "unchanged": [
+    "frozen B0",
+    "WP5 16-feature Logistic-L2 estimator with C=0.1",
+    "one binary temperature scaler",
+    "temperature-fit objective and optimizer",
+    "operating-threshold rule",
+    "128-family 4-state x 4-relation x 8-repetition quota",
+    "geometry acceptance gates",
+    "Calibration/Test/robot policy boundaries"
+  ],
+  "new_attempt_requirements": {
+    "all_scene_family_layout_and_pose_signatures_new": true,
+    "live_preflight_pass_before_capture_node_start": true,
+    "single_all_or_nothing_attempt": true,
+    "no_inference_during_capture": true,
+    "no_robot_manipulation": true
+  },
+  "sealed": {
+    "gazebo_dev_answerability_v2": true,
+    "gazebo_test_iid": true,
+    "gazebo_test_ood": true
+  }
+}

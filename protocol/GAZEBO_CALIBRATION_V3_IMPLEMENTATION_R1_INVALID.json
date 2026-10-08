@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "gazebo_calibration_v3",
+  "implementation_revision": "r1",
+  "status": "INVALID_IMPLEMENTATION_NO_PREFLIGHT_CAPTURE_INFERENCE_OR_FIT",
+  "recorded_at_utc": "2026-09-15T06:10:31+00:00",
+  "contract_lock_sha256": "99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841",
+  "invalid_implementation_lock_sha256": "db71970411841ebd96f5b02f4a15e511e2370dd225fa72e35f289c37b74e878d",
+  "invalid_implementation_audit_sha256": "a015259ee36f9bab5457b9baa77446b85f423c3c6664f99e6a91971f76f4c4dc",
+  "affected_source": {
+    "path": "protocol/gazebo_calibration_v3_fit.py",
+    "r1_sha256": "eecad7a0eeda67e137190ee1a553070ade442e175e21034068677bffbc1b2796"
+  },
+  "defect": "The future fit entry point referenced spatial_risk_v2_development.joined(), but that module has no joined() function. The defect was found by implementation interface review before any formal static/live preflight or data/model execution.",
+  "scientific_contract_changed": false,
+  "family_manifest_changed": false,
+  "scene_or_annotation_changed": false,
+  "calibrator_or_gate_changed": false,
+  "data_observed": false,
+  "model_inference_performed": false,
+  "calibrator_fit_performed": false,
+  "test_iid_ood_access": false,
+  "resolution_rule": "Implement a local deterministic oracle/B0 join with the already locked unsafe and Hit@0.08 definitions, rerun implementation-only validation, and issue a new R2 implementation audit and lock. R1 must never authorize preflight or capture."
+}

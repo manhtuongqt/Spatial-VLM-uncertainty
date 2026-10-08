@@ -1,0 +1,901 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-18T08:13:28.497274+00:00",
+  "workspace_root": "/home/dhcn/ur_ws/src/myproject",
+  "scope": "Every modified/untracked file reported by Git in RoboRefer and ur3, plus critical WP0 source/config and the locked pilot aggregate.",
+  "repositories": [
+    {
+      "name": "RoboRefer",
+      "root": "/home/dhcn/ur_ws/src/myproject/RoboRefer",
+      "branch": "main",
+      "head": "d97a995ad28376720a4c8beb64915c58ed16c844",
+      "dirty_entry_count": 8,
+      "status_counts": {
+        " M": 6,
+        "??": 2
+      },
+      "entries": [
+        {
+          "git_status": " M",
+          "path": "RoboRefer/API/api.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 8888,
+          "sha256": "2ecab5b808e37d17dd08a8a558a23a1988f0506c74abc7951e2ff612a11c3135"
+        },
+        {
+          "git_status": " M",
+          "path": "RoboRefer/API/use_api.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 2735,
+          "sha256": "ca6881baec576f98e1bf68f4aac9c8c2c10a68aa68a27595184b1f32a189a8a0"
+        },
+        {
+          "git_status": " M",
+          "path": "RoboRefer/llava/model/__init__.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1303,
+          "sha256": "467d0181e3b5f93fa5add8a4923695619b78cb0b66d7c94f493b1d95ee1f9ce5"
+        },
+        {
+          "git_status": " M",
+          "path": "RoboRefer/llava/model/multimodal_encoder/builder.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 3127,
+          "sha256": "83f8351c36ef0443166100c01b539d08ead6b6389f2968010035e21dcbc724b7"
+        },
+        {
+          "git_status": " M",
+          "path": "RoboRefer/llava/model/multimodal_encoder/siglip_encoder.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 3027,
+          "sha256": "5d66963c813d592d7b9f4982312fcd3a3904db98ea651b12f30673bde9d7362c"
+        },
+        {
+          "git_status": " M",
+          "path": "RoboRefer/llava/train/sequence_parallel/globals.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 10126,
+          "sha256": "41d861a5149550a39be7f5467bbd7cd80b31951fba15d5589b3f3e2b4fc9a3d8"
+        },
+        {
+          "git_status": "??",
+          "path": "RoboRefer/run_api_local.sh",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 594,
+          "sha256": "3232b89e920c8507477a921cee58333cd77709c4f8b6cb639fb4475b2a1222c7"
+        },
+        {
+          "git_status": "??",
+          "path": "RoboRefer/run_demo_local.sh",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 586,
+          "sha256": "9d917a284d09604bebefe1412830d013f748da1e37a9162fc97ca57b9f5fa8a4"
+        }
+      ]
+    },
+    {
+      "name": "ur3",
+      "root": "/home/dhcn/ur_ws/src/myproject/ur3",
+      "branch": "main",
+      "head": "e94d30cf12b53b7c1ba314252f6fdc1423f07738",
+      "dirty_entry_count": 89,
+      "status_counts": {
+        " M": 20,
+        "??": 69
+      },
+      "entries": [
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/README.md",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 18322,
+          "sha256": "da4fa33c7ead4c1e19c2be76255a5ec05ae958f43e89a336bef9ec51128c5c13"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/config/fixed_pick_place.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 6284,
+          "sha256": "fe5e76c25f12e3fef7d3dc291e33078f30e8e57934716b0dcccf84723e2b092a"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/config/moveit_custom_config.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 737,
+          "sha256": "1bcc67ab0da6b0302242014a79a0afaaf5a01ab71a73c0f4f9577e9b9848707d"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/config/ur3_susgrip_gazebo_controllers.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 4171,
+          "sha256": "01d81becf2f387ccded9f762029e15a7e9816a56187cf3bbeccca27fbc02d49b"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/launch/baseline_fixed_pick_place.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 7422,
+          "sha256": "33b811fd90bd9c0f1baf42c8cb8b2b17ae153c9e69cd019797e58d6da64cf0a6"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/launch/ur3_susgrip_sim.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 5407,
+          "sha256": "eb39c70b4ef647d860e74c3ad127c2d4d4044e2528bc8e1953a77d13c12a6d81"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/scripts/fixed_pick_place.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 82557,
+          "sha256": "74efd7c8b5f8e942fae14c22fcfa94ab8cdd2e6aebf44a169ce4a835010e4a65"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/test/test_pose_generation.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 3484,
+          "sha256": "202e124913f9b5afb692fa0170f07e0e1a4c6da16c9e74c1921911e2a4051d24"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/urdf/d435i_wrist_camera.xacro",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 8411,
+          "sha256": "950a835a158c7177c4b057c7eeddaf80116989e854f9ec49c97d18207ec9069f"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_moveit_control/urdf/ur3_with_susgrip.urdf.xacro",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 6409,
+          "sha256": "d622db10cdd21d1c01b51ddcd12cecb5503b4dd6632840b3336cc03079456dd1"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_perception/CMakeLists.txt",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1438,
+          "sha256": "6f350cd6a83ee07f89278be5a47f884101c9b5095536099371251ca0a0637398"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_perception/config/rgbd_perception.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1174,
+          "sha256": "a64b7ee3d26177d86b2b13619141434654cf870e2fbb1acfc2a9acfd08569b9d"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_perception/launch/perception_pick_place.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 5928,
+          "sha256": "1c289b30cb4228b65d651cc7441997fd274865b85cf6642000a2d2031b976c19"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_perception/package.xml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1542,
+          "sha256": "0396fc2c47d1ec2a7d58052a56d5699e14d797e297a38b144db9d32d80a2b2f6"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_perception/scripts/rgbd_object_pose.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 33146,
+          "sha256": "6db87b1b146685d7e2545a66d76d3e1e91ba8f97296aba49540777a1475a013c"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_perception/test/test_projection.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 2221,
+          "sha256": "94cd49180d968bb26b1a23947209e0e3ceeaa8f45db5659ff0212a5a6803e1af"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur3_spatial_dataset/config/objects.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 6068,
+          "sha256": "009d7ccc48422de05bfd4e01458fb800ecf6a0e8d1011825b37d659d40e1a1ae"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur_simulation_gz/CMakeLists.txt",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 675,
+          "sha256": "3a92d247b8c956a1fcb9e82027f7ca786a7a1636e1e2103a301dedf5929a7ad3"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur_simulation_gz/launch/ur_sim_control.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 23056,
+          "sha256": "42aab333d2cd7b028502a4ae4fe037866b2bc649ad427ecd6bf9de91d4744855"
+        },
+        {
+          "git_status": " M",
+          "path": "ur3/ur_simulation_gz/worlds/ur3_pick_place.sdf",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 25811,
+          "sha256": "9f1d66ed283ad9b3a7044defac375ae90a47d43fbb3aa2061b4da5c8d850940e"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/kitchen_apple_pick_place.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1776,
+          "sha256": "1a26162f0b3c0e5f6a9922f40ef6f279171a0781068547e7606dd9b9abb70b3c"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/kitchen_tomato_can_pick_place.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 2052,
+          "sha256": "45099adf5ec5e0439e98ec7da1396ef831eb90720656f57afe47b32564e88104"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/kitchen_tomato_two_reference_oblique.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 2385,
+          "sha256": "610d1cf79dac9c3200b1a47d6cc5ff85d08087aa81aac912c31273f203dcbf72"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/kitchen_tomato_two_reference_oblique_deoccluded.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 2386,
+          "sha256": "eebb1c8f4a7b76b5dc5278e60e5d211831228a2dbceffb5e4c555919f0990178"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/random_cube_pick_place.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 962,
+          "sha256": "4e51f678a8283f1790fef28d071d845651ac24d1a33ebfd88785f71ad8a25a1a"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/ycb_banana_pick_place.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1327,
+          "sha256": "49857780e263ee418d7a0836bacfdc8fd544842fefa3e89c5cfb5f2881690949"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/ycb_mustard_pick_place.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1400,
+          "sha256": "606d9695acb0032c28ce701a15352ef8f3f9fa70c6c2c1981dabc1589da041e7"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_moveit_control/config/ycb_orange_pick_place.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 2915,
+          "sha256": "f5aab90d4aa98fd85b7180dab8f04caa801f29fd2f5f5f3042ae313f30d86890"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/config/roborefer_pilot_v0_annotations.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 3095,
+          "sha256": "804f781ce0cd4ab0bfe28eb44c1c280e471a397ee4dae516e4b112a5d0aa0095"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/config/roborefer_pilot_v0_gate.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 709,
+          "sha256": "6d3acca4490dbe83ddf0b0cc68a3f31fff6491b9e9f89cdce0cb1fe21edd8cc3"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/config/roborefer_pilot_v0_scenes.yaml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 7739,
+          "sha256": "467ae5f6427034b6c0d4229c65c05dde76e64acf67b4ca93da14dedb259eaa3d"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/launch/multimodal_pick_place.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 21855,
+          "sha256": "dfb0845ffd8c401d7ba008aacf7e4dae69891cc234da95ccf858657fee5e289e"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/launch/roborefer_apple_pick_place.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 5427,
+          "sha256": "2e0d65d80b86913d5d143296f6b239a57ac5eccdf3b8ee4025c303aa9cf9f2e8"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/launch/roborefer_blind_tomato_can_pick_place.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 7175,
+          "sha256": "989fe8826032390b4a4240a5d4c5d51d2e293f913aec5270f2a931d73822d159"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/launch/roborefer_five_step_pick_place.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 4981,
+          "sha256": "86d28d2a279c5e32ac8dd4e9b9c586c9faa339b9419829eeb76d2ea62cbe21be"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/launch/roborefer_pilot_capture.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 5501,
+          "sha256": "83c889f22fb8a346d7ad4f98a93cfc6bb9df41a3cb68b22cbb7d0db263d3590e"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/launch/roborefer_two_reference_oblique_tomato_pick_place.launch.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 7233,
+          "sha256": "12cd9455df362192b954a45788182d7a7a43316efd5bb3b0f32f3e3d986b7b07"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/schemas/roborefer_pilot_prediction.schema.json",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 4093,
+          "sha256": "604ad5bf71eaeaddeaea1aa87f72ffb9bdeead17e851b6bf7b21cbac361ee6e0"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/depth_component_gate_v2.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 10627,
+          "sha256": "1b016cf3c7e3dc929c7d3c3e58b68a40384107385601f4a05bdfa08dc9868680"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/move_camera_to_view.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 2486,
+          "sha256": "23252b75010249887aa6edf244503cf3ca9a868e172a49802c771b9cf0fbefa6"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/multimodal_image_viewer.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 11306,
+          "sha256": "6e648707cd116cf2389a524b30dfb61e83c60ee9cb89f17e65b89199beb70031"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/roborefer_demo_recorder.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 11370,
+          "sha256": "c3a6a44ccf97b6ad513a4488f228d945734a586a788ea9316ecd2bad1f8f6930"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/roborefer_dimension_comparator.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 91223,
+          "sha256": "00baa0f3e59bcb1f8ccd377a5b0b387644927f3be2393aa8b842dddf07a62e0b"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/roborefer_grounder.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 29564,
+          "sha256": "62a516a23cced5a404c3cb876ec3d322022c5256849a7bd8c21968ef4b2eb95b"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/roborefer_pilot_capture.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 32254,
+          "sha256": "c77f7c345d3c28777b1f1fb27b6ff8ff5f5a228092a035531c35b34c60620615"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/roborefer_pilot_evaluator.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 48411,
+          "sha256": "657e17cf4c6529d22d2393e500bb5d2bde168c5713f06e44206922206d6cbf38"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/roborefer_pilot_runner.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 30921,
+          "sha256": "cf9c3135836669be42e306e1642f47b9896011c3133d8a68525ba99dcd10497e"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/roborefer_pilot_validate.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 49885,
+          "sha256": "f6b958b35da440339f0ad3e07be07da0139b464a69692db8fc760fbdeb318021"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/scripts/spatial_point_utils.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 3465,
+          "sha256": "30a9bd4ccaf4665781e9fc2d352d09540c88d8c4a702187fb158c10e0e2b2d02"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/test/test_depth_component_gate_v2.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 3131,
+          "sha256": "9086ff6bffa4ea2a543b8ef2738c62f67e7adafe227be3dba2961b0b4f1be63f"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/test/test_roborefer_adapter.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 4444,
+          "sha256": "b97f16ba98b9274e18e7b3e66bbb1a064d6f59ac4d10f31da6537abdfb7fd431"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/test/test_roborefer_dimension_comparator.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 18978,
+          "sha256": "131ae2ea11e3c07c49bd66ee97172924d45c1c7be23a0d6f8667ab2044950a54"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur3_perception/test/test_roborefer_pilot.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 31990,
+          "sha256": "129c449270c189aec705d0a9ff4080a430fb6e126246f3e0fd7b2ffa06b026a5"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/config/fastdds_udp_only.xml",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 960,
+          "sha256": "0481a3c2570d72435710afefe5f6543071f561f13a6e13f1b40462db823049b7"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/003_cracker_box/003_cracker_box.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 167,
+          "sha256": "eddba7b7b1d8ec4bdea27a18a170fe3588fa3e674fa8fd3a72fa05fdd07ee275"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/003_cracker_box/003_cracker_box.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 325504,
+          "sha256": "e132085fbb4a1dda714e9e83626c25b77ed2c963f838b98b825d0145a91dc9b5"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/003_cracker_box/003_cracker_box.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 891398,
+          "sha256": "b0c83915632fb2b03af2d84cd8767e1442c5e471ac99077613bc7532e5aff865"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/003_cracker_box/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1103960,
+          "sha256": "b93977e0080b81d656e4c3b3032ebf9e3a5075eaa363928c0d261170750415e2"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/004_sugar_box/004_sugar_box.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 163,
+          "sha256": "b39b2c875c7c40534eefa62e6748c3bac6ec32ec6b76f33cff64d2d312f37ed2"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/004_sugar_box/004_sugar_box.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 8359,
+          "sha256": "f453ef64763495489713154e3e2990877e554a94127a794b182a0692ef314583"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/004_sugar_box/004_sugar_box.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1128627,
+          "sha256": "ab3ff3c4f99d02298f28f0c7bee1657c3cf5e238c8fc49774dbd8fdfb80d1265"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/004_sugar_box/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1227308,
+          "sha256": "d7b5ad5950739d2cc102745de7d8f4cccd297296fdf31a2b6714e3163dac51d4"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/005_tomato_soup_can/005_tomato_soup_can.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 175,
+          "sha256": "885199dbea0d83378106a5a385dd7ee7e786086591323b0078aa760b7cd3b6ac"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/005_tomato_soup_can/005_tomato_soup_can.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 333222,
+          "sha256": "fdb6d73bbdc27ef266de153e4d878eb4aaee567c11340715771f305b249c48ce"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/005_tomato_soup_can/005_tomato_soup_can.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 948023,
+          "sha256": "635b00be3a283653806f722d3b5823ce4c8903df8633cd08a0800626297061c7"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/005_tomato_soup_can/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1251136,
+          "sha256": "10567077d6b53bedc1aef1449a49f4252db7e804b6c6468b0c7e8712315870d5"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/006_mustard_bottle/006_mustard_bottle.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 173,
+          "sha256": "6866dcc13c3dd3fa4b839ce0ee99544e04c56df860566b27f10a0a5c03406afc"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/006_mustard_bottle/006_mustard_bottle.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 325787,
+          "sha256": "0f3fc746eab0f6e7a301a7cd8cc85a632fe2cc739c0a3dff0153e68b24fd845d"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/006_mustard_bottle/006_mustard_bottle.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 906104,
+          "sha256": "248d27979682fab2e3c2c2aee0c9deec3ca070f7f93ba0994966d638f999776c"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/006_mustard_bottle/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1068236,
+          "sha256": "0fc55f30d86e53d2c4ee2081f0b67e65f48c363e87b4dba95a3056cbdcfba13f"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/011_banana/011_banana.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 157,
+          "sha256": "dbd3fd3c262dd2cc9197a5bd25621559208f81645dd1329d5ca6cee09966ca28"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/011_banana/011_banana.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 323101,
+          "sha256": "4ec0e9c9b4ce8abff1bd980ab5ce8d6ef572834f0570e916e350f4a4df0d9850"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/011_banana/011_banana.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 411580,
+          "sha256": "27aeada586d1d60ef56d5e77f13327e323168ec6d5843398dc9420f3b6e29ebf"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/011_banana/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 531368,
+          "sha256": "a759540444d3160b7822153e956087d9cf970f7eb8531af47b28b574a785b652"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/013_apple/013_apple.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 155,
+          "sha256": "9f4602a3da3187bdc329e4a59a0b4183ebbde8593162f2ec5f8e510420ccf135"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/013_apple/013_apple.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 327980,
+          "sha256": "6bb930e7c31bfb412edf5a8f4e9d55f32a85c03fc8ec354227e4cd20d2a46578"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/013_apple/013_apple.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 436176,
+          "sha256": "bc56ea0e7de39fd87abff3d88d977e171427249d089890f7c3e2700c3e5e23e6"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/013_apple/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 566936,
+          "sha256": "be475ac908f3a5bf20c3632596a08ebeb204be9b3a1f7fd3d19cc194b065867d"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/017_orange/017_orange.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 157,
+          "sha256": "142bc1b544903dcd33493fcc8740df84d59eac88b31f16963ee0b6409d4bfb1f"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/017_orange/017_orange.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 327259,
+          "sha256": "5fbba26a54c5a2cf1232d7b6a22755ab16eea4ccd964c7314fa94051a1257e47"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/017_orange/017_orange.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 373988,
+          "sha256": "95c1608a7cef3762a5929b5d8b0cf61565489d9547549b8ad2bccea9eab6af3c"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/017_orange/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 480376,
+          "sha256": "e163af70346cb708a711fcccbe39a3f08166d78bbd85d45366f9ea7911369d85"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/035_power_drill/035_power_drill.mtl",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 167,
+          "sha256": "58ccfbf8468823ab56bed322bc1131a8ddcda87d1447954a24c605cc49610b9c"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/035_power_drill/035_power_drill.obj",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 361867,
+          "sha256": "b94b3d4ad155f20d22b7d21cb370ac14e4622f94b75ccc63601b113591396572"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/035_power_drill/035_power_drill.png",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 556943,
+          "sha256": "48c5683294dc8dc09ac0e3b955cc12a13ec1c77d222d8663e162adaaf3e397c9"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/035_power_drill/textured.glb",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 790092,
+          "sha256": "bf58fd79d0b1d2d192663657254cec8dac83d16d1ab0542d2a665a9cbf5baac4"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/LICENSE.txt",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1462,
+          "sha256": "e27f44c4a022a3eded568d1ec821c2220dcd4187bf735fb8136ad3c401e21472"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/models/ycb/README.md",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 1272,
+          "sha256": "bade85dd8a073b014256eeca1786570257707f9238000cb05fa069bd9ae0c5d8"
+        },
+        {
+          "git_status": "??",
+          "path": "ur3/ur_simulation_gz/scripts/convert_ycb_glb_to_obj.py",
+          "source_path": null,
+          "exists": true,
+          "size_bytes": 5571,
+          "sha256": "1a895cf3d2214f35fcc770951f4cccc7ff888d75618e19e2c5b5f862c6e7164e"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "dirty_entry_count": 97,
+    "hashed_existing_entry_count": 97
+  },
+  "critical_source_and_config": [
+    {
+      "path": "plan/ke_hoach_moi_roborefer_llm_vlm_agent_ur3.md",
+      "exists": true,
+      "size_bytes": 56636,
+      "sha256": "78b0c67b728eb1e72eb0010d9cf7051d8b38d86058f005216b64594a89dce8ed"
+    },
+    {
+      "path": "RoboRefer/API/api.py",
+      "exists": true,
+      "size_bytes": 8888,
+      "sha256": "2ecab5b808e37d17dd08a8a558a23a1988f0506c74abc7951e2ff612a11c3135"
+    },
+    {
+      "path": "RoboRefer/API/query_model.py",
+      "exists": true,
+      "size_bytes": 8485,
+      "sha256": "8f7371d235db2100c4d46c0bc4cb17f098048795e2f268ef7c56e549bb7f7d3b"
+    },
+    {
+      "path": "RoboRefer/models/RoboRefer-2B-SFT/config.json",
+      "exists": true,
+      "size_bytes": 14154,
+      "sha256": "e6a316c869fc8701bd6c1d7489bd94accd7f2c12bccaee0acf4c0b279b0d8fbd"
+    },
+    {
+      "path": "ur3/ur3_perception/CMakeLists.txt",
+      "exists": true,
+      "size_bytes": 1438,
+      "sha256": "6f350cd6a83ee07f89278be5a47f884101c9b5095536099371251ca0a0637398"
+    },
+    {
+      "path": "ur3/ur3_perception/package.xml",
+      "exists": true,
+      "size_bytes": 1542,
+      "sha256": "0396fc2c47d1ec2a7d58052a56d5699e14d797e297a38b144db9d32d80a2b2f6"
+    },
+    {
+      "path": "ur3/ur3_perception/config/roborefer_pilot_v0_gate.yaml",
+      "exists": true,
+      "size_bytes": 709,
+      "sha256": "6d3acca4490dbe83ddf0b0cc68a3f31fff6491b9e9f89cdce0cb1fe21edd8cc3"
+    },
+    {
+      "path": "ur3/ur3_perception/config/roborefer_pilot_v0_scenes.yaml",
+      "exists": true,
+      "size_bytes": 7739,
+      "sha256": "467ae5f6427034b6c0d4229c65c05dde76e64acf67b4ca93da14dedb259eaa3d"
+    },
+    {
+      "path": "ur3/ur3_perception/scripts/depth_component_gate_v2.py",
+      "exists": true,
+      "size_bytes": 10627,
+      "sha256": "1b016cf3c7e3dc929c7d3c3e58b68a40384107385601f4a05bdfa08dc9868680"
+    },
+    {
+      "path": "ur3/ur3_perception/scripts/roborefer_grounder.py",
+      "exists": true,
+      "size_bytes": 29564,
+      "sha256": "62a516a23cced5a404c3cb876ec3d322022c5256849a7bd8c21968ef4b2eb95b"
+    },
+    {
+      "path": "ur3/ur3_perception/scripts/rgbd_object_pose.py",
+      "exists": true,
+      "size_bytes": 33146,
+      "sha256": "6db87b1b146685d7e2545a66d76d3e1e91ba8f97296aba49540777a1475a013c"
+    },
+    {
+      "path": "ur3/ur3_moveit_control/scripts/fixed_pick_place.py",
+      "exists": true,
+      "size_bytes": 82557,
+      "sha256": "74efd7c8b5f8e942fae14c22fcfa94ab8cdd2e6aebf44a169ce4a835010e4a65"
+    },
+    {
+      "path": "ur3/ur3_moveit_control/test/test_pose_generation.py",
+      "exists": true,
+      "size_bytes": 3484,
+      "sha256": "202e124913f9b5afb692fa0170f07e0e1a4c6da16c9e74c1921911e2a4051d24"
+    }
+  ],
+  "locked_pilot": {
+    "path": "results/roborefer_pilot_v0_20260813_173305",
+    "file_count": 173,
+    "total_size_bytes": 17686249,
+    "canonical_manifest_sha256": "2c58caaa303b77ad27b9da12b4d1ad349dcc792b86442be15074b5aabce19a0e",
+    "canonical_rule": "SHA256(concatenated '<file_sha256>  <relative_path>\\n' sorted by relative path)"
+  }
+}

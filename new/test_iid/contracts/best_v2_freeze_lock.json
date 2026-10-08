@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "FROZEN_BEFORE_TEST_IID",
+  "checkpoint_frozen": true,
+  "architecture_frozen": true,
+  "allowed_next_action": "CAPTURE_CALIBRATION",
+  "test_opened": false,
+  "selected_checkpoint": {
+    "path": "new/outputs/pcrau_target_v2_full_seed_24082026/checkpoints/best/model.safetensors",
+    "model_sha256": "1505152fca7b725d7db701c1341ad1a57049d6b5ac450a9f5ce0c8d78705ba26",
+    "metadata_sha256": "1bf4709f1c056cb739fa39ded15e74b89f0997cf96c6e5a79c90242a285a41c1",
+    "config_sha256": "e4f21ccc255c2f097fd8b062e21e954719357cb6e00645758bc1cdf36a290b0c",
+    "epoch": 13,
+    "global_step": 1120,
+    "selection_split": "dev",
+    "selection_metric": "dev_total_loss"
+  },
+  "frozen_calibrator": {
+    "path": "new/outputs/pcrau_target_v2_full_seed_24082026/evaluation/calibration/calibrator.json",
+    "sha256": "f4ed0abb06ed9628415d9ec710da3f3bccf6df6cb85eebd1b3f68fdb6ac67112"
+  },
+  "policy": "No model, threshold, calibrator, or prompt tuning after Test-IID capture or inference begins."
+}

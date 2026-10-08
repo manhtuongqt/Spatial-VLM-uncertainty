@@ -1,0 +1,803 @@
+schema_version: 1
+protocol_id: gazebo_uq_occlusion_characterization_v5
+expected_scene_count: 46
+capture_mode: engineering_geometry_only_no_manipulation
+random_seed: 14092030
+view_joint_pose:
+- 1.3815
+- -1.8273
+- 1.3428
+- -1.2863
+- -1.5708
+- -1.9601
+camera_frame: camera_color_optical_frame
+base_frame: base_link
+coordinate_suffix: ENGINEERING ONLY; MODEL INFERENCE FORBIDDEN.
+objects:
+  red_cube:
+    z: 0.03
+    storage_pose:
+    - -0.65
+    - 1.4
+    - 0.0
+  blue_cube:
+    z: 0.025
+    storage_pose:
+    - -0.45
+    - 1.4
+    - 0.0
+  green_cube:
+    z: 0.025
+    storage_pose:
+    - -0.25
+    - 1.4
+    - 0.0
+  yellow_cube:
+    z: 0.025
+    storage_pose:
+    - -0.05
+    - 1.4
+    - 0.0
+  orange_cube:
+    z: 0.025
+    storage_pose:
+    - 0.15
+    - 1.4
+    - 0.0
+  purple_cube:
+    z: 0.025
+    storage_pose:
+    - 0.35
+    - 1.4
+    - 0.0
+  pink_cube:
+    z: 0.025
+    storage_pose:
+    - 0.55
+    - 1.4
+    - 0.0
+  ycb_cracker_box:
+    z: 0.10671
+    storage_pose:
+    - -0.02
+    - 0.85
+    - 0.0
+  ycb_sugar_box:
+    z: 0.088107
+    storage_pose:
+    - 0.2
+    - 0.85
+    - 0.0
+  ycb_tomato_soup_can:
+    z: 0.050948
+    storage_pose:
+    - -0.55
+    - 1.1
+    - 0.0
+  ycb_mustard_bottle:
+    z: 0.095695
+    storage_pose:
+    - -0.38
+    - 1.1
+    - 0.0
+  ycb_banana:
+    z: 0.018376
+    storage_pose:
+    - -0.3
+    - 0.85
+    - 0.25
+  ycb_apple:
+    z: 0.03771
+    storage_pose:
+    - -0.21
+    - 1.1
+    - 0.0
+  ycb_orange:
+    z: 0.03701
+    storage_pose:
+    - -0.04
+    - 1.1
+    - 0.0
+  ycb_power_drill:
+    z: 0.028689
+    storage_pose:
+    - -0.62
+    - 0.85
+    - -0.25
+  mango:
+    z: 0.03
+    storage_pose:
+    - 0.38
+    - 0.85
+    - 0.35
+scenes:
+- scene_id: uq_occ_char_v5_000
+  scene_family_id: engineering_occlusion_characterization_v5/family_000
+  layout_id: occ_apple_v5_000
+  layout_signature_sha256: a2d2e38cc6f6d6bbe6ef18b1241b63447924dee72962f5271cc305c8ec2b1eaf
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.208509
+    - 0.0
+- scene_id: uq_occ_char_v5_001
+  scene_family_id: engineering_occlusion_characterization_v5/family_001
+  layout_id: occ_apple_v5_001
+  layout_signature_sha256: eb505f5929430aede2ba2a1a1815e624ef601ba4ab396e7ffaa280eb79bd859f
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.208259
+    - 0.0
+- scene_id: uq_occ_char_v5_002
+  scene_family_id: engineering_occlusion_characterization_v5/family_002
+  layout_id: occ_apple_v5_002
+  layout_signature_sha256: d7c97fa528fe45a00c2dcfb2d6919bf75612a42f2b8c75df81d3f7793a59e3a3
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.208009
+    - 0.0
+- scene_id: uq_occ_char_v5_003
+  scene_family_id: engineering_occlusion_characterization_v5/family_003
+  layout_id: occ_apple_v5_003
+  layout_signature_sha256: 25f9c65b4d0c37344801891fa7d4540faa587d6e2d875604cbd7725f970b858c
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207759
+    - 0.0
+- scene_id: uq_occ_char_v5_004
+  scene_family_id: engineering_occlusion_characterization_v5/family_004
+  layout_id: occ_apple_v5_004
+  layout_signature_sha256: f43b680dc7fa898033928cc171b1d1fcce3817e52f315cbd3cb802fb6bdc926a
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207509
+    - 0.0
+- scene_id: uq_occ_char_v5_005
+  scene_family_id: engineering_occlusion_characterization_v5/family_005
+  layout_id: occ_apple_v5_005
+  layout_signature_sha256: e08ee2c583e44e4fae29651ad3e518fa3bfc63d4dc14d31075ff905da336ef65
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207259
+    - 0.0
+- scene_id: uq_occ_char_v5_006
+  scene_family_id: engineering_occlusion_characterization_v5/family_006
+  layout_id: occ_apple_v5_006
+  layout_signature_sha256: 543486d3225b46f0bae54ceff814076166ff53d0a92ec7c35cb4674fc9c0a085
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207009
+    - 0.0
+- scene_id: uq_occ_char_v5_007
+  scene_family_id: engineering_occlusion_characterization_v5/family_007
+  layout_id: occ_apple_v5_007
+  layout_signature_sha256: a7575cd4328ca49bf07aa4229dab263de53389f7997efdcb9d4b7999ff90878d
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206759
+    - 0.0
+- scene_id: uq_occ_char_v5_008
+  scene_family_id: engineering_occlusion_characterization_v5/family_008
+  layout_id: occ_apple_v5_008
+  layout_signature_sha256: 28dcb8823e65d51243a28b5c76eb5959d336261a45bb118ccddb3d36dd9b39b8
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206509
+    - 0.0
+- scene_id: uq_occ_char_v5_009
+  scene_family_id: engineering_occlusion_characterization_v5/family_009
+  layout_id: occ_apple_v5_009
+  layout_signature_sha256: 80e2542fa8d87141f9cd72d51c133c84c059f5929712be5bbb53197838dca286
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206259
+    - 0.0
+- scene_id: uq_occ_char_v5_010
+  scene_family_id: engineering_occlusion_characterization_v5/family_010
+  layout_id: occ_apple_v5_010
+  layout_signature_sha256: c64a1844481e9d8bac17b46c000e5cb2bea8a3d7d469546fd6824f6e7c724d48
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206009
+    - 0.0
+- scene_id: uq_occ_char_v5_011
+  scene_family_id: engineering_occlusion_characterization_v5/family_011
+  layout_id: occ_apple_v5_011
+  layout_signature_sha256: cc82387837c98033dab84d12f79cf719bd2ac1df765930f0a9a7349325e8ebed
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205759
+    - 0.0
+- scene_id: uq_occ_char_v5_012
+  scene_family_id: engineering_occlusion_characterization_v5/family_012
+  layout_id: occ_apple_v5_012
+  layout_signature_sha256: 173130022afdf97c9811be9e9268bd533e626b58ac5d05d5a84816b1a2c0c3e8
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205509
+    - 0.0
+- scene_id: uq_occ_char_v5_013
+  scene_family_id: engineering_occlusion_characterization_v5/family_013
+  layout_id: occ_apple_v5_013
+  layout_signature_sha256: 989957a7a94944618b5dcd40ff7bc5539eb2c2e7c183f121c32db7c1ac5aac38
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205259
+    - 0.0
+- scene_id: uq_occ_char_v5_014
+  scene_family_id: engineering_occlusion_characterization_v5/family_014
+  layout_id: occ_apple_v5_014
+  layout_signature_sha256: 0ae4512df0ad13fbc5c0dcac9e0ece086de7bfd7fce01ef91d741bbd44c95466
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205009
+    - 0.0
+- scene_id: uq_occ_char_v5_015
+  scene_family_id: engineering_occlusion_characterization_v5/family_015
+  layout_id: occ_apple_v5_015
+  layout_signature_sha256: 3eef459c8022a41878da1295642a845f8fe8f40d37748bf0eb73bb65d07c7da1
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204759
+    - 0.0
+- scene_id: uq_occ_char_v5_016
+  scene_family_id: engineering_occlusion_characterization_v5/family_016
+  layout_id: occ_apple_v5_016
+  layout_signature_sha256: 393bb67d61b1bc9824bb243332c5813a9673d26e4f51650fee3ead6e31ea77a4
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204509
+    - 0.0
+- scene_id: uq_occ_char_v5_017
+  scene_family_id: engineering_occlusion_characterization_v5/family_017
+  layout_id: occ_apple_v5_017
+  layout_signature_sha256: be45deb59ddb76295cc6ceb2e1ca5956a638b6ece3c0e946fb029622425c8728
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204259
+    - 0.0
+- scene_id: uq_occ_char_v5_018
+  scene_family_id: engineering_occlusion_characterization_v5/family_018
+  layout_id: occ_apple_v5_018
+  layout_signature_sha256: b2b98c54c022a63852dc31514a8e24c85f8030c9a769675e64e9d9d266a084d2
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204009
+    - 0.0
+- scene_id: uq_occ_char_v5_019
+  scene_family_id: engineering_occlusion_characterization_v5/family_019
+  layout_id: occ_apple_v5_019
+  layout_signature_sha256: c3c3ecf3af97d8b0c3beb30a70690bc81cfcb2d9d82d5da4e6bfdb5950d36828
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203759
+    - 0.0
+- scene_id: uq_occ_char_v5_020
+  scene_family_id: engineering_occlusion_characterization_v5/family_020
+  layout_id: occ_apple_v5_020
+  layout_signature_sha256: 227ccdec69b8056e12f2cc297bc37516c086a6201142e637d889fd35731088ed
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203509
+    - 0.0
+- scene_id: uq_occ_char_v5_021
+  scene_family_id: engineering_occlusion_characterization_v5/family_021
+  layout_id: occ_apple_v5_021
+  layout_signature_sha256: d5d8854b717757111942b478cf92a17f62ac4c6b3fc4110de1b96bcd678a29c0
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203259
+    - 0.0
+- scene_id: uq_occ_char_v5_022
+  scene_family_id: engineering_occlusion_characterization_v5/family_022
+  layout_id: occ_apple_v5_022
+  layout_signature_sha256: 71e808c085fbd054c0589ab9af33c1a277670637ee2ac8fb13110fba67cdfa92
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.0
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203009
+    - 0.0
+- scene_id: uq_occ_char_v5_023
+  scene_family_id: engineering_occlusion_characterization_v5/family_023
+  layout_id: occ_apple_v5_023
+  layout_signature_sha256: 65c3900a9d792a192bae95f645ffede80b3b207f4d951f2eec711f67cda4980a
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.208509
+    - 0.0
+- scene_id: uq_occ_char_v5_024
+  scene_family_id: engineering_occlusion_characterization_v5/family_024
+  layout_id: occ_apple_v5_024
+  layout_signature_sha256: 288363492da082e3fe033d816eeab2cb28bfc2868a356b828cf1fffa48415c06
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.208259
+    - 0.0
+- scene_id: uq_occ_char_v5_025
+  scene_family_id: engineering_occlusion_characterization_v5/family_025
+  layout_id: occ_apple_v5_025
+  layout_signature_sha256: 0a9ddaaca07dde848b778e1a6934385197e10c9effd7d7b00c03cabb09c02480
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.208009
+    - 0.0
+- scene_id: uq_occ_char_v5_026
+  scene_family_id: engineering_occlusion_characterization_v5/family_026
+  layout_id: occ_apple_v5_026
+  layout_signature_sha256: a44b49411e254fd258c3bba4ed17cedaace77c289f6aef9ca4551a92c4a8cc7a
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207759
+    - 0.0
+- scene_id: uq_occ_char_v5_027
+  scene_family_id: engineering_occlusion_characterization_v5/family_027
+  layout_id: occ_apple_v5_027
+  layout_signature_sha256: 2801e3a66f1a36941cdc9cb491000abc48b24f1d47928b0ec59c32e0c3d5437f
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207509
+    - 0.0
+- scene_id: uq_occ_char_v5_028
+  scene_family_id: engineering_occlusion_characterization_v5/family_028
+  layout_id: occ_apple_v5_028
+  layout_signature_sha256: d370c4f1d9b06c6ccc9bca9338fad472681f20dd97ebbbd5a6b76928c2508993
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207259
+    - 0.0
+- scene_id: uq_occ_char_v5_029
+  scene_family_id: engineering_occlusion_characterization_v5/family_029
+  layout_id: occ_apple_v5_029
+  layout_signature_sha256: 5246bda43b0d1f2e21ee975ce1f58978807bef1c0821adbe6b532a93aa73f14a
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.207009
+    - 0.0
+- scene_id: uq_occ_char_v5_030
+  scene_family_id: engineering_occlusion_characterization_v5/family_030
+  layout_id: occ_apple_v5_030
+  layout_signature_sha256: cffbdf00fd530f0ade59b7002cee0d4899daa8dbc010384d55bc2cee544af7cc
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206759
+    - 0.0
+- scene_id: uq_occ_char_v5_031
+  scene_family_id: engineering_occlusion_characterization_v5/family_031
+  layout_id: occ_apple_v5_031
+  layout_signature_sha256: e2c7d212b360073e00990195c55079b737352e8d619e99636898f147fbc0dfb4
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206509
+    - 0.0
+- scene_id: uq_occ_char_v5_032
+  scene_family_id: engineering_occlusion_characterization_v5/family_032
+  layout_id: occ_apple_v5_032
+  layout_signature_sha256: 3794257440c471bf4bccf5cfd387ca2caf507d7dffb15380a9d07303a8408f3a
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206259
+    - 0.0
+- scene_id: uq_occ_char_v5_033
+  scene_family_id: engineering_occlusion_characterization_v5/family_033
+  layout_id: occ_apple_v5_033
+  layout_signature_sha256: 69547354489faf0e341cc8712ed4cbf93076c5ef90cd58af209581cc36b730af
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.206009
+    - 0.0
+- scene_id: uq_occ_char_v5_034
+  scene_family_id: engineering_occlusion_characterization_v5/family_034
+  layout_id: occ_apple_v5_034
+  layout_signature_sha256: e42fc71809c9ec7dd22f4058055c304abf5d70b90a17806b62944ce4ae872c2a
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205759
+    - 0.0
+- scene_id: uq_occ_char_v5_035
+  scene_family_id: engineering_occlusion_characterization_v5/family_035
+  layout_id: occ_apple_v5_035
+  layout_signature_sha256: 8151c387a0d7cbde800b641e4f35ea24c6737a03e76c761e551c41e3ed1ddc7b
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205509
+    - 0.0
+- scene_id: uq_occ_char_v5_036
+  scene_family_id: engineering_occlusion_characterization_v5/family_036
+  layout_id: occ_apple_v5_036
+  layout_signature_sha256: 99c5c57222d302aad944cd0db8adf04943043bcbe4e05546561eecc319224ebf
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205259
+    - 0.0
+- scene_id: uq_occ_char_v5_037
+  scene_family_id: engineering_occlusion_characterization_v5/family_037
+  layout_id: occ_apple_v5_037
+  layout_signature_sha256: d39de6fc71bd79c814c197fc12cb8e16feee9fa9fe6d3d7808380de66d3e4655
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.205009
+    - 0.0
+- scene_id: uq_occ_char_v5_038
+  scene_family_id: engineering_occlusion_characterization_v5/family_038
+  layout_id: occ_apple_v5_038
+  layout_signature_sha256: 402fc9572db7bf47336a271e3d5b884f742364cd46f9c9086b77567357340af3
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204759
+    - 0.0
+- scene_id: uq_occ_char_v5_039
+  scene_family_id: engineering_occlusion_characterization_v5/family_039
+  layout_id: occ_apple_v5_039
+  layout_signature_sha256: 1952b4ca466d2a0a4c4c2bc92fbd9edcb589a58a36f558bc9cb73fce9ce35ae1
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204509
+    - 0.0
+- scene_id: uq_occ_char_v5_040
+  scene_family_id: engineering_occlusion_characterization_v5/family_040
+  layout_id: occ_apple_v5_040
+  layout_signature_sha256: 3e22bebac45c58e95f8853ff92c1c052982d73a28d4a50736e7a1fed243a1779
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204259
+    - 0.0
+- scene_id: uq_occ_char_v5_041
+  scene_family_id: engineering_occlusion_characterization_v5/family_041
+  layout_id: occ_apple_v5_041
+  layout_signature_sha256: b6f0c0423c6d1abd690d8cc8da6f14c7826b2245ceac0dd8908613f5f4e034bb
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.204009
+    - 0.0
+- scene_id: uq_occ_char_v5_042
+  scene_family_id: engineering_occlusion_characterization_v5/family_042
+  layout_id: occ_apple_v5_042
+  layout_signature_sha256: a9a05b264efb7eb75e5b3cc8feff5fe65ffc527a1ad9f4bcbe46ad16f8136a99
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203759
+    - 0.0
+- scene_id: uq_occ_char_v5_043
+  scene_family_id: engineering_occlusion_characterization_v5/family_043
+  layout_id: occ_apple_v5_043
+  layout_signature_sha256: 7e4500dd4dcd645a007d3b028b47e346ef35d3144b69dd8f60bd709e0be2ae6d
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203509
+    - 0.0
+- scene_id: uq_occ_char_v5_044
+  scene_family_id: engineering_occlusion_characterization_v5/family_044
+  layout_id: occ_apple_v5_044
+  layout_signature_sha256: 139412942c00c112c0cc1819ac6edca2f45d16827032052295b2553ebab0438b
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203259
+    - 0.0
+- scene_id: uq_occ_char_v5_045
+  scene_family_id: engineering_occlusion_characterization_v5/family_045
+  layout_id: occ_apple_v5_045
+  layout_signature_sha256: 7c0a59b122811a23e5d2ffbc1e92d02a10b1bdd3dd322f04e9b7349c36969870
+  task_type: engineering_geometry_characterization_no_inference
+  instruction: 'ENGINEERING ONLY: do not run model inference on this capture.'
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.3
+    - 0.35
+    ycb_cracker_box:
+    - -0.210121
+    - 0.203009
+    - 0.0

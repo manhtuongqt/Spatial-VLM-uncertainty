@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "scientific_results_v1.schema.json",
+  "title": "P-CRA-U scientific run index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "phase",
+    "status",
+    "statistical_unit",
+    "split_access",
+    "tables",
+    "figures",
+    "images",
+    "checkpoint_policy"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_.-]+$"},
+    "phase": {
+      "enum": ["OVERFIT_SMOKE", "DEVELOPMENT_TRAIN", "CALIBRATION_FIT", "LOCKED_TEST_IID", "LOCKED_TEST_OOD"]
+    },
+    "status": {"enum": ["PLANNED_NOT_RUN", "RUNNING", "COMPLETE", "FAILED", "ABORTED"]},
+    "statistical_unit": {"const": "scene-query-family"},
+    "split_access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["read_splits", "selection_split", "test_opened"],
+      "properties": {
+        "read_splits": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"enum": ["train", "dev", "calibration", "test_iid", "test_ood"]}
+        },
+        "selection_split": {"type": ["string", "null"], "enum": ["train", "dev", null]},
+        "test_opened": {"type": "boolean"}
+      }
+    },
+    "tables": {
+      "type": "array",
+      "minItems": 6,
+      "items": {"$ref": "#/$defs/artifact_status"}
+    },
+    "figures": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/artifact_status"}
+    },
+    "images": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/artifact_status"}
+    },
+    "checkpoint_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["format", "atomic_publish", "hash_verified", "auto_delete", "best_selection_splits"],
+      "properties": {
+        "format": {"const": "safetensors+trusted-training-state"},
+        "atomic_publish": {"const": true},
+        "hash_verified": {"const": true},
+        "auto_delete": {"const": false},
+        "best_selection_splits": {
+          "type": "array",
+          "const": ["train", "dev"]
+        }
+      }
+    }
+  },
+  "$defs": {
+    "artifact_status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "status", "claim_role"],
+      "properties": {
+        "id": {"type": "string"},
+        "path": {"type": "string"},
+        "status": {"enum": ["NOT_RUN", "NOT_APPLICABLE", "PARTIAL", "COMPLETE", "FAILED"]},
+        "claim_role": {"enum": ["diagnostic", "required", "primary", "supporting", "exploratory"]},
+        "reason": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

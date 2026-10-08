@@ -1,0 +1,275 @@
+\chapter{Kết luận và hướng phát triển tương lai}
+\label{sec:conclusion}
+
+Khóa luận nghiên cứu grounding RGB-D theo ngôn ngữ trong cảnh thao tác
+trên bàn, với trọng tâm là liên kết vị trí dự đoán với điều kiện chấp nhận.
+Khoảng trống được đặt ra trong giao thức RoboRefer đang triển khai là
+đầu ra điểm chưa trực tiếp thể hiện lựa chọn cạnh tranh, trạng thái trả lời
+và risk đã được kiểm tra trên dữ liệu độc lập. P-CRA-U giải quyết vấn đề
+này bằng sidecar đa nhiệm trên backbone đóng băng và một bước hiệu chuẩn
+riêng sau huấn luyện.
+
+Các kết luận dưới đây dùng \textbf{P-CRA-U được chọn: V2 đóng băng,
+Adapter answerability \texttt{detail\_\allowbreak cost} và logistic33}, đối chiếu
+V2 lịch sử cùng RoboRefer gốc. Best Adapter epoch 13/step 1120 là
+checkpoint khác best V2 dù trùng chỉ số epoch/step. Mô hình chọn trên
+dev, calibration fit sau freeze, test không dùng fit ngưỡng.
+Kết quả Adapter là đánh giá lại trên IID cũ đã từng phân tích,
+không phải xác nhận trên một bộ IID mới chưa quan sát.
+Phạm vi chưa bao gồm Test-OOD, robot vật lý hoặc pick-and-place khép kín.
+
+\section{Kết quả đạt được}
+\label{sec:conclusion-achievements}
+
+\subsection{Đóng góp thứ nhất: sidecar P-CRA-U có điều kiện theo truy vấn}
+
+Khóa luận đã thiết kế, hiện thực và huấn luyện một sidecar trên đặc
+trưng RGB/depth của RoboRefer-2B-SFT đóng băng. Mô hình mã hóa câu lệnh
+thành target, relation và anchor slot, fusion RGB-D theo ngữ cảnh
+truy vấn rồi tạo các đầu ra đa nhiệm. Spatial head dự đoán phân bố
+trên lưới $24\times32$, từ đó lấy MAP và evidence không gian;
+các head khác tạo anchor/edge evidence, answerability và năm score nguồn.
+
+Ý tưởng đề xuất nằm ở cách tổ chức các đầu ra trong cùng một đường
+nhận thức tập trung vào truy vấn. Phân bố giữ thông tin về các vùng
+ứng viên, còn answerability phân biệt FOUND, AMBIGUOUS, ABSENT và
+INSUFFICIENT\_EVIDENCE. Nhờ vậy, điểm nằm trong target và câu lệnh
+đủ điều kiện chấp nhận được xem là hai vấn đề riêng. Source head
+cung cấp bằng chứng đa nhãn về semantic, relation, spatial, depth
+và occlusion để phân tích và hỗ trợ quyết định.
+
+Adapter hiệu chỉnh logits answerability từ evidence dự đoán của V2, giữ các nhánh khác đóng băng. Trên Test-IID cũ, accuracy tăng từ 76.80\% lên 81.10\%, macro-F1 từ 0.7752 lên 0.8097; CI paired của chênh lệch F1 là $[0.01574,0.05392]$. False FOUND giảm từ 70 xuống 55, còn FOUND thật bị phân loại non-FOUND giảm từ 75 xuống 55.
+Source macro-F1 đạt 0.6774 cho năm nhóm, hoặc 0.5979 khi bỏ spatial
+nhãn yếu. Depth đạt F1 0.7039, AP 0.7132 và probability tăng trung
+bình 0.4304 so với clean trong phân tích paired. Đây là kết quả đánh
+giá đầu ra theo giao thức đã dùng; source chưa phải phân rã nhân quả,
+và spatial source vẫn là weak label suy từ AMBIGUOUS.
+
+Query slots và anchor/edge head đã được hiện thực, nhưng chưa có
+evaluator đầy đủ cho anchor localization hoặc semantic graph exact
+match. Edge được đánh giá bằng nhãn proxy. Do đó, kết quả xác nhận
+đường xử lý có evidence quan hệ, chưa chứng minh khả năng phân tích
+mọi câu lệnh thành graph ký hiệu hoặc lợi ích riêng của nhánh quan hệ.
+
+\subsection{Đóng góp thứ hai: hiệu chuẩn độc lập và quyết định chọn lọc}
+
+Khóa luận đã tách việc học sidecar khỏi việc fit risk. Checkpoint
+được chọn trên dev, freeze trước khi fit logistic calibrator từ
+33 evidence trên calibration riêng cho phiên bản Adapter, rồi khóa ngưỡng trước đánh giá lại test. V2 lịch sử dùng 18 evidence; vùng không gian hiện tại kế thừa mass V2 vì nhánh spatial giữ nguyên.
+Biến cố lỗi là non-FOUND hoặc MAP ngoài target. Risk được dùng cùng
+answerability/source trong policy EXECUTE, REOBSERVE, ASK\_USER và ABSTAIN.
+
+{\setlength{\emergencystretch}{3em}
+So với raw score $1-p(\mathrm{FOUND})$ của Adapter, logistic33 giảm
+Brier từ 0.08014 xuống 0.07711, NLL từ 0.25919 xuống 0.25707 và
+ECE từ 0.04847 xuống 0.03108. Tuy nhiên, AUROC/AP thấp hơn raw,
+AURC tăng từ 0.25140 lên 0.25575. So với logistic18 V2,
+Brier/NLL/ECE và AURC tốt hơn; chưa tách lợi ích của thay answerability,
+thêm evidence và fit xác suất bằng đối chứng scalar-only/source ablation.
+Oracle AURC với 595 lỗi tổng hợp là 0.22923; excess-AURC Adapter
+0.02652 không đồng nghĩa mọi lỗi ở vùng quyết định được phát hiện tốt.\par}
+
+
+Profile chọn trên calibration dùng ngân sách 7.5\%, cổng FOUND và
+ngưỡng risk từng mẫu $\tau=0.2611932834526145$. Trên IID cũ, policy
+nhận 361/1000 mẫu (coverage 36.10\%) với 34 lỗi (selective risk 9.42\%).
+Lỗi test vượt ngân sách 7.5\%; CI cluster 95\% là $[6.37,12.53]\%$,
+nên cũng chưa khẳng định lỗi tương lai dưới 10\%.
+Tỉ lệ điểm trong target 346/361 = 95.84\% khác tỉ lệ đồng thời FOUND
+và điểm đúng 327/361 = 90.58\%. Chúng là hai event khác nhau.
+
+So với V2 nhận đúng 249/405 ca hợp lệ (61.48\%), Adapter nhận đúng
+327/405 (80.74\%), giữ toàn bộ 249 ca đúng cũ và thêm 78 ca đúng.
+Đổi lại, số lỗi nhận tăng từ 6 lên 34. Đây là mức đánh đổi thực nghiệm
+được chọn để giảm bỏ sót ca hợp lệ, không phải giảm risk trên mọi mặt.
+Trong 78 ca hợp lệ còn bị từ chối, 48 bị chặn bởi answerability
+(16 ABSENT, 32 INSUFFICIENT), 30 bị chặn bởi risk dù đã đoán FOUND.
+Các lỗi được nhận gồm 22 INSUFFICIENT, 7 ABSENT và 5 FOUND--điểm sai;
+occlusion/relation chiếm 27/34 lỗi theo variant.
+
+Vùng highest-density cũng đã được hiện thực và đánh giá. Ở mass đã
+fit, score coverage là 86.83\%, direct region--mask intersection
+là 95.81\% và diện tích lưới trung bình là 0.5194\%.
+Hai coverage ứng với hai event khác nhau do hậu xử lý rời rạc;
+phân tích coverage--area ở Chương~5 giữ nguyên số liệu evaluator
+chính thức. Mức nominal 90\% chưa phải bảo đảm cho family, từng
+quan sát hoặc toàn chuỗi robot.
+
+\subsection{Cải thiện grounding và phạm vi kết luận}
+
+Trên 835 sample có target, P-CRA-U đạt point-in-target 92.81\%,
+so với 86.71\% của RoboRefer gốc. Chênh lệch $+6.11$ điểm phần trăm
+có CI 95\% $[1.78,10.49]$ điểm phần trăm. Point-in-interior tăng
+từ 86.59\% lên 91.50\%; khoảng cách trung bình tới mask giảm
+từ 27.92 xuống 8.44 pixel. Đây là cải thiện của nhánh sidecar V2 so với RoboRefer trong phép so sánh paired. Adapter giữ nguyên 775 điểm hit và không tạo thêm cải thiện grounding.
+
+Mức tăng ròng 51 hit gồm $+60$ ở AMBIGUOUS, $+8$ ở FOUND và $-17$
+ở INSUFFICIENT\_EVIDENCE. Phần tăng chủ yếu là định vị tới tập
+ứng viên mơ hồ, có thể được chấm bằng mask hợp. Kết quả đó chưa
+xác nhận đã chọn đúng một vật duy nhất. Trên riêng 420 FOUND,
+grounding tăng từ 94.52\% lên 96.43\%, nhưng CI chênh lệch
+$[-0.98,5.01]$ chứa 0.
+
+Cải thiện còn không đều theo vật thể: hoa quả tăng, trong khi
+hộp giảm 29.67 điểm phần trăm với CI hoàn toàn âm. V2 có 107
+sample sửa lỗi baseline và 56 sample hồi quy. Do đó, kết luận
+là cải thiện grounding tổng thể theo phân bố đã kiểm tra,
+chưa phải ưu thế trên mọi nhóm hoặc bằng chứng riêng cho một head/loss.
+
+\subsection{Quy trình thực nghiệm và tích hợp nhận thức}
+
+Các thành phần hỗ trợ gồm dữ liệu theo family, manifest inference
+tách khỏi annotation evaluator và artifact lưu sample ID, config,
+hash, prediction cùng decision. Train/dev có 320/80 family;
+calibration và Test-IID mỗi tập có 200 family, 1000 sample.
+So sánh grounding dùng bootstrap paired 20000 lượt theo 200 family,
+giữ các variant liên quan đi cùng nhau.
+
+Đường Gazebo--capture RGB-D--V2 lịch sử--policy đã có audit năm frame
+với prediction khóa trước hậu kiểm. Điểm MAP $(150,210)$ đúng
+ở cả năm frame; checker RGB-D cho quả táo trong cảnh cụ thể cũng đạt.
+Tuy nhiên, policy trả ASK\_USER ở cả năm frame; pre-handoff chưa đạt,
+chưa nối MoveIt và chưa phát chuyển động robot. Kết quả xác nhận luồng tích hợp nhận thức của V2, chưa phải năm trial gắp--đặt thành công và chưa xác nhận demo Adapter hiện tại.
+
+\subsection{Ý nghĩa khoa học và mức độ kiểm chứng ý tưởng}
+
+Khóa luận cung cấp một thiết kế có thể truy nguyên để nối grounding
+RGB-D với điều kiện trả lời và risk chấp nhận. So với runner baseline
+sinh điểm, hệ thống bổ sung phân bố vị trí, đầu ra đa nhiệm và quyết
+định chọn lọc đã được đánh giá. Các nguyên lý thành phần có nghiên
+cứu trước; điểm đề xuất ở đây là cách kết hợp và kiểm chứng trong
+hệ thống cụ thể, chưa phải khẳng định tính mới tuyệt đối.
+
+Năm RQ ở Chương~1 được đánh giá trong Chương~5 và tổng hợp tại
+Bảng~\ref{tab:results-rq-summary}. RQ1 có bằng chứng cải thiện toàn
+hệ thống; RQ2--RQ3 có kết quả đầu ra và phản ứng theo perturbation;
+RQ4 có cải thiện metric xác suất cùng phân tích vùng; RQ5 có
+đánh đổi risk--coverage và audit trước chấp hành. Chúng chưa trả
+lời đầy đủ đóng góp riêng của kiến trúc, hiệu quả recovery hoặc
+task success của robot.
+
+\section{Hạn chế của nghiên cứu}
+\label{sec:conclusion-limitations}
+
+\subsection{Dữ liệu và phạm vi khái quát}
+
+Kết quả dựa trên mô phỏng với registry vật thể, texture, mẫu câu và
+perturbation hữu hạn. Variant cùng family có phụ thuộc; phép nhiễu
+depth tổng hợp chưa mô phỏng đầy đủ lỗi cảm biến vật lý. Phân bố
+Test-IID và nhóm vật thể ảnh hưởng mức cải thiện tổng. Kết quả
+chưa được mở rộng sang miền OOD, ảnh camera vật lý hoặc cảnh tùy ý.
+
+\subsection{Supervision và chất lượng đầu ra}
+
+Spatial source là nhãn yếu, relation edge là proxy, còn mask hợp
+AMBIGUOUS đánh giá định vị tới tập ứng viên. Chưa có đánh giá
+instance/top-$k$ độc lập hoặc evaluator anchor/graph toàn diện.
+Hồi quy nhóm hộp, false FOUND và false positive semantic/occlusion
+cho thấy các đầu ra bổ trợ còn lỗi. Độ sắc heatmap hoặc số mode
+cũng chưa đủ xác định dự đoán đúng hay số vật hợp lệ.
+
+\subsection{Thiếu đối chứng cô lập và biến thiên huấn luyện}
+
+P-CRA-U chính có một seed. Ba seed V3 thay đổi nhiều yếu tố đồng
+thời và không thay cho bằng chứng nhiều seed của V2. Thiếu retrain
+ablation cho depth, relation/anchor, answerability/source và ranking
+giới hạn việc giải thích nguồn cải thiện. So sánh logistic nhiều
+evidence với raw score chưa tách lợi ích fit xác suất khỏi lợi ích
+thêm evidence.
+
+\subsection{Hiệu chuẩn và suy luận thống kê}
+
+CI grounding đã xét family; Adapter còn có CI family cho macro-F1, coverage, selective risk và valid recall. Chưa có CI tương ứng cho mọi metric source hoặc calibration. Các phân tầng có quy mô nhỏ,
+chưa hiệu chỉnh multiple comparisons. Region mass lấy score cấp
+variant; chọn risk threshold bằng cận nhị thức còn chịu giới hạn
+phụ thuộc dữ liệu và khảo sát nhiều ngưỡng. Vì vậy, số đo thực nghiệm
+chưa tạo thành bảo đảm an toàn hoặc conformal phân cấp đã chứng minh.
+
+\subsection{Phát triển nhiều vòng và giới hạn của phép đánh giá lại}
+
+IID cũ đã được phân tích để định hướng vấn đề bỏ sót ca hợp lệ.
+Adapter học trên train, chọn trên dev, risk/ngưỡng fit trên calibration;
+điều đó vẫn không biến IID đã quan sát thành tập xác nhận mới.
+Bootstrap cluster mô tả biến thiên trên bộ hiện có, không loại bỏ ảnh
+hưởng lựa chọn nghiên cứu qua nhiều vòng. Calibration hiện dùng risk
+ngoài fold để chọn ngưỡng, trong khi runtime dùng calibrator fit toàn
+calibration; chưa có partition audit độc lập kiểm tra bước chuyển này.
+Phần còn lại cần đối chứng và xác nhận mới trước khi khái quát kết quả.
+
+\subsection{Hình học, chi phí tính toán và thao tác}
+
+Metric depth, CameraInfo và TF cần được kiểm chứng cùng sai số
+back-projection, reachability, va chạm và tư thế gắp. Covariance
+không gian đã lưu chưa phải vùng an toàn 3D đã hiệu chuẩn.
+Checker RGB-D demo chỉ có phạm vi riêng, chưa phải bộ nhận dạng
+độc lập tổng quát.
+
+Đánh giá sidecar trên cache khác phạm vi tính toán với runner
+baseline sinh token. Chưa có bộ đo đầy đủ về tham số học được,
+VRAM, thời gian huấn luyện và latency từ ảnh mới để kết luận ưu
+thế chi phí. Policy chưa có chuỗi hỏi lại/quan sát lại đã đánh giá,
+và chưa có trial robot khép kín đo đúng vật, grasp, lift và place.
+
+\section{Hướng phát triển}
+\label{sec:conclusion-future}
+
+Các hướng tiếp theo được xếp theo mức ưu tiên: củng cố bằng chứng
+cho thiết kế hiện tại, kiểm chứng tương tác và thao tác, rồi mới
+mở rộng kiến trúc hoặc miền triển khai. Chúng là đề xuất nghiên cứu,
+không phải kết quả của khóa luận.
+
+\subsection{Ưu tiên thứ nhất: củng cố đối chứng và độ tin cậy thống kê}
+
+Cần làm ablation có kiểm soát cho các thành phần trọng yếu, giữ
+split family, tiêu chí chọn checkpoint và quy tắc đánh giá tương
+đương. Mỗi mô hình cần calibrator fit trên calibration riêng.
+Đối chứng raw, scalar-only và nhiều evidence sẽ giúp tách thay đổi
+chất lượng xác suất khỏi thay đổi thông tin đầu vào. Nhiều seed V2, Adapter và các ablation quan trọng giúp đo biến thiên huấn luyện. Cần đối chiếu policy tại cùng coverage hoặc cùng risk để tách tác dụng học Adapter khỏi tác dụng nới ngưỡng.
+
+Cần bổ sung CI theo family cho source, calibration và selective
+metric; kiểm tra reliability theo nhóm vật và trạng thái. Chương~5
+đã đối chiếu score event với direct intersection và vẽ coverage--area.
+Phần tiếp theo là lượng hóa bất định của các đường này, chuẩn hóa
+quy tắc xử lý đồng điểm và nghiên cứu thủ tục hiệu chỉnh phù hợp
+đơn vị family.
+
+Phân tích nhóm hộp và các quan hệ yếu nên bắt đầu từ dữ liệu phát
+triển và case lỗi có truy nguyên. Evaluator anchor/edge cần quy tắc
+khớp slot, mask và mệnh đề rõ ràng; instance/top-$k$ cần khớp vật
+riêng, không dùng số mode thay số instance. Test-IID hiện tại đã được dùng phân tích để định hướng vòng Adapter; xác nhận tiếp theo cần một bộ IID độc lập mới. Với calibration, nên tách theo family tập fit calibrator, chọn ngưỡng và audit; không fit lại ngưỡng trên IID cũ để làm đẹp số.
+
+\subsection{Ưu tiên thứ hai: kiểm chứng tương tác và thao tác khép kín}
+
+REOBSERVE và ASK\_USER cần được đánh giá bằng chuỗi quan sát hoặc
+tương tác có budget, số lần thử và điều kiện dừng. Cần đo can thiệp
+có bổ sung evidence và sửa lỗi hay không, thay vì chỉ xem decision
+label phù hợp với nhãn tình huống.
+
+Trước trial thao tác, cần hoàn thiện hình học 3D, checker độc lập
+và cổng reachability/va chạm rồi nối MoveIt/controller. Đánh giá
+nên phân biệt đúng vật, planning, grasp, lift và place trên trial
+độc lập, có log hậu kiểm. So sánh forced point, geometry gate và
+selective policy cần cùng điều kiện nhiệm vụ; giảm lỗi trên ảnh
+chưa đủ kết luận tăng task success.
+
+Độ trễ từ ảnh mới cũng cần được đo theo từng thành phần:
+preprocessing, tower extraction, sidecar, calibration, I/O và
+giao tiếp robot, với thiết bị, warmup và batch size công bố rõ.
+
+\subsection{Ưu tiên thứ ba: mở rộng khi đã có bằng chứng về nút thắt}
+
+Vùng 3D đã hiệu chuẩn cần truyền và kiểm tra sai số pixel, metric
+depth, CameraInfo cùng TF. Chuyển sang camera vật lý cần đánh giá
+lại phân bố quan sát và calibration. Mở rộng graph toàn cảnh,
+fusion sâu theo P-CRA-F hoặc policy học được chỉ có ý nghĩa khi
+nhiệm vụ và đối chứng cho thấy giới hạn của thiết kế hiện tại.
+Các hướng này cần protocol riêng, không thay thế kết quả V2 đã khóa.
+
+Khóa luận đã xây dựng và đánh giá một hệ nhận thức RGB-D có biểu
+diễn không gian, điều kiện trả lời và risk chọn lọc. Adapter giữ
+cải thiện grounding của V2, đồng thời tăng answerability và số ca
+hợp lệ được nhận. Lợi ích coverage được đổi bằng lỗi chấp nhận cao hơn;
+profile 7.5\% chưa đạt ngân sách này trên IID cũ. Hồi quy grounding,
+giới hạn nhãn, thiếu ablation, thiếu xác nhận mới và chưa có robot motion
+xác định rõ phần việc còn lại
+để chuyển thiết kế này thành một hệ thao tác được kiểm chứng đầu cuối.

@@ -1,0 +1,145 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 500  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    io_and_status_controller:
+      type: ur_controllers/GPIOController
+
+    speed_scaling_state_broadcaster:
+      type: ur_controllers/SpeedScalingStateBroadcaster
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    scaled_joint_trajectory_controller:
+      type: ur_controllers/ScaledJointTrajectoryController
+
+    forward_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    forward_position_controller:
+      type: position_controllers/JointGroupPositionController
+
+    gripper_controller:
+      type: position_controllers/GripperActionController
+
+gripper_controller:
+  ros__parameters:
+    joint: gripper_joint
+    action_monitor_rate: 20.0
+    # Ten millimetres allowed the action to report success while the fingers
+    # were visibly open around a 74 mm orange.  Two millimetres still tolerates
+    # contact compliance but makes the commanded aperture meaningful.
+    goal_tolerance: 0.002
+    max_effort: 100.0
+    allow_stalling: true
+    stall_velocity_threshold: 0.001
+    stall_timeout: 1.0
+
+speed_scaling_state_broadcaster:
+  ros__parameters:
+    state_publish_rate: 100.0
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    state_publish_rate: 100.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    gains:
+      wrist_3_joint:
+        angle_wraparound: true
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      # Gazebo's position system can lag the first point of independently
+      # planned pose trajectories. Disable instantaneous path-error aborts,
+      # while retaining the goal tolerances below.
+      shoulder_pan_joint: { trajectory: -1.0, goal: 0.1 }
+      shoulder_lift_joint: { trajectory: -1.0, goal: 0.1 }
+      elbow_joint: { trajectory: -1.0, goal: 0.1 }
+      wrist_1_joint: { trajectory: -1.0, goal: 0.1 }
+      wrist_2_joint: { trajectory: -1.0, goal: 0.1 }
+      wrist_3_joint: { trajectory: -1.0, goal: 0.3 }
+
+joint_state_broadcaster:
+  ros__parameters:
+    # The gz_ros2_control Humble mimic adapter exports the passive interface
+    # with a synthetic `_mimic` suffix. Publish only real URDF joint names.
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+      - gripper_joint
+    interfaces:
+      - position
+      - velocity
+      - effort
+scaled_joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+    speed_scaling_interface_name: ""
+    state_publish_rate: 100.0
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    gains:
+      wrist_3_joint:
+        angle_wraparound: true
+    constraints:
+      stopped_velocity_tolerance: 0.2
+      goal_time: 0.0
+      shoulder_pan_joint: { trajectory: -1.0, goal: 0.1 }
+      shoulder_lift_joint: { trajectory: -1.0, goal: 0.1 }
+      elbow_joint: { trajectory: -1.0, goal: 0.1 }
+      wrist_1_joint: { trajectory: -1.0, goal: 0.1 }
+      wrist_2_joint: { trajectory: -1.0, goal: 0.1 }
+      wrist_3_joint: { trajectory: -1.0, goal: 0.3 }
+
+forward_velocity_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint
+    interface_name: velocity
+
+forward_position_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - elbow_joint
+      - wrist_1_joint
+      - wrist_2_joint
+      - wrist_3_joint

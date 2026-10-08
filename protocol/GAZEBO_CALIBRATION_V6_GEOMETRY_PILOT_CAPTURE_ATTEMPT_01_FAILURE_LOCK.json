@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gazebo_calibration_v6_geometry_pilot",
+  "status": "CAPTURE_ATTEMPT_01_FROZEN_INCOMPLETE_NO_RETRY_UNDER_R3",
+  "classification": "CAPTURE_SENSOR_SYNCHRONIZATION_INFRASTRUCTURE_FAILURE_NOT_GEOMETRY_OR_SCIENTIFIC_RESULT",
+  "locked_at_utc": "2026-09-23T06:03:54.676026Z",
+  "authorized_attempt": 1,
+  "expected_family_count": 32,
+  "captured_record_count": 19,
+  "capture_manifest_status": "INCOMPLETE_NO_COMPLETE_STATUS_OR_FINAL_INPUT_MANIFEST_HASH",
+  "failure_at_capture_order": 19,
+  "failure_scene_id": "gazebo_calibration_v6_geometry_pilot_000",
+  "last_completed_scene_id": "gazebo_calibration_v6_geometry_pilot_020",
+  "observed_failure": "After resetting family gazebo_calibration_v6_geometry_pilot_000, the capture node did not receive a synchronized RGB-depth-semantic-label tuple within the locked 45.0 second timeout and exited nonzero.",
+  "runtime_observation_not_asserted_as_root_cause": "Gazebo logged repeated multicast Network is unreachable messages during this run. This is retained as infrastructure evidence but is not claimed as the proven cause of the sensor-tuple timeout.",
+  "partial_attempt_policy": {
+    "partial_rows_quarantined": true,
+    "partial_rows_may_be_used_for_qc_training_calibration_or_inference": false,
+    "resume_allowed": false,
+    "same_revision_retry_allowed": false,
+    "row_filter_repair_or_replacement_allowed": false,
+    "cross_attempt_merge_allowed": false
+  },
+  "partial_capture_inventory": {
+    "file_count": 135,
+    "scene_directory_count": 19,
+    "captured_state_counts": {
+      "FOUND": 5,
+      "AMBIGUOUS": 5,
+      "ABSENT": 5,
+      "INSUFFICIENT_EVIDENCE": 4
+    },
+    "captured_relation_counts": {
+      "leftmost": 4,
+      "rightmost": 5,
+      "second_from_left": 7,
+      "second_from_right": 3
+    },
+    "tree_digest_algorithm": "SHA-256 of the byte stream produced by lexicographically sorting NUL-delimited workspace-relative file paths, hashing each file with sha256sum, concatenating those sha256sum records, then SHA-256 hashing the concatenation",
+    "tree_sha256": "6d5d6bf9ea16d9900aa9cb2a6ce3c7b0adf473d4897bcd3ea9a6a623f7317a14"
+  },
+  "missing_scene_ids_in_locked_capture_order": [
+    "gazebo_calibration_v6_geometry_pilot_000",
+    "gazebo_calibration_v6_geometry_pilot_006",
+    "gazebo_calibration_v6_geometry_pilot_012",
+    "gazebo_calibration_v6_geometry_pilot_031",
+    "gazebo_calibration_v6_geometry_pilot_017",
+    "gazebo_calibration_v6_geometry_pilot_025",
+    "gazebo_calibration_v6_geometry_pilot_026",
+    "gazebo_calibration_v6_geometry_pilot_022",
+    "gazebo_calibration_v6_geometry_pilot_023",
+    "gazebo_calibration_v6_geometry_pilot_024",
+    "gazebo_calibration_v6_geometry_pilot_014",
+    "gazebo_calibration_v6_geometry_pilot_010",
+    "gazebo_calibration_v6_geometry_pilot_002"
+  ],
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V6_IMPLEMENTATION_AMENDMENT_R3_LOCK.json": "f3416bd6843e1b72250e8d39f740843e476cce76359e1555f8fa3fe756b737cd",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6/R3_FIXED_CAMERA_TF_PREFLIGHT.json": "0ace1bdc936110912c9d7226e2d7b5ed1238d934f620659543360ceeb67ea739",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/PREFLIGHT_LIVE_ATTEMPT_03.json": "d0019a72f2cc69d664c3f36602e5dd34fcb2ead155e0c4feb0388b620da5ed36",
+    "protocol/gazebo_calibration_v6_geometry_pilot_capture_compatibility_lock.json": "cfa7a225ce98891b500bdc7631e1f547f3ac322850246ba6fd9a1e1123bf12c2",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/capture_attempt_01/capture_manifest.json": "e8180bf9a27dfc78add9822a235bedbc452dba966056e845a2eaa1567b5f2d52",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot/capture_attempt_01/input_manifest.jsonl": "ae84d7b904f71135e1fe15cd45b365a02eb7d43f2ffebbf08ed7d952b0277e0c"
+  },
+  "geometry_qc_run": false,
+  "rgb_duplicate_qc_run": false,
+  "pilot_geometry_decision": null,
+  "calibration_capture_authorized": false,
+  "dataset_materialized": false,
+  "model_inference_run": false,
+  "calibrator_fit_call_count": 0,
+  "scientific_hypothesis": "NOT_TESTED",
+  "scientific_decision": null,
+  "test_iid_ood_access": false,
+  "robot_access": false,
+  "required_next_revision": "Stop. Any new pilot attempt requires a new append-only implementation/execution revision with a new namespace and a preregistered non-outcome-based repair for sensor transport/synchronization; R3 may not be retried or resumed."
+}

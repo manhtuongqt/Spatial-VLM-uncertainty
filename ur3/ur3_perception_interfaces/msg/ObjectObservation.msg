@@ -1,0 +1,10 @@
+string object_id
+string color
+geometry_msgs/PoseStamped pose
+geometry_msgs/Vector3 dimensions
+float64 yaw
+bool yaw_valid
+float64 confidence
+string status
+uint32 valid_frames
+float64 position_stddev_m

@@ -1,0 +1,29 @@
+planning_pipelines:
+  pipeline_names:
+    - ompl
+    - chomp
+    - pilz
+  ompl:
+    planning_plugin: ompl_interface/OMPLPlanner
+    request_adapters:
+      - default_planning_request_adapters/AddTimeOptimalParameterization
+      - default_planning_request_adapters/ResolveConstraintFrames
+      - default_planning_request_adapters/FixWorkspaceBounds
+      - default_planning_request_adapters/FixStartBoundsAsValid
+      - default_planning_request_adapters/FixStartStateCollision
+      - default_planning_request_adapters/FixStartStatePathConstraints
+  chomp:
+    planning_plugin: chomp_interface/CHOMPPlanner
+    request_adapters:
+      - default_planning_request_adapters/ResolveConstraintFrames
+      - default_planning_request_adapters/FixWorkspaceBounds
+      - default_planning_request_adapters/FixStartBoundsAsValid
+      - default_planning_request_adapters/FixStartStateCollision
+      - default_planning_request_adapters/FixStartStatePathConstraints
+  pilz:
+    planning_plugin: pilz_industrial_motion_planner/CommandPlanner
+    request_adapters:
+      - default_planning_request_adapters/FixWorkspaceBounds
+      - default_planning_request_adapters/FixStartBoundsAsValid
+      - default_planning_request_adapters/FixStartStateCollision
+      - default_planning_request_adapters/FixStartStatePathConstraints

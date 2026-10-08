@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "protocol_id": "pcra_u_development_train_v1",
+  "scientific_status": "EXPLORATORY_DEV_ONLY_CALIBRATION_AND_TEST_SEALED",
+  "seed": 24082026,
+  "dataset": {
+    "root": "datasets/roborefer_dataset_v2_1_1_development_400_20260824",
+    "train_families": 320,
+    "train_samples": 1600,
+    "dev_families": 80,
+    "dev_samples": 400,
+    "variants_per_family": 5
+  },
+  "feature_input": {
+    "model_root": "RoboRefer/models/RoboRefer-2B-SFT",
+    "stage": "tower_output_before_projector",
+    "raw_shape": [13, 1024, 1152],
+    "raw_dtype": "torch.float16",
+    "local_tile_count": 12,
+    "thumbnail_index": 12,
+    "tile_grid_rows_columns": [3, 4],
+    "patch_grid_per_tile": [32, 32],
+    "pool_kernel": [4, 4],
+    "pooled_grid_shape": [24, 32, 1152],
+    "pooled_thumbnail_shape": [1152],
+    "cache_dtype": "torch.float16",
+    "training_dtype": "torch.float32",
+    "deduplication_key": "sha256(rgb_sha256 + depth_sha256)",
+    "raw_cache_retained": false,
+    "raw_cache_retention_reason": "fixed pooling is applied immediately; only derived oracle-free pooled features are retained"
+  },
+  "language": {
+    "tokenizer": "lowercase_alphanumeric_regex_v1",
+    "token_id": "sha256_mod_4095_plus_1",
+    "vocab_size": 4096,
+    "max_tokens": 64,
+    "relation_parser": "prompt_only_lexical_v2",
+    "relations": [
+      "direct",
+      "left_of",
+      "right_of",
+      "front_of",
+      "behind",
+      "nearer_than",
+      "farther_than",
+      "between_in_depth",
+      "nearer_than_both"
+    ]
+  },
+  "model": {
+    "name": "P-CRA-U-development-v1",
+    "hidden_dim": 96,
+    "dropout": 0.0,
+    "answerability_classes": ["FOUND", "AMBIGUOUS", "ABSENT", "INSUFFICIENT_EVIDENCE"],
+    "source_classes": ["semantic", "relation", "depth", "occlusion"],
+    "deferred_source_classes": {
+      "spatial": "NO_POSITIVE_SUPERVISION_IN_DATASET_V2_1_1"
+    },
+    "roborefer_frozen": true
+  },
+  "loss": {
+    "heatmap_weight": 1.0,
+    "answerability_weight": 0.5,
+    "source_weight": 0.5,
+    "heatmap": "found_only_weighted_bce_plus_soft_dice",
+    "answerability": "train_inverse_frequency_weighted_cross_entropy",
+    "source": "train_positive_weighted_bce",
+    "positive_weight_clamp": [1.0, 20.0]
+  },
+  "optimization": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "batch_size": 8,
+    "max_epochs": 20,
+    "min_epochs": 6,
+    "early_stopping_patience": 5,
+    "gradient_clip_norm": 5.0,
+    "scheduler": "linear_warmup_cosine_decay",
+    "warmup_steps": 200,
+    "num_workers": 0,
+    "sidecar_dtype": "torch.float32",
+    "deterministic_algorithms": true,
+    "cublas_workspace_config": ":4096:8",
+    "selection_split": "dev",
+    "selection_metric": "dev_total_loss",
+    "selection_mode": "min",
+    "evaluate_every_epochs": 1,
+    "checkpoint_every_epochs": 1
+  },
+  "canary": {
+    "family_source": "dataset family_manifest batch_assignments.canary_000",
+    "train_families": 16,
+    "dev_families": 4,
+    "samples_per_family": 5,
+    "batch_size": 8,
+    "epochs": 2,
+    "warmup_steps": 2,
+    "checkpoint_step": 10,
+    "final_step": 20,
+    "two_seed_identical_runs": true,
+    "resume_replay": "step_10_to_step_20"
+  },
+  "gates": {
+    "min_active_gradient_norm": 1e-10,
+    "require_finite_loss_and_gradient": true,
+    "require_frozen_feature_no_grad": true,
+    "require_run_a_b_model_hash_equal": true,
+    "require_run_a_b_metrics_equal": true,
+    "require_resume_model_hash_equal": true,
+    "max_canary_final_initial_loss_ratio": 1.1,
+    "require_checkpoint_audit": true,
+    "require_dataset_and_baseline_hash_unchanged": true,
+    "require_tests_sealed": true
+  },
+  "safety": {
+    "gradient_split": "train",
+    "checkpoint_selection_split": "dev",
+    "forbidden_splits": ["calibration", "test_iid", "test_ood"],
+    "calibration_fit": false,
+    "test_opened": false,
+    "robot_publish": false,
+    "baseline_modification": false,
+    "tables_02_to_06_final_status": "NOT_RUN"
+  }
+}

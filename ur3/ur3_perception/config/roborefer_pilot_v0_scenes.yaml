@@ -1,0 +1,177 @@
+schema_version: 1
+protocol_id: roborefer_pilot_v0
+capture_mode: no_manipulation_shadow
+random_seed: 8132026
+view_joint_pose: [1.3815, -1.8273, 1.3428, -1.2863, -1.5708, -1.9601]
+camera_frame: camera_color_optical_frame
+base_frame: base_link
+coordinate_suffix: >-
+  Your answer must be exactly one list containing one normalized image point,
+  formatted as [(x, y)], where x and y are between 0 and 1. Return no words.
+
+# Every dynamic pilot object is reset for every scene.  Objects not listed in
+# a scene override are placed in distinct storage positions outside the locked
+# wrist-camera view.  These environment coordinates are consumed only by the
+# capture process and are never copied into the inference manifest.
+objects:
+  # Legacy coloured cubes are dynamic too.  Resetting them to a locked storage
+  # row prevents unregistered clutter and scene-to-scene physics carry-over.
+  red_cube: {z: 0.030000, storage_pose: [-0.65, 1.40, 0.0]}
+  blue_cube: {z: 0.025000, storage_pose: [-0.45, 1.40, 0.0]}
+  green_cube: {z: 0.025000, storage_pose: [-0.25, 1.40, 0.0]}
+  yellow_cube: {z: 0.025000, storage_pose: [-0.05, 1.40, 0.0]}
+  orange_cube: {z: 0.025000, storage_pose: [0.15, 1.40, 0.0]}
+  purple_cube: {z: 0.025000, storage_pose: [0.35, 1.40, 0.0]}
+  pink_cube: {z: 0.025000, storage_pose: [0.55, 1.40, 0.0]}
+  ycb_cracker_box: {z: 0.106710, storage_pose: [-0.02, 0.85, 0.0]}
+  ycb_sugar_box: {z: 0.088107, storage_pose: [0.20, 0.85, 0.0]}
+  ycb_tomato_soup_can: {z: 0.050948, storage_pose: [-0.55, 1.10, 0.0]}
+  ycb_mustard_bottle: {z: 0.095695, storage_pose: [-0.38, 1.10, 0.0]}
+  ycb_banana: {z: 0.018376, storage_pose: [-0.30, 0.85, 0.25]}
+  ycb_apple: {z: 0.037710, storage_pose: [-0.21, 1.10, 0.0]}
+  ycb_orange: {z: 0.037010, storage_pose: [-0.04, 1.10, 0.0]}
+  ycb_power_drill: {z: 0.028689, storage_pose: [-0.62, 0.85, -0.25]}
+  mango: {z: 0.030000, storage_pose: [0.38, 0.85, 0.35]}
+
+scenes:
+  - scene_id: pilot_scene_0001
+    scene_family_id: pilot_family_direct_apple
+    task_type: direct_grounding
+    instruction: >-
+      Point to one visible point well inside the center of the red apple resting
+      on the tabletop. Do not point to the orange, banana, bottle, boxes, tray,
+      robot, gripper, shadows, or text.
+    poses:
+      ycb_apple: [-0.20, 0.25, 0.0]
+      ycb_orange: [-0.38, 0.16, 0.0]
+      ycb_mustard_bottle: [-0.43, 0.42, 0.0]
+      ycb_banana: [-0.22, 0.49, 0.35]
+
+  - scene_id: pilot_scene_0002
+    scene_family_id: pilot_family_direct_orange
+    task_type: direct_grounding
+    instruction: >-
+      Point to one visible point well inside the center of the round orange
+      fruit resting on the tabletop. Do not point to the red apple, yellow
+      bottle, can, boxes, tray, robot, gripper, shadows, or text.
+    poses:
+      ycb_orange: [-0.20, 0.24, 0.0]
+      ycb_apple: [-0.38, 0.16, 0.0]
+      ycb_mustard_bottle: [-0.43, 0.42, 0.0]
+      ycb_tomato_soup_can: [-0.18, 0.43, 0.0]
+
+  - scene_id: pilot_scene_0003
+    scene_family_id: pilot_family_right_of_reference
+    task_type: relative_2d
+    instruction: >-
+      Point to the round red fruit that is to the right of the tall upright
+      yellow bottle in the image. Return a point inside the fruit, not on the
+      bottle, other fruit, can, banana, tray, robot, gripper, or text.
+    poses:
+      ycb_mustard_bottle: [-0.15, 0.16, 0.0]
+      ycb_apple: [-0.18, 0.35, 0.0]
+      ycb_orange: [-0.40, 0.42, 0.0]
+      ycb_tomato_soup_can: [-0.40, 0.23, 0.0]
+      ycb_banana: [-0.24, 0.52, -0.30]
+
+  - scene_id: pilot_scene_0004
+    scene_family_id: pilot_family_depth_closer
+    task_type: depth_relation
+    instruction: >-
+      Point to the round red fruit that is closer to the camera than the round
+      orange fruit. Return a point inside the selected fruit, not on the orange,
+      bottle, can, banana, tray, robot, gripper, or text.
+    poses:
+      ycb_apple: [-0.18, 0.14, 0.0]
+      ycb_orange: [-0.20, 0.42, 0.0]
+      ycb_tomato_soup_can: [-0.42, 0.28, 0.0]
+      ycb_mustard_bottle: [-0.45, 0.11, 0.0]
+      ycb_banana: [-0.45, 0.50, 0.30]
+
+  - scene_id: pilot_scene_0005
+    scene_family_id: pilot_family_two_reference_between
+    task_type: multi_reference
+    instruction: >-
+      Locate the round orange fruit and the long curved yellow fruit as two
+      references. Among the objects spatially between them, point to the compact
+      upright cylindrical grocery container with a dark circular pull-tab top
+      and red rim that is taller than both fruits. Return a point well inside
+      the surviving object, never on either reference, boxes, bottle, tray,
+      robot, gripper, shadows, or text.
+    poses:
+      ycb_tomato_soup_can: [-0.20, 0.27, 0.05]
+      ycb_orange: [-0.20, 0.13, 0.0]
+      ycb_banana: [-0.23, 0.47, 0.25]
+      ycb_mustard_bottle: [-0.46, 0.12, 0.0]
+      ycb_sugar_box: [-0.48, 0.42, 0.0]
+
+  - scene_id: pilot_scene_0006
+    scene_family_id: pilot_family_height_comparison
+    task_type: metric_comparison
+    instruction: >-
+      Point to the tall upright yellow bottle that is physically taller than
+      both round fruits in the scene. Return one point inside the bottle, not on
+      either fruit, the can, banana, tray, robot, gripper, shadows, or text.
+    poses:
+      ycb_mustard_bottle: [-0.20, 0.27, 0.0]
+      ycb_apple: [-0.20, 0.13, 0.0]
+      ycb_orange: [-0.20, 0.43, 0.0]
+      ycb_tomato_soup_can: [-0.45, 0.15, 0.0]
+      ycb_banana: [-0.45, 0.48, -0.20]
+
+  - scene_id: pilot_scene_0007
+    scene_family_id: pilot_family_elongated_shape
+    task_type: shape_comparison
+    instruction: >-
+      Point to the long curved yellow fruit whose horizontal extent is greater
+      than either round fruit. Return a point well inside that fruit, not on the
+      apple, orange, bottle, can, tray, robot, gripper, shadows, or text.
+    poses:
+      ycb_banana: [-0.23, 0.29, 0.35]
+      ycb_apple: [-0.20, 0.12, 0.0]
+      ycb_orange: [-0.20, 0.48, 0.0]
+      ycb_mustard_bottle: [-0.46, 0.10, 0.0]
+      ycb_tomato_soup_can: [-0.46, 0.40, 0.0]
+
+  - scene_id: pilot_scene_0008
+    scene_family_id: pilot_family_partial_occlusion
+    task_type: occlusion
+    instruction: >-
+      Point to the round orange fruit that is partially visible beside the tall
+      yellow bottle. Return a point on the visible fruit surface, not on the
+      bottle, can, banana, boxes, tray, robot, gripper, shadows, or text.
+    poses:
+      ycb_orange: [-0.18, 0.38, 0.0]
+      ycb_mustard_bottle: [-0.18, 0.31, 0.0]
+      ycb_tomato_soup_can: [-0.42, 0.27, 0.0]
+      ycb_banana: [-0.25, 0.48, 0.25]
+      ycb_sugar_box: [-0.48, 0.46, 0.0]
+
+  - scene_id: pilot_scene_0009
+    scene_family_id: pilot_family_ambiguous_orange
+    task_type: ambiguous_command
+    instruction: >-
+      Point to the orange-colored fruit on the tabletop. Return one point and do
+      not point to the bottle, banana, tray, robot, gripper, shadows, or text.
+    poses:
+      ycb_orange: [-0.20, 0.20, 0.0]
+      mango: [-0.20, 0.32, 0.0]
+      ycb_apple: [-0.44, 0.13, 0.0]
+      ycb_mustard_bottle: [-0.45, 0.43, 0.0]
+      ycb_banana: [-0.23, 0.50, -0.30]
+
+  - scene_id: pilot_scene_0010
+    scene_family_id: pilot_family_target_absent
+    task_type: target_absent
+    instruction: >-
+      Point to the blue handheld power drill on the tabletop. Return one point
+      inside the drill and do not point to fruit, bottle, can, box, tray, robot,
+      gripper, shadows, or text.
+    # The drill intentionally remains at its storage pose outside the view.
+    poses:
+      ycb_apple: [-0.20, 0.18, 0.0]
+      ycb_orange: [-0.20, 0.38, 0.0]
+      ycb_mustard_bottle: [-0.45, 0.12, 0.0]
+      ycb_tomato_soup_can: [-0.45, 0.40, 0.0]
+      ycb_banana: [-0.28, 0.54, 0.30]
+      ycb_sugar_box: [-0.46, 0.26, 0.0]

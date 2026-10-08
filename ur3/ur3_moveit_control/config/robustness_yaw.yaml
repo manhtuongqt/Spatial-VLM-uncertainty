@@ -1,0 +1,5 @@
+fixed_pick_place:
+  ros__parameters:
+    error_injection_axis: "yaw"
+    # radians: approximately -15, -10, -5, 0, 5, 10, 15 degrees
+    error_injection_values: [-0.261799, -0.174533, -0.087266, 0.0, 0.087266, 0.174533, 0.261799]

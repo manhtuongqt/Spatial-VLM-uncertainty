@@ -1,0 +1,130 @@
+{
+  "audited_at_utc": "2026-09-15T06:09:37.549582+00:00",
+  "calibrator_fit_performed": false,
+  "capture_performed": false,
+  "checks": {
+    "calibrator_count_one": true,
+    "calibrator_is_affine_logit": true,
+    "capture_order_recomputes": true,
+    "capture_order_valid": true,
+    "cell_count_16": true,
+    "contract_hash_matches": true,
+    "deterministic_generated_files": true,
+    "every_cell_has_8": true,
+    "exclusion_source_hashes_match_contract": true,
+    "family_manifest_count_128": true,
+    "family_scene_alignment": true,
+    "gate_forbids_refit": true,
+    "gate_requires_post_preflight_capture_lock": true,
+    "gate_seals_test_iid": true,
+    "gate_seals_test_ood": true,
+    "identities_and_signatures_unique": true,
+    "layout_signatures_recompute": true,
+    "oracle_count_128": true,
+    "scene_count_128": true,
+    "scene_oracle_alignment": true,
+    "seeds_recompute": true,
+    "split_manifest_does_not_authorize_capture": true,
+    "split_manifest_seals_test": true,
+    "threshold_count_101": true,
+    "zero_prior_identity_seed_layout_overlap": true
+  },
+  "contract_lock_sha256": "99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841",
+  "counts": {
+    "families": 128,
+    "relations": {
+      "leftmost": 32,
+      "rightmost": 32,
+      "second_from_left": 32,
+      "second_from_right": 32
+    },
+    "state_relation_cells": {
+      "ABSENT|leftmost": 8,
+      "ABSENT|rightmost": 8,
+      "ABSENT|second_from_left": 8,
+      "ABSENT|second_from_right": 8,
+      "AMBIGUOUS|leftmost": 8,
+      "AMBIGUOUS|rightmost": 8,
+      "AMBIGUOUS|second_from_left": 8,
+      "AMBIGUOUS|second_from_right": 8,
+      "FOUND|leftmost": 8,
+      "FOUND|rightmost": 8,
+      "FOUND|second_from_left": 8,
+      "FOUND|second_from_right": 8,
+      "INSUFFICIENT_EVIDENCE|leftmost": 8,
+      "INSUFFICIENT_EVIDENCE|rightmost": 8,
+      "INSUFFICIENT_EVIDENCE|second_from_left": 8,
+      "INSUFFICIENT_EVIDENCE|second_from_right": 8
+    },
+    "states": {
+      "ABSENT": 32,
+      "AMBIGUOUS": 32,
+      "FOUND": 32,
+      "INSUFFICIENT_EVIDENCE": 32
+    }
+  },
+  "deterministic_file_checks": {
+    "protocol/gazebo_calibration_v3_family_manifest.jsonl": true,
+    "protocol/gazebo_calibration_v3_split_manifest.json": true,
+    "ur3/ur3_perception/config/gazebo_calibration_v3_annotations.yaml": true,
+    "ur3/ur3_perception/config/gazebo_calibration_v3_gate.yaml": true,
+    "ur3/ur3_perception/config/gazebo_calibration_v3_scenes.yaml": true
+  },
+  "exclusion_source_hash_checks": {
+    "datasets/Gazebo_dev_answerability_v2/inference_manifest.jsonl": true,
+    "datasets/Gazebo_dev_answerability_v2/manifest.json": true,
+    "datasets/Gazebo_train_uq_v2_full_r3/manifest.json": true,
+    "protocol/gazebo_calibration_v1_family_manifest.jsonl": true,
+    "protocol/gazebo_calibration_v2_family_manifest.jsonl": true,
+    "protocol/gazebo_train_uq_v2_full_family_manifest.jsonl": true,
+    "protocol/gazebo_train_uq_v2_full_r2_family_manifest.jsonl": true,
+    "protocol/gazebo_train_uq_v2_full_r3_family_manifest.jsonl": true
+  },
+  "formal_live_preflight_run": false,
+  "formal_static_preflight_run": false,
+  "identity_set_sha256": {
+    "family_ids": "6aa8f1e88c5da6fa0310a79518f2961f2022491f9d364fde3831ce2a1022ec30",
+    "layout_ids": "2c34e186bf7c5857fa159ebe17e837243eed242db8f7d04aa34c34a0fb403e91",
+    "physical_layout_signatures": "a91a9b5bfdecaf11b257f0e1a079f011af93b1c8fa5c2b99f8e188e68ff484fb",
+    "sample_ids": "c3355fee5466c3e82543bc1731413ee70af9ae7f0f35a4cabd5c41517860fe4f",
+    "scene_ids": "c3355fee5466c3e82543bc1731413ee70af9ae7f0f35a4cabd5c41517860fe4f",
+    "seeds": "06693c3d3443e274344e653d2c813aecfe5865d7557aac12c75aa4cf8f829cc1"
+  },
+  "model_inference_performed": false,
+  "overlap": {
+    "family_ids": [],
+    "layout_ids": [],
+    "physical_layout_signatures": [],
+    "sample_ids": [],
+    "scene_ids": [],
+    "seeds": []
+  },
+  "prior_registry_counts": {
+    "family_ids": 2810,
+    "layout_ids": 2314,
+    "physical_layout_signatures": 2654,
+    "sample_ids": 528,
+    "scene_ids": 2810,
+    "seeds": 1216
+  },
+  "prior_registry_set_sha256": {
+    "family_ids": "3446deb302d29ce7bcc9a5970ce5cd9465a36fb7444c3a8ccbba66cbd5c0b995",
+    "layout_ids": "0f221e8bc7da797faf97802cf32dd82135f461948113de8749829a65b77d44ac",
+    "physical_layout_signatures": "6fc2fe8acec7418e787388af282dc56b6e9eafa0713154e1837cb2a1f44f53f0",
+    "sample_ids": "228b9332230e5b7886662813c5bb43e78c89e049d40330895fd38d08530d5057",
+    "scene_ids": "e22ccff958d3d4f55b1e6cf8e1cf425b3ba53318d467a776f570cf301cfb8457",
+    "seeds": "9df1b17d8891760b9d890a11d6670091e0e36766d525c1d1d7371521be53374b"
+  },
+  "protocol_id": "gazebo_calibration_v3",
+  "schema_version": 1,
+  "status": "PASS",
+  "test_iid_ood_access": false,
+  "uniqueness": {
+    "family_ids": true,
+    "layout_ids": true,
+    "physical_layout_signatures": true,
+    "sample_ids": true,
+    "scene_ids": true,
+    "seeds": true
+  }
+}

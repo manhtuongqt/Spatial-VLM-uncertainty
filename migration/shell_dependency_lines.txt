@@ -1,0 +1,9 @@
+/home/dhcn/.bashrc: # >>> conda initialize >>>
+/home/dhcn/.bashrc: # !! Contents within this block are managed by 'conda init' !!
+/home/dhcn/.bashrc: __conda_setup="$('/home/dhcn/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+/home/dhcn/.bashrc:     eval "$__conda_setup"
+/home/dhcn/.bashrc:     if [ -f "/home/dhcn/miniforge3/etc/profile.d/conda.sh" ]; then
+/home/dhcn/.bashrc:         . "/home/dhcn/miniforge3/etc/profile.d/conda.sh"
+/home/dhcn/.bashrc: unset __conda_setup
+/home/dhcn/.bashrc: # <<< conda initialize <<<
+/home/dhcn/.bashrc: source /opt/ros/humble/setup.bash

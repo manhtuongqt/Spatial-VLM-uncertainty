@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "gazebo_calibration_v3",
+  "implementation_revision": "r2",
+  "status": "INVALID_IMPLEMENTATION_NO_PREFLIGHT_CAPTURE_INFERENCE_OR_FIT",
+  "recorded_at_utc": "2026-09-15T06:14:31+00:00",
+  "contract_lock_sha256": "99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841",
+  "invalid_implementation_lock_sha256": "5e82fa3d1bd0d2e13ba8e06003bdb87ca6ea52f394771299cd952868dc877897",
+  "invalid_implementation_audit_sha256": "3af7f6d4bde47b80e52c2454bbaf8435b15da5e429fef8987bdb63ecc673633c",
+  "affected_generated_gate": {
+    "path": "ur3/ur3_perception/config/gazebo_calibration_v3_gate.yaml",
+    "r2_sha256": "410c9025d1968a49afe4f8c196b5dc73274d3443c426ec8f16d45b1fcda90940"
+  },
+  "affected_generator": {
+    "path": "protocol/generate_gazebo_calibration_v3_contract.py",
+    "r2_sha256": "fbc29991f1bff5bc7830b6aeca2abee9d1403a99e2421f92d2886308872ed2db"
+  },
+  "defect": "The generated v3 gate retained the inherited proposed_method block for L2 logistic regression and an inherited full-dataset-after-pilot block. The active v3 fields specified frozen HGB and affine-logit correctly, but the stale inherited method block made the implementation contract internally contradictory.",
+  "scientific_contract_changed": false,
+  "family_manifest_changed": false,
+  "scene_or_annotation_changed": false,
+  "calibrator_or_gate_definition_changed": false,
+  "data_observed": false,
+  "formal_static_preflight_run": false,
+  "formal_live_preflight_run": false,
+  "capture_performed": false,
+  "model_inference_performed": false,
+  "calibrator_fit_performed": false,
+  "test_iid_ood_access": false,
+  "resolution_rule": "Remove only the stale inherited blocks, add audit assertions that forbid them, deterministically regenerate affected implementation inputs, and issue a new R3 implementation lock. R2 must never authorize preflight or capture."
+}

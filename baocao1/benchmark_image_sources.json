@@ -1,0 +1,48 @@
+[
+  {
+    "image": "baocao1/figures/benchmark_20261007/refcoco_primary_cases.png",
+    "source": "new/outputs/pcrau_roborefer_primary_pilot300_20261007/cases.png",
+    "sha256": "abd1c825f9b1ab9ab71a90679f269e48476719840ba6d25f2361b777c625c3f4",
+    "source_image_unchanged": true
+  },
+  {
+    "image": "baocao1/figures/benchmark_20261007/refcoco_plus_cases.png",
+    "source": "new/outputs/refcoco_plus_val_pilot300_20261007/cases.png",
+    "sha256": "be2711aedbf1ffc7c3cbfd6975825a8c778b5d3748be8f8db5e0a21a2a239da7",
+    "source_image_unchanged": true
+  },
+  {
+    "image": "baocao1/figures/benchmark_20261007/refspatial_cases.png",
+    "source": "new/outputs/refspatial_location_frozen_20261007/cases.png",
+    "sha256": "354a802942fbb40fb841bdd83ae9823b9933793c38c37a5002299989642cce1f",
+    "source_image_unchanged": true
+  },
+  {
+    "image": "baocao1/figures/benchmark_20261007/refcoco_primary_cases_report.png",
+    "derived_scientific_figure": true,
+    "sample_ids": [
+      141430,
+      46495,
+      46497,
+      87337
+    ],
+    "source_predictions": "new/outputs/pcrau_roborefer_primary_pilot300_20261007/paired_evaluator.json",
+    "source_runtime": "new/outputs/refcoco_val_pilot300_20261007/runtime_manifest.json",
+    "sha256": "0f348933742cf2d8013aa8e92f6b71fb2fb0ece4a5f7996aaf23e27b481b1c06",
+    "points_and_annotations_changed": false
+  },
+  {
+    "image": "baocao1/figures/benchmark_20261007/refcoco_plus_cases_report.png",
+    "derived_scientific_figure": true,
+    "sample_ids": [
+      46312,
+      84801,
+      86146,
+      76854
+    ],
+    "source_predictions": "new/outputs/refcoco_plus_val_pilot300_20261007/paired_evaluator.json",
+    "source_runtime": "new/outputs/refcoco_plus_val_pilot300_20261007/runtime_manifest.json",
+    "sha256": "a3da1349dc43592c7406bb090f8bc13e2dfd9b761ed35114e1250d2fa46ac5bc",
+    "points_and_annotations_changed": false
+  }
+]

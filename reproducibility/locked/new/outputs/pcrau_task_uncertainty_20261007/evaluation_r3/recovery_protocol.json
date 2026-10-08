@@ -1,0 +1,10 @@
+{
+  "calibration_seed_start": 24082126,
+  "complete_train_dev_from": "evaluation_r2",
+  "no_IID_tuning": true,
+  "no_neural_retraining": true,
+  "r2_freeze_sha256": "6bbadab816701e474c44a2f321cd27ee5723bfeda4d7f4aa37df4abd3a9a9185",
+  "reason": "r2 calibration outputs incomplete; retain all r2 files",
+  "same_checkpoint_and_producer": true,
+  "source_sha256": "a18d5ca27ac974a54e8fa5b6a652857a4cccbd33ca249a77f2ab9396073bf30b"
+}

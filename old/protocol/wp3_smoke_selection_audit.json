@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "protocol_id": "wp3_feature_hook_smoke_selection_audit_v1",
+  "access_scope": "evaluator_only_not_loaded_by_inference_runner",
+  "source_audit_summary": "results/wp3_data_audit_20260821/audit_summary.json",
+  "sample_count": 15,
+  "distinct_family_count": 15,
+  "all_samples_train_split": true,
+  "coverage": {
+    "answerability_states": {
+      "ABSENT": 1,
+      "AMBIGUOUS": 2,
+      "FOUND": 8,
+      "INSUFFICIENT_EVIDENCE": 4
+    },
+    "family_categories": {
+      "ambiguous_absent": 3,
+      "direct_grounding": 2,
+      "front_behind_camera": 2,
+      "metric_comparison": 1,
+      "multi_anchor_depth_order": 2,
+      "nearer_farther": 2,
+      "occlusion_depth_evidence": 1,
+      "relation_2d": 1,
+      "shape_comparison": 1
+    },
+    "variants": {
+      "clean": 8,
+      "depth_corruption": 3,
+      "occlusion_view_counterfactual": 2,
+      "relation_counterfactual": 1,
+      "semantic_counterfactual": 1
+    },
+    "depth_dependent_samples": 7,
+    "multi_anchor_samples": 4
+  },
+  "entries": [
+    {
+      "sample_id": "wp2_family_0031__clean",
+      "category": "direct_grounding",
+      "answerability_state": "FOUND",
+      "relation": "direct",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0036__clean",
+      "category": "relation_2d",
+      "answerability_state": "FOUND",
+      "relation": "right_of",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0001__clean",
+      "category": "nearer_farther",
+      "answerability_state": "FOUND",
+      "relation": "nearer_than",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0013__depth_corruption",
+      "category": "front_behind_camera",
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "relation": "front_of",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0022__clean",
+      "category": "multi_anchor_depth_order",
+      "answerability_state": "FOUND",
+      "relation": "between_in_depth",
+      "anchor_count": 2
+    },
+    {
+      "sample_id": "wp2_family_0023__occlusion_view_counterfactual",
+      "category": "multi_anchor_depth_order",
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "relation": "between_in_depth",
+      "anchor_count": 2
+    },
+    {
+      "sample_id": "wp2_family_0026__occlusion_view_counterfactual",
+      "category": "occlusion_depth_evidence",
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "relation": "behind",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0041__clean",
+      "category": "ambiguous_absent",
+      "answerability_state": "AMBIGUOUS",
+      "relation": "semantic_reference",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0042__depth_corruption",
+      "category": "ambiguous_absent",
+      "answerability_state": "AMBIGUOUS",
+      "relation": "semantic_reference",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0043__clean",
+      "category": "ambiguous_absent",
+      "answerability_state": "ABSENT",
+      "relation": "semantic_reference",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0045__clean",
+      "category": "shape_comparison",
+      "answerability_state": "FOUND",
+      "relation": "more_elongated_than",
+      "anchor_count": 2
+    },
+    {
+      "sample_id": "wp2_family_0049__clean",
+      "category": "metric_comparison",
+      "answerability_state": "FOUND",
+      "relation": "taller_than",
+      "anchor_count": 2
+    },
+    {
+      "sample_id": "wp2_family_0006__depth_corruption",
+      "category": "nearer_farther",
+      "answerability_state": "INSUFFICIENT_EVIDENCE",
+      "relation": "farther_than",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0015__relation_counterfactual",
+      "category": "front_behind_camera",
+      "answerability_state": "FOUND",
+      "relation": "behind",
+      "anchor_count": 1
+    },
+    {
+      "sample_id": "wp2_family_0034__semantic_counterfactual",
+      "category": "direct_grounding",
+      "answerability_state": "FOUND",
+      "relation": "direct",
+      "anchor_count": 0
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "protocol_id": "roborefer_dataset_expansion_v2",
+  "lock_id": "go_dataset_expansion_design_lock",
+  "revision": "v2.0.1",
+  "status": "LOCKED_NO_CAPTURE_NO_TRAINING",
+  "locked_at_utc": "2026-08-21T07:06:37+00:00",
+  "amended_at_utc": "2026-08-21T07:26:03+00:00",
+  "amendments": [
+    {
+      "amendment_id": "reporting_policy_remove_planned_figure_v1",
+      "reason": "Remove manually drawn planned-count figure because it is not observed scientific evidence.",
+      "scope": "REPORTING_ONLY",
+      "before_any_capture_or_training": true,
+      "dataset_counts_seeds_splits_and_asset_partition_changed": false
+    }
+  ],
+  "decision": "GO_DATASET_EXPANSION_DESIGN_LOCK",
+  "allowed_next_action": "GO_DRY_RUN_30_PILOT_ONLY",
+  "training_performed": false,
+  "pilot_capture_performed": false,
+  "official_capture_performed": false,
+  "official_family_count_captured": 0,
+  "artifacts": {
+    "protocol/DATASET_EXPANSION_V2_CONTRACT.md": "7a17891349b3123a53ff2e25a3096070411fb7e6b813b4ea4d3f9f00c9556673",
+    "protocol/dataset_expansion_v2_spec.json": "2baf9d9750c73662ffd303474b008d13a4d4ef3068b474d77da28ee38b1c97ed",
+    "protocol/dataset_expansion_v2_asset_partition.json": "dd950e8ebc9affe1166525ec057d6288df59381cd9be8056f7f215503fe5b98d",
+    "protocol/dataset_expansion_v2_seed_lock.json": "264bce933ec282c6045eed6a1a02d8bba87381702e3e1989646ea6b9dc9f0ad0",
+    "protocol/dataset_split_v2.schema.json": "c1f40291bc2e0139594cb46fd4087ae45b90a6a45253fcf6a341c64090d5655e",
+    "protocol/validate_dataset_expansion_v2.py": "f37136181354771c3fa2e0f5056db65dfdc6e722c02b6f64a76914313090fa0f",
+    "protocol/test_dataset_expansion_v2.py": "868478247eb5a233cfa7863db007143b3ff722f98e0d6c244f04895f83f22605"
+  },
+  "assignment_commitments": {
+    "pilot_only": "45f0ec073d1b71d3e4a07336262c98e5ef875ac5befd2a585b51bdb16b3cb22c",
+    "development": "d6790084dab886bbca226c892256e0ee4ca86f9a51c6970b9c2c03b99bcbc2a2"
+  },
+  "planned_counts_not_captured": {
+    "pilot_only_families": 30,
+    "pilot_only_samples": 150,
+    "development_families": 400,
+    "development_samples": 2000,
+    "train_families": 320,
+    "dev_families": 80,
+    "development_primary_answerability_families": {
+      "FOUND": 160,
+      "INSUFFICIENT_EVIDENCE": 100,
+      "AMBIGUOUS": 70,
+      "ABSENT": 70
+    }
+  },
+  "asset_partition": {
+    "seen_new_assets": ["ycb_lemon_01", "ycb_mug_01"],
+    "test_ood_only_assets": ["ycb_pear_01", "ycb_plum_01", "ycb_tuna_fish_can_01"],
+    "excluded_assets": ["ycb_bleach_cleanser_01", "cup", "kettle"]
+  },
+  "sealed_namespaces_without_assignments_or_capture": [
+    "calibration_v2",
+    "test_iid_v2",
+    "test_ood_v2"
+  ],
+  "protected_files": {
+    "protocol/test_report.json": "34fc44d561309a0a94299bc57d6dbcce6972493fa5e278656b9de2714fcb721c",
+    "protocol/wp1_test_report.json": "861d996ccbb4f176abd97cb7da7ff9c7438b2a2268975695896f22c48a92be2e",
+    "protocol/wp2_test_report.json": "72ccfdd51339abd44125d09200962cf05fa42ce8d43c33cbfc76bf7a3e0a6f7f",
+    "protocol/wp3_contract_lock.json": "3d054b7e0d7c6cb4e5891a1c4a55578ee5ee402ac94b3b7a04e6667445a84253",
+    "protocol/wp3_feature_gate_lock.json": "5b5f9694f2832235cbc30a678a81d65b5a1f200e292ee09ccac844072c5c69fc",
+    "results/wp3_data_audit_20260821/audit_manifest.json": "1d506f1650cb8e724d7dc9d6abedd942af500371fabff37519b1c5086c00d15c",
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/dataset_index.json": "d4fe5be9286d9bdc5c56e84247e157d4a5fcc2afd3a9637c73e027484f4882fa",
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/family_manifest.json": "7014a1e454f2b253b62d0e995990439a1d2f36d6002965c4b59c99e99ce48184",
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/artifact_manifest.json": "dce432874c86f3928eccac21f3dd9c9e22d5b5ae56bd7378143a0293ce9ced7c"
+  },
+  "protected_tree_digests": {
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606": "d8e0479f65bc381207912f270f59de9808ca37e9520040d1ac498262e15875fc",
+    "results/roborefer_pilot_v0_20260813_173305": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c",
+    "results/roborefer_depth_sensitivity_v1_20260818_152700": "857e6b5e169b933572a41fb7251c9cbc78a4146d99f0f76845b27e9187472a9c"
+  },
+  "prohibitions": [
+    "NO_DEVELOPMENT_TRAINING",
+    "NO_OFFICIAL_400_FAMILY_CAPTURE",
+    "NO_CALIBRATION_ASSIGNMENT_CAPTURE_OR_READ",
+    "NO_TEST_IID_ASSIGNMENT_CAPTURE_OR_READ",
+    "NO_TEST_OOD_ASSIGNMENT_CAPTURE_OR_READ",
+    "NO_THOUSANDS_FAMILY_SCALE",
+    "NO_PILOT_REUSE_IN_OFFICIAL_DATA",
+    "NO_ORACLE_INFERENCE_INPUT"
+  ]
+}

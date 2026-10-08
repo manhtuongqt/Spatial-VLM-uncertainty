@@ -1,0 +1,108 @@
+{
+  "camera": {
+    "base_frame": "base_link",
+    "depth_unit": "metre",
+    "frame": "camera_color_optical_frame",
+    "intrinsics": {
+      "cx": 325.5436706543,
+      "cy": 249.9961547852,
+      "fx": 606.0816650391,
+      "fy": 605.7973022461
+    },
+    "resolution": [
+      640,
+      480
+    ],
+    "valid_depth_range_m": [
+      0.1,
+      2.0
+    ],
+    "view_joint_pose": [
+      1.3815,
+      -1.8273,
+      1.3428,
+      -1.2863,
+      -1.5708,
+      -1.9601
+    ]
+  },
+  "family_split_rule": {
+    "all_variants_same_parent_same_split": true,
+    "co_locate": [
+      "views",
+      "paraphrases",
+      "occlusion_variants",
+      "counterfactuals"
+    ]
+  },
+  "locked_at_utc": "2026-09-11T05:13:59.939425+00:00",
+  "min_visible_evidence_px": 120,
+  "model_inventory_sha256": "b6f886b8e4f2fb512b213bd5ec50ef9cacb2f08c4175a527c8241b53ce91a9c7",
+  "model_sha256": {
+    "b0_base": "042b822932ef41c36e775ab6dba0a0d1864f2c1fa0233bf29c7631584a85ffe7",
+    "b1_adapter": "c043faf8567d961c64ef39458530321adf57e3b13fc603bc85f559fcafe4d181"
+  },
+  "object_assets": [
+    "blue_cube",
+    "green_cube",
+    "mango",
+    "orange_cube",
+    "pink_cube",
+    "purple_cube",
+    "red_cube",
+    "ycb_apple",
+    "ycb_banana",
+    "ycb_cracker_box",
+    "ycb_mustard_bottle",
+    "ycb_orange",
+    "ycb_power_drill",
+    "ycb_sugar_box",
+    "ycb_tomato_soup_can",
+    "yellow_cube"
+  ],
+  "parent_family_count": 16,
+  "policies": {
+    "b2_closed": true,
+    "expand_only_after_qc_pass": true,
+    "no_sam2": true,
+    "test_iid_ood_sealed": true
+  },
+  "protocol_id": "gazebo_dev_v1",
+  "reference_frame": "image_viewer_left_to_right",
+  "relation": "horizontal_ordinal_ranking",
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "RoboRefer/API/api.py": "2ecab5b808e37d17dd08a8a558a23a1988f0506c74abc7951e2ff612a11c3135",
+    "protocol/gazebo_dev_b0_b1_eval.py": "6c9137ad9db7232c52c354e4da9b4617bcf6d7251c473a26c44cdde193e4cb9a",
+    "protocol/gazebo_dev_pipeline.py": "98d1665f6659a9524090dee64b8a266ffd8a79f8393f3f60df9e74b381676dd1",
+    "ur3/ur3_moveit_control/launch/ur3_susgrip_sim.launch.py": "eb39c70b4ef647d860e74c3ad127c2d4d4044e2528bc8e1953a77d13c12a6d81",
+    "ur3/ur3_moveit_control/urdf/d435i_wrist_camera.xacro": "950a835a158c7177c4b057c7eeddaf80116989e854f9ec49c97d18207ec9069f",
+    "ur3/ur3_perception/config/gazebo_dev_v1_annotations.yaml": "e46c3554f5835b8fc95a5a90456e04a10ee1ef15ec9bd7dcacf32225002a06de",
+    "ur3/ur3_perception/config/gazebo_dev_v1_gate.yaml": "84b50f83e31ce12d84d6c7891a986787ea505a65ec966028cd9c53fb719975e0",
+    "ur3/ur3_perception/config/gazebo_dev_v1_scenes.yaml": "677fe56a4c259a5ff39bbae5f93227aa4dd91c0f76b8aff7923160547d8c6e24",
+    "ur3/ur3_perception/config/roborefer_pilot_v0_annotations.yaml": "804f781ce0cd4ab0bfe28eb44c1c280e471a397ee4dae516e4b112a5d0aa0095",
+    "ur3/ur3_perception/config/roborefer_pilot_v0_gate.yaml": "6d3acca4490dbe83ddf0b0cc68a3f31fff6491b9e9f89cdce0cb1fe21edd8cc3",
+    "ur3/ur3_perception/config/roborefer_pilot_v0_scenes.yaml": "467ae5f6427034b6c0d4229c65c05dde76e64acf67b4ca93da14dedb259eaa3d",
+    "ur3/ur3_perception/launch/roborefer_pilot_capture.launch.py": "83c889f22fb8a346d7ad4f98a93cfc6bb9df41a3cb68b22cbb7d0db263d3590e",
+    "ur3/ur3_perception/schemas/roborefer_pilot_prediction.schema.json": "604ad5bf71eaeaddeaea1aa87f72ffb9bdeead17e851b6bf7b21cbac361ee6e0",
+    "ur3/ur3_perception/scripts/move_camera_to_view.py": "b71cb575ab88fa6af6bf206bbdaea1656de838365156a606b272631829ff8437",
+    "ur3/ur3_perception/scripts/roborefer_grounder.py": "62a516a23cced5a404c3cb876ec3d322022c5256849a7bd8c21968ef4b2eb95b",
+    "ur3/ur3_perception/scripts/roborefer_pilot_capture.py": "1243b2829b1b81e0380fceda25661aa9e39d1ec622ce529b1789a7bfa4685b19",
+    "ur3/ur3_perception/scripts/roborefer_pilot_evaluator.py": "657e17cf4c6529d22d2393e500bb5d2bde168c5713f06e44206922206d6cbf38",
+    "ur3/ur3_perception/scripts/roborefer_pilot_runner.py": "cf9c3135836669be42e306e1642f47b9896011c3133d8a68525ba99dcd10497e",
+    "ur3/ur3_perception/scripts/roborefer_pilot_validate.py": "f6b958b35da440339f0ad3e07be07da0139b464a69692db8fc760fbdeb318021",
+    "ur3/ur3_perception/scripts/spatial_point_utils.py": "30a9bd4ccaf4665781e9fc2d352d09540c88d8c4a702187fb158c10e0e2b2d02",
+    "ur3/ur_simulation_gz/launch/ur_sim_control.launch.py": "51a049a380624d30d904ff5cc49f8fe4b231c1c01bac49175ef588cc87b2b0a1",
+    "ur3/ur_simulation_gz/worlds/ur3_pick_place.sdf": "e50cc296d810adb712a42eb784cfd7fef8a6c5b2792735f46d46d9636182e652"
+  },
+  "split": "dev",
+  "state_counts": {
+    "ABSENT": 4,
+    "AMBIGUOUS": 4,
+    "FOUND": 4,
+    "INSUFFICIENT_EVIDENCE": 4
+  },
+  "status": "LOCKED_BEFORE_CAPTURE_AND_INFERENCE",
+  "tie_margin_normalized": 0.03,
+  "workspace_root": "/home/dhcn/ur_ws/src/myproject"
+}

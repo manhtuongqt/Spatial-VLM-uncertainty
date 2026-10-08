@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "amendment_id": "gazebo_train_uq_v2_pilot_r5_collision_free_occlusion_amendment_v1",
+  "status": "LOCKED_BEFORE_R5_DESIGN_AND_CAPTURE",
+  "locked_at_utc": "2026-09-14T05:14:00+00:00",
+  "scope": "geometry-pilot collision-free partial-occlusion repair only",
+  "parent_attempt": {
+    "protocol_id": "gazebo_train_uq_v2_pilot_r4",
+    "decision": "REJECT",
+    "verified_rows": 29,
+    "captured_rows": 32,
+    "reason": "cracker-box occluder caused collision/reset sensitivity and two context-visibility failures",
+    "contract_lock_sha256": "3fb0099e7b04481349b2fdefe475a214912446ad9ba2fe0c92ff04ee41fa6f9e",
+    "capture_lock_sha256": "8ef7afba7bbdcd08b8595be28b61901af1487aef2720f5d5a0e78ba19a517b13",
+    "geometry_qc_sha256": "1eb89fd278bd5b8321b880cd9cd783cddf71bb1cfa5fc081c68513d4516842e4",
+    "decision_sha256": "a409a4674b14eebd1cece85c5e85bca0ef8ba79d2462004ae7d123eda4e777c4"
+  },
+  "characterization_evidence": {
+    "usage": "engineering geometry only; forbidden from Train-UQ, Val-UQ and evaluation",
+    "v8_decision": "REJECT_4_OF_6_TARGET_YAW_PAIRS",
+    "v8_report_sha256": "8d50648b5c7b8594854d27b95170387edc467da5dac61cdfdd9b0097433533c8",
+    "v9_decision": "PASS_MANGO_2_OF_2_AND_COMBINED_6_OF_6",
+    "v9_report_sha256": "a9246dd7676743e291c851dbfea6d60076727af4d034345a61edff606074c5ac",
+    "selected_target_pixel_range": [53, 66],
+    "internal_margin": "20 <= target_visible_pixels <= 100",
+    "official_gate_unchanged": "1 <= target_visible_pixels < 120"
+  },
+  "unchanged_scientific_contract": {
+    "grounding_backbone": "frozen B0",
+    "hypothesis_metrics_and_selection_rule": "unchanged from hypothesis_lock.json",
+    "maximum_proposed_methods": 1,
+    "B1": "negative ablation not promoted",
+    "B2": "closed"
+  },
+  "r5_design_contract": {
+    "scene_count": 32,
+    "state_relation_design": "4 states x 4 relations x 2 repetitions",
+    "all_family_layout_and_pose_signatures_new": true,
+    "reuse_of_prior_pilot_rows": false,
+    "insufficient_evidence_mechanism": "controlled partial occlusion by static visual-only non-candidate uq_neutral_occluder label 39",
+    "capture_attempts": 1,
+    "no_inference_materialization_training_or_manipulation": true,
+    "advance_only_if_geometry_qc": "32/32 PASS"
+  },
+  "sealed_data": {
+    "gazebo_dev_answerability_v2": "SEALED_FOR_FIT_AND_SELECTION",
+    "gazebo_calibration": "SEALED",
+    "gazebo_test_iid": "SEALED",
+    "gazebo_test_ood": "SEALED"
+  },
+  "immutability": {
+    "wp4_locks_unchanged": true,
+    "r2_r3_r4_and_characterization_attempts_append_only": true,
+    "r5_contract_and_capture_lock_required_before_capture": true
+  }
+}

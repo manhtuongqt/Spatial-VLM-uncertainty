@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "pilot_status": "PILOT_COMPLETE",
+  "upgrade_gates_pass": false,
+  "hash_counts": {
+    "task_start": 1318,
+    "pilot": 1627,
+    "paired_report": 125
+  },
+  "all_protected_hashes_unchanged": true,
+  "source_snapshot_and_execution_lock_match": true,
+  "runner_tests_passed": 5,
+  "python_ast_files_passed": 5,
+  "local_links_checked": 44,
+  "checkpoint_hashes": {
+    "C1": "40e3e26a7e524ca0187f92204d7268ad69f824c9e015370ea2b6dd1160aa36c9",
+    "P1": "2bbff4da63d49d115f98a5dfd72db05ef90b200e9e6f96a586fa4c216e294347",
+    "P2": "b2762ed979f1b6d7e7f9eacf01a54aa85671c741783c45ffdd872e0a5e165f14"
+  },
+  "checkpoint_reload_metrics_match": true,
+  "C1_retrained_historical_M1_exact": {
+    "C1": true,
+    "M0": true,
+    "target": true
+  },
+  "dev_bypass_samples_exact": 336,
+  "family_plans_and_tiny_mask_counters_match": true,
+  "optimizer_steps": 544,
+  "baseline_dataset_active_profile_unchanged": true,
+  "IID_OOD_calibration_samples_verifier_robot_accessed": false,
+  "report_sha256": "24610e6a822d0d19246ffd25f1a54b6d83ac956aff9876da5685eb60f52ac3f1",
+  "roadmap_sha256": "b30c901cedb34fa218b5b84ff401caf2f575802ed0b833864bbe2a10e055c73e"
+}

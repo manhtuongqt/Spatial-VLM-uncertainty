@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "protocol_id": "roborefer_dataset_v2_1_relation_repair",
+  "camera_frame": "camera_color_optical_frame",
+  "parent_frame": "base_link",
+  "resolution_hw": [480, 640],
+  "intrinsics": {
+    "fx": 606.0816650391,
+    "fy": 605.7973022461,
+    "cx": 325.5436706543,
+    "cy": 249.9961547852
+  },
+  "diagnostic_v2_transform_base_to_camera": {
+    "position": [-0.1672357087459388, 0.21323098653867506, 0.40446507456669356],
+    "orientation_xyzw": [0.6228448105677731, 0.773370034169848, 0.11093336500468101, -0.04070529112611003]
+  },
+  "diagnostic_v2_view_joint_pose": [1.3815, -1.8273, 1.3428, -1.2863, -1.5708, -1.9601],
+  "repair_view": {
+    "camera_bin_id": "camera_v2_1_relation",
+    "requested_view_joint_pose": [1.7315, -2.0273, 1.2428, -1.5363, -1.5708, -1.9601],
+    "fk_transform_base_to_camera": {
+      "position": [-0.2237896707441316, 0.097809172992872, 0.47400813159982574],
+      "orientation_xyzw": [0.44750949094787457, 0.8126338394130747, 0.3052348488474048, -0.21492600029182413]
+    },
+    "optical_axis_in_base": [-0.07612129795917412, 0.6884511842471861, -0.7212770028953214],
+    "selection_stage": "STATIC_FK_BEFORE_REPAIR_CAPTURE",
+    "selection_evidence": "mustard/orange feasible in both physical depth orders under conservative projection and 0.035 m screening buffer",
+    "repair_capture_observations_used": 0
+  },
+  "diagnostic_observation_count": 115,
+  "observed_position_bounds": {
+    "min": [-0.1672357087531093, 0.2130857060442871, 0.4013098657710179],
+    "max": [-0.1669127019159804, 0.2132309865388006, 0.4044650745801278]
+  },
+  "role": "ENGINEERING_LAYOUT_PREDICTOR_ONLY_NOT_LABEL_SOURCE",
+  "source_calibration_path": "results/dataset_v2_relation_repair_20260821/audit/asset_depth_calibration.json",
+  "source_calibration_sha256": "a8a6ccaefa829337bb756e1b35fe970ac497c2bcc90f5cc53e80e3be2748d240",
+  "source_audit_path": "protocol/dataset_v2_relation_geometry_audit_230.json",
+  "source_audit_sha256": "d420e1a0bb3f015536f51719fdd5d3f874793a8495a80d7247ffb6f70668c008"
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pcra_u_development_feature_cache.schema.json",
+  "title": "Oracle-free pooled P-CRA-U development feature cache index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "scope",
+    "status",
+    "created_at_utc",
+    "model_inventory_sha256",
+    "feature_manifest_sha256",
+    "pooling_contract_sha256",
+    "features",
+    "sample_to_feature",
+    "counts",
+    "safety"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "protocol_id": {"const": "pcra_u_development_train_v1"},
+    "scope": {"enum": ["canary", "full"]},
+    "status": {"const": "COMPLETE"},
+    "created_at_utc": {"type": "string"},
+    "model_inventory_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "feature_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "pooling_contract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "features": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256", "bytes", "rgb_sha256", "depth_sha256", "tensor_shapes", "dtype"],
+        "properties": {
+          "path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "bytes": {"type": "integer", "minimum": 1},
+          "rgb_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "depth_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "tensor_shapes": {
+            "type": "object",
+            "const": {
+              "R0_GRID": [24, 32, 1152],
+              "D0_GRID": [24, 32, 1152],
+              "R0_THUMB": [1152],
+              "D0_THUMB": [1152]
+            }
+          },
+          "dtype": {"const": "torch.float16"}
+        }
+      }
+    },
+    "sample_to_feature": {
+      "type": "object",
+      "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["samples", "unique_feature_pairs", "newly_extracted", "reused_verified"],
+      "properties": {
+        "samples": {"type": "integer", "minimum": 1},
+        "unique_feature_pairs": {"type": "integer", "minimum": 1},
+        "newly_extracted": {"type": "integer", "minimum": 0},
+        "reused_verified": {"type": "integer", "minimum": 0}
+      }
+    },
+    "runtime": {"type": "object"},
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inference_manifest_only",
+        "evaluator_artifacts_read",
+        "training_performed",
+        "oracle_labels_cached",
+        "baseline_modified"
+      ],
+      "properties": {
+        "inference_manifest_only": {"const": true},
+        "evaluator_artifacts_read": {"const": false},
+        "training_performed": {"const": false},
+        "oracle_labels_cached": {"const": false},
+        "baseline_modified": {"const": false}
+      }
+    }
+  }
+}

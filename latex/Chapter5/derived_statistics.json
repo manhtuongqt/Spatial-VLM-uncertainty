@@ -1,0 +1,336 @@
+{
+  "provenance_sha256": {
+    "new/test_iid/evaluation/best_v2/predictions.jsonl": "4663f1a4870bfc3e9ff25939f994a351b18491cbcb78c34c3cf86efdc186691f",
+    "new/test_iid/evaluation/best_v2/decisions.jsonl": "fa12428bacd524a69e0f0a7fb03d641e1cede9c4b8f165024e55ba7898fa5275",
+    "new/test_iid/protocol/test_iid_eval_manifest.json": "a18e1f67fc28b2efa67573a1bf89eb484b39c44364477688175836f61f66e945"
+  },
+  "no_training_or_threshold_fitting": true,
+  "raw_risk_definition": "1 - predicted FOUND probability; no logistic/scalar fitting",
+  "raw_risk_metrics": {
+    "roc_auc": 0.9441601825915551,
+    "average_precision": 0.9622283830664533,
+    "brier": 0.10355276817626728,
+    "nll": 0.3343871044634997,
+    "ece_10": 0.07203226552891917,
+    "aurc": 0.2625601991496318
+  },
+  "calibrated_risk_metrics_verified": {
+    "roc_auc": 0.9454632223259675,
+    "average_precision": 0.9620209475193559,
+    "brier": 0.09614534285070162,
+    "nll": 0.2984760946090687,
+    "ece_10": 0.04646995180675784,
+    "aurc": 0.26045059712042623
+  },
+  "answerability_balanced_accuracy": 0.7861670642282886,
+  "source_macro_f1_excluding_weak_spatial": 0.5979249469279211,
+  "counterfactual_paired_source_changes": {
+    "semantic_counterfactual": {
+      "family_pairs": 200,
+      "mean_delta": {
+        "semantic": 0.22018928853794933,
+        "relation": -0.20893275579437615,
+        "spatial": -0.18234941789647563,
+        "depth": -0.22136850580078316,
+        "occlusion": -0.3296667655132478
+      },
+      "positive_delta_fraction": {
+        "semantic": 0.81,
+        "relation": 0.27,
+        "spatial": 0.285,
+        "depth": 0.18,
+        "occlusion": 0.175
+      }
+    },
+    "relation_counterfactual": {
+      "family_pairs": 200,
+      "mean_delta": {
+        "semantic": 0.056129348911345,
+        "relation": 0.07225688038393856,
+        "spatial": -0.17761940406169743,
+        "depth": -0.11916106605058303,
+        "occlusion": -0.14394708393258043
+      },
+      "positive_delta_fraction": {
+        "semantic": 0.65,
+        "relation": 0.65,
+        "spatial": 0.41,
+        "depth": 0.38,
+        "occlusion": 0.335
+      }
+    },
+    "depth_corruption": {
+      "family_pairs": 200,
+      "mean_delta": {
+        "semantic": 0.09499285889323801,
+        "relation": 0.015540013085119425,
+        "spatial": 0.007922838387312368,
+        "depth": 0.4303525229074876,
+        "occlusion": -0.08903263045009226
+      },
+      "positive_delta_fraction": {
+        "semantic": 0.645,
+        "relation": 0.475,
+        "spatial": 0.665,
+        "depth": 0.97,
+        "occlusion": 0.38
+      }
+    },
+    "occlusion_view_counterfactual": {
+      "family_pairs": 200,
+      "mean_delta": {
+        "semantic": -0.03978806540369988,
+        "relation": -0.041745481928810474,
+        "spatial": -0.002461234322981909,
+        "depth": -0.010395244292158167,
+        "occlusion": 0.18599678145954385
+      },
+      "positive_delta_fraction": {
+        "semantic": 0.335,
+        "relation": 0.375,
+        "spatial": 0.505,
+        "depth": 0.61,
+        "occlusion": 0.88
+      }
+    }
+  },
+  "expected_action_order": [
+    "EXECUTE",
+    "REOBSERVE",
+    "ASK_USER",
+    "ABSTAIN"
+  ],
+  "expected_vs_predicted_action_confusion": [
+    [
+      251,
+      78,
+      60,
+      31
+    ],
+    [
+      2,
+      262,
+      22,
+      57
+    ],
+    [
+      0,
+      0,
+      105,
+      0
+    ],
+    [
+      2,
+      35,
+      10,
+      85
+    ]
+  ],
+  "execute_error_overlap": {
+    "nonfound=False,outside=False": 249,
+    "nonfound=False,outside=True": 2,
+    "nonfound=True,outside=True": 3,
+    "nonfound=True,outside=False": 1
+  },
+  "nonfound_executed_by_truth": {
+    "INSUFFICIENT_EVIDENCE": 2,
+    "ABSENT": 2
+  },
+  "cases": {
+    "v211iid_family_000127__clean": {
+      "truth": "FOUND",
+      "predicted": "FOUND",
+      "map": [
+        110,
+        270
+      ],
+      "hit": true,
+      "risk": 0.07541904240134234,
+      "action": "EXECUTE",
+      "source": {
+        "depth": 0.11757213622331619,
+        "occlusion": 0.26740819215774536,
+        "relation": 0.22815649211406708,
+        "semantic": 0.09534945338964462,
+        "spatial": 0.005554925184696913
+      },
+      "truth_source": {
+        "semantic": 0,
+        "relation": 0,
+        "spatial": 0,
+        "depth": 0,
+        "occlusion": 0
+      }
+    },
+    "v211iid_family_000003__depth_corruption": {
+      "truth": "INSUFFICIENT_EVIDENCE",
+      "predicted": "INSUFFICIENT_EVIDENCE",
+      "map": [
+        130,
+        250
+      ],
+      "hit": true,
+      "risk": 0.947660065333723,
+      "action": "REOBSERVE",
+      "source": {
+        "depth": 0.9621075391769409,
+        "occlusion": 0.3720487952232361,
+        "relation": 0.04672495648264885,
+        "semantic": 0.015424552373588085,
+        "spatial": 0.0028009270317852497
+      },
+      "truth_source": {
+        "semantic": 0,
+        "relation": 0,
+        "spatial": 0,
+        "depth": 1,
+        "occlusion": 0
+      }
+    },
+    "v211iid_family_000031__clean": {
+      "truth": "AMBIGUOUS",
+      "predicted": "AMBIGUOUS",
+      "map": [
+        130,
+        290
+      ],
+      "hit": true,
+      "risk": 0.9924205836259182,
+      "action": "ASK_USER",
+      "source": {
+        "depth": 0.0010649627074599266,
+        "occlusion": 0.00407013762742281,
+        "relation": 0.6201616525650024,
+        "semantic": 0.6584175229072571,
+        "spatial": 0.9982993006706238
+      },
+      "truth_source": {
+        "semantic": 1,
+        "relation": 1,
+        "spatial": 1,
+        "depth": 0,
+        "occlusion": 0
+      }
+    },
+    "v211iid_family_000005__clean": {
+      "truth": "ABSENT",
+      "predicted": "ABSENT",
+      "map": [
+        270,
+        250
+      ],
+      "hit": false,
+      "risk": 0.7843364911509646,
+      "action": "ABSTAIN",
+      "source": {
+        "depth": 0.024053551256656647,
+        "occlusion": 0.4821852743625641,
+        "relation": 0.5841525197029114,
+        "semantic": 0.4547143280506134,
+        "spatial": 0.005220125429332256
+      },
+      "truth_source": {
+        "semantic": 1,
+        "relation": 1,
+        "spatial": 0,
+        "depth": 0,
+        "occlusion": 0
+      }
+    },
+    "v211iid_family_000127__semantic_counterfactual": {
+      "truth": "FOUND",
+      "predicted": "FOUND",
+      "map": [
+        270,
+        230
+      ],
+      "hit": true,
+      "risk": 0.028114317225539077,
+      "action": "EXECUTE",
+      "source": {
+        "depth": 0.0038244836032390594,
+        "occlusion": 0.004331501666456461,
+        "relation": 0.28537195920944214,
+        "semantic": 0.6566582322120667,
+        "spatial": 0.004198795650154352
+      },
+      "truth_source": {
+        "semantic": 0,
+        "relation": 0,
+        "spatial": 0,
+        "depth": 0,
+        "occlusion": 0
+      }
+    },
+    "v211iid_family_000002__clean": {
+      "truth": "FOUND",
+      "predicted": "INSUFFICIENT_EVIDENCE",
+      "map": [
+        170,
+        290
+      ],
+      "hit": false,
+      "risk": 0.5022270481474089,
+      "action": "REOBSERVE",
+      "source": {
+        "depth": 0.10818895697593689,
+        "occlusion": 0.5370413661003113,
+        "relation": 0.16885694861412048,
+        "semantic": 0.30321571230888367,
+        "spatial": 0.002182716503739357
+      },
+      "truth_source": {
+        "semantic": 0,
+        "relation": 0,
+        "spatial": 0,
+        "depth": 0,
+        "occlusion": 0
+      }
+    },
+    "v211iid_family_000165__relation_counterfactual": {
+      "truth": "FOUND",
+      "predicted": "INSUFFICIENT_EVIDENCE",
+      "map": [
+        290,
+        170
+      ],
+      "hit": false,
+      "risk": 0.8309585205241191,
+      "action": "REOBSERVE",
+      "source": {
+        "depth": 0.49224910140037537,
+        "occlusion": 0.6992543935775757,
+        "relation": 0.4315841495990753,
+        "semantic": 0.1127954050898552,
+        "spatial": 0.0060975621454417706
+      },
+      "truth_source": {
+        "semantic": 0,
+        "relation": 0,
+        "spatial": 0,
+        "depth": 0,
+        "occlusion": 0
+      }
+    }
+  },
+  "v3_observed_history": {
+    "24082026": {
+      "max_observed_dev_grounding": 0.9104477611940298,
+      "epoch_at_max": 16,
+      "history_epochs": 20,
+      "best_json_exists": false
+    },
+    "24082027": {
+      "max_observed_dev_grounding": 0.8835820895522388,
+      "epoch_at_max": 16,
+      "history_epochs": 20,
+      "best_json_exists": false
+    },
+    "24082028": {
+      "max_observed_dev_grounding": 0.8985074626865671,
+      "epoch_at_max": 16,
+      "history_epochs": 20,
+      "best_json_exists": false
+    }
+  }
+}

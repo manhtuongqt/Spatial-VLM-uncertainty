@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur3_static_preview">
+  <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
+  <xacro:include filename="../../ur3/ur3_moveit_control/urdf/d435i_wrist_camera.xacro"/>
+  <xacro:include filename="../../ur3/susgrip_2f/susgrip_2f_gazebo/urdf/susgrip_2f_gazebo.urdf.xacro"/>
+  <xacro:arg name="sim_ignition" default="false"/>
+  <link name="world"/>
+  <xacro:ur_robot
+    name="ur3_static_preview"
+    tf_prefix=""
+    parent="world"
+    joint_limits_parameters_file="$(find ur_description)/config/ur3/joint_limits.yaml"
+    kinematics_parameters_file="$(find ur_description)/config/ur3/default_kinematics.yaml"
+    physical_parameters_file="$(find ur_description)/config/ur3/physical_parameters.yaml"
+    visual_parameters_file="$(find ur_description)/config/ur3/visual_parameters.yaml"
+    generate_ros2_control_tag="false"
+    sim_ignition="true">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </xacro:ur_robot>
+  <xacro:susgrip_2f_gazebo prefix="" parent="tool0">
+    <origin xyz="0 0 0.015" rpy="0 0 0"/>
+  </xacro:susgrip_2f_gazebo>
+  <link name="gripper_tcp"/>
+  <joint name="gripper_tcp_joint" type="fixed">
+    <parent link="gripper_body"/>
+    <child link="gripper_tcp"/>
+    <origin xyz="0 0 0.14" rpy="0 0 0"/>
+  </joint>
+  <xacro:d435i_wrist_camera
+    parent="tool0"
+    sim_enabled="true"
+    mount_xyz="0.001623 -0.106306 0.013148"
+    mount_rpy="0.163640 -1.535191 1.364251"
+    update_rate="30"
+    depth_noise_stddev="0.0"/>
+</robot>

@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "inventory_id": "ycb_inventory_v2_20260821",
+  "status": "ASSET_QUALIFICATION_ONLY",
+  "source": {
+    "dataset": "ai-habitat/ycb",
+    "dataset_url": "https://huggingface.co/datasets/ai-habitat/ycb",
+    "mesh_tree_url": "https://huggingface.co/datasets/ai-habitat/ycb/tree/main/meshes",
+    "revision": "29be64fdd95b4881f244152ad653058e0a48c28f",
+    "license": "CC BY 4.0",
+    "downloaded_at": "2026-08-21T13:00:00+07:00"
+  },
+  "integration_policy": {
+    "changes_locked_wp0_wp3_or_wp2_dataset": false,
+    "gallery_is_training_or_test_data": false,
+    "instance_labels_are_unique": true,
+    "semantic_class_is_shared_only_by_clones": true,
+    "next_gate": "LOCK_DATASET_EXPANSION_CONTRACT_BEFORE_CAPTURE"
+  },
+  "required_class_counts": {
+    "apple": 3,
+    "orange": 3,
+    "banana": 3,
+    "lemon": 1,
+    "pear": 1,
+    "plum": 1,
+    "tuna_fish_can": 1,
+    "mug": 1,
+    "bleach_cleanser": 1
+  },
+  "assets": [
+    {
+      "semantic_class": "tuna_fish_can",
+      "ycb_id": "007_tuna_fish_can",
+      "glb_sha256": "8cffe68b2e891abbfeeaf8c7dce9dda92ad480b78b0307821975284c27a67d41"
+    },
+    {
+      "semantic_class": "banana",
+      "ycb_id": "011_banana",
+      "glb_sha256": "a759540444d3160b7822153e956087d9cf970f7eb8531af47b28b574a785b652"
+    },
+    {
+      "semantic_class": "apple",
+      "ycb_id": "013_apple",
+      "glb_sha256": "be475ac908f3a5bf20c3632596a08ebeb204be9b3a1f7fd3d19cc194b065867d"
+    },
+    {
+      "semantic_class": "lemon",
+      "ycb_id": "014_lemon",
+      "glb_sha256": "37e392b0f00a4e9c161a7bc299cb97d87d15b5c62a45ad3712bfd4cd3f1deff9"
+    },
+    {
+      "semantic_class": "pear",
+      "ycb_id": "016_pear",
+      "glb_sha256": "847bbcd074965e4195601ab979721b3c0cffecaf36ed8db3e70cc27f8ba01680"
+    },
+    {
+      "semantic_class": "orange",
+      "ycb_id": "017_orange",
+      "glb_sha256": "e163af70346cb708a711fcccbe39a3f08166d78bbd85d45366f9ea7911369d85"
+    },
+    {
+      "semantic_class": "plum",
+      "ycb_id": "018_plum",
+      "glb_sha256": "bd1a0fc06836adef27524d07e20eaa00d75e60f24c14bab176e9c07d62a00aa1"
+    },
+    {
+      "semantic_class": "bleach_cleanser",
+      "ycb_id": "021_bleach_cleanser",
+      "glb_sha256": "b713c3a38b6324ebf60ab6d9e9349cf5d27cba6a8e5decdc2ffffe89f305d79e"
+    },
+    {
+      "semantic_class": "mug",
+      "ycb_id": "025_mug",
+      "glb_sha256": "01953e16a8039c14d9009084f7d17ec4660b97992735d357d4b46bb469717fe7"
+    }
+  ],
+  "instances": [
+    {"name": "ycb_banana_01", "semantic_class": "banana", "label": 101, "x": -0.72, "y": 0.40, "yaw": -0.40},
+    {"name": "ycb_apple_01", "semantic_class": "apple", "label": 102, "x": -0.36, "y": 0.40, "yaw": 0.00},
+    {"name": "ycb_orange_01", "semantic_class": "orange", "label": 103, "x": 0.00, "y": 0.40, "yaw": 0.20},
+    {"name": "ycb_lemon_01", "semantic_class": "lemon", "label": 104, "x": 0.36, "y": 0.40, "yaw": 0.30},
+    {"name": "ycb_pear_01", "semantic_class": "pear", "label": 105, "x": 0.72, "y": 0.40, "yaw": -0.20},
+
+    {"name": "ycb_banana_02", "semantic_class": "banana", "label": 106, "x": -0.72, "y": 0.00, "yaw": 0.20},
+    {"name": "ycb_apple_02", "semantic_class": "apple", "label": 107, "x": -0.36, "y": 0.00, "yaw": 0.40},
+    {"name": "ycb_orange_02", "semantic_class": "orange", "label": 108, "x": 0.00, "y": 0.00, "yaw": -0.30},
+    {"name": "ycb_plum_01", "semantic_class": "plum", "label": 109, "x": 0.36, "y": 0.00, "yaw": 0.60},
+    {"name": "ycb_tuna_fish_can_01", "semantic_class": "tuna_fish_can", "label": 110, "x": 0.72, "y": 0.00, "yaw": 0.10},
+
+    {"name": "ycb_banana_03", "semantic_class": "banana", "label": 111, "x": -0.72, "y": -0.40, "yaw": 0.70},
+    {"name": "ycb_apple_03", "semantic_class": "apple", "label": 112, "x": -0.36, "y": -0.40, "yaw": -0.50},
+    {"name": "ycb_orange_03", "semantic_class": "orange", "label": 113, "x": 0.00, "y": -0.40, "yaw": 0.50},
+    {"name": "ycb_mug_01", "semantic_class": "mug", "label": 114, "x": 0.36, "y": -0.40, "yaw": -1.00},
+    {"name": "ycb_bleach_cleanser_01", "semantic_class": "bleach_cleanser", "label": 115, "x": 0.72, "y": -0.40, "yaw": 0.20}
+  ],
+  "main_world_policy": {
+    "base_world": "ur3/ur_simulation_gz/worlds/ur3_pick_place.sdf",
+    "output_world": "ur3/ur_simulation_gz/worlds/ur3_pick_place_inventory_v2.sdf",
+    "world_name_unchanged": "ur3_pick_place",
+    "existing_instances_count_toward_requested_total": true,
+    "existing_instances": {
+      "banana": {"name": "ycb_banana", "label": 25},
+      "apple": {"name": "ycb_apple", "label": 26},
+      "orange": {"name": "ycb_orange", "label": 27}
+    },
+    "remove_base_models": ["cup", "kettle"],
+    "omit_inventory_models": ["bleach_cleanser"]
+  },
+  "main_world_additions": [
+    {"name": "ycb_banana_02", "semantic_class": "banana", "label": 101, "x": -0.70, "y": 0.86, "yaw": -0.45, "mass_kg": 0.12},
+    {"name": "ycb_apple_02", "semantic_class": "apple", "label": 102, "x": -0.35, "y": 0.86, "yaw": 0.20, "mass_kg": 0.12},
+    {"name": "ycb_orange_02", "semantic_class": "orange", "label": 103, "x": 0.00, "y": 0.86, "yaw": -0.20, "mass_kg": 0.13},
+    {"name": "ycb_lemon", "semantic_class": "lemon", "label": 104, "x": 0.35, "y": 0.86, "yaw": 0.35, "mass_kg": 0.10},
+    {"name": "ycb_pear", "semantic_class": "pear", "label": 105, "x": 0.70, "y": 0.86, "yaw": -0.30, "mass_kg": 0.15},
+
+    {"name": "ycb_banana_03", "semantic_class": "banana", "label": 106, "x": -0.70, "y": 1.12, "yaw": 0.40, "mass_kg": 0.12},
+    {"name": "ycb_apple_03", "semantic_class": "apple", "label": 107, "x": -0.35, "y": 1.12, "yaw": -0.35, "mass_kg": 0.12},
+    {"name": "ycb_orange_03", "semantic_class": "orange", "label": 108, "x": 0.00, "y": 1.12, "yaw": 0.40, "mass_kg": 0.13},
+    {"name": "ycb_plum", "semantic_class": "plum", "label": 109, "x": 0.35, "y": 1.12, "yaw": 0.55, "mass_kg": 0.08},
+    {"name": "ycb_tuna_fish_can", "semantic_class": "tuna_fish_can", "label": 110, "x": 0.70, "y": 1.12, "yaw": 0.10, "mass_kg": 0.12},
+
+    {"name": "ycb_mug", "semantic_class": "mug", "label": 111, "x": 0.00, "y": 1.36, "yaw": -0.80, "mass_kg": 0.15}
+  ]
+}

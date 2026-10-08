@@ -1,0 +1,2555 @@
+schema_version: 1
+protocol_id: gazebo_calibration_v3
+expected_scene_count: 128
+capture_mode: no_manipulation_shadow
+random_seed: 15092026
+view_joint_pose:
+- 1.3815
+- -1.8273
+- 1.3428
+- -1.2863
+- -1.5708
+- -1.9601
+camera_frame: camera_color_optical_frame
+base_frame: base_link
+coordinate_suffix: If exactly one requested target is identifiable and sufficiently visible, return exactly POINT [(x, y)], using one normalized
+  image point with x and y between 0 and 1. If the request is ambiguous, the target is absent, or visual evidence is insufficient, return exactly
+  ABSTAIN. Return no other text.
+objects:
+  red_cube:
+    z: 0.03
+    storage_pose:
+    - -0.65
+    - 1.4
+    - 0.0
+  blue_cube:
+    z: 0.025
+    storage_pose:
+    - -0.45
+    - 1.4
+    - 0.0
+  green_cube:
+    z: 0.025
+    storage_pose:
+    - -0.25
+    - 1.4
+    - 0.0
+  yellow_cube:
+    z: 0.025
+    storage_pose:
+    - -0.05
+    - 1.4
+    - 0.0
+  orange_cube:
+    z: 0.025
+    storage_pose:
+    - 0.15
+    - 1.4
+    - 0.0
+  purple_cube:
+    z: 0.025
+    storage_pose:
+    - 0.35
+    - 1.4
+    - 0.0
+  pink_cube:
+    z: 0.025
+    storage_pose:
+    - 0.55
+    - 1.4
+    - 0.0
+  ycb_cracker_box:
+    z: 0.10671
+    storage_pose:
+    - -0.02
+    - 0.85
+    - 0.0
+  ycb_sugar_box:
+    z: 0.088107
+    storage_pose:
+    - 0.2
+    - 0.85
+    - 0.0
+  ycb_tomato_soup_can:
+    z: 0.050948
+    storage_pose:
+    - -0.55
+    - 1.1
+    - 0.0
+  ycb_mustard_bottle:
+    z: 0.095695
+    storage_pose:
+    - -0.38
+    - 1.1
+    - 0.0
+  ycb_banana:
+    z: 0.018376
+    storage_pose:
+    - -0.3
+    - 0.85
+    - 0.25
+  ycb_apple:
+    z: 0.03771
+    storage_pose:
+    - -0.21
+    - 1.1
+    - 0.0
+  ycb_orange:
+    z: 0.03701
+    storage_pose:
+    - -0.04
+    - 1.1
+    - 0.0
+  ycb_power_drill:
+    z: 0.028689
+    storage_pose:
+    - -0.62
+    - 0.85
+    - -0.25
+  mango:
+    z: 0.03
+    storage_pose:
+    - 0.38
+    - 0.85
+    - 0.35
+  uq_neutral_occluder:
+    z: 0.06
+    storage_pose:
+    - -0.6
+    - 1.2
+    - 0.0
+scenes:
+- scene_id: gazebo_calibration_v3_120
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_120
+  layout_id: gazebo_calibration_v3_layout_120
+  layout_signature_sha256: 69a9e02f62f4e118de4b9e252a063ddf7d5f56850d2e4e4944dbd72f4d14d78e
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - 0.021199999999999997
+    - 0.45720000000000005
+    - 0.5569999999999999
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.009399999999999997
+    - 0.1323
+    - 0.523
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_125
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_125
+  layout_id: gazebo_calibration_v3_layout_125
+  layout_signature_sha256: 250ae1085c3f6ab2f36071a1038669255f3b60aadab4ee04012d96474f97f32f
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_orange:
+    - 0.0275
+    - 0.46410000000000007
+    - 0.758
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.018800000000000004
+    - 0.1365
+    - 0.51
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_043
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_043
+  layout_id: gazebo_calibration_v3_layout_043
+  layout_signature_sha256: 13655a0438ec4d1d73a593052361c8562e10af6f27f7179fdf2bc552918e92c7
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.2125
+    - 0.11660000000000001
+    - 0.6974
+    ycb_apple:
+    - -0.2071
+    - 0.34060000000000007
+    - 0.45649999999999996
+    ycb_orange:
+    - -0.2277
+    - 0.34060000000000007
+    - 0.5516000000000001
+- scene_id: gazebo_calibration_v3_009
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_009
+  layout_id: gazebo_calibration_v3_layout_009
+  layout_signature_sha256: 956f701b066620913906e005c1f1d9ebca7e383b5a7923bc353acf3d6a26265a
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.2211
+    - 0.1072
+    - 0.6038
+    ycb_orange:
+    - -0.23070000000000002
+    - 0.27919999999999995
+    - 0.6839000000000001
+    mango:
+    - -0.2003
+    - 0.45619999999999994
+    - 0.772
+- scene_id: gazebo_calibration_v3_022
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_022
+  layout_id: gazebo_calibration_v3_layout_022
+  layout_signature_sha256: ee141979c926ecfba740642fe1d53dd64d298693f3e31d0f1ec49889e2071355
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.2243
+    - 0.1318
+    - 0.5739
+    ycb_apple:
+    - -0.2339
+    - 0.3008
+    - 0.6890000000000001
+    ycb_orange:
+    - -0.20350000000000001
+    - 0.4758
+    - 0.5271
+- scene_id: gazebo_calibration_v3_056
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_056
+  layout_id: gazebo_calibration_v3_layout_056
+  layout_signature_sha256: 98942537bf207921ffede9c0b4ce9a4bbd4fdb255baca8b69a9431b9f2f2a945
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.22169999999999998
+    - 0.12000000000000001
+    - 0.7428000000000001
+    ycb_apple:
+    - -0.20829999999999999
+    - 0.338
+    - 0.6979000000000001
+    ycb_orange:
+    - -0.2329
+    - 0.338
+    - 0.788
+- scene_id: gazebo_calibration_v3_096
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_096
+  layout_id: gazebo_calibration_v3_layout_096
+  layout_signature_sha256: 1894263b02849690c791bc3678952d43f3d68744fa8fec186819982b82a515b7
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - 0.022500000000000003
+    - 0.47029999999999994
+    - 0.7300000000000001
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.0162
+    - 0.3887
+    - 0.44699999999999995
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_100
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_100
+  layout_id: gazebo_calibration_v3_layout_100
+  layout_signature_sha256: 745e6939678fd46fb4cc07f4774f3a60f28a0f120e310ba237e532594121391b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - 0.0349
+    - 0.4857
+    - 0.793
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.005199999999999995
+    - 0.38310000000000005
+    - 0.636
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_065
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_065
+  layout_id: gazebo_calibration_v3_layout_065
+  layout_signature_sha256: 02ae4e551cda2f66b2d32c3dc7f50b931a58b7b660f3c86cc9ea842e231a083b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2136
+    - 0.15960000000000002
+    - 0.3295
+    ycb_orange:
+    - -0.2452
+    - 0.4476
+    - 0.5246
+- scene_id: gazebo_calibration_v3_097
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_097
+  layout_id: gazebo_calibration_v3_layout_097
+  layout_signature_sha256: ff73c80fb5ab13958458d994d55bcac47d2cbdafcb11fe43290d3f41e9fddbba
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.028499999999999998
+    - 0.46859999999999996
+    - 0.619
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.014299999999999995
+    - 0.385
+    - 0.53
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_048
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_048
+  layout_id: gazebo_calibration_v3_layout_048
+  layout_signature_sha256: 3858d58bdbd44a2b5f35d2bfffd18043375f560f947311ae8723b8b736904eb4
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.20500000000000002
+    - 0.2726
+    - 0.44570000000000004
+    ycb_orange:
+    - -0.2296
+    - 0.2726
+    - 0.5558000000000001
+    mango:
+    - -0.2172
+    - 0.46659999999999996
+    - 0.7299000000000001
+- scene_id: gazebo_calibration_v3_079
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_079
+  layout_id: gazebo_calibration_v3_layout_079
+  layout_signature_sha256: a2996f33e2610a3ba834cab828d546e13e593975f5a6230ed0cd701907f0d9fd
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.2147
+    - 0.1628
+    - 0.46220000000000006
+    mango:
+    - -0.2283
+    - 0.4248
+    - 0.6543
+- scene_id: gazebo_calibration_v3_064
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_064
+  layout_id: gazebo_calibration_v3_layout_064
+  layout_signature_sha256: a6400c7d5396bb4bbd249007f62fc819b37cce40a0f7c4b594281dc3c9c956dd
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.2052
+    - 0.1476
+    - 0.2839
+    mango:
+    - -0.2548
+    - 0.4526
+    - 0.4760000000000001
+- scene_id: gazebo_calibration_v3_091
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_091
+  layout_id: gazebo_calibration_v3_layout_091
+  layout_signature_sha256: 1680050a53cd6fb09b7d49237fd592a2c7eca2fe3dc8169146080084cab31f25
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.20400000000000001
+    - 0.1772
+    - 0.579
+    ycb_orange:
+    - -0.2356
+    - 0.3872
+    - 0.7441000000000001
+- scene_id: gazebo_calibration_v3_061
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_061
+  layout_id: gazebo_calibration_v3_layout_061
+  layout_signature_sha256: 8ed7aacb3685ea69dd521230093d509d35d28147526d28d56a398fde4e5d1bc3
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.21019999999999997
+    - 0.13340000000000002
+    - 0.7158000000000001
+    ycb_apple:
+    - -0.2048
+    - 0.34940000000000004
+    - 0.6709
+    ycb_orange:
+    - -0.2254
+    - 0.34940000000000004
+    - 0.751
+- scene_id: gazebo_calibration_v3_094
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_094
+  layout_id: gazebo_calibration_v3_layout_094
+  layout_signature_sha256: d2f855a2327c2b8c522a66bfc1c8b2ec3465c1d13856aeaac688dc31c6d0a850
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.2037
+    - 0.176
+    - 0.5318
+    mango:
+    - -0.2533
+    - 0.403
+    - 0.7749000000000001
+- scene_id: gazebo_calibration_v3_115
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_115
+  layout_id: gazebo_calibration_v3_layout_115
+  layout_signature_sha256: 568f462f7ac8e55e12bc6971c8441275e215e21fc6c8991d566c42a35711a299
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - 0.03860000000000001
+    - 0.47370000000000007
+    - 0.86
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.012899999999999998
+    - 0.1336
+    - 0.667
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_127
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_127
+  layout_id: gazebo_calibration_v3_layout_127
+  layout_signature_sha256: ad172139fc4b77f38d4f0c54b9b89d451c0d997e770f51d3269e8376241f4126
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_orange:
+    - 0.027499999999999997
+    - 0.4667
+    - 0.7969999999999999
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.019299999999999994
+    - 0.1331
+    - 0.6960000000000002
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_121
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_121
+  layout_id: gazebo_calibration_v3_layout_121
+  layout_signature_sha256: 33331fe797f486f28ae330704dae78df53e37dea06131218d517afc4fc3ee294
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_orange:
+    - 0.030100000000000002
+    - 0.4697
+    - 0.6950000000000001
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.017899999999999996
+    - 0.1286
+    - 0.5940000000000001
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_019
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_019
+  layout_id: gazebo_calibration_v3_layout_019
+  layout_signature_sha256: ab9598983bf191d36897b9b41d4e437954fcd4d3829d29d9e6acf5c87f7cc141
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_orange:
+    - -0.2281
+    - 0.14179999999999998
+    - 0.6521
+    mango:
+    - -0.19770000000000001
+    - 0.2918
+    - 0.7051999999999999
+    ycb_apple:
+    - -0.2073
+    - 0.4728
+    - 0.8203
+- scene_id: gazebo_calibration_v3_083
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_083
+  layout_id: gazebo_calibration_v3_layout_083
+  layout_signature_sha256: 3077b24d4bfc85074792566da06064a38ba980614f6208ea08051156853a78df
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.1903
+    - 0.19399999999999998
+    - 0.5479
+    mango:
+    - -0.23989999999999997
+    - 0.43
+    - 0.6950000000000002
+- scene_id: gazebo_calibration_v3_117
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_117
+  layout_id: gazebo_calibration_v3_layout_117
+  layout_signature_sha256: 5d0264e472166107cba81d746a147d662fbb6ebe4bcc3e827dead3931fdd8344
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - 0.027599999999999996
+    - 0.46280000000000004
+    - 0.59
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.021299999999999996
+    - 0.13890000000000002
+    - 0.58
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_084
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_084
+  layout_id: gazebo_calibration_v3_layout_084
+  layout_signature_sha256: 44a1ab9d15e813fd18c67e55f086eb343a6c899fa609db9e411999ac83a0e1b1
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2192
+    - 0.1772
+    - 0.5595
+    ycb_orange:
+    - -0.2328
+    - 0.43019999999999997
+    - 0.7246000000000001
+- scene_id: gazebo_calibration_v3_111
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_111
+  layout_id: gazebo_calibration_v3_layout_111
+  layout_signature_sha256: 9bb35d85c4bd053b30cb261ba02074e0c02073d1d500a28630c92258e2017c3a
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.0228
+    - 0.11889999999999999
+    - 0.5940000000000001
+    ycb_orange:
+    - 0.025599999999999998
+    - 0.1913
+    - 0.7050000000000001
+- scene_id: gazebo_calibration_v3_110
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_110
+  layout_id: gazebo_calibration_v3_layout_110
+  layout_signature_sha256: 1ad27dd1377059e7c4052e8ac97413d73fe0c634f3cbaf49495d6ca41b52a411
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.0258
+    - 0.1961
+    - 0.6740000000000002
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.015099999999999999
+    - 0.121
+    - 0.626
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_033
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_033
+  layout_id: gazebo_calibration_v3_layout_033
+  layout_signature_sha256: 9333868f9c249fed602e6e9fa95a7411a7da8d67f89e9872e49cf4758c784c09
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.214
+    - 0.256
+    - 0.32609999999999995
+    ycb_orange:
+    - -0.23459999999999998
+    - 0.256
+    - 0.4662
+    mango:
+    - -0.21819999999999998
+    - 0.474
+    - 0.6093
+- scene_id: gazebo_calibration_v3_063
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_063
+  layout_id: gazebo_calibration_v3_layout_063
+  layout_signature_sha256: 726cb7bdbc3c65fd1fb7d9aa7a2f7aced1ec00f9092bb0606ef02b86d092589c
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.214
+    - 0.1282
+    - 0.791
+    ycb_apple:
+    - -0.2086
+    - 0.34420000000000006
+    - 0.6751000000000001
+    ycb_orange:
+    - -0.22920000000000001
+    - 0.34420000000000006
+    - 0.7552000000000001
+- scene_id: gazebo_calibration_v3_070
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_070
+  layout_id: gazebo_calibration_v3_layout_070
+  layout_signature_sha256: 48edcde3fb68ead9c6448e108531e73868415b15903197c15db8b8662a4c4f0a
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.1961
+    - 0.155
+    - 0.39249999999999996
+    mango:
+    - -0.2457
+    - 0.46
+    - 0.5596
+- scene_id: gazebo_calibration_v3_021
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_021
+  layout_id: gazebo_calibration_v3_layout_021
+  layout_signature_sha256: ea034e845a3126ac0fd85bb0ce94f3d40d0e6e5f35fa9ee0c6632b24a60dc0e9
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_orange:
+    - -0.2394
+    - 0.137
+    - 0.6463
+    mango:
+    - -0.209
+    - 0.287
+    - 0.7344
+    ycb_apple:
+    - -0.21860000000000002
+    - 0.46799999999999997
+    - 0.8495000000000001
+- scene_id: gazebo_calibration_v3_020
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_020
+  layout_id: gazebo_calibration_v3_layout_020
+  layout_signature_sha256: 7b49b17ac3b3cef604781cc79595a5abde2e70ab3967e92389975ce771f5b8ef
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.2235
+    - 0.127
+    - 0.4637
+    ycb_apple:
+    - -0.2331
+    - 0.296
+    - 0.5788
+    ycb_orange:
+    - -0.20270000000000002
+    - 0.471
+    - 0.6939000000000001
+- scene_id: gazebo_calibration_v3_105
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_105
+  layout_id: gazebo_calibration_v3_layout_105
+  layout_signature_sha256: 945821b67a80fee12632f5e894bc1cba7a709076cc1c191f2ba81bdea64bb20b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.016499999999999994
+    - 0.1177
+    - 0.528
+    ycb_orange:
+    - 0.0317
+    - 0.1943
+    - 0.639
+- scene_id: gazebo_calibration_v3_008
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_008
+  layout_id: gazebo_calibration_v3_layout_008
+  layout_signature_sha256: 182efd8b136a7a5852bb1e1e4da930b1e2b325337901596ef85b6364b4212bc6
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - -0.21270000000000003
+    - 0.0954
+    - 0.4482
+    mango:
+    - -0.2223
+    - 0.2683999999999999
+    - 0.5363
+    ycb_apple:
+    - -0.23190000000000002
+    - 0.4573999999999999
+    - 0.6164000000000001
+- scene_id: gazebo_calibration_v3_031
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_031
+  layout_id: gazebo_calibration_v3_layout_031
+  layout_signature_sha256: f7530eb849a01719d6fd636f8820991cc3dd0ab16bacd33fc6d718eae948912c
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.2064
+    - 0.1236
+    - 0.6676
+    ycb_apple:
+    - -0.216
+    - 0.2696
+    - 0.7827000000000001
+    ycb_orange:
+    - -0.2256
+    - 0.4366
+    - 0.8978
+- scene_id: gazebo_calibration_v3_018
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_018
+  layout_id: gazebo_calibration_v3_layout_018
+  layout_signature_sha256: 919ffd0852055f0e31c5b0bac008f70b349b930449dd1223a4be299f1cdb0648
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.2197
+    - 0.14479999999999998
+    - 0.49449999999999994
+    ycb_apple:
+    - -0.22930000000000003
+    - 0.3138
+    - 0.5846
+    ycb_orange:
+    - -0.19890000000000002
+    - 0.4888
+    - 0.6647
+- scene_id: gazebo_calibration_v3_071
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_071
+  layout_id: gazebo_calibration_v3_layout_071
+  layout_signature_sha256: bdbfb6e06ed1e7b27436ff9eae4462b8b515b43d808a1df7b9c885cef422ae66
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.215
+    - 0.167
+    - 0.4131
+    ycb_orange:
+    - -0.24659999999999999
+    - 0.455
+    - 0.6332
+- scene_id: gazebo_calibration_v3_053
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_053
+  layout_id: gazebo_calibration_v3_layout_053
+  layout_signature_sha256: f97f8b8d70805f3f06b7406bba6da218f30c663bf0ac3473a21479d024d5c66c
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.21200000000000002
+    - 0.2696
+    - 0.6707
+    ycb_orange:
+    - -0.2326
+    - 0.2696
+    - 0.6898000000000002
+    mango:
+    - -0.2162
+    - 0.45359999999999995
+    - 0.8739000000000001
+- scene_id: gazebo_calibration_v3_057
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_057
+  layout_id: gazebo_calibration_v3_layout_057
+  layout_signature_sha256: c1d125b901b6595f5d478313f14741063d00340fc88663227f382efb396ed731
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.21259999999999998
+    - 0.13080000000000003
+    - 0.7724
+    ycb_apple:
+    - -0.2072
+    - 0.34680000000000005
+    - 0.7625
+    ycb_orange:
+    - -0.2278
+    - 0.34680000000000005
+    - 0.6466
+- scene_id: gazebo_calibration_v3_093
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_093
+  layout_id: gazebo_calibration_v3_layout_093
+  layout_signature_sha256: 54da58572536efb784f0ad6eb8f0046854567621930470c57ca6005d570ee077
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2048
+    - 0.185
+    - 0.5831999999999999
+    ycb_orange:
+    - -0.23640000000000003
+    - 0.395
+    - 0.7383000000000001
+- scene_id: gazebo_calibration_v3_029
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_029
+  layout_id: gazebo_calibration_v3_layout_029
+  layout_signature_sha256: 8ffda002683a35059e6e9e132bc8d7c58255c87da9420a53492992552e79157e
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.1991
+    - 0.1288
+    - 0.6984
+    ycb_apple:
+    - -0.20870000000000002
+    - 0.2748
+    - 0.7785
+    ycb_orange:
+    - -0.2183
+    - 0.44179999999999997
+    - 0.8686
+- scene_id: gazebo_calibration_v3_032
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_032
+  layout_id: gazebo_calibration_v3_layout_032
+  layout_signature_sha256: 5bb25cc439e478d765c9b60d3cd157b259a4e1e9d395718cc3fb378742ffa9ce
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.2116
+    - 0.24899999999999997
+    - 0.2865
+    ycb_orange:
+    - -0.2362
+    - 0.24899999999999997
+    - 0.3306
+    mango:
+    - -0.2238
+    - 0.477
+    - 0.5447
+- scene_id: gazebo_calibration_v3_047
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_047
+  layout_id: gazebo_calibration_v3_layout_047
+  layout_signature_sha256: 8b9f0d351e357ca7abc6c8f202a69f915184855a0f4d3f870d2c52d67ecd3a4b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.21009999999999998
+    - 0.11920000000000001
+    - 0.6058
+    ycb_apple:
+    - -0.20470000000000002
+    - 0.34320000000000006
+    - 0.5359
+    ycb_orange:
+    - -0.2253
+    - 0.34320000000000006
+    - 0.5750000000000001
+- scene_id: gazebo_calibration_v3_024
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_024
+  layout_id: gazebo_calibration_v3_layout_024
+  layout_signature_sha256: 9adc9826762fb19c260756a6ae33fd88a80defe85ce8a6e21c13e51d4afee0d2
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - -0.2366
+    - 0.1144
+    - 0.6344
+    ycb_orange:
+    - -0.2062
+    - 0.26139999999999997
+    - 0.7145
+    mango:
+    - -0.21580000000000002
+    - 0.44039999999999996
+    - 0.7776000000000001
+- scene_id: gazebo_calibration_v3_050
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_050
+  layout_id: gazebo_calibration_v3_layout_050
+  layout_signature_sha256: af85ae2c841bb56206066ed6141649f3c687badc0dba67ec2fe1e7ed9ccace52
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.1983
+    - 0.28040000000000004
+    - 0.5559
+    ycb_orange:
+    - -0.22290000000000001
+    - 0.28040000000000004
+    - 0.666
+    mango:
+    - -0.2105
+    - 0.4744
+    - 0.6991
+- scene_id: gazebo_calibration_v3_004
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_004
+  layout_id: gazebo_calibration_v3_layout_004
+  layout_signature_sha256: 4a3202259d01054a7edd52be22e111787cd17c953fbec46940ce45c74ad916a9
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.1996
+    - 0.10819999999999999
+    - 0.33749999999999997
+    ycb_orange:
+    - -0.2092
+    - 0.28519999999999995
+    - 0.39260000000000006
+    mango:
+    - -0.2188
+    - 0.48819999999999997
+    - 0.48069999999999996
+- scene_id: gazebo_calibration_v3_006
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_006
+  layout_id: gazebo_calibration_v3_layout_006
+  layout_signature_sha256: 289b3a5c51fe1a6e2e11edbb5990a50445133f14dfa48a07590266419d7c8e63
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.2004
+    - 0.10299999999999998
+    - 0.3877
+    ycb_orange:
+    - -0.21000000000000002
+    - 0.27999999999999997
+    - 0.5028
+    mango:
+    - -0.2196
+    - 0.483
+    - 0.5909
+- scene_id: gazebo_calibration_v3_090
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_090
+  layout_id: gazebo_calibration_v3_layout_090
+  layout_signature_sha256: b3118869b27fec78159c4de4968588da9c4e5cc8daba716c32f929ca1e456538
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.1956
+    - 0.1664
+    - 0.7044
+    mango:
+    - -0.2452
+    - 0.3934
+    - 0.6955000000000001
+- scene_id: gazebo_calibration_v3_060
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_060
+  layout_id: gazebo_calibration_v3_layout_060
+  layout_signature_sha256: 8577123ae9ef6a825668d4b22a34ec72c1ed46dd4e5d568ba6742bfd0a8323df
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.20829999999999999
+    - 0.1226
+    - 0.6512000000000001
+    ycb_apple:
+    - -0.19490000000000002
+    - 0.3406
+    - 0.6413
+    ycb_orange:
+    - -0.2195
+    - 0.3406
+    - 0.6964
+- scene_id: gazebo_calibration_v3_038
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_038
+  layout_id: gazebo_calibration_v3_layout_038
+  layout_signature_sha256: d8d71037da077b5e8cde126ba43f08af1e8500757c25016ca23fcb8f451bc110
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.20249999999999999
+    - 0.2564
+    - 0.3701
+    ycb_orange:
+    - -0.2271
+    - 0.2564
+    - 0.5202
+    mango:
+    - -0.21469999999999997
+    - 0.4844
+    - 0.6533
+- scene_id: gazebo_calibration_v3_103
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_103
+  layout_id: gazebo_calibration_v3_layout_103
+  layout_signature_sha256: 6f9a3fd40e982bb2fb3556b3a85363015622f8803ed5996232ebcd7ead12ba72
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.034300000000000004
+    - 0.47309999999999997
+    - 0.7210000000000001
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.020099999999999996
+    - 0.3897
+    - 0.5960000000000001
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_078
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_078
+  layout_id: gazebo_calibration_v3_layout_078
+  layout_signature_sha256: c9d1104af00cb30fe33dc4c9df4243bea90580f7e2274512763022f00fe59bb4
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.20980000000000001
+    - 0.149
+    - 0.44260000000000005
+    mango:
+    - -0.2414
+    - 0.428
+    - 0.5897000000000001
+- scene_id: gazebo_calibration_v3_002
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_002
+  layout_id: gazebo_calibration_v3_layout_002
+  layout_signature_sha256: c084faab326e42798d4d4c09c0558fd29a3db7d539240384edc7edae0899d9cc
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.20629999999999998
+    - 0.10339999999999998
+    - 0.3083
+    ycb_orange:
+    - -0.21589999999999998
+    - 0.2804
+    - 0.4234
+    mango:
+    - -0.22549999999999998
+    - 0.4834
+    - 0.5115
+- scene_id: gazebo_calibration_v3_003
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_003
+  layout_id: gazebo_calibration_v3_layout_003
+  layout_signature_sha256: b82c862a57aeada152f1839f456b92dec2963b362211eac5894ef6973195dc1a
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    mango:
+    - -0.2112
+    - 0.11039999999999998
+    - 0.4639
+    ycb_apple:
+    - -0.22079999999999997
+    - 0.2864
+    - 0.579
+    ycb_orange:
+    - -0.2304
+    - 0.4774
+    - 0.6341
+- scene_id: gazebo_calibration_v3_014
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_014
+  layout_id: gazebo_calibration_v3_layout_014
+  layout_signature_sha256: 05472df683aea24232f305703a70bd001429459938aeb6de121a13d84c89a3f1
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - -0.2141
+    - 0.1028
+    - 0.38580000000000003
+    mango:
+    - -0.22369999999999998
+    - 0.27579999999999993
+    - 0.4389
+    ycb_apple:
+    - -0.2333
+    - 0.46479999999999994
+    - 0.554
+- scene_id: gazebo_calibration_v3_069
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_069
+  layout_id: gazebo_calibration_v3_layout_069
+  layout_signature_sha256: a8d750c87d4430d8ae0d538c8d75e13df02e183cb25c55ab25cbc782c319ea18
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2077
+    - 0.1622
+    - 0.40890000000000004
+    ycb_orange:
+    - -0.23929999999999998
+    - 0.4502
+    - 0.629
+- scene_id: gazebo_calibration_v3_072
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_072
+  layout_id: gazebo_calibration_v3_layout_072
+  layout_signature_sha256: 0684c7ffd2168c0bc6e78b888c45f61948645a2e68a1577091207629cf4be226
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.20840000000000003
+    - 0.1416
+    - 0.449
+    mango:
+    - -0.24000000000000002
+    - 0.4206
+    - 0.6061000000000001
+- scene_id: gazebo_calibration_v3_113
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_113
+  layout_id: gazebo_calibration_v3_layout_113
+  layout_signature_sha256: f6717c07d2cf39acfba5fffe6c844e89ebc3789c91ea7a2bc42f48034653a27b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - 0.030199999999999998
+    - 0.46340000000000003
+    - 0.674
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.0199
+    - 0.137
+    - 0.517
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_119
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_119
+  layout_id: gazebo_calibration_v3_layout_119
+  layout_signature_sha256: cf2f27ba1f716e32fafc3691963f660c83f21236ff33ae8d32df2db27d8f14f1
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - 0.0276
+    - 0.4604
+    - 0.7759999999999999
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.013799999999999996
+    - 0.1355
+    - 0.7300000000000001
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_052
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_052
+  layout_id: gazebo_calibration_v3_layout_052
+  layout_signature_sha256: d44be5a13cd3812ad8d1b3d1b47d674f9f973c92f55a31324c7a8e5eba6ca4b7
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.2056
+    - 0.2626
+    - 0.5251000000000001
+    ycb_orange:
+    - -0.2302
+    - 0.2626
+    - 0.6352
+    mango:
+    - -0.2178
+    - 0.45659999999999995
+    - 0.7283000000000002
+- scene_id: gazebo_calibration_v3_107
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_107
+  layout_id: gazebo_calibration_v3_layout_107
+  layout_signature_sha256: cbd727d6570d543347510488ef9666f0ae8e0f44d464248cc03e71bb541d3f39
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.0139
+    - 0.11699999999999998
+    - 0.678
+    ycb_orange:
+    - 0.0326
+    - 0.19690000000000002
+    - 0.7890000000000001
+- scene_id: gazebo_calibration_v3_092
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_092
+  layout_id: gazebo_calibration_v3_layout_092
+  layout_signature_sha256: 4ea7f4cf5cd71654a8e4da4bdc5ee8a11606e020b9bdba2efcd18ac7a71607ad
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.1924
+    - 0.1712
+    - 0.5376
+    mango:
+    - -0.242
+    - 0.3982
+    - 0.6997000000000001
+- scene_id: gazebo_calibration_v3_030
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_030
+  layout_id: gazebo_calibration_v3_layout_030
+  layout_signature_sha256: b0ccc4b83350e1ecdf6d55bd86bffa19701f0c0889d17bbad0e50db7fd2b4904
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - -0.23800000000000002
+    - 0.1218
+    - 0.537
+    ycb_orange:
+    - -0.2076
+    - 0.2688
+    - 0.6271
+    mango:
+    - -0.21720000000000003
+    - 0.4478
+    - 0.7152
+- scene_id: gazebo_calibration_v3_062
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_062
+  layout_id: gazebo_calibration_v3_layout_062
+  layout_signature_sha256: f98f11b1b88d71ec6c31b0af51d355cdd1467c53678dcfedddae1ca70583718e
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.2196
+    - 0.1274
+    - 0.6454
+    ycb_apple:
+    - -0.2062
+    - 0.34540000000000004
+    - 0.6355000000000001
+    ycb_orange:
+    - -0.2308
+    - 0.34540000000000004
+    - 0.7006000000000001
+- scene_id: gazebo_calibration_v3_026
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_026
+  layout_id: gazebo_calibration_v3_layout_026
+  layout_signature_sha256: 83497c2c15af0f198c33c4b3898cfc69e3dafc249412aa8324eb0092a137c1f7
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - -0.2334
+    - 0.1122
+    - 0.6035999999999999
+    ycb_orange:
+    - -0.20299999999999999
+    - 0.2592
+    - 0.5477
+    mango:
+    - -0.2126
+    - 0.4382
+    - 0.6358
+- scene_id: gazebo_calibration_v3_005
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_005
+  layout_id: gazebo_calibration_v3_layout_005
+  layout_signature_sha256: dc6f4681a3b79098d7bff8241183ea6d104911f887bfcfb637cde275141d2bc2
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    mango:
+    - -0.2155
+    - 0.10819999999999999
+    - 0.5141
+    ycb_apple:
+    - -0.22509999999999997
+    - 0.28419999999999995
+    - 0.5482
+    ycb_orange:
+    - -0.2347
+    - 0.47519999999999996
+    - 0.6633
+- scene_id: gazebo_calibration_v3_068
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_068
+  layout_id: gazebo_calibration_v3_layout_068
+  layout_signature_sha256: 840234a4f664d3a043a28926ed302aed6fd06fe3157aae73e12b67729692db60
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.19529999999999997
+    - 0.1602
+    - 0.3983
+    mango:
+    - -0.24489999999999998
+    - 0.4652
+    - 0.5554
+- scene_id: gazebo_calibration_v3_073
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_073
+  layout_id: gazebo_calibration_v3_layout_073
+  layout_signature_sha256: a7fd44642d883a6b0f0f605c527416f573b603104d3bc7aa0ff087067c815fd5
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.2168
+    - 0.1554
+    - 0.47859999999999997
+    mango:
+    - -0.23040000000000002
+    - 0.4174
+    - 0.7167000000000001
+- scene_id: gazebo_calibration_v3_106
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_106
+  layout_id: gazebo_calibration_v3_layout_106
+  layout_signature_sha256: fbec7214c9ebecb69dab4c16f80613ab207c3c3a200c41433aba2b6f6fee71ff
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.0284
+    - 0.1942
+    - 0.611
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.0142
+    - 0.1156
+    - 0.563
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_081
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_081
+  layout_id: gazebo_calibration_v3_layout_081
+  layout_signature_sha256: cbed567b15d98c8fdc0ec03f104d91327a2001736b84171fd7793ba3243760ff
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.197
+    - 0.1992
+    - 0.5186999999999999
+    mango:
+    - -0.24659999999999999
+    - 0.4352
+    - 0.7008000000000001
+- scene_id: gazebo_calibration_v3_123
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_123
+  layout_id: gazebo_calibration_v3_layout_123
+  layout_signature_sha256: 5f6169e37a7395c74a3c1df61ed170583b58887012a8d1e7277c7b79eb110e6f
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_orange:
+    - 0.0301
+    - 0.46730000000000005
+    - 0.881
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.010399999999999998
+    - 0.1312
+    - 0.78
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_122
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_122
+  layout_id: gazebo_calibration_v3_layout_122
+  layout_signature_sha256: 149774d211d27ffb4bcf594745a80852095b6c2ccacb9cf09743fa8723a5bc41
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - 0.0301
+    - 0.46900000000000003
+    - 0.743
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.010300000000000002
+    - 0.13490000000000002
+    - 0.673
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_011
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_011
+  layout_id: gazebo_calibration_v3_layout_011
+  layout_signature_sha256: 573d2bb8ea813fa7f1337e3ffab1fbccdccf21d66385c67a939a158736a2bd9f
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.22490000000000002
+    - 0.112
+    - 0.5980000000000001
+    ycb_orange:
+    - -0.23450000000000001
+    - 0.284
+    - 0.5171
+    mango:
+    - -0.20410000000000003
+    - 0.46099999999999997
+    - 0.6862
+- scene_id: gazebo_calibration_v3_118
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_118
+  layout_id: gazebo_calibration_v3_layout_118
+  layout_signature_sha256: aed68cd1dde8b502d0260712e7051f4ca5493773974a6ed8224d78005ce3a1c0
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.0178
+    - 0.13520000000000001
+    - 0.547
+    ycb_orange:
+    - 0.0325
+    - 0.4626
+    - 0.7350000000000001
+- scene_id: gazebo_calibration_v3_124
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_124
+  layout_id: gazebo_calibration_v3_layout_124
+  layout_signature_sha256: 965e443cdb9ec690c17250382c8a703e442a0d02d939131c910c1c99326a3c7c
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - 0.030099999999999995
+    - 0.4716
+    - 0.62
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.014299999999999997
+    - 0.12669999999999998
+    - 0.439
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_076
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_076
+  layout_id: gazebo_calibration_v3_layout_076
+  layout_signature_sha256: fa516068b998cbc5cb2e7a69bff00e139abe5c25e33831ca743099f5d01f7dfc
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.20550000000000002
+    - 0.1442
+    - 0.35739999999999994
+    mango:
+    - -0.2371
+    - 0.4232
+    - 0.5395
+- scene_id: gazebo_calibration_v3_054
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_054
+  layout_id: gazebo_calibration_v3_layout_054
+  layout_signature_sha256: e4658c9b2db6799637a31d0321d2d838db806b116daef04cc0472534ab198bb5
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.2064
+    - 0.2674
+    - 0.6353
+    ycb_orange:
+    - -0.23099999999999998
+    - 0.2674
+    - 0.7454000000000001
+    mango:
+    - -0.2186
+    - 0.4614
+    - 0.6675000000000001
+- scene_id: gazebo_calibration_v3_007
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_007
+  layout_id: gazebo_calibration_v3_layout_007
+  layout_signature_sha256: 1871096ec2a246b88d7b42405fe8fbf8451f1eb9ee1d1d6eef4d5893d7f64637
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    mango:
+    - -0.2193
+    - 0.11299999999999999
+    - 0.5432999999999999
+    ycb_apple:
+    - -0.22889999999999996
+    - 0.289
+    - 0.6584
+    ycb_orange:
+    - -0.2385
+    - 0.48
+    - 0.6025
+- scene_id: gazebo_calibration_v3_046
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_046
+  layout_id: gazebo_calibration_v3_layout_046
+  layout_signature_sha256: 762723f2471dd64553ba1088aa66bf0d39509888e76a5ac5747b52625877ba65
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.2157
+    - 0.10840000000000001
+    - 0.49520000000000003
+    ycb_apple:
+    - -0.2023
+    - 0.33440000000000003
+    - 0.39030000000000004
+    ycb_orange:
+    - -0.22690000000000002
+    - 0.33440000000000003
+    - 0.5204000000000001
+- scene_id: gazebo_calibration_v3_080
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_080
+  layout_id: gazebo_calibration_v3_layout_080
+  layout_signature_sha256: 6f4edfd3c7c988859b711fdd9670c52163880d051f30f3940b06ca9f34716dc1
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2221
+    - 0.18719999999999998
+    - 0.45510000000000006
+    ycb_orange:
+    - -0.2357
+    - 0.4402
+    - 0.6452
+- scene_id: gazebo_calibration_v3_058
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_058
+  layout_id: gazebo_calibration_v3_layout_058
+  layout_signature_sha256: d8821aa0809fbcc276a9506a9b4ec309c5b07a56badeadd07ed0e68a6b0b1fd5
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.215
+    - 0.1178
+    - 0.7370000000000002
+    ycb_apple:
+    - -0.2016
+    - 0.33580000000000004
+    - 0.5311
+    ycb_orange:
+    - -0.2262
+    - 0.33580000000000004
+    - 0.6212
+- scene_id: gazebo_calibration_v3_049
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_049
+  layout_id: gazebo_calibration_v3_layout_049
+  layout_signature_sha256: 4e590dfc5eb42879d8cebd95e54dab65c600201de31a27e31c3f09794e6b2925
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.2074
+    - 0.2796
+    - 0.5912999999999999
+    ycb_orange:
+    - -0.22799999999999998
+    - 0.2796
+    - 0.6914
+    mango:
+    - -0.21159999999999998
+    - 0.46359999999999996
+    - 0.7945
+- scene_id: gazebo_calibration_v3_059
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_059
+  layout_id: gazebo_calibration_v3_layout_059
+  layout_signature_sha256: 1e413739ae3d8b0d0e8d23e038b974ec9a7e0a3e4ca113cbc151d85f0e44570d
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.20939999999999998
+    - 0.12560000000000002
+    - 0.6866000000000001
+    ycb_apple:
+    - -0.204
+    - 0.3416
+    - 0.6767000000000001
+    ycb_orange:
+    - -0.2246
+    - 0.3416
+    - 0.6758000000000002
+- scene_id: gazebo_calibration_v3_015
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_015
+  layout_id: gazebo_calibration_v3_layout_015
+  layout_signature_sha256: c02efccb19726ad40d40668ea58ed173663ef7599975d67a209be519607a106e
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.219
+    - 0.11460000000000001
+    - 0.5064
+    ycb_orange:
+    - -0.2286
+    - 0.28659999999999997
+    - 0.6215
+    mango:
+    - -0.19820000000000002
+    - 0.46359999999999996
+    - 0.6846000000000001
+- scene_id: gazebo_calibration_v3_037
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_037
+  layout_id: gazebo_calibration_v3_layout_037
+  layout_signature_sha256: c7d1f952b71eaa17dc1e62f757cb97773f1120435b34118d46a3504f7b2d0a23
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.2081
+    - 0.2586
+    - 0.4305
+    ycb_orange:
+    - -0.2287
+    - 0.2586
+    - 0.5456
+    mango:
+    - -0.2123
+    - 0.47659999999999997
+    - 0.6887000000000001
+- scene_id: gazebo_calibration_v3_077
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_077
+  layout_id: gazebo_calibration_v3_layout_077
+  layout_signature_sha256: 27f8d12d63b0b8d27ade2971dbab3710e2c541dad6452bf1c192432be5aee9e7
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.2214
+    - 0.158
+    - 0.412
+    mango:
+    - -0.23500000000000001
+    - 0.42
+    - 0.5791000000000001
+- scene_id: gazebo_calibration_v3_114
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_114
+  layout_id: gazebo_calibration_v3_layout_114
+  layout_signature_sha256: ad95cc19b90eb56a96b93e0156c6c851444eeaca1d503efb635803df50938bf8
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.0164
+    - 0.1333
+    - 0.48400000000000004
+    ycb_orange:
+    - 0.0276
+    - 0.46990000000000004
+    - 0.672
+- scene_id: gazebo_calibration_v3_016
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_016
+  layout_id: gazebo_calibration_v3_layout_016
+  layout_signature_sha256: 240a67e3509073f8682edd2e444edd3486a9e2dcd36292f2115d25f7febe15e9
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.2264
+    - 0.13699999999999998
+    - 0.38430000000000003
+    ycb_apple:
+    - -0.236
+    - 0.306
+    - 0.4994
+    ycb_orange:
+    - -0.2056
+    - 0.481
+    - 0.6144999999999999
+- scene_id: gazebo_calibration_v3_042
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_042
+  layout_id: gazebo_calibration_v3_layout_042
+  layout_signature_sha256: dc43978d96b15dd8f4335a5751962d45ccf93d74f32b4dfbd82cc5239057bcbe
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.2216
+    - 0.10880000000000001
+    - 0.6328000000000001
+    ycb_apple:
+    - -0.2082
+    - 0.33480000000000004
+    - 0.48190000000000005
+    ycb_orange:
+    - -0.2328
+    - 0.33480000000000004
+    - 0.441
+- scene_id: gazebo_calibration_v3_102
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_102
+  layout_id: gazebo_calibration_v3_layout_102
+  layout_signature_sha256: f9f98c42148bb4d68faa4a1e35baf035cc2c0383777b57b95270c9312301e78b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - 0.023899999999999998
+    - 0.4748
+    - 0.7060000000000001
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.0176
+    - 0.38839999999999997
+    - 0.549
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_095
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_095
+  layout_id: gazebo_calibration_v3_layout_095
+  layout_signature_sha256: dae4e5dd5a7c780909a348194434d94044877533ddec24008dbaf499a2920101
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2086
+    - 0.1798
+    - 0.6584
+    ycb_orange:
+    - -0.2402
+    - 0.38980000000000004
+    - 0.8485
+- scene_id: gazebo_calibration_v3_012
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_012
+  layout_id: gazebo_calibration_v3_layout_012
+  layout_signature_sha256: 7852878f25f933814790670156e4e6a1dd14df5f4fb26fd7b7a535cb707da6cd
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - -0.21330000000000002
+    - 0.09799999999999999
+    - 0.35660000000000003
+    mango:
+    - -0.2229
+    - 0.27099999999999996
+    - 0.4447
+    ycb_apple:
+    - -0.2325
+    - 0.45999999999999996
+    - 0.5598
+- scene_id: gazebo_calibration_v3_101
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_101
+  layout_id: gazebo_calibration_v3_layout_101
+  layout_signature_sha256: d151ebd81397af96de7025cf24902d967799de9119c9a9cabf72c0159fa54f49
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.025899999999999996
+    - 0.4755
+    - 0.6819999999999999
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.0117
+    - 0.3869
+    - 0.446
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_112
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_112
+  layout_id: gazebo_calibration_v3_layout_112
+  layout_signature_sha256: e26554a21f49b2db74ad2b0a45bbbdc628f2ce9491eb3faa484381c4727a52a3
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.007999999999999997
+    - 0.1355
+    - 0.48100000000000004
+    ycb_orange:
+    - 0.026699999999999995
+    - 0.4656
+    - 0.669
+- scene_id: gazebo_calibration_v3_000
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_000
+  layout_id: gazebo_calibration_v3_layout_000
+  layout_signature_sha256: 8f023bd787e1fc35a9e2a52852f8e11fce7a740faaacf202636674916119b843
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.213
+    - 0.09559999999999998
+    - 0.1981
+    ycb_orange:
+    - -0.2226
+    - 0.27259999999999995
+    - 0.3132
+    mango:
+    - -0.2322
+    - 0.47559999999999997
+    - 0.40129999999999993
+- scene_id: gazebo_calibration_v3_087
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_087
+  layout_id: gazebo_calibration_v3_layout_087
+  layout_signature_sha256: 75037b74c3e6aff2f39ee956c461ac2a31dd160a5e681b929850c237b77ba7c0
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.1984
+    - 0.194
+    - 0.6273
+    mango:
+    - -0.24799999999999997
+    - 0.43
+    - 0.6384000000000001
+- scene_id: gazebo_calibration_v3_028
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_028
+  layout_id: gazebo_calibration_v3_layout_028
+  layout_signature_sha256: 89d02f563ac88357d09da35789d187c7f99c884fd0de84c2c280a3a2481ceae1
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - -0.22669999999999998
+    - 0.117
+    - 0.5428
+    ycb_orange:
+    - -0.1963
+    - 0.26399999999999996
+    - 0.5769000000000001
+    mango:
+    - -0.2059
+    - 0.44299999999999995
+    - 0.7110000000000001
+- scene_id: gazebo_calibration_v3_023
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_023
+  layout_id: gazebo_calibration_v3_layout_023
+  layout_signature_sha256: f1fe6ccd09dbfc20f6d8d975dfdde342b438d4566a1a200b4a5c74e49d4f5dd4
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_orange:
+    - -0.23270000000000002
+    - 0.1418
+    - 0.7565000000000001
+    mango:
+    - -0.2023
+    - 0.2918
+    - 0.6486
+    ycb_apple:
+    - -0.21190000000000003
+    - 0.4728
+    - 0.7287000000000001
+- scene_id: gazebo_calibration_v3_013
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_013
+  layout_id: gazebo_calibration_v3_layout_013
+  layout_signature_sha256: 48f997d5fcc1b3aebaab42f7ce2f3e4b447e91ff7a88d10a0188c03c92bb07dc
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.2257
+    - 0.10980000000000001
+    - 0.5122
+    ycb_orange:
+    - -0.2353
+    - 0.28179999999999994
+    - 0.6273
+    mango:
+    - -0.20490000000000003
+    - 0.45879999999999993
+    - 0.6804
+- scene_id: gazebo_calibration_v3_074
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_074
+  layout_id: gazebo_calibration_v3_layout_074
+  layout_signature_sha256: 7b14b8ca5cb784868ded16c6b8604d84161a1cc3f61239ee141d95eb9af032f1
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.21220000000000003
+    - 0.1494
+    - 0.49920000000000003
+    mango:
+    - -0.24380000000000002
+    - 0.4284
+    - 0.6813
+- scene_id: gazebo_calibration_v3_036
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_036
+  layout_id: gazebo_calibration_v3_layout_036
+  layout_signature_sha256: 58dc9311f73b25dbc02040b0ec5f8cfa773019370f30891651e93ce13912190b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.1982
+    - 0.2616
+    - 0.31989999999999996
+    ycb_orange:
+    - -0.22279999999999997
+    - 0.2616
+    - 0.43500000000000005
+    mango:
+    - -0.21039999999999998
+    - 0.4896
+    - 0.6241
+- scene_id: gazebo_calibration_v3_086
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_086
+  layout_id: gazebo_calibration_v3_layout_086
+  layout_signature_sha256: a51f7b271bc14b7a0cad9173192b80770f8e2e0727d6a2c650ab22cc771e96ad
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.22
+    - 0.182
+    - 0.5637
+    ycb_orange:
+    - -0.2336
+    - 0.435
+    - 0.7538000000000001
+- scene_id: gazebo_calibration_v3_017
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_017
+  layout_id: gazebo_calibration_v3_layout_017
+  layout_signature_sha256: 280e16ffe77dc8c549b0e20872501f662db106877a5812c97b6d84b22f3105f8
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_orange:
+    - -0.2313
+    - 0.147
+    - 0.5669
+    mango:
+    - -0.2009
+    - 0.297
+    - 0.7360000000000001
+    ycb_apple:
+    - -0.21050000000000002
+    - 0.478
+    - 0.7451000000000001
+- scene_id: gazebo_calibration_v3_126
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_126
+  layout_id: gazebo_calibration_v3_layout_126
+  layout_signature_sha256: 4ab21a99ee802a2a6712b8a03cfc703d10e27892d23fdb597a40881123f155e7
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    ycb_apple:
+    - 0.027499999999999997
+    - 0.46340000000000003
+    - 0.659
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.010799999999999999
+    - 0.1368
+    - 0.5890000000000001
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_088
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_088
+  layout_id: gazebo_calibration_v3_layout_088
+  layout_signature_sha256: 44fd5a68ead757255962ce53659f3afbea0d3a837720cc668fd6dde7deb60be7
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.2023
+    - 0.1686
+    - 0.6292
+    mango:
+    - -0.2519
+    - 0.3956
+    - 0.7563000000000001
+- scene_id: gazebo_calibration_v3_109
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_109
+  layout_id: gazebo_calibration_v3_layout_109
+  layout_signature_sha256: b6c5fdc0973ab9d0ab3433d1d4d43abfe271d4f2164f556583855fdf89b8767c
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.0179
+    - 0.1271
+    - 0.591
+    ycb_orange:
+    - 0.032600000000000004
+    - 0.18869999999999998
+    - 0.702
+- scene_id: gazebo_calibration_v3_010
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_010
+  layout_id: gazebo_calibration_v3_layout_010
+  layout_signature_sha256: 9a67b587b67459674161d29703c69135e60423f3be7beee96dbbd0fae846d3f5
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - -0.21650000000000003
+    - 0.1032
+    - 0.4424
+    mango:
+    - -0.2261
+    - 0.27619999999999995
+    - 0.5305
+    ycb_apple:
+    - -0.23570000000000002
+    - 0.46519999999999995
+    - 0.4496
+- scene_id: gazebo_calibration_v3_040
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_040
+  layout_id: gazebo_calibration_v3_layout_040
+  layout_signature_sha256: 9f8a093a90eba80550c04678cd61c3eb3ba653aadf0699602fe8d3b6a0600380
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.2178
+    - 0.101
+    - 0.5576
+    ycb_apple:
+    - -0.20440000000000003
+    - 0.327
+    - 0.4877
+    ycb_orange:
+    - -0.229
+    - 0.327
+    - 0.5828000000000001
+- scene_id: gazebo_calibration_v3_108
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_108
+  layout_id: gazebo_calibration_v3_layout_108
+  layout_signature_sha256: f9eb3a9a9ffd48b47fd9d6b23280ad017dbf9a86963bf3517b27166234301ca9
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.028399999999999998
+    - 0.20430000000000004
+    - 0.48800000000000004
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.006699999999999994
+    - 0.1182
+    - 0.7490000000000001
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_099
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_099
+  layout_id: gazebo_calibration_v3_layout_099
+  layout_signature_sha256: 0aacc2690bb05a8a415dae5ff3a8d65a4aa15f81414b79cd16a0abcde7f91214
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.0369
+    - 0.4804
+    - 0.805
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.015199999999999998
+    - 0.3903
+    - 0.68
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_045
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_045
+  layout_id: gazebo_calibration_v3_layout_045
+  layout_signature_sha256: d31cbbbc5f548fdf514bc8100225e34013e2f03624a738cec14c260e317073b5
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.2168
+    - 0.11440000000000002
+    - 0.5306000000000001
+    ycb_apple:
+    - -0.2114
+    - 0.33840000000000003
+    - 0.4607
+    ycb_orange:
+    - -0.232
+    - 0.33840000000000003
+    - 0.5458
+- scene_id: gazebo_calibration_v3_098
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_098
+  layout_id: gazebo_calibration_v3_layout_098
+  layout_signature_sha256: 058c869b7ec6d1bb934eab2a698f3dba2ded925956461972608a98d468c50945
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - 0.0225
+    - 0.4729
+    - 0.643
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_orange:
+    - 0.008700000000000003
+    - 0.394
+    - 0.633
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+- scene_id: gazebo_calibration_v3_067
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_067
+  layout_id: gazebo_calibration_v3_layout_067
+  layout_signature_sha256: 9f2817854953a46841b1a721b0c6aa1cedc8d36b6ebf6fd9b1aa82a168dbf0d5
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2069
+    - 0.16440000000000002
+    - 0.41470000000000007
+    ycb_orange:
+    - -0.2385
+    - 0.4524
+    - 0.5538000000000001
+- scene_id: gazebo_calibration_v3_039
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_039
+  layout_id: gazebo_calibration_v3_layout_039
+  layout_signature_sha256: 37a1fd092bae762d5e5fa3f4647b678ab6abb730daa865e23a34f82c86e4c168
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.2119
+    - 0.2634
+    - 0.4347
+    ycb_orange:
+    - -0.23249999999999998
+    - 0.2634
+    - 0.5748
+    mango:
+    - -0.2161
+    - 0.4814
+    - 0.5468999999999999
+- scene_id: gazebo_calibration_v3_085
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_085
+  layout_id: gazebo_calibration_v3_layout_085
+  layout_signature_sha256: 78e486a46e1c9df17ec1987fbbc50b0074477a838dc7389fe5eb3f1a334e0b1b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left orange among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2051
+    - 0.1892
+    - 0.5981
+    mango:
+    - -0.2547
+    - 0.42519999999999997
+    - 0.7802000000000001
+- scene_id: gazebo_calibration_v3_025
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_025
+  layout_id: gazebo_calibration_v3_layout_025
+  layout_signature_sha256: 8f0423696873899c4f0ea723e254a48d36a785109d9b5e62522e5c6b1510b63b
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.20500000000000002
+    - 0.1262
+    - 0.755
+    ycb_apple:
+    - -0.2146
+    - 0.2722
+    - 0.8451000000000001
+    ycb_orange:
+    - -0.2242
+    - 0.4392
+    - 0.7892
+- scene_id: gazebo_calibration_v3_116
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_116
+  layout_id: gazebo_calibration_v3_layout_116
+  layout_signature_sha256: 0b3ee2cf54f9ae3c902a9546286a805e0baf1aca5efac0b98112df06584ca2bf
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.005399999999999994
+    - 0.1299
+    - 0.3970000000000001
+    ycb_orange:
+    - 0.024099999999999996
+    - 0.46
+    - 0.585
+- scene_id: gazebo_calibration_v3_055
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_055
+  layout_id: gazebo_calibration_v3_layout_055
+  layout_signature_sha256: e894ecff6cc189aab01790b6fa186d2dbcb80900966ae19c949b3335b942a99c
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.2053
+    - 0.27440000000000003
+    - 0.6999000000000001
+    ycb_orange:
+    - -0.2259
+    - 0.27440000000000003
+    - 0.629
+    mango:
+    - -0.2095
+    - 0.4584
+    - 0.6721
+- scene_id: gazebo_calibration_v3_066
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_066
+  layout_id: gazebo_calibration_v3_layout_066
+  layout_signature_sha256: fbddccd2e7704c96ae34a24de169a9e6f4da3eefc7df84a0e819d83e29d803d1
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the leftmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.20199999999999999
+    - 0.1554
+    - 0.28809999999999997
+    mango:
+    - -0.2516
+    - 0.46040000000000003
+    - 0.4802
+- scene_id: gazebo_calibration_v3_041
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_041
+  layout_id: gazebo_calibration_v3_layout_041
+  layout_signature_sha256: 12c96de6338e83af3f0de5ea02b30ce07371a763a73e92390dfdcc4583b1ae56
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.2087
+    - 0.11180000000000001
+    - 0.6222000000000001
+    ycb_apple:
+    - -0.20330000000000004
+    - 0.33580000000000004
+    - 0.5173
+    ycb_orange:
+    - -0.22390000000000002
+    - 0.33580000000000004
+    - 0.6374
+- scene_id: gazebo_calibration_v3_034
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_034
+  layout_id: gazebo_calibration_v3_layout_034
+  layout_signature_sha256: 7691971ee7783e4f752021ffc1aa19ff43cd935796c96b4b8eca774f6cd55985
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.2049
+    - 0.25680000000000003
+    - 0.2907
+    ycb_orange:
+    - -0.22949999999999998
+    - 0.25680000000000003
+    - 0.44079999999999997
+    mango:
+    - -0.2171
+    - 0.4848
+    - 0.5739
+- scene_id: gazebo_calibration_v3_027
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_027
+  layout_id: gazebo_calibration_v3_layout_027
+  layout_signature_sha256: 4f47885cbb01b921365882af943bc8ab4738bda260d39a714be03d9da395d2bf
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from right to left in the image.
+  poses:
+    mango:
+    - -0.1983
+    - 0.12100000000000001
+    - 0.5882000000000001
+    ycb_apple:
+    - -0.2079
+    - 0.26699999999999996
+    - 0.7033
+    ycb_orange:
+    - -0.2175
+    - 0.43399999999999994
+    - 0.8184
+- scene_id: gazebo_calibration_v3_075
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_075
+  layout_id: gazebo_calibration_v3_layout_075
+  layout_signature_sha256: d32065ba3f2efcbfeaac49e8228404e87e1136af82b46fc375c87da56a74923a
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the rightmost red apple among the visible tabletop objects in the image.
+  poses:
+    ycb_orange:
+    - -0.2206
+    - 0.1602
+    - 0.5538000000000001
+    mango:
+    - -0.2342
+    - 0.4222
+    - 0.5749
+- scene_id: gazebo_calibration_v3_089
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_089
+  layout_id: gazebo_calibration_v3_layout_089
+  layout_signature_sha256: 0065ae150ad90459bd1d28f3fbdfbff26b0bfd52d9b1fdd991bc8bf9b43420d2
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from right yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.2107
+    - 0.1824
+    - 0.6398000000000001
+    ycb_orange:
+    - -0.2423
+    - 0.3924
+    - 0.8299000000000001
+- scene_id: gazebo_calibration_v3_082
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_082
+  layout_id: gazebo_calibration_v3_layout_082
+  layout_signature_sha256: d5d24956a3bb51ba5a3c124b0c273fdf400ff17c14a032a6703287f36bc63dde
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Identify the second from left yellow mango among the visible tabletop objects in the image.
+  poses:
+    ycb_apple:
+    - -0.21539999999999998
+    - 0.19499999999999998
+    - 0.4843
+    ycb_orange:
+    - -0.229
+    - 0.448
+    - 0.6744000000000001
+- scene_id: gazebo_calibration_v3_001
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_001
+  layout_id: gazebo_calibration_v3_layout_001
+  layout_signature_sha256: 27603085afa4a90b7759a6a09a0c05bfe27cc8853338ff80ec0b46fee3021161
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    mango:
+    - -0.2179
+    - 0.10559999999999999
+    - 0.4347
+    ycb_apple:
+    - -0.22749999999999998
+    - 0.28159999999999996
+    - 0.5498
+    ycb_orange:
+    - -0.2371
+    - 0.47259999999999996
+    - 0.5839000000000001
+- scene_id: gazebo_calibration_v3_044
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_044
+  layout_id: gazebo_calibration_v3_layout_044
+  layout_signature_sha256: a75e69520e86b8054db7705c6abc69c45e8711275060668440ab73fc08de0ca2
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    mango:
+    - -0.2149
+    - 0.1036
+    - 0.491
+    ycb_apple:
+    - -0.2015
+    - 0.32960000000000006
+    - 0.3961
+    ycb_orange:
+    - -0.22610000000000002
+    - 0.32960000000000006
+    - 0.5262
+- scene_id: gazebo_calibration_v3_035
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_035
+  layout_id: gazebo_calibration_v3_layout_035
+  layout_signature_sha256: 2891aa571cba314fc8dc21de2f59e4993e0f3ee34dfbcb93c872424a287bde38
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the leftmost object in the image.
+  poses:
+    ycb_apple:
+    - -0.20729999999999998
+    - 0.26080000000000003
+    - 0.3553
+    ycb_orange:
+    - -0.22789999999999996
+    - 0.26080000000000003
+    - 0.49539999999999995
+    mango:
+    - -0.21149999999999997
+    - 0.4788
+    - 0.6034999999999999
+- scene_id: gazebo_calibration_v3_051
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_051
+  layout_id: gazebo_calibration_v3_layout_051
+  layout_signature_sha256: 334190567ba1781759bc58650c6138c53166e94d198d1e7cffa17cabcfea65ea
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the second object from left to right in the image.
+  poses:
+    ycb_apple:
+    - -0.20070000000000002
+    - 0.27440000000000003
+    - 0.6204999999999999
+    ycb_orange:
+    - -0.22130000000000002
+    - 0.27440000000000003
+    - 0.6606000000000001
+    mango:
+    - -0.2049
+    - 0.4584
+    - 0.7637
+- scene_id: gazebo_calibration_v3_104
+  scene_family_id: spatial_vlm_gazebo_calibration_v3/calibration/parent_104
+  layout_id: gazebo_calibration_v3_layout_104
+  layout_signature_sha256: c75ae2fd41a1a03503073c0a2391d14efdbe3528524f3f42c35960fc2d048767
+  task_type: horizontal_ordinal_ranking_answerability
+  instruction: Among the red apple, orange, and yellow mango, identify the rightmost object in the image.
+  poses:
+    ycb_orange:
+    - 0.019499999999999997
+    - 0.18389999999999998
+    - 0.5720000000000001
+    uq_neutral_occluder:
+    - -0.2168
+    - 0.2509
+    - 1.5707963267948966
+    ycb_apple:
+    - 0.017699999999999997
+    - 0.1315
+    - 0.41300000000000003
+    mango:
+    - -0.22
+    - 0.3
+    - 0.35
+contract_lock_sha256: 99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841
+capture_order: sha256_sort_gazebo_calibration_v3_capture_order_v1

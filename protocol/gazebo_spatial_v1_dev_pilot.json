@@ -1,0 +1,171 @@
+{
+  "status": "DRAFT_SEEDS_ONLY_NOT_CAPTURED",
+  "namespace": "spatial_vlm_v1/dev/pilot",
+  "purpose": "Development capture pilot to validate masks, camera calibration, metric depth, latency and disk throughput before full split freeze",
+  "parent_families": [
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0000",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0000",
+      "split": "dev",
+      "seed": 3405692441,
+      "requested_state": "FOUND",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0001",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0001",
+      "split": "dev",
+      "seed": 156012329,
+      "requested_state": "AMBIGUOUS",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0002",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0002",
+      "split": "dev",
+      "seed": 1305781045,
+      "requested_state": "ABSENT",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0003",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0003",
+      "split": "dev",
+      "seed": 3754883153,
+      "requested_state": "INSUFFICIENT_EVIDENCE",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0004",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0004",
+      "split": "dev",
+      "seed": 1892136124,
+      "requested_state": "FOUND",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0005",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0005",
+      "split": "dev",
+      "seed": 48174959,
+      "requested_state": "AMBIGUOUS",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0006",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0006",
+      "split": "dev",
+      "seed": 3693890958,
+      "requested_state": "ABSENT",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0007",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0007",
+      "split": "dev",
+      "seed": 2364750150,
+      "requested_state": "INSUFFICIENT_EVIDENCE",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0008",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0008",
+      "split": "dev",
+      "seed": 2358494497,
+      "requested_state": "FOUND",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0009",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0009",
+      "split": "dev",
+      "seed": 3982905600,
+      "requested_state": "AMBIGUOUS",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0010",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0010",
+      "split": "dev",
+      "seed": 2440751914,
+      "requested_state": "ABSENT",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0011",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0011",
+      "split": "dev",
+      "seed": 1630592170,
+      "requested_state": "INSUFFICIENT_EVIDENCE",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0012",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0012",
+      "split": "dev",
+      "seed": 1555102541,
+      "requested_state": "FOUND",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0013",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0013",
+      "split": "dev",
+      "seed": 554625019,
+      "requested_state": "AMBIGUOUS",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0014",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0014",
+      "split": "dev",
+      "seed": 1453332530,
+      "requested_state": "ABSENT",
+      "relation": null,
+      "ground_truth_verified": false
+    },
+    {
+      "parent_scene_id": "spatial_vlm_v1/dev/pilot/parent_0015",
+      "family_id": "spatial_vlm_v1/dev/pilot/parent_0015",
+      "split": "dev",
+      "seed": 4000362842,
+      "requested_state": "INSUFFICIENT_EVIDENCE",
+      "relation": null,
+      "ground_truth_verified": false
+    }
+  ],
+  "variants_same_parent_same_split": true,
+  "retained_refspatial_relations": [],
+  "required_before_capture": [
+    "choose relation and define metric/frame/tie margins",
+    "bind target/anchor instance IDs and candidate sets",
+    "configure fixed camera pose and intrinsics",
+    "record RGB plus metric depth plus camera-to-world transform",
+    "verify requested state against simulator geometry and visibility; requested_state is not ground truth"
+  ],
+  "prohibited_model_inputs": [
+    "requested_state",
+    "instance IDs",
+    "masks",
+    "relation truth",
+    "target_xy",
+    "anchor_xy"
+  ],
+  "test_access": false,
+  "grounding_training": false,
+  "capture_completed": false
+}

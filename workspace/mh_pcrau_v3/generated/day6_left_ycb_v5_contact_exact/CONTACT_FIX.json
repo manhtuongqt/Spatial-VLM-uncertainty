@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "CONTACT_EXACT_WORLD_READY",
+  "source_world": "workspace/mh_pcrau_v3/generated/day6_left_ycb_v4_grounded/left_ycb_top30_grounded.sdf",
+  "output_world": "workspace/mh_pcrau_v3/generated/day6_left_ycb_v5_contact_exact/left_ycb_top30_contact_exact.sdf",
+  "table_top_z_m": 0.0,
+  "verified_visual_bottom_z_m": {
+    "ycb_mug": 0.0,
+    "ycb_orange": 0.0
+  },
+  "orange_visual_z_before_m": -0.035408,
+  "orange_visual_z_after_m": -0.036734,
+  "light_direction_before": [
+    -0.4,
+    0.2,
+    -1.0
+  ],
+  "light_direction_after": [
+    0.0,
+    0.0,
+    -1.0
+  ],
+  "excluded_from_next_protocol": [
+    "ycb_lemon"
+  ]
+}

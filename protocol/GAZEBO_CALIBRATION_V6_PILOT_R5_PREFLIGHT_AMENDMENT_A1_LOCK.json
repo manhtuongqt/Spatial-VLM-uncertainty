@@ -1,0 +1,62 @@
+{
+  "bounded_discovery_policy": {
+    "interval_seconds": 1.0,
+    "maximum_samples": 15,
+    "pass_rule": "all required nodes must coexist in one successful ros2 node list sample",
+    "required_nodes": [
+      "/ros_gz_bridge",
+      "/robot_state_publisher",
+      "/controller_manager"
+    ]
+  },
+  "calibration_families_captured": 0,
+  "calibrator_fit_call_count": 0,
+  "capture_authorized": false,
+  "checks": {
+    "attempt_05_preserved_blocked": true,
+    "attempt_05_sensor_tf_pose_reset_checks_passed": true,
+    "data_design_and_qc_thresholds_unchanged": true,
+    "no_capture_authorization_or_capture": true,
+    "one_pilot_capture_attempt_policy_unchanged": true,
+    "only_failed_check_was_sim_nodes_present": true,
+    "test_robot_sealed": true
+  },
+  "locked_at_utc": "2026-09-23T07:29:40.901085+00:00",
+  "model_inference_run": false,
+  "new_attempt": "PREFLIGHT_LIVE_ATTEMPT_06.json",
+  "parent_attempt": "PREFLIGHT_LIVE_ATTEMPT_05.json",
+  "pilot_accepted_families": 0,
+  "protocol_id": "gazebo_calibration_v6_geometry_pilot_r5",
+  "robot_access": false,
+  "schema_version": 1,
+  "scientific_decision": null,
+  "scientific_hypothesis": "NOT_TESTED",
+  "scope": "bounded ROS node-discovery convergence wait only",
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V6_PILOT_R5_DATA_DESIGN_AMENDMENT_LOCK.json": "5ed3e9d8dd083a4c58fe9ba7e8319e156849ffc14f80063d36dc0bf02fedf26f",
+    "protocol/GAZEBO_CALIBRATION_V6_PILOT_R5_IMPLEMENTATION_LOCK.json": "4c68ed3902f6711f150aab7150b69e2f3d550bcebc35c05f7684f742aaeda693",
+    "protocol/GAZEBO_CALIBRATION_V6_PILOT_R5_PREFLIGHT_ATTEMPT_05_FAILURE_LOCK.json": "b18da4495173727bf71734d4a6d930da130b968fdd43394f858afc776580a583",
+    "protocol/gazebo_calibration_v6_geometry_pilot_r5_family_manifest.jsonl": "0e77ee4d426ad04e7e8e547297d9b37f252ea41b273f5001fea40a0148056562",
+    "protocol/gazebo_calibration_v6_geometry_pilot_r5_split_manifest.json": "d80f457279c4461e33b0c61fe1c81c98cdb491734dddf10f5a866e6475da1ee8",
+    "protocol/gazebo_calibration_v6_pilot_r5_preflight_a1.py": "32c17da03e3510e8602ae835819518ef648e14ab778dcb22b5967e5d1ed18d1f",
+    "protocol/gazebo_calibration_v6_pilot_r5_qc.py": "950a4efad8786e51704cf255d3d4be8afbda6ded9a38b0bd4ff8f725146059e6",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot_r5/PREFLIGHT_LIVE_ATTEMPT_05.json": "ba97d810675da77f7ae662aca0f543f0b8422eb0cbad0b52e8a1866a12f9f3df",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot_r5/R5_EXCLUSION_REGISTRY.json": "f0457bd6989714c357963ed3918579d58e692f676676d02483d46138350e8cb5",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v6_geometry_pilot_r5/R5_STATIC_DESIGN_AUDIT.json": "e651072c546936ed289534a43cc197ef9191fa59dc9bd16062f50a663a1340b9",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_geometry_pilot_r5_annotations.yaml": "c74bd15b9bbe12ea9e742af7900dde8aa0e40c07e243fcbdd623b7f17bb4fcbc",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_geometry_pilot_r5_gate.yaml": "5d5e03386b9d407d761736f8d75df6fb092f563370dabb2ff9dd5eb7fefe2841",
+    "ur3/ur3_perception/config/gazebo_calibration_v6_geometry_pilot_r5_scenes.yaml": "20326076b000719a69201ec165cc304635bf3319ca019bfc8b10e886b4a4af58",
+    "ur3/ur3_perception/scripts/roborefer_pilot_capture_r4.py": "3eef06ea614cd22ce751e90ee7e70bdb06c180abf1eaa2e81573a9c9d6d4bb82"
+  },
+  "status": "PILOT_R5_PREFLIGHT_AMENDMENT_A1_FROZEN_BEFORE_ATTEMPT_06",
+  "test_iid_ood_access": false,
+  "unchanged": [
+    "B0, spatial-risk v2 and the 12 ordered features",
+    "pilot R5 family, scene, seed, layout, signature and deterministic capture order",
+    "Calibration-v6 128 population, calibrator, optimizer and scientific gate",
+    "R4 sensor capture implementation and R3 static TF",
+    "duplicate/near-duplicate and all other QC thresholds",
+    "single all-or-nothing R5 pilot capture attempt",
+    "Test-IID/OOD and robot-policy sealing"
+  ]
+}

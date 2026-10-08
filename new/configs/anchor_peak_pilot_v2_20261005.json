@@ -1,0 +1,83 @@
+{
+  "version": "pcrau_anchor_peak_v2_preflight_v1",
+  "pilot": {
+    "version": "pcrau_anchor_shadow_pilot_v1",
+    "seed": 24082026,
+    "families_per_batch": 4,
+    "max_epochs": 15,
+    "patience": 5,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.001,
+    "gradient_clip_norm": 1.0,
+    "empty_weight": 0.25,
+    "prefixes": [
+      "",
+      "Please ",
+      "In this scene, ",
+      "Can you "
+    ]
+  },
+  "arms": {
+    "C1": {
+      "conditioning": "phrase",
+      "peak_weight": 0.0
+    },
+    "P1": {
+      "conditioning": "phrase",
+      "peak_weight": 0.1
+    },
+    "P2": {
+      "conditioning": "whole_text",
+      "peak_weight": 0.1
+    }
+  },
+  "objective": {
+    "margin": 1.0,
+    "base_empty_weight": 0.25,
+    "mean_over": "eligible active slots across visible-ranking and empty-peak cases",
+    "max_ties": "first flattened row-major index; torch.max(dim=-1)",
+    "visible_no_center": "skip auxiliary only; preserve dense BCE+Dice, sample, family and denominator",
+    "visible_no_outside": "skip auxiliary only; preserve dense BCE+Dice",
+    "empty": "full-mask pixels == 0; softplus(max logit) plus existing mean BCE",
+    "grid_shape": [
+      24,
+      32
+    ],
+    "image_shape": [
+      480,
+      640
+    ],
+    "loss_dtype": "FP32"
+  },
+  "selection": {
+    "split": "dev",
+    "tuple": [
+      "visible_anchor_hits",
+      "matched_swap_both_hits",
+      "negative_empty_mean_sigmoid_max"
+    ],
+    "ties": "earliest epoch",
+    "checkpoint_for_gates": "selected dev best only"
+  },
+  "gates": {
+    "visible_hits": 49,
+    "visible_denominator": 61,
+    "swap_both_hits": 8,
+    "swap_denominator": 15,
+    "found_both_hits": 12,
+    "found_denominator": 16,
+    "empty_each_tolerance": 1e-06,
+    "phrase_extra_hits_or_pairs": 2,
+    "phrase_other_metric_nonregression": true,
+    "median_sidecar_overhead_max_fraction": 0.2,
+    "bootstrap_resamples": 5000,
+    "bootstrap_seed": 24082026
+  },
+  "control_comparisons": [
+    "P1_vs_C1: objective improvement; other binding metric nonregression",
+    "P1_vs_P2: phrase-specific benefit under matched objective"
+  ],
+  "scope": "development train/dev only; no verifier, calibration samples, IID/OOD, MC or robot",
+  "optimizer_authorized_in_preflight": false,
+  "epoch_orchestration_implemented": false
+}

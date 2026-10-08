@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "mh_pcrau_v3_anti_shortcut_val_v1_robust_eval_r6",
+  "status": "FROZEN_BEFORE_R6_CAPTURE_AND_ANY_CHECKPOINT_INFERENCE",
+  "created_at_utc": "2026-09-25T05:00:00Z",
+  "parent_protocol": "protocol/MH_PCRAU_V3_ANTI_SHORTCUT_VAL_V1_LOCK.json",
+  "supersedes_dataset_revision_only": "protocol/MH_PCRAU_V3_ANTI_SHORTCUT_VAL_V1_ROBUST_EVAL_LOCK.json",
+  "revision_reason": "R5 geometry-only canary failed 17/64 at camera stratum 1; no checkpoint was opened. R6 reduces planned tie gap and moves the occluder 2 mm farther across the camera ray for strata 1/2.",
+  "primary_checkpoint": {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06_robust_candidate_r2/s1a_robust_fixed_epoch54.pt",
+    "sha256": "9adc075afd6d43e2c495db25f184c2c2f3a7c42f5dca020bd3d8df3522368f22"
+  },
+  "fixed_comparator_checkpoint": {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_best.pt",
+    "sha256": "042a6c7fd4456f0eaeea4e5361392c3f428581c0d5b66a541fdfe6d590e0dfa1"
+  },
+  "r6_design": {
+    "directory": "ketqua1/09_danh_gia/anti_shortcut_val_v1_r6",
+    "families": 256,
+    "design_static_qc_sha256": "9b2121a0cb3fbb0757c5b7de38d9be26d63d83138a5a0b8574100951a66bc0c3",
+    "design_index_sha256": "22fdf1c31ea3c8d04006d1e2c6785895768dd6c2898b546287a4da4eb42f95be",
+    "batch_source_lock_sha256": {
+      "0": "415ce7874981b0f01075b0558c433f6608869eb180b387ad2d769cfce736affb",
+      "1": "6af2cefe1a3d829f2db9506b1dab3c3e27455565d014ac41b4002251a92c42b1",
+      "2": "c6c90d85dee1f4704656d873534299c235271421fd9b04116750acdf82c3c6a9",
+      "3": "756c16a0008830c7523d683b6b60d6be7be7a31ca0a45ea27a8347144ee0aac5"
+    }
+  },
+  "unchanged_rules": {
+    "preinference_gates": "inherit exactly from parent protocol",
+    "one_shot": true,
+    "no_retraining_or_threshold_tuning_after_open": true,
+    "minimum_effect_over_matching_shortcut_baseline": 0.05,
+    "bootstrap": "95% parent-family bootstrap, 10000 draws, seed 25092026",
+    "failure_policy": "Report observed failure without case filtering or checkpoint replacement."
+  },
+  "model_opened_at_lock_time": false,
+  "sealed": {
+    "calibration": true,
+    "test_iid": true,
+    "test_ood": true,
+    "robot_validation": true
+  }
+}

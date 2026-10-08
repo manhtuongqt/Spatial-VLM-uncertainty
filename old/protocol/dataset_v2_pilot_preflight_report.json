@@ -1,0 +1,148 @@
+{
+  "checks": {
+    "asset_partition_and_single_ood_axis": {
+      "excluded_assets": [
+        "cup",
+        "kettle",
+        "ycb_bleach_cleanser_01"
+      ],
+      "failures": [],
+      "heldout_assets": [
+        "ycb_pear_01",
+        "ycb_plum_01",
+        "ycb_tuna_fish_can_01"
+      ],
+      "passed": true,
+      "runtime_reserved_assets": [
+        "cube_red_01"
+      ]
+    },
+    "identity_and_variants": {
+      "passed": true
+    },
+    "layout_bounds_and_collision": {
+      "collision_margin_m": 0.003,
+      "failures": [],
+      "layouts_checked": 60,
+      "passed": true
+    },
+    "locked_counts": {
+      "capture_count": 60,
+      "counts": {
+        "family_category": {
+          "direct_grounding": 5,
+          "front_behind_camera": 5,
+          "multi_anchor_depth_order": 5,
+          "nearer_farther": 5,
+          "occlusion_depth_evidence": 5,
+          "relation_2d": 5
+        },
+        "ood_axis": {
+          "asset": 5,
+          "depth_noise": 5,
+          "language": 5,
+          "layout": 5,
+          "none": 5,
+          "viewpoint": 5
+        },
+        "primary_answerability": {
+          "ABSENT": 7,
+          "AMBIGUOUS": 7,
+          "FOUND": 8,
+          "INSUFFICIENT_EVIDENCE": 8
+        },
+        "state_submode": {
+          "anchor_absent": 2,
+          "attribute_tie": 2,
+          "cross_modal_conflict": 2,
+          "depth_invalid_or_corrupt": 2,
+          "multi_anchor_conflict": 1,
+          "occlusion": 2,
+          "relation_tie": 2,
+          "same_class_duplicate": 2,
+          "target_absent": 3,
+          "too_small_or_out_of_view": 2,
+          "unique_visible_referent": 8,
+          "unsatisfied_relation": 2
+        }
+      },
+      "family_count": 30,
+      "passed": true,
+      "sample_count": 150
+    },
+    "object_registry_and_world_labels": {
+      "findings": [],
+      "instance_count": 27,
+      "passed": true
+    },
+    "ontology_target_anchor_relation": {
+      "failures": [],
+      "observed_submodes": {
+        "ABSENT": [
+          "anchor_absent",
+          "target_absent",
+          "unsatisfied_relation"
+        ],
+        "AMBIGUOUS": [
+          "attribute_tie",
+          "multi_anchor_conflict",
+          "relation_tie",
+          "same_class_duplicate"
+        ],
+        "INSUFFICIENT_EVIDENCE": [
+          "cross_modal_conflict",
+          "depth_invalid_or_corrupt",
+          "occlusion",
+          "too_small_or_out_of_view"
+        ]
+      },
+      "passed": true,
+      "relation_checks": 26
+    },
+    "oracle_leakage": {
+      "findings": [],
+      "passed": true
+    },
+    "pilot_official_disjointness": {
+      "development_seed_count": 2000,
+      "passed": true,
+      "pilot_seed_count": 150
+    },
+    "protected_wp0_wp3_wp2_hashes": {
+      "failures": [],
+      "passed": true,
+      "tree_digests": {
+        "datasets/roborefer_dataset_v1_prototype_20260818_155606": "d8e0479f65bc381207912f270f59de9808ca37e9520040d1ac498262e15875fc",
+        "results/roborefer_depth_sensitivity_v1_20260818_152700": "857e6b5e169b933572a41fb7251c9cbc78a4146d99f0f76845b27e9187472a9c",
+        "results/roborefer_pilot_v0_20260813_173305": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c"
+      }
+    },
+    "required_evidence_visibility_envelope": {
+      "envelope_base_link": {
+        "x_m": [
+          -0.42,
+          -0.08
+        ],
+        "y_m": [
+          0.12,
+          0.5
+        ]
+      },
+      "failures": [],
+      "passed": true
+    },
+    "runtime_pipeline_complete": {
+      "missing": [],
+      "passed": true
+    },
+    "static_replay": {
+      "passed": true
+    }
+  },
+  "decision": "GO_PILOT_GAZEBO_CAPTURE_60",
+  "failures": [],
+  "generated_at_utc": "2026-08-21T08:21:02.412481+00:00",
+  "passed": true,
+  "protocol_id": "roborefer_dataset_v2_pilot_only",
+  "schema_version": 1
+}

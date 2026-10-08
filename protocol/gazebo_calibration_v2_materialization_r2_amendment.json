@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gazebo_calibration_v2",
+  "revision": "materialization_r2",
+  "status": "LOCKED_BEFORE_GEOMETRY_QC_OR_ORACLE_ACCESS",
+  "reason": "The first materialization-lock wrapper failed before geometry access because v2 paths were not propagated to the imported base module.",
+  "allowed_change": "Module path propagation only.",
+  "forbidden_changes": [
+    "capture bytes or scene membership",
+    "geometry acceptance gates",
+    "duplicate detection rules",
+    "B0 grounding model",
+    "16-feature schema",
+    "Logistic-L2 C=0.1 estimator",
+    "temperature-scaling family or objective",
+    "operating-threshold selection rule",
+    "hypothesis or scientific gates"
+  ],
+  "capture_policy": {
+    "reuse_immutable_calibration_v2_capture": true,
+    "expected_scene_count": 128,
+    "all_or_nothing_geometry_qc": true,
+    "partial_salvage_forbidden": true,
+    "recapture_required": false,
+    "justification": "The failed command stopped before geometry QC, label access, materialization, inference, or fit."
+  },
+  "sealed": {
+    "dev_v2": true,
+    "test_iid": true,
+    "test_ood": true,
+    "robot_deployment": true
+  },
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V2_CONTRACT_LOCK.json": "5a805e1746f5dcae40075b2cfd0db2d656aa46df1b5d6ca193c3ceed082da494",
+    "protocol/gazebo_calibration_v2_capture_compatibility_lock.json": "67e70462bfb47779c9bd4408016f935f5320d870d9f233a55c58b187ce73f4e2",
+    "protocol/materialize_gazebo_calibration_v2.py": "db729063a50b3e499bae1b05359c4bf5c832344a661e54449c076ad7840f5b9c",
+    "protocol/materialize_gazebo_calibration_v2_r2.py": "e2d01470f9b661619ef086167f9670b8d19f521773d0308e3f9c9817cf43410d",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v2/MATERIALIZATION_ATTEMPT_01_DECISION.md": "28aed6b9387b19a00a829fd69e5da4aa8e07be8240b27755d36a4edde79866c4",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v2/capture_attempt_01/capture_manifest.json": "0aa667f92fdf461de2a299519d0f05439ccc77dc010b86ce767c18b481fc8806",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v2/capture_attempt_01/input_manifest.jsonl": "41b49dbc14f27c57bd03b337f643ead03ec0e704c3042014c84c98cab6f3e00c"
+  },
+  "locked_at_utc": "2026-09-14T09:44:00+00:00"
+}

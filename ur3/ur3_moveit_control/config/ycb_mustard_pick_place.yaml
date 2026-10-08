@@ -1,0 +1,29 @@
+fixed_pick_place:
+  ros__parameters:
+    # The selected mustard bottle is randomized only in the calibrated source
+    # workspace. Its 100 mm keep-out proxy always remains outside the tray.
+    initial_object_pose: [-0.165, 0.18, 0.095695, 0.0, 0.0, 0.0, 1.0]
+    randomize_object: true
+    random_x_range: [-0.175, -0.155]
+    random_y_range: [0.15, 0.21]
+    random_yaw_range: [-0.12, 0.12]
+    randomize_scene_objects: false
+    source_keepout_center_xy: [0.0, 0.38]
+    source_keepout_size_xy: [0.20, 0.25]
+    source_keepout_clearance_m: 0.005
+    source_keepout_object_size: 0.10
+    object_size: 0.10
+    workspace_max: [0.02, 0.46, 0.22]
+    detection_timeout: 100.0
+    perception_settle_time: 1.0
+    # Keep the carried bottle above the table during the source-to-bin
+    # transfer. A free-space OMPL trajectory may dip the real YCB mesh below
+    # the simplified attached collision proxy and physically stall Gazebo.
+    industrial_linear_transfers: true
+    # The top grasp leaves the 190 mm bottle hanging about 86 mm below the
+    # TCP. Approach the tray with the TCP at 0.30 m so the bottle clears the
+    # rim, then use the existing vertical placement segment.
+    place_approach_distance: 0.19
+    # RGB-D sees the cap and underestimates the bottle footprint (~40 mm).
+    # Use the tray centre so the real ~100 mm YCB mesh clears every wall.
+    bin_place_slots_xy: [0.0, 0.0]

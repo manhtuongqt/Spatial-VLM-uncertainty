@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_COUNTERFACTUAL_FEATURE_EXTRACTION",
+  "created_at_utc": "2026-09-24T10:32:40.758289+00:00",
+  "scope": "Post-hoc diagnostic after paired input-shift result was observed; never confirmatory evidence",
+  "intervention": "Append the exact canonical Train-UQ output-contract suffix; RGB, depth and labels unchanged",
+  "training_or_selection_allowed": false,
+  "generalization_hold_must_remain": true,
+  "checkpoint": {
+    "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_best.pt",
+    "sha256": "042a6c7fd4456f0eaeea4e5361392c3f428581c0d5b66a541fdfe6d590e0dfa1"
+  },
+  "source_input": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_INPUT_MANIFEST.jsonl",
+    "sha256": "08cf545f557b48a50d6f9f5bec9cf6590917c40fe14b36bdace3733a70b4b3a2"
+  },
+  "input_manifest": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_03_prompt_aligned/PROMPT_ALIGNED_INPUT_MANIFEST.jsonl",
+    "sha256": "762f5101c3a2a6ac82caaa1842ec164690a25e0223291238ab54a21058e09c0d"
+  },
+  "supervision": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_03_prompt_aligned/PROMPT_ALIGNED_SUPERVISION.jsonl",
+    "sha256": "8862d4cfb945c447211347c246f6dbdc4421d34f040f320c06685b859d7a722e"
+  },
+  "source_code": {
+    "path": "workspace/mh_pcrau_v3/day6_prompt_aligned_prepare.py",
+    "sha256": "aebb20987562733b85b82e6432157547127b315e739ebd61973f0cfa5c6fb0ec"
+  },
+  "canonical_suffix_sha256": "f5aba2755a10fe32e8fa0d073bc1354a5cf01cea89c626a5b1fb7c087b4d21a4",
+  "rows": 256
+}

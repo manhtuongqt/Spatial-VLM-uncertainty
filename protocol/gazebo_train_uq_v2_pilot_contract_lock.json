@@ -1,0 +1,26 @@
+{
+  "frozen_dev_v2_sha256": "b76faa04130e1e62e03476c48339744733d780a148b3f45a3a9184423f8227c5",
+  "locked_at_utc": "2026-09-11T09:04:08.019264+00:00",
+  "parent_families": 32,
+  "policies": {
+    "no_b2": true,
+    "no_dev_v2_fit_or_selection": true,
+    "no_sam2": true,
+    "no_test_access": true,
+    "no_training": true
+  },
+  "protocol_id": "gazebo_train_uq_v2_pilot",
+  "purpose": "geometry validation only; no materialization, training, or model inference",
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "protocol/gazebo_train_uq_v2_pilot_pipeline.py": "288405c2fb77c0894456b71e5e3932f6714ecf72ad24a34e6ea69de2fe3d2f46",
+    "protocol/generate_gazebo_train_uq_v2_pilot_contract.py": "003fc52be18341e9bf4ab76cbe11784e667030f6763d82b6fa6db88d65a15954",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v1/GAZEBO_TRAIN_UQ_V1_GEOMETRY_QC.json": "d808f45ed5e09090d52cf974ffe6d762c0a4907a0993bf1ad694a72b42150e57",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_pilot_annotations.yaml": "90dca5cd6f867b51bac45bf442ba48f168db27bbb5f748bef3bdddb60ca85ba6",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_pilot_gate.yaml": "b53f47ddcb87987209275a038684685671ad9156b659e145e036907a055c23be",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_pilot_scenes.yaml": "463bc78cf93e68addf9278159c16d9190239506e1e3bc07aa704e92d8a4b55c2"
+  },
+  "state_relation_cell_quota": 2,
+  "status": "LOCKED_BEFORE_PILOT_CAPTURE",
+  "v1_failed_qc_sha256": "d808f45ed5e09090d52cf974ffe6d762c0a4907a0993bf1ad694a72b42150e57"
+}

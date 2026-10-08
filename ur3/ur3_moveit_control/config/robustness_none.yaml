@@ -1,0 +1,4 @@
+fixed_pick_place:
+  ros__parameters:
+    error_injection_axis: "none"
+    error_injection_values: [0.0]

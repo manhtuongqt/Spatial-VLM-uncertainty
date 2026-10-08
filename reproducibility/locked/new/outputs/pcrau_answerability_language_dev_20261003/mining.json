@@ -1,0 +1,15 @@
+{
+  "augmented_presentations": 6400,
+  "feature_dim": 2222,
+  "hard_absent": 30,
+  "hard_found": 317,
+  "independent_train_families": 320,
+  "original_train_samples": 1600,
+  "prefixes": [
+    "",
+    "Please ",
+    "In this scene, ",
+    "Can you "
+  ],
+  "used_labels": "train only"
+}

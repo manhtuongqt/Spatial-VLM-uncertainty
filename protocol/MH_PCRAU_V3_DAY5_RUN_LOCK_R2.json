@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "method_id": "MH-PCRA-U-v3",
+  "status": "FROZEN_BEFORE_DAY5_ATTEMPT_02",
+  "created_at_utc": "2026-09-24T09:13:41.435605+00:00",
+  "seed": 25092026,
+  "inherited_lock": {
+    "path": "protocol/MH_PCRAU_V3_DAY5_RUN_LOCK.json",
+    "sha256": "ad10614d86e768fbf7c8f20e75575f3ba278d078b8a1241985be2cf3ba9fe634"
+  },
+  "prerequisites": [
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_05/CACHE_QC.json",
+      "sha256": "dd0460db1dc0e8c77598a6e0f0dccfe5d596ed67cc3291511da849962d0bdb9c"
+    },
+    {
+      "path": "ketqua1/04_multihead_pcrau_v3/ngay_05/MINIBATCH_OVERFIT.json",
+      "sha256": "358711f6f11954aa381067d9704b6ea28d818c592d8cd6bb05e071e4367a54e0"
+    },
+    {
+      "path": "ketqua1/04_multihead_pcrau_v3/ngay_05/G2_DECISION.json",
+      "sha256": "f0cbcc20110e828bfbe1974506b3487430a16e899f4ee613c1c9a02abfd29a6b"
+    },
+    {
+      "path": "ketqua1/06_ham_mat_mat/ngay_05/LOSS_WEIGHT_DECISION.json",
+      "sha256": "752e3883eb8e1b50237422580ac941964a781ce805d8dccdb335f5e37fd6724e"
+    },
+    {
+      "path": "ketqua1/04_multihead_pcrau_v3/ngay_05/ATTEMPT_01_VARIANCE_COLLAPSE.md",
+      "sha256": "68bb6614746eeca0e1e0bb12d649be331b532d2fe07d065f09c6eb52480139b7"
+    }
+  ],
+  "data_and_features_unchanged": true,
+  "mini_batch_sample_ids": [
+    "gazebo_uq_v2_full_r3_train_uq_000",
+    "gazebo_uq_v2_full_r3_train_uq_001",
+    "gazebo_uq_v2_full_r3_train_uq_002",
+    "gazebo_uq_v2_full_r3_train_uq_003",
+    "gazebo_uq_v2_full_r3_train_uq_004",
+    "gazebo_uq_v2_full_r3_train_uq_005",
+    "gazebo_uq_v2_full_r3_train_uq_006",
+    "gazebo_uq_v2_full_r3_train_uq_007",
+    "gazebo_uq_v2_full_r3_train_uq_008",
+    "gazebo_uq_v2_full_r3_train_uq_009",
+    "gazebo_uq_v2_full_r3_train_uq_010",
+    "gazebo_uq_v2_full_r3_train_uq_011",
+    "gazebo_uq_v2_full_r3_train_uq_012",
+    "gazebo_uq_v2_full_r3_train_uq_013",
+    "gazebo_uq_v2_full_r3_train_uq_014",
+    "gazebo_uq_v2_full_r3_train_uq_015"
+  ],
+  "selected_loss_weights": {
+    "relation": 1.0,
+    "reasoning": 1.0,
+    "spatial": 0.5,
+    "source": 1.0,
+    "answerability": 1.0,
+    "confidence": 0.0,
+    "language_modeling": 0.0
+  },
+  "optimizer_revision": {
+    "optimizer": "AdamW",
+    "main_learning_rate": 0.0005,
+    "log_variance_head_learning_rate": 5e-06,
+    "weight_decay": 0.0,
+    "maximum_gradient_norm": 5.0,
+    "maximum_steps": 1200,
+    "minimum_steps": 50,
+    "evaluation_interval": 10,
+    "full_batch": 16,
+    "dropout": 0.1
+  },
+  "pass_thresholds_unchanged": {
+    "relation_loss_final_over_initial_max": 0.25,
+    "answerability_loss_final_over_initial_max": 0.25,
+    "relation_accuracy_min": 0.9375,
+    "answerability_accuracy_min": 0.9375,
+    "point_mae_uv_max": 0.03,
+    "spatial_nll_must_decrease": true,
+    "log_variance_min_strictly_above": -7.95,
+    "log_variance_max_strictly_below": 1.95,
+    "finite_rate": 1.0
+  },
+  "remediation": "Preserve Gaussian NLL and architecture; reduce global LR 4x, variance-head LR 100x vs main, clip global gradient norm. Restart from identical seed; no checkpoint continuation.",
+  "access_boundary": "Development-only rerun. No Val/Calibration/Test/robot access."
+}

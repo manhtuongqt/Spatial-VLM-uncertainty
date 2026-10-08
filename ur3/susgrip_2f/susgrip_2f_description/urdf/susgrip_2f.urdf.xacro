@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="susgrip_2f">
+  
+  <xacro:arg name="prefix" default=""/>
+  <xacro:arg name="sim_gazebo" default="false"/>
+  <xacro:arg name="simulation_controllers" default=""/>
+
+  <xacro:include filename="$(find susgrip_2f_description)/urdf/susgrip_2f_macro.xacro" />
+  
+  <link name="world" />
+
+  <!-- Instantiate the gripper macro -->
+  <xacro:susgrip_2f prefix="$(arg prefix)" parent="world" sim_gazebo="$(arg sim_gazebo)" simulation_controllers="$(arg simulation_controllers)">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:susgrip_2f>
+
+</robot>

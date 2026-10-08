@@ -1,0 +1,7 @@
+{
+  "new_source_sha256": "d47ebe74cb2951843fa1823a174055bb37fa261c8b9d7967d25034ee25ce1f86",
+  "no_new_MC_forward_or_training": true,
+  "original_recovery_protocol_preserved": true,
+  "reason": "compare canonical serialized observable values; parser anchors tuple becomes JSON list",
+  "same_neural_producer_checkpoint_and_raw_samples": true
+}

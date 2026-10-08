@@ -1,0 +1,272 @@
+{
+  "schema_version": 2,
+  "protocol_id": "roborefer_dataset_expansion_v2",
+  "decision": "GO_DATASET_EXPANSION_DESIGN_LOCK",
+  "status": "LOCKED_DESIGN_NO_CAPTURE_NO_TRAINING",
+  "locked_at_utc": "2026-08-21T07:06:37+00:00",
+  "scope": "Family-level preregistration for pilot-only dry run, 400-family development expansion, and sealed calibration/Test-IID/Test-OOD lifecycle.",
+  "family_unit": {
+    "name": "scene_query_family",
+    "split_key": "family_id",
+    "all_views_paraphrases_clean_corruptions_counterfactuals_same_split": true,
+    "bootstrap_unit": "family_id",
+    "variants_are_not_independent_observations": true,
+    "variants": [
+      "clean",
+      "semantic_counterfactual",
+      "relation_counterfactual",
+      "depth_corruption",
+      "occlusion_view_counterfactual"
+    ]
+  },
+  "answerability_ontology": {
+    "FOUND": {
+      "definition": "Exactly one world referent satisfies the query and the current observation contains sufficient evidence to localize it.",
+      "denotation_cardinality_min": 1,
+      "denotation_cardinality_max": 1,
+      "world_referent_exists": true,
+      "observation_sufficient": true,
+      "answerable": true,
+      "default_intervention": "EXECUTE"
+    },
+    "AMBIGUOUS": {
+      "definition": "At least two world referents remain valid under the query; additional sensing alone does not select one without disambiguation.",
+      "denotation_cardinality_min": 2,
+      "denotation_cardinality_max": null,
+      "world_referent_exists": true,
+      "observation_sufficient": true,
+      "answerable": false,
+      "default_intervention": "ASK_USER"
+    },
+    "ABSENT": {
+      "definition": "The query denotation is empty in the world because the target or required anchor is absent, or no object satisfies the locked relation.",
+      "denotation_cardinality_min": 0,
+      "denotation_cardinality_max": 0,
+      "world_referent_exists": false,
+      "observation_sufficient": true,
+      "answerable": false,
+      "default_intervention": "ABSTAIN"
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "definition": "Exactly one world referent exists, but the current RGB/depth/view evidence is insufficient because of occlusion, invalid depth, scale/view, or cross-modal conflict.",
+      "denotation_cardinality_min": 1,
+      "denotation_cardinality_max": 1,
+      "world_referent_exists": true,
+      "observation_sufficient": false,
+      "answerable": false,
+      "default_intervention": "REOBSERVE"
+    }
+  },
+  "state_submodes": {
+    "AMBIGUOUS": {
+      "same_class_duplicate": 28,
+      "attribute_tie": 18,
+      "relation_tie": 14,
+      "multi_anchor_conflict": 10
+    },
+    "ABSENT": {
+      "target_absent": 24,
+      "anchor_absent": 24,
+      "unsatisfied_relation": 22
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "depth_invalid_or_corrupt": 30,
+      "occlusion": 30,
+      "too_small_or_out_of_view": 20,
+      "cross_modal_conflict": 20
+    }
+  },
+  "pilot_only": {
+    "family_count": 30,
+    "sample_count_planned": 150,
+    "eligible_for_official_dataset": false,
+    "reuse_family_ids_seeds_or_captures_in_official_dataset": false,
+    "primary_answerability_family_counts": {
+      "FOUND": 8,
+      "INSUFFICIENT_EVIDENCE": 8,
+      "AMBIGUOUS": 7,
+      "ABSENT": 7
+    },
+    "family_category_counts": {
+      "direct_grounding": 5,
+      "relation_2d": 5,
+      "nearer_farther": 5,
+      "front_behind_camera": 5,
+      "multi_anchor_depth_order": 5,
+      "occlusion_depth_evidence": 5
+    },
+    "ood_axis_smoke_counts": {
+      "none": 5,
+      "asset": 5,
+      "layout": 5,
+      "viewpoint": 5,
+      "language": 5,
+      "depth_noise": 5
+    }
+  },
+  "development": {
+    "family_count": 400,
+    "sample_count_planned": 2000,
+    "capture_authorized_by_this_lock": false,
+    "splits": {
+      "train": {
+        "family_count": 320,
+        "primary_answerability_family_counts": {
+          "FOUND": 128,
+          "INSUFFICIENT_EVIDENCE": 80,
+          "AMBIGUOUS": 56,
+          "ABSENT": 56
+        },
+        "family_category_counts": {
+          "direct_grounding": 48,
+          "relation_2d": 64,
+          "nearer_farther": 56,
+          "front_behind_camera": 48,
+          "multi_anchor_depth_order": 48,
+          "occlusion_depth_evidence": 56
+        }
+      },
+      "dev": {
+        "family_count": 80,
+        "primary_answerability_family_counts": {
+          "FOUND": 32,
+          "INSUFFICIENT_EVIDENCE": 20,
+          "AMBIGUOUS": 14,
+          "ABSENT": 14
+        },
+        "family_category_counts": {
+          "direct_grounding": 12,
+          "relation_2d": 16,
+          "nearer_farther": 14,
+          "front_behind_camera": 12,
+          "multi_anchor_depth_order": 12,
+          "occlusion_depth_evidence": 14
+        }
+      }
+    },
+    "depth_dependent_categories": [
+      "nearer_farther",
+      "front_behind_camera",
+      "multi_anchor_depth_order",
+      "occlusion_depth_evidence"
+    ],
+    "depth_dependent_family_count": 260,
+    "depth_dependent_fraction": 0.65
+  },
+  "wp2_policy": {
+    "dataset_id": "roborefer_dataset_v1_prototype",
+    "status": "PROTOTYPE_ENGINEERING_ONLY",
+    "allowed_use": [
+      "schema_loader_test",
+      "feature_hook_smoke",
+      "overfit_diagnostic",
+      "preliminary_failure_audit",
+      "optional_train_only_warm_start_with_explicit_flag"
+    ],
+    "forbidden_use": [
+      "final_dev_model_selection",
+      "calibration_fit",
+      "test_iid",
+      "test_ood",
+      "generalization_claim"
+    ]
+  },
+  "future_candidate_full": {
+    "official_family_count_lower_bound": 2000,
+    "official_family_count_upper_bound": 4000,
+    "exact_size_status": "DEFERRED_UNTIL_DEVELOPMENT_FAILURE_AUDIT_AND_POWER_ANALYSIS",
+    "size_selection_must_be_model_blind_to_locked_test": true,
+    "split_fraction_bounds": {
+      "train": [0.55, 0.65],
+      "dev": [0.1, 0.15],
+      "calibration": [0.1, 0.15],
+      "test_iid": [0.1, 0.15]
+    },
+    "test_ood_policy": "Held-out families sized after development runtime/power analysis; not taken from any seen split.",
+    "minimum_ambiguous_plus_absent_families": {
+      "calibration": 60,
+      "test_iid": 60,
+      "test_ood": 60
+    },
+    "false_found_rule_of_three_scope": "At least 60 independent AMBIGUOUS or ABSENT families in each locked test split; subgroup claims require their own denominator."
+  },
+  "split_lifecycle": {
+    "train": {
+      "first_authorized_phase": "DEVELOPMENT_CAPTURE_AFTER_PILOT_GATE",
+      "model_selection_allowed": false
+    },
+    "dev": {
+      "first_authorized_phase": "DEVELOPMENT_CAPTURE_AFTER_PILOT_GATE",
+      "model_selection_allowed": true
+    },
+    "calibration": {
+      "first_authorized_phase": "AFTER_CANDIDATE_MODEL_AND_CHECKPOINT_FREEZE",
+      "model_selection_allowed": false
+    },
+    "test_iid": {
+      "first_authorized_phase": "AFTER_CALIBRATOR_AND_THRESHOLDS_FREEZE",
+      "model_selection_allowed": false,
+      "open_once": true
+    },
+    "test_ood": {
+      "first_authorized_phase": "AFTER_CALIBRATOR_AND_THRESHOLDS_FREEZE",
+      "model_selection_allowed": false,
+      "open_once": true
+    }
+  },
+  "leakage_policy": {
+    "forbidden_cross_split_identity": [
+      "family_id",
+      "capture_id",
+      "layout_seed",
+      "raw_rgb_depth_label_capture",
+      "exact_instruction",
+      "language_template_family_id"
+    ],
+    "near_duplicate_instruction_check_required": true,
+    "asset_holdout_check_required": true,
+    "oracle_graph_evaluator_only": true,
+    "evaluator_artifacts_forbidden_in_inference_payload": true
+  },
+  "reporting_boundary": {
+    "may_update": ["TABLE_01_DATASET_INDEPENDENCE"],
+    "figures_allowed_before_capture": [],
+    "figures_forbidden_before_capture": ["F01_DATASET_BALANCE"],
+    "figure_release_condition": "AFTER_REAL_CAPTURE_AND_DATASET_QC_PASS",
+    "figure_generation_policy": {
+      "must_be_generated_from_hashed_csv_or_json": true,
+      "source_data_must_be_archived_beside_figure": true,
+      "family_denominator_must_be_explicit": true,
+      "planned_counts_must_not_be_presented_as_observed_evidence": true,
+      "manual_decorative_gui_style_figure_forbidden": true
+    },
+    "must_remain_not_run": [
+      "TABLE_02_GROUNDING_MAIN",
+      "TABLE_03_ANSWERABILITY_ERROR",
+      "TABLE_04_CALIBRATION",
+      "TABLE_05_SOURCE_ATTRIBUTION",
+      "TABLE_06_ABLATION"
+    ],
+    "planned_counts_must_be_labeled": "PLANNED_NOT_CAPTURED"
+  },
+  "gate_sequence": [
+    "GO_DATASET_EXPANSION_DESIGN_LOCK",
+    "GO_DRY_RUN_30_PILOT_ONLY",
+    "GO_DEVELOPMENT_CAPTURE_400",
+    "GO_DEVELOPMENT_TRAIN",
+    "FREEZE_CANDIDATE_MODEL",
+    "OPEN_CALIBRATION",
+    "FREEZE_CALIBRATOR_THRESHOLDS",
+    "OPEN_LOCKED_TEST_IID_AND_OOD_ONCE"
+  ],
+  "current_allowed_next_action": "GO_DRY_RUN_30_PILOT_ONLY",
+  "prohibitions": [
+    "NO_DEVELOPMENT_TRAINING",
+    "NO_OFFICIAL_400_FAMILY_CAPTURE",
+    "NO_CALIBRATION_CAPTURE_OR_READ",
+    "NO_TEST_IID_CAPTURE_OR_READ",
+    "NO_TEST_OOD_CAPTURE_OR_READ",
+    "NO_THOUSANDS_FAMILY_SCALE",
+    "NO_ORACLE_INFERENCE_INPUT"
+  ]
+}

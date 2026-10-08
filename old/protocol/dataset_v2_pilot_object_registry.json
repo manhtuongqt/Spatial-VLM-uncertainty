@@ -1,0 +1,360 @@
+{
+  "instance_count": 27,
+  "objects": {
+    "blue_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_blue_01",
+      "label": 2,
+      "semantic_class": "blue cube",
+      "storage_pose_xyyaw": [
+        -0.54,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "green_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_green_01",
+      "label": 3,
+      "semantic_class": "green cube",
+      "storage_pose_xyyaw": [
+        -0.36,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "mango": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.055,
+      "id": "mango_01",
+      "label": 29,
+      "semantic_class": "mango",
+      "storage_pose_xyyaw": [
+        0.36,
+        1.08,
+        0.35
+      ],
+      "z": 0.03
+    },
+    "orange_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_orange_01",
+      "label": 5,
+      "semantic_class": "orange cube",
+      "storage_pose_xyyaw": [
+        0,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "pink_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_pink_01",
+      "label": 7,
+      "semantic_class": "pink cube",
+      "storage_pose_xyyaw": [
+        0.36,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "purple_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_purple_01",
+      "label": 6,
+      "semantic_class": "purple cube",
+      "storage_pose_xyyaw": [
+        0.18,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    },
+    "red_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.043,
+      "id": "cube_red_01",
+      "label": 1,
+      "semantic_class": "red cube",
+      "storage_pose_xyyaw": [
+        -0.72,
+        0.84,
+        0
+      ],
+      "z": 0.03
+    },
+    "ycb_apple": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_apple_01",
+      "label": 26,
+      "semantic_class": "apple",
+      "storage_pose_xyyaw": [
+        -0.18,
+        1.08,
+        0
+      ],
+      "z": 0.03771
+    },
+    "ycb_apple_02": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_apple_02",
+      "label": 102,
+      "semantic_class": "apple",
+      "storage_pose_xyyaw": [
+        0.72,
+        1.08,
+        0.2
+      ],
+      "z": 0.036453
+    },
+    "ycb_apple_03": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_apple_03",
+      "label": 107,
+      "semantic_class": "apple",
+      "storage_pose_xyyaw": [
+        0,
+        1.32,
+        -0.35
+      ],
+      "z": 0.036453
+    },
+    "ycb_banana": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.106,
+      "id": "ycb_banana_01",
+      "label": 25,
+      "semantic_class": "banana",
+      "storage_pose_xyyaw": [
+        -0.36,
+        1.08,
+        0.25
+      ],
+      "z": 0.018376
+    },
+    "ycb_banana_02": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.106,
+      "id": "ycb_banana_02",
+      "label": 101,
+      "semantic_class": "banana",
+      "storage_pose_xyyaw": [
+        0.54,
+        1.08,
+        -0.45
+      ],
+      "z": 0.018876
+    },
+    "ycb_banana_03": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.106,
+      "id": "ycb_banana_03",
+      "label": 106,
+      "semantic_class": "banana",
+      "storage_pose_xyyaw": [
+        -0.18,
+        1.32,
+        0.4
+      ],
+      "z": 0.018876
+    },
+    "ycb_cracker_box": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.091,
+      "id": "ycb_cracker_box_01",
+      "label": 21,
+      "semantic_class": "cracker box",
+      "storage_pose_xyyaw": [
+        0.54,
+        0.84,
+        0
+      ],
+      "z": 0.10671
+    },
+    "ycb_lemon": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.041,
+      "id": "ycb_lemon_01",
+      "label": 104,
+      "semantic_class": "lemon",
+      "storage_pose_xyyaw": [
+        -0.54,
+        1.32,
+        0.35
+      ],
+      "z": 0.026999
+    },
+    "ycb_mug": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.064,
+      "id": "ycb_mug_01",
+      "label": 111,
+      "semantic_class": "mug",
+      "storage_pose_xyyaw": [
+        0.72,
+        1.32,
+        -0.8
+      ],
+      "z": 0.041177
+    },
+    "ycb_mustard_bottle": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.035,
+      "id": "ycb_mustard_bottle_01",
+      "label": 24,
+      "semantic_class": "mustard bottle",
+      "storage_pose_xyyaw": [
+        -0.54,
+        1.08,
+        0
+      ],
+      "z": 0.095695
+    },
+    "ycb_orange": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_orange_01",
+      "label": 27,
+      "semantic_class": "orange",
+      "storage_pose_xyyaw": [
+        0,
+        1.08,
+        0
+      ],
+      "z": 0.03701
+    },
+    "ycb_orange_02": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_orange_02",
+      "label": 103,
+      "semantic_class": "orange",
+      "storage_pose_xyyaw": [
+        -0.72,
+        1.32,
+        -0.2
+      ],
+      "z": 0.036184
+    },
+    "ycb_orange_03": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.042,
+      "id": "ycb_orange_03",
+      "label": 108,
+      "semantic_class": "orange",
+      "storage_pose_xyyaw": [
+        0.18,
+        1.32,
+        0.4
+      ],
+      "z": 0.036184
+    },
+    "ycb_pear": {
+      "asset_partition": "test_ood_heldout",
+      "footprint_radius_m": 0.048,
+      "id": "ycb_pear_01",
+      "label": 105,
+      "semantic_class": "pear",
+      "storage_pose_xyyaw": [
+        -0.36,
+        1.32,
+        -0.3
+      ],
+      "z": 0.033322
+    },
+    "ycb_plum": {
+      "asset_partition": "test_ood_heldout",
+      "footprint_radius_m": 0.039,
+      "id": "ycb_plum_01",
+      "label": 109,
+      "semantic_class": "plum",
+      "storage_pose_xyyaw": [
+        0.36,
+        1.32,
+        0.55
+      ],
+      "z": 0.027025
+    },
+    "ycb_power_drill": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.132,
+      "id": "ycb_power_drill_01",
+      "label": 28,
+      "semantic_class": "power drill",
+      "storage_pose_xyyaw": [
+        0.18,
+        1.08,
+        -0.25
+      ],
+      "z": 0.028689
+    },
+    "ycb_sugar_box": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.057,
+      "id": "ycb_sugar_box_01",
+      "label": 22,
+      "semantic_class": "sugar box",
+      "storage_pose_xyyaw": [
+        0.72,
+        0.84,
+        0
+      ],
+      "z": 0.088107
+    },
+    "ycb_tomato_soup_can": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.038,
+      "id": "ycb_tomato_soup_can_01",
+      "label": 23,
+      "semantic_class": "tomato soup can",
+      "storage_pose_xyyaw": [
+        -0.72,
+        1.08,
+        0
+      ],
+      "z": 0.050948
+    },
+    "ycb_tuna_fish_can": {
+      "asset_partition": "test_ood_heldout",
+      "footprint_radius_m": 0.046,
+      "id": "ycb_tuna_fish_can_01",
+      "label": 110,
+      "semantic_class": "tuna fish can",
+      "storage_pose_xyyaw": [
+        0.54,
+        1.32,
+        0.1
+      ],
+      "z": 0.017264
+    },
+    "yellow_cube": {
+      "asset_partition": "seen",
+      "footprint_radius_m": 0.037,
+      "id": "cube_yellow_01",
+      "label": 4,
+      "semantic_class": "yellow cube",
+      "storage_pose_xyyaw": [
+        -0.18,
+        0.84,
+        0
+      ],
+      "z": 0.025
+    }
+  },
+  "protocol_id": "roborefer_dataset_v2_pilot_only",
+  "schema_version": 1,
+  "world_file": "ur3/ur_simulation_gz/worlds/ur3_pick_place_inventory_v2.sdf",
+  "world_sha256": "6cff65b57c398220ce77b8d4cf7bfa7a93574a15063ed5793f17318142268f3a"
+}

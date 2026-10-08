@@ -1,0 +1,999 @@
+schema_version: 1
+protocol_id: gazebo_calibration_v6_geometry_pilot
+oracle_usage: geometry_only
+semantic_label_source: gazebo_evaluation_camera_not_vlm_input
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+states:
+- FOUND
+- AMBIGUOUS
+- ABSENT
+- INSUFFICIENT_EVIDENCE
+scenes:
+  gazebo_calibration_v6_geometry_pilot_000:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_000
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_000
+    layout_signature_sha256: bc00b8429e599bcf62b52e72e7caf3104be1ad6e771f5aaf71734ad4a5297e42
+    split: development_geometry_only
+    seed: 466128544
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_001:
+    state: FOUND
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - mango
+    - ycb_apple
+    - ycb_orange
+    candidate_labels:
+    - 29
+    - 26
+    - 27
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: mango
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_001
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_001
+    layout_signature_sha256: 0d71738acda2f58f60ac3d5eebe3811ef4417908845edae8463eb3c873a61ebf
+    split: development_geometry_only
+    seed: 496333263
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_002:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - ycb_orange
+    - mango
+    - ycb_apple
+    candidate_labels:
+    - 27
+    - 29
+    - 26
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_002
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_002
+    layout_signature_sha256: 4b72c6dffc80a373a2d5202919d7ab94ac70528296144992fb575532e72b38ea
+    split: development_geometry_only
+    seed: 726820467
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_003:
+    state: FOUND
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: mango
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_003
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_003
+    layout_signature_sha256: a5621e5e3513f5f0cb1b44158893659b9154975a122c9a5974f96d4022bc9071
+    split: development_geometry_only
+    seed: 1101459811
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_004:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - mango
+    - ycb_apple
+    - ycb_orange
+    candidate_labels:
+    - 29
+    - 26
+    - 27
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_004
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_004
+    layout_signature_sha256: 89dbdf36f19781b6cad6422286b26bdfd9a76a75116d4784f1c53a341b6a9afd
+    split: development_geometry_only
+    seed: 3233541494
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_005:
+    state: FOUND
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_orange
+    - mango
+    - ycb_apple
+    candidate_labels:
+    - 27
+    - 29
+    - 26
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: mango
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_005
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_005
+    layout_signature_sha256: 75f3442f04df11d42ee2e61e6f8f436820a27755ac3a333ad0e0a4bf8e724572
+    split: development_geometry_only
+    seed: 3111615134
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_006:
+    state: FOUND
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_orange
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_006
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_006
+    layout_signature_sha256: 23cbfb1ae157c3a8223c616e398887fb6380051c401743b73d8cee7e9370813b
+    split: development_geometry_only
+    seed: 2947097100
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_007:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - mango
+    - ycb_apple
+    - ycb_orange
+    candidate_labels:
+    - 29
+    - 26
+    - 27
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_007
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_007
+    layout_signature_sha256: 90af082e409823e84948d682c364e27c490339eeada8a879fd8f666e35621bf2
+    split: development_geometry_only
+    seed: 4289693301
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_008:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_008
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_008
+    layout_signature_sha256: 627f7fb038b781df80a7ce3543552deca8a64e0c53c86f3a57a8807f25f2f16d
+    split: development_geometry_only
+    seed: 2310058591
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_009:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_009
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_009
+    layout_signature_sha256: c97571c8f0c5a96271280e8c028a2f0f5d2fa17d61449abcacf1cc8226508f91
+    split: development_geometry_only
+    seed: 3182887967
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_010:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_010
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_010
+    layout_signature_sha256: 1353edfa923c81d47e697fe1e891ed262adb14411ff5d87853be1ca2e69729fe
+    split: development_geometry_only
+    seed: 1762527161
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_011:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_011
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_011
+    layout_signature_sha256: 1cfdc3f3a19ace0502f3eea3fe2680f3d42f797048cde124937c22c69c7055cd
+    split: development_geometry_only
+    seed: 2410952629
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_012:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_012
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_012
+    layout_signature_sha256: b27983faaf528b459f31a82fc7cf6ed64929d342e4da740a0b77c2a6a3e178a3
+    split: development_geometry_only
+    seed: 3272210186
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_013:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_013
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_013
+    layout_signature_sha256: 039a6712a770a93c8c5568c200b3484794b32983bbd7bb72f450683a58587ad2
+    split: development_geometry_only
+    seed: 3324877684
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_014:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_014
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_014
+    layout_signature_sha256: e225d276daec8aacbaedf5dd75315628467200e99fa18f41d6f4854c87515a9e
+    split: development_geometry_only
+    seed: 2819674768
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_015:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_015
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_015
+    layout_signature_sha256: af4c6a4516d212287f9061f3edc7d72ce6b391a7a6be23358b47b18887f895f5
+    split: development_geometry_only
+    seed: 1885675401
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_016:
+    state: ABSENT
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_orange
+    - mango
+    context_labels:
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: ycb_apple
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_016
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_016
+    layout_signature_sha256: b53fd834afd93c1e807b18a59190c10d7bf04e35e184c69eabdf7796525a444d
+    split: development_geometry_only
+    seed: 2608409990
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_017:
+    state: ABSENT
+    target_id: mango
+    target_label: 29
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - ycb_orange
+    context_labels:
+    - 26
+    - 27
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: mango
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_017
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_017
+    layout_signature_sha256: 7aeae9475fe56d7448591534ac78bd8905d6c4af3e46bb85809f1dbc65effd36
+    split: development_geometry_only
+    seed: 4229123702
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_018:
+    state: ABSENT
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - mango
+    context_labels:
+    - 26
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: ycb_orange
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_018
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_018
+    layout_signature_sha256: 5fdf6c385839aa7b344527d442f9d5fbc65760565ff63009fd961fa1537e9ce5
+    split: development_geometry_only
+    seed: 212102512
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_019:
+    state: ABSENT
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_orange
+    - mango
+    context_labels:
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: ycb_apple
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_019
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_019
+    layout_signature_sha256: 7b03052e202d6ce5e9a29e6ac6531916e92cc801bbc58d65683eff878f9c16dd
+    split: development_geometry_only
+    seed: 3088536988
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_020:
+    state: ABSENT
+    target_id: mango
+    target_label: 29
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - ycb_orange
+    context_labels:
+    - 26
+    - 27
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: mango
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_020
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_020
+    layout_signature_sha256: e28016df2e9b1153fd28b72b7a4686888e86f342b0d77be792036fff909ef890
+    split: development_geometry_only
+    seed: 3195718323
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_021:
+    state: ABSENT
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - mango
+    context_labels:
+    - 26
+    - 29
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: ycb_orange
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_021
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_021
+    layout_signature_sha256: 93060d70f9d163881919cbe01c7965736f8c97439f0515322503cf66ceb058c2
+    split: development_geometry_only
+    seed: 1358171279
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_022:
+    state: ABSENT
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_orange
+    - mango
+    context_labels:
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_apple
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_022
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_022
+    layout_signature_sha256: f1581b0029e65de41426e5ad44748814dc4b1e62afe1f238c5196bc94b787005
+    split: development_geometry_only
+    seed: 1287611413
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_023:
+    state: ABSENT
+    target_id: mango
+    target_label: 29
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - ycb_orange
+    context_labels:
+    - 26
+    - 27
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: mango
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_023
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_023
+    layout_signature_sha256: c02a4b2a9d16c93ccd7a72977776239f57c5c84ceaf56f870aa9980761d1a86c
+    split: development_geometry_only
+    seed: 4109079632
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_024:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_024
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_024
+    layout_signature_sha256: 3926a05e8a447465aee8dc0b29ae8637ae088a09ce8812d6a8d639e9874d3e32
+    split: development_geometry_only
+    seed: 326218666
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_025:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_025
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_025
+    layout_signature_sha256: a9d4ccb86fe02072b19e67642539943ed21322a66de13af895ca7f70b6492ca2
+    split: development_geometry_only
+    seed: 3911432068
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_026:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_026
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_026
+    layout_signature_sha256: 85976fe019e8bed23059d6dfb99ef6377ea3101582d604875e9d068969f69073
+    split: development_geometry_only
+    seed: 528293156
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_027:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_027
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_027
+    layout_signature_sha256: 9dc6cc09fa230cc8e151693f8f521cb30cb79c9c91d5b03e40cb2838474c9827
+    split: development_geometry_only
+    seed: 1756395684
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_028:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_028
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_028
+    layout_signature_sha256: 3a0c2dd76ea4a2bcd8685056afba6bb5352c83fa0e858d61610413a35ea0fc63
+    split: development_geometry_only
+    seed: 1228345026
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_029:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_029
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_029
+    layout_signature_sha256: e120a7c3e2d50aab18a579bfc42a5e369a89f152bd323e829ab0fae007794a56
+    split: development_geometry_only
+    seed: 2032958158
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_030:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_030
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_030
+    layout_signature_sha256: b7a1de8cacda31a5a3034ab42b3d4fac1e7ec0143bb70d89296b6e69e08a4689
+    split: development_geometry_only
+    seed: 2376045474
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 0
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+  gazebo_calibration_v6_geometry_pilot_031:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - uq_neutral_occluder
+    occluder_labels:
+    - 39
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - collision_free_visual_only_occluder
+    - characterization_v8_v9_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_gazebo_calibration_v6_geometry_pilot/development/parent_031
+    layout_id: gazebo_calibration_v6_geometry_pilot_layout_031
+    layout_signature_sha256: 468f3f36392796a28a83662a5639f6b6a80c42e3cd48cfb492d50dafbff46146
+    split: development_geometry_only
+    seed: 2277468354
+    template_provenance: full_r2_failure_analysis_geometry_class_only_no_sample_reuse
+    cell_repetition: 1
+    geometry_provenance: frozen_v6_analytic_certified_anchors_no_outcome_selection
+contract_lock_sha256: 850921e200d921592128c76e11c8deeb5a7d6177ea315f1ff8d286f873084b6d

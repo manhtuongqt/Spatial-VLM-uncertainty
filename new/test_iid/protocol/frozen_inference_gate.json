@@ -1,0 +1,26 @@
+{
+  "calibrator_frozen": true,
+  "checkpoint_frozen": true,
+  "created_at_utc": "2026-09-30T08:06:32.484773+00:00",
+  "decision": "GO_FROZEN_BEST_V2_TEST_IID_INFERENCE",
+  "eval_manifest_sha256": "a18e1f67fc28b2efa67573a1bf89eb484b39c44364477688175836f61f66e945",
+  "family_count": 200,
+  "feature_manifest_sha256": "6cde4b1e7f812f1bdbdefc47b79e2a41d70c4a492d120e560d4338a0d6dc2e33",
+  "protected_inputs": {
+    "best_v2_freeze_lock_sha256": "76c0b04c5e14fc08033d44d478f85d2aa8955f87f81ad717d66f8f29e67cec02",
+    "calibrator_sha256": "f4ed0abb06ed9628415d9ec710da3f3bccf6df6cb85eebd1b3f68fdb6ac67112",
+    "checkpoint_sha256": "1505152fca7b725d7db701c1341ad1a57049d6b5ac450a9f5ce0c8d78705ba26",
+    "dataset_index_sha256": "6aa028166a79634d4234f88030b8d90a232e0cd19b107d936762cc2ee999684e",
+    "family_manifest_sha256": "67378993952827cc328930f287357d699bd0803ab9a9ba40c38772f8794f3c04",
+    "materialized_checkpoint_sha256": "3eecff83ed6bb02ae17da3abbaadf2a78fcfb274608b2ad2954d312d8f95a6f6",
+    "model_config_sha256": "e4f21ccc255c2f097fd8b062e21e954719357cb6e00645758bc1cdf36a290b0c",
+    "model_inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa"
+  },
+  "protocol_id": "roborefer_dataset_v2_1_test_iid_capture_200",
+  "sample_count": 1000,
+  "schema_version": 1,
+  "status": "FROZEN_TEST_IID_INFERENCE_AUTHORIZED",
+  "test_ood_opened": false,
+  "threshold_tuning_authorized": false,
+  "training_authorized": false
+}

@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "protocol_id": "WP0_STARTING_POINT_LOCK",
+  "project_title_vi": "Nghiên cứu phương pháp LLM/VLM Agent lập kế hoạch vòng kín với hiệu chuẩn độ bất định không gian và can thiệp thích ứng cho thao tác gắp đặt bằng tay máy UR3.",
+  "generated_at_utc": "2026-08-18T08:13:28.545939+00:00",
+  "overall_passed": true,
+  "gates": {
+    "clean_ros_build": true,
+    "unit_tests_one_reproducible_command": true,
+    "baseline_54_tests": true,
+    "moveit_and_new_contract_tests": true,
+    "ur3_perception_interfaces_importable": true,
+    "reason_code_demo_6_of_6": true,
+    "roborefer_rgb_and_rgbd_api_smoke": true,
+    "locked_pilot_unchanged_during_checks": true,
+    "dirty_source_inventory_complete_and_hashed": true,
+    "critical_source_and_config_hashed": true,
+    "gate_v2_installed": true
+  },
+  "build": {
+    "passed": true,
+    "summary": "Summary: 9 packages finished [5.79s]",
+    "scope": "ROS dependency closure selected by --packages-up-to ur3_perception (9 packages)",
+    "cmake_clean_cache": true,
+    "python_executable": "/usr/bin/python3 (3.10)",
+    "stderr_warning_packages": [
+      "ur_controllers",
+      "ur_moveit_config"
+    ],
+    "stderr_warnings_are_non_fatal": true,
+    "log": "protocol/logs/wp0_build.log"
+  },
+  "tests": {
+    "one_command": "./protocol/run_wp0_checks.sh",
+    "environment": {
+      "python": "/usr/bin/python3",
+      "python_no_user_site": true,
+      "pytest_plugin_autoload": false
+    },
+    "combined": {
+      "passed": true,
+      "passed_count": 72,
+      "warning_count": 5,
+      "duration_s": 1.13
+    },
+    "baseline_perception_and_pilot": {
+      "passed": true,
+      "passed_count": 54,
+      "warning_count": 0,
+      "duration_s": 0.92,
+      "log": "protocol/logs/wp0_baseline_54_pytest.log",
+      "expected_count": 54,
+      "files": [
+        "ur3/ur3_perception/test/test_roborefer_adapter.py",
+        "ur3/ur3_perception/test/test_roborefer_dimension_comparator.py",
+        "ur3/ur3_perception/test/test_roborefer_pilot.py"
+      ]
+    },
+    "extension_moveit_geometry_camera": {
+      "passed": true,
+      "passed_count": 18,
+      "warning_count": 5,
+      "duration_s": 0.44,
+      "log": "protocol/logs/wp0_extension_18_pytest.log",
+      "expected_count": 18,
+      "files": [
+        "ur3/ur3_perception/test/test_projection.py",
+        "ur3/ur3_perception/test/test_depth_component_gate_v2.py",
+        "ur3/ur3_moveit_control/test/test_pose_generation.py",
+        "ur3/ur3_moveit_control/test/test_d435i_description.py"
+      ]
+    },
+    "warning_note": "Five PendingDeprecationWarning instances originate in ROS image_geometry using numpy.matrix; no test failed."
+  },
+  "interface_and_install": {
+    "object_observation_import": {
+      "passed": true,
+      "type": "ObjectObservation"
+    },
+    "gate_v2_installed_path": "install/ur3_perception/lib/ur3_perception/depth_component_gate_v2.py",
+    "gate_v2_installed_sha256": "1b016cf3c7e3dc929c7d3c3e58b68a40384107385601f4a05bdfa08dc9868680"
+  },
+  "reason_codes": {
+    "implemented": [
+      "AREA_TOO_LARGE",
+      "AREA_TOO_SMALL",
+      "NO_SEED_SUPPORT",
+      "PLANE_MERGE",
+      "BORDER_TRUNCATED",
+      "UNSTABLE_3D"
+    ],
+    "demo_all_passed": true,
+    "cases": [
+      {
+        "expected": "AREA_TOO_SMALL",
+        "observed": "AREA_TOO_SMALL",
+        "passed": true
+      },
+      {
+        "expected": "AREA_TOO_LARGE",
+        "observed": "AREA_TOO_LARGE",
+        "passed": true
+      },
+      {
+        "expected": "NO_SEED_SUPPORT",
+        "observed": "NO_SEED_SUPPORT",
+        "passed": true
+      },
+      {
+        "expected": "PLANE_MERGE",
+        "observed": "PLANE_MERGE",
+        "passed": true
+      },
+      {
+        "expected": "BORDER_TRUNCATED",
+        "observed": "BORDER_TRUNCATED",
+        "passed": true
+      },
+      {
+        "expected": "UNSTABLE_3D",
+        "observed": "UNSTABLE_3D",
+        "passed": true
+      }
+    ],
+    "pilot_scene_0007_post_hoc": {
+      "reason_code": "PLANE_MERGE",
+      "interpretation": "POST_HOC_DIAGNOSTIC_ONLY"
+    },
+    "json_evidence": "protocol/reason_code_demo.json",
+    "visual_demo": "protocol/WP0_DEMO.html"
+  },
+  "api_smoke": {
+    "all_passed": true,
+    "scene_id": "pilot_scene_0008",
+    "queries": [
+      {
+        "mode": "RGB",
+        "http_status": 200,
+        "latency_ms": 1418.58,
+        "answer": "[(0.787, 0.477)]",
+        "normalized_point_xy": [
+          0.787,
+          0.477
+        ],
+        "generation_mode": "greedy",
+        "generation_config": {
+          "do_sample": false,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_fingerprint": {
+          "file_count": 61,
+          "inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+          "model_name": "RoboRefer-2B-SFT",
+          "model_root": "/home/dhcn/ur_ws/src/myproject/RoboRefer/models/RoboRefer-2B-SFT"
+        },
+        "random_seed": 8132026,
+        "passed": true,
+        "error": null
+      },
+      {
+        "mode": "RGB-D",
+        "http_status": 200,
+        "latency_ms": 1813.975,
+        "answer": "[(0.787, 0.481)]",
+        "normalized_point_xy": [
+          0.787,
+          0.481
+        ],
+        "generation_mode": "greedy",
+        "generation_config": {
+          "do_sample": false,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null
+        },
+        "model_fingerprint": {
+          "file_count": 61,
+          "inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+          "model_name": "RoboRefer-2B-SFT",
+          "model_root": "/home/dhcn/ur_ws/src/myproject/RoboRefer/models/RoboRefer-2B-SFT"
+        },
+        "random_seed": 8132026,
+        "passed": true,
+        "error": null
+      }
+    ],
+    "checkpoint_inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+    "evidence": "protocol/api_smoke_result.json"
+  },
+  "source_inventory": {
+    "dirty_entry_count": 97,
+    "hashed_existing_entry_count": 97,
+    "repositories": [
+      {
+        "name": "RoboRefer",
+        "branch": "main",
+        "head": "d97a995ad28376720a4c8beb64915c58ed16c844",
+        "dirty_entry_count": 8
+      },
+      {
+        "name": "ur3",
+        "branch": "main",
+        "head": "e94d30cf12b53b7c1ba314252f6fdc1423f07738",
+        "dirty_entry_count": 89
+      }
+    ],
+    "critical_file_count": 13,
+    "evidence": "protocol/source_inventory.json"
+  },
+  "pilot_lock": {
+    "before_sha256": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c",
+    "after_sha256": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c",
+    "unchanged": true,
+    "file_count": 173,
+    "stable_relative_manifest_sha256": "2c58caaa303b77ad27b9da12b4d1ad349dcc792b86442be15074b5aabce19a0e",
+    "current_relative_manifest_sha256": "2c58caaa303b77ad27b9da12b4d1ad349dcc792b86442be15074b5aabce19a0e",
+    "current_matches_inventory": true,
+    "note": "The before/after digest uses paths relative to the workspace; the second canonical digest omits the artifact-root prefix and is portable within the artifact tree."
+  },
+  "limitations": [
+    "Reason-code branch demos are deterministic contract tests; thresholds still require calibration on real RGB-D failure data.",
+    "PLANE_MERGE is an observable geometry heuristic (oversize component reaching ROI boundary), not semantic ground truth.",
+    "BORDER_TRUNCATED is implemented as a fail-closed option but defaults to disabled until operational calibration.",
+    "API smoke validates real model loading, transport, decoding policy and output contract; it is not a new semantic-accuracy experiment.",
+    "WP0 does not execute physical or simulated robot manipulation; closed-loop manipulation belongs to later work packages."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "GROUNDED_WORLD_READY",
+  "source_world": "workspace/mh_pcrau_v3/generated/day6_left_ycb_v3/left_ycb_top30.sdf",
+  "output_world": "workspace/mh_pcrau_v3/generated/day6_left_ycb_v4_grounded/left_ycb_top30_grounded.sdf",
+  "corrected_visual_pose_xyz": {
+    "ycb_lemon": [
+      0.0105805,
+      -0.0216475,
+      -0.033774
+    ],
+    "ycb_pear": [
+      0.0333135,
+      -0.018008,
+      -0.039841
+    ],
+    "ycb_plum": [
+      0.007799,
+      -0.019438,
+      -0.0277
+    ],
+    "ycb_bleach_cleanser": [
+      0.021651,
+      -0.011692,
+      -0.119524
+    ],
+    "ycb_mug": [
+      0.0088535,
+      -0.0173415,
+      -0.04443
+    ]
+  },
+  "excluded_from_next_protocol": [
+    "ycb_lemon"
+  ],
+  "reason": "v3 omitted mesh visual-origin compensation and rendered five added YCB meshes above the table"
+}

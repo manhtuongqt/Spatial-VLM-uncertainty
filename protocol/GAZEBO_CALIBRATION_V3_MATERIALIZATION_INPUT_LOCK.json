@@ -1,0 +1,30 @@
+{
+  "capture_compatibility_lock_sha256": "4c5d237a3ddbad7d2419900fde6a2ebefc0df0acb983f700c0379cc316178b29",
+  "capture_input_manifest_sha256": "48432f719bb5768c8c541acb4e001837c4ff5e522a0710ee2e4f64f31f5ac7c7",
+  "capture_manifest_sha256": "9edc5b314e20039e6a4b253f72c8953bee842d310888f5bc9f032e74a981a900",
+  "capture_status": "COMPLETE",
+  "dev_v2_access": "forbidden_for_training_or_selection",
+  "implementation_lock_sha256": "06c537bce7678196fdc16f7d74752f3148dc4007fa1352a2dbd42726da069c80",
+  "locked_at_utc": "2026-09-15T07:29:41.627576+00:00",
+  "model_input_allowlist": [
+    "image",
+    "depth",
+    "instruction"
+  ],
+  "no_sam2": true,
+  "primary_contract_lock_sha256": "99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841",
+  "protocol_id": "gazebo_calibration_v3",
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "protocol/GAZEBO_CALIBRATION_V3_CONTRACT_LOCK.json": "99b430b1c55e1762f8460db4e8134b4a8782403e466d71ea86ea3da847bfc841",
+    "protocol/gazebo_calibration_v3_capture_compatibility_lock.json": "4c5d237a3ddbad7d2419900fde6a2ebefc0df0acb983f700c0379cc316178b29",
+    "protocol/materialize_gazebo_train_uq_v1.py": "b1a52392c25123e121496755198708788f89a6a6f06de9e893a837cd2cc739ed",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v3/capture_attempt_01/capture_manifest.json": "9edc5b314e20039e6a4b253f72c8953bee842d310888f5bc9f032e74a981a900",
+    "results/spatial_vlm_refspatial_v1/gazebo_calibration_v3/capture_attempt_01/input_manifest.jsonl": "48432f719bb5768c8c541acb4e001837c4ff5e522a0710ee2e4f64f31f5ac7c7",
+    "ur3/ur3_perception/config/gazebo_calibration_v3_annotations.yaml": "5d0217d02bf5cfa5007f9931ffe83bd0303f695cf6814e4605a71a2a7825cdca",
+    "ur3/ur3_perception/config/gazebo_calibration_v3_gate.yaml": "8278c325d200fac09357a26cedbf167286a38e5ee11059fcf74aa8b709233503",
+    "ur3/ur3_perception/config/gazebo_calibration_v3_scenes.yaml": "a32b8c1cf7488d05ac39bba29332743b0b5010fbaddc117b5ef038d68932e6ca"
+  },
+  "status": "LOCKED_BEFORE_QC_AND_MATERIALIZATION",
+  "wrapper_source_sha256": "6a8a34e048139fc0a1936607b0d8989ca99627bf878dda676f63f201d5e68703"
+}

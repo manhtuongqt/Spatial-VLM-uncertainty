@@ -1,0 +1,14 @@
+{
+  "calibration_accessed": false,
+  "protocol_sha256": "0ab25fd63e0640eeea016e0d00c27e75eb500ee94e383fc5f3f85f99609e8c50",
+  "script_sha256": "3c299d5990b9f5aa123f978deb98692e289a8c74fcaf0c41bcb0fbcf080e0ba2",
+  "seed": 24082026,
+  "source_hashes": {
+    "/home/dhcn/ur_ws/src/myproject/new/hinhanh/19_answerability_confusion/fig19_answerability_confusion_test_iid.png": "cbea667c8d6d975bd0182df3045730c1b16e48db948a4b1b5f4c87ff82379933",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_target_v2_full_seed_24082026/checkpoints/best/model.safetensors": "1505152fca7b725d7db701c1341ad1a57049d6b5ac450a9f5ce0c8d78705ba26",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_target_v2_full_seed_24082026/config.json": "e4f21ccc255c2f097fd8b062e21e954719357cb6e00645758bc1cdf36a290b0c",
+    "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_target_v2_full_seed_24082026/evaluation/calibration/calibrator.json": "f4ed0abb06ed9628415d9ec710da3f3bccf6df6cb85eebd1b3f68fdb6ac67112"
+  },
+  "status": "DEVELOPMENT_ONLY",
+  "test_accessed": false
+}

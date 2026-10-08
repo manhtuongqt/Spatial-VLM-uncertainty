@@ -1,0 +1,33 @@
+{
+  "depth": {
+    "actual_dev_coverage": 0.9975,
+    "descriptive_p": 6.522063677372552e-08,
+    "family_independence_assumed_for_p": false,
+    "mean_interval_width_m": 0.24473166507271457,
+    "nominal_interval_coverage": 0.95,
+    "p_not_used_as_confirmatory_claim": true,
+    "variance_abs_error_Spearman": 0.2661378508615679
+  },
+  "evaluation_status": "descriptive_dev_already_used_for_checkpoint_selection",
+  "relation": {
+    "MI_error_detection_AUROC": 0.8339285714285715,
+    "errors": 14,
+    "mean_MI_correct": 0.000976860925734386,
+    "mean_MI_wrong": 0.002351759640714613,
+    "samples": 54
+  },
+  "semantic_identity": {
+    "MI_error_detection_AUROC": 0.8856148097826086,
+    "errors": 32,
+    "mean_MI_correct": 0.00767923955717407,
+    "mean_MI_wrong": 0.020427841002922466,
+    "samples": 400
+  },
+  "spatial_target": {
+    "MI_error_detection_AUROC": 0.7171097477845945,
+    "errors": 9,
+    "mean_MI_correct": 0.004479771914493593,
+    "mean_MI_wrong": 0.005300457994316826,
+    "samples": 335
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "capture_compatibility_lock_sha256": "a6d0f92451758391509f37c24702adc85cc8e466d5f4df36184d97caa679c2ea",
+  "capture_input_manifest_sha256": "8879d1723f9b490d558d6cc2e2b5a4dd37b8725696ecc79c20fe90ff8b35a194",
+  "capture_manifest_sha256": "0eda668e3c95d21e20b78546ad438b382f5a8328e4a00e782893d752ba0b8e20",
+  "capture_status": "COMPLETE",
+  "dev_v2_access": "forbidden_for_training_or_selection",
+  "locked_at_utc": "2026-09-11T08:53:31.430837+00:00",
+  "model_input_allowlist": [
+    "image",
+    "depth",
+    "instruction"
+  ],
+  "no_sam2": true,
+  "primary_contract_lock_sha256": "13125fb5646892c0efa410adae2d369c6ae41110af7a2e0ae7ea9df11eed1333",
+  "protocol_id": "gazebo_train_uq_v1",
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "protocol/gazebo_train_uq_v1_capture_compatibility_lock.json": "a6d0f92451758391509f37c24702adc85cc8e466d5f4df36184d97caa679c2ea",
+    "protocol/gazebo_train_uq_v1_contract_lock.json": "13125fb5646892c0efa410adae2d369c6ae41110af7a2e0ae7ea9df11eed1333",
+    "protocol/materialize_gazebo_train_uq_v1.py": "b1a52392c25123e121496755198708788f89a6a6f06de9e893a837cd2cc739ed",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v1/capture_attempt_01/capture_manifest.json": "0eda668e3c95d21e20b78546ad438b382f5a8328e4a00e782893d752ba0b8e20",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v1/capture_attempt_01/input_manifest.jsonl": "8879d1723f9b490d558d6cc2e2b5a4dd37b8725696ecc79c20fe90ff8b35a194",
+    "ur3/ur3_perception/config/gazebo_train_uq_v1_annotations.yaml": "7396a2874159c3ab6c83ed74d0154aadf24ea2f3f70e6b9443e8f6be2346d995",
+    "ur3/ur3_perception/config/gazebo_train_uq_v1_gate.yaml": "01003a690fdf3b790585ef181506e435ac7ec4c0691016d1b13e8109cb935aae",
+    "ur3/ur3_perception/config/gazebo_train_uq_v1_scenes.yaml": "dd5588c855330ad579f940d912c6c9611ef13fdf56b22a77bfbce353975852ce"
+  },
+  "status": "LOCKED_BEFORE_GEOMETRY_QC_AND_MATERIALIZATION"
+}

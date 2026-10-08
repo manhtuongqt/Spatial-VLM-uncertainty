@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "output_root": "ketqua",
+  "experiments": [
+    {
+      "order": 1,
+      "date": "20260812",
+      "time": "143309",
+      "slug": "roborefer_blind_tomato_can",
+      "title": "RoboRefer blind tomato-can trials",
+      "status": "DIAGNOSTIC",
+      "role": "early_robot_diagnostic",
+      "sources": [
+        {"label": "run", "path": "results/roborefer_blind_tomato_can_20260812_143309"}
+      ]
+    },
+    {
+      "order": 2,
+      "date": "20260812",
+      "time": "172042",
+      "slug": "two_reference_oblique_tomato",
+      "title": "Two-reference oblique tomato trial",
+      "status": "DIAGNOSTIC",
+      "role": "early_robot_diagnostic",
+      "sources": [
+        {"label": "run", "path": "results/roborefer_two_reference_oblique_tomato_20260812_172042"}
+      ]
+    },
+    {
+      "order": 3,
+      "date": "20260813",
+      "time": "141112",
+      "slug": "two_reference_oblique_deoccluded",
+      "title": "Two-reference oblique deoccluded trial",
+      "status": "DIAGNOSTIC",
+      "role": "early_robot_diagnostic",
+      "sources": [
+        {"label": "run", "path": "results/roborefer_two_reference_oblique_deoccluded_20260813_141112"}
+      ]
+    },
+    {
+      "order": 4,
+      "date": "20260813",
+      "time": "164442",
+      "slug": "roborefer_pilot_v0_aborted",
+      "title": "RoboRefer pilot v0 — aborted before capture",
+      "status": "ABORTED_BEFORE_CAPTURE",
+      "role": "failed_diagnostic",
+      "sources": [
+        {"label": "run", "path": "results/roborefer_pilot_v0_20260813_164442"}
+      ]
+    },
+    {
+      "order": 5,
+      "date": "20260813",
+      "time": "173305",
+      "slug": "roborefer_pilot_v0",
+      "title": "RoboRefer B0/B1/B2 pilot v0",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "role": "pilot_evaluation",
+      "sources": [
+        {"label": "run", "path": "results/roborefer_pilot_v0_20260813_173305"}
+      ]
+    },
+    {
+      "order": 6,
+      "date": "20260818",
+      "time": "151328",
+      "slug": "wp0_baseline_interface",
+      "title": "WP0 baseline/interface gate and reason-code demos",
+      "status": "COMPLETE",
+      "role": "wp0_gate",
+      "sources": [
+        {"label": "protocol", "path": "protocol/WP0_STATUS.md"},
+        {"label": "protocol", "path": "protocol/WP0_DEMO.html"},
+        {"label": "protocol", "path": "protocol/test_report.json"},
+        {"label": "protocol", "path": "protocol/api_smoke_result.json"},
+        {"label": "protocol", "path": "protocol/core_check_result.json"},
+        {"label": "protocol", "path": "protocol/reason_code_demo.json"},
+        {"label": "reason_code_images", "path": "protocol/demo_wp0_reason_codes"}
+      ]
+    },
+    {
+      "order": 7,
+      "date": "20260818",
+      "time": "153026",
+      "slug": "wp1_depth_sensitivity",
+      "title": "WP1 RoboRefer depth-sensitivity diagnostic",
+      "status": "COMPLETE_DIAGNOSTIC",
+      "role": "wp1_depth_sensitivity",
+      "sources": [
+        {"label": "run", "path": "results/roborefer_depth_sensitivity_v1_20260818_152700"},
+        {"label": "protocol", "path": "protocol/WP1_DEPTH_SENSITIVITY.md"},
+        {"label": "protocol", "path": "protocol/wp1_test_report.json"}
+      ]
+    },
+    {
+      "order": 8,
+      "date": "20260818",
+      "time": "161351",
+      "slug": "wp2_dataset_prototype",
+      "title": "WP2 locked dataset prototype report assets",
+      "status": "COMPLETE_PROTOTYPE",
+      "role": "wp2_dataset",
+      "sources": [
+        {"label": "dataset_report", "path": "datasets/roborefer_dataset_v1_prototype_20260818_155606/report_assets"},
+        {"label": "protocol", "path": "protocol/WP2_DATASET_V1.md"},
+        {"label": "protocol", "path": "protocol/wp2_test_report.json"}
+      ]
+    },
+    {
+      "order": 9,
+      "date": "20260821",
+      "time": "000000",
+      "slug": "wp3_data_gap_audit",
+      "title": "WP3 data-gap audit — 250 WP2 samples",
+      "status": "COMPLETE_AUDIT",
+      "role": "wp3_data_audit",
+      "sources": [
+        {"label": "run", "path": "results/wp3_data_audit_20260821"},
+        {"label": "protocol", "path": "protocol/WP3_DATA_GAP_AUDIT.md"}
+      ]
+    },
+    {
+      "order": 10,
+      "date": "20260821",
+      "time": "045900",
+      "slug": "wp3_feature_hook_failed_preflight",
+      "title": "WP3 feature hook — failed determinism preflight",
+      "status": "FAILED_PREFLIGHT",
+      "role": "failed_diagnostic",
+      "sources": [
+        {"label": "archive", "path": "results/experiment_archive/runs/wp3_feature_hook_smoke_failed_preflight_20260821_0459"}
+      ]
+    },
+    {
+      "order": 11,
+      "date": "20260821",
+      "time": "050400",
+      "slug": "wp3_feature_hook_failed_serialization",
+      "title": "WP3 feature hook — failed deterministic serialization",
+      "status": "FAILED_SERIALIZATION",
+      "role": "failed_diagnostic",
+      "sources": [
+        {"label": "archive", "path": "results/experiment_archive/runs/wp3_feature_hook_smoke_failed_serialization_20260821_0504"},
+        {"label": "protocol", "path": "protocol/WP3_FEATURE_HOOK_REPORT_FAILED_SERIALIZATION.md"}
+      ]
+    },
+    {
+      "order": 12,
+      "date": "20260821",
+      "time": "050831",
+      "slug": "wp3_feature_hook_official",
+      "title": "WP3 feature hook — official PASS",
+      "status": "PASSED",
+      "role": "official_wp3_gate",
+      "sources": [
+        {"label": "archive", "path": "results/experiment_archive/runs/wp3_feature_hook_smoke_20260821"},
+        {"label": "protocol", "path": "protocol/WP3_FEATURE_HOOK_REPORT.md"},
+        {"label": "protocol", "path": "protocol/WP3_GRAPH_FEATURE_CONTRACT.md"}
+      ]
+    },
+    {
+      "order": 13,
+      "date": "20260821",
+      "time": "054208",
+      "slug": "pcra_u_overfit_smoke_planned",
+      "title": "P-CRA-U overfit smoke — scientific result scaffold",
+      "status": "PLANNED_NOT_RUN",
+      "role": "planned_training_run",
+      "sources": [
+        {"label": "run", "path": "results/pcra_u_runs/pcra_u_overfit_smoke_planned_20260821"},
+        {"label": "protocol", "path": "protocol/WP4_SCIENTIFIC_EVIDENCE_CONTRACT.md"},
+        {"label": "protocol", "path": "protocol/TRAINING_CHECKPOINT_MANAGER.md"}
+      ]
+    },
+    {
+      "order": 14,
+      "date": "20260821",
+      "time": "060614",
+      "slug": "pcra_u_overfit_smoke_pass",
+      "title": "P-CRA-U v0 overfit smoke — official PASS",
+      "status": "PASSED",
+      "role": "official_pcra_u_overfit_gate",
+      "sources": [
+        {"label": "run", "path": "results/pcra_u_runs/pcra_u_overfit_smoke_20260821"},
+        {"label": "contract", "path": "protocol/PCRA_U_OVERFIT_SMOKE_CONTRACT.md"},
+        {"label": "one_batch", "path": "protocol/PCRA_U_ONE_BATCH_REPORT.md"},
+        {"label": "execution_lock", "path": "protocol/pcra_u_overfit_execution_lock.json"},
+        {"label": "checkpoint_policy", "path": "protocol/TRAINING_CHECKPOINT_MANAGER.md"}
+      ]
+    },
+    {
+      "order": 15,
+      "date": "20260821",
+      "time": "133253",
+      "slug": "ycb_inventory_v2_main_world",
+      "title": "UR3 pick-place + YCB inventory V2 asset qualification",
+      "status": "PASSED_ASSET_QUALIFICATION",
+      "role": "dataset_expansion_asset_gate",
+      "sources": [
+        {"label": "runtime", "path": "results/ycb_inventory_v2_main_world_20260821_133253"},
+        {"label": "source_asset_audit", "path": "results/ycb_inventory_v2_gallery_20260821_133253/YCB_INVENTORY_V2_AUDIT.json"},
+        {"label": "inventory_config", "path": "ur3/ur_simulation_gz/config/ycb_inventory_v2.json"},
+        {"label": "asset_readme", "path": "ur3/ur_simulation_gz/models/ycb/README.md"}
+      ]
+    },
+    {
+      "order": 16,
+      "date": "20260821",
+      "time": "135403",
+      "slug": "ycb_inventory_v2_color_fix",
+      "title": "YCB inventory V2 color fix and scene cleanup",
+      "status": "PASSED_ASSET_COLOR_AND_SCENE_CLEANUP",
+      "role": "dataset_expansion_asset_gate",
+      "sources": [
+        {"label": "runtime", "path": "results/ycb_inventory_v2_color_fix_20260821_135403"},
+        {"label": "inventory_config", "path": "ur3/ur_simulation_gz/config/ycb_inventory_v2.json"},
+        {"label": "converter", "path": "ur3/ur_simulation_gz/scripts/convert_ycb_glb_to_obj.py"},
+        {"label": "asset_readme", "path": "ur3/ur_simulation_gz/models/ycb/README.md"}
+      ]
+    },
+    {
+      "order": 17,
+      "date": "20260821",
+      "time": "140637",
+      "slug": "dataset_expansion_v2_design_lock",
+      "title": "Dataset Expansion V2 family/split/OOD design lock",
+      "status": "PASSED_DESIGN_LOCK_NO_CAPTURE_NO_TRAINING",
+      "role": "dataset_expansion_design_gate",
+      "sources": [
+        {"label": "run", "path": "results/dataset_expansion_v2_design_lock_20260821_140637"},
+        {"label": "contract", "path": "protocol/DATASET_EXPANSION_V2_CONTRACT.md"},
+        {"label": "spec", "path": "protocol/dataset_expansion_v2_spec.json"},
+        {"label": "asset_partition", "path": "protocol/dataset_expansion_v2_asset_partition.json"},
+        {"label": "seed_lock", "path": "protocol/dataset_expansion_v2_seed_lock.json"},
+        {"label": "split_schema", "path": "protocol/dataset_split_v2.schema.json"},
+        {"label": "design_lock", "path": "protocol/dataset_expansion_v2_design_lock.json"}
+      ]
+    },
+    {
+      "order": 18,
+      "date": "20260821",
+      "time": "153058",
+      "slug": "dataset_v2_pilot_pass",
+      "title": "Dataset V2 pilot-only — 30-family real Gazebo QC PASS",
+      "status": "PASSED_PILOT_ENGINEERING_QC_NOT_OFFICIAL_DATA",
+      "role": "dataset_expansion_pilot_gate",
+      "sources": [
+        {"label": "qc_assets", "path": "datasets/roborefer_dataset_v2_pilot_only_20260821/report_assets"},
+        {"label": "qc_report_json", "path": "datasets/roborefer_dataset_v2_pilot_only_20260821/PILOT_QC_REPORT.json"},
+        {"label": "qc_report_md", "path": "datasets/roborefer_dataset_v2_pilot_only_20260821/PILOT_QC_REPORT.md"},
+        {"label": "dataset_index", "path": "datasets/roborefer_dataset_v2_pilot_only_20260821/dataset_index.json"},
+        {"label": "family_manifest", "path": "datasets/roborefer_dataset_v2_pilot_only_20260821/family_manifest.json"},
+        {"label": "raw_capture_manifest", "path": "datasets/roborefer_dataset_v2_pilot_only_20260821/raw/raw_capture_manifest.json"},
+        {"label": "contract", "path": "protocol/DATASET_V2_PILOT_CONTRACT.md"},
+        {"label": "preflight_report", "path": "protocol/dataset_v2_pilot_preflight_report.json"},
+        {"label": "pilot_manifest", "path": "protocol/dataset_v2_pilot_manifest.json"},
+        {"label": "capture_plan", "path": "protocol/dataset_v2_pilot_capture_plan.json"},
+        {"label": "execution_lock", "path": "protocol/dataset_v2_pilot_execution_lock.json"},
+        {"label": "record_schema", "path": "protocol/dataset_v2_pilot_record.schema.json"},
+        {"label": "validator_amendment", "path": "protocol/dataset_v2_pilot_validator_amendment_01.json"}
+      ]
+    },
+    {
+      "order": 19,
+      "date": "20260821",
+      "time": "170745",
+      "slug": "dataset_v2_development_capture_lock",
+      "title": "Dataset V2 development 400-family capture — static preflight PASS",
+      "status": "PASSED_STATIC_PREFLIGHT_CAPTURE_AUTHORIZED_NO_CAPTURE_NO_TRAINING",
+      "role": "dataset_development_capture_lock",
+      "sources": [
+        {"label": "contract", "path": "protocol/DATASET_V2_DEVELOPMENT_CAPTURE_CONTRACT.md"},
+        {"label": "development_manifest", "path": "protocol/dataset_v2_development_manifest.json"},
+        {"label": "capture_plan", "path": "protocol/dataset_v2_development_capture_plan.json"},
+        {"label": "preflight_report", "path": "protocol/dataset_v2_development_preflight_report.json"},
+        {"label": "execution_lock", "path": "protocol/dataset_v2_development_execution_lock.json"}
+      ]
+    },
+    {
+      "order": 20,
+      "date": "20260821",
+      "time": "173032",
+      "slug": "dataset_v2_development_batch_001_relation_fail",
+      "title": "Dataset V2 development capture — canary PASS, batch 001 relation gate FAIL",
+      "status": "FAILED_BATCH_001_RELATION_GEOMETRY_GATE_NO_TRAINING",
+      "role": "dataset_development_capture_gate",
+      "sources": [
+        {"label": "gate_report", "path": "datasets/roborefer_dataset_v2_development_400_20260821/DEVELOPMENT_BATCH_GATE_REPORT.md"},
+        {"label": "batch_checkpoints", "path": "datasets/roborefer_dataset_v2_development_400_20260821/report_assets/checkpoints"},
+        {"label": "real_sensor_qc", "path": "datasets/roborefer_dataset_v2_development_400_20260821/report_assets/real_capture_qc"},
+        {"label": "raw_capture_manifest", "path": "datasets/roborefer_dataset_v2_development_400_20260821/raw/raw_capture_manifest.json"},
+        {"label": "failure_evidence_tool", "path": "protocol/dataset_v2_development_failure_evidence.py"},
+        {"label": "execution_lock", "path": "protocol/dataset_v2_development_execution_lock.json"}
+      ]
+    },
+    {
+      "order": 21,
+      "date": "20260821",
+      "time": "183408",
+      "slug": "dataset_v2_relation_repair_pilot_pass",
+      "title": "Dataset V2.1 observable-relation repair pilot — 30/30 PASS",
+      "status": "PASSED_RELATION_REPAIR_PILOT_ENGINEERING_ONLY_NO_TRAINING",
+      "role": "dataset_development_relation_repair_gate",
+      "sources": [
+        {"label": "round1_qc", "path": "results/dataset_v2_relation_repair_20260821/repair_pilot/RELATION_REPAIR_QC_REPORT.json"},
+        {"label": "round2_results", "path": "results/dataset_v2_relation_repair_20260821/repair_pilot_round2"},
+        {"label": "report", "path": "protocol/DATASET_V2_RELATION_REPAIR_REPORT.md"},
+        {"label": "amendment01", "path": "protocol/DATASET_V2_RELATION_GEOMETRY_AMENDMENT_01.md"},
+        {"label": "amendment02", "path": "protocol/DATASET_V2_RELATION_GEOMETRY_AMENDMENT_02.md"},
+        {"label": "manifest", "path": "protocol/dataset_v2_relation_repair_manifest.json"},
+        {"label": "capture_plan", "path": "protocol/dataset_v2_relation_repair_capture_plan.json"},
+        {"label": "preflight", "path": "protocol/dataset_v2_relation_repair_preflight_report.json"},
+        {"label": "execution_lock", "path": "protocol/dataset_v2_relation_repair_execution_lock.json"},
+        {"label": "raw_manifest", "path": "datasets/roborefer_dataset_v2_1_relation_repair_pilot_round2_only_20260821/raw/raw_capture_manifest.json"}
+      ]
+    },
+    {
+      "order": 22,
+      "date": "20260824",
+      "time": "115600",
+      "slug": "dataset_v2_1_shutdown_gate_pass",
+      "title": "Dataset V2.1 ordered shutdown gate — real canary PASS",
+      "status": "PASSED_V2_1_SHUTDOWN_GATE_NO_BASELINE_CHANGE_NO_TRAINING",
+      "role": "dataset_development_shutdown_gate",
+      "sources": [
+        {"label": "gate_results", "path": "results/dataset_v2_1_shutdown_gate_20260824"},
+        {"label": "shutdown_sequence", "path": "datasets/roborefer_dataset_v2_1_shutdown_gate_canary_20260824/report_assets/checkpoints/shutdown_sequence.json"},
+        {"label": "raw_manifest", "path": "datasets/roborefer_dataset_v2_1_shutdown_gate_canary_20260824/raw/raw_capture_manifest.json"},
+        {"label": "gate_plan", "path": "protocol/dataset_v2_1_shutdown_gate_capture_plan.json"},
+        {"label": "gate_lock", "path": "protocol/dataset_v2_1_shutdown_gate_execution_lock.json"},
+        {"label": "gate_validator", "path": "protocol/dataset_v2_1_shutdown_gate.py"},
+        {"label": "shutdown_coordinator", "path": "protocol/dataset_v2_relation_repair_shutdown.py"},
+        {"label": "v2_1_launcher", "path": "protocol/dataset_v2_relation_repair_capture.launch.py"}
+      ]
+    },
+    {
+      "order": 23,
+      "date": "20260824",
+      "time": "115700",
+      "slug": "dataset_v2_1_development_capture_lock",
+      "title": "Dataset V2.1 development 400-family capture — static preflight PASS",
+      "status": "PASSED_V2_1_STATIC_PREFLIGHT_CANARY_ONLY_NO_CAPTURE_NO_TRAINING",
+      "role": "dataset_v2_1_development_capture_lock",
+      "sources": [
+        {"label": "contract", "path": "protocol/DATASET_V2_1_DEVELOPMENT_CAPTURE_CONTRACT.md"},
+        {"label": "manifest", "path": "protocol/dataset_v2_1_development_manifest.json"},
+        {"label": "capture_plan", "path": "protocol/dataset_v2_1_development_capture_plan.json"},
+        {"label": "preflight_report", "path": "protocol/dataset_v2_1_development_preflight_report.json"},
+        {"label": "execution_lock", "path": "protocol/dataset_v2_1_development_execution_lock.json"},
+        {"label": "generator", "path": "protocol/dataset_v2_1_development_generator.py"},
+        {"label": "capture_runtime", "path": "protocol/dataset_v2_1_development_capture.py"},
+        {"label": "ordered_launcher", "path": "protocol/dataset_v2_1_development_capture.launch.py"}
+      ]
+    },
+    {
+      "order": 24,
+      "date": "20260824",
+      "time": "125441",
+      "slug": "dataset_v2_1_1_development_full_qc_pass",
+      "title": "Dataset V2.1.1 development — 400 families / 800 captures / 2,000 samples full-QC PASS",
+      "status": "PASSED_FULL_DEVELOPMENT_QC_GO_DEVELOPMENT_TRAIN_TESTS_SEALED",
+      "role": "dataset_v2_1_1_development_full_qc_gate",
+      "sources": [
+        {"label": "full_qc_report_json", "path": "datasets/roborefer_dataset_v2_1_1_development_400_20260824/DATASET_V2_1_DEVELOPMENT_FULL_QC_REPORT.json"},
+        {"label": "full_qc_report_md", "path": "datasets/roborefer_dataset_v2_1_1_development_400_20260824/DATASET_V2_1_DEVELOPMENT_FULL_QC_REPORT.md"},
+        {"label": "qc_tables_images_checkpoints", "path": "datasets/roborefer_dataset_v2_1_1_development_400_20260824/report_assets"},
+        {"label": "dataset_index", "path": "datasets/roborefer_dataset_v2_1_1_development_400_20260824/dataset_index.json"},
+        {"label": "raw_capture_manifest", "path": "datasets/roborefer_dataset_v2_1_1_development_400_20260824/raw/raw_capture_manifest.json"},
+        {"label": "visibility_amendment", "path": "protocol/DATASET_V2_1_1_VISIBILITY_AMENDMENT.md"},
+        {"label": "manifest", "path": "protocol/dataset_v2_1_development_manifest.json"},
+        {"label": "capture_plan", "path": "protocol/dataset_v2_1_development_capture_plan.json"},
+        {"label": "preflight_report", "path": "protocol/dataset_v2_1_development_preflight_report.json"},
+        {"label": "execution_lock", "path": "protocol/dataset_v2_1_development_execution_lock.json"},
+        {"label": "batch_qc_tool", "path": "protocol/dataset_v2_1_development_batch_qc.py"},
+        {"label": "materializer", "path": "protocol/dataset_v2_1_development_materialize.py"},
+        {"label": "full_qc_tool", "path": "protocol/dataset_v2_1_development_full_qc.py"},
+        {"label": "failed_v2_1_visibility_diagnostic", "path": "results/dataset_v2_1_development_failed_visibility_20260824"},
+        {"label": "failed_v2_1_batch_qc", "path": "datasets/roborefer_dataset_v2_1_development_400_failed_visibility_20260824/report_assets/checkpoints/batch_qc/batch_001.json"}
+      ]
+    },
+    {
+      "order": 25,
+      "date": "20260824",
+      "time": "131948",
+      "slug": "pcra_u_development_train_preflight_pass",
+      "title": "P-CRA-U development training — locked preflight PASS",
+      "status": "PASSED_DEVELOPMENT_TRAIN_PREFLIGHT_GO_CANARY_TESTS_SEALED",
+      "role": "pcra_u_development_train_preflight_gate",
+      "sources": [
+        {"label": "contract", "path": "protocol/PCRA_U_DEVELOPMENT_TRAIN_CONTRACT.md"},
+        {"label": "config", "path": "protocol/pcra_u_development_train_config.json"},
+        {"label": "train_manifest", "path": "protocol/pcra_u_development_train_manifest.json"},
+        {"label": "feature_manifest", "path": "protocol/pcra_u_development_feature_manifest.json"},
+        {"label": "seed_lock", "path": "protocol/pcra_u_development_seed_lock.json"},
+        {"label": "checkpoint_policy", "path": "protocol/PCRA_U_DEVELOPMENT_CHECKPOINT_POLICY.md"},
+        {"label": "preflight_report_json", "path": "protocol/PCRA_U_DEVELOPMENT_TRAIN_PREFLIGHT_REPORT.json"},
+        {"label": "preflight_report_md", "path": "protocol/PCRA_U_DEVELOPMENT_TRAIN_PREFLIGHT_REPORT.md"},
+        {"label": "execution_lock", "path": "protocol/pcra_u_development_execution_lock.json"},
+        {"label": "feature_cache_schema", "path": "protocol/pcra_u_development_feature_cache.schema.json"}
+      ]
+    },
+    {
+      "order": 26,
+      "date": "20260824",
+      "time": "132237",
+      "slug": "pcra_u_development_preflight_amendment_pass",
+      "title": "P-CRA-U development preflight amendment 01 — isolated schema validator PASS",
+      "status": "PASSED_PREFLIGHT_AMENDMENT_GO_CANARY_NO_OPTIMIZER_STEP",
+      "role": "pcra_u_development_train_preflight_gate",
+      "sources": [
+        {"label": "amendment", "path": "protocol/PCRA_U_DEVELOPMENT_PREFLIGHT_AMENDMENT_01.md"},
+        {"label": "preflight_report_json", "path": "protocol/PCRA_U_DEVELOPMENT_TRAIN_PREFLIGHT_REPORT.json"},
+        {"label": "preflight_report_md", "path": "protocol/PCRA_U_DEVELOPMENT_TRAIN_PREFLIGHT_REPORT.md"},
+        {"label": "execution_lock", "path": "protocol/pcra_u_development_execution_lock.json"},
+        {"label": "feature_cache_runtime", "path": "protocol/pcra_u_development_feature_cache.py"},
+        {"label": "feature_cache_schema", "path": "protocol/pcra_u_development_feature_cache.schema.json"}
+      ]
+    },
+    {
+      "order": 27,
+      "date": "20260824",
+      "time": "132321",
+      "slug": "pcra_u_development_train_canary_pass",
+      "title": "P-CRA-U development training canary — determinism and resume PASS",
+      "status": "PASSED_DEVELOPMENT_TRAIN_CANARY_GO_FULL_TRAIN_TESTS_SEALED",
+      "role": "pcra_u_development_train_canary_gate",
+      "sources": [
+        {"label": "canary_run", "path": "results/pcra_u_runs/pcra_u_development_train_canary_20260824"},
+        {"label": "contract", "path": "protocol/PCRA_U_DEVELOPMENT_TRAIN_CONTRACT.md"},
+        {"label": "execution_lock", "path": "protocol/pcra_u_development_execution_lock.json"},
+        {"label": "checkpoint_policy", "path": "protocol/PCRA_U_DEVELOPMENT_CHECKPOINT_POLICY.md"},
+        {"label": "canary_feature_index", "path": "results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_canary.json"}
+      ]
+    },
+    {
+      "order": 28,
+      "date": "20260824",
+      "time": "135154",
+      "slug": "pcra_u_development_train_exploratory_complete",
+      "title": "P-CRA-U development training — 320 train / 80 dev families complete",
+      "status": "COMPLETED_EXPLORATORY_DEV_ONLY_FREEZE_ARCHITECTURE_NEXT_TESTS_SEALED",
+      "role": "pcra_u_development_training_exploratory",
+      "sources": [
+        {"label": "development_run", "path": "results/pcra_u_runs/pcra_u_development_train_20260824"},
+        {"label": "full_feature_index", "path": "results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json"},
+        {"label": "canary_report", "path": "results/pcra_u_runs/pcra_u_development_train_canary_20260824/PCRA_U_DEVELOPMENT_CANARY_REPORT.json"},
+        {"label": "contract", "path": "protocol/PCRA_U_DEVELOPMENT_TRAIN_CONTRACT.md"},
+        {"label": "config", "path": "protocol/pcra_u_development_train_config.json"},
+        {"label": "execution_lock", "path": "protocol/pcra_u_development_execution_lock.json"},
+        {"label": "checkpoint_policy", "path": "protocol/PCRA_U_DEVELOPMENT_CHECKPOINT_POLICY.md"},
+        {"label": "run_index_csv", "path": "results/pcra_u_runs/RUN_INDEX.csv"},
+        {"label": "run_index_json", "path": "results/pcra_u_runs/RUN_INDEX.json"}
+      ]
+    },
+    {
+      "order": 29,
+      "date": "20260824",
+      "time": "143439",
+      "slug": "pcra_u_development_failure_audit_architecture_decision",
+      "title": "P-CRA-U development failure audit — architecture/checkpoint frozen",
+      "status": "PASSED_DEVELOPMENT_FAILURE_AUDIT_ARCHITECTURE_CHECKPOINT_FROZEN_CALIBRATION_NEXT_TESTS_SEALED",
+      "role": "pcra_u_development_architecture_decision_gate",
+      "sources": [
+        {"label": "audit_run", "path": "results/pcra_u_runs/pcra_u_development_failure_audit_20260824"},
+        {"label": "contract", "path": "protocol/PCRA_U_DEVELOPMENT_FAILURE_AUDIT_CONTRACT.md"},
+        {"label": "eval_manifest", "path": "protocol/pcra_u_development_eval_manifest.json"},
+        {"label": "architecture_freeze_lock", "path": "protocol/pcra_u_architecture_freeze_lock.json"},
+        {"label": "protocol_report", "path": "protocol/PCRA_U_DEVELOPMENT_FAILURE_AUDIT_REPORT.md"},
+        {"label": "selected_checkpoint_metadata", "path": "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/metadata.json"},
+        {"label": "selected_checkpoint_manifest", "path": "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/step_000002000/manifest.json"},
+        {"label": "selected_checkpoint_pointer", "path": "results/pcra_u_runs/pcra_u_development_train_20260824/checkpoints/development/best_dev_total_loss.json"},
+        {"label": "run_index_csv", "path": "results/pcra_u_runs/RUN_INDEX.csv"},
+        {"label": "run_index_json", "path": "results/pcra_u_runs/RUN_INDEX.json"}
+      ]
+    },
+    {
+      "order": 30,
+      "date": "20260824",
+      "time": "161025",
+      "slug": "pcra_u_calibration_fit_freeze",
+      "title": "P-CRA-U calibration — calibrator frozen; ABSTAIN_ALL operating point",
+      "status": "PASSED_CALIBRATION_FIT_CALIBRATOR_THRESHOLD_FROZEN_ABSTAIN_ALL_GO_LOCKED_TEST_EVALUATION",
+      "role": "pcra_u_calibration_freeze_gate",
+      "sources": [
+        {"label": "calibration_report_json", "path": "results/pcra_u_runs/pcra_u_calibration_20260824/PCRA_U_CALIBRATION_REPORT.json"},
+        {"label": "calibration_report_md", "path": "results/pcra_u_runs/pcra_u_calibration_20260824/PCRA_U_CALIBRATION_REPORT.md"},
+        {"label": "calibration_tables", "path": "results/pcra_u_runs/pcra_u_calibration_20260824/tables"},
+        {"label": "calibration_figures", "path": "results/pcra_u_runs/pcra_u_calibration_20260824/figures"},
+        {"label": "calibration_checks", "path": "results/pcra_u_runs/pcra_u_calibration_20260824/checks"},
+        {"label": "frozen_calibrator", "path": "results/pcra_u_runs/pcra_u_calibration_20260824/calibrators/pcra_u_calibrator_v1.json"},
+        {"label": "dataset_full_qc_report_json", "path": "datasets/roborefer_dataset_v2_1_calibration_200_20260824/DATASET_V2_1_CALIBRATION_FULL_QC_REPORT.json"},
+        {"label": "dataset_full_qc_report_md", "path": "datasets/roborefer_dataset_v2_1_calibration_200_20260824/DATASET_V2_1_CALIBRATION_FULL_QC_REPORT.md"},
+        {"label": "dataset_qc_checkpoints", "path": "datasets/roborefer_dataset_v2_1_calibration_200_20260824/report_assets/checkpoints"},
+        {"label": "dataset_qc_tables", "path": "datasets/roborefer_dataset_v2_1_calibration_200_20260824/report_assets/tables"},
+        {"label": "dataset_index", "path": "datasets/roborefer_dataset_v2_1_calibration_200_20260824/dataset_index.json"},
+        {"label": "dataset_contract", "path": "protocol/DATASET_V2_1_CALIBRATION_CAPTURE_CONTRACT.md"},
+        {"label": "dataset_manifest", "path": "protocol/dataset_v2_1_calibration_manifest.json"},
+        {"label": "dataset_execution_lock", "path": "protocol/dataset_v2_1_calibration_execution_lock.json"},
+        {"label": "dataset_preflight_report", "path": "protocol/dataset_v2_1_calibration_preflight_report.json"},
+        {"label": "calibration_contract", "path": "protocol/PCRA_U_CALIBRATION_CONTRACT.md"},
+        {"label": "calibration_config", "path": "protocol/pcra_u_calibration_config.json"},
+        {"label": "calibration_eval_manifest", "path": "protocol/pcra_u_calibration_eval_manifest.json"},
+        {"label": "calibration_feature_manifest", "path": "protocol/pcra_u_calibration_feature_manifest.json"},
+        {"label": "calibration_seed_lock", "path": "protocol/pcra_u_calibration_seed_lock.json"},
+        {"label": "calibrator_threshold_freeze_lock", "path": "protocol/pcra_u_calibrator_threshold_freeze_lock.json"}
+      ]
+    },
+    {
+      "order": 31,
+      "date": "20260824",
+      "time": "171414",
+      "slug": "pcra_u_development_v1_1_rejected_failure_audit",
+      "title": "P-CRA-U development V1.1 — failure audit; reject V1.1 and retain V1",
+      "status": "COMPLETED_EXPLORATORY_V1_1_REJECTED_RETAIN_V1_TESTS_SEALED",
+      "role": "pcra_u_development_revision_failure_audit",
+      "sources": [
+        {"label": "failure_audit_run", "path": "results/pcra_u_runs/pcra_u_development_v1_1_failure_audit_20260824"},
+        {"label": "campaign_aggregate_run", "path": "results/pcra_u_runs/pcra_u_development_v1_1_campaign_20260824"},
+        {"label": "canary_report", "path": "results/pcra_u_runs/pcra_u_development_v1_1_canary_20260824/PCRA_U_DEVELOPMENT_V1_1_CANARY_REPORT.json"},
+        {"label": "revision_contract", "path": "protocol/PCRA_U_DEVELOPMENT_V1_1_REVISION_CONTRACT.md"},
+        {"label": "revision_config", "path": "protocol/pcra_u_development_v1_1_config.json"},
+        {"label": "revision_manifest", "path": "protocol/pcra_u_development_v1_1_manifest.json"},
+        {"label": "preflight_lock", "path": "protocol/pcra_u_development_v1_1_preflight_lock.json"},
+        {"label": "decision_lock", "path": "protocol/pcra_u_development_v1_1_decision_lock.json"}
+      ]
+    }
+  ]
+}

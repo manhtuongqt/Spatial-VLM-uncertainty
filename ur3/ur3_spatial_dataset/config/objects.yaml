@@ -1,0 +1,158 @@
+schema_version: 1
+frame_id: base_link
+view_pose_id: view_pose_01
+relation_semantics:
+  left_of: smaller image u at the frozen VIEW_POSE
+  right_of: larger image u at the frozen VIEW_POSE
+  above: smaller image v at the frozen VIEW_POSE
+  below: larger image v at the frozen VIEW_POSE
+  front_of: smaller positive optical depth at the frozen VIEW_POSE
+  behind: larger positive optical depth at the frozen VIEW_POSE
+  inside: full 3D AABB is contained by container_inner_dimensions in base_link
+  near: AABB surface distance is at most near_threshold_m
+objects:
+  - id: cube_red_01
+    model_frame: red_cube
+    category: cube
+    attributes: {color: red, role: target_candidate}
+    dimensions: [0.06, 0.06, 0.06]
+    pose_source: gazebo_ground_truth
+  - id: cube_blue_01
+    model_frame: blue_cube
+    category: cube
+    attributes: {color: blue, role: reference}
+    dimensions: [0.05, 0.05, 0.05]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.33, 0.28, 0.025, 0.0, 0.0, 0.0, 1.0]
+  - id: cube_green_01
+    model_frame: green_cube
+    category: cube
+    attributes: {color: green, role: distractor}
+    dimensions: [0.05, 0.05, 0.05]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.30, 0.12, 0.025, 0.0, 0.0, 0.0, 1.0]
+  - id: cube_yellow_01
+    model_frame: yellow_cube
+    category: cube
+    attributes: {color: yellow, role: target_candidate}
+    dimensions: [0.05, 0.05, 0.05]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.25, 0.40, 0.025, 0.0, 0.0, 0.0, 1.0]
+  - id: cube_orange_01
+    model_frame: orange_cube
+    category: cube
+    attributes: {color: orange, role: target_candidate}
+    dimensions: [0.05, 0.05, 0.05]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.08, 0.42, 0.025, 0.0, 0.0, 0.0, 1.0]
+  - id: cube_purple_01
+    model_frame: purple_cube
+    category: cube
+    attributes: {color: purple, role: target_candidate}
+    dimensions: [0.05, 0.05, 0.05]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.02, 0.36, 0.025, 0.0, 0.0, 0.0, 1.0]
+  - id: cube_pink_01
+    model_frame: pink_cube
+    category: cube
+    attributes: {color: pink, role: target_candidate}
+    dimensions: [0.05, 0.05, 0.05]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.02, 0.10, 0.025, 0.0, 0.0, 0.0, 1.0]
+  - id: ycb_cracker_box_01
+    model_frame: ycb_cracker_box
+    category: cracker_box
+    attributes: {color: red, role: target_candidate, domain: ycb}
+    dimensions: [0.071720, 0.163986, 0.213421]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.50, 0.10, 0.106710, 0.0, 0.0, 0.0, 1.0]
+  - id: ycb_sugar_box_01
+    model_frame: ycb_sugar_box
+    category: sugar_box
+    attributes: {color: yellow, role: target_candidate, domain: ycb}
+    dimensions: [0.049450, 0.093374, 0.176214]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.50, 0.34, 0.088107, 0.0, 0.0, 0.0, 1.0]
+  - id: ycb_tomato_soup_can_01
+    model_frame: ycb_tomato_soup_can
+    category: tomato_soup_can
+    attributes: {color: red, role: target_candidate, domain: ycb}
+    dimensions: [0.067863, 0.067696, 0.101895]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [0.38, 0.10, 0.050948, 0.0, 0.0, 0.0, 1.0]
+  - id: ycb_mustard_bottle_01
+    model_frame: ycb_mustard_bottle
+    category: mustard_bottle
+    attributes: {color: yellow, role: target_candidate, domain: ycb}
+    dimensions: [0.097211, 0.066681, 0.191390]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.165, 0.18, 0.095695, 0.0, 0.0, 0.0, 1.0]
+  - id: ycb_banana_01
+    model_frame: ycb_banana
+    category: banana
+    attributes: {color: yellow, role: target_candidate, domain: ycb}
+    dimensions: [0.108971, 0.178395, 0.036752]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.48, 0.58, 0.018376, 0.0, 0.0, 0.1247, 0.9922]
+  - id: ycb_apple_01
+    model_frame: ycb_apple
+    category: apple
+    attributes: {color: red, role: target_candidate, domain: ycb}
+    dimensions: [0.075419, 0.074840, 0.071907]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.32, 0.50, 0.035953, 0.0, 0.0, 0.0, 1.0]
+  - id: ycb_orange_01
+    model_frame: ycb_orange
+    category: orange
+    attributes: {color: orange, role: target_candidate, domain: ycb}
+    dimensions: [0.072131, 0.074009, 0.071368]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [0.28, 0.18, 0.035684, 0.0, 0.0, 0.0, 1.0]
+  - id: ycb_power_drill_01
+    model_frame: ycb_power_drill
+    category: power_drill
+    attributes: {color: blue, role: target_candidate, domain: ycb}
+    dimensions: [0.183995, 0.187244, 0.057377]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [0.36, 0.57, 0.028689, 0.0, 0.0, -0.1247, 0.9922]
+  - id: mango_01
+    model_frame: mango
+    category: mango
+    attributes: {color: orange, role: target_candidate, domain: kitchen}
+    dimensions: [0.060, 0.060, 0.060]
+    pose_source: gazebo_ground_truth
+    fallback_pose: [-0.18, 0.15, 0.030, 0.0, 0.0, 0.1741, 0.9847]
+  - id: cup_01
+    model_frame: cup
+    category: cup
+    attributes: {color: white, role: kitchen_distractor}
+    dimensions: [0.07, 0.07, 0.09]
+    pose_source: static_config
+    fallback_pose: [0.24, 0.17, 0.045, 0.0, 0.0, 0.0, 1.0]
+  - id: kettle_01
+    model_frame: kettle
+    category: kettle
+    attributes: {color: silver, role: kitchen_distractor}
+    dimensions: [0.20, 0.13, 0.15]
+    pose_source: static_config
+    fallback_pose: [0.30, 0.40, 0.055, 0.0, 0.0, 0.0, 1.0]
+  - id: bin_orange_01
+    model_frame: target_bin
+    category: bin
+    attributes: {color: orange, role: destination}
+    dimensions: [0.20, 0.25, 0.07]
+    container_inner_dimensions: [0.18, 0.23, 0.07]
+    pose_source: static_config
+    fallback_pose: [0.00, 0.38, 0.035, 0.0, 0.0, 0.0, 1.0]
+  - id: table_01
+    model_frame: work_table
+    category: table
+    attributes: {color: brown, role: support_surface}
+    dimensions: [1.60, 2.20, 0.08]
+    pose_source: static_config
+    fallback_pose: [0.0, 0.45, -0.04, 0.0, 0.0, 0.0, 1.0]
+thresholds:
+  pixel_margin: 8.0
+  depth_margin_m: 0.015
+  near_threshold_m: 0.12
+  containment_tolerance_m: 0.005

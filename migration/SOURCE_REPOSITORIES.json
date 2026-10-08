@@ -1,0 +1,26 @@
+[
+  {
+    "source": ".",
+    "head": "3eca83c4d4c558cb7f5dac2cb2ea795393ba146d",
+    "local_changes_included": true,
+    "git_history_included": false
+  },
+  {
+    "source": "RoboRefer",
+    "head": "d97a995ad28376720a4c8beb64915c58ed16c844",
+    "local_changes_included": true,
+    "git_history_included": false
+  },
+  {
+    "source": "sam2",
+    "head": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "local_changes_included": true,
+    "git_history_included": false
+  },
+  {
+    "source": "ur3",
+    "head": "e94d30cf12b53b7c1ba314252f6fdc1423f07738",
+    "local_changes_included": true,
+    "git_history_included": false
+  }
+]

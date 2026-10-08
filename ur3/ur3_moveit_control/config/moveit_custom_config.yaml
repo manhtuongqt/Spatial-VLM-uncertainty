@@ -1,0 +1,14 @@
+# Small throughput increase.  Acceleration remains conservative so the
+# top-down grasp pose and controller tracking margin are unchanged.
+# Slightly faster, still conservative UR3 simulation profile.  MoveIt keeps
+# spline interpolation and the pick/place profile keeps a single top-down
+# orientation, avoiding wrist snaps between Cartesian segments.
+max_velocity_scaling_factor: 0.38
+max_acceleration_scaling_factor: 0.26
+goal_position_tolerance: 0.001
+goal_orientation_tolerance: 0.01
+goal_joint_tolerance: 0.01
+# Reject a trajectory before execution if any single joint would sweep farther
+# than this. It prevents equivalent IK solutions from producing wrist flips.
+max_joint_travel_rad: 2.2
+planner_id: "RRTConnectkConfigDefault"

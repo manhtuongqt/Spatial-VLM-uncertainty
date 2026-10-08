@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "method_id": "MH-PCRA-U-v3",
+  "status": "FROZEN_BEFORE_DAY6_TRAIN_ATTEMPT_02",
+  "created_at_utc": "2026-09-24T09:49:00.979550+00:00",
+  "seed": 26092026,
+  "prerequisites": [
+    {
+      "path": "ketqua1/04_multihead_pcrau_v3/ngay_05/G2_DECISION_REVISION_V2.json",
+      "sha256": "23ce57c4d0743286546809b0aba8f562338c3cad7c90936cd2ac8efdca834fb0"
+    },
+    {
+      "path": "ketqua1/06_ham_mat_mat/ngay_05/LOSS_WEIGHT_DECISION.json",
+      "sha256": "752e3883eb8e1b50237422580ac941964a781ce805d8dccdb335f5e37fd6724e"
+    },
+    {
+      "path": "datasets/Gazebo_train_uq_v2_full_r3/manifest.json",
+      "sha256": "87b2c73222b142a40b058ad63d94e34f5668dc60e78330153fcaf6cec4ab6271"
+    },
+    {
+      "path": "protocol/gazebo_train_uq_v2_full_r3_split_manifest.json",
+      "sha256": "2a7c7067c0b3e58534084468bdb6fcf138d0f711f39512b21b3f71650bed67b6"
+    },
+    {
+      "path": "datasets/Gazebo_train_uq_v2_full_r3/inference_manifest.jsonl",
+      "sha256": "fd9862e30bac0a723c0cfe64c51a91bbe3f9e50dc98cacf973f538f512ad1caf"
+    },
+    {
+      "path": "datasets/Gazebo_train_uq_v2_full_r3/train_supervision.jsonl",
+      "sha256": "a926f35ff97e093a1f4be6b94148b8cb4b1a05669eefdacaaf2e62fe11b878b2"
+    },
+    {
+      "path": "datasets/Gazebo_train_uq_v2_full_r3/evaluator_ground_truth.jsonl",
+      "sha256": "6df14c195678318159059a649d623ba91462654f48b29879a057caee60947ea2"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_05/FEATURE_CACHE_MANIFEST.json",
+      "sha256": "ca1d68c091176ebe061d1d1f04ebc54814fbcc83fdf513598783eb73d4c691e7"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_05/CACHE_QC.json",
+      "sha256": "dd0460db1dc0e8c77598a6e0f0dccfe5d596ed67cc3291511da849962d0bdb9c"
+    }
+  ],
+  "data": {
+    "input_manifest": {
+      "path": "ketqua1/07_huan_luyen/ngay_06/S1A_INPUT_MANIFEST.jsonl",
+      "sha256": "228462ec071c3813b3cf90ab8dba818a39dcc1d7af6bab42eccd4cdc669f4038"
+    },
+    "supervision_store": {
+      "path": "ketqua1/07_huan_luyen/ngay_06/S1A_SUPERVISION_STORE.jsonl",
+      "sha256": "91934900aa388eac30e9994ff1886a2ee6fcbfdd79d8d0e650db934cb7adfdcd"
+    },
+    "split_audit": {
+      "path": "ketqua1/07_huan_luyen/ngay_06/S1A_SPLIT_AUDIT.json",
+      "sha256": "097d96a2c25db77985fd2071783c5b4b5fda95f34cf18da1d83151a321c7881b"
+    },
+    "train_samples_families": 256,
+    "val_samples_families": 64,
+    "unit": "parent family; one canonical existing view per family"
+  },
+  "cache": {
+    "expected_samples": 320,
+    "expected_reuse_from_day5": 32,
+    "expected_new_extractions": 288,
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "precision_policy": "G0: RGB/depth towers and projectors BF16; frozen LLM and h_spatial FP32; eager attention; TF32 off",
+    "model_input_allowlist": [
+      "rgb_path",
+      "depth_view_path",
+      "instruction"
+    ]
+  },
+  "stage": {
+    "name": "S1a_head_only",
+    "backbone": "frozen_and_absent_from_offline_optimizer",
+    "trainable_modules": [
+      "shared_trunk",
+      "relation_head",
+      "reasoning_head",
+      "coordinate_head",
+      "log_variance_head",
+      "source_head",
+      "answerability_head"
+    ],
+    "frozen_modules": [
+      "RoboRefer-2B-SFT",
+      "confidence_head"
+    ],
+    "zero_support_unchanged_heads": [
+      "reasoning_head",
+      "source_head",
+      "confidence_head"
+    ]
+  },
+  "loss_weights": {
+    "relation": 1.0,
+    "reasoning": 1.0,
+    "spatial": 0.5,
+    "source": 1.0,
+    "answerability": 1.0,
+    "confidence": 0.0,
+    "language_modeling": 0.0
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "main_learning_rate": 0.0005,
+    "log_variance_head_learning_rate": 5e-06,
+    "weight_decay": 0.0,
+    "maximum_gradient_norm": 5.0
+  },
+  "training": {
+    "device": "cuda",
+    "model_dtype": "float32",
+    "batch_size": 32,
+    "gradient_accumulation": 1,
+    "maximum_epochs": 200,
+    "minimum_epochs": 30,
+    "early_stopping_patience": 25,
+    "selection_min_delta": 0.0001,
+    "shuffle": "deterministic torch.randperm seeded by seed+epoch",
+    "checkpoint_rule": "maximum eligible Val mean(relation_macro_f1, answerability_macro_f1, hit_at_0.08); tie by lower Val total loss then earlier epoch",
+    "eligibility": "all metrics finite and Val log_variance strictly inside (-7.95,1.95)"
+  },
+  "completion_checks": {
+    "all_rows_consumed_each_epoch": true,
+    "active_head_support_exact": true,
+    "reasoning_source_confidence_support_zero": true,
+    "best_checkpoint_eligible": true,
+    "best_train_total_loss_below_epoch0": true,
+    "checkpoint_reload_max_abs": 0.0,
+    "backbone_inventory_unchanged": true,
+    "peak_reserved_mib_max": 14742.0,
+    "finite_rate": 1.0
+  },
+  "next_gate_if_complete": "Day 7 OOF/S1b only; G3/Calibration/Test/robot remain closed",
+  "access_boundary": "Development Train-UQ/Val-UQ only. No Calibration/Test/robot access.",
+  "revision": "append_only_r2_after_pre_optimizer_cublas_preflight_stop",
+  "inherited_lock": {
+    "path": "protocol/MH_PCRAU_V3_DAY6_S1A_RUN_LOCK.json",
+    "sha256": "e83323f815059e0945ad225f56b31587d96c5d9aeb8dd5b6e28c6128bd746a99",
+    "bytes": 4891
+  },
+  "cache_manifest": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/S1A_FEATURE_CACHE_MANIFEST.json",
+    "sha256": "60396fa3ac5fcb1eaeb1633e530494d8fa779eaa56674043e53f79044b342bc3",
+    "bytes": 303910
+  },
+  "cache_qc": {
+    "path": "ketqua1/03_backbone_h_spatial/ngay_06/S1A_CACHE_QC.json",
+    "sha256": "1f3566f8257767f949052f5a67287aaab68e542dcd9c2429b673d372c670afc9",
+    "bytes": 1031
+  },
+  "attempt_01_failure": {
+    "path": "ketqua1/07_huan_luyen/ngay_06/DAY6_ATTEMPT_01_PREFLIGHT_FAILURE.md",
+    "sha256": "c9b6042aa5322693cd23534ca3804e464bbba6f683527a400a941c37ee2f8203",
+    "bytes": 1055
+  },
+  "source_identity": {
+    "train_runner": {
+      "path": "workspace/mh_pcrau_v3/day6_train.py",
+      "sha256": "8e9bd8bb03a33c9a96581cb2b680388aae09a5667f8d06fbec3c73338806e3a3",
+      "bytes": 26840
+    },
+    "multihead": {
+      "path": "workspace/mh_pcrau_v3/multihead_v3.py",
+      "sha256": "2852107240e4c8c0c72fc59da524f52d95bdaab13ec0a3e94bcceb2d43f022f8",
+      "bytes": 9582
+    },
+    "masked_loss": {
+      "path": "workspace/mh_pcrau_v3/loss_v3.py",
+      "sha256": "c680ba68443777859b66c97a5fdc389bc652ba40ef3d332fb6568629a3d3ab03",
+      "bytes": 6689
+    }
+  },
+  "deterministic_environment": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "TF32": false,
+    "deterministic_algorithms": true
+  },
+  "amendment_scope": "Environment/source identity only; data, cache, seed, architecture, loss weights, optimizer, selection and completion checks unchanged"
+}

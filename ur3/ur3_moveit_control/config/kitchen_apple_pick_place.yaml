@@ -1,0 +1,37 @@
+fixed_pick_place:
+  ros__parameters:
+    # Keep the apple beside the tray (clear in X) and inside the calibrated
+    # top-down UR3 IK band used by the spherical-fruit demos.  At y=0.20 the
+    # final Cartesian segment can drive wrist_1 into a Gazebo contact stall.
+    initial_object_pose: [-0.165, 0.29, 0.035953, 0.0, 0.0, 0.0, 1.0]
+    object_size: 0.075
+    source_keepout_object_size: 0.075
+    workspace_max: [0.02, 0.46, 0.22]
+
+    # RGB-D observes the visible top surface of the spherical apple.  Keep the
+    # TCP 15 mm above that point so the open palm does not press into the fruit
+    # during descent, while the fingertips still span its upper half.
+    grasp_offset_xyz: [0.0, 0.0, 0.015]
+    approach_distance: 0.14
+    lift_distance: 0.14
+
+    # The SusGrip clear aperture is approximately 1 mm + 2q.  q=36 mm fits
+    # the 75 mm apple; the inherited cube value q=50 mm never contacts it.
+    gripper_staged_motion: true
+    gripper_closed_position: 0.036
+    gripper_max_effort: 55.0
+    gripper_close_stages: [0.058, 0.050, 0.043, 0.036]
+    gripper_open_stages: [0.043, 0.050, 0.058, 0.065]
+    gripper_stage_pause_sec: 0.05
+    settle_time: 0.20
+
+    # Release over the near, reachable half of the tray with enough vertical
+    # clearance for the real fruit mesh and tray rim.
+    place_approach_distance: 0.14
+    place_offset_xyz: [0.0, 0.0, 0.10]
+    bin_place_slots_xy: [0.0, -0.07]
+    # The generic cube benchmark reserves six peripheral slots for its
+    # non-active objects.  Apple is an additional active target, so keep six
+    # cubes in this reset set rather than asking the six-slot allocator to
+    # place all seven cubes as distractors.
+    scene_object_names: [red_cube, green_cube, blue_cube, yellow_cube, orange_cube, purple_cube]

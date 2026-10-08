@@ -1,0 +1,238 @@
+{
+  "anchor_residual": {
+    "path": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_unified_spatial_20261005_r2/frozen/anchor_mlp.safetensors",
+    "sha256": "2bbff4da63d49d115f98a5dfd72db05ef90b200e9e6f96a586fa4c216e294347"
+  },
+  "backbone_inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+  "baseline_checkpoint": {
+    "path": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/model.safetensors",
+    "sha256": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045"
+  },
+  "baseline_metadata": {
+    "path": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/metadata.json",
+    "sha256": "3bc36a952be3e55ec86e27f09051852a6d5f9dccb952ce3e9539591d0d0e26e3"
+  },
+  "cached_baseline_evidence_used": false,
+  "calibration": {
+    "folds": 5,
+    "l2": 0.01,
+    "minimum_accepted_families": 60,
+    "risk_target": 0.075
+  },
+  "config": {
+    "path": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/config.json",
+    "sha256": "b214670c6c4a679f755a9953e15bae4bbb71ee5eea1980fa8e3d64030d79f85b"
+  },
+  "device_type": "cuda",
+  "evidence_producer": "pcrau_unified_live_evidence_v1",
+  "feature_manifest": {
+    "path": "/home/dhcn/ur_ws/src/myproject/old/protocol/pcra_u_calibration_feature_manifest.json",
+    "sha256": "0df1790a33dfe25ce4855d70a22cae731b9fdf6f5cd87a113fd0841d4658cad3"
+  },
+  "feature_names": [
+    "heatmap_entropy",
+    "peak_margin",
+    "mode_count",
+    "found_probability",
+    "ambiguous_probability",
+    "absent_probability",
+    "insufficient_probability",
+    "semantic_uncertainty",
+    "relation_uncertainty",
+    "spatial_uncertainty",
+    "depth_uncertainty",
+    "occlusion_uncertainty",
+    "relation_consistency",
+    "fusion_gate_mean",
+    "rgb_depth_cosine",
+    "rgb_depth_mae",
+    "roborefer_disagreement",
+    "roborefer_missing",
+    "target_sigmoid_max",
+    "target_sigmoid_mean",
+    "spatial_peak",
+    "spatial_top5_mass",
+    "spatial_top10_mass",
+    "interior_sigmoid_max",
+    "interior_sigmoid_mean",
+    "target_interior_peak_distance",
+    "anchor_sigmoid_max_mean",
+    "anchor_sigmoid_max_min",
+    "edge_probability_min",
+    "base_found",
+    "base_ambiguous",
+    "base_absent",
+    "base_insufficient_evidence",
+    "verifier_horizontal_supported",
+    "verifier_direct_bypass",
+    "verifier_parse_unsupported",
+    "verifier_anchor_max_logit",
+    "verifier_anchor_sigmoid_max",
+    "verifier_anchor_entropy",
+    "verifier_anchor_spatial_peak",
+    "verifier_anchor_shift",
+    "verifier_signed_peak_margin_normalized",
+    "verifier_peak_compatible",
+    "verifier_pair_compatibility"
+  ],
+  "improvement_gates_advisory_only": true,
+  "precision": "CUDA_BF16_autocast_FP32_residual_FP16_visual_storage",
+  "primary": "P1_G44",
+  "protocol": {
+    "path": "/home/dhcn/ur_ws/src/myproject/plan/S3_UNIFIED_INFERENCE_PROTOCOL_20261005.md",
+    "sha256": "423724bbc860a581756bd8b55dfbd7c9b7f947015d48e178b2fd1acc0f05baec"
+  },
+  "residual_source": {
+    "path": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_s1_anchor_peak_pilot_v2_20261005/P1/checkpoints/best/mlp.safetensors",
+    "sha256": "2bbff4da63d49d115f98a5dfd72db05ef90b200e9e6f96a586fa4c216e294347"
+  },
+  "roborefer_generation": false,
+  "runtime": {
+    "cuda_available": true,
+    "cuda_runtime": "13.0",
+    "gpu": "NVIDIA RTX 2000 Ada Generation",
+    "python": "3.10.14",
+    "torch": "2.13.0+cu130"
+  },
+  "seed": 24082026,
+  "source_files": {
+    "/home/dhcn/ur_ws/src/myproject/new/scripts/build_unified_spatial_bundle.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/scripts/build_unified_spatial_bundle.py",
+      "sha256": "a57318c104cec0634ea45929cee65a0e03dd510c0cb8897c26776ccd2bbc4484"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/scripts/infer_spatial_variant.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/scripts/infer_spatial_variant.py",
+      "sha256": "ff3fe9549cdbab6c5a729a50699c22cc7ff2784312e6677f463804e0f91377d7"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/__init__.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/__init__.py",
+      "sha256": "1554c33ac020e5df63b32e11e0b30063badc98cd2b2fa77518571425bbe7c728"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/acceptance_ranker.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/acceptance_ranker.py",
+      "sha256": "f8ac619d1576ea1dc14ecb915116fee573ea0a45fca7b78eb94bcdf43820f0b3"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_experiment.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_experiment.py",
+      "sha256": "585a7d3d631d23834d5c3b7179e6765eb395dd8f5cebdbab5119ee4d0e1a270c"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_pilot.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_pilot.py",
+      "sha256": "ccf00611e076fe16cb6d074850434f9ee7ce2c37705c829b4236f52227312cc8"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_runner.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_peak_runner.py",
+      "sha256": "58acc51869b2046225928b873ff7be60ff86bfb625248642e9563eaeeb37167e"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow.py",
+      "sha256": "a8de58f3f9d56b7a842996b5ff9e04f3b75201b52d3ce48eb2e8b2552c6df3d6"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow_experiment.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow_experiment.py",
+      "sha256": "9849fa47a5c05c46476ff571b9f31abbc5f66fb1f219b4884ca79da1a5ac4836"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow_pilot.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/anchor_shadow_pilot.py",
+      "sha256": "0e8422a8aa2f99fc6766ff4a31a27829441ed7d3ba8d5c2189cfffe159381ced"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/answerability_evidence.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/answerability_evidence.py",
+      "sha256": "b4edeb538de7961700ef84a967cebf8ce26ec5cef193fbf743add2b4b968d8b2"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/calibration.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/calibration.py",
+      "sha256": "39eeba2db00eb2e196fe90150503945c76f79820c9b41eede2cb523a4314ba73"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/checkpoint.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/checkpoint.py",
+      "sha256": "a260ad8ca5f50bcd2e44f547b73befc6fb2e48f4de09c893fcb4e98bdcbce8e7"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/dataset.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/dataset.py",
+      "sha256": "5d0d484225eb1f2e1f92f62ab1522e9e435ff7df58f89d0f218792e0fd553770"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/engine.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/engine.py",
+      "sha256": "d0a2835899c656e08c89d0d3893525b35b1176f69463afe49be47c39b9721b8d"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/frozen_rgbd.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/frozen_rgbd.py",
+      "sha256": "b0ffa24f342cd485b6c3f9678e66092b3ecf5ba403fc92c18989893ef5f031d1"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/horizontal_verifier.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/horizontal_verifier.py",
+      "sha256": "23c303bb593563e7932e40440a5d3a2260b0278e39aa438a6226a7d6cf68f3da"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/language_augmentation.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/language_augmentation.py",
+      "sha256": "aa19305808e6f22b046cf54168609358e5260e9d7d631231efd65b68b7520000"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/losses.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/losses.py",
+      "sha256": "f47b6acfd5450f485f48e2ddb731eaef50cafeacdfbfbdfe232c5f21b263b320"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/metrics.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/metrics.py",
+      "sha256": "cd25d2595e95fa57fc6304c65f43cb66747372b9b43872b436eeefd31b2d17cc"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/model.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/model.py",
+      "sha256": "e356ceaab36de474024bdb99b9eb2c96ccaa6a24bd211e269e99e7481b8e28b6"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/policy.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/policy.py",
+      "sha256": "14dd19343ccae0f0c35fa5533df57fe88465e574b15d7cb42ac6f2841a42c719"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/postprocess.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/postprocess.py",
+      "sha256": "1883771b0c78846d91b1c0ceee34218f8d88c532d8bd1983de5051bca088d5af"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/query_parser.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/query_parser.py",
+      "sha256": "0ed7d562541d4efda37b6b2227d7798d6db90a00bb4bc37042572366215ca051"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/selective_experiment.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/selective_experiment.py",
+      "sha256": "3fd3bbaa37e4395bb0a69cc2f6b5d172ca684712f7d5182d7aa5807495267053"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/support_evidence.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/support_evidence.py",
+      "sha256": "70e8c5d19d99d02f7712e6231cd63451c584fda706014c600b5d30abddebcf10"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/text.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/text.py",
+      "sha256": "4f527981242ad85aedd013f4b27ea1570966d48f042209da72b5c2872fa363bc"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/unified_inference.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/unified_inference.py",
+      "sha256": "beeb2ca5e4b1b33df160f5a5b6f379d7d107e517dd7aa9562b54abb629500076"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/utils.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/utils.py",
+      "sha256": "9e260968b2609ab34c304e6e0d432d1bb464db35263b369adb9a1af5fb25f4bf"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/verifier_risk.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/src/pcrau/verifier_risk.py",
+      "sha256": "9be77767a5ab0506b647a663dfd03ed4e7265e5e56d627348812a8ca88095f26"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/tests/test_horizontal_verifier.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/tests/test_horizontal_verifier.py",
+      "sha256": "d065a4a61570ec30fe1d90f66ef1956a04f449a6b6a7b0258aa4394f12f7d6ce"
+    },
+    "/home/dhcn/ur_ws/src/myproject/new/tests/test_unified_inference.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/new/tests/test_unified_inference.py",
+      "sha256": "96c6a60320244495b00105ff8d2fce6722f88a21d9abc8d168cc72460a982942"
+    },
+    "/home/dhcn/ur_ws/src/myproject/old/protocol/pcra_u_development_common.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/protocol/pcra_u_development_common.py",
+      "sha256": "95b17f41b1526d1b760177fae4240ecd8bf96f37a4a936405d9cda6667571bfc"
+    },
+    "/home/dhcn/ur_ws/src/myproject/old/protocol/wp3_feature_hook_smoke.py": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/protocol/wp3_feature_hook_smoke.py",
+      "sha256": "61838a542fd3f82ce38d41233a9ff9a933375ccb9c97dae6af3824b0a90c6fcb"
+    }
+  },
+  "target_map_changed": false,
+  "version": "pcrau_unified_live_evidence_v1"
+}

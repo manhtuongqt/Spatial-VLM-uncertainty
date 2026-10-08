@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "amendment_id": "gazebo_train_uq_v2_pilot_r3_geometry_repair_amendment_v1",
+  "status": "LOCKED_BEFORE_R3_DESIGN_AND_CAPTURE",
+  "locked_at_utc": "2026-09-11T10:45:00+00:00",
+  "scope": "geometry-pilot repair only",
+  "supersedes_precondition_only": "Gazebo_train_uq_v2_pilot_r2 geometry QC passes",
+  "replacement_precondition": "Gazebo_train_uq_v2_pilot_r3 geometry QC passes 32/32 under the unchanged official gate",
+  "r2_frozen_negative_evidence": {
+    "decision": "REJECT",
+    "captured_rows": 32,
+    "geometry_verified_rows": 30,
+    "failed_state": "INSUFFICIENT_EVIDENCE",
+    "failed_scenes": [
+      {
+        "scene_id": "gazebo_uq_v2_pilot_r2_012",
+        "relation_variant": "leftmost",
+        "target_visible_pixels": 0,
+        "failure": "below the unchanged inclusive minimum of 1 pixel"
+      },
+      {
+        "scene_id": "gazebo_uq_v2_pilot_r2_014",
+        "relation_variant": "second_from_left",
+        "target_visible_pixels": 154,
+        "failure": "above the unchanged exclusive maximum of 120 pixels"
+      }
+    ],
+    "unchanged_pass_evidence": {
+      "FOUND": "8/8",
+      "AMBIGUOUS": "8/8",
+      "ABSENT": "8/8",
+      "INSUFFICIENT_EVIDENCE": "6/8",
+      "exact_rgb_duplicate_groups": 0,
+      "perceptual_near_duplicate_pairs": 0,
+      "oracle_family_safety_checks": "PASS"
+    },
+    "artifact_sha256": {
+      "protocol/gazebo_train_uq_v2_pilot_r2_contract_lock.json": "8a5ec1636e549a1c323df5faf6946ce99384b250ae33fc9fc1c8a7423b0c89cc",
+      "protocol/gazebo_train_uq_v2_pilot_r2_capture_compatibility_lock.json": "0df76becb9bce546aa6834068352441ba95d90f017139fd8ed1a2fd6c73ae0bf",
+      "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot_r2/capture_attempt_01/capture_manifest.json": "1bfe824cc0981f1416f4a6b49371b12e4fa34b0ccc56244bef66a02b2f1bd445",
+      "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot_r2/GAZEBO_TRAIN_UQ_V2_PILOT_R2_GEOMETRY_QC.json": "a5c9bc9ad6f6523fcd638ac641180dd2d6ebda3d42a6f5d4749e3775aabf9bb2",
+      "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot_r2/CAPTURE_ATTEMPT_01_DECISION.md": "b0508df49f8556ee88f0f1c9433207f870d4979daa3e7882fb6587129dab9b90"
+    }
+  },
+  "unchanged_scientific_contract": {
+    "grounding_backbone": "frozen B0 from grounding_model_lock.json",
+    "unsafe_definition": "non-FOUND OR FOUND with point outside frozen Hit@0.08 criterion",
+    "risk_definition": "r_spatial = P(unsafe | RGB, depth_view, instruction, frozen B0 prediction)",
+    "primary_metric": "AURC",
+    "secondary_metrics": [
+      "false-accept rate",
+      "abstain recall",
+      "ECE",
+      "Brier",
+      "AUROC-error",
+      "coverage",
+      "FOUND Hit@0.08"
+    ],
+    "method_eligibility_gates": "unchanged from hypothesis_lock.json",
+    "method_selection_rule": "unchanged from hypothesis_lock.json",
+    "maximum_proposed_methods": 1
+  },
+  "r3_design_contract": {
+    "scene_count": 32,
+    "state_relation_design": "4 states x 4 relations x 2 repetitions",
+    "all_scene_family_layout_ids_new": true,
+    "all_full_scene_pose_signatures_new": true,
+    "reuse_of_r2_passed_rows_for_training_or_pilot_completion": false,
+    "permitted_semantic_geometry_change": "INSUFFICIENT_EVIDENCE visibility robustness only",
+    "official_visible_pixel_gate_unchanged": "1 <= target_visible_pixels < 120",
+    "internal_design_margin_not_an_acceptance_gate": "20 <= expected target_visible_pixels <= 100",
+    "non_insufficient_states": "regenerate as new layouts without changing state semantics or QC thresholds",
+    "capture_attempts": 1,
+    "capture_mode": "geometry only; no inference, materialization, training, target handoff, or manipulation"
+  },
+  "sealed_data": {
+    "gazebo_dev_answerability_v2": "SEALED_FOR_FIT_AND_SELECTION",
+    "gazebo_calibration": "SEALED",
+    "gazebo_test_iid": "SEALED",
+    "gazebo_test_ood": "SEALED"
+  },
+  "immutability": {
+    "hypothesis_lock_must_not_be_modified": true,
+    "r2_artifacts_must_not_be_modified_or_recaptured": true,
+    "r3_contract_and_capture_compatibility_must_be_locked_before_capture": true,
+    "advance_to_full_train_uq_val_uq_design_only_if_r3_geometry_qc_is_32_of_32": true
+  }
+}

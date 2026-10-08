@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "protocol_id": "roborefer_dataset_expansion_v2",
+  "partition_id": "dataset_expansion_v2_asset_and_ood_partition",
+  "status": "LOCKED_BEFORE_PILOT_AND_OFFICIAL_CAPTURE",
+  "locked_at_utc": "2026-08-21T07:06:37+00:00",
+  "source_inventory": {
+    "path": "ur3/ur_simulation_gz/config/ycb_inventory_v2.json",
+    "sha256": "bd2be5ffb7832d7288d869e188f2a2ece5cf900362bbd1e7546a0e9d12f69913",
+    "ycb_revision": "29be64fdd95b4881f244152ad653058e0a48c28f"
+  },
+  "asset_color_gate": {
+    "path": "results/ycb_inventory_v2_color_fix_20260821_135403/RUNTIME_CHECK_REPORT.json",
+    "sha256": "53a6641b5b47fc5d0a9b2fc2219f098082c19b0cf172b68e2fe1b9c1d2c044fa",
+    "required_status": "PASS"
+  },
+  "seen_pool": {
+    "allowed_splits": ["pilot_only", "train", "dev", "calibration", "test_iid"],
+    "asset_ids": [
+      "cube_red_01",
+      "cube_blue_01",
+      "cube_green_01",
+      "cube_yellow_01",
+      "cube_orange_01",
+      "cube_purple_01",
+      "cube_pink_01",
+      "ycb_cracker_box_01",
+      "ycb_sugar_box_01",
+      "ycb_tomato_soup_can_01",
+      "ycb_mustard_bottle_01",
+      "ycb_banana_01",
+      "ycb_apple_01",
+      "ycb_orange_01",
+      "ycb_power_drill_01",
+      "mango_01",
+      "ycb_lemon_01",
+      "ycb_mug_01"
+    ],
+    "new_v2_seen_assets": ["ycb_lemon_01", "ycb_mug_01"]
+  },
+  "test_ood_asset_holdout": {
+    "allowed_official_split": "test_ood",
+    "pilot_smoke_allowed_but_never_reusable": true,
+    "asset_ids": ["ycb_pear_01", "ycb_plum_01", "ycb_tuna_fish_can_01"],
+    "source_assets": {
+      "ycb_pear_01": {
+        "ycb_id": "016_pear",
+        "glb_sha256": "847bbcd074965e4195601ab979721b3c0cffecaf36ed8db3e70cc27f8ba01680"
+      },
+      "ycb_plum_01": {
+        "ycb_id": "018_plum",
+        "glb_sha256": "bd1a0fc06836adef27524d07e20eaa00d75e60f24c14bab176e9c07d62a00aa1"
+      },
+      "ycb_tuna_fish_can_01": {
+        "ycb_id": "007_tuna_fish_can",
+        "glb_sha256": "8cffe68b2e891abbfeeaf8c7dce9dda92ad480b78b0307821975284c27a67d41"
+      }
+    },
+    "single_axis_asset_ood_rule": "The queried target or required anchor uses a held-out asset while layout, camera, language bank, and depth-noise generator remain IID."
+  },
+  "excluded_assets": {
+    "asset_ids": ["ycb_bleach_cleanser_01", "cup", "kettle"],
+    "reason": "Explicit scene-cleanup request; excluded from pilot, development, calibration, Test-IID, and Test-OOD."
+  },
+  "clone_policy": {
+    "clones_share_semantic_class_and_mesh": true,
+    "clone_instances_are_not_independent_asset_categories": true,
+    "clone_instances_must_remain_in_the_same_family_split": true,
+    "clone_groups": {
+      "ycb_apple_01": ["ycb_apple_01", "ycb_apple_02", "ycb_apple_03"],
+      "ycb_orange_01": ["ycb_orange_01", "ycb_orange_02", "ycb_orange_03"],
+      "ycb_banana_01": ["ycb_banana_01", "ycb_banana_02", "ycb_banana_03"]
+    }
+  },
+  "ood_axes": {
+    "none": {
+      "asset_pool": "seen",
+      "layout_generator_id": "layout_v2_iid",
+      "camera_bin_id": "camera_v2_iid",
+      "language_template_bank_id": "language_v2_iid",
+      "depth_noise_generator_id": "depth_noise_v2_iid"
+    },
+    "asset": {
+      "asset_pool": "test_ood_heldout",
+      "layout_generator_id": "layout_v2_iid",
+      "camera_bin_id": "camera_v2_iid",
+      "language_template_bank_id": "language_v2_iid",
+      "depth_noise_generator_id": "depth_noise_v2_iid"
+    },
+    "layout": {
+      "asset_pool": "seen",
+      "layout_generator_id": "layout_v2_ood_density_and_topology",
+      "camera_bin_id": "camera_v2_iid",
+      "language_template_bank_id": "language_v2_iid",
+      "depth_noise_generator_id": "depth_noise_v2_iid"
+    },
+    "viewpoint": {
+      "asset_pool": "seen",
+      "layout_generator_id": "layout_v2_iid",
+      "camera_bin_id": "camera_v2_ood_elevation_azimuth",
+      "language_template_bank_id": "language_v2_iid",
+      "depth_noise_generator_id": "depth_noise_v2_iid"
+    },
+    "language": {
+      "asset_pool": "seen",
+      "layout_generator_id": "layout_v2_iid",
+      "camera_bin_id": "camera_v2_iid",
+      "language_template_bank_id": "language_v2_ood_heldout_templates",
+      "depth_noise_generator_id": "depth_noise_v2_iid"
+    },
+    "depth_noise": {
+      "asset_pool": "seen",
+      "layout_generator_id": "layout_v2_iid",
+      "camera_bin_id": "camera_v2_iid",
+      "language_template_bank_id": "language_v2_iid",
+      "depth_noise_generator_id": "depth_noise_v2_ood_heldout"
+    }
+  },
+  "test_ood_composition_policy": {
+    "single_primary_axis_fraction_min": 0.8,
+    "crossed_axis_fraction_max": 0.2,
+    "single_axis_strata": ["asset", "layout", "viewpoint", "language", "depth_noise"],
+    "crossed_cases_label": "crossed",
+    "subgroup_report_required": true
+  },
+  "change_control": "Moving any held-out asset or OOD generator into a seen split requires a new partition version and a new design lock before any affected capture."
+}

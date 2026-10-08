@@ -1,0 +1,57 @@
+fixed_pick_place:
+  ros__parameters:
+    # Controlled follow-up to the 2026-08-12 oblique trial. Keep the exact
+    # target seed/range and camera pose; change only reference visibility.
+    initial_object_pose: [-0.175, 0.255, 0.050948, 0.0, 0.0, 0.0, 1.0]
+    randomize_object: true
+    random_x_range: [-0.190, -0.160]
+    random_y_range: [0.235, 0.275]
+    random_yaw_range: [-0.55, 0.55]
+    view_joint_pose: [1.3815, -1.8273, 1.3428, -1.2863, -1.5708, -1.9601]
+
+    # Fixed name-to-slot mapping. The only material scene change is that the
+    # mustard bottle which occluded the orange in the prior trial is explicitly
+    # moved to a remote slot. Orange and banana still bracket the randomized
+    # target. These layout coordinates are not inputs to RoboRefer.
+    randomize_scene_objects: true
+    shuffle_scene_objects: false
+    scene_object_names: [ycb_tomato_soup_can, ycb_orange, ycb_banana,
+                         ycb_mustard_bottle, ycb_sugar_box, ycb_cracker_box]
+    scene_object_z_values: [0.050948, 0.037010, 0.018376,
+                            0.095695, 0.088107, 0.106710]
+    scene_object_sizes_xy: [0.067900, 0.067900,
+                            0.074020, 0.074020,
+                            0.108971, 0.178395,
+                            0.095921, 0.058191,
+                            0.049450, 0.093374,
+                            0.071720, 0.163986]
+    scene_object_slots_xy: [-0.130, 0.160,
+                            -0.180, 0.410,
+                            -0.430, 0.110,
+                            -0.430, 0.400,
+                             0.220, 0.500]
+
+    object_size: 0.068
+    source_keepout_object_size: 0.068
+    source_keepout_center_xy: [0.0, 0.38]
+    source_keepout_size_xy: [0.20, 0.25]
+    source_keepout_clearance_m: 0.005
+    workspace_max: [0.02, 0.46, 0.18]
+    detection_timeout: 120.0
+    perception_settle_time: 1.0
+
+    grasp_offset_xyz: [0.0, 0.0, 0.010]
+    approach_distance: 0.15
+    lift_distance: 0.16
+    gripper_staged_motion: true
+    gripper_closed_position: 0.032
+    gripper_max_effort: 50.0
+    gripper_close_stages: [0.055, 0.046, 0.038, 0.032]
+    gripper_open_stages: [0.038, 0.046, 0.055, 0.065]
+    gripper_stage_pause_sec: 0.05
+    settle_time: 0.25
+
+    industrial_linear_transfers: true
+    place_approach_distance: 0.17
+    place_offset_xyz: [0.0, 0.0, 0.10]
+    bin_place_slots_xy: [0.0, 0.0]

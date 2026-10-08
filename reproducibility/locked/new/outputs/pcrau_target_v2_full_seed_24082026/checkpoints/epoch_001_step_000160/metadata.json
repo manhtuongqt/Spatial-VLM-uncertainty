@@ -1,0 +1,109 @@
+{
+  "best_metric": 3.3131714463233948,
+  "config_sha256": "e4f21ccc255c2f097fd8b062e21e954719357cb6e00645758bc1cdf36a290b0c",
+  "epoch": 1,
+  "global_step": 160,
+  "metrics": {
+    "dev": {
+      "answerability": {
+        "accuracy": 0.41,
+        "confusion_matrix": [
+          [
+            111,
+            0,
+            57,
+            0
+          ],
+          [
+            6,
+            0,
+            36,
+            0
+          ],
+          [
+            0,
+            0,
+            53,
+            0
+          ],
+          [
+            20,
+            0,
+            117,
+            0
+          ]
+        ],
+        "macro_f1": 0.265827972608425,
+        "per_class": [
+          {
+            "f1": 0.7278688524590164,
+            "precision": 0.8102189781021898,
+            "recall": 0.6607142857142857
+          },
+          {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          {
+            "f1": 0.33544303797468356,
+            "precision": 0.20152091254752852,
+            "recall": 1.0
+          },
+          {
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          }
+        ]
+      },
+      "grounding_accuracy": 0.48059701492537316,
+      "grounding_evaluated": 335,
+      "loss": {
+        "anchor": 0.8856558203697205,
+        "answerability": 1.2726039737462997,
+        "interior": 0.7862337917089463,
+        "ranking": 0.12861328125,
+        "relation_edge": 0.5117299310863018,
+        "source": 1.0670003205537797,
+        "target": 0.8125554114580155,
+        "target_bce": 0.2405078649520874,
+        "target_dice": 0.5720475435256958,
+        "total": 3.3131714463233948
+      },
+      "relation_edge_accuracy": 0.7807692307692308,
+      "relation_edges_evaluated": 260,
+      "samples": 400,
+      "source": {
+        "macro_f1": 0.39724596649763083,
+        "micro_f1": 0.4013201320132013,
+        "per_class_f1": [
+          0.38461538461538464,
+          0.47058823529411764,
+          0.34285714285714286,
+          0.3373493975903614,
+          0.45081967213114754
+        ]
+      }
+    },
+    "epoch": 1,
+    "global_step": 160,
+    "improved": true,
+    "learning_rate": 0.000161,
+    "selected_metric": 3.3131714463233948,
+    "train": {
+      "anchor": 0.9548612736165524,
+      "answerability": 1.2667630590498447,
+      "interior": 0.8373377151787281,
+      "ranking": 0.144287109375,
+      "relation_edge": 0.524290817975998,
+      "source": 1.0951345048844814,
+      "target": 0.8807712852954864,
+      "target_bce": 0.2824421370401978,
+      "target_dice": 0.5983291521668435,
+      "total": 3.46150666475296
+    }
+  },
+  "model_sha256": "30b79cc553c2963181b91b8996315201918b9c34c2cb54d038f1e2dc3a75facd",
+  "schema_version": 1
+}

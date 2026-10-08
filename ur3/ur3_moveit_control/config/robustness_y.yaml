@@ -1,0 +1,5 @@
+fixed_pick_place:
+  ros__parameters:
+    # Quote single-letter axes: YAML 1.1 otherwise parses bare `y` as boolean true.
+    error_injection_axis: "y"
+    error_injection_values: [-0.020, -0.010, -0.005, 0.0, 0.005, 0.010, 0.020]

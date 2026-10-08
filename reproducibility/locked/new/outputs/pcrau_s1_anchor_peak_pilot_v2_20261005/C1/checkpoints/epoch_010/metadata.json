@@ -1,0 +1,25 @@
+{
+  "arm": "C1",
+  "baseline_checkpoint_sha256": "5a326a8040bfbabfadf3f57fff51fd90be3845438c9a3a8c6ee41bdd1e0fa045",
+  "conditioning": "phrase",
+  "dev": {
+    "anchor_cell_hits": 48,
+    "anchor_hit_rate": 0.7868852459016393,
+    "anchor_hits": 48,
+    "confident_wrong_anchor_ge_0p9": 6,
+    "empty_max_sigmoid_max": 0.7090191337850932,
+    "empty_mean_sigmoid_max": 0.29488926647437036,
+    "found_anchor_hits": 13,
+    "found_both_hits": 12,
+    "found_target_hits": 14,
+    "swap_both_hits": 8,
+    "swap_same_peak": 1,
+    "wrong_anchor_inside_target": 1
+  },
+  "epoch": 10,
+  "epoch_zero_based": 9,
+  "mlp_sha256": "437dd8cb78588aaa80c396da0f322260054eccc57a0734b39bdee455231e972e",
+  "optimizer_steps": 160,
+  "protocol_sha256": "0c4efd907413523bf273044c9520662750bbbca0b2cb72218fe712b02531a412",
+  "residual_state_sha256": "6bc285c1f57356382d5a2ec18b790647ab37230387f1648108027d459914ff0d"
+}

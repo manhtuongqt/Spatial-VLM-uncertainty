@@ -1,0 +1,107 @@
+{
+  "frozen_dev_manifest_sha256": {
+    "datasets/Gazebo_dev/evaluator_ground_truth.jsonl": "6ce3fa9913b3406227266f3d4a24358d4058942dea50f9e6273e2dd2f7a9ef6a",
+    "datasets/Gazebo_dev_answerability_v2/evaluator_ground_truth.jsonl": "b76faa04130e1e62e03476c48339744733d780a148b3f45a3a9184423f8227c5"
+  },
+  "geometry_gate": {
+    "insufficient_evidence_rule": {
+      "max_visible_pixels_exclusive": 120,
+      "min_visible_pixels_inclusive": 1,
+      "projected_center_outer_margin_fraction": 0.2
+    },
+    "layout_uniqueness": {
+      "byte_identical_rgb_forbidden": true,
+      "full_pose_signatures_unique": true,
+      "no_pose_signature_overlap_with_prior_uq_attempts": true,
+      "perceptual_near_duplicate_rule": {
+        "and_changed_pixel_fraction_below": 0.002,
+        "gray_absdiff_threshold_for_changed_pixel": 3,
+        "metric": "whole-frame grayscale mean absolute difference and changed-pixel fraction",
+        "near_duplicate_if_gray_mad_below": 0.05
+      }
+    },
+    "min_visible_evidence_px": 120,
+    "tie_margin_normalized": 0.03
+  },
+  "grounding_model_lock_sha256": "6e1da7e9759eacfaadf7be07467f4996e95575fd2a6225af25d87e4f74418b09",
+  "hypothesis_lock_sha256": "077f65f3db1b9562bc589ba54ac47d19c5a6ee1c1a00d3a178228b5822e8c78a",
+  "layout_signature_set_sha256": "3170f5517760ac6efdb49ba072ff5049462c7b784d3d8412165b71ec2512b915",
+  "layout_signature_sha256": {
+    "gazebo_uq_v2_pilot_r3_000": "0db796d10336e22866d07d3b6cae3d4d17681b70870adb47fe65898135589608",
+    "gazebo_uq_v2_pilot_r3_001": "2b4b13f582ea7ca6a0f36a31329ceec4a070e86241064dce2680b9cde3301038",
+    "gazebo_uq_v2_pilot_r3_002": "8882e9e74fcd0687bb39a0853cb3bb4f9cab8a65b8018301662b71af9aeef753",
+    "gazebo_uq_v2_pilot_r3_003": "4757e9cab2e221edef3394046b01a671c4882414eed107c62b49ce898b35f23d",
+    "gazebo_uq_v2_pilot_r3_004": "a611577220a070a6561a923956643705b2cc49bd40ec4185f14e593662017d60",
+    "gazebo_uq_v2_pilot_r3_005": "ab784d497dfce16bbf6f71b1b04bd70d7080b01202be918819408195696bea3c",
+    "gazebo_uq_v2_pilot_r3_006": "9e9799656047af3a71da360bc134f8a13e8d10ff69b31ea260e2645a33cc6c6d",
+    "gazebo_uq_v2_pilot_r3_007": "e09af0789f1e7e04d2cc9ab16e6faea5cf546413b38c1e3238fa37b90e14282d",
+    "gazebo_uq_v2_pilot_r3_008": "eb2409eb914bf50281731ec0ab0a2a640f752821b91126277157e5518fa47b71",
+    "gazebo_uq_v2_pilot_r3_009": "09e07f7a8e00e7bc5b47eb270c892c6b5c83883397e3362257b7afda2eceea85",
+    "gazebo_uq_v2_pilot_r3_010": "8ee6d75d6d73531dc767fc44cb64a0c6b7df94c1705e82a57d93e74774fa2f75",
+    "gazebo_uq_v2_pilot_r3_011": "55caa92f4e4af4316572cd7162679497b3aaa4f39763c95447392de50e1d747d",
+    "gazebo_uq_v2_pilot_r3_012": "7f6ca4467b1d7b7e5326218f8fb94dcecad50b4139396659b43056172c741bec",
+    "gazebo_uq_v2_pilot_r3_013": "a0e78a55526bba8a404dd70df2fce6c81f9929da99cce1a4db6d58c11052d361",
+    "gazebo_uq_v2_pilot_r3_014": "8c131daf1ced48ed5898bdadac56c4a5266a196881278ae81d3ec23135630c87",
+    "gazebo_uq_v2_pilot_r3_015": "be3834423dbc00a2800b59b7bfb99712bf75c778936b951f7e89e3043d6403e4",
+    "gazebo_uq_v2_pilot_r3_016": "2987645c173032831fe1864f052c0d2fc2cc179f3c61cedeec552d9ece6dbf42",
+    "gazebo_uq_v2_pilot_r3_017": "e5525b102ea98a96de728a65b88831cd177b46fb610444a909d6f7c4a8861c8a",
+    "gazebo_uq_v2_pilot_r3_018": "8d2557fe155b61de305f33af246e4b0bf91f50f2203e539c63b30bb1046f7e08",
+    "gazebo_uq_v2_pilot_r3_019": "2aefd3282b8b32c9b28b84cf7ae8329f7405df249cd3e5e1fd642d8acbfc1692",
+    "gazebo_uq_v2_pilot_r3_020": "b49b4901963886367963b4ef53081d0e0bc89ae88076e0262377eb3037e74d8e",
+    "gazebo_uq_v2_pilot_r3_021": "072ee3c1a7dba64f892f7d807a14adb9fe359d0a71b32f07854280bf002995f5",
+    "gazebo_uq_v2_pilot_r3_022": "844d5294a5c74c1495cba2bb3c5cf8464cd4afe41dac7f41b9ed1fff8952378a",
+    "gazebo_uq_v2_pilot_r3_023": "4ee462f0714e14ca85b40186fe4816552258ac37aa13c998c6b790f81908b429",
+    "gazebo_uq_v2_pilot_r3_024": "0dec4c064c53316b6f573797d12324f8997f3a62f058f7148357d928cd3b2f30",
+    "gazebo_uq_v2_pilot_r3_025": "3c8b1cf839aec7560cbbb78603e69b63bf5a7e0b0c494c334c16819aff5f062a",
+    "gazebo_uq_v2_pilot_r3_026": "1aad1181060ffc1dd29b406ed198ebb5b51b879d4d39aa7919e91a4f45c7e1fa",
+    "gazebo_uq_v2_pilot_r3_027": "33257b45fa19bfcac6851373c64220c536d829ec14b8ba33424f6e39337b9091",
+    "gazebo_uq_v2_pilot_r3_028": "115ca4c94e7ba3862ee7c1e7253ff70fdeecafca185ba4adf7907e4cbfc45371",
+    "gazebo_uq_v2_pilot_r3_029": "43a45ddfd05fa3b95c75bce4b1a64aa27bc9627ae2a1fd62b839101ff95efde0",
+    "gazebo_uq_v2_pilot_r3_030": "8b9c890ae9aa4eb046773de10fc9ee6f957b03a59ada38fba9d64eb4a9a32ac9",
+    "gazebo_uq_v2_pilot_r3_031": "24f2632184004809e1d5021f4bc08f82a18f1e44e7f58090fa0d05f752c3e42e"
+  },
+  "locked_at_utc": "2026-09-11T10:44:44.066272+00:00",
+  "parent_families": 32,
+  "policies": {
+    "full_train_uq_only_after_pilot_pass": true,
+    "no_b2": true,
+    "no_dev_v2_fit_or_selection": true,
+    "no_materialization": true,
+    "no_model_inference": true,
+    "no_robot_manipulation": true,
+    "no_sam2": true,
+    "no_test_access": true,
+    "no_training": true
+  },
+  "prior_failed_evidence_sha256": {
+    "protocol/gazebo_train_uq_v2_pilot_r2_capture_compatibility_lock.json": "0df76becb9bce546aa6834068352441ba95d90f017139fd8ed1a2fd6c73ae0bf",
+    "protocol/gazebo_train_uq_v2_pilot_r2_contract_lock.json": "8a5ec1636e549a1c323df5faf6946ce99384b250ae33fc9fc1c8a7423b0c89cc",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v1/GAZEBO_TRAIN_UQ_V1_GEOMETRY_QC.json": "d808f45ed5e09090d52cf974ffe6d762c0a4907a0993bf1ad694a72b42150e57",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot/CAPTURE_ATTEMPT_01_DECISION.md": "da20fb7385ec19467027e3f201a1314a2d46ece19a2dd7c0aa9d7ab3c1ff0b1c",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot_r2/CAPTURE_ATTEMPT_01_DECISION.md": "b0508df49f8556ee88f0f1c9433207f870d4979daa3e7882fb6587129dab9b90",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot_r2/GAZEBO_TRAIN_UQ_V2_PILOT_R2_GEOMETRY_QC.json": "a5c9bc9ad6f6523fcd638ac641180dd2d6ebda3d42a6f5d4749e3775aabf9bb2"
+  },
+  "protocol_id": "gazebo_train_uq_v2_pilot_r3",
+  "purpose": "geometry validation only; no materialization, training, model inference, manipulation, calibration, or Test access",
+  "r3_amendment_sha256": "2d29fa60b88b7d24946c537eefbbce1d72efad38761738082a4d51a8c1b7ecee",
+  "schema_version": 1,
+  "source_artifact_sha256": {
+    "protocol/gazebo_train_uq_v2_pilot_r2_capture_compatibility_lock.json": "0df76becb9bce546aa6834068352441ba95d90f017139fd8ed1a2fd6c73ae0bf",
+    "protocol/gazebo_train_uq_v2_pilot_r2_contract_lock.json": "8a5ec1636e549a1c323df5faf6946ce99384b250ae33fc9fc1c8a7423b0c89cc",
+    "protocol/gazebo_train_uq_v2_pilot_r3_amendment.json": "2d29fa60b88b7d24946c537eefbbce1d72efad38761738082a4d51a8c1b7ecee",
+    "protocol/gazebo_train_uq_v2_pilot_r3_pipeline.py": "699fc9956637473e0563634702a86ba3510885246cacb34bb18a71e820b17b2a",
+    "protocol/generate_gazebo_train_uq_v2_pilot_r3_contract.py": "a85692d30abf62643480dab702fae10519ce44bb08625e9d47a4863f2681bd50",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v1/GAZEBO_TRAIN_UQ_V1_GEOMETRY_QC.json": "d808f45ed5e09090d52cf974ffe6d762c0a4907a0993bf1ad694a72b42150e57",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot/CAPTURE_ATTEMPT_01_DECISION.md": "da20fb7385ec19467027e3f201a1314a2d46ece19a2dd7c0aa9d7ab3c1ff0b1c",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot_r2/CAPTURE_ATTEMPT_01_DECISION.md": "b0508df49f8556ee88f0f1c9433207f870d4979daa3e7882fb6587129dab9b90",
+    "results/spatial_vlm_refspatial_v1/gazebo_train_uq_v2_pilot_r2/GAZEBO_TRAIN_UQ_V2_PILOT_R2_GEOMETRY_QC.json": "a5c9bc9ad6f6523fcd638ac641180dd2d6ebda3d42a6f5d4749e3775aabf9bb2",
+    "results/spatial_vlm_refspatial_v1/wp4_grounding_lock/grounding_model_lock.json": "6e1da7e9759eacfaadf7be07467f4996e95575fd2a6225af25d87e4f74418b09",
+    "results/spatial_vlm_refspatial_v1/wp4_grounding_lock/hypothesis_lock.json": "077f65f3db1b9562bc589ba54ac47d19c5a6ee1c1a00d3a178228b5822e8c78a",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_pilot_r3_annotations.yaml": "4851c11e1eb0965bc8c99f21adb2e210598680f4dac2c795f1904a22f10c174b",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_pilot_r3_gate.yaml": "20d4ab4a2b9060b900bc35be76893d3b2c70a51266a0d746bac4b9b67d2ec257",
+    "ur3/ur3_perception/config/gazebo_train_uq_v2_pilot_r3_scenes.yaml": "925f790fc0610d55e922df5d26fc1ee804f2bb8612b96b89521c1ea19355488e"
+  },
+  "state_relation_cell_quota": 2,
+  "status": "LOCKED_BEFORE_PILOT_CAPTURE",
+  "workspace_root": "/home/dhcn/ur_ws/src/myproject"
+}

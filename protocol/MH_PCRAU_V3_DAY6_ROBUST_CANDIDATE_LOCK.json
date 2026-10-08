@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_ROBUST_CANDIDATE_TRAINING",
+  "created_at_local": "2026-09-24",
+  "method_id": "MH-PCRA-U-v3-robust-candidate-r1",
+  "seed": 26092026,
+  "purpose": "Train one fixed-epoch candidate with multi-view and prompt-format augmentation before fresh anti-shortcut validation exists",
+  "bindings": [
+    {"path": "workspace/mh_pcrau_v3/day6_robust_candidate_train.py", "sha256": "3036a39a72285a17ab56976bd6ad3b5f0ba5269c81fda980358d447c8ab1bda6"},
+    {"path": "ketqua1/03_backbone_h_spatial/ngay_06/S1A_FEATURE_CACHE_MANIFEST.json", "sha256": "60396fa3ac5fcb1eaeb1633e530494d8fa779eaa56674043e53f79044b342bc3"},
+    {"path": "ketqua1/07_huan_luyen/ngay_06/S1A_SUPERVISION_STORE.jsonl", "sha256": "91934900aa388eac30e9994ff1886a2ee6fcbfdd79d8d0e650db934cb7adfdcd"},
+    {"path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_FEATURE_CACHE_MANIFEST.json", "sha256": "3c4dbaf5bf113ced0efdd25e0eab48fa6d2f82d940f5503e5a4412d120466f63"},
+    {"path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_CACHE_QC.json", "sha256": "8dbc8a24ba905e1b5ba594fb7734b0231220675ab99d61c51adb232ec82ce07f"},
+    {"path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_SUPERVISION.jsonl", "sha256": "8862d4cfb945c447211347c246f6dbdc4421d34f040f320c06685b859d7a722e"},
+    {"path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_03_prompt_aligned/PROMPT_ALIGNED_FEATURE_CACHE_MANIFEST.json", "sha256": "f60ccd77d577de2acf31650f981301bfec35072904aa5fbc7829a703d0fb9fc1"},
+    {"path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_03_prompt_aligned/PROMPT_ALIGNED_CACHE_QC.json", "sha256": "ec2b8ade13d0dd69ce93f6c64c0ad66c88261acc074eaea5c7305c9b5e595829"},
+    {"path": "ketqua1/06_ham_mat_mat/ngay_05/LOSS_WEIGHT_DECISION.json", "sha256": "752e3883eb8e1b50237422580ac941964a781ce805d8dccdb335f5e37fd6724e"},
+    {"path": "protocol/MH_PCRAU_V3_ANTI_SHORTCUT_VAL_V1_LOCK.json", "sha256": "fe02205a076204f997b7e68038b1f5e9faf1af7f5bb2b5481ee151658db6c7ba"}
+  ],
+  "data": {
+    "train_parent_families": 256,
+    "examples_per_family": 3,
+    "train_examples": 768,
+    "variants": [
+      "canonical_view_canonical_prompt",
+      "second_view_short_prompt",
+      "second_view_canonical_prompt"
+    ],
+    "old_val_monitor_examples": 64,
+    "old_val_role": "MONITOR_ONLY_NOT_SELECTION",
+    "paired_set_role_after_training": "TRAIN_ONLY_NOT_EVALUATION"
+  },
+  "loss_weights": {
+    "relation": 1.0,
+    "reasoning": 1.0,
+    "spatial": 0.5,
+    "source": 1.0,
+    "answerability": 1.0,
+    "confidence": 0.0,
+    "language_modeling": 0.0
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "main_learning_rate": 0.0005,
+    "log_variance_head_learning_rate": 0.000005,
+    "weight_decay": 0.0,
+    "maximum_gradient_norm": 5.0
+  },
+  "training": {
+    "initialization": "from_same_seed_not_from_day6_checkpoint",
+    "fixed_epochs": 54,
+    "batch_size": 32,
+    "gradient_accumulation": 1,
+    "checkpoint_selection": "NONE_FIXED_FINAL_EPOCH",
+    "shuffle": "deterministic torch.randperm seed+epoch"
+  },
+  "claims": {
+    "candidate_ready_does_not_mean_generalization_pass": true,
+    "paired_metrics_are_training_fit_only": true,
+    "fresh_anti_shortcut_val_required": true,
+    "day7_oof_s1b_authorized": false,
+    "calibration_test_robot": "SEALED"
+  }
+}

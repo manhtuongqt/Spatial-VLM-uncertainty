@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.roborefer/protocol/family_manifest_v1.schema.json",
+  "title": "RoboRefer WP2 family manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "protocol_id", "generator_version", "seed", "split_policy", "family_count", "sample_count", "depth_dependent_family_count", "variants", "families"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "protocol_id": {"const": "roborefer_dataset_v1_prototype"},
+    "generator_version": {"type": "string"},
+    "seed": {"type": "integer"},
+    "split_policy": {
+      "type": "object",
+      "required": ["unit", "assignments_locked_before_capture", "target_family_counts"],
+      "properties": {
+        "unit": {"const": "family_id"},
+        "assignments_locked_before_capture": {"const": true},
+        "target_family_counts": {
+          "type": "object",
+          "required": ["train", "dev", "calibration", "test"],
+          "properties": {
+            "train": {"const": 30}, "dev": {"const": 8},
+            "calibration": {"const": 6}, "test": {"const": 6}
+          }
+        }
+      }
+    },
+    "family_count": {"const": 50},
+    "sample_count": {"const": 250},
+    "depth_dependent_family_count": {"minimum": 30},
+    "variants": {
+      "type": "array", "minItems": 5, "maxItems": 5, "uniqueItems": true,
+      "items": {"enum": ["clean", "semantic_counterfactual", "relation_counterfactual", "depth_corruption", "occlusion_view_counterfactual"]}
+    },
+    "families": {
+      "type": "array", "minItems": 50, "maxItems": 50,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["family_id", "family_index", "split", "category", "depth_dependent", "seed", "target_id", "anchor_ids", "semantic_counterfactual_target_id", "clean_layout", "occlusion_layout", "variant_specs"],
+        "properties": {
+          "family_id": {"type": "string", "pattern": "^wp2_family_[0-9]{4}$"},
+          "family_index": {"type": "integer", "minimum": 1, "maximum": 50},
+          "split": {"enum": ["train", "dev", "calibration", "test"]},
+          "category": {"type": "string"},
+          "depth_dependent": {"type": "boolean"},
+          "seed": {"type": "integer"},
+          "target_id": {"type": "string"},
+          "anchor_ids": {"type": "array", "items": {"type": "string"}},
+          "semantic_counterfactual_target_id": {"type": "string"},
+          "clean_layout": {"type": "object", "minProperties": 16},
+          "occlusion_layout": {"type": "object", "minProperties": 16},
+          "variant_specs": {
+            "type": "array", "minItems": 5, "maxItems": 5,
+            "items": {
+              "type": "object",
+              "required": ["variant", "capture_id", "instruction", "target_ids", "anchor_ids", "valid_target_ids", "relations", "reference_frame", "answerable", "answerability_state", "uncertainty_sources", "severity", "expected_intervention", "perturbation"]
+            }
+          }
+        }
+      }
+    }
+  }
+}

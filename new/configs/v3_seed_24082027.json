@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "experiment_id": "pcrau_target_v3_regularized_seed_24082027",
+  "seed": 24082027,
+  "paths": {
+    "development_manifest": "old/protocol/pcra_u_development_train_manifest.json",
+    "development_feature_index": "old/results/pcra_u_feature_cache/pcra_u_development_v1/indexes/index_full.json",
+    "development_feature_root": "old/results/pcra_u_feature_cache/pcra_u_development_v1",
+    "development_dataset_root": "old/roborefer_dataset_v2_1_1_development_400_20260824",
+    "calibration_manifest": "old/protocol/pcra_u_calibration_eval_manifest.json",
+    "calibration_feature_index": "old/results/pcra_u_feature_cache/pcra_u_calibration_v1/indexes/index_full.json",
+    "calibration_feature_root": "old/results/pcra_u_feature_cache/pcra_u_calibration_v1",
+    "calibration_dataset_root": "old/datasets/roborefer_dataset_v2_1_calibration_200_20260824",
+    "dev_roborefer_points": "old/results/pcra_u_runs/pcra_u_development_failure_audit_20260824/predictions/roborefer_baselines_dev.jsonl",
+    "output_root": "new/outputs"
+  },
+  "locked_counts": {"train_families": 320, "train_samples": 1600, "dev_families": 80, "dev_samples": 400, "variants_per_family": 5, "calibration_families": 200, "calibration_samples": 1000},
+  "model": {
+    "feature_dim": 1152, "hidden_dim": 128, "text_layers": 2, "fusion_layers": 2,
+    "attention_heads": 4, "dropout": 0.2, "modality_dropout_probability": 0.15,
+    "vocab_size": 8192, "max_tokens": 72, "max_relations": 3, "max_anchors": 3,
+    "grid_height": 24, "grid_width": 32,
+    "answerability_classes": ["FOUND", "AMBIGUOUS", "ABSENT", "INSUFFICIENT_EVIDENCE"],
+    "source_classes": ["semantic", "relation", "spatial", "depth", "occlusion"],
+    "relation_classes": ["direct", "left_of", "right_of", "front_of", "behind", "nearer_than", "farther_than", "between_in_depth", "nearer_than_both"]
+  },
+  "loss": {
+    "target_heatmap": 1.0, "interior_heatmap": 0.4, "anchor_heatmap": 0.6,
+    "relation_edge": 0.4, "answerability": 0.8, "source": 0.6,
+    "counterfactual_ranking": 0.25, "ranking_margin": 0.25, "spatial_weak_label_weight": 0.5,
+    "source_positive_weight_scale": {"semantic": 0.6, "relation": 0.9, "spatial": 1.0, "depth": 0.85, "occlusion": 0.55},
+    "source_negative_weight": {"semantic": 1.35, "relation": 1.0, "spatial": 1.0, "depth": 1.0, "occlusion": 1.35}
+  },
+  "sampling": {"relation_family_repeats": {"between_in_depth": 2, "left_of": 2}, "absent_family_repeat": 2},
+  "selection": {"metric": "dev_total_loss", "mode": "min", "minimum_grounding_accuracy": 0.97},
+  "optimization": {"epochs": 20, "families_per_batch": 4, "learning_rate": 0.0001, "weight_decay": 0.0005, "warmup_steps": 200, "gradient_clip_norm": 5.0, "num_workers": 0, "amp": true, "amp_dtype": "bfloat16", "early_stopping_patience": 3, "checkpoint_every_epochs": 3, "selection_metric": "dev_total_loss"},
+  "calibration": {"l2": 0.001, "risk_target": 0.05, "minimum_accepted_families": 60, "conformal_alpha": 0.1}
+}

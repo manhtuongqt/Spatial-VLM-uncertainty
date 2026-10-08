@@ -1,0 +1,8 @@
+{
+  "protocol_id": "gazebo_calibration_v6_geometry_pilot",
+  "status": "FROZEN_DESIGN_INPUT",
+  "families": 32,
+  "contract_lock_sha256": "850921e200d921592128c76e11c8deeb5a7d6177ea315f1ff8d286f873084b6d",
+  "test_iid_ood_sealed": true,
+  "capture_authorized": false
+}

@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+  <!--
+    D435i eye-in-hand model used by the UR3 simulation.
+
+    Frame convention follows realsense2_camera / realsense2_description:
+      camera_link: depth imager mechanical frame (+X forward, +Y left, +Z up)
+      *_optical_frame: REP-103 optical axes (+X right, +Y down, +Z forward)
+
+    The RGB-D Gazebo sensor represents the output *after* RealSense
+    align_depth_to_color. Consequently RGB, registered depth and CameraInfo all
+    use camera_color_optical_frame and the measured color intrinsics. Raw depth
+    intrinsics/extrinsics are retained in config/d435i_640x480_30.yaml for
+    calibration exercises, but are not mixed into the registered control path.
+  -->
+  <xacro:macro name="d435i_wrist_camera"
+               params="parent sim_enabled mount_xyz mount_rpy update_rate:=60 depth_noise_stddev:=0.0">
+    <!-- Physical enclosure values mirror the official D435 description. -->
+    <xacro:property name="camera_width" value="0.090"/>
+    <xacro:property name="camera_height" value="0.025"/>
+    <xacro:property name="camera_depth" value="0.02505"/>
+
+    <link name="camera_link">
+      <inertial>
+        <mass value="0.072"/>
+        <origin xyz="0 -0.0175 0" rpy="0 0 0"/>
+        <!-- Conservative box inertia; the vendor URDF explicitly marks its
+             supplied inertia as unsuitable for dynamics. -->
+        <inertia ixx="0.0000525" ixy="0" ixz="0"
+                 iyy="0.00000468" iyz="0" izz="0.0000531"/>
+      </inertial>
+      <visual>
+        <!-- Official RealSense D435/D435i enclosure mesh. -->
+        <origin xyz="0.0043 -0.0175 0" rpy="1.57079632679 0 1.57079632679"/>
+        <geometry>
+          <!-- file:// with a runtime-resolved package path is understood by
+               both RViz and Gazebo Fortress (which otherwise rewrites this
+               package URI to an unresolved model:// URI). -->
+          <mesh filename="file://$(find realsense2_description)/meshes/d435.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 -0.0175 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="${camera_depth} ${camera_width} ${camera_height}"/>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="camera_fixed_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="camera_link"/>
+      <!-- This is the current simulation mount. Replace it with the measured
+           hand-eye result after the physical bracket is installed. -->
+      <origin xyz="${mount_xyz}" rpy="${mount_rpy}"/>
+    </joint>
+
+    <link name="camera_depth_frame"/>
+    <joint name="camera_depth_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="camera_depth_frame"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+    <link name="camera_depth_optical_frame"/>
+    <joint name="camera_depth_optical_joint" type="fixed">
+      <parent link="camera_depth_frame"/>
+      <child link="camera_depth_optical_frame"/>
+      <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679"/>
+    </joint>
+
+    <!-- Per-device depth-to-color extrinsics captured from the connected
+         D435i (640x480@30). The real driver will still be the authority when
+         running hardware. -->
+    <link name="camera_color_frame"/>
+    <joint name="camera_color_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="camera_color_frame"/>
+      <origin xyz="-0.0000192943 0.0149876224 0.0002390468"
+              rpy="0.0149067918 0.0027502019 0.0073005013"/>
+    </joint>
+    <link name="camera_color_optical_frame"/>
+    <joint name="camera_color_optical_joint" type="fixed">
+      <parent link="camera_color_frame"/>
+      <child link="camera_color_optical_frame"/>
+      <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679"/>
+    </joint>
+
+    <!-- D435i IMU frames are present for TF/API familiarity. The thesis
+         baseline does not consume IMU data, so no synthetic IMU sensor is
+         enabled by default. -->
+    <link name="camera_accel_frame"/>
+    <joint name="camera_accel_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="camera_accel_frame"/>
+      <origin xyz="-0.01174 -0.00552 0.0051" rpy="0 0 0"/>
+    </joint>
+    <link name="camera_accel_optical_frame"/>
+    <joint name="camera_accel_optical_joint" type="fixed">
+      <parent link="camera_accel_frame"/>
+      <child link="camera_accel_optical_frame"/>
+      <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679"/>
+    </joint>
+    <link name="camera_gyro_frame"/>
+    <joint name="camera_gyro_joint" type="fixed">
+      <parent link="camera_link"/>
+      <child link="camera_gyro_frame"/>
+      <origin xyz="-0.01174 -0.00552 0.0051" rpy="0 0 0"/>
+    </joint>
+    <link name="camera_gyro_optical_frame"/>
+    <joint name="camera_gyro_optical_joint" type="fixed">
+      <parent link="camera_gyro_frame"/>
+      <child link="camera_gyro_optical_frame"/>
+      <origin xyz="0 0 0" rpy="-1.57079632679 0 -1.57079632679"/>
+    </joint>
+
+    <xacro:if value="${sim_enabled}">
+      <!-- One registered RGB-D sensor intentionally models the driver's
+           align_depth_to_color output used by perception. -->
+      <gazebo reference="camera_color_frame">
+        <sensor name="d435i_aligned_rgbd" type="rgbd_camera">
+          <camera>
+            <horizontal_fov>0.9715630779</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.10</near>
+              <far>2.0</far>
+            </clip>
+            <depth_camera>
+              <clip>
+                <near>0.10</near>
+                <far>2.0</far>
+              </clip>
+            </depth_camera>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>${depth_noise_stddev}</stddev>
+            </noise>
+            <lens>
+              <intrinsics>
+                <fx>606.0816650391</fx>
+                <fy>605.7973022461</fy>
+                <cx>325.5436706543</cx>
+                <cy>249.9961547852</cy>
+                <s>0.0</s>
+              </intrinsics>
+              <projection>
+                <p_fx>606.0816650391</p_fx>
+                <p_fy>605.7973022461</p_fy>
+                <p_cx>325.5436706543</p_cx>
+                <p_cy>249.9961547852</p_cy>
+                <tx>0.0</tx>
+                <ty>0.0</ty>
+              </projection>
+            </lens>
+            <optical_frame_id>camera_color_optical_frame</optical_frame_id>
+          </camera>
+          <always_on>true</always_on>
+          <update_rate>${update_rate}</update_rate>
+          <visualize>true</visualize>
+          <topic>/wrist_camera</topic>
+          <gz_frame_id>camera_color_optical_frame</gz_frame_id>
+        </sensor>
+
+        <!-- Evaluation-only semantic labels rendered from the exact same
+             optical origin and intrinsics as RGB-D.  This topic is captured
+             concurrently into an evaluator-only directory, but is opened
+             only after predictions are locked; it is never an input to
+             RoboRefer or manipulation. Unique model labels are defined in
+             ur3_pick_place.sdf. -->
+        <sensor name="d435i_evaluation_labels" type="segmentation">
+          <camera>
+            <segmentation_type>semantic</segmentation_type>
+            <horizontal_fov>0.9715630779</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.10</near>
+              <far>2.0</far>
+            </clip>
+            <lens>
+              <intrinsics>
+                <fx>606.0816650391</fx>
+                <fy>605.7973022461</fy>
+                <cx>325.5436706543</cx>
+                <cy>249.9961547852</cy>
+                <s>0.0</s>
+              </intrinsics>
+            </lens>
+            <optical_frame_id>camera_color_optical_frame</optical_frame_id>
+          </camera>
+          <always_on>true</always_on>
+          <update_rate>${update_rate}</update_rate>
+          <visualize>false</visualize>
+          <topic>/wrist_camera/evaluation_labels</topic>
+          <gz_frame_id>camera_color_optical_frame</gz_frame_id>
+        </sensor>
+      </gazebo>
+    </xacro:if>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "status": "FROZEN_BEFORE_LABEL_OPEN_AND_SCORING",
+  "created_at_local": "2026-09-24",
+  "scope": "One-shot paired second-view robustness diagnostic; not independent validation, Test, calibration, training, or model selection",
+  "bindings": [
+    {
+      "path": "workspace/mh_pcrau_v3/day6_paired_view_evaluate.py",
+      "sha256": "7c547fb52471a1d0b2ef2f59a6c3df3d18b46e614beda2f966bf345be2b11b23"
+    },
+    {
+      "path": "protocol/MH_PCRAU_V3_DAY6_PAIRED_VIEW_STRESS_LOCK.json",
+      "sha256": "0b27540526d503f45e88585caeeafc3dbdd1c2c448ae9cd1995a05c68c613776"
+    },
+    {
+      "path": "protocol/MH_PCRAU_V3_DAY6_PAIRED_VIEW_EXTRACTION_LOCK.json",
+      "sha256": "60441ee6f00ca2d9902392e8d7dc28515248b3d77455a0392e37592b04279efa"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_FEATURE_CACHE_MANIFEST.json",
+      "sha256": "3c4dbaf5bf113ced0efdd25e0eab48fa6d2f82d940f5503e5a4412d120466f63"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_CACHE_QC.json",
+      "sha256": "8dbc8a24ba905e1b5ba594fb7734b0231220675ab99d61c51adb232ec82ce07f"
+    },
+    {
+      "path": "ketqua1/03_backbone_h_spatial/ngay_06/amendment_02_paired_view/PAIRED_VIEW_SUPERVISION.jsonl",
+      "sha256": "8862d4cfb945c447211347c246f6dbdc4421d34f040f320c06685b859d7a722e"
+    },
+    {
+      "path": "workspace/mh_pcrau_v3/checkpoints/day06/s1a_best.pt",
+      "sha256": "042a6c7fd4456f0eaeea4e5361392c3f428581c0d5b66a541fdfe6d590e0dfa1"
+    }
+  ],
+  "primary_metrics": [
+    "answerability_macro_f1",
+    "point_l2_mean",
+    "hit_at_0_03",
+    "hit_at_0_05"
+  ],
+  "mandatory_baselines": [
+    "text_only",
+    "RGB_thumbnail_16x12_linear",
+    "depth_thumbnail_16x12_linear",
+    "relation_centroid"
+  ],
+  "confidence_intervals": "95% family bootstrap, 10000 draws, seed 25092026",
+  "generalization_hold_must_remain": true,
+  "day7_oof_s1b_authorized": false
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "camera_info_and_tf_equal": true,
+    "clean_sample_id": "v211dev_family_000055__clean",
+    "completion_target": "reference_visible_support_not_full_amodal_object",
+    "family_id": "v211dev_family_000055",
+    "hidden_core_fraction": 0.36434280639431615,
+    "hidden_core_pixels": 1641,
+    "observed_pixels": 2637,
+    "observed_subset_of_reference_dilation": true,
+    "occluded_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000055__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "sha256": "1e84c753b90a20188fed1feabb13a3c5df9fb9b19544d29ae3b0f9207c1dc0b3"
+    },
+    "occluded_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000055__occlusion_capture/semantic_instance_labels.png",
+      "sha256": "927b362b9fd4e8d2ae61aad4ed4916b0184c2a5a8d34859e79251e1c79d29c96"
+    },
+    "only_occluder_requested_pose_changed": true,
+    "reference_label_id_supervision_only": 26,
+    "reference_pixels": 4504,
+    "reference_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000055__clean/rgb_model_input.jpg",
+      "sha256": "1e26fd7dc42473bb95d602112f0dc807fec2072b3397fbdcf809b3aaa6f45156"
+    },
+    "reference_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000055__clean_capture/semantic_instance_labels.png",
+      "sha256": "5601d1fd323aa594c3b70c5c3e8619ba74a997e440db32733319b9eb2091e19b"
+    },
+    "registration_boundary_tolerance_px": 2,
+    "sample_id": "v211dev_family_000055__occlusion_view_counterfactual",
+    "split": "train"
+  },
+  {
+    "camera_info_and_tf_equal": true,
+    "clean_sample_id": "v211dev_family_000280__clean",
+    "completion_target": "reference_visible_support_not_full_amodal_object",
+    "family_id": "v211dev_family_000280",
+    "hidden_core_fraction": 0.3513864818024263,
+    "hidden_core_pixels": 1622,
+    "observed_pixels": 2770,
+    "observed_subset_of_reference_dilation": true,
+    "occluded_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000280__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "sha256": "d40797926b3c4e885c4c60b59eab8de8f94f3815d83df6121ce57c6401fc2cfd"
+    },
+    "occluded_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000280__occlusion_capture/semantic_instance_labels.png",
+      "sha256": "34b7ca10f904b914cd52d50f8f8bf973e3743e217a7b48e39b401f5c69fd9316"
+    },
+    "only_occluder_requested_pose_changed": true,
+    "reference_label_id_supervision_only": 26,
+    "reference_pixels": 4616,
+    "reference_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000280__clean/rgb_model_input.jpg",
+      "sha256": "35edd61901e43799e33ebbdacd905ad48b9f03bd87bc75cc3131227b4b327453"
+    },
+    "reference_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000280__clean_capture/semantic_instance_labels.png",
+      "sha256": "cf826775dcb2eebb3e863c21abbd75a4522fa24de7cad3fdad266a7812ec9b02"
+    },
+    "registration_boundary_tolerance_px": 2,
+    "sample_id": "v211dev_family_000280__occlusion_view_counterfactual",
+    "split": "train"
+  },
+  {
+    "camera_info_and_tf_equal": true,
+    "clean_sample_id": "v211dev_family_000118__clean",
+    "completion_target": "reference_visible_support_not_full_amodal_object",
+    "family_id": "v211dev_family_000118",
+    "hidden_core_fraction": 0.3096685624632281,
+    "hidden_core_pixels": 1579,
+    "observed_pixels": 3304,
+    "observed_subset_of_reference_dilation": true,
+    "occluded_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000118__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "sha256": "d13b2a19502e51bd360d0fbad197f8e896c93c62a789ae86b5bf0aaf35a55459"
+    },
+    "occluded_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000118__occlusion_capture/semantic_instance_labels.png",
+      "sha256": "6282ea9e9cdeb1df9ca74ba996312b647c5b5ed8b402a8e56a4181f30bf2132b"
+    },
+    "only_occluder_requested_pose_changed": true,
+    "reference_label_id_supervision_only": 26,
+    "reference_pixels": 5099,
+    "reference_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000118__clean/rgb_model_input.jpg",
+      "sha256": "62fa15f210789967bce051e932b90ee06677cb80e196ec551d3a4a65bfe96e05"
+    },
+    "reference_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000118__clean_capture/semantic_instance_labels.png",
+      "sha256": "4b889e8a937866b61c8b4683f79f275a51c77e05099f534b57fe94d553e16bc8"
+    },
+    "registration_boundary_tolerance_px": 2,
+    "sample_id": "v211dev_family_000118__occlusion_view_counterfactual",
+    "split": "train"
+  },
+  {
+    "camera_info_and_tf_equal": true,
+    "clean_sample_id": "v211dev_family_000124__clean",
+    "completion_target": "reference_visible_support_not_full_amodal_object",
+    "family_id": "v211dev_family_000124",
+    "hidden_core_fraction": 0.4224113066051341,
+    "hidden_core_pixels": 2929,
+    "observed_pixels": 3731,
+    "observed_subset_of_reference_dilation": true,
+    "occluded_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000124__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "sha256": "4b96e773e745c576996f580bd2e16d51dd9c45572cd61fd5bb7564bcd9575fd1"
+    },
+    "occluded_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000124__occlusion_capture/semantic_instance_labels.png",
+      "sha256": "4f5538d58c82c8aabeed9bc425ebdf43605c42ab27700102d607968e974d9d09"
+    },
+    "only_occluder_requested_pose_changed": true,
+    "reference_label_id_supervision_only": 23,
+    "reference_pixels": 6934,
+    "reference_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000124__clean/rgb_model_input.jpg",
+      "sha256": "c66459404c3cbb9cc35014652da1df1ee5804de066c17e378f86a00a538e65f1"
+    },
+    "reference_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000124__clean_capture/semantic_instance_labels.png",
+      "sha256": "7aab0b2aa6e5d45344d8ccfa48deab08baeda63743d0fe1aa9fa7496be4b509c"
+    },
+    "registration_boundary_tolerance_px": 2,
+    "sample_id": "v211dev_family_000124__occlusion_view_counterfactual",
+    "split": "dev"
+  },
+  {
+    "camera_info_and_tf_equal": true,
+    "clean_sample_id": "v211dev_family_000379__clean",
+    "completion_target": "reference_visible_support_not_full_amodal_object",
+    "family_id": "v211dev_family_000379",
+    "hidden_core_fraction": 0.3677170709589662,
+    "hidden_core_pixels": 1622,
+    "observed_pixels": 2563,
+    "observed_subset_of_reference_dilation": true,
+    "occluded_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000379__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "sha256": "fbb8ae17e9a51df05f3265fe88c6b7990a91cd0464a588859edbfa753183c588"
+    },
+    "occluded_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000379__occlusion_capture/semantic_instance_labels.png",
+      "sha256": "2907dbb04c0863ad6c55c245b43ece185e94f58b755d5590917a6c79b267f414"
+    },
+    "only_occluder_requested_pose_changed": true,
+    "reference_label_id_supervision_only": 26,
+    "reference_pixels": 4411,
+    "reference_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000379__clean/rgb_model_input.jpg",
+      "sha256": "401a9c3ffe026ef8cc3bba4811a2e3955070380f4eaf874f78b397cdeab007bd"
+    },
+    "reference_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000379__clean_capture/semantic_instance_labels.png",
+      "sha256": "90691800fb04bd2f55810c775b422da4c5515f0f4e2e772efdacce2d4a4f2d86"
+    },
+    "registration_boundary_tolerance_px": 2,
+    "sample_id": "v211dev_family_000379__occlusion_view_counterfactual",
+    "split": "dev"
+  },
+  {
+    "camera_info_and_tf_equal": true,
+    "clean_sample_id": "v211dev_family_000172__clean",
+    "completion_target": "reference_visible_support_not_full_amodal_object",
+    "family_id": "v211dev_family_000172",
+    "hidden_core_fraction": 0.33160406723386593,
+    "hidden_core_pixels": 1598,
+    "observed_pixels": 2997,
+    "observed_subset_of_reference_dilation": true,
+    "occluded_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000172__occlusion_view_counterfactual/rgb_model_input.jpg",
+      "sha256": "c0b853b1a36c12a61b61333ccddb114f20667d3a78b7a4cd9b7482aea7381d75"
+    },
+    "occluded_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000172__occlusion_capture/semantic_instance_labels.png",
+      "sha256": "18b48ce13387a84ea5ce06cbb89ac2b463eef315faefd02962c95c76d6bd6838"
+    },
+    "only_occluder_requested_pose_changed": true,
+    "reference_label_id_supervision_only": 26,
+    "reference_pixels": 4819,
+    "reference_rgb": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/media/v211dev_family_000172__clean/rgb_model_input.jpg",
+      "sha256": "095e28be857aa531073e5aa436f3e6488a194a01d901b3b3ebb79b8b7b5b34ce"
+    },
+    "reference_semantic_labels_supervision_only": {
+      "path": "/home/dhcn/ur_ws/src/myproject/old/roborefer_dataset_v2_1_1_development_400_20260824/raw/captures/v211dev_family_000172__clean_capture/semantic_instance_labels.png",
+      "sha256": "3ba6da5b36219c4f98dfc4993025d212ab5b0dbdf336f5a98b683dcef106f358"
+    },
+    "registration_boundary_tolerance_px": 2,
+    "sample_id": "v211dev_family_000172__occlusion_view_counterfactual",
+    "split": "dev"
+  }
+]

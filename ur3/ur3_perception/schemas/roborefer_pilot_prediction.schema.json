@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ur3:roborefer-pilot-v0:prediction",
+  "title": "RoboRefer pilot v0 prediction record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "scene_id",
+    "mode",
+    "policy",
+    "prompt",
+    "request_sha256",
+    "source_input_sha256",
+    "model_query_performed",
+    "parse_status",
+    "normalized_points_xy",
+    "pixel_points_xy",
+    "would_execute",
+    "target_handoff_published",
+    "robot_manipulation_performed",
+    "prediction_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "protocol_id": {"const": "roborefer_pilot_v0"},
+    "scene_id": {"type": "string", "pattern": "^pilot_scene_[0-9]{4}$"},
+    "mode": {"enum": ["B0", "B1", "B2"]},
+    "policy": {
+      "enum": ["no_uncertainty_gate_shadow", "hard_gate_shadow"]
+    },
+    "prompt": {"type": "string", "minLength": 1},
+    "request_sha256": {
+      "type": "object",
+      "required": ["rgb", "depth"],
+      "properties": {
+        "rgb": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "depth": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          ]
+        }
+      }
+    },
+    "source_input_sha256": {"type": "object", "minProperties": 2},
+    "model_query_performed": {"type": "boolean"},
+    "parse_status": {"type": "string"},
+    "normalized_points_xy": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [{"type": "number"}, {"type": "number"}],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "pixel_points_xy": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [{"type": "integer"}, {"type": "integer"}],
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "would_execute": {"type": "boolean"},
+    "target_handoff_published": {"const": false},
+    "robot_manipulation_performed": {"const": false},
+    "shadow_evaluation_only": {"const": true},
+    "prediction_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_b1_prediction_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "gate": {
+      "type": "object",
+      "required": ["accepted", "reason", "profile_id"],
+      "properties": {
+        "accepted": {"type": "boolean"},
+        "reason": {"type": "string"},
+        "profile_id": {"type": "string"},
+        "geometric_support_ratio": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"mode": {"const": "B0"}}},
+      "then": {
+        "properties": {
+          "policy": {"const": "no_uncertainty_gate_shadow"},
+          "model_query_performed": {"const": true},
+          "request_depth_sha256": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"mode": {"const": "B1"}}},
+      "then": {
+        "properties": {
+          "policy": {"const": "no_uncertainty_gate_shadow"},
+          "model_query_performed": {"const": true},
+          "request_enable_depth": {"const": true},
+          "request_depth_file": {"type": "string", "minLength": 1},
+          "request_depth_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "required": ["request_depth_file", "request_depth_sha256"]
+      }
+    },
+    {
+      "if": {"properties": {"mode": {"const": "B2"}}},
+      "then": {
+        "required": [
+          "source_b1_prediction_sha256",
+          "request_depth_file",
+          "request_depth_sha256",
+          "registered_depth_used_by_gate",
+          "gate"
+        ],
+        "properties": {
+          "policy": {"const": "hard_gate_shadow"},
+          "model_query_performed": {"const": false},
+          "request_depth_file": {"type": "string", "minLength": 1},
+          "request_depth_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "registered_depth_used_by_gate": {"const": true}
+        }
+      }
+    }
+  ]
+}

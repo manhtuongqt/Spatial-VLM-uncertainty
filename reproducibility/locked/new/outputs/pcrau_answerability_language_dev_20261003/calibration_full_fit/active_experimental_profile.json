@@ -1,0 +1,12 @@
+{
+  "calibrator": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/selected_calibrator.json",
+  "checkpoint": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/detail_cost/checkpoints/best/model.safetensors",
+  "config": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/config.json",
+  "official_v2_replaced": false,
+  "policy": "hard_found",
+  "profiles": "/home/dhcn/ur_ws/src/myproject/new/outputs/pcrau_answerability_language_dev_20261003/calibration_full_fit/profiles.json",
+  "risk_target": 0.075,
+  "risk_threshold": 0.2611932834526145,
+  "robot_motion_commanded": false,
+  "status": "CALIBRATION_FIT_ONLY"
+}

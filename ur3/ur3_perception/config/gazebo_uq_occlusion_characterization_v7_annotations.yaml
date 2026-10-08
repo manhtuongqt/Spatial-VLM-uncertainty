@@ -1,0 +1,1170 @@
+schema_version: 1
+protocol_id: gazebo_uq_occlusion_characterization_v7
+oracle_usage: geometry_characterization_only_never_train_or_val
+reason: v6 neutral panel was too narrow in image vertical extent; v7 uses square 100
+  mm visual-only screen
+occluder:
+  id: uq_neutral_occluder
+  label: 39
+  static: true
+  visual_only_no_collision: true
+  candidate: false
+sweep:
+  offsets_m:
+  - 0.0
+  - 0.002
+  - 0.004
+  - 0.006
+  - 0.008
+  - 0.01
+  - 0.012
+  - 0.014
+  - 0.016
+  - 0.018
+  - 0.02
+  - 0.022
+  - 0.024
+  - 0.026
+  - 0.028
+  - 0.03
+  - 0.032
+  - 0.034
+  - 0.036
+  - 0.038
+  - 0.04
+  panel_yaw_rad: 1.5707963267948966
+scenes:
+  uq_occ_char_v7_000:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.0
+    layout_signature_sha256: 6b5a2737ef53553996d44f5f47ba8f15549d0cc09e708d4f3986fe4f410261b7
+  uq_occ_char_v7_001:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.002
+    layout_signature_sha256: 1fe3fbe10e3fc097d3ce83ae859588598effaef171c29af5b7c06961730d1a2e
+  uq_occ_char_v7_002:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.004
+    layout_signature_sha256: d3a1c670cb99471b7d563cd02cba7ee9f954f45b7878c5834db6571fa5feb5de
+  uq_occ_char_v7_003:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.006
+    layout_signature_sha256: 917413b8826fd7ad4573f29ec93be417d4ab61ea66f0893e18e0811e9013e469
+  uq_occ_char_v7_004:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.008
+    layout_signature_sha256: f6042c45b1158102dd385fd359eea814a2554f817f52001c5298aefd45b3a711
+  uq_occ_char_v7_005:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.01
+    layout_signature_sha256: 806fedbb71ddb81c4859a0e1d39faecf0e7506cb50a4d735ee9b93306e85b6a3
+  uq_occ_char_v7_006:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.012
+    layout_signature_sha256: ab36be7a5886a5a6be1b4dd271939656b88980f54bbcfe60ae5220524c65ccda
+  uq_occ_char_v7_007:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.014
+    layout_signature_sha256: 06207d33e4f30be52fa79940cb8cf8d78352bc6beda321511c19b29f4b71f5ad
+  uq_occ_char_v7_008:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.016
+    layout_signature_sha256: 65c545723e8d10e29fda1dbb3d2c96af55ebcd9b0fce36c0e5943d435dc126ed
+  uq_occ_char_v7_009:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.018
+    layout_signature_sha256: 388fba0b1c4ca09213362e7fca6df929906b1d19dcf64772c231cd164c3b3809
+  uq_occ_char_v7_010:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.02
+    layout_signature_sha256: 851dc7df5ea5754d4fd04794d6d1fda27fdf5488c51d8f166b14a4b709907be3
+  uq_occ_char_v7_011:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.022
+    layout_signature_sha256: f0ad101dbf2de76c383719825864ed77c477cca691cfe4864d5b0d6846987d18
+  uq_occ_char_v7_012:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.024
+    layout_signature_sha256: 58e73c3bfe2d4d28db1dd4b6282c045451fd83a72addc567ed3e4a27b5ae33d9
+  uq_occ_char_v7_013:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.026
+    layout_signature_sha256: 5d377b905d70189feacc7427588399b6002dfa92636d7a4d28941e538c475ffe
+  uq_occ_char_v7_014:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.028
+    layout_signature_sha256: 1b7a61235b4ce18e0d44060c1200308560e4783433493225e1f01ec3ee071b1f
+  uq_occ_char_v7_015:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.03
+    layout_signature_sha256: a25eb4b404b0b27096c05045d1ad4c53ef0cfaf8060bed9de558cbd996b60974
+  uq_occ_char_v7_016:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.032
+    layout_signature_sha256: dc6bd78aef2c7d5c37c98e2c1dc608ccac8c6fe06d4179f9dcd14e47356b4adb
+  uq_occ_char_v7_017:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.034
+    layout_signature_sha256: 36b2f155c7a5f2fc8e9e939c72cf69364782f00f851aa5d39f6cc82ae87095ce
+  uq_occ_char_v7_018:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.036
+    layout_signature_sha256: 27115900c8fe3e94505e9d12e2960b4d6b06158861c0843abe7ff252bf8aa554
+  uq_occ_char_v7_019:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.038
+    layout_signature_sha256: 3875a20e07418bb70adec0fd40b408206ab7e453417b0b505e54e855a04797e1
+  uq_occ_char_v7_020:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.04
+    layout_signature_sha256: 5b4717f7f2a954545b9e74b0ed0cb6c19d7e23f5e36f803abf14d5036127775b
+  uq_occ_char_v7_021:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.0
+    layout_signature_sha256: 6eaabe5460568d2571bc5d5fae5d07be38bc936fdf8d23d617b0a3d5dfda68e3
+  uq_occ_char_v7_022:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.002
+    layout_signature_sha256: 15d38f6508da949c67876f953c062baad9e9847063e521a5efb5b59daf23bba5
+  uq_occ_char_v7_023:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.004
+    layout_signature_sha256: 105d9692c369fe6cf2037bf7f574f6a2f91ffe6739aefc2799a0b9b8c54ed9c4
+  uq_occ_char_v7_024:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.006
+    layout_signature_sha256: 120d727d1781e50648eb57a7aaaaebb19265c9c62c128879ff9a71632fcdba48
+  uq_occ_char_v7_025:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.008
+    layout_signature_sha256: 0919c557c10eb55ac7bcc9412a20cf2735e679d343b378d38b655d5488a0927d
+  uq_occ_char_v7_026:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.01
+    layout_signature_sha256: 7492084f3638434c930be69627ae39b6c1a37786ae3569ad53981f8afc21b012
+  uq_occ_char_v7_027:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.012
+    layout_signature_sha256: e358322329568316b05e1a88f9bd5137ba954f7a5a572faa03946a975ff2315e
+  uq_occ_char_v7_028:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.014
+    layout_signature_sha256: 46586ad1d0770d33d5defffe02c63476dab290fd129c0149b53f267473102a59
+  uq_occ_char_v7_029:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.016
+    layout_signature_sha256: 2b451bf3533c1550dca2eeb8f9b35374e02fab5305fdc2afc26fd033a4f1d595
+  uq_occ_char_v7_030:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.018
+    layout_signature_sha256: d8db870976fc46efead06423baa80248930e0eec1ebaad6b4214bd58e37eda10
+  uq_occ_char_v7_031:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.02
+    layout_signature_sha256: 46a1846e16c70201053851a280327b4a5771b8ab2f1799c320cb4c8790e48c38
+  uq_occ_char_v7_032:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.022
+    layout_signature_sha256: 92b17775d0c6e225892d9a23e3b278a254518cdb41b003ed54f597b7048ffda6
+  uq_occ_char_v7_033:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.024
+    layout_signature_sha256: 01c4a476e29d49d22d506dc7e90b6c30228c118480c183b63a82a4e7e55f7217
+  uq_occ_char_v7_034:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.026
+    layout_signature_sha256: 37049ae612b5e8bfd091ad62e85d6f4f991ccfe3a25aa37d46369045669d78d0
+  uq_occ_char_v7_035:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.028
+    layout_signature_sha256: 4647c40f2d0510df17cedbd5299c9acf88b18d5c60d1e638f37f729559f2eae6
+  uq_occ_char_v7_036:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.03
+    layout_signature_sha256: 1a021b560fbffe9811bc3b5acdc73720f92bf7d180f742fc22be94c5eb2d4a86
+  uq_occ_char_v7_037:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.032
+    layout_signature_sha256: 7e69ba010fe226e01a5644f3a6c961cdc08026075099701cd4b423ca8a7c5888
+  uq_occ_char_v7_038:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.034
+    layout_signature_sha256: 78674d7e776a47ca0e93da94739487e20cbcac00bb5f3344efe83c5960054a78
+  uq_occ_char_v7_039:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.036
+    layout_signature_sha256: 4547b8a780e5ce762c6f33d6d747098e54dfb8644a2bb7c950b33af459775511
+  uq_occ_char_v7_040:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.038
+    layout_signature_sha256: 832bc276ed4a83ab5eba505c6c79402fedd0f0031c0a0023824af054d39bb2e4
+  uq_occ_char_v7_041:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_apple
+    target_label: 26
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.04
+    layout_signature_sha256: 9d0c4d3e0aaf9fd7b6871684901ddcbb005598faa0a38b112024dddc1ed4df1d
+  uq_occ_char_v7_042:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.0
+    layout_signature_sha256: 2f7e7d1d171cfc9b34cc00ddd6e3181cf244e0f197342593ad4c7ddca0d050c6
+  uq_occ_char_v7_043:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.002
+    layout_signature_sha256: 4a36a4189ff8079f07fb4f69f48592043f533a493deb049ae055ea020e847c35
+  uq_occ_char_v7_044:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.004
+    layout_signature_sha256: 2ca5c88a5900ec2b8dafd470dae8b8edd3f9dfa48bd4b4ebd43a20bc4c557312
+  uq_occ_char_v7_045:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.006
+    layout_signature_sha256: e7202a411608d35d4ab2beb6cfa09a7f668cf4c9acda8e34b53ed5c329a5d950
+  uq_occ_char_v7_046:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.008
+    layout_signature_sha256: 9a7e9c765949a53837ba105476f1ec7b9a61af0a71753d039abece0a4457b74f
+  uq_occ_char_v7_047:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.01
+    layout_signature_sha256: 69454e0f59fac3e1e81835139cec98346f339eb9b2ebcc410a00d8b639836945
+  uq_occ_char_v7_048:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.012
+    layout_signature_sha256: e69a47a8778c577846a77561b7d36e20424a8520d287715df5b961491aeea21d
+  uq_occ_char_v7_049:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.014
+    layout_signature_sha256: fa17a59e4106528ad1c4f92cc692e953e2b42f46f3750696b2a118fe63a204a9
+  uq_occ_char_v7_050:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.016
+    layout_signature_sha256: 4313a8b919d9de036f4bca30d830ff3c6643ba3606911b1172796e71972aaa3b
+  uq_occ_char_v7_051:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.018
+    layout_signature_sha256: 3de29000a5d2909d0312ca427e42360d1f855946f9efeada9027dccd875b4931
+  uq_occ_char_v7_052:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.02
+    layout_signature_sha256: f24f54f96a41f2dcd1db0323b7457ccb7f41d2b1594f03c660dab529bbdf4a8b
+  uq_occ_char_v7_053:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.022
+    layout_signature_sha256: 4057248fc045f1b7e5e055dfeee03fd96be48ddf2f573f177055c639a6038fdb
+  uq_occ_char_v7_054:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.024
+    layout_signature_sha256: 0d9394b647376d3133b83a3a5fbe5e06204a466aeca235285f5c828e312b3922
+  uq_occ_char_v7_055:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.026
+    layout_signature_sha256: c039d9eeb3491052e2a8aa462889e090e8fcb2f76bb0ac8b5b1b96e6800efac3
+  uq_occ_char_v7_056:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.028
+    layout_signature_sha256: 5fb30dadd5e761b0c8a7a6c9e8131bbddb1c08c5f92c6dd1cc69c873158a56d7
+  uq_occ_char_v7_057:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.03
+    layout_signature_sha256: 21a5c1cfc86deeedbad6e93d3d2fdbc4ced5bab5947287097a73f2709c7ef215
+  uq_occ_char_v7_058:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.032
+    layout_signature_sha256: 9ed25dd752c4d58cf53298218eb6360c21ffea3db7ef6c144887b93b69748e7d
+  uq_occ_char_v7_059:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.034
+    layout_signature_sha256: a146c6ee54a654df08e4b57b51229a1cfc688de29f247827430947932b43cb11
+  uq_occ_char_v7_060:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.036
+    layout_signature_sha256: 873206a20dc57115ac95bed75a0ad6cc6f4ea0089049c9f15a1c7d562c5aae3a
+  uq_occ_char_v7_061:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.038
+    layout_signature_sha256: d89ee308f20722fabd4fbe52daa252f1ade840a4257c6be7c5021b85e10ea5e0
+  uq_occ_char_v7_062:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.04
+    layout_signature_sha256: 59efa363f4701167491e5812ad94ae612835eea0bf1d0c3f6e89685ce53e0e36
+  uq_occ_char_v7_063:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.0
+    layout_signature_sha256: b0a6d37b4eb7d15e1992096bbfe10dc712651e86f2b8df6c33209532ffae022a
+  uq_occ_char_v7_064:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.002
+    layout_signature_sha256: 847d1c685506245b7d1a4e4c8045a146ae72f9eefd5f590b5148ee7ee8a3f9fa
+  uq_occ_char_v7_065:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.004
+    layout_signature_sha256: 67ec62356c2d40c5197be4f3199c7716641ca4a57035b45cc5cf19d572fff41e
+  uq_occ_char_v7_066:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.006
+    layout_signature_sha256: e5399ea52d626bcc0cdccbfb95b266cfcaff889ea256bfe690fb10b3307615b4
+  uq_occ_char_v7_067:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.008
+    layout_signature_sha256: 59f67c631c12f644c5d93e08545f13aee23b20e117f67a2b2f8ff9d792f19254
+  uq_occ_char_v7_068:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.01
+    layout_signature_sha256: 4dc1a1669c9121a049bf7094139cc140c6a1a1b5c9d75d0c7ee75ef553f6fb50
+  uq_occ_char_v7_069:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.012
+    layout_signature_sha256: aec6168dd13bf1b1de1dca82446feb8aebedfc5460d8c5481797a6dc80db6b00
+  uq_occ_char_v7_070:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.014
+    layout_signature_sha256: df7710cb4fe6b33779a2f08a00630e83f6a5ff16bb169b42019ae4417333eedc
+  uq_occ_char_v7_071:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.016
+    layout_signature_sha256: d1b87cb75a36a517ee364f1ec1d24457904e1787f9f55132afd45a6e19fafff2
+  uq_occ_char_v7_072:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.018
+    layout_signature_sha256: cb69b2b2554acba21abe825b33ec13b4e5ed7b837c63b8828cf376b4371e3b59
+  uq_occ_char_v7_073:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.02
+    layout_signature_sha256: 8e9c57f1b03afcb419f066d9b374d7bb21e73c35bbe7771d6e8ab03323b1fca0
+  uq_occ_char_v7_074:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.022
+    layout_signature_sha256: fc4b60eb010a4ce38ee9fb41107ef774406a0d0840eafb7131a4ee8966f44119
+  uq_occ_char_v7_075:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.024
+    layout_signature_sha256: 1b239c022547dd32663e4e6fcf7f89c9998be666ddd73bbc71f54008ff22d88c
+  uq_occ_char_v7_076:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.026
+    layout_signature_sha256: 06a8fa34a46019685f373a039d0e4475e3a13edbfe8289c4a9a6fc573e016e5b
+  uq_occ_char_v7_077:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.028
+    layout_signature_sha256: 7acf346006612b0a1ca039ee607f0e504ce693d8c7a49fd4a851289d2c16523f
+  uq_occ_char_v7_078:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.03
+    layout_signature_sha256: e0572c69293f4ea8e8d7bad5b504692cfb27ddf6f6aeaaac9b0ba44c89f2186d
+  uq_occ_char_v7_079:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.032
+    layout_signature_sha256: c1d69c23bf9cdf972ab06635e1f0ba752318b95513b73dd34ca1570d722adb22
+  uq_occ_char_v7_080:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.034
+    layout_signature_sha256: e6734725e7fec44427ec322db3b1b5e7fe6afbdc422b8814183acf80ae9407e3
+  uq_occ_char_v7_081:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.036
+    layout_signature_sha256: bae5d51642664d4d7c148e962d31cc196f2e4fe4dec60a886dba02f91f974fb8
+  uq_occ_char_v7_082:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.038
+    layout_signature_sha256: 4a2ae91c5aa775b347c29429a702334f5a413a1808da187e431b66f24aad892e
+  uq_occ_char_v7_083:
+    usage: evaluator_only_geometry_characterization
+    target_id: ycb_orange
+    target_label: 27
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.04
+    layout_signature_sha256: 3daf84a75de77eda7857ba0af2cc0fd58df63503c6c0df5815f5199e5c9173aa
+  uq_occ_char_v7_084:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.0
+    layout_signature_sha256: 91e273e9c875890f104cfc4d9f85518920a257daffc8814f77b853764752b422
+  uq_occ_char_v7_085:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.002
+    layout_signature_sha256: a5d6aaaf2a1363f9bf0277135b36faf9f2839ea506e9f48d1977b97ea7e8dce1
+  uq_occ_char_v7_086:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.004
+    layout_signature_sha256: d682e029d0dbba46c93407850f98fe04c8740648268485f5595257e3e40fa8b4
+  uq_occ_char_v7_087:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.006
+    layout_signature_sha256: ddf6d2a031918506e952f0bcf4ca8a2ca9a7dc2cb9ecbb2f5f140411124fa46d
+  uq_occ_char_v7_088:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.008
+    layout_signature_sha256: 1697dc5c29ffc7094e9b37246dad7a273a4b99464d1e1a98a4359235b8c6fac3
+  uq_occ_char_v7_089:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.01
+    layout_signature_sha256: 0cba9afd12696eb68108e2af2e84a609911d5f5dd152b8ac8af73c8b499ca2c0
+  uq_occ_char_v7_090:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.012
+    layout_signature_sha256: 755e78a61ca526024836e9292ba6d10ab766eb49eca3077d3359c7bb4f6d6a79
+  uq_occ_char_v7_091:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.014
+    layout_signature_sha256: 0b59dfe772c9b1501550e81d81fe9a49a090e97d1f747c5e7092596f6bd7d216
+  uq_occ_char_v7_092:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.016
+    layout_signature_sha256: e9437dd6c91f283b749256bf2edc1bc7c340bb1c867958f0cfc8f6d78e988fde
+  uq_occ_char_v7_093:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.018
+    layout_signature_sha256: 53f10ceabb1454442354534401805d22fd1748087f5848c246eb070d5737f2a9
+  uq_occ_char_v7_094:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.02
+    layout_signature_sha256: d33f8227679d187411b42062abbfefa7202f3a251a523cec3a2c0b9422ee8a17
+  uq_occ_char_v7_095:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.022
+    layout_signature_sha256: cfef264684d4c5332412b71ea9dcc963a9583c2ffc7bc5b06e8d32921116bc2d
+  uq_occ_char_v7_096:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.024
+    layout_signature_sha256: 76c72dcdbbe926f791d325875f9caa84a09e2ad0258f8ba27fb2257fddb9b0a0
+  uq_occ_char_v7_097:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.026
+    layout_signature_sha256: 56bd86120783a323c23f614c39f442476277204297f5401a3d9f120c74c955ea
+  uq_occ_char_v7_098:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.028
+    layout_signature_sha256: 855a50cdbc60aa79fa20b86b3f32e6514b5040d740523073d7c2aa3a8ce0ed9b
+  uq_occ_char_v7_099:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.03
+    layout_signature_sha256: 2ec823298168dc0560fe262102f3d7d2e086b08d4d065f8bce96f7030a9479c0
+  uq_occ_char_v7_100:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.032
+    layout_signature_sha256: 4bc19980288630dbb6fe4b4bd7a53a7c9011566803329d7e18e385d13d604582
+  uq_occ_char_v7_101:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.034
+    layout_signature_sha256: 3cae7c1605f229f272eed6c206d136b6d2b92759880d66d60d768452cc3920a2
+  uq_occ_char_v7_102:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.036
+    layout_signature_sha256: cb3eae13f3bccff7c4d632cd62ed0ff2fbc31ff91d4877c6885fe7736b9a6da5
+  uq_occ_char_v7_103:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.038
+    layout_signature_sha256: b20c43a053b77913a516ad4f959efba454e9642dc36d8a5a3f01723ade483a36
+  uq_occ_char_v7_104:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.0
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.04
+    layout_signature_sha256: 99d2dad1c6a1102ba63257b6d66a0715d1db15ad08ecf6eab683f09c64d581ed
+  uq_occ_char_v7_105:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.0
+    layout_signature_sha256: f880e75f280e5e5523acffd90c2a64d03358e81188b2279939d991015502224a
+  uq_occ_char_v7_106:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.002
+    layout_signature_sha256: 773e3244373948997fb045dc0ab902528f8d6e6ff6c3e241bbba31e64f9d4ef6
+  uq_occ_char_v7_107:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.004
+    layout_signature_sha256: 920b4a224e9725c5b13fb29b4d25155abc94e600c36f00716ff3e86ef2877d0c
+  uq_occ_char_v7_108:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.006
+    layout_signature_sha256: e31a6d7eb02e6711efee5eb1f68f22d6767e60cb3f29532b1d55ad0b9fa29f1d
+  uq_occ_char_v7_109:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.008
+    layout_signature_sha256: d7d983e467f4dbdbb885ea23767921dcf92d8f465dc135fdb1570d6b6493c8df
+  uq_occ_char_v7_110:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.01
+    layout_signature_sha256: ed26fdd93c055b03470cd63597306b130de500c9c0c25b725fdfdd4ead6fcdab
+  uq_occ_char_v7_111:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.012
+    layout_signature_sha256: 834c7d3fd0e58858c1ce87cf525c571741b892236a7f20be381666f8307361b2
+  uq_occ_char_v7_112:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.014
+    layout_signature_sha256: 498c218437ee2ee7cbf50bfd573dc61344f0eabc585a65d2a210979b169ac878
+  uq_occ_char_v7_113:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.016
+    layout_signature_sha256: da5547c29ba8f62b92d380fc15eb3cb5b58194a9b5fc0b6847e2e37d92903ff0
+  uq_occ_char_v7_114:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.018
+    layout_signature_sha256: b503cd6320d9658294b9c6c5036f6468f647fd39d04dd98cfa00b77172b6d9a9
+  uq_occ_char_v7_115:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.02
+    layout_signature_sha256: a408e722b6a44735ed7d56a6aba659a8604a753ef0f1a21527ae02a9b518e14d
+  uq_occ_char_v7_116:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.022
+    layout_signature_sha256: c84fe94f8c328d703069e24015e2cbeff9d34df01d5d7a5e9d3689e93b22ace0
+  uq_occ_char_v7_117:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.024
+    layout_signature_sha256: ff62340286f0663f9ea48526099cc5d0cb228ac14b4f95eec4093671296f58bd
+  uq_occ_char_v7_118:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.026
+    layout_signature_sha256: f7ebda96a26b003f3bd4680aadef89eff2cabc74246627d493af4be5ab800cb7
+  uq_occ_char_v7_119:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.028
+    layout_signature_sha256: bdf1c4fadc8f40c86367d12a77c4f4a2f4ac27c754ec7e4b8bc17dacd57f4fb5
+  uq_occ_char_v7_120:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.03
+    layout_signature_sha256: 2790352d99de0555e7bf2ef17a8e5e7660e36b479b720eab6b1ea2e4f562f65d
+  uq_occ_char_v7_121:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.032
+    layout_signature_sha256: feb6cf796b413c588ddac1c4db406dbb6cde4084e78bb90a73d54cb4ab5f46f5
+  uq_occ_char_v7_122:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.034
+    layout_signature_sha256: 31a7f18ab987299335ef3cb77ec45813fe0df078eaf9e3838520c9fb55bb3d90
+  uq_occ_char_v7_123:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.036
+    layout_signature_sha256: a12a4cb94b878fbe720dd4b574ff795ba689f35f1adc8a31c6b8fa3f064d25aa
+  uq_occ_char_v7_124:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.038
+    layout_signature_sha256: e559a311564c10f5421f13773ac8ab20c95e0e5b1d9190fc9a7116f28589ede5
+  uq_occ_char_v7_125:
+    usage: evaluator_only_geometry_characterization
+    target_id: mango
+    target_label: 29
+    target_yaw_rad: 0.35
+    occluder_id: uq_neutral_occluder
+    occluder_label: 39
+    lateral_offset_m: 0.04
+    layout_signature_sha256: 60aefc0602f3bc47edfa57264d33326ac7197b901e2e2303ef9d1484856b9fcb

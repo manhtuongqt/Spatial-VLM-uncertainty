@@ -1,0 +1,849 @@
+schema_version: 1
+protocol_id: gazebo_train_uq_v2_pilot_r4
+oracle_usage: geometry_qc_only
+semantic_label_source: gazebo_evaluation_camera_not_vlm_input
+reference_frame: image_viewer_left_to_right
+horizontal_coordinate: normalized_centroid_x
+tie_margin_normalized: 0.03
+min_visible_evidence_px: 120
+states:
+- FOUND
+- AMBIGUOUS
+- ABSENT
+- INSUFFICIENT_EVIDENCE
+scenes:
+  gazebo_uq_v2_pilot_r4_000:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_000
+    layout_id: layout_000
+    layout_signature_sha256: 87c8bb22929e7e4a7396d9d004b74f857282307afc78fd9a9d9317013ccef330
+    split: geometry_pilot
+    seed: 3745687639
+  gazebo_uq_v2_pilot_r4_001:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - ycb_orange
+    - mango
+    - ycb_apple
+    candidate_labels:
+    - 27
+    - 29
+    - 26
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_001
+    layout_id: layout_001
+    layout_signature_sha256: 0aa6678969484f81211ded2f77d5a15429bae4e4dac9ca1dd9d7c9ecca0e4ed2
+    split: geometry_pilot
+    seed: 1970364380
+  gazebo_uq_v2_pilot_r4_002:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - mango
+    - ycb_apple
+    - ycb_orange
+    candidate_labels:
+    - 29
+    - 26
+    - 27
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_002
+    layout_id: layout_002
+    layout_signature_sha256: 962907f30434aa7fdb0a9c9d991e8309f81a8f5289e458a76e85423c17f504b4
+    split: geometry_pilot
+    seed: 627330819
+  gazebo_uq_v2_pilot_r4_003:
+    state: FOUND
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_orange
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_003
+    layout_id: layout_003
+    layout_signature_sha256: 93aea4b0207181e6fe0d8938bef6379047d439ad2d4873e4acf412a3685f62e5
+    split: geometry_pilot
+    seed: 153299396
+  gazebo_uq_v2_pilot_r4_004:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: &id001
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_004
+    layout_id: layout_004
+    layout_signature_sha256: 2505fa49fa6af75ece6d41ffc35f35527ae6da7729caefe7f8f0b26ffc4bfcab
+    split: geometry_pilot
+    seed: 111743675
+  gazebo_uq_v2_pilot_r4_005:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_005
+    layout_id: layout_005
+    layout_signature_sha256: b1d5253950758a31b49cf79b4d622ff055ba733511cd5b47b07ea90a230a19b8
+    split: geometry_pilot
+    seed: 2633709041
+  gazebo_uq_v2_pilot_r4_006:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_006
+    layout_id: layout_006
+    layout_signature_sha256: a15977be32e39ec5ef6b0874fad604a0328c6b6da963516e1d8e0df0255affb5
+    split: geometry_pilot
+    seed: 4012653069
+  gazebo_uq_v2_pilot_r4_007:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_007
+    layout_id: layout_007
+    layout_signature_sha256: f4526e36c69e81b7d05dceb74f21b461cc5242786666b5998a3ffdcaf104ea17
+    split: geometry_pilot
+    seed: 1995358711
+  gazebo_uq_v2_pilot_r4_008:
+    state: ABSENT
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_orange
+    - mango
+    context_labels:
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: ycb_apple
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_008
+    layout_id: layout_008
+    layout_signature_sha256: d716a2c8eba3fb53669a58ee3e34dcafc92eee8256931ed4dba22a5d9df1a280
+    split: geometry_pilot
+    seed: 639492179
+  gazebo_uq_v2_pilot_r4_009:
+    state: ABSENT
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - mango
+    context_labels:
+    - 26
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: ycb_orange
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_009
+    layout_id: layout_009
+    layout_signature_sha256: 0ed288d4052a89dab8587ff03ac96c7b7be3bd5729ac94b4bb157f951daf0013
+    split: geometry_pilot
+    seed: 3053774904
+  gazebo_uq_v2_pilot_r4_010:
+    state: ABSENT
+    target_id: mango
+    target_label: 29
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - ycb_orange
+    context_labels:
+    - 26
+    - 27
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: mango
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_010
+    layout_id: layout_010
+    layout_signature_sha256: 3594dfa88b177408c53ee54e47214fda26089e9e97f8ddb10063c7ad19487232
+    split: geometry_pilot
+    seed: 1748709521
+  gazebo_uq_v2_pilot_r4_011:
+    state: ABSENT
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_orange
+    - mango
+    context_labels:
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_apple
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_011
+    layout_id: layout_011
+    layout_signature_sha256: bea2ba0be95249e95b02d6aae6a0a462f5a7ff1767929d77506435636936b971
+    split: geometry_pilot
+    seed: 2170948403
+  gazebo_uq_v2_pilot_r4_012:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: ycb_apple
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_012
+    layout_id: layout_012
+    layout_signature_sha256: 514299ccba9714fea4790d892292f294ec3f7d0d417f5a99f3dad064a0f5965d
+    split: geometry_pilot
+    seed: 2886449508
+  gazebo_uq_v2_pilot_r4_013:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: ycb_orange
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_013
+    layout_id: layout_013
+    layout_signature_sha256: 8c107567be3b6c75acfce7f9d7af4582559966d444a9ad29e0d2aad5e67af511
+    split: geometry_pilot
+    seed: 62531462
+  gazebo_uq_v2_pilot_r4_014:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_014
+    layout_id: layout_014
+    layout_signature_sha256: 5bdc790b9eec083b368c85f33a00d29e5dd51afc316661f34129e3d2356b2de9
+    split: geometry_pilot
+    seed: 3986492886
+  gazebo_uq_v2_pilot_r4_015:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_apple
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_015
+    layout_id: layout_015
+    layout_signature_sha256: 7239866c156a9662bb80779d14dd85346d2136a2a0df51c7539efc67a4db44cc
+    split: geometry_pilot
+    seed: 2668399851
+  gazebo_uq_v2_pilot_r4_016:
+    state: FOUND
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - mango
+    - ycb_apple
+    - ycb_orange
+    candidate_labels:
+    - 29
+    - 26
+    - 27
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: mango
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_016
+    layout_id: layout_016
+    layout_signature_sha256: 80eda5c24794cc20183b79e7f4018c4c3cbcce0565b64f5d22ac1171202d9b07
+    split: geometry_pilot
+    seed: 2606125206
+  gazebo_uq_v2_pilot_r4_017:
+    state: FOUND
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_apple
+    - ycb_orange
+    - mango
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: mango
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_017
+    layout_id: layout_017
+    layout_signature_sha256: c5024ffd6329c3314075f656d27626c794886876aca805993648d5f0fb10f7b0
+    split: geometry_pilot
+    seed: 209966845
+  gazebo_uq_v2_pilot_r4_018:
+    state: FOUND
+    target_id: mango
+    target_label: 29
+    candidate_ids:
+    - ycb_orange
+    - mango
+    - ycb_apple
+    candidate_labels:
+    - 27
+    - 29
+    - 26
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: mango
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_018
+    layout_id: layout_018
+    layout_signature_sha256: de02b5a607f0ee88502c03f3c3dd7414f9a325513c3cd10cd9057f8ebc626785
+    split: geometry_pilot
+    seed: 2868583520
+  gazebo_uq_v2_pilot_r4_019:
+    state: FOUND
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids:
+    - mango
+    - ycb_apple
+    - ycb_orange
+    candidate_labels:
+    - 29
+    - 26
+    - 27
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_apple
+    failure_tags:
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_019
+    layout_id: layout_019
+    layout_signature_sha256: 4f6b026d08c96d42fd1f61c1f4a926e565424565a3d027f541a5f5350908c0c5
+    split: geometry_pilot
+    seed: 3629543185
+  gazebo_uq_v2_pilot_r4_020:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_020
+    layout_id: layout_020
+    layout_signature_sha256: a02f5bc2e51bd960e5136bfd20b26a6255f459188df8fb049430868ecc0e3d09
+    split: geometry_pilot
+    seed: 410988584
+  gazebo_uq_v2_pilot_r4_021:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_021
+    layout_id: layout_021
+    layout_signature_sha256: e7d80a4d92d5d40ff8c0201b0e4af216a46d998796981aae80ab6631b2afc865
+    split: geometry_pilot
+    seed: 3144950207
+  gazebo_uq_v2_pilot_r4_022:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_left
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_022
+    layout_id: layout_022
+    layout_signature_sha256: ef721136b44d55af201ee59b1979b3e09c9b4d71e4cdc5b59222de43c51ed253
+    split: geometry_pilot
+    seed: 3455098999
+  gazebo_uq_v2_pilot_r4_023:
+    state: AMBIGUOUS
+    target_id: null
+    target_label: null
+    valid_target_ids:
+    - ycb_apple
+    - ycb_orange
+    valid_target_labels:
+    - 26
+    - 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: apple_orange_tie
+    failure_tags:
+    - fruit_identity
+    - horizontal_tie
+    - tie_right
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_023
+    layout_id: layout_023
+    layout_signature_sha256: e4106e1ab55b6a562300cf97775f3a8f3530456618724854610d90d23143535c
+    split: geometry_pilot
+    seed: 575944378
+  gazebo_uq_v2_pilot_r4_024:
+    state: ABSENT
+    target_id: mango
+    target_label: 29
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - ycb_orange
+    context_labels:
+    - 26
+    - 27
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: mango
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_024
+    layout_id: layout_024
+    layout_signature_sha256: 48d003bc3449cb49b05e03871cec0acf045bba7c47fb96d3c7466df4c7466311
+    split: geometry_pilot
+    seed: 3176670654
+  gazebo_uq_v2_pilot_r4_025:
+    state: ABSENT
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_orange
+    - mango
+    context_labels:
+    - 27
+    - 29
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: ycb_apple
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_025
+    layout_id: layout_025
+    layout_signature_sha256: 3ac3ed8f8fc89b29cc79ba7c584ccc4393b2ee386d620cbc1a6a75e1bb6c76c9
+    split: geometry_pilot
+    seed: 296412581
+  gazebo_uq_v2_pilot_r4_026:
+    state: ABSENT
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - mango
+    context_labels:
+    - 26
+    - 29
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: ycb_orange
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_026
+    layout_id: layout_026
+    layout_signature_sha256: 8e4932b1dee4c354ce70da0f37a87d687e6ba8af12748f3531908a073c68e39d
+    split: geometry_pilot
+    seed: 2960368391
+  gazebo_uq_v2_pilot_r4_027:
+    state: ABSENT
+    target_id: mango
+    target_label: 29
+    candidate_ids: []
+    candidate_labels: []
+    context_ids:
+    - ycb_apple
+    - ycb_orange
+    context_labels:
+    - 26
+    - 27
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: mango
+    failure_tags:
+    - absent_target
+    - fruit_identity
+    - horizontal_ordinal
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_027
+    layout_id: layout_027
+    layout_signature_sha256: b1efc1c8d7b26b435993b409892ffe5dcd2ac5c73b420cf86a81c6a1740494f8
+    split: geometry_pilot
+    seed: 704516979
+  gazebo_uq_v2_pilot_r4_028:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: left
+    rank: 1
+    relation_variant: leftmost
+    target_category: ycb_orange
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_028
+    layout_id: layout_028
+    layout_signature_sha256: d538cb4eccfeeba3a7288ca526b7a8d7aaece22a0a624b125b848bdc92674d81
+    split: geometry_pilot
+    seed: 2882416882
+  gazebo_uq_v2_pilot_r4_029:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: mango
+    target_label: 29
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: right
+    rank: 1
+    relation_variant: rightmost
+    target_category: mango
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_029
+    layout_id: layout_029
+    layout_signature_sha256: 680f42b87acde90f0aa9164c2d0aa198bd82cdee2b8e9d90828748a115e46f6e
+    split: geometry_pilot
+    seed: 688670600
+  gazebo_uq_v2_pilot_r4_030:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: ycb_apple
+    target_label: 26
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: left
+    rank: 2
+    relation_variant: second_from_left
+    target_category: ycb_apple
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_030
+    layout_id: layout_030
+    layout_signature_sha256: 1d8037fc56b3dbcef7864a56683262afabcfa9561612e8d083466253caa5bdef
+    split: geometry_pilot
+    seed: 1238941540
+  gazebo_uq_v2_pilot_r4_031:
+    state: INSUFFICIENT_EVIDENCE
+    target_id: ycb_orange
+    target_label: 27
+    candidate_ids: *id001
+    candidate_labels:
+    - 26
+    - 27
+    - 29
+    occluder_ids:
+    - ycb_cracker_box
+    occluder_labels:
+    - 21
+    rank_from: right
+    rank: 2
+    relation_variant: second_from_right
+    target_category: ycb_orange
+    failure_tags:
+    - insufficient_visibility
+    - controlled_partial_occlusion
+    - characterization_v5_locked_geometry
+    - geometry_pilot
+    family_id: spatial_vlm_uq_v2_pilot_r4/pilot/parent_031
+    layout_id: layout_031
+    layout_signature_sha256: e1b70fbd8e4592392b7581e240bb031f15d8afc5bf4973383820fe741345c29e
+    split: geometry_pilot
+    seed: 791853842

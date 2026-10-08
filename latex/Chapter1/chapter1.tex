@@ -1,0 +1,190 @@
+\chapter{Tổng quan đề tài}
+\label{sec:introduction}
+
+\section{Bối cảnh nghiên cứu}
+\label{sec:introduction-context}
+
+\subsection{Mô hình thị giác--ngôn ngữ trong robot}
+
+Trong các bài toán thao tác trên bàn, robot cần liên kết thông tin quan sát với yêu cầu của người sử dụng để xác định đối tượng cần tương tác. Với một hệ thống được lập trình cho những vật thể và vị trí cố định, đối tượng đích có thể được chỉ định trước bằng tọa độ hoặc mã định danh. Tuy nhiên, khi bố cục thay đổi và người sử dụng đưa ra yêu cầu bằng ngôn ngữ tự nhiên, robot phải giải quyết thêm bài toán xác định ý nghĩa của câu lệnh trong cảnh đang quan sát. Đây là bước kết nối giữa nhận thức môi trường và lập kế hoạch hành động.
+
+Một câu lệnh như ``xác định quả chuối ở bên trái quả táo và gần camera hơn chai mù tạt'' chứa nhiều thông tin hơn tên của một vật thể. Quả chuối là đối tượng đích; quả táo và chai mù tạt là các vật mốc; còn ``bên trái'' và ``gần camera hơn'' là những ràng buộc không gian. Nếu trong cảnh có nhiều quả chuối, chỉ nhận dạng đúng lớp vật thể vẫn chưa đủ để xác định vật mà người sử dụng muốn nói tới. Hệ thống cần kết hợp nội dung câu lệnh, vị trí của các vật mốc và bằng chứng từ ảnh để lựa chọn đối tượng phù hợp. Ví dụ này minh họa yêu cầu của bài toán; năng lực xử lý đầy đủ nhiều mệnh đề cần được kiểm chứng riêng bằng dữ liệu tương ứng.
+
+Mô hình thị giác--ngôn ngữ, hay \textit{Vision--Language Model} (VLM), cung cấp biểu diễn kết nối hình ảnh với văn bản; CLIP và LLaVA là hai hướng tiêu biểu về học biểu diễn và làm theo chỉ dẫn thị giác--ngôn ngữ \cite{radford2021clip,liu2023llava}. Trong khóa luận, VLM hỗ trợ liên kết câu lệnh với đối tượng trong ảnh. Để chuyển kết quả nhận thức thành thao tác, hệ thống vẫn cần hình học, biến đổi hệ tọa độ và lập kế hoạch chuyển động.
+
+Khóa luận sử dụng RoboRefer-2B-SFT làm mô hình nền và giữ cố định trọng số trong các thí nghiệm \cite{zhou2025roborefer,roborefer2bsftModelCard}. Trên đặc trưng RGB và độ sâu của mô hình này, khóa luận xây dựng mô-đun P-CRA-U để nghiên cứu đồng thời định vị và độ tin cậy của quyết định grounding.
+
+Trong bản báo cáo này, \textbf{P-CRA-U} là phiên bản được chọn gồm
+sidecar V2 đóng băng, Adapter answerability và bộ hiệu chuẩn logistic33.
+Tên \emph{P-CRA-U V2 lịch sử} chỉ phiên bản trước Adapter. Adapter học
+phần hiệu chỉnh logits từ evidence quan sát được, nhằm giảm từ chối nhầm
+ca hợp lệ; không thay đổi spatial, anchor/edge hoặc source head.
+Các artifact V2 được giữ làm đối chứng, không ghi đè bằng kết quả mới.
+
+\subsection{Định vị thị giác--ngôn ngữ có quan hệ không gian}
+
+\textit{Visual grounding} xác định vùng hoặc vị trí trong ảnh mà một biểu thức ngôn ngữ đề cập tới; thông tin chủ thể, vị trí và quan hệ là những thành phần liên quan đến nhiệm vụ này \cite{yu2018mattnet}. Trong bài toán của khóa luận, đối tượng đích còn phải thỏa mãn ràng buộc với vật mốc hoặc góc nhìn. Thuật ngữ \textit{Spatial Vision--Language Grounding} chỉ bài toán này; ``Spatial VLM'' chỉ hướng ứng dụng VLM cho hiểu biết không gian.
+
+Có thể phân biệt ba mức yêu cầu. Phát hiện đối tượng trả lời câu hỏi ``trong ảnh có những vật gì?''. Định vị theo ngôn ngữ trả lời câu hỏi ``câu lệnh đang đề cập đến vật nào?''. Định vị theo quan hệ không gian tiếp tục yêu cầu xác định ``vật nào thỏa mãn các quan hệ được mô tả?''. Do đó, chất lượng nhận dạng vật thể và chất lượng grounding có liên quan nhưng không đồng nhất. Một hệ thống có thể phát hiện đúng các quả táo trong ảnh nhưng vẫn chọn sai quả táo mà câu lệnh nhắc tới.
+
+Ảnh RGB cung cấp bằng chứng về màu sắc, hình dạng, kết cấu và vị trí chiếu của vật thể. Thông tin độ sâu bổ sung bằng chứng về khoảng cách theo hướng quan sát, đặc biệt đối với các quan hệ như gần hơn, xa hơn hoặc nằm giữa theo chiều sâu. Hai nguồn thông tin này có thể hỗ trợ nhau, nhưng cũng có thể thiếu hụt hoặc không nhất quán. Một vật bị che khuất có thể chỉ còn một phần hình dạng trong RGB; vùng độ sâu tương ứng có thể không đầy đủ hoặc bị nhiễu. Vì vậy, việc kết hợp RGB, độ sâu và câu lệnh cần đi kèm khả năng nhận biết giới hạn của bằng chứng đầu vào.
+
+Trong cảnh thao tác, tính đúng đắn của quan hệ còn phụ thuộc vào quy ước hệ tọa độ. ``Bên trái'' theo ảnh camera không nhất thiết trùng với ``bên trái'' theo hệ tọa độ robot. Tương tự, một vật ở xa camera hơn không nhất thiết nằm phía sau theo mọi hướng quan sát. Khóa luận xác định các quan hệ theo quy ước của bộ dữ liệu và giữ nhất quán quy ước đó trong huấn luyện, đánh giá và diễn giải kết quả.
+
+\subsection{Nhu cầu biểu diễn độ tin cậy của kết quả grounding}
+
+Trong giao thức baseline được sử dụng ở khóa luận, RoboRefer trả về một điểm ảnh đại diện cho đối tượng đích. Điểm này thuận tiện cho việc đánh giá định vị, nhưng bản thân tọa độ chưa cho biết kết quả có đáng tin cậy hay không. Cùng một kiểu đầu ra có thể xuất hiện khi câu lệnh xác định duy nhất một đối tượng, khi có nhiều ứng viên phù hợp, khi đối tượng không tồn tại hoặc khi quan sát không đủ để kết luận.
+
+Sự khác biệt giữa các trường hợp trên có ý nghĩa đối với bước xử lý tiếp theo. Nếu bằng chứng quan sát chưa đầy đủ, hệ thống có thể cần quan sát lại. Nếu câu lệnh còn mơ hồ, việc hỏi người sử dụng có thể phù hợp hơn. Nếu không có đối tượng thỏa mãn yêu cầu, hệ thống cần từ chối lựa chọn. Việc luôn trả về một điểm mà không phân biệt các trạng thái này có thể khiến bước lập kế hoạch tiếp nhận một kết quả nhận thức không phù hợp.
+
+Nghiên cứu về hiệu chuẩn và dự đoán chọn lọc cung cấp cơ sở để đánh giá xác suất và sự đánh đổi khi chỉ chấp nhận một phần dự đoán \cite{guo2017calibration,geifman2017selective}. Khóa luận vận dụng các hướng này cho grounding RGB-D: kết hợp phân bố vị trí, answerability và bằng chứng bất định theo nguồn bằng một bộ hiệu chuẩn độc lập, rồi dùng rủi ro cho quyết định chọn lọc.
+
+\subsection{Khoảng trống và ý nghĩa của đề tài}
+
+Khoảng trống mà khóa luận đặt ra là khoảng cách giữa \emph{định vị một điểm} và \emph{đánh giá điểm đó có đủ điều kiện sử dụng hay không} trong giao thức RoboRefer được triển khai. Đầu ra điểm chưa trực tiếp mô tả các lựa chọn cạnh tranh, phân biệt đích không hiện hữu với quan sát thiếu bằng chứng, hoặc cung cấp risk đã được kiểm tra trên tập độc lập. Việc bổ sung các thông tin này cần một thiết kế và giao thức đánh giá thống nhất.
+
+Ý tưởng của P-CRA-U là học một mô-đun đa nhiệm tập trung vào truy vấn trên backbone đóng băng, sau đó tách bước hiệu chuẩn khỏi bước học biểu diễn. Các đầu ra trả lời ba vấn đề: vị trí nào có thể phù hợp, câu lệnh có thể được trả lời ở trạng thái nào và mức rủi ro khi chấp nhận dự đoán là bao nhiêu. Ý nghĩa ứng dụng là cung cấp một tầng nhận thức có khả năng đề nghị thực thi, hỏi lại, quan sát lại hoặc từ chối, làm cơ sở cho tích hợp robot.
+
+Các thành phần như grounding theo quan hệ, xử lý nhiều/không có referent và calibration đã có trong nghiên cứu liên quan \cite{yu2018mattnet,liu2023gres,guo2017calibration}. Điểm đề xuất của khóa luận nằm ở cách kết hợp và kiểm chứng chúng trong hệ thống RGB-D cụ thể. Phân tích ở Chương~2 xác định khác biệt thiết kế; thực nghiệm ở Chương~5 xác định mức cải thiện và giới hạn bằng chứng.
+
+\section{Bài toán nghiên cứu}
+\label{sec:introduction-problem}
+
+Bài toán nhận thức trong khóa luận có đầu vào gồm ảnh RGB $I$, ảnh độ sâu tương đối $Z_{\mathrm{rel}}$ và câu lệnh ngôn ngữ $q$. Ảnh RGB và độ sâu được đăng ký tương ứng để các vị trí ảnh cùng chỉ tới vùng quan sát phù hợp. Độ sâu tương đối được sử dụng trong đường xử lý đặc trưng của mô hình nền. Khi kiểm tra hình học trong mô phỏng, hệ thống còn có thể sử dụng độ sâu theo đơn vị mét $Z_{\mathrm{metric}}$, thông số nội tại camera $K$ và phép biến đổi hệ tọa độ $T$. Những thành phần hình học này cần được phân biệt với đầu vào trực tiếp của mô-đun học máy và với bài toán hiệu chuẩn xác suất.
+
+Với baseline điểm, đầu ra grounding có dạng:
+\[
+    p_{\mathrm{RR}} = (u,v),
+\]
+trong đó $(u,v)$ là vị trí trong ảnh. Khóa luận mở rộng biểu diễn đầu ra thông qua mô-đun P-CRA-U, tên làm việc của \textit{Probabilistic Cross-modal Relation-Aware Uncertainty}. Mô-đun này sử dụng đặc trưng RGB, đặc trưng độ sâu và biểu diễn câu lệnh để tạo phân bố không gian của đối tượng đích, bằng chứng về vật mốc và quan hệ, dự đoán khả năng trả lời và điểm bất định theo nguồn.
+
+Phân bố không gian của đối tượng đích được ký hiệu là $H_{\mathrm{target}}$. Từ phân bố này, hệ thống có thể xác định vị trí có xác suất lớn nhất và khảo sát các vùng xác suất hoặc cực đại địa phương. Bên cạnh phân bố đích, mô-đun còn dự đoán bằng chứng không gian của vật mốc và mức phù hợp của các quan hệ đang xét. Những đầu ra này phục vụ việc đánh giá quyết định grounding; một cực đại địa phương không tự động được coi là một vật thể đã được nhận dạng độc lập.
+
+Khả năng trả lời, hay \textit{answerability}, được mô tả bằng bốn trạng thái. \texttt{FOUND} biểu thị trường hợp có đủ bằng chứng để xác định đối tượng phù hợp; \texttt{AMBIGUOUS} biểu thị trường hợp còn nhiều ứng viên hoặc lựa chọn chưa duy nhất; \texttt{ABSENT} biểu thị đối tượng thỏa mãn yêu cầu không hiện hữu; và \texttt{INSUFFICIENT\_EVIDENCE} biểu thị quan sát chưa đủ để đưa ra kết luận. Trạng thái không hiện hữu khác với trạng thái thiếu bằng chứng: không nhìn thấy rõ một vật không đồng nghĩa với việc vật đó không tồn tại.
+
+Bất định theo nguồn được tổ chức thành năm nhóm: ngữ nghĩa, quan hệ, không gian, độ sâu và che khuất. Các điểm dự đoán theo nguồn phản ánh mức bằng chứng bất định dưới cách định nghĩa và gán nhãn của bộ dữ liệu. Chúng không được hiểu là một phép phân rã nhân quả đầy đủ của mọi lỗi mô hình. Đặc biệt, nhãn bất định không gian trong triển khai hiện tại được suy ra từ trạng thái \texttt{AMBIGUOUS}, nên được xem là giám sát yếu.
+
+Sau khi mô hình được cố định, một bộ hiệu chuẩn độc lập sử dụng các bằng chứng dự đoán để tạo điểm rủi ro $r_{\mathrm{ground}}$ trong khoảng $[0,1]$. Sự kiện lỗi được sử dụng trong đánh giá rủi ro là câu lệnh không thuộc trạng thái \texttt{FOUND}, hoặc điểm dự đoán nằm ngoài vùng đích chuẩn. Vì thế, lỗi rủi ro có phạm vi rộng hơn lỗi định vị điểm trên riêng các mẫu có đối tượng hiện hữu. Một điểm nằm trong vùng đích vẫn có thể không đủ để chấp nhận câu lệnh nếu trạng thái chuẩn là mơ hồ hoặc thiếu bằng chứng.
+
+Chính sách chọn lọc sử dụng rủi ro cùng với các đầu ra nhận thức để lựa chọn một trong bốn quyết định:
+\[
+    a \in \{\mathrm{EXECUTE},\ \mathrm{REOBSERVE},\
+             \mathrm{ASK\_USER},\ \mathrm{ABSTAIN}\}.
+\]
+Trong đánh giá từ ảnh, \texttt{EXECUTE} có nghĩa là chấp nhận kết quả nhận thức theo chính sách; \texttt{REOBSERVE} đề nghị bổ sung quan sát; \texttt{ASK\_USER} đề nghị làm rõ yêu cầu; còn \texttt{ABSTAIN} từ chối sử dụng dự đoán hiện tại. Việc chuyển quyết định chấp nhận thành chuyển động robot cần một tầng kiểm tra hình học và điều khiển riêng.
+
+Từ cách xác định bài toán này, khóa luận đặt năm câu hỏi nghiên cứu, dùng thống nhất trong phần thực nghiệm và kết luận:
+\begin{enumerate}
+    \item \textbf{RQ1:} Toàn hệ thống P-CRA-U có cải thiện grounding so với RoboRefer gốc trên cùng Test-IID hay không, và mức cải thiện phân bố như thế nào theo nhóm dữ liệu?
+    \item \textbf{RQ2:} Phân bố không gian và answerability cung cấp được thông tin gì về vị trí ứng viên, tính mơ hồ, đích không hiện hữu và quan sát thiếu bằng chứng?
+    \item \textbf{RQ3:} Các điểm bất định theo nguồn có phản ứng phù hợp với thay đổi bằng chứng theo giao thức counterfactual hay không?
+    \item \textbf{RQ4:} Hiệu chuẩn độc lập có cải thiện chất lượng xác suất rủi ro so với score thô, và vùng không gian đạt coverage--area thực nghiệm như thế nào?
+    \item \textbf{RQ5:} Policy tạo ra sự đánh đổi nào giữa tỷ lệ chấp nhận và lỗi nhận thức, và đường tích hợp Gazebo đã được kiểm chứng đến đâu?
+\end{enumerate}
+
+RQ1 kiểm tra hiệu quả của toàn hệ thống; đóng góp riêng của relation, depth hoặc từng head cần ablation tương ứng. RQ5 được đánh giá ở mức nhận thức và tích hợp trước chấp hành, chưa bao gồm tỷ lệ gắp--đặt thành công.
+
+\section{Những thách thức của bài toán}
+\label{sec:introduction-challenges}
+
+\subsection{Giới hạn của biểu diễn grounding bằng một điểm}
+
+Một điểm ảnh chỉ biểu diễn một lựa chọn cụ thể tại thời điểm dự đoán. Nếu cảnh có hai đối tượng cùng thỏa mãn câu lệnh, tọa độ duy nhất không thể hiện trực tiếp sự cạnh tranh giữa các lựa chọn. Khi quan sát bị thiếu hụt, điểm trả về cũng không mô tả được mức phân tán của các vị trí có thể phù hợp. Hệ thống đánh giá chỉ dựa trên điểm đúng hoặc sai vì vậy chưa thể mô tả đầy đủ tính mơ hồ của kết quả.
+
+Phân bố không gian cho phép lưu giữ nhiều vị trí có khả năng phù hợp và cung cấp thêm đặc trưng như độ tập trung, độ phân tán hoặc chênh lệch giữa các đỉnh. Tuy nhiên, phân bố dự đoán vẫn có thể sai hoặc quá tự tin. Một heatmap có đỉnh sắc không bảo đảm đối tượng đã được xác định đúng, còn nhiều đỉnh không luôn đồng nghĩa với nhiều vật thể hợp lệ. Vì vậy, biểu diễn phân bố cần được đánh giá cùng với nhãn đối tượng, trạng thái answerability và rủi ro sau hiệu chuẩn.
+
+\subsection{Biểu diễn bằng chứng quan hệ và vật mốc}
+
+Trong định vị theo câu lệnh, mô hình cần gắn đối tượng đích với các vật mốc và ràng buộc tương ứng. Sai lệch ở một vật mốc có thể dẫn đến việc chọn sai đối tượng dù tên lớp đích đã được nhận dạng đúng. Đối với quan hệ phụ thuộc độ sâu, hệ thống còn phải kết hợp thông tin ngôn ngữ với bằng chứng khoảng cách, thay vì chỉ dựa trên vị trí hai chiều trong ảnh.
+
+Khóa luận sử dụng biểu diễn tập trung vào truy vấn, chỉ quan tâm tới đích, vật mốc và quan hệ liên quan đến câu lệnh. Trong triển khai V2, biểu diễn này được xây dựng bằng các slot học được cùng với cơ chế kết hợp đặc trưng có điều kiện theo quan hệ. Nó không phải một bộ phân tích cú pháp đã xuất đầy đủ tên vật thể và cạnh quan hệ thành đồ thị ký hiệu. Phân biệt này giúp xác định đúng những thành phần đã hiện thực và những năng lực còn cần kiểm chứng.
+
+Thiết kế có nhiều slot cần dữ liệu và evaluator tương ứng để kiểm chứng từng vật mốc và mệnh đề. Dữ liệu hiện tại giới hạn mức kết luận về quan hệ; Chương~3 mô tả biểu diễn vận hành và Chương~5 báo cáo phần đã đánh giá.
+
+\subsection{Phân biệt các nguồn bất định}
+
+Các lỗi grounding có thể đi kèm những dấu hiệu khác nhau. Bất định ngữ nghĩa liên quan đến việc hiểu mô tả hoặc phân biệt đối tượng; bất định quan hệ liên quan đến các ràng buộc trong câu lệnh; bất định không gian liên quan đến tính mơ hồ của lựa chọn vị trí; bất định độ sâu và che khuất liên quan đến chất lượng bằng chứng quan sát. Phân biệt các nhóm này có thể hỗ trợ việc lựa chọn cách xử lý tiếp theo.
+
+Tuy nhiên, các nguồn bất định không hoàn toàn tách biệt. Che khuất có thể đồng thời làm suy giảm bằng chứng hình dạng và độ sâu. Một câu lệnh quan hệ không đủ rõ có thể tạo ra nhiều vùng đích phù hợp. Nhãn nguồn được sử dụng để huấn luyện vì vậy cần được hiểu theo quy tắc của bộ dữ liệu và có thể mang tính đa nhãn. Khi đánh giá, cần xem xét cả trường hợp phát hiện đúng lẫn cảnh báo sai, thay vì chỉ diễn giải điểm bất định cao như một lời giải thích chắc chắn cho lỗi.
+
+\subsection{Hiệu chuẩn rủi ro và đánh đổi khi chấp nhận dự đoán}
+
+Điểm logit, xác suất của một head hoặc entropy của heatmap chưa tự động là xác suất xảy ra lỗi grounding. Các đại lượng này phản ánh những khía cạnh khác nhau của đầu ra mô hình. Để sử dụng chúng cho quyết định, cần một bước liên kết bằng chứng với sự kiện lỗi được định nghĩa rõ và kiểm tra sự liên kết đó trên dữ liệu độc lập.
+
+Hiệu chuẩn trong khóa luận là hiệu chuẩn thống kê của rủi ro dự đoán, khác với hiệu chuẩn camera hoặc biến đổi camera--robot. Bộ hiệu chuẩn được fit sau khi mô hình grounding đã cố định, trên tập calibration riêng. Ngưỡng quyết định cũng được xác định trước khi đánh giá Test-IID. Quy trình này hạn chế việc điều chỉnh hệ thống theo chính tập được dùng để báo cáo kết quả.
+
+Chấp nhận ít dự đoán có thể làm giảm tỷ lệ lỗi nhưng đồng thời làm giảm mức sử dụng của hệ thống. Vì vậy, cần đánh giá đồng thời \textit{coverage}, tức tỷ lệ dự đoán được chấp nhận, và \textit{selective risk}, tức tỷ lệ lỗi trong tập dự đoán đó. Ngoài ra, hiệu chuẩn trên một phân bố dữ liệu không bảo đảm độ tin cậy giữ nguyên khi thay đổi bố cục hoặc góc camera. Đây là giới hạn cần xét khi chuyển từ đánh giá Test-IID sang một cảnh demo tùy chỉnh.
+
+\section{Mục tiêu nghiên cứu}
+\label{sec:introduction-objectives}
+
+Mục tiêu tổng quát của khóa luận là xây dựng và đánh giá một phương pháp biểu diễn bất định đa phương thức có nhận biết quan hệ cho bài toán định vị thị giác--ngôn ngữ trong cảnh thao tác trên bàn. RoboRefer-2B-SFT được sử dụng làm mô hình nền cố định; mô-đun P-CRA-U bổ sung phân bố không gian, bằng chứng quan hệ, answerability và bất định theo nguồn; bộ hiệu chuẩn độc lập chuyển các bằng chứng đó thành rủi ro phục vụ quyết định chọn lọc.
+
+Các mục tiêu cụ thể gồm:
+\begin{enumerate}
+    \item Xây dựng biểu diễn câu lệnh tập trung vào đối tượng đích, vật mốc và quan hệ thông qua các slot học được, phù hợp với dữ liệu phát triển hiện có.
+    \item Kết hợp đặc trưng RGB và độ sâu có điều kiện theo quan hệ để dự đoán phân bố không gian của đối tượng đích và bằng chứng định vị vật mốc.
+    \item Dự đoán bằng chứng quan hệ, bốn trạng thái answerability và năm nhóm bất định theo nguồn, đồng thời ghi rõ giới hạn của các nhãn giám sát yếu.
+    \item Xây dựng bộ hiệu chuẩn độc lập cho rủi ro grounding và vùng tin cậy không gian; đánh giá chất lượng xác suất và mức bao phủ thực nghiệm.
+    \item Đánh giá chính sách chọn lọc với bốn quyết định, phân tích sự đánh đổi giữa tỷ lệ chấp nhận và tỷ lệ lỗi.
+    \item So sánh phương pháp với RoboRefer gốc trên cùng Test-IID bằng đánh giá ghép cặp và khoảng tin cậy theo family; kiểm tra luồng thu nhận RGB-D và dự đoán trong Gazebo để làm cơ sở cho tích hợp robot ở bước tiếp theo.
+\end{enumerate}
+
+Các mục tiêu được đánh giá theo kết quả đo được, không mặc định mọi thành phần đều đem lại cải thiện. Những nhóm dữ liệu mà phương pháp suy giảm, các cảnh báo bất định sai hoặc vùng tin cậy chưa đạt mức bao phủ danh nghĩa đều được xem là kết quả cần phân tích trong khóa luận.
+
+\section{Đối tượng và phạm vi nghiên cứu}
+\label{sec:introduction-scope}
+
+\subsection{Đối tượng nghiên cứu}
+
+Đối tượng nghiên cứu là mối liên hệ giữa biểu diễn không gian có điều kiện theo ngôn ngữ, bằng chứng quan hệ và độ tin cậy của quyết định grounding. Các thành phần cụ thể gồm mô hình nền RoboRefer-2B-SFT, mô-đun P-CRA-U, các đầu ra answerability và bất định theo nguồn, bộ hiệu chuẩn rủi ro và chính sách chọn lọc. Môi trường thao tác trên bàn trong Gazebo được sử dụng để tạo quan sát RGB-D và kiểm chứng luồng xử lý của hệ thống.
+
+\subsection{Phạm vi dữ liệu và đánh giá}
+
+Khóa luận sử dụng 320 family huấn luyện, 80 family dev, 200 family calibration và 200 family Test-IID. Mỗi family là nhóm cùng nguồn cảnh--truy vấn gồm năm variant có liên hệ. Dev chọn checkpoint, calibration được dùng sau khi mô hình cố định, test phục vụ báo cáo kết quả. V2 được khóa trước lần đánh giá Test-IID ban đầu; Adapter được đánh giá lại trên chính bộ IID đã từng phân tích, nên kết quả mới không phải xác nhận trên bộ test chưa quan sát. Việc học Adapter chỉ dùng train/dev, fit calibrator và chọn ngưỡng chỉ dùng calibration. Quy mô sample và quy trình xây dựng dữ liệu được trình bày ở Chương~4.
+
+Do các variant cùng family có phụ thuộc, khoảng tin cậy grounding được tính bằng bootstrap theo family. Vai trò của từng split được giữ riêng trong lựa chọn mô hình, hiệu chuẩn và báo cáo kết quả.
+
+Phạm vi kiểm tra của khóa luận tập trung vào Test-IID; không bao gồm đánh giá Test-OOD. Các ảnh RGB-D được thu nhận từ mô phỏng Gazebo và được sử dụng như dữ liệu quan sát mô phỏng. Do đó, kết quả được diễn giải trong phạm vi phân bố mô phỏng đã kiểm tra, chưa đủ để kết luận về khả năng tổng quát trên ảnh camera vật lý hoặc các miền dữ liệu khác.
+
+Chất lượng hệ thống được đánh giá qua định vị điểm trong vùng đích, bằng chứng quan hệ, phân loại answerability, dự đoán bất định theo nguồn, chất lượng hiệu chuẩn và quyết định chọn lọc. Các kết quả còn được phân tầng theo nhóm vật thể, quan hệ và loại variant để làm rõ những điều kiện mà phương pháp có lợi hoặc gặp hạn chế.
+
+\subsection{Phạm vi kiến trúc và ứng dụng robot}
+
+Khóa luận huấn luyện mô-đun bổ trợ trên đặc trưng của RoboRefer đóng băng, không huấn luyện toàn bộ mô hình nền từ đầu. Biểu diễn quan hệ được giới hạn ở các thành phần liên quan đến truy vấn; việc xây dựng đồ thị toàn bộ cảnh và chứng minh năng lực suy luận tùy ý nhiều mệnh đề nằm ngoài phạm vi thực nghiệm hiện tại. Các dự đoán dùng khi suy luận chỉ dựa trên bằng chứng quan sát và đầu ra mô hình; mask và nhãn chuẩn được sử dụng cho giám sát hoặc hậu kiểm.
+
+UR3, gripper và camera trong Gazebo phục vụ kiểm chứng tích hợp nhận thức: capture RGB-D, chạy checkpoint cố định, hiển thị dự đoán và hậu kiểm nhiều khung hình. Checker RGB-D độc lập có phạm vi cho một trường hợp vật thể cụ thể. Thiết lập và kết quả audit được trình bày ở Chương~4--5.
+
+Phạm vi kết quả hiện tại chưa bao gồm một đánh giá gắp--đặt hoàn chỉnh do P-CRA-U điều khiển; audit Gazebo hiện có dùng V2 lịch sử, chưa đánh giá lại bằng Adapter. Tọa độ ảnh chưa phải tư thế gắp ba chiều; quyết định chấp nhận chưa chứng minh robot tiếp cận được vật, tránh được va chạm hoặc giữ được vật sau khi gắp. Do đó, các chỉ số grounding và các ca \texttt{EXECUTE} trong đánh giá từ ảnh không được báo cáo như tỷ lệ thao tác robot thành công.
+
+\section{Đóng góp của khóa luận}
+\label{sec:introduction-contributions}
+
+Khóa luận tập trung vào hai đóng góp phương pháp ở mức thiết kế, hiện thực và đánh giá trong phạm vi dữ liệu đã xác định.
+
+\paragraph{Mô-đun P-CRA-U cho grounding có biểu diễn bất định.}
+Khóa luận thiết kế và hiện thực một sidecar dùng biểu diễn truy vấn và fusion RGB-D có điều kiện theo quan hệ trên đặc trưng RoboRefer đóng băng. Thiết kế kết hợp phân bố target/anchor, bằng chứng cạnh, answerability và năm score nguồn trong một mô hình đa nhiệm. Ý tưởng đề xuất là tổ chức evidence theo câu lệnh để đồng thời định vị và nhận biết điều kiện chấp nhận. Grounding, answerability, source và edge proxy đã được đánh giá. Bước Adapter bổ sung học phần dư trên evidence dự đoán của V2 để cải thiện answerability, trong khi giữ nguyên grounding. Hiệu quả riêng của từng nhánh và từng thành phần Adapter còn cần ablation.
+
+\paragraph{Quy trình hiệu chuẩn độc lập và quyết định chọn lọc.}
+Khóa luận xây dựng quy trình freeze sidecar, fit logistic risk từ evidence dự đoán trên calibration riêng và khóa ngưỡng cho policy bốn quyết định. Vùng highest-density được hiệu chỉnh và đánh giá như một đầu ra không gian riêng. Đóng góp là liên kết các đầu ra đa nhiệm với biến cố lỗi nhận thức xác định rõ và kiểm tra bằng chất lượng xác suất, risk--coverage và coverage--area. Phép đánh giá V2 ban đầu và phép đánh giá lại Adapter trên IID cũ được phân biệt rõ. Hiệu quả được so với score thô; lợi ích riêng của thêm source evidence chưa được cô lập bằng đối chứng scalar-only.
+
+Bên cạnh hai đóng góp phương pháp, khóa luận xây dựng các thành phần hỗ trợ gồm tổ chức dữ liệu theo family, đánh giá Test-IID cố định, so sánh ghép cặp có khoảng tin cậy, lưu trữ prediction để truy nguyên và trực quan hóa từ quan sát mô phỏng. Demo Gazebo là minh chứng tích hợp của luồng nhận thức, không được xem là một đóng góp thuật toán điều khiển robot.
+
+Tên P-CRA-U được sử dụng làm tên của phương pháp triển khai trong khóa luận. Các đóng góp trên không hàm ý khẳng định tính mới tuyệt đối so với toàn bộ nghiên cứu liên quan. Mức độ khác biệt của thiết kế được đặt trong đối chiếu với cơ sở lý thuyết và các phương pháp liên quan ở Chương 2; các kết luận về hiệu quả được giới hạn bởi bằng chứng thực nghiệm ở Chương 5.
+
+\section{Cấu trúc khóa luận}
+\label{sec:introduction-organization}
+
+Khóa luận được tổ chức thành sáu chương.
+
+\textbf{Chương 1 -- Tổng quan đề tài} trình bày bối cảnh, bài toán nghiên cứu, những thách thức, mục tiêu, đối tượng, phạm vi và các đóng góp của khóa luận. Chương này xác định vai trò của grounding và hiệu chuẩn rủi ro trong hệ thống, đồng thời phân biệt kết quả nhận thức với thao tác robot.
+
+\textbf{Chương 2 -- Cơ sở lý thuyết và các nghiên cứu liên quan} trình bày nền tảng về mô hình thị giác--ngôn ngữ, định vị theo ngôn ngữ và quan hệ không gian, biểu diễn bất định, hiệu chuẩn và dự đoán chọn lọc. Các khái niệm này làm cơ sở cho việc lựa chọn mô hình nền và thiết kế phương pháp.
+
+\textbf{Chương 3 -- Phương pháp đề xuất} mô tả kiến trúc P-CRA-U, biểu diễn truy vấn, kết hợp đặc trưng RGB--depth, các head dự đoán và mục tiêu huấn luyện. Chương này cũng trình bày bộ hiệu chuẩn độc lập, vùng tin cậy không gian và chính sách quyết định.
+
+\textbf{Chương 4 -- Xây dựng hệ thống và thiết lập thực nghiệm} trình bày môi trường triển khai, tổ chức dữ liệu, phân chia theo family, cấu hình huấn luyện, lựa chọn checkpoint và giao thức kiểm tra. Hạ tầng thu nhận RGB-D và luồng demo Gazebo được mô tả trong phạm vi tích hợp nhận thức.
+
+\textbf{Chương 5 -- Kết quả và đánh giá} báo cáo kết quả Test-IID của checkpoint được lựa chọn và so sánh ghép cặp với RoboRefer gốc. Chương này phân tích grounding, answerability, bất định theo nguồn, hiệu chuẩn, quyết định chọn lọc, các kết quả phân tầng, trường hợp thành công và thất bại, cùng những giới hạn của thực nghiệm.
+
+\textbf{Chương 6 -- Kết luận và hướng phát triển tương lai} tổng kết các kết quả đạt được theo mục tiêu nghiên cứu, nêu những hạn chế còn tồn tại và đề xuất hướng phát triển về dữ liệu, kiểm chứng độ tin cậy và tích hợp thao tác robot.

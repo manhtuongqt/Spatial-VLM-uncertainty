@@ -1,0 +1,20 @@
+{
+  "attempt_05_sha256": "ba97d810675da77f7ae662aca0f543f0b8422eb0cbad0b52e8a1866a12f9f3df",
+  "blocked_checks": [
+    "sim_nodes_present"
+  ],
+  "calibration_families_captured": 0,
+  "calibrator_fit_call_count": 0,
+  "classification": "TRANSIENT_ROS_GRAPH_DISCOVERY_NOT_SENSOR_GEOMETRY_OR_SCIENTIFIC_FAILURE",
+  "model_inference_run": false,
+  "observed_result": "The one-shot node snapshot omitted /controller_manager while its trajectory action, all required topics, fresh RGB/depth/labels, exact R3 TF, locked robot pose and full scene reset passed. No capture authorization or capture was created.",
+  "partial_capture_reuse": false,
+  "pilot_accepted_families": 0,
+  "protocol_id": "gazebo_calibration_v6_geometry_pilot_r5",
+  "robot_access": false,
+  "schema_version": 1,
+  "scientific_decision": null,
+  "scientific_hypothesis": "NOT_TESTED",
+  "status": "LIVE_PREFLIGHT_ATTEMPT_05_FROZEN_BLOCKED_NO_CAPTURE",
+  "test_iid_ood_access": false
+}

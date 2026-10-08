@@ -1,0 +1,28 @@
+{
+  "allowed_next_action": "ONE_BATCH_FORWARD_BACKWARD_NO_OPTIMIZER_STEP",
+  "config_digest": "294765e3d9f602872fdc6510b7cf0a268127051966449ca8c92f80a0ad3f187d",
+  "dataset_scaled": false,
+  "files": {
+    "protocol/PCRA_U_OVERFIT_SMOKE_CONTRACT.md": "47d2dc893bdc1dfeaa5f196fe229b474b0e950925fe84ce40cd7b6f025bad97c",
+    "protocol/pcra_u_overfit_smoke_manifest.json": "b108414a1db1906c3d162a3c45170624f2e2320c6980b48fc2e22c5c1bb152ec",
+    "protocol/pcra_u_v0_overfit_config.json": "951f913820c35a50d83111a1de0c5221a095eab1c71cd761a09b3302110575f7",
+    "protocol/training_checkpoint_manager.py": "be7cc1d4c0bdbc99bfb18caf9bf93cab68942c9b37f67a44930f4a47cbee0ce3",
+    "protocol/wp3_smoke_manifest.json": "91ab772cad2e17d76c0f94bfbbee4fc3fafc2b0a9a7ebddca51045f6085c3a6c",
+    "protocol/wp3_smoke_selection_audit.json": "d2e8e9b3dc4b1d5631998bcd2918ba7cd677bae1b91e38be94a986f3c2c601ca"
+  },
+  "locked_at_utc": "2026-08-21T05:57:21.293576+00:00",
+  "manifest_gates": {
+    "all_five_sources_present": true,
+    "all_train": true,
+    "answerability_coverage_exact": true,
+    "exactly_15_families": true,
+    "exactly_15_samples": true,
+    "feature_shapes_locked": true,
+    "hook_a_only": true,
+    "rgb_depth_aligned": true
+  },
+  "protocol_id": "pcra_u_overfit_smoke_v1",
+  "schema_version": 1,
+  "status": "LOCKED_BEFORE_ONE_BATCH_BACKWARD_AND_OPTIMIZER_STEP",
+  "training_performed": false
+}

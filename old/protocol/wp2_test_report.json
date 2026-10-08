@@ -1,0 +1,85 @@
+{
+  "counts": {
+    "depth_dependent_families": 30,
+    "families": 50,
+    "projective_relation_records_checked": 85,
+    "raw_gazebo_captures": 100,
+    "replay_files_compared": 2334,
+    "samples": 250,
+    "variants_per_family": 5
+  },
+  "decision": "GO_WP3_PCRA_U_PROTOTYPE",
+  "deliverables": {
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/WP2_QC_GUI.html": "c5caa5c82ebdf323f4de0d5fde21de8fbf7c2c21d4704f45acb211ef46478673",
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/artifact_manifest.json": "dce432874c86f3928eccac21f3dd9c9e22d5b5ae56bd7378143a0293ce9ced7c",
+    "datasets/roborefer_dataset_v1_prototype_20260818_155606/report_assets/ASSET_INDEX.json": "e008ef361ad9557a335523c0bfdb9e4c9c24ef0f000205f1bef3144508330388",
+    "protocol/WP2_DATASET_V1.md": "2f9bea3633379d7e12d3d5fb91d2b48ec9d09a65cf779aa5e6debae1a5b99167",
+    "protocol/dataset_v1.schema.json": "1fb00c5735a023a1574545cac3a64e261f9796b45b0947ba71c49de9ee2c4356",
+    "protocol/family_manifest_v1.schema.json": "989a2da30a1d12b4b658cc51f8c36336610b22977f18be127692eddf19b4264e"
+  },
+  "gates": {
+    "all_record_artifact_hashes_verified": true,
+    "at_least_30_depth_dependent_families": true,
+    "family_level_split_no_overlap": true,
+    "full_50_families_250_samples_passed": true,
+    "inference_payload_contains_no_oracle": true,
+    "mask_qc_passed": true,
+    "offline_replay_100_percent": true,
+    "pilot_wp0_unchanged": true,
+    "pilot_wp1_not_used_as_training_source": true,
+    "relation_evidence_qc_passed": true,
+    "smoke_3_families_15_samples_passed": true,
+    "software_tests_passed": true,
+    "wp1_unchanged": true
+  },
+  "generated_at_utc": "2026-08-18T09:13:51.568826+00:00",
+  "hashes": {
+    "artifact_manifest_sha256": "dce432874c86f3928eccac21f3dd9c9e22d5b5ae56bd7378143a0293ce9ced7c",
+    "capture_plan_sha256": "08a42dc84ed2e0d79ef0d245d43b69584765df08f48e81baf962b3d5c081dbae",
+    "dataset_index_sha256": "d4fe5be9286d9bdc5c56e84247e157d4a5fcc2afd3a9637c73e027484f4882fa",
+    "family_manifest_sha256": "7014a1e454f2b253b62d0e995990439a1d2f36d6002965c4b59c99e99ce48184",
+    "pilot_wp0_tree_sha256": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c",
+    "raw_capture_manifest_sha256": "aa52ee3617100cb661cb2a4d291efe4ba98bdff5ecd8cb17f138becbf7cc56ff",
+    "report_asset_index_sha256": "e008ef361ad9557a335523c0bfdb9e4c9c24ef0f000205f1bef3144508330388",
+    "roborefer_model_inventory_sha256": "5508fb49888c1f62b875d928266f7fff3e1224c795f6fc8b971631143a45a7fa",
+    "wp1_tree_sha256": "857e6b5e169b933572a41fb7251c9cbc78a4146d99f0f76845b27e9187472a9c"
+  },
+  "limitations": [
+    "reachable/graspable masks are locked prototype proxies, not full MoveIt collision labels",
+    "offline replay does not claim bitwise Gazebo rerender determinism",
+    "MoveIt move_group teardown segfault remains after capture completion",
+    "20 percent model failure audit remains for later development evaluation"
+  ],
+  "overall_passed": true,
+  "pcra_f_status": "DEFERRED_ABLATION_NOT_TRAINED",
+  "protocol_id": "roborefer_dataset_v1_prototype",
+  "result_root": "datasets/roborefer_dataset_v1_prototype_20260818_155606",
+  "schema_version": 1,
+  "software_tests": {
+    "command": "./protocol/run_wp2_checks.sh",
+    "duration_s": 1.93,
+    "log": "protocol/logs/wp2_pytest.log",
+    "passed_count": 86,
+    "pytest_plugin_autoload_disabled": true,
+    "warning_count": 5
+  },
+  "splits": {
+    "calibration": {
+      "families": 6,
+      "samples": 30
+    },
+    "dev": {
+      "families": 8,
+      "samples": 40
+    },
+    "test": {
+      "families": 6,
+      "prototype_not_final_locked_test": true,
+      "samples": 30
+    },
+    "train": {
+      "families": 30,
+      "samples": 150
+    }
+  }
+}

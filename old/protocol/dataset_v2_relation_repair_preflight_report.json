@@ -1,0 +1,93 @@
+{
+  "calibration_or_test_opened": false,
+  "checks": {
+    "asset_partition": {
+      "heldout_assets": [
+        "ycb_pear_01",
+        "ycb_plum_01",
+        "ycb_tuna_fish_can_01"
+      ],
+      "leaked_assets": [],
+      "passed": true
+    },
+    "camera_frame_predictor_collision_visibility": {
+      "between_depth_predictor_screening_margin_m": 0.07,
+      "failures": [],
+      "layouts_checked": 30,
+      "passed": true,
+      "predictor_screening_margin_m": 0.035,
+      "unique_layout_fingerprints": 30
+    },
+    "deterministic_candidate_selection": {
+      "evaluated_candidate_count": 4724,
+      "failures": [],
+      "passed": true
+    },
+    "locked_composition": {
+      "capture_count": 30,
+      "family_count": 30,
+      "passed": true,
+      "relation_counts": {
+        "behind": 4,
+        "between_in_depth": 6,
+        "farther_than": 4,
+        "front_of": 4,
+        "left_of": 2,
+        "nearer_than": 4,
+        "nearer_than_both": 4,
+        "right_of": 2
+      }
+    },
+    "old_v2_pilot_disjointness": {
+      "old_capture_id_count": 860,
+      "old_family_id_count": 430,
+      "passed": true,
+      "selected_seed_count": 30
+    },
+    "oracle_leakage": {
+      "findings": [],
+      "passed": true
+    },
+    "permanent_official_exclusion": {
+      "passed": true
+    },
+    "qualified_capture_pipeline": {
+      "camera_motion": "/ur3_control through qualified MoveIt stack",
+      "passed": true
+    },
+    "registry_world_semantic_labels": {
+      "failures": [],
+      "passed": true,
+      "registry_count": 27
+    },
+    "required_stress_cases": {
+      "mustard_orange_physical_orders": [
+        "behind",
+        "front_of"
+      ],
+      "passed": true,
+      "shape_groups": [
+        "box",
+        "low",
+        "round",
+        "tall"
+      ],
+      "soup_multi_anchor_family_count": 3
+    },
+    "runtime_artifacts_present": {
+      "missing": [],
+      "passed": true
+    },
+    "static_generator_replay": {
+      "passed": true
+    }
+  },
+  "created_at_utc": "2026-08-21T11:32:24.852053+00:00",
+  "decision": "GO_RELATION_REPAIR_CAPTURE_30",
+  "failure_count": 0,
+  "failures": [],
+  "passed": true,
+  "protocol_id": "roborefer_dataset_v2_1_relation_repair",
+  "schema_version": 1,
+  "training_performed": false
+}

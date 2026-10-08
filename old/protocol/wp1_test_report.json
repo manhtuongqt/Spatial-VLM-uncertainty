@@ -1,0 +1,38 @@
+{
+  "decision": "GO_PCRA_F",
+  "decision_reasons": [
+    "EXISTING_MODEL_NEARLY_INVARIANT_TO_DEPTH_COUNTERFACTUALS"
+  ],
+  "deliverables": {
+    "protocol/WP1_DEPTH_SENSITIVITY.md": "0d304795914eb97a4d23640504db07ea2ce7143b599f961753f364aaf88aed5f",
+    "results/roborefer_depth_sensitivity_v1_20260818_152700/evaluation/WP1_GUI.html": "7474530aaf87666ba2164f6c744cee90f2cd9bdb6c7e4037c02a0fb653beaac1",
+    "results/roborefer_depth_sensitivity_v1_20260818_152700/evaluation/summary.json": "1af75176eb7fac3845c6dbf91acf018bfed74d7d011d4e327aba3ee078f0b6fa"
+  },
+  "evaluation_manifest_sha256": "301c9f4cdaa77f24bfc302b0bc04f4ccad7c40066895d7651f1d703bcbd10fa4",
+  "exact_point_parse_count": 60,
+  "gates": {
+    "all_inference_artifact_hashes_verified_before_oracle": true,
+    "exact_point_outputs_60_of_60": true,
+    "official_decision_is_valid": true,
+    "oracle_opened_only_after_prediction_lock": true,
+    "paired_comparison_complete": true,
+    "pilot_wp0_unchanged": true,
+    "prediction_records_60_of_60": true,
+    "software_tests_passed": true
+  },
+  "generated_at_utc": "2026-08-18T08:30:26.538090+00:00",
+  "overall_passed": true,
+  "pilot_tree_sha256": "df8ec334c82b14447463101cccb5e54836fb27e579a760322256f84d157a2b9c",
+  "prediction_lock_sha256": "56afba471c45442a55c6d3aaace1910704302740f5aed237bfe04e84d93abf16",
+  "protocol_id": "roborefer_depth_sensitivity_v1",
+  "protocol_manifest_sha256": "4ca26df4894c08ed272f212802fc93fa42986cb8c2b432819a0d553adb00a429",
+  "record_count": 60,
+  "result_root": "results/roborefer_depth_sensitivity_v1_20260818_152700",
+  "schema_version": 1,
+  "software_tests": {
+    "duration_s": 1.16,
+    "log": "protocol/logs/wp1_pytest.log",
+    "passed": true,
+    "passed_count": 81
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "tests": [
+    "test_visual_boundary_rejects_oracle_nonfinite_and_shape",
+    "test_export_preserves_pre_adapter_and_prompt_edge_mask",
+    "test_scope_geometry_and_inputs_not_mutated",
+    "test_geometry_changes_risk_and_policy_with_exact_trace",
+    "test_live_calibrator_and_bundle_guard",
+    "test_right_left_sign_and_pair_mass",
+    "test_same_grid_peak_fails_margin",
+    "test_diffuse_map_score_is_not_presence_or_binding_probability",
+    "test_direct_and_unsupported_have_no_fabricated_geometry",
+    "test_inputs_unchanged_and_oracle_kwargs_rejected",
+    "test_nonfinite_or_invalid_distribution_rejected",
+    "test_risk_feature_vector_ignores_all_evaluator_fields",
+    "test_calibrator_bundle_mismatch_rejected_before_prediction"
+  ]
+}

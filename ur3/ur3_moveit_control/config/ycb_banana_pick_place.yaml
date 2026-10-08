@@ -1,0 +1,33 @@
+fixed_pick_place:
+  ros__parameters:
+    # Keep the long banana farther below the tray than the spherical fruit.
+    initial_object_pose: [-0.21, 0.29, 0.018376, 0.0, 0.0, 0.0, 1.0]
+    randomize_object: true
+    random_x_range: [-0.22, -0.205]
+    random_y_range: [0.27, 0.31]
+    # Randomize position but preserve the long axis along tray Y so the fruit
+    # fits inside the 180 x 230 mm tray after release.
+    random_yaw_range: [0.0, 0.0]
+
+    randomize_scene_objects: true
+    scene_object_names: [ycb_orange, ycb_banana, ycb_apple, mango]
+    scene_object_z_values: [0.037010, 0.018376, 0.035953, 0.030]
+    scene_object_sizes_xy: [0.07402, 0.07402,
+                            0.108971, 0.178395,
+                            0.07542, 0.07542,
+                            0.060, 0.060]
+    scene_object_slots_xy: [-0.34, 0.12, -0.34, 0.42, 0.18, 0.13,
+                            0.22, 0.48]
+
+    source_keepout_center_xy: [0.0, 0.38]
+    source_keepout_size_xy: [0.20, 0.25]
+    source_keepout_clearance_m: 0.005
+    source_keepout_object_size: 0.179
+    object_size: 0.179
+    workspace_max: [0.02, 0.46, 0.16]
+    detection_timeout: 100.0
+    perception_settle_time: 1.0
+    industrial_linear_transfers: true
+    place_approach_distance: 0.16
+    place_offset_xyz: [0.0, 0.0, 0.10]
+    bin_place_slots_xy: [0.0, 0.0]
